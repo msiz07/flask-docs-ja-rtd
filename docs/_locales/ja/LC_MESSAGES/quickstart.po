@@ -20,7 +20,7 @@ msgstr ""
 # 5d3e771b460d48908ed5b59e63cde452
 #: ../../quickstart.rst:4
 msgid "Quickstart"
-msgstr ""
+msgstr "クイックスタート"
 
 # 97a747bc2c8f49ffa46194e234112671
 #: ../../quickstart.rst:6
@@ -29,21 +29,24 @@ msgid ""
 "assumes you already have Flask installed.  If you do not, head over to "
 "the :ref:`installation` section."
 msgstr ""
+"すぐ始めたいですか？このページはFlaskのイントロダクションに良いでしょう。"
+"Flaskはインストール済みと想定しています。もしまだならば、\ :ref:`installation`\ "
+"セクションを参照してください。"
 
 # 00595259ecee47dd8bd759592d905a53
 #: ../../quickstart.rst:12
 msgid "A Minimal Application"
-msgstr ""
+msgstr "最少のアプリケーション"
 
 # e1570c67382e40759aa8873fcdcf2773
 #: ../../quickstart.rst:14
 msgid "A minimal Flask application looks something like this::"
-msgstr ""
+msgstr "最少のFlaskアプリケーションは以下のようなものになります::"
 
 # 063c3db15dc547168de47abc07bdd7ea
 #: ../../quickstart.rst:23
 msgid "So what did that code do?"
-msgstr ""
+msgstr "では、そのコードは何をしているのでしょうか？"
 
 # 87b5d69f87054beab760456d7a60d633
 #: ../../quickstart.rst:25
@@ -51,6 +54,8 @@ msgid ""
 "First we imported the :class:`~flask.Flask` class.  An instance of this "
 "class will be our WSGI application."
 msgstr ""
+"最初に、\ :class:`~flask.Flask`\ クラスをimportします。このクラスの"
+"インスタンスはWSGIアプリケーションになります。"
 
 # fe5382420a9844228a973dd014e30b86
 #: ../../quickstart.rst:27
@@ -64,6 +69,13 @@ msgid ""
 " For more information have a look at the :class:`~flask.Flask` "
 "documentation."
 msgstr ""
+"次に、このクラスのインスタンスを作成します。最初の引数はアプリケーションの"
+"モジュールまたはパッケージの名前です。もし（この例のように）１つだけのモジュールを"
+"使っているときは、アプリケーションとして開始するかモジュールとしてインポートするか"
+"によって名前が変化する（\ ``'__main__'``\ もしくは実際のimport名）ため、"
+"\ ``__name__``\ を使うべきです。これはtemplate、静的ファイルなどを探す"
+"場所をFlaskが知るために必要になります。さらなる情報については、"
+"\ :class:`~flask.Flask`\ を参照してください。"
 
 # a6f42a311f6843ccacc8e3660800438a
 #: ../../quickstart.rst:34
@@ -71,6 +83,8 @@ msgid ""
 "We then use the :meth:`~flask.Flask.route` decorator to tell Flask what "
 "URL should trigger our function."
 msgstr ""
+"それから\ :meth:`~flask.Flask.route`\ デコレータを使って、どのURLが関数を"
+"トリガーすべきかをFlaskに伝えます。"
 
 # e304d6ecb52e4cfea637f7bd28223722
 #: ../../quickstart.rst:36
@@ -79,6 +93,9 @@ msgid ""
 " particular function, and returns the message we want to display in the "
 "user's browser."
 msgstr ""
+"対応するURLを生成するときにも使用される名前（訳注：\ :func:`~flask.url_for`\ "
+"で関数名から対応URLを作成できることを指してると思います）が関数には与えられ、"
+"そして関数はユーザのブラウザに表示したいメッセージを返します。"
 
 # c157b28898f44db8aba4c31269fb5ce2
 #: ../../quickstart.rst:40
@@ -87,6 +104,9 @@ msgid ""
 "call your application :file:`flask.py` because this would conflict with "
 "Flask itself."
 msgstr ""
+"これを\ :file:`hello.py`\ のような名前で保存します。Flask自身と衝突しない"
+"ようにするため、自分のアプリケーションは\ :file:`flask.py`\ と名付けない"
+"ようにしてください。"
 
 # b18f6d432b6d42f7855c20046abbd57a
 #: ../../quickstart.rst:44
@@ -96,6 +116,10 @@ msgid ""
 "tell your terminal the application to work with by exporting the "
 "``FLASK_APP`` environment variable::"
 msgstr ""
+"アプリケーションを実行するには、\ :command:`flask`\ コマンドでもpythonの\ ``-m``\ "
+"スイッチにFlaskを指定しても、どちらも使用できます。"
+"実行できるようにする前には、\ ``FLASK_APP``\ 環境変数をエクスポートして、"
+"実行するアプリケーションを端末へ伝える必要があります。"
 
 # 770f3dfc5e9a4af7baea45557b001f97
 #: ../../quickstart.rst:53
@@ -103,16 +127,18 @@ msgid ""
 "If you are on Windows, the environment variable syntax depends on command"
 " line interpreter. On Command Prompt::"
 msgstr ""
+"Windows上では、環境変数に関する書き方はコマンドラインインタプリタに依存します。"
+"コマンドプロンプト上では::"
 
 # f7567119532946b69614c6de9ec2a4f3
 #: ../../quickstart.rst:58
 msgid "And on PowerShell::"
-msgstr ""
+msgstr "そしてPowerShell上では::"
 
 # 267b255a46f541f0b80490b6ca49019e
 #: ../../quickstart.rst:62
 msgid "Alternatively you can use :command:`python -m flask`::"
-msgstr ""
+msgstr "違うやり方として、\ :command:`python -m flask`\ を使用できます::"
 
 # ebc0751096214ee6a5131cf3d9693430
 #: ../../quickstart.rst:68
@@ -121,6 +147,10 @@ msgid ""
 "testing but probably not what you want to use in production. For "
 "deployment options see :ref:`deployment`."
 msgstr ""
+"これは、テスト用には十分ですが、おそらく本番環境ではあなたが使用したいとは"
+"思わないであろう、とても単純な内蔵サーバを起動します。"
+"デプロイ（訳注：実行環境への展開）のオプションについては、\ :ref:`deployment`\ "
+"を参照してください。"
 
 # 3d41fb22c4a145018ed6b41a66972e41
 #: ../../quickstart.rst:72
@@ -128,11 +158,13 @@ msgid ""
 "Now head over to http://127.0.0.1:5000/, and you should see your hello "
 "world greeting."
 msgstr ""
+"それでは\ http://127.0.0.1:5000/\ を参照してください、あなたのhello world"
+"を確認できるはずです。"
 
 # 3681f706a014496fb409b13d2a0355c8
 #: ../../quickstart.rst:77
 msgid "Externally Visible Server"
-msgstr ""
+msgstr "外部から見えるサーバ"
 
 # 953b7cb564ec492c8abc9c2607f87998
 #: ../../quickstart.rst:79
@@ -142,6 +174,10 @@ msgid ""
 "default because in debugging mode a user of the application can execute "
 "arbitrary Python code on your computer."
 msgstr ""
+"もしサーバを実行した場合、サーバは自分のコンピュータからだけアクセス可能で、"
+"他にはネットワークのどこからもアクセスできないことに気づくでしょう。"
+"デバッギングモードではアプリケーションのユーザがあなたのコンピュータ上で"
+"任意のPythonコードをが実行可能になるために、これが初期設定になっています。"
 
 # 509abe6da4c742ec80959a0581f5147b
 #: ../../quickstart.rst:84
@@ -150,16 +186,20 @@ msgid ""
 " can make the server publicly available simply by adding "
 "``--host=0.0.0.0`` to the command line::"
 msgstr ""
+"デバッギングを無効にしているか、ネットワーク上のユーザを信頼する場合、"
+"コマンドラインに\ ``--host=0.0.0.0``\ を追加すれば、サーバへのアクセスを"
+"公開できます::"
 
 # 7aff041abba44dc48da06c27085e56ba
 #: ../../quickstart.rst:90
 msgid "This tells your operating system to listen on all public IPs."
 msgstr ""
+"こうすると、全ての公開されているIP上でアクセスを受け付けるよう、OSへ伝えます。"
 
 # 66b05a10901e498cb407059b1ca698f4
 #: ../../quickstart.rst:94
 msgid "What to do if the Server does not Start"
-msgstr ""
+msgstr "サーバがスタートしない場合はどうするか"
 
 # 45116159c70b42bab20485d6b5eded37
 #: ../../quickstart.rst:96
@@ -168,11 +208,14 @@ msgid ""
 " exist, there are multiple reasons this might be the case. First of all "
 "you need to look at the error message."
 msgstr ""
+"もし\ :command:`python -m flask`\ が失敗するときや\ :command:`flask`\ コマンドが"
+"存在しないときは、その原因になるであろういくつかの理由があります。まず最初に、"
+"エラーメッセージを調べる必要があります。"
 
 # 2ab0fe20a6fc42d3bccdcdd94a2da3da
 #: ../../quickstart.rst:101
 msgid "Old Version of Flask"
-msgstr ""
+msgstr "古いバージョンのFlask"
 
 # ef8f8c640c3c4d0093a009182d87ea03
 #: ../../quickstart.rst:103
@@ -183,11 +226,17 @@ msgid ""
 "options: either upgrade to newer Flask versions or have a look at the "
 ":ref:`server` docs to see the alternative method for running a server."
 msgstr ""
+"バージョン0.11以前のFlaskはアプリケーションを開始するときに別のやり方を"
+"使用していました。手短に言えば、\ :command:`flask`\ コマンドは存在せず、"
+"\ :command:`python -m flask`\ も使いませんでした。この場合には、2つの"
+"選択肢があります：Flaskを新しいバージョンへアップグレードするか、"
+"\ :ref:`server`\ ドキュメントを調べて、サーバを実行する代わりのやり方を"
+"見つけてください。"
 
 # cdf5f01e94f04119945160db81168d0a
 #: ../../quickstart.rst:110
 msgid "Invalid Import Name"
-msgstr ""
+msgstr "間違った名前のimport"
 
 # 8aded6ce7a6a45f1921961eb536bbbdc
 #: ../../quickstart.rst:112
@@ -198,6 +247,11 @@ msgid ""
 "navigate to the application). It will tell you what it tried to import "
 "and why it failed."
 msgstr ""
+"``FLASK_APP``\ 環境変数は\ :command:`flask run`\ でimportするモジュールの"
+"名前になります。モジュール名が正確でない場合には、スタートしようとしたとき"
+"（もしくは、もしデバッグを有効にしていた場合はアプリケーションまでアクセス"
+"しようとしたとき）にimport errorが発生するでしょう。import errorは、何を"
+"importしようとして、なぜ失敗したかを示しているでしょう。"
 
 # 9ada36b68b9e4cb1add9e9d939d0b0a9
 #: ../../quickstart.rst:117
@@ -205,16 +259,20 @@ msgid ""
 "The most common reason is a typo or because you did not actually create "
 "an ``app`` object."
 msgstr ""
+"最もありがちな理由は、typoか、実際の\ ``app``\ オブジェクトを作成して"
+"いないためです。"
 
 # 87826b140bb343789270fa7690127fb9
 #: ../../quickstart.rst:123
 msgid "Debug Mode"
-msgstr ""
+msgstr "デバッグモード"
 
 # 01a75f4cd8854154bb35067274ce80ce
 #: ../../quickstart.rst:125
 msgid "(Want to just log errors and stack traces? See :ref:`application-errors`)"
 msgstr ""
+"（ただ、errorやstack traceをログに記録したいだけですか？"
+"その場合は\ :ref:`application-errors`\ を確認してください）"
 
 # 82fc498873cb4b568f098d9e4dd4ba09
 #: ../../quickstart.rst:127
@@ -225,6 +283,11 @@ msgid ""
 "support the server will reload itself on code changes, and it will also "
 "provide you with a helpful debugger if things go wrong."
 msgstr ""
+"\ :command:`flask`\ スクリプトはローカルの開発サーバをスタートするには便利"
+"ですが、あなたがコードを変更するたびに手動で再起動しなければならないでしょう。"
+"それはあまり便利ではなく、そしてFlaskはもっと便利に使えます。もしデバッグ"
+"サポートを有効にすれば、コードが変更したときにサーバはリロードするようになり、"
+"もし問題が起きた場合には役に立つデバッガも提供するようになります。"
 
 # f9428ba54a004a179667264525d12114
 #: ../../quickstart.rst:133
@@ -233,31 +296,34 @@ msgid ""
 "the ``FLASK_ENV`` environment variable and set it to ``development`` "
 "before running the server::"
 msgstr ""
+"すべての（デバッグモードも含めた）開発機能を有効にするためには、サーバの"
+"実行前に環境変数\ ``FLASK_ENV``\ を\ ``development``\ に設定してエクス"
+"ポートできます::"
 
 # f2dcb5cc8fec4d86a5ca87408cd60f2d
 #: ../../quickstart.rst:140
 msgid "(On Windows you need to use ``set`` instead of ``export``.)"
-msgstr ""
+msgstr "（Windowsでは、\ ``export``\ の代わりに\ ``set``\ を使う必要があります）"
 
 # f7c99a21dd2c4988932eb134a0cfa742
 #: ../../quickstart.rst:142
 msgid "This does the following things:"
-msgstr ""
+msgstr "これは以下のことを行います："
 
 # 8543ab5fe10244038bc0f06d395cb22f
 #: ../../quickstart.rst:144
 msgid "it activates the debugger"
-msgstr ""
+msgstr "デバッガーを有効にします"
 
 # bc18b2158b3f4d51ace2a0953972ecf5
 #: ../../quickstart.rst:145
 msgid "it activates the automatic reloader"
-msgstr ""
+msgstr "自動リロードを有効にします"
 
 # c4f88dedb4dc4718b367cb7f7bc5ed38
 #: ../../quickstart.rst:146
 msgid "it enables the debug mode on the Flask application."
-msgstr ""
+msgstr "Flaskアプリケーションのデバッグモードを有効にします。"
 
 # bf604fc4973040178f9e1b2bea7d1d7d
 #: ../../quickstart.rst:148
@@ -265,16 +331,18 @@ msgid ""
 "You can also control debug mode separately from the environment by "
 "exporting ``FLASK_DEBUG=1``."
 msgstr ""
+"環境変数とは別に、\ ``FLASK_DEBUG=1``\ をエクスポートしても"
+"デバッグモードを制御できます。"
 
 # acfb8dc0c0e54f30a8ce9d393e95f205
 #: ../../quickstart.rst:151
 msgid "There are more parameters that are explained in the :ref:`server` docs."
-msgstr ""
+msgstr "\ :ref:`server`\ ドキュメントでより多くのパラメータを説明しています。"
 
 # ab11579bf7a6480f924a7dcc93c5636e
 #: ../../quickstart.rst:153
 msgid "Attention"
-msgstr ""
+msgstr "注意"
 
 # 207f00e9848045a1af24329d9ce5b676
 #: ../../quickstart.rst:155
@@ -285,11 +353,17 @@ msgid ""
 "a major security risk and therefore it **must never be used on production"
 " machines**."
 msgstr ""
+"たとえforkした環境（訳注：\ :ref:`working-with-debuggers`\ 参照、外部"
+"デバッガ使用時にはforkした環境に設定可能）ではインタラクティブなデバッガが"
+"機能しない（それによって本番環境のサーバでの使用を殆ど不可能にします）と"
+"しても、それでも任意のコードを実行できるようにします。これは深刻な"
+"セキュリティ上のリスクであり、従って\ **本番環境のマシンでは決して使用"
+"してはいけません**\ 。"
 
 # 3e61206cfbc642e3926319f45c0771a6
 #: ../../quickstart.rst:160
 msgid "Screenshot of the debugger in action:"
-msgstr ""
+msgstr "実行中のデバッガのスクリーンショット："
 
 # 929435c3dc3f4b48acf6c8b74b8983bf
 #: ../../quickstart.rst:167
@@ -297,11 +371,15 @@ msgid ""
 "More information on using the debugger can be found in the `Werkzeug "
 "documentation`_."
 msgstr ""
+"デバッガ使用に関するさらなる情報は\ `Werkzeugドキュメント`_\ で見つける"
+"ことができます。"
 
 # 77b2a594767b4fd3a78afe0cd5c82cfa
 #: ../../quickstart.rst:172
 msgid "Have another debugger in mind? See :ref:`working-with-debuggers`."
 msgstr ""
+"他のデバッガが気になりますか？\ :ref:`working-with-debuggers`\ を"
+"確認してください。"
 
 # 3302a6e53ed84fc68cb87592716f8590
 #: ../../quickstart.rst:176
