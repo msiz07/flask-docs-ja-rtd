@@ -1,0 +1,122 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 1.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+# 752859af6826476fb46a100738bcd54f
+#: ../../foreword.rst:2
+msgid "Foreword"
+msgstr ""
+
+# 91d414a7bf5548d0ba8211130b29d38e
+#: ../../foreword.rst:4
+msgid ""
+"Read this before you get started with Flask.  This hopefully answers some"
+" questions about the purpose and goals of the project, and when you "
+"should or should not be using it."
+msgstr ""
+
+# 66f97bd597f948c6a0c57efcccee317c
+#: ../../foreword.rst:9
+msgid "What does \"micro\" mean?"
+msgstr ""
+
+# b1cb15cd8f474d74a28b60939b26036a
+#: ../../foreword.rst:11
+msgid ""
+"“Micro” does not mean that your whole web application has to fit into a "
+"single Python file (although it certainly can), nor does it mean that "
+"Flask is lacking in functionality. The \"micro\" in microframework means "
+"Flask aims to keep the core simple but extensible. Flask won't make many "
+"decisions for you, such as what database to use. Those decisions that it "
+"does make, such as what templating engine to use, are easy to change.  "
+"Everything else is up to you, so that Flask can be everything you need "
+"and nothing you don't."
+msgstr ""
+
+# 1c0e452d35bf475c8e3dd4a11963b7fe
+#: ../../foreword.rst:19
+msgid ""
+"By default, Flask does not include a database abstraction layer, form "
+"validation or anything else where different libraries already exist that "
+"can handle that. Instead, Flask supports extensions to add such "
+"functionality to your application as if it was implemented in Flask "
+"itself. Numerous extensions provide database integration, form "
+"validation, upload handling, various open authentication technologies, "
+"and more. Flask may be \"micro\", but it's ready for production use on a "
+"variety of needs."
+msgstr ""
+
+# 851fa6177f5b4f2c9170d9f0b5d02a62
+#: ../../foreword.rst:28
+msgid "Configuration and Conventions"
+msgstr ""
+
+# 0dd1aa427acd40bb9766bf6d4fd61f60
+#: ../../foreword.rst:30
+msgid ""
+"Flask has many configuration values, with sensible defaults, and a few "
+"conventions when getting started.  By convention, templates and static "
+"files are stored in subdirectories within the application's Python source"
+" tree, with the names :file:`templates` and :file:`static` respectively. "
+"While this can be changed, you usually don't have to, especially when "
+"getting started."
+msgstr ""
+
+# cb9504b746ec4652b6683f43ed801253
+#: ../../foreword.rst:38
+msgid "Growing with Flask"
+msgstr ""
+
+# 33e7578da13f493e9b1d2553aa0831ac
+#: ../../foreword.rst:40
+msgid ""
+"Once you have Flask up and running, you'll find a variety of extensions "
+"available in the community to integrate your project for production. The "
+"Flask core team reviews extensions and ensures approved extensions do not"
+" break with future releases."
+msgstr ""
+
+# c3efb003cbea496c887bcf422c7ea1f8
+#: ../../foreword.rst:45
+msgid ""
+"As your codebase grows, you are free to make the design decisions "
+"appropriate for your project.  Flask will continue to provide a very "
+"simple glue layer to the best that Python has to offer.  You can "
+"implement advanced patterns in SQLAlchemy or another database tool, "
+"introduce non-relational data persistence as appropriate, and take "
+"advantage of framework-agnostic tools built for WSGI, the Python web "
+"interface."
+msgstr ""
+
+# 6a5401944b5047c4ac2a8da740e7b1b9
+#: ../../foreword.rst:52
+msgid ""
+"Flask includes many hooks to customize its behavior. Should you need more"
+" customization, the Flask class is built for subclassing. If you are "
+"interested in that, check out the :ref:`becomingbig` chapter.  If you are"
+" curious about the Flask design principles, head over to the section "
+"about :ref:`design`."
+msgstr ""
+
+# 0719427517eb49f994e9580479fd7de2
+#: ../../foreword.rst:57
+msgid ""
+"Continue to :ref:`installation`, the :ref:`quickstart`, or the "
+":ref:`advanced_foreword`."
+msgstr ""
+

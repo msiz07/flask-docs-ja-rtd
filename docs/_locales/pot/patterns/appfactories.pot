@@ -1,0 +1,143 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 1.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../patterns/appfactories.rst:4
+# db0210e4bf5b4ce0b72fa26189acd456
+msgid "Application Factories"
+msgstr ""
+
+#: ../../patterns/appfactories.rst:6
+# 43074d5043684e83b184d2d0f1c24041
+msgid "If you are already using packages and blueprints for your application (:ref:`blueprints`) there are a couple of really nice ways to further improve the experience.  A common pattern is creating the application object when the blueprint is imported.  But if you move the creation of this object into a function, you can then create multiple instances of this app later."
+msgstr ""
+
+#: ../../patterns/appfactories.rst:12
+# 7e14aaf62b1947159178e41321b228e4
+msgid "So why would you want to do this?"
+msgstr ""
+
+#: ../../patterns/appfactories.rst:14
+# 751afc2dc9a84aa79170957782ddf096
+msgid "Testing.  You can have instances of the application with different settings to test every case."
+msgstr ""
+
+#: ../../patterns/appfactories.rst:16
+# 46c4347048ce45a5bc409e99430c49ea
+msgid "Multiple instances.  Imagine you want to run different versions of the same application.  Of course you could have multiple instances with different configs set up in your webserver, but if you use factories, you can have multiple instances of the same application running in the same application process which can be handy."
+msgstr ""
+
+#: ../../patterns/appfactories.rst:22
+# 26c898a9b2814f43bb2e481875bdeb40
+msgid "So how would you then actually implement that?"
+msgstr ""
+
+#: ../../patterns/appfactories.rst:25
+# 1ce2f203b1e049c8a1dc0c412651a875
+msgid "Basic Factories"
+msgstr ""
+
+#: ../../patterns/appfactories.rst:27
+# cf5eb756e2044688ba00c4fe9cef05b7
+msgid "The idea is to set up the application in a function.  Like this::"
+msgstr ""
+
+#: ../../patterns/appfactories.rst:43
+# bd25dd3fb47c4fe9b51997496faafa3a
+msgid "The downside is that you cannot use the application object in the blueprints at import time.  You can however use it from within a request.  How do you get access to the application with the config?  Use :data:`~flask.current_app`::"
+msgstr ""
+
+#: ../../patterns/appfactories.rst:55
+# b78da6f25679490c85d472b9632153ab
+msgid "Here we look up the name of a template in the config."
+msgstr ""
+
+#: ../../patterns/appfactories.rst:58
+# f990e427b7014e94a0b571720dd068ea
+msgid "Factories & Extensions"
+msgstr ""
+
+#: ../../patterns/appfactories.rst:60
+# 0f1edb16591c42ec8e00bec74e24e8de
+msgid "It's preferable to create your extensions and app factories so that the extension object does not initially get bound to the application."
+msgstr ""
+
+#: ../../patterns/appfactories.rst:63
+# 6276eb07ba3443c4afe712c27297aa27
+msgid "Using `Flask-SQLAlchemy <https://flask-sqlalchemy.palletsprojects.com/>`_, as an example, you should not do something along those lines::"
+msgstr ""
+
+#: ../../patterns/appfactories.rst:72
+# b5839792395346df89167323d2ff37c0
+msgid "But, rather, in model.py (or equivalent)::"
+msgstr ""
+
+#: ../../patterns/appfactories.rst:76
+# 690ebf8292844bde8e3f6680d5894357
+msgid "and in your application.py (or equivalent)::"
+msgstr ""
+
+#: ../../patterns/appfactories.rst:85
+# 91428f1a3e914f1db744fabd132432bf
+msgid "Using this design pattern, no application-specific state is stored on the extension object, so one extension object can be used for multiple apps. For more information about the design of extensions refer to :doc:`/extensiondev`."
+msgstr ""
+
+#: ../../patterns/appfactories.rst:90
+# 2810986151fe444a8143bac008cb85c9
+msgid "Using Applications"
+msgstr ""
+
+#: ../../patterns/appfactories.rst:92
+# bce65ec6579c4689bc2efd90d7b19c72
+msgid "To run such an application, you can use the :command:`flask` command::"
+msgstr ""
+
+#: ../../patterns/appfactories.rst:97
+# 046a8950135c441786ebadc6cf0b87d8
+msgid "Flask will automatically detect the factory (``create_app`` or ``make_app``) in ``myapp``. You can also pass arguments to the factory like this::"
+msgstr ""
+
+#: ../../patterns/appfactories.rst:103
+# 9ef58389dbf240669819d7089fcf9205
+msgid "Then the ``create_app`` factory in ``myapp`` is called with the string ``'dev'`` as the argument. See :doc:`/cli` for more detail."
+msgstr ""
+
+#: ../../patterns/appfactories.rst:107
+# f0794ca000be4135a5f336177744b8c6
+msgid "Factory Improvements"
+msgstr ""
+
+#: ../../patterns/appfactories.rst:109
+# a2d80e4636b14474afbea81bd3f1cd80
+msgid "The factory function above is not very clever, but you can improve it. The following changes are straightforward to implement:"
+msgstr ""
+
+#: ../../patterns/appfactories.rst:112
+# 9b620674a9eb444aba3daa058da50aba
+msgid "Make it possible to pass in configuration values for unit tests so that you don't have to create config files on the filesystem."
+msgstr ""
+
+#: ../../patterns/appfactories.rst:114
+# bf3fd59eec8f45b0b153e21dfdf2ae13
+msgid "Call a function from a blueprint when the application is setting up so that you have a place to modify attributes of the application (like hooking in before/after request handlers etc.)"
+msgstr ""
+
+#: ../../patterns/appfactories.rst:117
+# ffe55ae57dbc42eeb42959c79524373e
+msgid "Add in WSGI middlewares when the application is being created if necessary."
+msgstr ""
+

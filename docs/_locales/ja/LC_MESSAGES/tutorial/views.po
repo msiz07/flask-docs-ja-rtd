@@ -1,0 +1,342 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 1.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+# 93d382664c0c447dac2cb49313db520f
+#: ../../tutorial/views.rst:4
+msgid "Blueprints and Views"
+msgstr ""
+
+# d987890f2cfd4a378283a2071b4f9f7d
+#: ../../tutorial/views.rst:6
+msgid ""
+"A view function is the code you write to respond to requests to your "
+"application. Flask uses patterns to match the incoming request URL to the"
+" view that should handle it. The view returns data that Flask turns into "
+"an outgoing response. Flask can also go the other direction and generate "
+"a URL to a view based on its name and arguments."
+msgstr ""
+
+# 6889b05a6af14511a1ba49e7b9de80eb
+#: ../../tutorial/views.rst:14
+msgid "Create a Blueprint"
+msgstr ""
+
+# fda6fb178fd4496d867002f554be333b
+#: ../../tutorial/views.rst:16
+msgid ""
+"A :class:`Blueprint` is a way to organize a group of related views and "
+"other code. Rather than registering views and other code directly with an"
+" application, they are registered with a blueprint. Then the blueprint is"
+" registered with the application when it is available in the factory "
+"function."
+msgstr ""
+
+# a95ba696c5dd40ae9c3b2b9b5c305c7f
+#: ../../tutorial/views.rst:22
+msgid ""
+"Flaskr will have two blueprints, one for authentication functions and one"
+" for the blog posts functions. The code for each blueprint will go in a "
+"separate module. Since the blog needs to know about authentication, "
+"you'll write the authentication one first."
+msgstr ""
+
+# 8d5ca4a73a4e45bd97faaeaf4c5148de
+# bc7e8daa2ba84fce9200c4d0de0f18c7
+# e37b4308796849e5a0e1a5da0d6d69e9
+# abcb5ff4e2f646b2b029c5ec9c88050d
+# a3f030bb59f94c4b83068d15ac556a3d
+# 5f6f23f96be049cb9b548f4ecee98ea5
+#: ../../tutorial/views.rst:27 ../../tutorial/views.rst:79
+#: ../../tutorial/views.rst:171 ../../tutorial/views.rst:218
+#: ../../tutorial/views.rst:247 ../../tutorial/views.rst:263
+msgid "``flaskr/auth.py``"
+msgstr ""
+
+# 31bc29cd722543cc876e856033de5607
+#: ../../tutorial/views.rst:41
+msgid ""
+"This creates a :class:`Blueprint` named ``'auth'``. Like the application "
+"object, the blueprint needs to know where it's defined, so ``__name__`` "
+"is passed as the second argument. The ``url_prefix`` will be prepended to"
+" all the URLs associated with the blueprint."
+msgstr ""
+
+# 196a4c2d9aad4d80aba890a5565d5b8e
+#: ../../tutorial/views.rst:46
+msgid ""
+"Import and register the blueprint from the factory using "
+":meth:`app.register_blueprint() <Flask.register_blueprint>`. Place the "
+"new code at the end of the factory function before returning the app."
+msgstr ""
+
+# c9fa5c9ed0524254a60ab90c40d9cb27
+#: ../../tutorial/views.rst:50
+msgid "``flaskr/__init__.py``"
+msgstr ""
+
+# 79007e81853e4dc3bf2f002fa68ecd77
+#: ../../tutorial/views.rst:62
+msgid ""
+"The authentication blueprint will have views to register new users and to"
+" log in and log out."
+msgstr ""
+
+# f771f3a1b0284ef5b734ce11acb571c0
+#: ../../tutorial/views.rst:67
+msgid "The First View: Register"
+msgstr ""
+
+# 12d24a0fa3f34933b32154759e5564e5
+#: ../../tutorial/views.rst:69
+msgid ""
+"When the user visits the ``/auth/register`` URL, the ``register`` view "
+"will return `HTML`_ with a form for them to fill out. When they submit "
+"the form, it will validate their input and either show the form again "
+"with an error message or create the new user and go to the login page."
+msgstr ""
+
+# 40dd43916335440a98294bc52e1dd2e7
+#: ../../tutorial/views.rst:76
+msgid ""
+"For now you will just write the view code. On the next page, you'll write"
+" templates to generate the HTML form."
+msgstr ""
+
+# 53a2c05253c34361879b29caee3ab24e
+#: ../../tutorial/views.rst:111
+msgid "Here's what the ``register`` view function is doing:"
+msgstr ""
+
+# 3751500532914958b839707153cdfc67
+#: ../../tutorial/views.rst:113
+msgid ""
+":meth:`@bp.route <Blueprint.route>` associates the URL ``/register`` with"
+" the ``register`` view function. When Flask receives a request to "
+"``/auth/register``, it will call the ``register`` view and use the return"
+" value as the response."
+msgstr ""
+
+# 5f92f149f9be417eae083642829a1866
+#: ../../tutorial/views.rst:118
+msgid ""
+"If the user submitted the form, :attr:`request.method <Request.method>` "
+"will be ``'POST'``. In this case, start validating the input."
+msgstr ""
+
+# a2fc88550dd4407b83c0fdeb1a5952ff
+#: ../../tutorial/views.rst:122
+msgid ""
+":attr:`request.form <Request.form>` is a special type of :class:`dict` "
+"mapping submitted form keys and values. The user will input their "
+"``username`` and ``password``."
+msgstr ""
+
+# 211f41286c744615911e1fe358c275d9
+#: ../../tutorial/views.rst:126
+msgid "Validate that ``username`` and ``password`` are not empty."
+msgstr ""
+
+# bcfac4cfbdbc42f7b7d2b9115c9efbd2
+#: ../../tutorial/views.rst:128
+msgid ""
+"Validate that ``username`` is not already registered by querying the "
+"database and checking if a result is returned. :meth:`db.execute "
+"<sqlite3.Connection.execute>` takes a SQL query with ``?`` placeholders "
+"for any user input, and a tuple of values to replace the placeholders "
+"with. The database library will take care of escaping the values so you "
+"are not vulnerable to a *SQL injection attack*."
+msgstr ""
+
+# 9bbd7158ac03480da40853d0e59e419c
+#: ../../tutorial/views.rst:136
+msgid ""
+":meth:`~sqlite3.Cursor.fetchone` returns one row from the query. If the "
+"query returned no results, it returns ``None``. Later, "
+":meth:`~sqlite3.Cursor.fetchall` is used, which returns a list of all "
+"results."
+msgstr ""
+
+# a11409be0edf48a8b97855ae3bef0d01
+#: ../../tutorial/views.rst:141
+msgid ""
+"If validation succeeds, insert the new user data into the database. For "
+"security, passwords should never be stored in the database directly. "
+"Instead, :func:`~werkzeug.security.generate_password_hash` is used to "
+"securely hash the password, and that hash is stored. Since this query "
+"modifies data, :meth:`db.commit() <sqlite3.Connection.commit>` needs to "
+"be called afterwards to save the changes."
+msgstr ""
+
+# bf107b82dc6a487fa2fc34b23bb59ffe
+#: ../../tutorial/views.rst:149
+msgid ""
+"After storing the user, they are redirected to the login page. "
+":func:`url_for` generates the URL for the login view based on its name. "
+"This is preferable to writing the URL directly as it allows you to change"
+" the URL later without changing all code that links to it. "
+":func:`redirect` generates a redirect response to the generated URL."
+msgstr ""
+
+# 0b153d00360e413fad1582e4f589d778
+#: ../../tutorial/views.rst:156
+msgid ""
+"If validation fails, the error is shown to the user. :func:`flash` stores"
+" messages that can be retrieved when rendering the template."
+msgstr ""
+
+# 5d25a7a4f3054a4a80f312381402fee2
+#: ../../tutorial/views.rst:159
+msgid ""
+"When the user initially navigates to ``auth/register``, or there was a "
+"validation error, an HTML page with the registration form should be "
+"shown. :func:`render_template` will render a template containing the "
+"HTML, which you'll write in the next step of the tutorial."
+msgstr ""
+
+# 64169ef34f354311a377f9ebd2ba9303
+#: ../../tutorial/views.rst:167
+msgid "Login"
+msgstr ""
+
+# bbecb3ae9da44986b4dc9b9f91e4ea5a
+#: ../../tutorial/views.rst:169
+msgid "This view follows the same pattern as the ``register`` view above."
+msgstr ""
+
+# 3c50deef7e3145548dc7b49d230dcb90
+#: ../../tutorial/views.rst:199
+msgid "There are a few differences from the ``register`` view:"
+msgstr ""
+
+# efe46c07de4145d4b66548fbd17edd25
+#: ../../tutorial/views.rst:201
+msgid "The user is queried first and stored in a variable for later use."
+msgstr ""
+
+# 2382cf33e47e40f398092936357ea6d0
+#: ../../tutorial/views.rst:203
+msgid ""
+":func:`~werkzeug.security.check_password_hash` hashes the submitted "
+"password in the same way as the stored hash and securely compares them. "
+"If they match, the password is valid."
+msgstr ""
+
+# ccfb0cea4fe84c7487ee38d28222de37
+#: ../../tutorial/views.rst:207
+msgid ""
+":data:`session` is a :class:`dict` that stores data across requests. When"
+" validation succeeds, the user's ``id`` is stored in a new session. The "
+"data is stored in a *cookie* that is sent to the browser, and the browser"
+" then sends it back with subsequent requests. Flask securely *signs* the "
+"data so that it can't be tampered with."
+msgstr ""
+
+# 0100eff5fddf490db837b1614850a15a
+#: ../../tutorial/views.rst:213
+msgid ""
+"Now that the user's ``id`` is stored in the :data:`session`, it will be "
+"available on subsequent requests. At the beginning of each request, if a "
+"user is logged in their information should be loaded and made available "
+"to other views."
+msgstr ""
+
+# 3fab576897e248f78abda0483daed639
+#: ../../tutorial/views.rst:232
+msgid ""
+":meth:`bp.before_app_request() <Blueprint.before_app_request>` registers "
+"a function that runs before the view function, no matter what URL is "
+"requested. ``load_logged_in_user`` checks if a user id is stored in the "
+":data:`session` and gets that user's data from the database, storing it "
+"on :data:`g.user <g>`, which lasts for the length of the request. If "
+"there is no user id, or if the id doesn't exist, ``g.user`` will be "
+"``None``."
+msgstr ""
+
+# be9323c7a2d944589d8ab30c2b061700
+#: ../../tutorial/views.rst:242
+msgid "Logout"
+msgstr ""
+
+# ba043eb084bb497fb905118dda074f3d
+#: ../../tutorial/views.rst:244
+msgid ""
+"To log out, you need to remove the user id from the :data:`session`. Then"
+" ``load_logged_in_user`` won't load a user on subsequent requests."
+msgstr ""
+
+# bd2992b2275643a5aebfc5661c080b6e
+#: ../../tutorial/views.rst:257
+msgid "Require Authentication in Other Views"
+msgstr ""
+
+# 0158ed6ba37f41b0b255a87bbb83fb3c
+#: ../../tutorial/views.rst:259
+msgid ""
+"Creating, editing, and deleting blog posts will require a user to be "
+"logged in. A *decorator* can be used to check this for each view it's "
+"applied to."
+msgstr ""
+
+# b0b730e5bac94f598f2c21e135fc2b11
+#: ../../tutorial/views.rst:276
+msgid ""
+"This decorator returns a new view function that wraps the original view "
+"it's applied to. The new function checks if a user is loaded and "
+"redirects to the login page otherwise. If a user is loaded the original "
+"view is called and continues normally. You'll use this decorator when "
+"writing the blog views."
+msgstr ""
+
+# d489f6861b9f4c6d98e65dae8066f6a9
+#: ../../tutorial/views.rst:283
+msgid "Endpoints and URLs"
+msgstr ""
+
+# 499cdab90988412fa1ec664d87ad189a
+#: ../../tutorial/views.rst:285
+msgid ""
+"The :func:`url_for` function generates the URL to a view based on a name "
+"and arguments. The name associated with a view is also called the "
+"*endpoint*, and by default it's the same as the name of the view "
+"function."
+msgstr ""
+
+# 19638529d10e4210886fd686f77e5a27
+#: ../../tutorial/views.rst:290
+msgid ""
+"For example, the ``hello()`` view that was added to the app factory "
+"earlier in the tutorial has the name ``'hello'`` and can be linked to "
+"with ``url_for('hello')``. If it took an argument, which you'll see "
+"later, it would be linked to using ``url_for('hello', who='World')``."
+msgstr ""
+
+# e9bf16ae80e1439aabcbd68d621fa965
+#: ../../tutorial/views.rst:296
+msgid ""
+"When using a blueprint, the name of the blueprint is prepended to the "
+"name of the function, so the endpoint for the ``login`` function you "
+"wrote above is ``'auth.login'`` because you added it to the ``'auth'`` "
+"blueprint."
+msgstr ""
+
+# 36dc0ce7ddf642a7b27599d16e07f068
+#: ../../tutorial/views.rst:301
+msgid "Continue to :doc:`templates`."
+msgstr ""
+

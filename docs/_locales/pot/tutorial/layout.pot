@@ -1,0 +1,108 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 1.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../tutorial/layout.rst:2
+# 36f48149c3004c6fa08134b626662a70
+msgid "Project Layout"
+msgstr ""
+
+#: ../../tutorial/layout.rst:4
+# 71ffdce601b448929244195a5390764f
+msgid "Create a project directory and enter it:"
+msgstr ""
+
+#: ../../tutorial/layout.rst:11
+# dc92911288874f668ba9ed700be31843
+msgid "Then follow the :doc:`installation instructions </installation>` to set up a Python virtual environment and install Flask for your project."
+msgstr ""
+
+#: ../../tutorial/layout.rst:14
+# 202651d72bfa4ee681e9d63d0eeaa1ab
+msgid "The tutorial will assume you're working from the ``flask-tutorial`` directory from now on. The file names at the top of each code block are relative to this directory."
+msgstr ""
+
+#: ../../tutorial/layout.rst:20
+# 6ddf585b3482438499f9f5908df4143d
+msgid "A Flask application can be as simple as a single file."
+msgstr ""
+
+#: ../../tutorial/layout.rst:22
+# 329099efbb2e4629aa0b540755e2e6f7
+msgid "``hello.py``"
+msgstr ""
+
+#: ../../tutorial/layout.rst:34
+# 5aa0dd8342cc4b5caadec47242436383
+msgid "However, as a project gets bigger, it becomes overwhelming to keep all the code in one file. Python projects use *packages* to organize code into multiple modules that can be imported where needed, and the tutorial will do this as well."
+msgstr ""
+
+#: ../../tutorial/layout.rst:39
+# 252c68e742c5415fbfdf394a5cbdfe27
+msgid "The project directory will contain:"
+msgstr ""
+
+#: ../../tutorial/layout.rst:41
+# 8f9a1876c05f47fbad5e98c39e6c98aa
+msgid "``flaskr/``, a Python package containing your application code and files."
+msgstr ""
+
+#: ../../tutorial/layout.rst:43
+# 7b1b96113fa54e4aa5b536d39c5a451b
+msgid "``tests/``, a directory containing test modules."
+msgstr ""
+
+#: ../../tutorial/layout.rst:44
+# 2eeb91c37d414f7eb27d30abbab65d8c
+msgid "``venv/``, a Python virtual environment where Flask and other dependencies are installed."
+msgstr ""
+
+#: ../../tutorial/layout.rst:46
+# e30790ca914b4c319abd1bf0652dd745
+msgid "Installation files telling Python how to install your project."
+msgstr ""
+
+#: ../../tutorial/layout.rst:47
+# 4d7ec2283a624e5696db98537ff0f4f5
+msgid "Version control config, such as `git`_. You should make a habit of using some type of version control for all your projects, no matter the size."
+msgstr ""
+
+#: ../../tutorial/layout.rst:50
+# 5a52d24154744a5ab618d8d503731972
+msgid "Any other project files you might add in the future."
+msgstr ""
+
+#: ../../tutorial/layout.rst:54
+# 2e539f0c70404b7ab5aea521e2bd995e
+msgid "By the end, your project layout will look like this:"
+msgstr ""
+
+#: ../../tutorial/layout.rst:87
+# 799deceef08d46f4895d9f3a61d686aa
+msgid "If you're using version control, the following files that are generated while running your project should be ignored. There may be other files based on the editor you use. In general, ignore files that you didn't write. For example, with git:"
+msgstr ""
+
+#: ../../tutorial/layout.rst:92
+# 196e6e35ffea4c1a8847abc97bf874ca
+msgid "``.gitignore``"
+msgstr ""
+
+#: ../../tutorial/layout.rst:110
+# dd4b05d2c3254d9c93e90051ae3ec9a2
+msgid "Continue to :doc:`factory`."
+msgstr ""
+

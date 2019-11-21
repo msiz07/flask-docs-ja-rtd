@@ -1,0 +1,97 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 1.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../license.rst:2
+# 5c2db9124a404e3eaa153f409c1d7a44
+msgid "License"
+msgstr ""
+
+#: ../../license.rst:5
+# 4cf4e9a9d80342239461a0df5688c5c9
+msgid "Source License"
+msgstr ""
+
+#: ../../license.rst:7
+# ef98646a0f144e0ca2ca2068e499fc61
+msgid "This license applies to all files in the Flask repository and source distribution. This includes Flask's source code, the examples, and tests, as well as the documentation."
+msgstr ""
+
+#: ../../../LICENSE.rst:1
+#: ../../../artwork/LICENSE.rst:1
+# 6a148334bfca4cab9d2049ebf60d25be
+# 11c63044199c41bd8456de68020b69dc
+msgid "Copyright 2010 Pallets"
+msgstr ""
+
+#: ../../../LICENSE.rst:3
+# b50766612b534a81b8bc917a3aa5cc2a
+msgid "Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:"
+msgstr ""
+
+#: ../../../LICENSE.rst:7
+# 95f4230940ec401d99cc6a364fcf8042
+msgid "Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer."
+msgstr ""
+
+#: ../../../LICENSE.rst:10
+# d0959ef1c6b84109888471d84151aeda
+msgid "Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution."
+msgstr ""
+
+#: ../../../LICENSE.rst:14
+#: ../../../artwork/LICENSE.rst:13
+# f9b988d81bff4cb393646f5ee5c0c37e
+# 71969f3d12ae46aea2e6043d146fde39
+msgid "Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission."
+msgstr ""
+
+#: ../../../LICENSE.rst:18
+# 704df8714f9b40139b37557ef1908e9b
+msgid "THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."
+msgstr ""
+
+#: ../../license.rst:15
+# f64dd90134cc47cbbc0d588172f843ec
+msgid "Artwork License"
+msgstr ""
+
+#: ../../license.rst:17
+# 4034c96388f8430a9aa048c044af08c5
+msgid "This license applies to Flask's logo."
+msgstr ""
+
+#: ../../../artwork/LICENSE.rst:3
+# c8c0bda6afd2425e961aa601ea8eaf51
+msgid "This logo or a modified version may be used by anyone to refer to the Flask project, but does not indicate endorsement by the project."
+msgstr ""
+
+#: ../../../artwork/LICENSE.rst:6
+# 28c1f48e8ae3458e9e43e3d2748449a7
+msgid "Redistribution and use in source (SVG) and binary (renders in PNG, etc.) forms, with or without modification, are permitted provided that the following conditions are met:"
+msgstr ""
+
+#: ../../../artwork/LICENSE.rst:10
+# ae9ce22d788945519eca252b5e44ac3a
+msgid "Redistributions of source code must retain the above copyright notice and this list of conditions."
+msgstr ""
+
+#: ../../../artwork/LICENSE.rst:17
+# 4b9120c9bde8482f9a1a194e8a85ebbf
+msgid "We would appreciate that you make the image a link to https://palletsprojects.com/p/flask/ if you use it in a medium that supports links."
+msgstr ""
+

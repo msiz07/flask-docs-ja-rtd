@@ -21,3 +21,11 @@ htmlcov/
 .coverage
 .coverage.*
 *,cover
+
+# Translation (ja)
+*.mo
+
+# vim temporary files
+.*.sw[a-p]
+*.un~
+*~

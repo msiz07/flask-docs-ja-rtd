@@ -1,0 +1,843 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 1.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../quickstart.rst:4
+# 5d3e771b460d48908ed5b59e63cde452
+msgid "Quickstart"
+msgstr ""
+
+#: ../../quickstart.rst:6
+# 97a747bc2c8f49ffa46194e234112671
+msgid "Eager to get started?  This page gives a good introduction to Flask.  It assumes you already have Flask installed.  If you do not, head over to the :ref:`installation` section."
+msgstr ""
+
+#: ../../quickstart.rst:12
+# 00595259ecee47dd8bd759592d905a53
+msgid "A Minimal Application"
+msgstr ""
+
+#: ../../quickstart.rst:14
+# e1570c67382e40759aa8873fcdcf2773
+msgid "A minimal Flask application looks something like this::"
+msgstr ""
+
+#: ../../quickstart.rst:23
+# 063c3db15dc547168de47abc07bdd7ea
+msgid "So what did that code do?"
+msgstr ""
+
+#: ../../quickstart.rst:25
+# 87b5d69f87054beab760456d7a60d633
+msgid "First we imported the :class:`~flask.Flask` class.  An instance of this class will be our WSGI application."
+msgstr ""
+
+#: ../../quickstart.rst:27
+# fe5382420a9844228a973dd014e30b86
+msgid "Next we create an instance of this class. The first argument is the name of the application's module or package.  If you are using a single module (as in this example), you should use ``__name__`` because depending on if it's started as application or imported as module the name will be different (``'__main__'`` versus the actual import name). This is needed so that Flask knows where to look for templates, static files, and so on. For more information have a look at the :class:`~flask.Flask` documentation."
+msgstr ""
+
+#: ../../quickstart.rst:34
+# a6f42a311f6843ccacc8e3660800438a
+msgid "We then use the :meth:`~flask.Flask.route` decorator to tell Flask what URL should trigger our function."
+msgstr ""
+
+#: ../../quickstart.rst:36
+# e304d6ecb52e4cfea637f7bd28223722
+msgid "The function is given a name which is also used to generate URLs for that particular function, and returns the message we want to display in the user's browser."
+msgstr ""
+
+#: ../../quickstart.rst:40
+# c157b28898f44db8aba4c31269fb5ce2
+msgid "Just save it as :file:`hello.py` or something similar. Make sure to not call your application :file:`flask.py` because this would conflict with Flask itself."
+msgstr ""
+
+#: ../../quickstart.rst:44
+# b18f6d432b6d42f7855c20046abbd57a
+msgid "To run the application you can either use the :command:`flask` command or python's ``-m`` switch with Flask.  Before you can do that you need to tell your terminal the application to work with by exporting the ``FLASK_APP`` environment variable::"
+msgstr ""
+
+#: ../../quickstart.rst:53
+# 770f3dfc5e9a4af7baea45557b001f97
+msgid "If you are on Windows, the environment variable syntax depends on command line interpreter. On Command Prompt::"
+msgstr ""
+
+#: ../../quickstart.rst:58
+# f7567119532946b69614c6de9ec2a4f3
+msgid "And on PowerShell::"
+msgstr ""
+
+#: ../../quickstart.rst:62
+# 267b255a46f541f0b80490b6ca49019e
+msgid "Alternatively you can use :command:`python -m flask`::"
+msgstr ""
+
+#: ../../quickstart.rst:68
+# ebc0751096214ee6a5131cf3d9693430
+msgid "This launches a very simple builtin server, which is good enough for testing but probably not what you want to use in production. For deployment options see :ref:`deployment`."
+msgstr ""
+
+#: ../../quickstart.rst:72
+# 3d41fb22c4a145018ed6b41a66972e41
+msgid "Now head over to http://127.0.0.1:5000/, and you should see your hello world greeting."
+msgstr ""
+
+#: ../../quickstart.rst:77
+# 3681f706a014496fb409b13d2a0355c8
+msgid "Externally Visible Server"
+msgstr ""
+
+#: ../../quickstart.rst:79
+# 953b7cb564ec492c8abc9c2607f87998
+msgid "If you run the server you will notice that the server is only accessible from your own computer, not from any other in the network.  This is the default because in debugging mode a user of the application can execute arbitrary Python code on your computer."
+msgstr ""
+
+#: ../../quickstart.rst:84
+# 509abe6da4c742ec80959a0581f5147b
+msgid "If you have the debugger disabled or trust the users on your network, you can make the server publicly available simply by adding ``--host=0.0.0.0`` to the command line::"
+msgstr ""
+
+#: ../../quickstart.rst:90
+# 7aff041abba44dc48da06c27085e56ba
+msgid "This tells your operating system to listen on all public IPs."
+msgstr ""
+
+#: ../../quickstart.rst:94
+# 66b05a10901e498cb407059b1ca698f4
+msgid "What to do if the Server does not Start"
+msgstr ""
+
+#: ../../quickstart.rst:96
+# 45116159c70b42bab20485d6b5eded37
+msgid "In case the :command:`python -m flask` fails or :command:`flask` does not exist, there are multiple reasons this might be the case. First of all you need to look at the error message."
+msgstr ""
+
+#: ../../quickstart.rst:101
+# 2ab0fe20a6fc42d3bccdcdd94a2da3da
+msgid "Old Version of Flask"
+msgstr ""
+
+#: ../../quickstart.rst:103
+# ef8f8c640c3c4d0093a009182d87ea03
+msgid "Versions of Flask older than 0.11 use to have different ways to start the application.  In short, the :command:`flask` command did not exist, and neither did :command:`python -m flask`.  In that case you have two options: either upgrade to newer Flask versions or have a look at the :ref:`server` docs to see the alternative method for running a server."
+msgstr ""
+
+#: ../../quickstart.rst:110
+# cdf5f01e94f04119945160db81168d0a
+msgid "Invalid Import Name"
+msgstr ""
+
+#: ../../quickstart.rst:112
+# 8aded6ce7a6a45f1921961eb536bbbdc
+msgid "The ``FLASK_APP`` environment variable is the name of the module to import at :command:`flask run`. In case that module is incorrectly named you will get an import error upon start (or if debug is enabled when you navigate to the application). It will tell you what it tried to import and why it failed."
+msgstr ""
+
+#: ../../quickstart.rst:117
+# 9ada36b68b9e4cb1add9e9d939d0b0a9
+msgid "The most common reason is a typo or because you did not actually create an ``app`` object."
+msgstr ""
+
+#: ../../quickstart.rst:123
+# 87826b140bb343789270fa7690127fb9
+msgid "Debug Mode"
+msgstr ""
+
+#: ../../quickstart.rst:125
+# 01a75f4cd8854154bb35067274ce80ce
+msgid "(Want to just log errors and stack traces? See :ref:`application-errors`)"
+msgstr ""
+
+#: ../../quickstart.rst:127
+# 82fc498873cb4b568f098d9e4dd4ba09
+msgid "The :command:`flask` script is nice to start a local development server, but you would have to restart it manually after each change to your code. That is not very nice and Flask can do better.  If you enable debug support the server will reload itself on code changes, and it will also provide you with a helpful debugger if things go wrong."
+msgstr ""
+
+#: ../../quickstart.rst:133
+# f9428ba54a004a179667264525d12114
+msgid "To enable all development features (including debug mode) you can export the ``FLASK_ENV`` environment variable and set it to ``development`` before running the server::"
+msgstr ""
+
+#: ../../quickstart.rst:140
+# f2dcb5cc8fec4d86a5ca87408cd60f2d
+msgid "(On Windows you need to use ``set`` instead of ``export``.)"
+msgstr ""
+
+#: ../../quickstart.rst:142
+# f7c99a21dd2c4988932eb134a0cfa742
+msgid "This does the following things:"
+msgstr ""
+
+#: ../../quickstart.rst:144
+# 8543ab5fe10244038bc0f06d395cb22f
+msgid "it activates the debugger"
+msgstr ""
+
+#: ../../quickstart.rst:145
+# bc18b2158b3f4d51ace2a0953972ecf5
+msgid "it activates the automatic reloader"
+msgstr ""
+
+#: ../../quickstart.rst:146
+# c4f88dedb4dc4718b367cb7f7bc5ed38
+msgid "it enables the debug mode on the Flask application."
+msgstr ""
+
+#: ../../quickstart.rst:148
+# bf604fc4973040178f9e1b2bea7d1d7d
+msgid "You can also control debug mode separately from the environment by exporting ``FLASK_DEBUG=1``."
+msgstr ""
+
+#: ../../quickstart.rst:151
+# acfb8dc0c0e54f30a8ce9d393e95f205
+msgid "There are more parameters that are explained in the :ref:`server` docs."
+msgstr ""
+
+#: ../../quickstart.rst:153
+# ab11579bf7a6480f924a7dcc93c5636e
+msgid "Attention"
+msgstr ""
+
+#: ../../quickstart.rst:155
+# 207f00e9848045a1af24329d9ce5b676
+msgid "Even though the interactive debugger does not work in forking environments (which makes it nearly impossible to use on production servers), it still allows the execution of arbitrary code. This makes it a major security risk and therefore it **must never be used on production machines**."
+msgstr ""
+
+#: ../../quickstart.rst:160
+# 3e61206cfbc642e3926319f45c0771a6
+msgid "Screenshot of the debugger in action:"
+msgstr ""
+
+#: ../../quickstart.rst:167
+# 929435c3dc3f4b48acf6c8b74b8983bf
+msgid "More information on using the debugger can be found in the `Werkzeug documentation`_."
+msgstr ""
+
+#: ../../quickstart.rst:172
+# 77b2a594767b4fd3a78afe0cd5c82cfa
+msgid "Have another debugger in mind? See :ref:`working-with-debuggers`."
+msgstr ""
+
+#: ../../quickstart.rst:176
+# 3302a6e53ed84fc68cb87592716f8590
+msgid "Routing"
+msgstr ""
+
+#: ../../quickstart.rst:178
+# 0e85b8ac320a4871bfbc148fb13df26e
+msgid "Modern web applications use meaningful URLs to help users. Users are more likely to like a page and come back if the page uses a meaningful URL they can remember and use to directly visit a page."
+msgstr ""
+
+#: ../../quickstart.rst:182
+# aa74313583dc4755ae650e65fa6d2272
+msgid "Use the :meth:`~flask.Flask.route` decorator to bind a function to a URL. ::"
+msgstr ""
+
+#: ../../quickstart.rst:192
+# 70bdee9a7e91483e99eb7f7125b7f226
+msgid "You can do more! You can make parts of the URL dynamic and attach multiple rules to a function."
+msgstr ""
+
+#: ../../quickstart.rst:196
+# 657fca8ce6ed4c17bda18dad7314d7e2
+msgid "Variable Rules"
+msgstr ""
+
+#: ../../quickstart.rst:198
+# 08edbe6cd2b34256ba46fe9e39516ec7
+msgid "You can add variable sections to a URL by marking sections with ``<variable_name>``. Your function then receives the ``<variable_name>`` as a keyword argument. Optionally, you can use a converter to specify the type of the argument like ``<converter:variable_name>``. ::"
+msgstr ""
+
+#: ../../quickstart.rst:218
+# 3e124969388c42c996b924d5113c34be
+msgid "Converter types:"
+msgstr ""
+
+#: ../../quickstart.rst:221
+# 67af66c1a8d344448caff79889df65ad
+msgid "``string``"
+msgstr ""
+
+#: ../../quickstart.rst:221
+# 2907680b402d475cb792c31d5040a15e
+msgid "(default) accepts any text without a slash"
+msgstr ""
+
+#: ../../quickstart.rst:222
+# 94b000d2b11c44e999a87f2d325407e4
+msgid "``int``"
+msgstr ""
+
+#: ../../quickstart.rst:222
+# bfef29b7b4644a1e814ce2ea8994d404
+msgid "accepts positive integers"
+msgstr ""
+
+#: ../../quickstart.rst:223
+# f44718d4b2a0461fb9a082922c34a756
+msgid "``float``"
+msgstr ""
+
+#: ../../quickstart.rst:223
+# 79bccf11c9d7425486c43d9e6aa990e0
+msgid "accepts positive floating point values"
+msgstr ""
+
+#: ../../quickstart.rst:224
+# 210aa631bd4b46c688ff01d82febe7c8
+msgid "``path``"
+msgstr ""
+
+#: ../../quickstart.rst:224
+# 97a0b5319d4c4a2683d7870695591be9
+msgid "like ``string`` but also accepts slashes"
+msgstr ""
+
+#: ../../quickstart.rst:225
+# 80408f462118415f84b910f4a7f8cf8a
+msgid "``uuid``"
+msgstr ""
+
+#: ../../quickstart.rst:225
+# f5299aa6cb9447c3a9a3ec27b24a3040
+msgid "accepts UUID strings"
+msgstr ""
+
+#: ../../quickstart.rst:229
+# 526958d6c84046bdbc36c4dcea98334b
+msgid "Unique URLs / Redirection Behavior"
+msgstr ""
+
+#: ../../quickstart.rst:231
+# 2c29d858e6d240e4bfc0e3c0f7ba5cb8
+msgid "The following two rules differ in their use of a trailing slash. ::"
+msgstr ""
+
+#: ../../quickstart.rst:241
+# dd62f17ef3b4414a9dd88d32e3d40c9d
+msgid "The canonical URL for the ``projects`` endpoint has a trailing slash. It's similar to a folder in a file system. If you access the URL without a trailing slash, Flask redirects you to the canonical URL with the trailing slash."
+msgstr ""
+
+#: ../../quickstart.rst:246
+# d376ab8a788845839ab977183b9dac3a
+msgid "The canonical URL for the ``about`` endpoint does not have a trailing slash. It's similar to the pathname of a file. Accessing the URL with a trailing slash produces a 404 \"Not Found\" error. This helps keep URLs unique for these resources, which helps search engines avoid indexing the same page twice."
+msgstr ""
+
+#: ../../quickstart.rst:256
+# 9371ea3d1eee41fcb5f5a0623de28d87
+msgid "URL Building"
+msgstr ""
+
+#: ../../quickstart.rst:258
+# 02bf619b030645cbaf1289edcb2dae16
+msgid "To build a URL to a specific function, use the :func:`~flask.url_for` function. It accepts the name of the function as its first argument and any number of keyword arguments, each corresponding to a variable part of the URL rule. Unknown variable parts are appended to the URL as query parameters."
+msgstr ""
+
+#: ../../quickstart.rst:263
+# ac32a3cf62ea4e5c9ec25f8008c7ac56
+msgid "Why would you want to build URLs using the URL reversing function :func:`~flask.url_for` instead of hard-coding them into your templates?"
+msgstr ""
+
+#: ../../quickstart.rst:266
+# 09e7a3f768e048cea2955bebbe7d7bc8
+msgid "Reversing is often more descriptive than hard-coding the URLs."
+msgstr ""
+
+#: ../../quickstart.rst:267
+# 453717212689453881fa3d42fba9a152
+msgid "You can change your URLs in one go instead of needing to remember to manually change hard-coded URLs."
+msgstr ""
+
+#: ../../quickstart.rst:269
+# b44ae5f4fc404bfcb7456c79960dff79
+msgid "URL building handles escaping of special characters and Unicode data transparently."
+msgstr ""
+
+#: ../../quickstart.rst:271
+# 1ae4c4dde68f441496688f758f02719f
+msgid "The generated paths are always absolute, avoiding unexpected behavior of relative paths in browsers."
+msgstr ""
+
+#: ../../quickstart.rst:273
+# e3db3c66a849494bbfc42826105e782f
+msgid "If your application is placed outside the URL root, for example, in ``/myapplication`` instead of ``/``, :func:`~flask.url_for` properly handles that for you."
+msgstr ""
+
+#: ../../quickstart.rst:277
+# 8dc3ef7a952742ff9cb3c62cc9b14930
+msgid "For example, here we use the :meth:`~flask.Flask.test_request_context` method to try out :func:`~flask.url_for`. :meth:`~flask.Flask.test_request_context` tells Flask to behave as though it's handling a request even while we use a Python shell. See :ref:`context-locals`."
+msgstr ""
+
+#: ../../quickstart.rst:315
+# bb2328c9ca8c456c84321d2414350994
+msgid "HTTP Methods"
+msgstr ""
+
+#: ../../quickstart.rst:317
+# d153ba8ef6934e5b958880b5e8c4c723
+msgid "Web applications use different HTTP methods when accessing URLs. You should familiarize yourself with the HTTP methods as you work with Flask. By default, a route only answers to ``GET`` requests. You can use the ``methods`` argument of the :meth:`~flask.Flask.route` decorator to handle different HTTP methods. ::"
+msgstr ""
+
+#: ../../quickstart.rst:332
+# d63448edcde34047ab82deb7257d33b7
+msgid "If ``GET`` is present, Flask automatically adds support for the ``HEAD`` method and handles ``HEAD`` requests according to the `HTTP RFC`_. Likewise, ``OPTIONS`` is automatically implemented for you."
+msgstr ""
+
+#: ../../quickstart.rst:339
+# 6c5aea7e032948ff9e5fa4bc4af698f7
+msgid "Static Files"
+msgstr ""
+
+#: ../../quickstart.rst:341
+# 861527d7dc3547a78441f85100f1f3c5
+msgid "Dynamic web applications also need static files.  That's usually where the CSS and JavaScript files are coming from.  Ideally your web server is configured to serve them for you, but during development Flask can do that as well.  Just create a folder called :file:`static` in your package or next to your module and it will be available at ``/static`` on the application."
+msgstr ""
+
+#: ../../quickstart.rst:347
+# 1f8e37650de54f4f80cee9e75f40425b
+msgid "To generate URLs for static files, use the special ``'static'`` endpoint name::"
+msgstr ""
+
+#: ../../quickstart.rst:351
+# 046ddc0e9c454aa7a4922138c0bb2049
+msgid "The file has to be stored on the filesystem as :file:`static/style.css`."
+msgstr ""
+
+#: ../../quickstart.rst:354
+# 7fa1dff61f094bc5b9e67ea3cfe1cad9
+msgid "Rendering Templates"
+msgstr ""
+
+#: ../../quickstart.rst:356
+# c411aeba47bc4143893d5b498c8d7f26
+msgid "Generating HTML from within Python is not fun, and actually pretty cumbersome because you have to do the HTML escaping on your own to keep the application secure.  Because of that Flask configures the `Jinja2 <http://jinja.pocoo.org/>`_ template engine for you automatically."
+msgstr ""
+
+#: ../../quickstart.rst:361
+# 50d34f17a8c34cbdb08df7e3a55250b4
+msgid "To render a template you can use the :func:`~flask.render_template` method.  All you have to do is provide the name of the template and the variables you want to pass to the template engine as keyword arguments. Here's a simple example of how to render a template::"
+msgstr ""
+
+#: ../../quickstart.rst:373
+# 7316df5bcfd94924bcedf3803133ade6
+msgid "Flask will look for templates in the :file:`templates` folder.  So if your application is a module, this folder is next to that module, if it's a package it's actually inside your package:"
+msgstr ""
+
+#: ../../quickstart.rst:377
+# bc57deee9a4f4179bfe57d7bf9419815
+msgid "**Case 1**: a module::"
+msgstr ""
+
+#: ../../quickstart.rst:383
+# 20cce9db4bfb44e68ca697aef783168a
+msgid "**Case 2**: a package::"
+msgstr ""
+
+#: ../../quickstart.rst:390
+# 6da51e4b81ea47a3b1f481dc87e32150
+msgid "For templates you can use the full power of Jinja2 templates.  Head over to the official `Jinja2 Template Documentation <http://jinja.pocoo.org/docs/templates/>`_ for more information."
+msgstr ""
+
+#: ../../quickstart.rst:394
+# 7b05342370b34cfaae4e4f5ad894a431
+msgid "Here is an example template:"
+msgstr ""
+
+#: ../../quickstart.rst:406
+# a901005c7f51415199732d64ca34776e
+msgid "Inside templates you also have access to the :class:`~flask.request`, :class:`~flask.session` and :class:`~flask.g` [#]_ objects as well as the :func:`~flask.get_flashed_messages` function."
+msgstr ""
+
+#: ../../quickstart.rst:410
+# addddccdc296443d88da6f33e885ca3b
+msgid "Templates are especially useful if inheritance is used.  If you want to know how that works, head over to the :ref:`template-inheritance` pattern documentation.  Basically template inheritance makes it possible to keep certain elements on each page (like header, navigation and footer)."
+msgstr ""
+
+#: ../../quickstart.rst:415
+# f02d8ac777084080ae360f01507b5a31
+msgid "Automatic escaping is enabled, so if ``name`` contains HTML it will be escaped automatically.  If you can trust a variable and you know that it will be safe HTML (for example because it came from a module that converts wiki markup to HTML) you can mark it as safe by using the :class:`~jinja2.Markup` class or by using the ``|safe`` filter in the template.  Head over to the Jinja 2 documentation for more examples."
+msgstr ""
+
+#: ../../quickstart.rst:422
+# a2f2b69650e4428d9a47f88f19150375
+msgid "Here is a basic introduction to how the :class:`~jinja2.Markup` class works::"
+msgstr ""
+
+#: ../../quickstart.rst:434
+# 6ae3854c4d104c078ec6cb013116c29c
+msgid "Autoescaping is no longer enabled for all templates.  The following extensions for templates trigger autoescaping: ``.html``, ``.htm``, ``.xml``, ``.xhtml``.  Templates loaded from a string will have autoescaping disabled."
+msgstr ""
+
+#: ../../quickstart.rst:439
+# fa932796c4c14cbebc704b43ab91cc99
+msgid "Unsure what that :class:`~flask.g` object is? It's something in which you can store information for your own needs, check the documentation of that object (:class:`~flask.g`) and the :ref:`sqlite3` for more information."
+msgstr ""
+
+#: ../../quickstart.rst:446
+# 6a9fedfc38dd4c21832ce9c2cd09fc1d
+msgid "Accessing Request Data"
+msgstr ""
+
+#: ../../quickstart.rst:448
+# 36e166891d454b14b2cc156e3a08400a
+msgid "For web applications it's crucial to react to the data a client sends to the server.  In Flask this information is provided by the global :class:`~flask.request` object.  If you have some experience with Python you might be wondering how that object can be global and how Flask manages to still be threadsafe.  The answer is context locals:"
+msgstr ""
+
+#: ../../quickstart.rst:458
+# fd8badb94239489e969133535e116e56
+msgid "Context Locals"
+msgstr ""
+
+#: ../../quickstart.rst:460
+# 03e43f149ad149909e9006c79de4555f
+msgid "Insider Information"
+msgstr ""
+
+#: ../../quickstart.rst:462
+# 5156488944eb40a0bf0efd0e0a159981
+msgid "If you want to understand how that works and how you can implement tests with context locals, read this section, otherwise just skip it."
+msgstr ""
+
+#: ../../quickstart.rst:465
+# 0ef8472e1184425dbc97e19b78e7b137
+msgid "Certain objects in Flask are global objects, but not of the usual kind. These objects are actually proxies to objects that are local to a specific context.  What a mouthful.  But that is actually quite easy to understand."
+msgstr ""
+
+#: ../../quickstart.rst:469
+# 51a9d817179849368b705fa237171e01
+msgid "Imagine the context being the handling thread.  A request comes in and the web server decides to spawn a new thread (or something else, the underlying object is capable of dealing with concurrency systems other than threads).  When Flask starts its internal request handling it figures out that the current thread is the active context and binds the current application and the WSGI environments to that context (thread). It does that in an intelligent way so that one application can invoke another application without breaking."
+msgstr ""
+
+#: ../../quickstart.rst:478
+# ea16a60cd0e84234bbfe9e04d7e06884
+msgid "So what does this mean to you?  Basically you can completely ignore that this is the case unless you are doing something like unit testing.  You will notice that code which depends on a request object will suddenly break because there is no request object.  The solution is creating a request object yourself and binding it to the context.  The easiest solution for unit testing is to use the :meth:`~flask.Flask.test_request_context` context manager.  In combination with the ``with`` statement it will bind a test request so that you can interact with it.  Here is an example::"
+msgstr ""
+
+#: ../../quickstart.rst:495
+# 0d17e4e527ae4f34a20f9f646b084229
+msgid "The other possibility is passing a whole WSGI environment to the :meth:`~flask.Flask.request_context` method::"
+msgstr ""
+
+#: ../../quickstart.rst:504
+# b5700ddfe6a143aa9df8d8907d6aafc1
+msgid "The Request Object"
+msgstr ""
+
+#: ../../quickstart.rst:506
+# 47101d2496354247ab435a13583f5235
+msgid "The request object is documented in the API section and we will not cover it here in detail (see :class:`~flask.Request`). Here is a broad overview of some of the most common operations.  First of all you have to import it from the ``flask`` module::"
+msgstr ""
+
+#: ../../quickstart.rst:513
+# db42d80e2a2a4ed9b487c3fddbaf3f5b
+msgid "The current request method is available by using the :attr:`~flask.Request.method` attribute.  To access form data (data transmitted in a ``POST`` or ``PUT`` request) you can use the :attr:`~flask.Request.form` attribute.  Here is a full example of the two attributes mentioned above::"
+msgstr ""
+
+#: ../../quickstart.rst:532
+# 14d6cf3b8a7646e7adf38e2f108e7dcf
+msgid "What happens if the key does not exist in the ``form`` attribute?  In that case a special :exc:`KeyError` is raised.  You can catch it like a standard :exc:`KeyError` but if you don't do that, a HTTP 400 Bad Request error page is shown instead.  So for many situations you don't have to deal with that problem."
+msgstr ""
+
+#: ../../quickstart.rst:538
+# d6b9cf15c17f40cfa266ea666bcc216b
+msgid "To access parameters submitted in the URL (``?key=value``) you can use the :attr:`~flask.Request.args` attribute::"
+msgstr ""
+
+#: ../../quickstart.rst:543
+# 8f979095b55d4271862b53d6880e34fd
+msgid "We recommend accessing URL parameters with `get` or by catching the :exc:`KeyError` because users might change the URL and presenting them a 400 bad request page in that case is not user friendly."
+msgstr ""
+
+#: ../../quickstart.rst:547
+# 1d2ef4b6745c46559caf7e33aea0db0b
+msgid "For a full list of methods and attributes of the request object, head over to the :class:`~flask.Request` documentation."
+msgstr ""
+
+#: ../../quickstart.rst:552
+# 12337a18b72f47f095335db154e4ddc3
+msgid "File Uploads"
+msgstr ""
+
+#: ../../quickstart.rst:554
+# 8ac9c6a56bda4271b21660cf4bd9c494
+msgid "You can handle uploaded files with Flask easily.  Just make sure not to forget to set the ``enctype=\"multipart/form-data\"`` attribute on your HTML form, otherwise the browser will not transmit your files at all."
+msgstr ""
+
+#: ../../quickstart.rst:558
+# 7be241a0f61f4db7a2672330ec183ffd
+msgid "Uploaded files are stored in memory or at a temporary location on the filesystem.  You can access those files by looking at the :attr:`~flask.request.files` attribute on the request object.  Each uploaded file is stored in that dictionary.  It behaves just like a standard Python :class:`file` object, but it also has a :meth:`~werkzeug.datastructures.FileStorage.save` method that allows you to store that file on the filesystem of the server. Here is a simple example showing how that works::"
+msgstr ""
+
+#: ../../quickstart.rst:576
+# 5b10e1a8187140718e1900aad951fb6d
+msgid "If you want to know how the file was named on the client before it was uploaded to your application, you can access the :attr:`~werkzeug.datastructures.FileStorage.filename` attribute. However please keep in mind that this value can be forged so never ever trust that value.  If you want to use the filename of the client to store the file on the server, pass it through the :func:`~werkzeug.utils.secure_filename` function that Werkzeug provides for you::"
+msgstr ""
+
+#: ../../quickstart.rst:595
+# d45eda89843e481399ee33b2f916daeb
+msgid "For some better examples, checkout the :ref:`uploading-files` pattern."
+msgstr ""
+
+#: ../../quickstart.rst:598
+# 73f29221aadb4a45b12a2c88687e5096
+msgid "Cookies"
+msgstr ""
+
+#: ../../quickstart.rst:600
+# 3597e701614947e2b8150596240a845f
+msgid "To access cookies you can use the :attr:`~flask.Request.cookies` attribute.  To set cookies you can use the :attr:`~flask.Response.set_cookie` method of response objects.  The :attr:`~flask.Request.cookies` attribute of request objects is a dictionary with all the cookies the client transmits.  If you want to use sessions, do not use the cookies directly but instead use the :ref:`sessions` in Flask that add some security on top of cookies for you."
+msgstr ""
+
+#: ../../quickstart.rst:608
+# 1e2542d232ef420791526d0fe040b817
+msgid "Reading cookies::"
+msgstr ""
+
+#: ../../quickstart.rst:618
+# 7fc07d5fa09442c297841a431341b182
+msgid "Storing cookies::"
+msgstr ""
+
+#: ../../quickstart.rst:628
+# f9218aebb191494fa0991f74e68586dc
+msgid "Note that cookies are set on response objects.  Since you normally just return strings from the view functions Flask will convert them into response objects for you.  If you explicitly want to do that you can use the :meth:`~flask.make_response` function and then modify it."
+msgstr ""
+
+#: ../../quickstart.rst:633
+# 2f753c8988f94090978aa8a5d53924b5
+msgid "Sometimes you might want to set a cookie at a point where the response object does not exist yet.  This is possible by utilizing the :ref:`deferred-callbacks` pattern."
+msgstr ""
+
+#: ../../quickstart.rst:637
+# adf8de47d31d49b0aa22d6fffd0e6cf2
+msgid "For this also see :ref:`about-responses`."
+msgstr ""
+
+#: ../../quickstart.rst:640
+# 37b90edaec3a46498c8215d10b273bd2
+msgid "Redirects and Errors"
+msgstr ""
+
+#: ../../quickstart.rst:642
+# 8f790d32548042b69b04dd92aca0b3cc
+msgid "To redirect a user to another endpoint, use the :func:`~flask.redirect` function; to abort a request early with an error code, use the :func:`~flask.abort` function::"
+msgstr ""
+
+#: ../../quickstart.rst:657
+# 9f34090436554a55866a15a4ca27b16b
+msgid "This is a rather pointless example because a user will be redirected from the index to a page they cannot access (401 means access denied) but it shows how that works."
+msgstr ""
+
+#: ../../quickstart.rst:661
+# 721b9a305ab54c6690605de3ac784087
+msgid "By default a black and white error page is shown for each error code.  If you want to customize the error page, you can use the :meth:`~flask.Flask.errorhandler` decorator::"
+msgstr ""
+
+#: ../../quickstart.rst:671
+# 95cead5b2f3a4cb9a0aebc3929cdec1a
+msgid "Note the ``404`` after the :func:`~flask.render_template` call.  This tells Flask that the status code of that page should be 404 which means not found.  By default 200 is assumed which translates to: all went well."
+msgstr ""
+
+#: ../../quickstart.rst:675
+# d84acb7e46d14c48ab21311ee3af5591
+msgid "See :ref:`error-handlers` for more details."
+msgstr ""
+
+#: ../../quickstart.rst:680
+# 2040c935795c487791ca2f6455412292
+msgid "About Responses"
+msgstr ""
+
+#: ../../quickstart.rst:682
+# 40c669260dc3444c92eb000da2e2316d
+msgid "The return value from a view function is automatically converted into a response object for you. If the return value is a string it's converted into a response object with the string as response body, a ``200 OK`` status code and a :mimetype:`text/html` mimetype. If the return value is a dict, :func:`jsonify` is called to produce a response. The logic that Flask applies to converting return values into response objects is as follows:"
+msgstr ""
+
+#: ../../quickstart.rst:690
+# 8ae8a215218348f5816a9f575ea46ca4
+msgid "If a response object of the correct type is returned it's directly returned from the view."
+msgstr ""
+
+#: ../../quickstart.rst:692
+# 58f0d89351984dd3b8edd9637d9092d9
+msgid "If it's a string, a response object is created with that data and the default parameters."
+msgstr ""
+
+#: ../../quickstart.rst:694
+# 143287344dc74f82b75ac5c9d66c437e
+msgid "If it's a dict, a response object is created using ``jsonify``."
+msgstr ""
+
+#: ../../quickstart.rst:695
+# cad6d48163454e75a92762542b440826
+msgid "If a tuple is returned the items in the tuple can provide extra information. Such tuples have to be in the form ``(response, status)``, ``(response, headers)``, or ``(response, status, headers)``. The ``status`` value will override the status code and ``headers`` can be a list or dictionary of additional header values."
+msgstr ""
+
+#: ../../quickstart.rst:701
+# 8b71cfd947854da4883a84adbc42e6d2
+msgid "If none of that works, Flask will assume the return value is a valid WSGI application and convert that into a response object."
+msgstr ""
+
+#: ../../quickstart.rst:704
+# e84c20b53c594c81a1ae5cb61dbd682f
+msgid "If you want to get hold of the resulting response object inside the view you can use the :func:`~flask.make_response` function."
+msgstr ""
+
+#: ../../quickstart.rst:707
+# 2f5dac76dc914be88d0b55f4c05c47ea
+msgid "Imagine you have a view like this::"
+msgstr ""
+
+#: ../../quickstart.rst:713
+# ddcac0aed2804bd0828843145939d185
+msgid "You just need to wrap the return expression with :func:`~flask.make_response` and get the response object to modify it, then return it::"
+msgstr ""
+
+#: ../../quickstart.rst:725
+# d5d7f3690389476e84f1494d2fc2db0d
+msgid "APIs with JSON"
+msgstr ""
+
+#: ../../quickstart.rst:727
+# f0a88465cfb94ce1b85dedf84428315f
+msgid "A common response format when writing an API is JSON. It's easy to get started writing such an API with Flask. If you return a ``dict`` from a view, it will be converted to a JSON response."
+msgstr ""
+
+#: ../../quickstart.rst:742
+# 5240f4d7a8414d7281d70bdf8fc37430
+msgid "Depending on your API design, you may want to create JSON responses for types other than ``dict``. In that case, use the :func:`~flask.json.jsonify` function, which will serialize any supported JSON data type. Or look into Flask community extensions that support more complex applications."
+msgstr ""
+
+#: ../../quickstart.rst:759
+# f13176e1cc944419a1ff9215f0b719c7
+msgid "Sessions"
+msgstr ""
+
+#: ../../quickstart.rst:761
+# 83fd4840a7604a58b62b271d65e1936e
+msgid "In addition to the request object there is also a second object called :class:`~flask.session` which allows you to store information specific to a user from one request to the next.  This is implemented on top of cookies for you and signs the cookies cryptographically.  What this means is that the user could look at the contents of your cookie but not modify it, unless they know the secret key used for signing."
+msgstr ""
+
+#: ../../quickstart.rst:768
+# 9e1ae91bfa0b4ea7916348dffd5b231d
+msgid "In order to use sessions you have to set a secret key.  Here is how sessions work::"
+msgstr ""
+
+#: ../../quickstart.rst:802
+# db405d20c07c4eb5b1a9ae8f322aa86d
+msgid "The :func:`~flask.escape` mentioned here does escaping for you if you are not using the template engine (as in this example)."
+msgstr ""
+
+#: ../../quickstart.rst:805
+# d7ffd87d2b124af3a6465157920964c6
+msgid "How to generate good secret keys"
+msgstr ""
+
+#: ../../quickstart.rst:807
+# 8de5ba761e9e48f883977caddf2708a8
+msgid "A secret key should be as random as possible. Your operating system has ways to generate pretty random data based on a cryptographic random generator. Use the following command to quickly generate a value for :attr:`Flask.secret_key` (or :data:`SECRET_KEY`)::"
+msgstr ""
+
+#: ../../quickstart.rst:815
+# 62d4501db7b84fe9a5117527974bc508
+msgid "A note on cookie-based sessions: Flask will take the values you put into the session object and serialize them into a cookie.  If you are finding some values do not persist across requests, cookies are indeed enabled, and you are not getting a clear error message, check the size of the cookie in your page responses compared to the size supported by web browsers."
+msgstr ""
+
+#: ../../quickstart.rst:821
+# e6a85b189a624020b836bdcb796d651c
+msgid "Besides the default client-side based sessions, if you want to handle sessions on the server-side instead, there are several Flask extensions that support this."
+msgstr ""
+
+#: ../../quickstart.rst:826
+# e068092f3a77488d9a86fd8a4314263a
+msgid "Message Flashing"
+msgstr ""
+
+#: ../../quickstart.rst:828
+# b3fe2055bd434571834e7f9d68635b62
+msgid "Good applications and user interfaces are all about feedback.  If the user does not get enough feedback they will probably end up hating the application.  Flask provides a really simple way to give feedback to a user with the flashing system.  The flashing system basically makes it possible to record a message at the end of a request and access it on the next (and only the next) request.  This is usually combined with a layout template to expose the message."
+msgstr ""
+
+#: ../../quickstart.rst:836
+# ebdc10aa73354b478c9ccb445c8cfb41
+msgid "To flash a message use the :func:`~flask.flash` method, to get hold of the messages you can use :func:`~flask.get_flashed_messages` which is also available in the templates.  Check out the :ref:`message-flashing-pattern` for a full example."
+msgstr ""
+
+#: ../../quickstart.rst:842
+# 7521c668f6414c36987312e5267db5a8
+msgid "Logging"
+msgstr ""
+
+#: ../../quickstart.rst:846
+# 505a34561d64426aad18a93ca659f873
+msgid "Sometimes you might be in a situation where you deal with data that should be correct, but actually is not.  For example you may have some client-side code that sends an HTTP request to the server but it's obviously malformed.  This might be caused by a user tampering with the data, or the client code failing.  Most of the time it's okay to reply with ``400 Bad Request`` in that situation, but sometimes that won't do and the code has to continue working."
+msgstr ""
+
+#: ../../quickstart.rst:854
+# 56290c07aca64000a942857ae6c7c747
+msgid "You may still want to log that something fishy happened.  This is where loggers come in handy.  As of Flask 0.3 a logger is preconfigured for you to use."
+msgstr ""
+
+#: ../../quickstart.rst:858
+# 9d985c3b693e484d8c2c1228630ec292
+msgid "Here are some example log calls::"
+msgstr ""
+
+#: ../../quickstart.rst:864
+# 7e4827c388e540b4b82a59569f536ce2
+msgid "The attached :attr:`~flask.Flask.logger` is a standard logging :class:`~logging.Logger`, so head over to the official :mod:`logging` docs for more information."
+msgstr ""
+
+#: ../../quickstart.rst:868
+# ab6cbe9447ea4de4bbf8b0decf97b57f
+msgid "Read more on :ref:`application-errors`."
+msgstr ""
+
+#: ../../quickstart.rst:871
+# 21c1cff9a436456f9cf73d1fab6f45f0
+msgid "Hooking in WSGI Middlewares"
+msgstr ""
+
+#: ../../quickstart.rst:873
+# 745b4cdd410b494c9fc3be5f2002b985
+msgid "If you want to add a WSGI middleware to your application you can wrap the internal WSGI application.  For example if you want to use one of the middlewares from the Werkzeug package to work around bugs in lighttpd, you can do it like this::"
+msgstr ""
+
+#: ../../quickstart.rst:882
+# 0476910807c44e45a291d05ed57df5a0
+msgid "Using Flask Extensions"
+msgstr ""
+
+#: ../../quickstart.rst:884
+# d25503a11d8c4d848b62caf1a1ee2326
+msgid "Extensions are packages that help you accomplish common tasks. For example, Flask-SQLAlchemy provides SQLAlchemy support that makes it simple and easy to use with Flask."
+msgstr ""
+
+#: ../../quickstart.rst:888
+# e41d486b941e48e385847ce3b902e50e
+msgid "For more on Flask extensions, have a look at :ref:`extensions`."
+msgstr ""
+
+#: ../../quickstart.rst:891
+# 09f396485bfb49639fd4ad512116d750
+msgid "Deploying to a Web Server"
+msgstr ""
+
+#: ../../quickstart.rst:893
+# 97c96b4cd53247b7919f931b1ead81b9
+msgid "Ready to deploy your new Flask app? Go to :ref:`deployment`."
+msgstr ""
+
