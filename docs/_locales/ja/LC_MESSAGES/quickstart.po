@@ -354,9 +354,9 @@ msgid ""
 " machines**."
 msgstr ""
 "たとえforkした環境（訳注：\ :ref:`working-with-debuggers`\ 参照、外部"
-"デバッガ使用時にはforkした環境に設定可能）ではインタラクティブなデバッガが"
-"機能しない（それによって本番環境のサーバでの使用を殆ど不可能にします）と"
-"しても、それでも任意のコードを実行できるようにします。これは深刻な"
+"デバッガを使用したい場合にはforkした環境に設定可能）ではインタラクティブな"
+"デバッガは機能しない（それによって本番環境のサーバでの使用を殆ど不可能にします）"
+"としても、それでも任意のコードを実行できるようにします。これは深刻な"
 "セキュリティ上のリスクであり、従って\ **本番環境のマシンでは決して使用"
 "してはいけません**\ 。"
 
@@ -384,7 +384,7 @@ msgstr ""
 # 3302a6e53ed84fc68cb87592716f8590
 #: ../../quickstart.rst:176
 msgid "Routing"
-msgstr ""
+msgstr "ルーティング"
 
 # 0e85b8ac320a4871bfbc148fb13df26e
 #: ../../quickstart.rst:178
@@ -393,6 +393,9 @@ msgid ""
 " likely to like a page and come back if the page uses a meaningful URL "
 "they can remember and use to directly visit a page."
 msgstr ""
+"最近のwebアプリケーションは、ユーザに役立つような意味のあるURLを使用します。"
+"もし、覚えやすくて直接指定しやすいような意味のあるURLをページが使用していたら、"
+"ユーザはそのようなページをより好きになり、再訪問するようになるでしょう。"
 
 # aa74313583dc4755ae650e65fa6d2272
 #: ../../quickstart.rst:182
@@ -400,6 +403,8 @@ msgid ""
 "Use the :meth:`~flask.Flask.route` decorator to bind a function to a URL."
 " ::"
 msgstr ""
+"ある関数をURLに結び付けたいときは、\ :meth:`~flask.Flask.route`\ デコレータを"
+"使用します ::"
 
 # 70bdee9a7e91483e99eb7f7125b7f226
 #: ../../quickstart.rst:192
@@ -407,6 +412,8 @@ msgid ""
 "You can do more! You can make parts of the URL dynamic and attach "
 "multiple rules to a function."
 msgstr ""
+"もっとできることがあります！URLの一部を動的に変化させたり、複数のルールを"
+"関数に加えることも可能です。"
 
 # 657fca8ce6ed4c17bda18dad7314d7e2
 #: ../../quickstart.rst:196
