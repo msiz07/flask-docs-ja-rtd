@@ -100,3 +100,11 @@ gettext_compact = False
 gettext_uuid = True
 #language = 'ja'
 
+# Google Search Console support in ReadTheDocs site --------------------
+templates_path = ['_templates']
+
+# set google-site-verification from environment variable
+import os
+html_context['IS_READTHEDOCS'] = os.environ.get("READTHEDOCS", False)
+html_context['GOOGLE_SITE_VERIFICATION'] = os.environ.get('GOOGLE_SITE_VERIFICATION', "DUMMY")
+
