@@ -70,12 +70,13 @@ msgid ""
 "documentation."
 msgstr ""
 "次に、このクラスのインスタンスを作成します。最初の引数はアプリケーションの"
-"モジュールまたはパッケージの名前です。もし（この例のように）１つだけのモジュールを"
-"使っているときは、アプリケーションとして開始するかモジュールとしてインポートするか"
-"によって名前が変化する（\ ``'__main__'``\ もしくは実際のimport名）ため、"
-"\ ``__name__``\ を使うべきです。これはtemplate、静的ファイルなどを探す"
-"場所をFlaskが知るために必要になります。さらなる情報については、"
-"\ :class:`~flask.Flask`\ を参照してください。"
+"モジュール（訳注：簡単に言うと拡張子pyのPythonファイル）またはパッケージ"
+"（訳注：簡単に言うとモジュールをまとめて格納したディレクトリ）の名前です。"
+"もし（この例のように）１つだけのモジュールを使っているときは、アプリケーション"
+"として開始するかモジュールとしてインポートするかによって名前が変化する"
+"（\ ``'__main__'``\ もしくは実際のimport名）ため、\ ``__name__``\ を使うべき"
+"です。これはtemplate、静的ファイルなどを探す場所をFlaskが知るために必要に"
+"なります。さらなる情報については、\ :class:`~flask.Flask`\ を参照してください。"
 
 # a6f42a311f6843ccacc8e3660800438a
 #: ../../quickstart.rst:34
@@ -199,7 +200,7 @@ msgstr ""
 # 66b05a10901e498cb407059b1ca698f4
 #: ../../quickstart.rst:94
 msgid "What to do if the Server does not Start"
-msgstr "サーバがスタートしない場合はどうするか"
+msgstr "サーバがスタートしない場合にすべきこと"
 
 # 45116159c70b42bab20485d6b5eded37
 #: ../../quickstart.rst:96
@@ -378,13 +379,13 @@ msgstr ""
 #: ../../quickstart.rst:172
 msgid "Have another debugger in mind? See :ref:`working-with-debuggers`."
 msgstr ""
-"他のデバッガが気になりますか？\ :ref:`working-with-debuggers`\ を"
+"他のデバッガを考えていますか？\ :ref:`working-with-debuggers`\ を"
 "確認してください。"
 
 # 3302a6e53ed84fc68cb87592716f8590
 #: ../../quickstart.rst:176
 msgid "Routing"
-msgstr "ルーティング"
+msgstr "経路設定（Routing）"
 
 # 0e85b8ac320a4871bfbc148fb13df26e
 #: ../../quickstart.rst:178
@@ -418,7 +419,7 @@ msgstr ""
 # 657fca8ce6ed4c17bda18dad7314d7e2
 #: ../../quickstart.rst:196
 msgid "Variable Rules"
-msgstr ""
+msgstr "変数のルール"
 
 # 08edbe6cd2b34256ba46fe9e39516ec7
 #: ../../quickstart.rst:198
@@ -428,11 +429,16 @@ msgid ""
 "as a keyword argument. Optionally, you can use a converter to specify the"
 " type of the argument like ``<converter:variable_name>``. ::"
 msgstr ""
+"``<variable_name>``\ のようにセクションへ目印をつけることで、URLに変数の"
+"セクションを追加することができます。こうすると、関数は\ ``<variable_name>``\ "
+"をキーワード引数のように受け取るようになります。オプションとして、引数の"
+"タイプを指定するために、\ ``<converter:variable_name>``\ のようにすれば"
+"コンバータを使用できます。"
 
 # 3e124969388c42c996b924d5113c34be
 #: ../../quickstart.rst:218
 msgid "Converter types:"
-msgstr ""
+msgstr "コンバータの種類："
 
 # 67af66c1a8d344448caff79889df65ad
 #: ../../quickstart.rst:221
@@ -442,7 +448,7 @@ msgstr ""
 # 2907680b402d475cb792c31d5040a15e
 #: ../../quickstart.rst:221
 msgid "(default) accepts any text without a slash"
-msgstr ""
+msgstr "（初期設定）スラッシュ（/）以外の全てのテキストを受け付けます"
 
 # 94b000d2b11c44e999a87f2d325407e4
 #: ../../quickstart.rst:222
@@ -452,7 +458,7 @@ msgstr ""
 # bfef29b7b4644a1e814ce2ea8994d404
 #: ../../quickstart.rst:222
 msgid "accepts positive integers"
-msgstr ""
+msgstr "正の整数を受け付けます"
 
 # f44718d4b2a0461fb9a082922c34a756
 #: ../../quickstart.rst:223
@@ -462,7 +468,7 @@ msgstr ""
 # 79bccf11c9d7425486c43d9e6aa990e0
 #: ../../quickstart.rst:223
 msgid "accepts positive floating point values"
-msgstr ""
+msgstr "正の浮動小数点の値を受け付けます"
 
 # 210aa631bd4b46c688ff01d82febe7c8
 #: ../../quickstart.rst:224
@@ -472,7 +478,7 @@ msgstr ""
 # 97a0b5319d4c4a2683d7870695591be9
 #: ../../quickstart.rst:224
 msgid "like ``string`` but also accepts slashes"
-msgstr ""
+msgstr "\ ``string``\ に似ていますが、スラッシュ（/）を受け付けます"
 
 # 80408f462118415f84b910f4a7f8cf8a
 #: ../../quickstart.rst:225
@@ -482,17 +488,17 @@ msgstr ""
 # f5299aa6cb9447c3a9a3ec27b24a3040
 #: ../../quickstart.rst:225
 msgid "accepts UUID strings"
-msgstr ""
+msgstr "UUID文字列を受け付けます"
 
 # 526958d6c84046bdbc36c4dcea98334b
 #: ../../quickstart.rst:229
 msgid "Unique URLs / Redirection Behavior"
-msgstr ""
+msgstr "URLと転送（Redirection）のユニークな振舞"
 
 # 2c29d858e6d240e4bfc0e3c0f7ba5cb8
 #: ../../quickstart.rst:231
 msgid "The following two rules differ in their use of a trailing slash. ::"
-msgstr ""
+msgstr "最後のスラッシュ（/）の使い方が、以下の2つのルールでは異なっています。::"
 
 # dd62f17ef3b4414a9dd88d32e3d40c9d
 #: ../../quickstart.rst:241
@@ -502,6 +508,10 @@ msgid ""
 "a trailing slash, Flask redirects you to the canonical URL with the "
 "trailing slash."
 msgstr ""
+"``projects``\ エンドポイントの正規化されたURLでは、最後にスラッシュがあります。"
+"これはファイルシステムでのフォルダに似ています。もし最後のスラッシュなしでURLへ"
+"アクセスした場合、Flaskは最後にスラッシュのある正規化されたURLへ転送"
+"（redirect）させます。"
 
 # d376ab8a788845839ab977183b9dac3a
 #: ../../quickstart.rst:246
@@ -512,11 +522,16 @@ msgid ""
 "unique for these resources, which helps search engines avoid indexing the"
 " same page twice."
 msgstr ""
+"``about``\ エンドポイントの正規化されたURLでは、最後にスラッシュがありません。"
+"これはファイルシステムでのファイルのパス名に似ています。もし最後のスラッシュ"
+"付きでURLへアクセスしたときは404\ \"Not Found\"エラーが発生します。"
+"こうすると、これらのリソースに対するURLを固有なものに保てるため、検索エンジンが"
+"同じページを重複して登録することを防ぐ手助けになります。"
 
 # 9371ea3d1eee41fcb5f5a0623de28d87
 #: ../../quickstart.rst:256
 msgid "URL Building"
-msgstr ""
+msgstr "URLの構築"
 
 # 02bf619b030645cbaf1289edcb2dae16
 #: ../../quickstart.rst:258
@@ -527,6 +542,10 @@ msgid ""
 " the URL rule. Unknown variable parts are appended to the URL as query "
 "parameters."
 msgstr ""
+"ある特定の関数に対応するURLを構築するには、\ :func:`~flask.url_for`\ を"
+"使用します。それは関数名を最初の引数に、それから、URLルールの変数部分に"
+"対応する、好きな数だけのキーワード引数を受け付けます。不明な変数パートは"
+"queryパラメータとしてURLの後ろに付けられます。"
 
 # ac32a3cf62ea4e5c9ec25f8008c7ac56
 #: ../../quickstart.rst:263
@@ -534,11 +553,14 @@ msgid ""
 "Why would you want to build URLs using the URL reversing function "
 ":func:`~flask.url_for` instead of hard-coding them into your templates?"
 msgstr ""
+"URLをテンプレートへハードコーディングする代わりに、URLを逆引きする"
+"\ :func:`~flask.url_for`\ 関数を使ってURLを構築する方が、なぜ好ましいの"
+"でしょうか？"
 
 # 09e7a3f768e048cea2955bebbe7d7bc8
 #: ../../quickstart.rst:266
 msgid "Reversing is often more descriptive than hard-coding the URLs."
-msgstr ""
+msgstr "URLをハードコーディングするよりも逆引きした方が、より分かり易いためです。"
 
 # 453717212689453881fa3d42fba9a152
 #: ../../quickstart.rst:267
@@ -546,6 +568,8 @@ msgid ""
 "You can change your URLs in one go instead of needing to remember to "
 "manually change hard-coded URLs."
 msgstr ""
+"ハードコーディングされたURLを忘れずに手作業で変更する必要がある代わりに、"
+"URLを一気に変更することができます。"
 
 # b44ae5f4fc404bfcb7456c79960dff79
 #: ../../quickstart.rst:269
@@ -553,6 +577,8 @@ msgid ""
 "URL building handles escaping of special characters and Unicode data "
 "transparently."
 msgstr ""
+"URLを構築する処理では、特殊文字とユニコードのデータのエスケープ処理を"
+"透過的に扱います。"
 
 # 1ae4c4dde68f441496688f758f02719f
 #: ../../quickstart.rst:271
@@ -560,6 +586,8 @@ msgid ""
 "The generated paths are always absolute, avoiding unexpected behavior of "
 "relative paths in browsers."
 msgstr ""
+"生成されたパスは常に絶対パスであり、ブラウザ上での相対パスによる予想外の"
+"振舞を回避します。"
 
 # e3db3c66a849494bbfc42826105e782f
 #: ../../quickstart.rst:273
@@ -568,6 +596,9 @@ msgid ""
 "``/myapplication`` instead of ``/``, :func:`~flask.url_for` properly "
 "handles that for you."
 msgstr ""
+"もしアプリケーションがURLのrootの外側、例えば、\ ``/``\ の代わりに"
+"\ ``/myapplication``\ へ置かれたときでも、\ :func:`~flask.url_for`\ は"
+"あなたにとって適切なように処理します。"
 
 # 8dc3ef7a952742ff9cb3c62cc9b14930
 #: ../../quickstart.rst:277
@@ -578,11 +609,17 @@ msgid ""
 " it's handling a request even while we use a Python shell. See :ref"
 ":`context-locals`."
 msgstr ""
+"例えば、ここでは\ :func:`~flask.url_for`\ を試すために"
+"\ :meth:`~flask.Flask.test_request_context`\ メソッドを使っています。"
+"\ :meth:`~flask.Flask.test_request_context`\ はFlaskに、Pythonシェルを"
+"使っている場合であってもリクエスト（訳注：HTTPなどの通信リクエスト）を"
+"を処理しているかのように振る舞うよう伝えます。\ :ref:`context-locals`\ "
+"を参照ください。"
 
 # bb2328c9ca8c456c84321d2414350994
 #: ../../quickstart.rst:315
 msgid "HTTP Methods"
-msgstr ""
+msgstr "HTTPメソッド"
 
 # d153ba8ef6934e5b958880b5e8c4c723
 #: ../../quickstart.rst:317
@@ -593,6 +630,11 @@ msgid ""
 "``methods`` argument of the :meth:`~flask.Flask.route` decorator to "
 "handle different HTTP methods. ::"
 msgstr ""
+"webアプリはURLへアクセスするときに異なるHTTPメソッドを使用します。"
+"Flaskで作業するときは、HTTPメソッドに親しんでおいた方が良いでしょう。"
+"初期設定の経路設定では、\ ``GET``\ メソッドにだけ応答します。異なる"
+"HTTPメソッドを処理するには、\ :meth:`~flask.Flask.route`\ デコレータの"
+"\ ``method``\ 引数を使用することができます。"
 
 # d63448edcde34047ab82deb7257d33b7
 #: ../../quickstart.rst:332
@@ -601,11 +643,15 @@ msgid ""
 "method and handles ``HEAD`` requests according to the `HTTP RFC`_. "
 "Likewise, ``OPTIONS`` is automatically implemented for you."
 msgstr ""
+"もし\ ``GET``\ が存在する場合、Flaskは自動的に\ ``HEAD``\ メソッドの"
+"サポートを追加して、\ `HTTP RFC`_\ に従って \``HEAD``\ リクエストを"
+"処理します。同様に、あなたにとって良いように、\ ``OPTIONS``\ も自動的に"
+"実装されます。"
 
 # 6c5aea7e032948ff9e5fa4bc4af698f7
 #: ../../quickstart.rst:339
 msgid "Static Files"
-msgstr ""
+msgstr "静的ファイル"
 
 # 861527d7dc3547a78441f85100f1f3c5
 #: ../../quickstart.rst:341
@@ -617,6 +663,11 @@ msgid ""
 " or next to your module and it will be available at ``/static`` on the "
 "application."
 msgstr ""
+"動的なwebアプリケーションも静的ファイルを必要とします。それは普通、CSSと"
+"JavaScriptがもたらされるところです。webサーバがそれらを扱う扱うよう構成"
+"されているのが理想的ですが、開発中はFlaskで同様な対応が可能です。パッケージ"
+"の中またはモジュールの隣に\ :file:`static`\ というフォルダを作成するだけで、"
+"アプリケーションから\ ``/static``\ で利用できるようになります。"
 
 # 1f8e37650de54f4f80cee9e75f40425b
 #: ../../quickstart.rst:347
@@ -624,16 +675,20 @@ msgid ""
 "To generate URLs for static files, use the special ``'static'`` endpoint "
 "name::"
 msgstr ""
+"静的ファイルに対応するURLを生成するには、特別な\ ``'static'``\ という"
+"エンドポイント名を使用します::"
 
 # 046ddc0e9c454aa7a4922138c0bb2049
 #: ../../quickstart.rst:351
 msgid "The file has to be stored on the filesystem as :file:`static/style.css`."
 msgstr ""
+"このファイルはファイルシステム上の\ :file:`static/style.css`\ に保管されて"
+"必要があります。"
 
 # 7fa1dff61f094bc5b9e67ea3cfe1cad9
 #: ../../quickstart.rst:354
 msgid "Rendering Templates"
-msgstr ""
+msgstr "テンプレートのレンダリング"
 
 # c411aeba47bc4143893d5b498c8d7f26
 #: ../../quickstart.rst:356
@@ -643,6 +698,11 @@ msgid ""
 "the application secure.  Because of that Flask configures the `Jinja2 "
 "<http://jinja.pocoo.org/>`_ template engine for you automatically."
 msgstr ""
+"Pythonの中でHTMLを生成するのは楽しい作業ではなく、アプリケーションを"
+"セキュアに保つためにHTMLエスケーピングを自分で行う必要があるために、"
+"実際にとても煩わしいものです。そのような理由から、Flaskはあなたのために"
+"\ `Jinja2 <http://jinja.pocoo.org/>`_\ テンプレートエンジンを自動的に"
+"組み込んでいます。"
 
 # 50d34f17a8c34cbdb08df7e3a55250b4
 #: ../../quickstart.rst:361
@@ -652,6 +712,9 @@ msgid ""
 "variables you want to pass to the template engine as keyword arguments. "
 "Here's a simple example of how to render a template::"
 msgstr ""
+"テンプレートを変換するためには\ :func:`~flask.render_template`\ メソッドを"
+"使用できます。あなたがしなければならないことは、テンプレート名と、キーワード"
+"引数としてテンプレートエンジンに渡したい変数の提供だけです::"
 
 # 7316df5bcfd94924bcedf3803133ade6
 #: ../../quickstart.rst:373
@@ -660,16 +723,18 @@ msgid ""
 "your application is a module, this folder is next to that module, if it's"
 " a package it's actually inside your package:"
 msgstr ""
+"Flaskはテンプレートを\ :file:`templates`\ フォルダの中から探します。もし"
+"アプリケーションがモジュールなら"
 
 # bc57deee9a4f4179bfe57d7bf9419815
 #: ../../quickstart.rst:377
 msgid "**Case 1**: a module::"
-msgstr ""
+msgstr "**ケース 1**: a module::"
 
 # 20cce9db4bfb44e68ca697aef783168a
 #: ../../quickstart.rst:383
 msgid "**Case 2**: a package::"
-msgstr ""
+msgstr "**ケース 2**: a package::"
 
 # 6da51e4b81ea47a3b1f481dc87e32150
 #: ../../quickstart.rst:390
@@ -678,11 +743,14 @@ msgid ""
 "to the official `Jinja2 Template Documentation "
 "<http://jinja.pocoo.org/docs/templates/>`_ for more information."
 msgstr ""
+"テンプレートではJinja2テンプレートの力を全て使うことができます。"
+"より詳細な情報は\ `Jinja2テンプレートドキュメント "
+"<http://jinja.pocoo.org/docs/templates/>`_\ を確認してください。"
 
 # 7b05342370b34cfaae4e4f5ad894a431
 #: ../../quickstart.rst:394
 msgid "Here is an example template:"
-msgstr ""
+msgstr "これはテンプレートの例です:"
 
 # a901005c7f51415199732d64ca34776e
 #: ../../quickstart.rst:406
@@ -691,6 +759,9 @@ msgid ""
 ":class:`~flask.session` and :class:`~flask.g` [#]_ objects as well as the"
 " :func:`~flask.get_flashed_messages` function."
 msgstr ""
+"テンプレートの中では、\ :func:`~flask.get_flashed_messages`\ 関数と同様に、"
+"\ :class:`~flask.request`\ , :class:`~flask.session`, :class:`~flask.g` "
+"[#]_\ オブジェクトにアクセスできます。"
 
 # addddccdc296443d88da6f33e885ca3b
 #: ../../quickstart.rst:410
@@ -700,6 +771,10 @@ msgid ""
 " documentation.  Basically template inheritance makes it possible to keep"
 " certain elements on each page (like header, navigation and footer)."
 msgstr ""
+"継承を使うとテンプレートは非常に便利です。どのように作用するか知りたいとき"
+"は\ :ref:`template-inheritance`\ パターンのドキュメントを確認してください。"
+"基本的にテンプレートの継承は（ヘッダ、ナビゲーション、フッタのように）ある"
+"要素を各ページで維持できるようにします。"
 
 # f02d8ac777084080ae360f01507b5a31
 #: ../../quickstart.rst:415
@@ -711,6 +786,12 @@ msgid ""
 ":class:`~jinja2.Markup` class or by using the ``|safe`` filter in the "
 "template.  Head over to the Jinja 2 documentation for more examples."
 msgstr ""
+"自動エスケープが有効なので、もし\ ``name``\ がHTMLを含んでいた場合は、"
+"自動的にエスケープされます。もし変数を信頼できて安全なHTMLであると"
+"分かっている（例えばwikiのマークアップをHTMLへ変換するモジュールから"
+"来ているなど）場合は、\ :class:`~jinja2.Markup`\ クラスを使うか、"
+"\ ``|safe``\ フィルタをテンプレートの中で使って、安全だと印を付けることが"
+"できます。さらなる例はJinja2ドキュメントを確認してください。"
 
 # a2f2b69650e4428d9a47f88f19150375
 #: ../../quickstart.rst:422
@@ -718,6 +799,8 @@ msgid ""
 "Here is a basic introduction to how the :class:`~jinja2.Markup` class "
 "works::"
 msgstr ""
+"これは\ :class:`~jinja2.Markup`\ がどう機能するかの基礎的な"
+"イントロダクションです::"
 
 # 6ae3854c4d104c078ec6cb013116c29c
 #: ../../quickstart.rst:434
@@ -727,6 +810,9 @@ msgid ""
 "``.xml``, ``.xhtml``.  Templates loaded from a string will have "
 "autoescaping disabled."
 msgstr ""
+"自動エスケープは全てのテンプレートで有効というわけではなくなっています。"
+"テンプレートが以下の拡張子であるときは、自動エスケープをトリガーします：\ "
+"``.html``, ``.htm``, ``.xml``, ``.xhtml``\ 。"
 
 # fa932796c4c14cbebc704b43ab91cc99
 #: ../../quickstart.rst:439
@@ -736,11 +822,14 @@ msgid ""
 "that object (:class:`~flask.g`) and the :ref:`sqlite3` for more "
 "information."
 msgstr ""
+":class:`~flask.g`\ オブジェクトが何なのか不明ですか？それは、必要に応じて"
+"情報を格納できるものであり、より詳細な情報はそのオブジェクト（\ :class:"
+"`~flask.g`\ ）と\ :ref:`sqlite3`\ のドキュメントをチェックしてください。"
 
 # 6a9fedfc38dd4c21832ce9c2cd09fc1d
 #: ../../quickstart.rst:446
 msgid "Accessing Request Data"
-msgstr ""
+msgstr "リクエストデータへのアクセス"
 
 # 36e166891d454b14b2cc156e3a08400a
 #: ../../quickstart.rst:448
@@ -751,16 +840,21 @@ msgid ""
 "you might be wondering how that object can be global and how Flask "
 "manages to still be threadsafe.  The answer is context locals:"
 msgstr ""
+"webアプリでは、クライアントがサーバへ送信したデータへ反応することが非常に"
+"重要です。Flaskでは、その情報はグローバルな\ :class:`~flask.request`\ "
+"オブジェクトで提供されます。もしPython経験が多少あるならば、どうやって"
+"そのオブジェクトがグローバルでありながら、Flaskがスレッドセーフなように"
+"管理しているのか、不思議に思うかもしれません。"
 
 # fd8badb94239489e969133535e116e56
 #: ../../quickstart.rst:458
 msgid "Context Locals"
-msgstr ""
+msgstr "ローカルなコンテキスト（Context Locals）"
 
 # 03e43f149ad149909e9006c79de4555f
 #: ../../quickstart.rst:460
 msgid "Insider Information"
-msgstr ""
+msgstr "内部情報"
 
 # 5156488944eb40a0bf0efd0e0a159981
 #: ../../quickstart.rst:462
@@ -768,6 +862,9 @@ msgid ""
 "If you want to understand how that works and how you can implement tests "
 "with context locals, read this section, otherwise just skip it."
 msgstr ""
+"もしcontext localsがどのように作用し、context localsと一緒にどうやって"
+"テストできるかを理解したい場合は、このセクションを読み、そうでない場合は"
+"とばしてください。"
 
 # 0ef8472e1184425dbc97e19b78e7b137
 #: ../../quickstart.rst:465
