@@ -892,6 +892,13 @@ msgid ""
 "It does that in an intelligent way so that one application can invoke "
 "another application without breaking."
 msgstr ""
+"コンテキストを処理中のスレッドだと想像してください。リクエストがやって来て、"
+"webサーバが新規スレッド（もしくは別のなにか、スレッド以外で並列処理を扱える"
+"土台となるオブジェクト）を作成する決定をします。Flaskが内部のリクエスト処理を"
+"開始するとき、Flaskはそのときのスレッドが活動中（active）のコンテキストである"
+"ことを理解し、そのときのアプリケーションとWSGI環境をそのコンテキスト"
+"（スレッド）に結び付け（bind）をします。Flaskは、あるアプリケーションを起動し"
+"ながら別のアプリケーションは壊さないような、賢いやり方でそれを実施します。"
 
 # ea16a60cd0e84234bbfe9e04d7e06884
 #: ../../quickstart.rst:478
@@ -906,6 +913,16 @@ msgid ""
 "combination with the ``with`` statement it will bind a test request so "
 "that you can interact with it.  Here is an example::"
 msgstr ""
+"それでは、これはあなたにとって何を意味するのでしょうか？ユニットテストの"
+"ようなことをしようとしていない限り、基本的には完全に無視して構いません。"
+"（ユニットテストのようなことをしているとき）リクエストオブジェクトが存在"
+"しないために、リクエストオブジェクトに依存しているコードが突然壊れることに"
+"気付くでしょう。解決方法は、自分でリクエストオブジェクトを作成して"
+"コンテキストに結び付けることです。ユニットテストのための最も簡単な解決方法は"
+"コンテキストマネージャ\ :meth:`~flask.Flask.test_request_context`\ を使用"
+"することです。\ ``with``\ 文と組み合わせると、テスト用のリクエストとやり取り"
+"できるように、テスト用リクエストとコンテキストとを結び付けます。以下はその"
+"例です::"
 
 # 0d17e4e527ae4f34a20f9f646b084229
 #: ../../quickstart.rst:495
