@@ -1,3 +1,13 @@
+Flask - docs-ja repository
+==========================
+
+This repository is forked from original one in order to set up the work
+environment for privatelly translating the docs into Japanese.
+
+The following content is the original README.rst file.
+
+-----
+
 Flask
 =====
 
