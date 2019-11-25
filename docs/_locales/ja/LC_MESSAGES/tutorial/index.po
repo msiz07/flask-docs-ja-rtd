@@ -25,7 +25,7 @@ msgstr ""
 # dd688d659f294404bb25176aa7041cfb
 #: ../../tutorial/index.rst:4
 msgid "Tutorial"
-msgstr ""
+msgstr "チュートリアル"
 
 # a956fc62d8794400a017001286e005ee
 #: ../../tutorial/index.rst:22
@@ -35,6 +35,10 @@ msgid ""
 "edit or delete their own posts. You will be able to package and install "
 "the application on other computers."
 msgstr ""
+"このチュートリアルはFlaskrと呼ぶ基本的なブログのアプリケーション作成を"
+"一通り行います。ユーザはユーザ登録、ログイン、投稿、投稿内容の編集、投稿の"
+"削除が可能になります。アプリケーションをパッケージ化して、別のコンピュータ"
+"へのインストールもできるようになります。"
 
 # 57e992b0360b4fa8ba51a4ee570a40b6
 #: ../../tutorial/index.rst:32
@@ -42,6 +46,8 @@ msgid ""
 "It's assumed that you're already familiar with Python. The `official "
 "tutorial`_ in the Python docs is a great way to learn or review first."
 msgstr ""
+"Pythonには既に親しんでいる前提とします。Pythonドキュメントの\ `official "
+"tutorial`_\ は、最初に学習または見直しをするには素晴らしい方法です。"
 
 # ded8179b398f41d0871ba3289701954d
 #: ../../tutorial/index.rst:37
@@ -53,6 +59,13 @@ msgid ""
 "project, you might decide to use :ref:`extensions` or other libraries to "
 "make some tasks simpler."
 msgstr ""
+"このチュートリアルは良い開始場所になるよう意図されたものですが、Flaskの"
+"目玉機能をすべて網羅しているわけではありません。Flaskで何ができるかの概要に"
+"ついては \ :ref:`quickstart`\ を調べて、それから、より多くを見つけにこの"
+"ドキュメントへ飛び込んできてください。このチュートリアルはFlaskとPythonが"
+"提供しているものだけを使用します。他のプロジェクトでは、いくつかのタスクを"
+"よりシンプルにするために\ :ref:`extensions`\ やその他のライブラリを使用する"
+"ように決定するかもしれません。"
 
 # 68387bb0bea745198673fa762d68d07d
 #: ../../tutorial/index.rst:49
@@ -65,6 +78,14 @@ msgid ""
 "on. Once you become more comfortable with Flask, you can step out of this"
 " structure and take full advantage of Flask's flexibility."
 msgstr ""
+"Flaskには柔軟性があります。Flaskでは、プロジェクトまたはコードの特定の"
+"レイアウト（訳注: ディレクトリ構成のことと考えておおよそ問題ありません）は、"
+"何も要求していません。しかしながら、初めて開始するときには、それよりは"
+"構造が定まったアプローチを使用した方が役立ちます。これは、このチュートリアル"
+"では事前に定型部分を少し要求しようとすることを意味しますが、それは新しい"
+"開発者が出くわす多くのありがちな罠を回避するためであり、そして容易に拡張"
+"できるプロジェクトを作り出します。Flaskをより快適に感じるようになったら、"
+"ここで示す構造から足を踏み出して、Flaskの柔軟性を存分に活用してください。"
 
 # 52b89e7733cf4a6b990919973b62d6f3
 #: ../../tutorial/index.rst:62
@@ -73,9 +94,12 @@ msgid ""
 "repository <examples/tutorial>`, if you want to compare your project with"
 " the final product as you follow the tutorial."
 msgstr ""
+"もし自分の（チュートリアル実施途中での）プロジェクトと、このチュートリアル"
+"に従った時の最終成果物を比較したい場合は、:gh:`このチュートリアルのプロジェクト"
+"はFlaskリポジトリ中にある例から入手可能です。<examples/tutorial>`"
 
 # 4e681ddd7cea494194640decf3a2a40d
 #: ../../tutorial/index.rst:66
 msgid "Continue to :doc:`layout`."
-msgstr ""
+msgstr ":doc:`layout`\ に続く。"
 
