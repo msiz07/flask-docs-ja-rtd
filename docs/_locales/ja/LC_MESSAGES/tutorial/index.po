@@ -101,5 +101,5 @@ msgstr ""
 # 4e681ddd7cea494194640decf3a2a40d
 #: ../../tutorial/index.rst:66
 msgid "Continue to :doc:`layout`."
-msgstr ":doc:`layout`\ に続く。"
+msgstr ":doc:`layout`\ へ続きます。"
 

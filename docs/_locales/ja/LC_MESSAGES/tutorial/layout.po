@@ -33,7 +33,7 @@ msgid ""
 "Then follow the :doc:`installation instructions </installation>` to set "
 "up a Python virtual environment and install Flask for your project."
 msgstr ""
-"そうしたら \:doc:`インストール手順 </installation>`\ に従って、Pythonの"
+"そうしたら\ :doc:`インストール手順 </installation>`\ に従って、Pythonの"
 "仮想環境（virtual environment）を用意して、プロジェクト用にFlaskをインストール"
 "します。"
 
@@ -141,5 +141,5 @@ msgstr ""
 # dd4b05d2c3254d9c93e90051ae3ec9a2
 #: ../../tutorial/layout.rst:110
 msgid "Continue to :doc:`factory`."
-msgstr ":doc:`factory`\ に続く。"
+msgstr ":doc:`factory`\ へ続きます。"
 

@@ -280,5 +280,5 @@ msgstr ""
 # 6c057672de284ae5a719c4f0db3b95f5
 #: ../../tutorial/factory.rst:178
 msgid "Continue to :doc:`database`."
-msgstr ":doc:`database`\ に続く"
+msgstr ":doc:`database`\ へ続きます。"
 
