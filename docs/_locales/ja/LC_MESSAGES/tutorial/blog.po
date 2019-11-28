@@ -54,7 +54,8 @@ msgstr "青写真（Blueprint）"
 # cb7986eac72c482fb4cb55c9c99434d1
 #: ../../tutorial/blog.rst:18
 msgid "Define the blueprint and register it in the application factory."
-msgstr "blueprintを定義し、application factorに登録します。"
+msgstr "blueprintを定義し、application factor（訳注：おそらく原文が"
+"「application **factory**\ 」の誤記）に登録します。"
 
 # b95fb9db92fc4d7da927901c97270ba4
 # 76ee1b5034a945f892e5173c6f1e6be9

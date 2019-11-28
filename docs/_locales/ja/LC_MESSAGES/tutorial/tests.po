@@ -288,7 +288,7 @@ msgid ""
 msgstr ""
 "このテストはPytestの\ ``monkeypatch``\ のfixtureを使って、\ ``init_db``\ "
 "関数を、それが呼び出された時には記録を残す関数へ置き換えます。\ "
-"ここで作成した``runner``\ のfixtureは\ ``init-db``\ コマンドを名前を"
+"ここで書いた\ ``runner``\ のfixtureは\ ``init-db``\ コマンドを名前を"
 "使って呼び出すために使用されています。"
 
 # 7348cc7a0145448d800143e2f1bd8265
@@ -351,6 +351,11 @@ msgid ""
 ":meth:`client.post() <werkzeug.test.Client.post>` makes a ``POST`` "
 "request, converting the ``data`` dict into form data."
 msgstr ""
+":meth:`client.get() <werkzeug.test.client.get>`\ は\ ``GET``\ リクエスト"
+"を作成して、Flaskによって返される\ :class:`Reponse`\ オブジェクトを返し"
+"ます。同様に、\ :meth:`client.pop() <werkzeug.test.client.pop>`\ は\ "
+"``POST``\ リクエストを作成して、\ ``data``\ のdictをformのデータへ変換"
+"します。"
 
 # daf455127d1a4013875da96df87f5733
 #: ../../tutorial/tests.rst:294
@@ -359,6 +364,10 @@ msgid ""
 "checked for a ``200 OK`` :attr:`~Response.status_code`. If rendering "
 "failed, Flask would return a ``500 Internal Server Error`` code."
 msgstr ""
+"ページがうまく表示されているかをテストするために、単純なリクエストが"
+"作成され、\ ``200 OK``\ の\ :attr:`~Response.status_code`\ がチェック"
+"されます。もし表示が失敗した場合、Flaskは\ ``500 Internal Server Error``\ の"
+"コード（status code）を返します。"
 
 # fdd6837eee1942db8e2188a30804c827
 #: ../../tutorial/tests.rst:299
@@ -366,6 +375,8 @@ msgid ""
 ":attr:`~Response.headers` will have a ``Location`` header with the login "
 "URL when the register view redirects to the login view."
 msgstr ""
+":attr:`~Response.header`\ は、registerのviewがログインのviewへリダイレクト"
+"したとき、ログインのURLに設定された\ ``Location``\ ヘッダを持ちます。"
 
 # bc7820b0ae02483a992bc480387d20b8
 #: ../../tutorial/tests.rst:302
@@ -376,6 +387,12 @@ msgid ""
 " text, use :meth:`get_data(as_text=True) "
 "<werkzeug.wrappers.BaseResponse.get_data>` instead."
 msgstr ""
+":attr:`~Response.data`\ はレスポンスの本体（body）をバイト（bytes）として"
+"含んでいます。もしもある値をページ上に表示することを期待する場合、それが\ "
+"``data``\ の中にあるかチェックします。bytes（型）はbytes（型）と比較しな"
+"ければなりません。もしUnicodeのテキストを比較したいときは、\ "
+":meth:`get_data(as_text=True) <werkzeug.wrappers.BaseResponse.get_data>`\ "
+"を代わりに使用してください。"
 
 # 61a43c8db5af4ab5a2212222fb4a47c4
 #: ../../tutorial/tests.rst:308
@@ -384,6 +401,9 @@ msgid ""
 "with different arguments. You use it here to test different invalid input"
 " and error messages without writing the same code three times."
 msgstr ""
+"``pytest.mark.parametrize``\ は、同じテスト用関数を違う引数で走らせるよう"
+"pytestに伝えます。ここでは、異なる不正な入力とエラーメッセージを、3回同じ"
+"コードを書くことなくテストするために使用しています。"
 
 # 56f69d12fabf43288f1659bcf725aa32
 #: ../../tutorial/tests.rst:312
@@ -392,6 +412,10 @@ msgid ""
 "``register``. Rather than testing the data in the database, "
 ":data:`session` should have ``user_id`` set after logging in."
 msgstr ""
+"``login``\ のviewのテストは、\ ``register``\ のものと非常に似ています。"
+"（registerのように）データベースの中のデータをテストするのではなく、"
+"ログイン後には\ :data:`session`\ が\ ``user_id``\ を持っているかをテスト"
+"します。"
 
 # fb7b870eda8149d2ab107c681e2ead62
 #: ../../tutorial/tests.rst:338
@@ -400,6 +424,11 @@ msgid ""
 "such as :data:`session` after the response is returned. Normally, "
 "accessing ``session`` outside of a request would raise an error."
 msgstr ""
+"``client``\ を\ ``with``\ ブロックと一緒に使用すると、レスポンスが返された"
+"後に\ :data:`session`\ のようなコンテキスト変数（訳注：Pythonの仕様でwith"
+"ブロックの中で特別な管理をされる変数）へアクセスできるようになります。通常は、\ "
+"``session``\ へリクエストの外側からアクセスしようとするとエラーを引き起こし"
+"ます。"
 
 # 7201174613474e21ad14b02b3a33e049
 #: ../../tutorial/tests.rst:342
@@ -407,11 +436,13 @@ msgid ""
 "Testing ``logout`` is the opposite of ``login``. :data:`session` should "
 "not contain ``user_id`` after logging out."
 msgstr ""
+"``logout``\ のテストは\ ``login``\ の反対になります。\ :data:`session`\ "
+"はログアウトした後\ ``user_id``\ を含まないようにするべきです 。"
 
 # 3f07fd00ab7e440cba68d4f71bcd2148
 #: ../../tutorial/tests.rst:357
 msgid "Blog"
-msgstr ""
+msgstr "ブログ"
 
 # 87800cc5db0341e3aebc7aebff6c5e48
 #: ../../tutorial/tests.rst:359
@@ -420,6 +451,9 @@ msgid ""
 "``auth.login()`` and subsequent requests from the client will be logged "
 "in as the ``test`` user."
 msgstr ""
+"全てのブログのviewは、前の方で書いた\ ``auth``\ のfixutureを使用します。"
+"クライアントからの\ ``auth.login()``\ の呼出およびそれ以降のリクエストは、"
+"\ ``test``\ ユーザとしてログインされたものになります。"
 
 # 61bd02173f3c425cbed28119b7680d45
 #: ../../tutorial/tests.rst:363
@@ -428,6 +462,9 @@ msgid ""
 "added with the test data. When logged in as the author, there should be a"
 " link to edit the post."
 msgstr ""
+"``index``\ のviewはテストデータを使って追加された投稿についての情報を表示"
+"するべきです。作者としてログインしたときは、投稿を編集できるリンクがある"
+"べきです。"
 
 # bd551aa6f1b645ef9650c2f8ef5de09c
 #: ../../tutorial/tests.rst:367
@@ -436,6 +473,10 @@ msgid ""
 "``index`` view. When not logged in, each page shows links to log in or "
 "register. When logged in, there's a link to log out."
 msgstr ""
+"``index``\ のviewをテストしているあいだ、さらにいくつかの認証の振舞を"
+"テストできます。ログインしていないときは、各ページはログインまたは登録"
+"へのリンクを表示します。ログインしていたときは、ログアウトへのリンクを"
+"があります。"
 
 # f4e9b7f0851d43bea477a3e081b4d05e
 # 46ff0c90dabb405f91c7667265c47ff2
@@ -455,6 +496,12 @@ msgid ""
 " returned. If a ``post`` with the given ``id`` doesn't exist, ``update`` "
 "and ``delete`` should return ``404 Not Found``."
 msgstr ""
+"ユーザは、\ ``create``, `update``, ``delete``\ のviewへアクセスするには、"
+"ログインしている必要があります。ログインしているユーザは、投稿の\ "
+"``update``, ``delete``\ へアクセスするには作者である必要があり、そうでない"
+"ときは\ ``403 Forbidden``\ ステータスが返されます。もし\ ``post``\ が存在"
+"しない\ ``id``\ と一緒に与えられた場合は、\ ``update``\ と\ ``delete``\ は\ "
+"``404 Not Found``\ を返すべきです。"
 
 # b1732f383ed44e58b45861690871f9f8
 #: ../../tutorial/tests.rst:433
@@ -465,6 +512,11 @@ msgid ""
 "and ``update`` should modify the existing data. Both pages should show an"
 " error message on invalid data."
 msgstr ""
+"``create``\ と\ ``update``\ のviewは\ ``GET``\ リクエストへ対応して表示し\ "
+"``200 OK``\ を返すべきです。正しいデータが\ ``POST``\ リクエストで送られて"
+"きたときは、\ ``create``\ は新しい投稿のデータをデータベースへ挿入し、\ "
+"``update``\ は既存のデータを変更するべきです。どちらのページも不正なデータ"
+"が送られてきたときはエラーメッセージを表示するべきです。"
 
 # 152f03a1a0774dbb9cfa60e0bd8861c6
 #: ../../tutorial/tests.rst:473
@@ -472,11 +524,13 @@ msgid ""
 "The ``delete`` view should redirect to the index URL and the post should "
 "no longer exist in the database."
 msgstr ""
+"``delete``\ のviewはindexのURLへリダイレクトするべきであり、データベースに"
+"投稿は存在しないはずです。"
 
 # c77a6516e1324918b1dcf40cef36e494
 #: ../../tutorial/tests.rst:491
 msgid "Running the Tests"
-msgstr ""
+msgstr "テストの実行"
 
 # 528b912a114f42709a5cfca6aeab45b9
 #: ../../tutorial/tests.rst:493
@@ -485,6 +539,9 @@ msgid ""
 "with coverage less verbose, can be added to the project's ``setup.cfg`` "
 "file."
 msgstr ""
+"必要ではないですが、（テストメッセージの）出力が多過ぎないようにしつつ、"
+"網羅性情報も合わせながらテストを実行する、いくらかの追加設定をプロジェクトの\ "
+"``setup.cfg``\ ファイルへ加えます。"
 
 # 56f0ff06e9da48d1ac5b190ff7452248
 #: ../../tutorial/tests.rst:497
@@ -497,6 +554,8 @@ msgid ""
 "To run the tests, use the ``pytest`` command. It will find and run all "
 "the test functions you've written."
 msgstr ""
+"テストを実行するには、\ ``pytest``\ コマンドを使用します。それは、それ"
+"まで書いたテスト関数をすべて見つけ出して実行します。"
 
 # 475c369ef42c42d990e7d3a0c02cebba
 #: ../../tutorial/tests.rst:527
@@ -504,6 +563,9 @@ msgid ""
 "If any tests fail, pytest will show the error that was raised. You can "
 "run ``pytest -v`` to get a list of each test function rather than dots."
 msgstr ""
+"もしも失敗したテストがあれば、pytestは発生したエラーを表示します。\ "
+"``pytest -v``\ を実行すれば、ドット（「.」）が表示される代わりに、テスト"
+"関数の一覧を取得できます。"
 
 # 2e5ed924ad3142628f764cbaee79faaa
 #: ../../tutorial/tests.rst:530
@@ -511,16 +573,19 @@ msgid ""
 "To measure the code coverage of your tests, use the ``coverage`` command "
 "to run pytest instead of running it directly."
 msgstr ""
+"テストの網羅性（test coverage）を測定するには、pytestを直接実行する代わりに\ "
+"``coverage``\ コマンドを使用してpytestを実行します。"
 
 # adcc546f06f344f6b9889b928e61f5db
 #: ../../tutorial/tests.rst:537
 msgid "You can either view a simple coverage report in the terminal:"
-msgstr ""
+msgstr "簡潔な網羅性レポートを端末の中で見ることができます:"
 
 # 4eee3830b860424d8010cb4814aeddec
 #: ../../tutorial/tests.rst:552
 msgid "An HTML report allows you to see which lines were covered in each file:"
 msgstr ""
+"HTMLレポートでは各ファイルのどの行がテストで網羅されているか見ることができます:"
 
 # 3314bd1c2b39406ca6ff57b2af88be37
 #: ../../tutorial/tests.rst:558
@@ -528,9 +593,11 @@ msgid ""
 "This generates files in the ``htmlcov`` directory. Open "
 "``htmlcov/index.html`` in your browser to see the report."
 msgstr ""
+"この生成されたファイルは\ ``htmlcov``\ ディレクトリにあります。このレポートを"
+"見るには\ ``htmlcov/index.html``\ をブラウザで開きます。"
 
 # fae859ab990f4382b8f56a877fb647a5
 #: ../../tutorial/tests.rst:561
 msgid "Continue to :doc:`deploy`."
-msgstr ""
+msgstr ":doc:`deploy`\ へ続きます。"
 
