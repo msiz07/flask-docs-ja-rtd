@@ -20,7 +20,7 @@ msgstr ""
 # 072c5c89b74748a281fbf43ba2e33fcf
 #: ../../security.rst:2
 msgid "Security Considerations"
-msgstr ""
+msgstr "セキュリティの考慮点"
 
 # ecf50cc98cea4ba095e8d635bbadb687
 #: ../../security.rst:4
@@ -30,11 +30,15 @@ msgid ""
 "things for you, but there are a couple more you have to take care of "
 "yourself."
 msgstr ""
+"webアプリケーションは普通さまざまな種類のセキュリティ上の問題に直面し、"
+"全てを正しくするのは非常に困難です。Flaskはこれらのいくつかを、あなたに"
+"とって良いように解決しようと試みますが、自分自身で注意を払わなければ"
+"ならないことが、まだまだあります。"
 
 # c7f6c505bb8949a6b2521217c0a48f62
 #: ../../security.rst:11
 msgid "Cross-Site Scripting (XSS)"
-msgstr ""
+msgstr "クロスサイトスクリプティング（XSS）（Cross-Site Scripting）"
 
 # 5509886ebd5f404eaa30592b96c83c49
 #: ../../security.rst:13
@@ -46,6 +50,12 @@ msgid ""
 "Wikipedia article on `Cross-Site Scripting <https://en.wikipedia.org/wiki"
 "/Cross-site_scripting>`_."
 msgstr ""
+"クロスサイトスクリプティングは任意のHTML(さらにそれを使うJavaScript）を"
+"webサイトの実行環境に挿入しようとする考え方です。対策するためには、"
+"任意のHTMLタグが含まれないようにするために、開発者はテキストを適切に"
+"エスケープする必要があります。これに関するさらなる情報については、"
+"Wikipediaの記事\ `Cross-Site Scripting <https://en.wikipedia.org/wiki"
+"/Cross-site_scripting>`_\ を確認してください。"
 
 # 2c06cfa627824db583772d48ce1dccc2
 #: ../../security.rst:20
@@ -55,16 +65,20 @@ msgid ""
 "in templates, but there are still other places where you have to be "
 "careful:"
 msgstr ""
+"Flaskでは、明示的にそうしないと指示されていないかぎり、Jinja2が自動的に"
+"全ての値をエスケープするように設定しています。これによってテンプレート"
+"が原因となるXSSの問題は全て排除されるはずですが、それでも他に注意しなければ"
+"ならない場所がいくらか残っています:"
 
 # 0c4cd7f31b9e49ffbb09f6ae94066ffb
 #: ../../security.rst:25
 msgid "generating HTML without the help of Jinja2"
-msgstr ""
+msgstr "Jinja2を利用せずにHTMLを生成"
 
 # aca9b4452d234af89750bc4d90e01007
 #: ../../security.rst:26
 msgid "calling :class:`~flask.Markup` on data submitted by users"
-msgstr ""
+msgstr "ユーザが提出したデータへ\ :class:`~flask.Markup`\ を呼び出し"
 
 # 8dbf99640bdf453aacaea80aa91f7d1e
 #: ../../security.rst:27
@@ -72,6 +86,9 @@ msgid ""
 "sending out HTML from uploaded files, never do that, use the ``Content-"
 "Disposition: attachment`` header to prevent that problem."
 msgstr ""
+"ユーザがアップロードしたファイルからHTMLを送出、これは決して行うべきでは"
+"なく、問題を防ぐために\ ``Content-Disposition: attachment``\ を使うように"
+"してください。"
 
 # 898c5b8f9a1a40b0b6be576a3bd42b79
 #: ../../security.rst:29
@@ -80,6 +97,9 @@ msgid ""
 "content-type guessing based on the first few bytes so users could trick a"
 " browser to execute HTML."
 msgstr ""
+"アップロードされたファイルからテキストファイルを送出。いくつかのブラウザは"
+"content-typeの推測を、データの最初の数バイトに基づいて行うため、ブラウザの"
+"ユーザがブラウザにHTMLを実行をさせるようだませる場合があります。"
 
 # 95b636717b424a5cac46fbe042791cb7
 #: ../../security.rst:33
@@ -90,6 +110,12 @@ msgid ""
 " this possible attack vector, be sure to always quote your attributes "
 "with either double or single quotes when using Jinja expressions in them:"
 msgstr ""
+"もうひとつの非常に重要なものは、引用符で囲まれない属性です。Jinja2は"
+"HTMLをエスケープすることでXSS問題から守ることはできても、Jinja2がそれでも"
+"XSSを防げないものがあります: 属性の挿入によるXSS（XSS by attribute injection）"
+"です。この方面から攻撃される可能性へ対抗するには、属性をJinjaの式で使用する"
+"ときには、確実に二重引用符（\"）または一重引用符（'）でそれらの属性を囲む"
+"ようにします:"
 
 # 76cdf911eab84277abcbc0cecc260649
 #: ../../security.rst:43
@@ -98,6 +124,9 @@ msgid ""
 "attacker could easily inject custom JavaScript handlers.  For example an "
 "attacker could inject this piece of HTML+JavaScript:"
 msgstr ""
+"なぜこれが必要なのでしょうか？もしそれをしなかった場合、攻撃者が容易に"
+"独自のJavaScript処理を挿入できるようになるためです。例えば、攻撃者は"
+"そこへ以下のようなHTML+JavaScriptを挿入できます:"
 
 # 5eb4a1f0527549509d81a7548bd7ba1e
 #: ../../security.rst:51
@@ -110,6 +139,14 @@ msgid ""
 "would just have to have the mouse anywhere on the page to trigger the "
 "attack."
 msgstr ""
+"それからユーザが、上記のinputタグの場所へマウスを移動させた場合、"
+"クッキーが表示されているalertウィンドがユーザに表示されるでしょう。"
+"しかし、ユーザにクッキーを表示させる代わりに、できる攻撃者は、別の"
+"あらゆるJavaScriptコードも実行させるかもしれません。CSSの挿入（CSS "
+"injections）と組み合わせると、その要素（訳注：上記のinputタグ）"
+"がページ全体を埋め尽くすようにして、ユーザがその攻撃を引き起こすために"
+"ページ上のどこかにマウスを移動させることしかできないようにさえ、攻撃者が"
+"してくるかもしれません。"
 
 # 07dc4861bcca452ba211aa061b99f583
 #: ../../security.rst:58
@@ -118,6 +155,9 @@ msgid ""
 "against. The ``a`` tag's ``href`` attribute can contain a `javascript:` "
 "URI, which the browser will execute when clicked if not secured properly."
 msgstr ""
+"XSS問題のひとつで、Jinjaのエスケープ機能では防げないものがあります。\ ``a``\ "
+"タグの\ ``href``\ 属性は\ `javascript:`\ で始まるURIを含むことができ、適切に"
+"守られていないブラウザはそれをクリックするとそのJavaScriptを実行します。"
 
 # c984497ae63544b5ac2f02ca74faeea8
 #: ../../security.rst:67
@@ -125,6 +165,8 @@ msgid ""
 "To prevent this, you'll need to set the :ref:`security-csp` response "
 "header."
 msgstr ""
+"これを防ぐためには、\ :ref:`security-csp`\ レスポンスヘッダを確認する"
+"必要があるでしょう。"
 
 # 7dca7a139a0e47e1b21a2b727f20bc92
 #: ../../security.rst:70
