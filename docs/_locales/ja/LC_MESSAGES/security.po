@@ -20,7 +20,7 @@ msgstr ""
 # 072c5c89b74748a281fbf43ba2e33fcf
 #: ../../security.rst:2
 msgid "Security Considerations"
-msgstr ""
+msgstr "セキュリティの考慮点"
 
 # ecf50cc98cea4ba095e8d635bbadb687
 #: ../../security.rst:4
@@ -30,11 +30,15 @@ msgid ""
 "things for you, but there are a couple more you have to take care of "
 "yourself."
 msgstr ""
+"webアプリケーションは普通さまざまな種類のセキュリティ上の問題に直面し、"
+"全てを正しくするのは非常に困難です。Flaskはこれらのいくつかを、あなたに"
+"とって良いように解決しようと試みますが、自分自身で注意を払わなければ"
+"ならないことが、まだまだあります。"
 
 # c7f6c505bb8949a6b2521217c0a48f62
 #: ../../security.rst:11
 msgid "Cross-Site Scripting (XSS)"
-msgstr ""
+msgstr "クロスサイトスクリプティング（Cross-Site Scripting）（XSS）"
 
 # 5509886ebd5f404eaa30592b96c83c49
 #: ../../security.rst:13
@@ -46,6 +50,12 @@ msgid ""
 "Wikipedia article on `Cross-Site Scripting <https://en.wikipedia.org/wiki"
 "/Cross-site_scripting>`_."
 msgstr ""
+"クロスサイトスクリプティングは任意のHTML(さらにそれを使うJavaScript）を"
+"webサイトの実行環境に挿入しようとする考え方です。対策するためには、"
+"任意のHTMLタグが含まれないようにするために、開発者はテキストを適切に"
+"エスケープする必要があります。これに関するさらなる情報については、"
+"Wikipediaの記事\ `Cross-Site Scripting <https://en.wikipedia.org/wiki"
+"/Cross-site_scripting>`_\ を確認してください。"
 
 # 2c06cfa627824db583772d48ce1dccc2
 #: ../../security.rst:20
@@ -55,16 +65,20 @@ msgid ""
 "in templates, but there are still other places where you have to be "
 "careful:"
 msgstr ""
+"Flaskでは、明示的にそうしないと指示されていないかぎり、Jinja2が自動的に"
+"全ての値をエスケープするように設定しています。これによってテンプレート"
+"が原因となるXSSの問題は全て排除されるはずですが、それでも他に注意しなければ"
+"ならない場所がいくらか残っています:"
 
 # 0c4cd7f31b9e49ffbb09f6ae94066ffb
 #: ../../security.rst:25
 msgid "generating HTML without the help of Jinja2"
-msgstr ""
+msgstr "Jinja2を利用せずにHTMLを生成"
 
 # aca9b4452d234af89750bc4d90e01007
 #: ../../security.rst:26
 msgid "calling :class:`~flask.Markup` on data submitted by users"
-msgstr ""
+msgstr "ユーザが提出したデータへ\ :class:`~flask.Markup`\ を呼び出し"
 
 # 8dbf99640bdf453aacaea80aa91f7d1e
 #: ../../security.rst:27
@@ -72,6 +86,9 @@ msgid ""
 "sending out HTML from uploaded files, never do that, use the ``Content-"
 "Disposition: attachment`` header to prevent that problem."
 msgstr ""
+"ユーザがアップロードしたファイルからHTMLを送出、これは決して行うべきでは"
+"なく、問題を防ぐために\ ``Content-Disposition: attachment``\ を使うように"
+"してください。"
 
 # 898c5b8f9a1a40b0b6be576a3bd42b79
 #: ../../security.rst:29
@@ -80,6 +97,10 @@ msgid ""
 "content-type guessing based on the first few bytes so users could trick a"
 " browser to execute HTML."
 msgstr ""
+"アップロードされたファイルからテキストファイルを送出。いくつかのブラウザは"
+"content-typeの推測を、データの最初の数バイトに基づいて行うため、ブラウザを"
+"だましてHTMLを実行をさせることが、ブラウザのユーザにとって可能な場合があり"
+"ます。"
 
 # 95b636717b424a5cac46fbe042791cb7
 #: ../../security.rst:33
@@ -90,6 +111,12 @@ msgid ""
 " this possible attack vector, be sure to always quote your attributes "
 "with either double or single quotes when using Jinja expressions in them:"
 msgstr ""
+"もうひとつの非常に重要なものは、引用符で囲まれない属性です。Jinja2は"
+"HTMLをエスケープすることでXSS問題から守ることはできても、それでもJinja2が"
+"防げないものがあります: 属性の挿入によるXSS（XSS by attribute injection）"
+"です。この方面から攻撃される可能性へ対抗するには、属性をJinjaの式で使用する"
+"ときには、確実に二重引用符（\"）または一重引用符（'）でそれらの属性を囲む"
+"ようにします:"
 
 # 76cdf911eab84277abcbc0cecc260649
 #: ../../security.rst:43
@@ -98,6 +125,9 @@ msgid ""
 "attacker could easily inject custom JavaScript handlers.  For example an "
 "attacker could inject this piece of HTML+JavaScript:"
 msgstr ""
+"なぜこれが必要なのでしょうか？もしそれをしなかった場合、攻撃者が容易に"
+"独自のJavaScript処理を挿入できるようになるためです。例えば、攻撃者は"
+"ここ（上記のinputタグ）へ以下のようなHTML+JavaScriptを挿入できます:"
 
 # 5eb4a1f0527549509d81a7548bd7ba1e
 #: ../../security.rst:51
@@ -110,6 +140,14 @@ msgid ""
 "would just have to have the mouse anywhere on the page to trigger the "
 "attack."
 msgstr ""
+"それからユーザが、上記のinputタグの場所へマウスを移動させた場合、"
+"クッキーが表示されているalertウィンドがユーザに表示されるでしょう。"
+"しかし、ユーザにクッキーを表示させる代わりに、できる攻撃者は、別の"
+"あらゆるJavaScriptコードも実行させるかもしれません。CSSの挿入（CSS "
+"injections）と組み合わせると、その要素（訳注：上記のinputタグ）"
+"がページ全体を埋め尽くすようにして、ユーザがその攻撃を引き起こすために"
+"ページ上のどこかにマウスを移動させることしかできないようにさえ、攻撃者が"
+"してくるかもしれません。"
 
 # 07dc4861bcca452ba211aa061b99f583
 #: ../../security.rst:58
@@ -118,6 +156,9 @@ msgid ""
 "against. The ``a`` tag's ``href`` attribute can contain a `javascript:` "
 "URI, which the browser will execute when clicked if not secured properly."
 msgstr ""
+"XSS問題のひとつで、Jinjaのエスケープ機能では防げないものがあります。\ ``a``\ "
+"タグの\ ``href``\ 属性は\ `javascript:`\ で始まるURIを含むことができ、適切に"
+"守られていないブラウザはそれをクリックするとそのJavaScriptを実行します。"
 
 # c984497ae63544b5ac2f02ca74faeea8
 #: ../../security.rst:67
@@ -125,11 +166,13 @@ msgid ""
 "To prevent this, you'll need to set the :ref:`security-csp` response "
 "header."
 msgstr ""
+"これを防ぐためには、\ :ref:`security-csp`\ レスポンスヘッダを確認する"
+"必要があるでしょう。"
 
 # 7dca7a139a0e47e1b21a2b727f20bc92
 #: ../../security.rst:70
 msgid "Cross-Site Request Forgery (CSRF)"
-msgstr ""
+msgstr "クロスサイトリクエストフォージェリ（Cross-Site Request Forgery）（CSRF）"
 
 # bbbeea13374b471b9709aaacf94596b8
 #: ../../security.rst:72
@@ -138,6 +181,8 @@ msgid ""
 "outline it here in detail just mention what it is and how to "
 "theoretically prevent it."
 msgstr ""
+"もう一つの大きな問題がCSRFです。これはとても複雑な話題であり、ここでは詳細を"
+"整理はせず、それが何であり理論上はどう防ぐのかに言及だけします。"
 
 # f8b41960b5434465a2e61ac24a037b27
 #: ../../security.rst:76
@@ -150,6 +195,13 @@ msgid ""
 " application's users with social engineering to do stupid things without "
 "them knowing."
 msgstr ""
+"もし認証情報がクッキーに格納されていた場合、状態管理をすることが暗黙的に"
+"必要となります。「ログインしている」という状態はクッキーによって制御され、"
+"そのクッキーはリクエストごとにページへ送信されます。残念ながらそのような"
+"リクエストは第三者のサイトが引き金になる場合も含みます。もしそのことを"
+"考えておかないと、あなたのアプリケーションのユーザをだまして、ソーシャル"
+"エンジニアリングも使いながら、当事者に知られることなく、愚かな点を突いて"
+"くるようなことを、誰かができるようになっているかもしれません。"
 
 # a6f40654a2354e0e87589346a7c95ee3
 #: ../../security.rst:84
@@ -160,6 +212,12 @@ msgid ""
 "some JavaScript they just have to trick some users to load that page and "
 "their profiles will end up being deleted."
 msgstr ""
+"例えば、\ ``POST``\ リクエストを送ったときはユーザのプロフィールを消去する"
+"特別なURLがあるとします（\ ``http://example.com/user/delete``\ とします）。"
+"もしも攻撃者がそのとき、そのページへpostリクエストを送信するページをなにかしら"
+"のJavaScriptを使いながら作成した場合、あるユーザがその（攻撃者が作成した）"
+"ページをロードするようにだましさえすれば、そのユーザのプロフィールは消去"
+"される結果になります。"
 
 # a4d92a655846480883b9715cd4fba06d
 #: ../../security.rst:90
@@ -169,6 +227,10 @@ msgid ""
 "would go to that page, their profiles would get deleted while they are "
 "looking at images of fluffy cats."
 msgstr ""
+"自分が何百万ものユーザがいるFacebookを走らせていて、誰かが子猫の画像への"
+"リンクを送ることを想像してみてください。ユーザがそのページへ行ったとき、"
+"もふもふした猫の画像を見ている間に、自分のプロフィールが削除されるかも"
+"しれません。"
 
 # 6bddff338c064609aa4fecb82368c84f
 #: ../../security.rst:95
@@ -179,6 +241,12 @@ msgid ""
 "After receiving the data on the server again, you would then have to "
 "compare the two tokens and ensure they are equal."
 msgstr ""
+"これはどのように防ぐのでしょうか？基本的には、サーバ上の内容を変更する"
+"リクエストではそれぞれ、一度限りのトークン（訳注：認証などに使用する、"
+"大抵はでたらめな文字列）を使用して、それをクッキーに格納して、"
+"\ **さらに**\ それをformデータとも一緒に送信します。サーバで再びデータを"
+"受信した後は、そのときに2つのデータを比較して、確実に同一であるかを確か"
+"める必要があるでしょう。"
 
 # 11cedf4d53e244dabbdaf91a82a6ed78
 #: ../../security.rst:101
@@ -186,11 +254,14 @@ msgid ""
 "Why does Flask not do that for you?  The ideal place for this to happen "
 "is the form validation framework, which does not exist in Flask."
 msgstr ""
+"なぜFlaskは、あなにとって良いように、それをしてくれないのでしょうか？"
+"それを起こす理想的な場所はformを検証するフレームワークであって、それは"
+"Flaskの外側に位置するのです。"
 
 # d7cd87fff0504c64a634d4e064c79ed5
 #: ../../security.rst:107
 msgid "JSON Security"
-msgstr ""
+msgstr "JSONのセキュリティ"
 
 # 6cc9067778e04f1c8b81e0e6db1a3d39
 #: ../../security.rst:109
@@ -199,6 +270,11 @@ msgid ""
 "level arrays to JSON. This was because of a security vulnerability in "
 "ECMAScript 4."
 msgstr ""
+"Flask 0.10とそれ以前では、\ :func:`~flask.jsonify`\ は最上位レベルの"
+"配列（top-level arrays）をJSONへシリアライズ（訳注：ネットワークで送受信"
+"できるデータ形式へ変換するような処理）しませんでした。これはECMAScript 4"
+"にあるセキュリティ上の脆弱性によるものでした。"
+""
 
 # 46c3a54a16ea4de1868f05ecea910037
 #: ../../security.rst:112
@@ -210,11 +286,16 @@ msgid ""
 " this behavior was changed and :func:`~flask.jsonify` now supports "
 "serializing arrays."
 msgstr ""
+"ECMAScript 5ではこの脆弱性は解決しており、従っていまだに脆弱性があるのは"
+"非常に古いブラウザだけです。そのようなブラウザはすべて\ `別のより深刻な"
+"脆弱性があり <https://github.com/pallets/flask/issues/248#issuecomment-59934857>`_\ "
+"、従ってこの振る舞いは変更されていて、\ :func:`~flask.jsonify`\ は今では"
+"配列のシリアライズをサポートしています。"
 
 # 40a06406cbca4cd2918f57306894c341
 #: ../../security.rst:120
 msgid "Security Headers"
-msgstr ""
+msgstr "セキュリティに関するヘッダ"
 
 # 2be414f4eb6248d18a679b184f2e7234
 #: ../../security.rst:122
@@ -224,11 +305,15 @@ msgid ""
 "application. The `Flask-Talisman`_ extension can be used to manage HTTPS "
 "and the security headers for you."
 msgstr ""
+"ブラウザは、セキュリティを制御するために様々なレスポンスのヘッダを認識"
+"します。自分のアプリケーションで使うように、以下のヘッダをそれぞれ確認"
+"しておくことをお勧めします。\ `Flask-Talisman`_\ というFlask拡張は、"
+"HTTPSヘッダとセキュリティに関するヘッダを管理するために使用できます。"
 
 # 606dba6f02c74707aef49ef05c1e3229
 #: ../../security.rst:130
 msgid "HTTP Strict Transport Security (HSTS)"
-msgstr ""
+msgstr "HTTPの厳格なトランスポートのセキュリティ（HSTS）（HTTP Strict Transport Security）"
 
 # 920d787ddc25400a8203740b1429b4b2
 #: ../../security.rst:132
@@ -236,6 +321,8 @@ msgid ""
 "Tells the browser to convert all HTTP requests to HTTPS, preventing man-"
 "in-the-middle (MITM) attacks. ::"
 msgstr ""
+"全てのHTTPリクエストをHTTPへ変換するようブラウザに指示して、man-in-the-middle"
+"（MITM）攻撃を防ぎます。::"
 
 # 9630e5ea3aab46088deb54b80974781a
 #: ../../security.rst:137
@@ -247,7 +334,7 @@ msgstr ""
 # b39c5bfb98f44130bce144b7e0bc40ea
 #: ../../security.rst:142
 msgid "Content Security Policy (CSP)"
-msgstr ""
+msgstr "コンテンツのセキュリティポリシー（CSP）（Content Security Policy）"
 
 # f5c3b798f46447b5b592e289d8e720d9
 #: ../../security.rst:144
@@ -256,6 +343,10 @@ msgid ""
 "header should be used whenever possible, but requires some work to define"
 " the correct policy for your site. A very strict policy would be::"
 msgstr ""
+"様々な種類のリソースについて、どこから読み込めるかをブラウザに指示します。"
+"このヘッダは可能な限り使用するべきですが、自分のサイト用に適切なポリシーを"
+"定義するためにいくらかの作業が必要になります。非常に厳格なポリシーは"
+"以下のようになるでしょう::"
 
 # 1eb3b3525792433088138a2b28c4ba75
 #: ../../security.rst:150
@@ -281,6 +372,10 @@ msgid ""
 "to detect it, which can be abused to generate a cross-site scripting "
 "(XSS) attack. ::"
 msgstr ""
+"レスポンスが示すcontent type（訳注：データの種類・形式を示すヘッダ）を"
+"尊重するようブラウザに強要し、クロスサイトスクリプティング（XSS）攻撃の"
+"生成に悪用される可能性がある、データ形式の推測機能を優先させないように"
+"します。::"
 
 # a03d0d99ec0843f982c330b7d8e20e65
 #: ../../security.rst:162
@@ -302,6 +397,10 @@ msgid ""
 "translated invisibly to clicks on your page's elements. This is also "
 "known as \"clickjacking\". ::"
 msgstr ""
+"自分のサイトの\ ``iframe``\ の中に、他のサイトを埋め込むことを防ぎます。"
+"これは、外部フレームでのクリックが自分のページの要素をクリックすること"
+"へと、目に見えないやり方で変換できるようにする攻撃の類を防ぎます。これは"
+"「clickjacking」としても知られています。::"
 
 # 8003fdbac3ca44a0964297925e62ad0e
 #: ../../security.rst:174
@@ -320,6 +419,9 @@ msgid ""
 "page if the request contains something that looks like JavaScript and the"
 " response contains the same data. ::"
 msgstr ""
+"もしもリクエストがなにかJavaScriptのようなものを含み、レスポンスも同じ"
+"データを含んでいる場合に、ページを読み込まないようにすることで、ブラウザが"
+"reflected XSS攻撃を防ぐよう試みるようにします。"
 
 # 67127aa57511409da3682a0e8fe9482e
 #: ../../security.rst:185
@@ -329,7 +431,7 @@ msgstr ""
 # 60b59e10d1c04f9a9bf036f2cd74192b
 #: ../../security.rst:191
 msgid "Set-Cookie options"
-msgstr ""
+msgstr "Set-Cookieオプション"
 
 # 538c643b913c4a4bbc7479fa90750ca5
 #: ../../security.rst:193
@@ -338,11 +440,14 @@ msgid ""
 "security. Flask has configuration options to set these on the session "
 "cookie. They can be set on other cookies too."
 msgstr ""
+"以下のオプションはセキュリティを改善するために、\ ``Set-cookie``\ ヘッダへ"
+"追加することができます。Flaskには、これらをセッションのクッキーへ設定させる"
+"構成オプションがあります。これらは、他のクッキーへも設定可能です。"
 
 # 64d690f0bf09477fbc111af3ff9f7b27
 #: ../../security.rst:197
 msgid "``Secure`` limits cookies to HTTPS traffic only."
-msgstr ""
+msgstr "``secure``\ はクッキー（の送受信を）をHTTPS通信だけに限定します。"
 
 # b0c78ad3e35041549e487767985e2158
 #: ../../security.rst:198
@@ -350,6 +455,7 @@ msgid ""
 "``HttpOnly`` protects the contents of cookies from being read with "
 "JavaScript."
 msgstr ""
+"``HttpOnly``\ は、クッキーの内容をJavaScriptで読み取られることを防ぎます。"
 
 # 2de2035c7a074d0a99260f2ce7c49208
 #: ../../security.rst:200
@@ -360,6 +466,12 @@ msgid ""
 "such as submitting a form. ``Strict`` prevents sending cookies with all "
 "external requests, including following regular links."
 msgstr ""
+"``SameSite``\ は、外部サイトからのリクエストからどのようにクッキーが"
+"送信されるかについて制限します。\ ``'Lax'``\ （推奨）または\ ``'Strict'``\ "
+"に設定可能です。\ ``Lax``\ は、formを提出してくるような、外部サイトからの"
+"CSRFがありがちなリクエストで一緒にクッキーを（ブラウザが）送信することを"
+"防ぎます。\ ``Strict``\ は、通常のリンクをフォローすることを含む、全ての"
+"外部リクエストで一緒にクッキーを（ブラウザが）送信することを防ぎます。"
 
 # ab833b90a37e44fb93c28ea48149a50a
 #: ../../security.rst:216
@@ -369,6 +481,10 @@ msgid ""
 "neither option is set, the cookie will be removed when the browser is "
 "closed. ::"
 msgstr ""
+"``Expires``\ または\ ``Max-Age``\ オプションを指定すると、与えられた"
+"時間が過ぎた後、または現在時刻にageを加えた後、クッキーを削除します。"
+"もしどちらのオプションも設定されていない場合は、ブラウザが閉じられた"
+"ときにクッキーは削除されまれます。"
 
 # 93584cb51b904be6aa7cbc9bf49a02e8
 #: ../../security.rst:223
@@ -380,6 +496,13 @@ msgid ""
 " is not older than this value. Lowering this value may help mitigate "
 "replay attacks, where intercepted cookies can be sent at a later time. ::"
 msgstr ""
+"セッションのクッキーについては、もし\ :attr:`session.permanent "
+"<flask.session.permanent>`\ が設定されていた場合には、\ :data:"
+"`PERMANENT_SESSION_LIFETIME`\ が消去（のタイミング）の設定に使用されます。"
+"Flaskの標準設定でのクッキーの実装は、暗号学的に施された署名が、この値より"
+"古くなっていないことを検証します。この値を小さくするほど、横取りされた"
+"クッキーを後で送信できるようにする、replay攻撃の抑制への手助けになること"
+"でしょう。::"
 
 # 274b50d054a34df681c73c8bba3ccc81
 #: ../../security.rst:241
@@ -387,6 +510,9 @@ msgid ""
 "Use :class:`itsdangerous.TimedSerializer` to sign and validate other "
 "cookie values (or any values that need secure signatures)."
 msgstr ""
+"ほかのクッキーの値（もしくは安全に署名する必要があるあらゆる値）の"
+"署名と検証には\ :class:`itsdangerous.TimedSerializer`\ を使用して"
+"ください。"
 
 # 20eed18e9d044ebc9d6cd599ef00cdcd
 #: ../../security.rst:244
@@ -401,7 +527,7 @@ msgstr ""
 # 84b7a24d81b44796ab2236d74b302097
 #: ../../security.rst:251
 msgid "HTTP Public Key Pinning (HPKP)"
-msgstr ""
+msgstr "HTTP公開鍵ピン止め（HPKP）（HTTP Public Key Pinning）"
 
 # eba0c9e59dbf4f749baa52c376d076ea
 #: ../../security.rst:253
@@ -409,6 +535,8 @@ msgid ""
 "This tells the browser to authenticate with the server using only the "
 "specific certificate key to prevent MITM attacks."
 msgstr ""
+"これは、MITM攻撃を防ぐために、特定の証明書の鍵だけを使用してサーバを"
+"認証するよう、ブラウザに指示します。"
 
 # 3e85beadc553448d86d6f1f6984857e3
 #: ../../security.rst:257
@@ -416,6 +544,8 @@ msgid ""
 "Be careful when enabling this, as it is very difficult to undo if you set"
 " up or upgrade your key incorrectly."
 msgstr ""
+"もしも鍵を不正に設定もしくは更新してしまった場合は、元に戻すことが非常に"
+"難しいため、これを有効にするときは注意してください。"
 
 # 3b624609acbe42998fdcb3a3df476525
 #: ../../security.rst:260
