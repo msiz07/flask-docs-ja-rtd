@@ -20,7 +20,7 @@ msgstr ""
 # 2ea2700375974295ab429c44093278ae
 #: ../../config.rst:4
 msgid "Configuration Handling"
-msgstr ""
+msgstr "設定の処理の仕方"
 
 # 5885056d476241118880490c67cf0e51
 #: ../../config.rst:6
@@ -30,6 +30,9 @@ msgid ""
 "environment like toggling the debug mode, setting the secret key, and "
 "other such environment-specific things."
 msgstr ""
+"アプリケーションにはいくらかの設定が必要です。デバッグモードの"
+"切り替え、シークレットキーの設定、それとその他に環境固有なもののように、"
+"アプリケーションの環境に依存して変更したいであろう設定が異なるでしょう。"
 
 # d844bf7c1809493c9b6bd69566773c66
 #: ../../config.rst:11
@@ -39,6 +42,10 @@ msgid ""
 "configuration in the code, which for many small applications is not "
 "actually that bad, but there are better ways."
 msgstr ""
+"Flaskの設計のやり方では普通、アプリケーションを開始するときに設定"
+"情報が利用可能であることを要求します。設定情報をコードの中へハード"
+"コードでき、それは小さいアプリケーションに対してはそれほど悪いこと"
+"ではありませんが、もっと良いやり方もあります。"
 
 # 603f45a3ad544721a041bb7647bd25ff
 #: ../../config.rst:16
@@ -50,11 +57,16 @@ msgid ""
 "values and also where extensions can put their configuration values.  But"
 " this is also where you can have your own configuration."
 msgstr ""
+"設定をどうやって読み込むかにかかわらず、読み込んだ設定値の保持に利用"
+"できるオブジェクトがあります: :class:`~flask.Flask`\ オブジェクトの\ "
+":attr:`~flask.Flask.config`\ 属性です。これはFlask自身がある種の設定値を"
+"置き、Flask拡張も設置値を置く場所です。しかしながら、これはあなたが独自の"
+"設定を持てる場所でもあります。"
 
 # a164f84380914d6b85f4dde1520aefd9
 #: ../../config.rst:25
 msgid "Configuration Basics"
-msgstr ""
+msgstr "設定の基本"
 
 # 1e468cedc8fb497b8ee0dfed9d0d97e7
 #: ../../config.rst:27
@@ -62,6 +74,8 @@ msgid ""
 "The :attr:`~flask.Flask.config` is actually a subclass of a dictionary "
 "and can be modified just like any dictionary::"
 msgstr ""
+":attr:`~flask.Flask.config`\ は、実際にはdicitonaryのサブクラスで、どんな"
+"dictionaryとも同じようなやり方で変更できます::"
 
 # a7f3382428b14be1ad941aba86238dfd
 #: ../../config.rst:33
@@ -69,6 +83,9 @@ msgid ""
 "Certain configuration values are also forwarded to the "
 ":attr:`~flask.Flask` object so you can read and write them from there::"
 msgstr ""
+"ある種の設定値は\ :attr:`~flask.Flask`\ オブジェクトへも送られるため、"
+"それらはFlaskオブジェクト（の属性）を使っても読み取りおよび書き込み"
+"できます::"
 
 # 59a7b54aca19431091dafe1cac1aacd0
 #: ../../config.rst:38
@@ -76,11 +93,13 @@ msgid ""
 "To update multiple keys at once you can use the :meth:`dict.update` "
 "method::"
 msgstr ""
+"一度に複数のキーを更新するには、\ :meth:`dict.update`\ メソッドを"
+"使用できます::"
 
 # a816fac978de40b59c13ef6a1608c6a5
 #: ../../config.rst:48
 msgid "Environment and Debug Features"
-msgstr ""
+msgstr "環境およびデバッグの目玉機能"
 
 # 4d165060d0d4439fb0028d5fbd7e5f68
 #: ../../config.rst:50
@@ -90,6 +109,11 @@ msgid ""
 "In order to set the environment and debug mode reliably, Flask uses "
 "environment variables."
 msgstr ""
+":data:`ENV`\ と\ :data:`DEBUG`\ の設定値は特殊で、もしもappが設定を開始した"
+"後でそれらを変更すると、整合性のない振る舞いをすることがあります。環境"
+"（訳注：ENV設定値のような意味合い）とデバッグモード（訳注：DEBUG設定値"
+"のような意味合い）を信頼性を保ちながら設定するために、Flaskは環境変数を"
+"使用します。"
 
 # 3f957dd14b5a4a5e9b38697c64c51371
 #: ../../config.rst:55
@@ -99,6 +123,9 @@ msgid ""
 " with the :envvar:`FLASK_ENV` environment variable and defaults to "
 "``production``."
 msgstr ""
+"Flask、Flask拡張、その他Sentryのようなプログラムへ、Flaskをどんな状況で"
+"実行しているかを伝えるときに、環境が使用されます。それは\ :envvar:"
+"`FLASK_ENV`\ 環境変数で制御され、その標準設定は\ ``produciton``\ です。"
 
 # 9feb71c7125949be918382f81ff63014
 #: ../../config.rst:60
@@ -108,6 +135,11 @@ msgid ""
 "in debug mode. To control this separately from the environment, use the "
 ":envvar:`FLASK_DEBUG` flag."
 msgstr ""
+":envvar:`FLASK_ENV`\ を\ ``development``\ に設定すると、デバッグモードが"
+"有効になります。\ ``flask run``\ は、デバッグモードでは標準設定でインタラクティブ"
+"なデバッガとリローダ（訳注：アプリのソースコードを変更したとき再読み込みする"
+"機能）を使用します。環境（訳注：通常FLASK_ENVを使った設定のこと）とは別にこれを"
+"制御するには、\ :envvar:`FLASK_DEBUG`\ フラグを使います。"
 
 # 88b5327c4dc6438b935ef1b4d0f05cb6
 #: ../../config.rst:65
@@ -115,6 +147,8 @@ msgid ""
 "Added :envvar:`FLASK_ENV` to control the environment separately from "
 "debug mode. The development environment enables debug mode."
 msgstr ""
+"環境とは別にデバッグモードを制御するために\ :envvar:`FLASK_ENV`\ が"
+"追加されました。開発環境はデバッグモードを有効にします。"
 
 # 736cd2bedf1449f688985f02b74e2c1b
 #: ../../config.rst:69
@@ -122,11 +156,13 @@ msgid ""
 "To switch Flask to the development environment and enable debug mode, set"
 " :envvar:`FLASK_ENV`::"
 msgstr ""
+"Flaskをdevelopment環境へ変更してデバッグモードを有効にするには、\ :envvar:"
+"`FLASK_ENV`\ を以下のように設定します::"
 
 # 44d1b8d293b740c4900e570f15b43c97
 #: ../../config.rst:75
 msgid "(On Windows, use ``set`` instead of ``export``.)"
-msgstr ""
+msgstr "（Windowsでは、\ ``export``\ の代わりに\ ``set``\ を使用します。）"
 
 # 871b2cfb100e4467b0318c0d3e91e9c1
 #: ../../config.rst:77
@@ -137,16 +173,22 @@ msgid ""
 "``flask`` command, and some systems or extensions may have already "
 "configured themselves based on a previous value."
 msgstr ""
+"上記のように環境変数を使用することを推奨します。\ :data:`ENV`\ と\ "
+":data:`DEBUG`\ を設定（configファイル）またはコードの中で設定することは"
+"可能ですが、そのようにはしないことを強く勧めます。configまたはコードの"
+"中で設定した値は\ ``flask``\ コマンドでは早い段階で読み取ることができず、"
+"そしていくつかのシステムまたはFlask拡張は、それらが読み取られるより前の"
+"値で既に設定を済ませてしまっているかもしれません。"
 
 # a6c8e37e34a34d05ad1333f444da4594
 #: ../../config.rst:85
 msgid "Builtin Configuration Values"
-msgstr ""
+msgstr "組込みの設定値"
 
 # f08f8002a5ac4bf99239f959080c13ab
 #: ../../config.rst:87
 msgid "The following configuration values are used internally by Flask:"
-msgstr ""
+msgstr "以下の設定値はFlaskで内部的に使用されます:"
 
 # bc985e2103fb4257ae299d0eabddd097
 #: ../../config.rst:91
@@ -157,16 +199,23 @@ msgid ""
 "by the :envvar:`FLASK_ENV` environment variable and may not behave as "
 "expected if set in code."
 msgstr ""
+"appがどの環境で走らせるかを指定します。FlaskとFlask拡張は、デバッグモードの"
+"有効化のように、環境に基づいて振る舞いを有効にする場合があります。\ :attr:"
+"`~flask.Flask.env`\ 属性は、この設定キーに対応付けられます（訳注：「app.conf"
+"['ENV']」のようにも「app.env」のようにもアクセスできます）。これは、\ "
+":envvar:`FLASK_ENV`\ 環境変数によって設定され、コードの中で設定された場合"
+"には期待通りに振る舞わないかもしれません。"
 
 # 23bb350edcce4285aa31d99a1faa551c
 #: ../../config.rst:97
 msgid "**Do not enable development when deploying in production.**"
 msgstr ""
+"**本番環境にデプロイするときは、development設定を有効にしないでください。**"
 
 # c72888176e18437b863eee6992e1ab63
 #: ../../config.rst:99
 msgid "Default: ``'production'``"
-msgstr ""
+msgstr "標準設定: ``'production'``"
 
 # de1cf21d7fe04461b7b2d018d385d1bc
 #: ../../config.rst:105
@@ -179,11 +228,20 @@ msgid ""
 "``FLASK_DEBUG`` environment variable. It may not behave as expected if "
 "set in code."
 msgstr ""
+"デバッグモードが有効かどうかを指定します。\ ``flask run``\ を使用して"
+"開発サーバを開始するときは、補足されない例外はインタラクティブなデバッガで"
+"表示され、コードが変更されたときは再読み込みされるようになります。\ :attr:"
+"`~flask.Flask.debug`\ 属性がこの設定キーに対応付けられます（訳注："
+"「app.conf['DEBUG']」のようにも「app.debug」のようにもアクセスできます）。"
+"これは\ :data:`ENV`\ が\ ``'development'``\ のときは有効になり、\ "
+"``FLASK_DEBUG``\ 環境変数によって上書きされます。コードの中で設定された"
+"場合には期待通りに振る舞わないかもしれません。"
 
 # 4be061ef82314161b04fd4bbd76f7992
 #: ../../config.rst:113
 msgid "**Do not enable debug mode when deploying in production.**"
 msgstr ""
+"**本番環境にデプロイするときは、デバッグモードを有効にしないでください。**"
 
 # 55218389be79440b8ad2289e13ee1eaa
 #: ../../config.rst:115
@@ -191,6 +249,8 @@ msgid ""
 "Default: ``True`` if :data:`ENV` is ``'development'``, or ``False`` "
 "otherwise."
 msgstr ""
+"標準設定: もしも\ :data:`ENV`\ が\ ``'development``\ であれば\ ``True``\ 、"
+"そうでなければ\ ``False``\ 。"
 
 # 46c5f77df00c406794532a4c25166bca
 #: ../../config.rst:120
