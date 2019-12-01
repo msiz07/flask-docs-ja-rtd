@@ -110,8 +110,8 @@ msgid ""
 "environment variables."
 msgstr ""
 ":data:`ENV`\ と\ :data:`DEBUG`\ の設定値は特殊で、もしもappが設定を開始した"
-"後でそれらを変更すると、整合性のない振る舞いをすることがあります。環境"
-"（訳注：ENV設定値のような意味合い）とデバッグモード（訳注：DEBUG設定値"
+"後でそれらを変更すると、整合性のない振る舞いをすることがあります。environment"
+"（訳注: ENV設定値のような意味合い）とデバッグモード（訳注: DEBUG設定値"
 "のような意味合い）を信頼性を保ちながら設定するために、Flaskは環境変数を"
 "使用します。"
 
@@ -124,7 +124,7 @@ msgid ""
 "``production``."
 msgstr ""
 "Flask、Flask拡張、その他Sentryのようなプログラムへ、Flaskをどんな状況で"
-"実行しているかを伝えるときに、環境が使用されます。それは\ :envvar:"
+"実行しているかを伝えるときに、environmentが使用されます。それは\ :envvar:"
 "`FLASK_ENV`\ 環境変数で制御され、その標準設定は\ ``produciton``\ です。"
 
 # 9feb71c7125949be918382f81ff63014
@@ -137,9 +137,9 @@ msgid ""
 msgstr ""
 ":envvar:`FLASK_ENV`\ を\ ``development``\ に設定すると、デバッグモードが"
 "有効になります。\ ``flask run``\ は、デバッグモードでは標準設定でインタラクティブ"
-"なデバッガとリローダ（訳注：アプリのソースコードを変更したとき再読み込みする"
-"機能）を使用します。環境（訳注：通常FLASK_ENVを使った設定のこと）とは別にこれを"
-"制御するには、\ :envvar:`FLASK_DEBUG`\ フラグを使います。"
+"なデバッガとリローダ（訳注: アプリのソースコードを変更したとき再読み込みする"
+"機能）を使用します。environment（訳注: 通常FLASK_ENVを使った設定のこと）とは"
+"別にこれを制御するには、\ :envvar:`FLASK_DEBUG`\ フラグを使います。"
 
 # 88b5327c4dc6438b935ef1b4d0f05cb6
 #: ../../config.rst:65
@@ -147,8 +147,8 @@ msgid ""
 "Added :envvar:`FLASK_ENV` to control the environment separately from "
 "debug mode. The development environment enables debug mode."
 msgstr ""
-"環境とは別にデバッグモードを制御するために\ :envvar:`FLASK_ENV`\ が"
-"追加されました。開発環境はデバッグモードを有効にします。"
+"environmentとは別にデバッグモードを制御するために\ :envvar:`FLASK_ENV`\ が"
+"追加されました。environmentをdevelopmentにするとデバッグモードを有効にします。"
 
 # 736cd2bedf1449f688985f02b74e2c1b
 #: ../../config.rst:69
@@ -156,8 +156,8 @@ msgid ""
 "To switch Flask to the development environment and enable debug mode, set"
 " :envvar:`FLASK_ENV`::"
 msgstr ""
-"Flaskをdevelopment環境へ変更してデバッグモードを有効にするには、\ :envvar:"
-"`FLASK_ENV`\ を以下のように設定します::"
+"Flaskをdevelopmentのenvironmentへ変更してデバッグモードを有効にするには、\ "
+":envvar:`FLASK_ENV`\ を以下のように設定します::"
 
 # 44d1b8d293b740c4900e570f15b43c97
 #: ../../config.rst:75
@@ -199,12 +199,12 @@ msgid ""
 "by the :envvar:`FLASK_ENV` environment variable and may not behave as "
 "expected if set in code."
 msgstr ""
-"appがどの環境で走らせるかを指定します。FlaskとFlask拡張は、デバッグモードの"
-"有効化のように、環境に基づいて振る舞いを有効にする場合があります。\ :attr:"
-"`~flask.Flask.env`\ 属性は、この設定キーに対応付けられます（訳注：「app.conf"
-"['ENV']」のようにも「app.env」のようにもアクセスできます）。これは、\ "
-":envvar:`FLASK_ENV`\ 環境変数によって設定され、コードの中で設定された場合"
-"には期待通りに振る舞わないかもしれません。"
+"appをどのenvironmentで走らせるかを指定します。FlaskとFlask拡張は、デバッグ"
+"モードの有効化のように、environmentに基づいて振る舞いを有効にする場合が"
+"あります。\ :attr:`~flask.Flask.env`\ 属性は、この設定キーに対応付けられます"
+"（訳注: 「app.config['ENV']」のようにも「app.env」のようにもアクセスできます）。"
+"これは、\ :envvar:`FLASK_ENV`\ 環境変数によって設定され、コードの中で設定"
+"された場合には期待通りに振る舞わないかもしれません。"
 
 # 23bb350edcce4285aa31d99a1faa551c
 #: ../../config.rst:97
@@ -232,7 +232,7 @@ msgstr ""
 "開発サーバを開始するときは、補足されない例外はインタラクティブなデバッガで"
 "表示され、コードが変更されたときは再読み込みされるようになります。\ :attr:"
 "`~flask.Flask.debug`\ 属性がこの設定キーに対応付けられます（訳注："
-"「app.conf['DEBUG']」のようにも「app.debug」のようにもアクセスできます）。"
+"「app.config['DEBUG']」のようにも「app.debug」のようにもアクセスできます）。"
 "これは\ :data:`ENV`\ が\ ``'development'``\ のときは有効になり、\ "
 "``FLASK_DEBUG``\ 環境変数によって上書きされます。コードの中で設定された"
 "場合には期待通りに振る舞わないかもしれません。"
@@ -259,6 +259,10 @@ msgid ""
 " the app's error handlers. Extensions may also change their behavior to "
 "facilitate easier testing. You should enable this in your own tests."
 msgstr ""
+"テストモードを有効にします。例外が発生したとき、appのエラーハンドラで処理"
+"させる代わりに、影響を伝搬させるようにします。より容易なテストへと促進させる"
+"ために、Flask拡張も振る舞いを変えるかもしれません。あなたが自分のテストを"
+"するときは、これは有効にするべきです。"
 
 # c7084410f68e4058b9cec646e59dfdac
 # 625f9333322e48acb103d19170661877
@@ -269,7 +273,7 @@ msgstr ""
 #: ../../config.rst:124 ../../config.rst:148 ../../config.rst:209
 #: ../../config.rst:247 ../../config.rst:326 ../../config.rst:347
 msgid "Default: ``False``"
-msgstr ""
+msgstr "標準設定: ``False``"
 
 # e538981ac3a3407ba3614e510a21f1bc
 #: ../../config.rst:128
@@ -278,6 +282,9 @@ msgid ""
 "handlers. If not set, this is implicitly true if ``TESTING`` or ``DEBUG``"
 " is enabled."
 msgstr ""
+"例外が発生したとき、appのエラーハンドラで処理させる代わりに、発生させ直し"
+"します。設定されていない場合、これは\ ``TESTING``\ または\ ``DEBUG``\ が"
+"有効なときは暗黙的にtrueです。"
 
 # fd6eece39d4043a592d50761f33a0e35
 # e8ef3456ef5440aba5b340ac164dec69
@@ -294,7 +301,7 @@ msgstr ""
 #: ../../config.rst:217 ../../config.rst:274 ../../config.rst:301
 #: ../../config.rst:339
 msgid "Default: ``None``"
-msgstr ""
+msgstr "標準設定: ``None``"
 
 # 92cdaa88f84443c1b91e736a9b7bef68
 #: ../../config.rst:136
@@ -303,6 +310,11 @@ msgid ""
 "is true if ``DEBUG`` is true. This allows debuggers to introspect the "
 "request data on errors, and should normally not need to be set directly."
 msgstr ""
+"例外が発生したとき、requestのcontext（訳注: リクエストの状況を保持・操作"
+"するために使用されるオブジェクトとほぼ同じ意味合い）を取り除きません。もし"
+"設定されていない場合、これは\ ``DEBUG``\ がtrueなときはtrueです。これは、"
+"デバッガがエラーが起きたときにリクエストのデータを調べることを可能にし、"
+"通常は直接設定する必要はありません。"
 
 # 19dfd03d9733473bb8f6d983c6527851
 #: ../../config.rst:144
@@ -311,6 +323,9 @@ msgid ""
 "it to be handled by the interactive debugger instead of returning it as a"
 " simple error response."
 msgstr ""
+"もしも\ ``HTTPException``-タイプの例外に対するハンドラがない場合、単純な"
+"エラーレスポンスとして返す代わりに、その例外を発生させ直して、インタラクティブ"
+"なデバッガで処理するようにします。"
 
 # a721c51ccd8144218e09f1d854641ac1
 #: ../../config.rst:152
@@ -321,6 +336,10 @@ msgid ""
 " the interactive debugger. This is a more specific version of "
 "``TRAP_HTTP_EXCEPTIONS``. If unset, it is enabled in debug mode."
 msgstr ""
+"（未設定の時に）\ ``args``\ や\ ``form``\ のようなリクエストのdictから、"
+"存在しないキーへアクセスしようとしたときは、400 Bad Requestエラーページを"
+"返します。エラーとして扱う代わりに未処理の例外として扱い、インタラクティブな"
+"デバッガを使えるようにするには、これを有効にします。"
 
 # c899cc9e42ad42e88b82a416f7a6c6c2
 #: ../../config.rst:162
@@ -331,6 +350,11 @@ msgid ""
 "unicode is accepted too. For example, copy the output of this to your "
 "config::"
 msgstr ""
+"セッションのクッキーの安全な署名に使用され、自分のアプリケーションや"
+"Flask拡張が必要とする、その他のあらゆるセキュリティに関する用途で使用"
+"されます。これはでたらめな長い文字列のバイトにするべきであり、unicodeも"
+"許容されています。例えば、以下のコマンドの出力結果を自分の設定にコピー"
+"します::"
 
 # 27f91b2adbc14a70af288b884b1d38b3
 #: ../../config.rst:170
@@ -338,6 +362,8 @@ msgid ""
 "**Do not reveal the secret key when posting questions or committing "
 "code.**"
 msgstr ""
+"**質問を投稿するときもしくはコードをコミットするとき、このsecret keyを"
+"表に出さないようにしてください。**"
 
 # ed712a29ba8b40319a08eadb195b7e90
 #: ../../config.rst:176
@@ -345,11 +371,13 @@ msgid ""
 "The name of the session cookie. Can be changed in case you already have a"
 " cookie with the same name."
 msgstr ""
+"セッションのクッキーの名前です。同じ名前のクッキーを既に持っている場合には、"
+"変更が可能です。"
 
 # 2dfb81cec1b74d38afda48ef468e82c5
 #: ../../config.rst:179
 msgid "Default: ``'session'``"
-msgstr ""
+msgstr "標準設定: ``'session'``"
 
 # c1d25563d0d848428ba9ca2933d308bd
 #: ../../config.rst:183
@@ -358,6 +386,10 @@ msgid ""
 "set, the cookie will be valid for all subdomains of :data:`SERVER_NAME`. "
 "If ``False``, the cookie's domain will not be set."
 msgstr ""
+"セッションのクッキーが有効になるドメイン名とマッチさせるルールを指定します。"
+"もし設定されていない場合、クッキーは\ :data:`SERVER_NAME`\ のすべての"
+"サブドメインで有効になります。もし\ ``False``\ の場合、クッキーのドメイン名"
+"は設定されません。"
 
 # ef52b6ee78274ab2bfacc2c60a107b8a
 #: ../../config.rst:191
@@ -366,6 +398,9 @@ msgid ""
 "cookie will be valid underneath ``APPLICATION_ROOT`` or ``/`` if that is "
 "not set."
 msgstr ""
+"セッションのクッキーが有効となるパスを指定します。もし設定されていない"
+"場合、クッキーは\ ``APPLICATION_ROOT``\ の下、または\ ``APPLICATION_ROOT``\ "
+"が設定されていない場合は\ ``/``\ の下で有効になります。"
 
 # e8042c80cf10405290368ade7da7260c
 #: ../../config.rst:198
@@ -373,6 +408,8 @@ msgid ""
 "Browsers will not allow JavaScript access to cookies marked as \"HTTP "
 "only\" for security."
 msgstr ""
+"セキュリティのために、「HTTP only」と印付られたクッキーへJavaScriptが"
+"アクセスすることを、ブラウザが許可しないようにします。"
 
 # a9b8917115d8465397e3c2f9e9573e0c
 # a3fd5f57b0ba488c82e879eaa2842ffd
@@ -381,7 +418,7 @@ msgstr ""
 #: ../../config.rst:201 ../../config.rst:239 ../../config.rst:310
 #: ../../config.rst:319
 msgid "Default: ``True``"
-msgstr ""
+msgstr "標準設定: ``True``"
 
 # 0a02c143f4584da5b21e76f7bebc8396
 #: ../../config.rst:205
@@ -390,6 +427,9 @@ msgid ""
 " marked \"secure\". The application must be served over HTTPS for this to"
 " make sense."
 msgstr ""
+"クッキーが「secure」と印付られていた場合、HTTPS上のリクエストを使ったとき"
+"だけブラウザがそのクッキーを送信するようにします。これが意味をなすには、"
+"アプリケーションはHTTPを使用してサービスを提供している必要があります。"
 
 # 257bc2166b1c400589b78a59a5659b69
 #: ../../config.rst:213
@@ -398,6 +438,9 @@ msgid ""
 "set to ``'Lax'`` (recommended) or ``'Strict'``. See :ref:`security-"
 "cookie`."
 msgstr ""
+"クッキーがどうやって外部サイトからのリクエストと一緒に送信されるかを"
+"制限します。\ ``'Lax'``\ （推奨）または\ ``'Strict'``\ が設定可能です。"
+"\ :ref:`security-cookie`\ を確認してください。"
 
 # 368bf983395642a59409be53490906dc
 #: ../../config.rst:223
@@ -406,6 +449,9 @@ msgid ""
 "this number of seconds in the future. Can either be a "
 ":class:`datetime.timedelta` or an ``int``."
 msgstr ""
+"もし\ ``session.permanent``\ がtrueである場合は、クッキーの消滅期限は"
+"将来のこの秒数に設定されます。\ :class:`datetime.timedelta`\ または\ ``int``\ "
+"のいずれかが可能です。"
 
 # 5f5bb3bf9e35444e8740fedabc0f534a
 #: ../../config.rst:227
@@ -413,11 +459,13 @@ msgid ""
 "Flask's default cookie implementation validates that the cryptographic "
 "signature is not older than this value."
 msgstr ""
+"Flaskの標準設定でのクッキー実装は、暗号的署名がこの値より古くないかを"
+"検証します。"
 
 # 401cffbfb030423ebb1536b4c0423d4d
 #: ../../config.rst:230
 msgid "Default: ``timedelta(days=31)`` (``2678400`` seconds)"
-msgstr ""
+msgstr "標準設定: ``timedelta(days=31)`` (``2678400`` 秒)"
 
 # 184d82de539646719a7f74d4dee98ba2
 #: ../../config.rst:234
@@ -427,6 +475,11 @@ msgid ""
 "default) can more reliably keep the session from expiring, but uses more "
 "bandwidth. Non-permanent sessions are not affected."
 msgstr ""
+"``session.permanent``\ がtrueのとき、すべてのレスポンスで一緒にクッキーを"
+"送信するかを制御します。毎回クッキーを送信する（標準設定）と、クッキーの"
+"消滅からセッションを守ることが、より高い信頼性で可能ですが、しかし"
+"より多くの帯域（通信データ量）を使用します。持続しない（non-permanent）"
+"セッションは影響を受けません。"
 
 # d223792fbe684f27ae205bb2cadbc967
 #: ../../config.rst:243
@@ -436,6 +489,10 @@ msgid ""
 "serve the data more efficiently. This only makes sense when using such a "
 "server."
 msgstr ""
+"ファイルを提供するとき、Flaskでデータを提供する代わりに\ ``X-Sendfile``\ "
+"ヘッダを設定します。例えばApacheのような、いくつかのwebサーバーではこれを"
+"認識してデータをより効率的に提供します。そのようなサーバを使用しているとき"
+"だけこれは意味をなします。"
 
 # f048644e95e8484eaee03eccf85f8aa0
 #: ../../config.rst:251
@@ -446,11 +503,16 @@ msgid ""
 ":meth:`~flask.Flask.get_send_file_max_age` on the application or "
 "blueprint."
 msgstr ""
+"ファイルを提供するとき、この値の秒数にキャッシュ制御最大世代数（cache "
+"control max age）を設定します。\ :class:`datetime.timedelta`\ または\ "
+"``int``\ のいずれかに設定可能です。アプリケーションまたはblueprint上で"
+"\ :meth:`~flask.Flask.get_send_file_max_age`\ を使用しると、ファイル"
+"ごとにこの値を上書きします。"
 
 # 67bfe8c7890f4815b125dc4b57a5b385
 #: ../../config.rst:256
 msgid "Default: ``timedelta(hours=12)`` (``43200`` seconds)"
-msgstr ""
+msgstr "標準設定: ``timedelta(hours=12)`` (``43200`` 秒)"
 
 # f7f87992e6a540a792c6de0552e204ec
 #: ../../config.rst:260
@@ -458,6 +520,8 @@ msgid ""
 "Inform the application what host and port it is bound to. Required for "
 "subdomain route matching support."
 msgstr ""
+"どのホストとポートを使用するかアプリケーションに知らせます。サブドメインの"
+"ルートとのマッチングのサポートが必要になります。"
 
 # 6d0c8f137ddf42d3aff9556ebd6ab5ed
 #: ../../config.rst:263
@@ -467,6 +531,12 @@ msgid ""
 "allow setting cookies for domains without a dot. To use a domain locally,"
 " add any names that should route to the app to your ``hosts`` file. ::"
 msgstr ""
+"もし設定された場合、\ :data:`SESSION_COOKIE_DOMAIN`\ が設定されていない"
+"ときはセッションのクッキーのドメインに使用されます。最近の（modern）web"
+"ブラウザはドット（「.」）のないドメインに対してはクッキーの設定を許可"
+"しません。ドメインを（自分のPCなど）ローカルで使用するには、ローカルの\ "
+"``hosts``\ ファイルにappへの経路を提供（route）する名前を何でもよいので"
+"追加します::"
 
 # 5bd129e1c694408a94a2ef598b0b1689
 #: ../../config.rst:271
@@ -474,6 +544,9 @@ msgid ""
 "If set, ``url_for`` can generate external URLs with only an application "
 "context instead of a request context."
 msgstr ""
+"もし設定された場合、\ ``url_for``\ が外側のURL（訳注：パスだけでなく、"
+"ドメイン名なども含めたURL）を生成できるのは、リクエストのcontextの"
+"代わりに、アプリケーションのcontextを使ってだけになります。"
 
 # e4aaa7f149804756857fb026e428e33e
 #: ../../config.rst:278
@@ -484,6 +557,13 @@ msgid ""
 "``SCRIPT_NAME`` instead; see :ref:`Application Dispatching <app-"
 "dispatch>` for examples of dispatch configuration)."
 msgstr ""
+"アプリケーションに、アプリケーションサーバ / webサーバによってどのパスに"
+"設置（mount）されたかを知らせます。これはリクエストのcontextより外側のURL"
+"（訳注: ドメイン名など、URLでパスよりも左側の部分という意味合い）を生成"
+"するために使用されます（リクエストの内側（訳注: URLのパス部分という意味"
+"合い）は、振り分け機能（dispatcher）が代わりに\ ``SCRIPT_NAME``\ を設定"
+"する責任を担います; 振り分け（dispatch）設定の例は\ :ref:`Application "
+"Dispatching <app-dispatch>`\ を確認してください）。"
 
 # c88ef0c816234a25989893c550413d10
 #: ../../config.rst:284
@@ -491,11 +571,13 @@ msgid ""
 "Will be used for the session cookie path if ``SESSION_COOKIE_PATH`` is "
 "not set."
 msgstr ""
+"``SESSION_COOKIE_PATH``\ が設定されてない場合、セッションのクッキーのパス"
+"に使用されます。"
 
 # 444ad2f56b804f50aaec2913981d82dc
 #: ../../config.rst:287
 msgid "Default: ``'/'``"
-msgstr ""
+msgstr "標準設定: ``'/'``"
 
 # 63f2b497555c471ab57d06b25b8d258a
 #: ../../config.rst:291
@@ -503,11 +585,13 @@ msgid ""
 "Use this scheme for generating external URLs when not in a request "
 "context."
 msgstr ""
+"リクエストのcontextの中でないとき、外側のURLを生成するためにこのscheme"
+"（訳注: URLのプロトコル（「://」の左側）部分）を使用します。"
 
 # 30e4c713ac9a461c86b7f5fb932bc0a8
 #: ../../config.rst:293
 msgid "Default: ``'http'``"
-msgstr ""
+msgstr "標準設定: ``'http'``"
 
 # 8cd322c417dc4078b819b1c98b184191
 #: ../../config.rst:297
@@ -516,6 +600,9 @@ msgid ""
 "not set and the request does not specify a ``CONTENT_LENGTH``, no data "
 "will be read for security."
 msgstr ""
+"受け取るリクエストのデータを、このバイト数より多くは読み取らないように"
+"します。もし未設定でありリクエストが\ ``CONTENT_LENGTH``\ を指定していない"
+"場合、セキュリティのために全くデータを読み取りません。"
 
 # d7414a5346664e6a9cec906bcdc0b3b2
 #: ../../config.rst:305
@@ -525,6 +612,11 @@ msgid ""
 "``jsonify``. This has security implications when rendering the JSON into "
 "JavaScript in templates, and should typically remain enabled."
 msgstr ""
+"オブジェクトをASCIIにエンコードしたJSONへシリアライズします。もしこれが"
+"無効にされている場合、\ ``jsonify``\ によって、JSONはUnicode文字列、または\ "
+"``UTF-8``\ へエンコードされてから返されます。テンプレートの中でJSONを"
+"JavaScriptへ変換するとき、これはセキュリティ上の問題を生じる可能性があり、"
+"したがって典型的には有効のままにしておくべきです。"
 
 # 0193f5d49d904999b0d2811d9e5cd7aa
 #: ../../config.rst:314
@@ -534,6 +626,11 @@ msgid ""
 "Python's hash seed is. While not recommended, you can disable this for a "
 "possible performance improvement at the cost of caching."
 msgstr ""
+"JSONオブジェクトのキーをアルファベット順にソートします。これはPythonのhash"
+"のシード（訳注: Pythonが内部でオブジェクトを管理・処理するときに使用している"
+"情報）が何であっても同じようなデータにシリアライズされることを保証するため、"
+"キャッシュするときに便利です。推奨はされませんが、これを無効にすると、"
+"キャッシュを犠牲にする代わりに性能が向上する可能性があります。"
 
 # a2af0419c97743209e892efa542e32b6
 #: ../../config.rst:323
@@ -541,16 +638,18 @@ msgid ""
 "``jsonify`` responses will be output with newlines, spaces, and "
 "indentation for easier reading by humans. Always enabled in debug mode."
 msgstr ""
+"``jsonify``\ レスポンスで、人が読みやすいように改行、スペース、インデントを"
+"して出力するようにします。デバッグモードでは、常に有効にされます。"
 
 # 95ec27cb25d040cc9126bb7151ae1f0b
 #: ../../config.rst:330
 msgid "The mimetype of ``jsonify`` responses."
-msgstr ""
+msgstr "``jsonify``\ レスポンスのmimetypeです。"
 
 # 67fcb2e122284c2595ac21b67441aef1
 #: ../../config.rst:332
 msgid "Default: ``'application/json'``"
-msgstr ""
+msgstr "標準設定: ``'application/json'``"
 
 # 2669eb1f9a5c4e56a129f48cddaef173
 #: ../../config.rst:336
@@ -558,6 +657,8 @@ msgid ""
 "Reload templates when they are changed. If not set, it will be enabled in"
 " debug mode."
 msgstr ""
+"テンプレートが変更されたとき、再読み込みします。もし未設定の場合、デバッグモード"
+"では有効になります。"
 
 # 2465d24ed8b1459a8a25bfb16bca2608
 #: ../../config.rst:343
@@ -566,6 +667,9 @@ msgid ""
 "can be useful to figure out why a template was not loaded or the wrong "
 "file appears to be loaded."
 msgstr ""
+"テンプレートファイルがどのように読み込まれたかトレースするデバッグ情報を"
+"ログします。テンプレートが読み込まれなかった、もしくは誤ったファイルが"
+"読み込まれて表示されたのが何故かを調べるときに役立つ場合があります。"
 
 # aeff790621904322959d38d881ed38fb
 #: ../../config.rst:351
@@ -574,6 +678,9 @@ msgid ""
 "``4093``. Larger cookies may be silently ignored by browsers. Set to "
 "``0`` to disable the warning."
 msgstr ""
+"クッキーのヘッダがこのバイト数よりも大きい場合に警告します。標準設定は\ "
+"``4093``\ です。大きなクッキーはブラウザにより何も反応せずに無視される"
+"場合があります。この警告を無効にするには\ ``0``\ に設定します。"
 
 # b6cfb61d1cf647f49ed14494b13e71da
 #: ../../config.rst:383
@@ -581,11 +688,14 @@ msgid ""
 "``LOGGER_NAME`` and ``LOGGER_HANDLER_POLICY`` were removed. See "
 ":doc:`/logging` for information about configuration."
 msgstr ""
+"``LOGGER_NAME``\ と\ ``LOGGER_HANDLER_POLICY``\ は削除されました。"
+"（ログの）設定に関する情報は\ :doc:`/logging`\ を確認してください。"
 
 # 97b6f193b1ca44d0b19a6341ecec16d8
 #: ../../config.rst:387
 msgid "Added :data:`ENV` to reflect the :envvar:`FLASK_ENV` environment variable."
 msgstr ""
+":envvar:`FLASK_ENV`\ 環境変数を反映するため\ :data:`ENV`\ が追加されました。"
 
 # eb8a2b57adaf46eab06ffa2473d66cdb
 #: ../../config.rst:390
@@ -593,11 +703,14 @@ msgid ""
 "Added :data:`SESSION_COOKIE_SAMESITE` to control the session cookie's "
 "``SameSite`` option."
 msgstr ""
+"セッションのクッキーの\ ``SameSite``\ オプションを制御するために\ "
+":data:`SESSION_COOKIE_SAMESITE`\ が追加されました。"
 
 # 06ec17339766474681fcaaadfa5ebe7d
 #: ../../config.rst:393
 msgid "Added :data:`MAX_COOKIE_SIZE` to control a warning from Werkzeug."
 msgstr ""
+"Werkzeugからの警告を制御するために\ :data:`MAX_COOKIE_SIZE`\ が追加されました。"
 
 # 7d1b664f411047ab8cd471c9ce7552a7
 #: ../../config.rst:379
@@ -647,7 +760,7 @@ msgstr ""
 # 0c66c64a85184544bb6e1628173d025b
 #: ../../config.rst:397
 msgid "Configuring from Files"
-msgstr ""
+msgstr "ファイルからの設定読み取り"
 
 # c808853796cf4a1282fec93b01a9c8c5
 #: ../../config.rst:399
@@ -658,11 +771,16 @@ msgid ""
 "handling tools (:ref:`distribute-deployment`) and finally modifying the "
 "configuration file afterwards."
 msgstr ""
+"ファイルを分けて、理想的には実際のアプリケーションパッケージの外側にある"
+"ファイルで、そのファイルの中に設定を格納できる場合、設定をより便利に行え"
+"ます。これは、様々なパッケージ処理ツール（\ :ref:`distribute-deployment`\ ）"
+"を通して自分のアプリケーションをパッケージ化および配布し、最終的に設定"
+"ファイルを後から変更できるようにします。"
 
 # 07057a6b0806498cb5373e672c8db0ea
 #: ../../config.rst:405
 msgid "So a common pattern is this::"
-msgstr ""
+msgstr "したがって、よくあるパターンは以下のとおりです::"
 
 # 9960357878ce48e8aff80d97d04345e9
 #: ../../config.rst:411
@@ -674,11 +792,15 @@ msgid ""
 "Linux or OS X with the export command in the shell before starting the "
 "server::"
 msgstr ""
+"最初に\ `yourapplication.default_settings`\ モジュールから設定を読み込み、"
+"それから\ :envvar:`YOURAPPLICATION_SETTINGS`\ 環境変数が指し示すファイル"
+"の内容を使って値を上書きします。この環境変数はLinuxまたはOS Xでは、サーバを"
+"を開始する前にシェルの中でexportコマンドで設定できます::"
 
 # 3677c27aacac45ce82578770a0ec124f
 #: ../../config.rst:423
 msgid "On Windows systems use the `set` builtin instead::"
-msgstr ""
+msgstr "Windowsシステムでは代わりに組込みの\ `set`\ を使用します::"
 
 # 40d0a4083b6e42588805b0da3f765cee
 #: ../../config.rst:427
@@ -687,11 +809,14 @@ msgid ""
 "in uppercase are actually stored in the config object later on.  So make "
 "sure to use uppercase letters for your config keys."
 msgstr ""
+"設定ファイルそれ自身は実際にはPythonファイルです。ただ大文字の（変数名の）"
+"中の値は、実際にはconfigオブジェクトの中へ後で格納されます。従って、自分の"
+"設定のキーでは、確実に大文字を使用するようにしてください。"
 
 # 419c23b3b79f4d889c203028e6f13b0e
 #: ../../config.rst:431
 msgid "Here is an example of a configuration file::"
-msgstr ""
+msgstr "以下は設定ファイルの例です::"
 
 # 91050a38de414a699f64ea1c57ff843f
 #: ../../config.rst:437
@@ -702,11 +827,15 @@ msgid ""
 "files.  For a complete reference, read the :class:`~flask.Config` "
 "object's documentation."
 msgstr ""
+"設定の読み込みは確実に早い段階で行ってください、そうすればFlask拡張が開始時に"
+"設定へアクセスできるようになります。同じように個別のファイルから（設定を）"
+"読み込む手段がconfigオブジェクトにはあります。完全なリファレンスについては、\ "
+":class:`~flask.Config`\ オブジェクトのドキュメントを読んでください。"
 
 # 4bab57b47a22476c8440a390d01fb28d
 #: ../../config.rst:445
 msgid "Configuring from Environment Variables"
-msgstr ""
+msgstr "環境変数からの設定の読み取り"
 
 # 6cb98fa1318c49ff9eba483cdb0a25e4
 #: ../../config.rst:447
