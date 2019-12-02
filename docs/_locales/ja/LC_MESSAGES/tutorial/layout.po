@@ -45,8 +45,8 @@ msgid ""
 "relative to this directory."
 msgstr ""
 "このチュートリアルでは、ここからは\ ``flask-tutorial``\ ディレクトリから"
-"作業していると想定します。コード記述部分上部のファイル名は、それぞれこの"
-"ディレクトリから相対的なものになります。"
+"作業していると想定します。コード記述部分の上にあるファイル名は、それぞれ"
+"flask-tutorialディレクトリから相対的なものになります。"
 
 # 6ddf585b3482438499f9f5908df4143d
 #: ../../tutorial/layout.rst:20
@@ -67,9 +67,9 @@ msgid ""
 " will do this as well."
 msgstr ""
 "しかしながら、プロジェクトが大きくなるにつれて、すべてのコードを一つの"
-"ファイルに保ち続けることは手に余るようになります。Pythonプロジェクトでは"
-"必要なときにimportできる複数のmoduleへコードを編成するために\ *packages*\ "
-"を使用し、このチュートリアルでも同様にします。"
+"ファイルに保ち続けることは手に余るようになります。Pythonのプロジェクトでは"
+"必要なときにimportできる複数のmoduleへコードを編成するために\ *package*\ "
+"を使用し、このチュートリアルでも同様に使用します。"
 
 # 252c68e742c5415fbfdf394a5cbdfe27
 #: ../../tutorial/layout.rst:39
@@ -98,8 +98,8 @@ msgstr ""
 #: ../../tutorial/layout.rst:46
 msgid "Installation files telling Python how to install your project."
 msgstr ""
-"Installationファイルは、projectをどのようにインストールするかをPythonへ"
-"伝えます。"
+"インストール関連のファイル（訳注: ここではsetup.pyとMANIFEST.inのこと）は、"
+"projectをどのようにインストールするかをPythonへ伝えます。"
 
 # 4d7ec2283a624e5696db98537ff0f4f5
 #: ../../tutorial/layout.rst:47
