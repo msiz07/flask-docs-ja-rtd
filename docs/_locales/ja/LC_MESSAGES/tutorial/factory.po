@@ -43,8 +43,8 @@ msgid ""
 "project grows."
 msgstr ""
 "最も直観的なFlaskアプリケーションの作成方法は、コードの最上部に直接グローバルに\ "
-":class:`Flask`\ インスタンスを作成することで、前のページでの「Hello, World!」の"
-"例のようなやり方です。これは場合によってはシンプルで便利ですが、プロジェクトが"
+":class:`Flask`\ インスタンスを作成することで、前ページの例「Hello, World!」の"
+"ようなやり方です。これは場合によってはシンプルで便利ですが、プロジェクトが"
 "成長すると何かしら扱いにくい問題を引き起こす可能性があります。"
 
 # 0a76c7e9ba3b46a899c6a4ad0181bce2
@@ -59,7 +59,7 @@ msgstr ""
 ":class:`Flask`\ インスタンスをグローバルに作成する代わりに、関数の内側で"
 "作成するようにします。この関数は\ *アプリケーション製造工場（application factory）*\ "
 "として知られています。設定、登録、用意などアプリケーションが必要とするあらゆる"
-"ことは、この関数の内側で起こり、それからアプリケーションが返されます。"
+"ことは、この関数の内側で起こり、それからアプリケーションが（関数から）返されます。"
 
 # 645f1b51129c44bda59a2be9c4300101
 #: ../../tutorial/factory.rst:24
@@ -76,8 +76,8 @@ msgid ""
 msgstr ""
 "それではコーディングを開始するときです！\ ``flaskr``\ ディレクトリを作成し、"
 "\ ``__init__.py``\ ファイルを追加します。この\ ``__init__.py``\ は2つの"
-"務めを担います: それはapplication factoryを含み、Pythonへ\ ``flaskr``\ "
-"ディレクトリをpackageとして扱うように伝えます。"
+"務めを担います: それはapplication factoryを含むことと、Pythonへ\ ``flaskr``\ "
+"ディレクトリをpackageとして扱うように伝えることです。"
 
 # 647bab244910471eb49833a64c80bef4
 #: ../../tutorial/factory.rst:35
@@ -91,7 +91,8 @@ msgid ""
 "later in the tutorial, but it already does a lot."
 msgstr ""
 "``create_app``\ はapplication factoryの関数です。このチュートリアルで"
-"後程この関数に追加していきますが、既に多くのことをなしています。"
+"後程この関数に追加していきますが、既に多くのことを（create_appは）"
+"果しています。"
 
 # 8d73d94c30c54307ac3ec992efd5498f
 #: ../../tutorial/factory.rst:74
@@ -109,9 +110,9 @@ msgid ""
 "know where it's located to set up some paths, and ``__name__`` is a "
 "convenient way to tell it that."
 msgstr ""
-"``__name__``\ は、この時点でのPythonのmodule名です。appは、pathを用意する"
-"ために、どこにappが位置しているか知る必要があり、\ ``__name__``\ はそれを"
-"伝えるための便利なやり方です。"
+"``__name__``\ は、この時点でのPythonのmodule名です。appは、いくつかpathを"
+"用意するために、どこにappが位置しているか知る必要があり、\ ``__name__``\ "
+"はそれを伝えるための便利なやり方です。"
 
 # ae57d7591db14cb4b3690303c4d64a37
 #: ../../tutorial/factory.rst:81
@@ -184,8 +185,8 @@ msgid ""
 "values you have configured."
 msgstr ""
 "``test_config``\ もfactoryに渡すことが可能で、インスタンス設定の代わりに"
-"使用されます。これは設定したあらゆる開発用の値と独立して依存できるように"
-"このチュートリアルの後の方で作成するテストのときに当てはまります。"
+"使用されます。これは、このチュートリアルの後の方で書くテストで、開発時に"
+"設定してきたあらゆる値から独立して設定できるようにするためです。"
 
 # 5e41f6754ce64bb684e988362f8aa07f
 #: ../../tutorial/factory.rst:112
@@ -210,8 +211,8 @@ msgid ""
 msgstr ""
 ":meth:`@app.route() <Flask.route>`\ はチュートリアルの残りの部分へ乗り込む"
 "前に、アプリケーションが機能していることを確かめるための簡易な経路を作成"
-"します。それはURL\ ``/hello``\ と、この場合は文字列\ ``'Hello, World!'``\ を"
-"応答に返す関数との間を、接続します。"
+"します。その経路はURLの\ ``/hello``\ と、この場合は文字列\ ``'Hello, "
+"World!'``\ というレスポンスを返す関数とを、結び付けます。"
 
 # 470dfecce5fb4dc689aafb0537106df3
 #: ../../tutorial/factory.rst:126
