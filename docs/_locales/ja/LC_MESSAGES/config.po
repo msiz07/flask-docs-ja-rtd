@@ -952,7 +952,7 @@ msgstr ""
 # ceb7f7f64875496aabac2f0d2c48e134
 #: ../../config.rst:510
 msgid "Development / Production"
-msgstr ""
+msgstr "開発環境 / 本番環境"
 
 # c5b164650ed04c54ae5d3c7fe9e33561
 #: ../../config.rst:512
@@ -964,6 +964,10 @@ msgid ""
 "a separate configuration that overrides the values as necessary as "
 "mentioned in the example above::"
 msgstr ""
+"殆どのアプリケーションでは2つ以上の設定を必要とします。少なくとも、本番環境の"
+"サーバと開発中に使うサーバとの設定は分けるべきです。これを扱う最も簡単なやり方"
+"は、バージョン管理の一部にし、常に読み込まれる標準設定と、上記の例で言及した"
+"ように必要なだけ値を上書きする分かれた設定を使用することです。"
 
 # d860cba516644adebbb474a5e8379867
 #: ../../config.rst:523
@@ -973,6 +977,10 @@ msgid ""
 "However there are alternative ways as well.  For example you could use "
 "imports or subclassing."
 msgstr ""
+"それから、分かれた\ :file:`config.py`\ ファイルを追加し、\ "
+"``YOURAPPLICATION_SETTINGS=/path/to/config.py``\ をexportする必要がある"
+"だけで、おしまいです。ただし、別のやり方も同様にあります。例えば、importや"
+"サブクラス作成も使えます。"
 
 # 5baeeb1f916143d2a42b87a92adc4fab
 #: ../../config.rst:528
@@ -984,6 +992,12 @@ msgid ""
 "``YOURAPPLICATION_MODE`` and set that to `production`, `development` etc "
 "and import different hard-coded files based on that."
 msgstr ""
+"Django界隈で人気があるのは、\ ``from yourapplication.default_settings import *``\ "
+"をファイルの最初に置いておくことで設定ファイルの中で明示的にimportし、それから"
+"手作業で変更を上書きしていくことです。\ ``YOURAPPLICATION_MODE``\ のような"
+"環境変数を調べることも可能で、それを\ `production`, `development`\ などに"
+"設定しておき、その値に基づいて違うようにハードコードされたファイルをimport"
+"します。"
 
 # 64b4408faf2642f182fc390bc60d662e
 #: ../../config.rst:535
@@ -991,6 +1005,7 @@ msgid ""
 "An interesting pattern is also to use classes and inheritance for "
 "configuration::"
 msgstr ""
+"設定のためにクラスを使用し継承することも、興味深いパターンのひとつです::"
 
 # c35aa6885e464a11ada5896a199c8ea5
 #: ../../config.rst:552
@@ -998,6 +1013,8 @@ msgid ""
 "To enable such a config you just have to call into "
 ":meth:`~flask.Config.from_object`::"
 msgstr ""
+"このような設定を有効にするために必要なのは、ただ\ "
+":meth:`~flask.Config.from_object`\ を呼び出すだけです。"
 
 # 8d229d75b36849aa97e815363c88b717
 #: ../../config.rst:557
@@ -1007,6 +1024,11 @@ msgid ""
 "property, then you must do so before calling "
 ":meth:`~flask.Config.from_object`::"
 msgstr ""
+":meth:`~flask.Config.from_object`\ クラスオブジェクトをインスタンス化"
+"しないことに注目してください。もしも、propertyへアクセスするためにクラスを"
+"インスタンス化する必要があるときは、\ :meth:`~flask.Config.from_object`\ を"
+"呼び出す前に実施する必要があります（訳注: 以下の例でfrom_objectの引数が"
+"「ProductionConfig()」と初期化しているところが該当）::"
 
 # 2adb308eaa8d494d82be20ab879abb1f
 #: ../../config.rst:569
@@ -1014,6 +1036,8 @@ msgid ""
 "Instantiating the configuration object allows you to use ``@property`` in"
 " your configuration classes::"
 msgstr ""
+"設定オブジェクトをインスタンス化すると、設定クラスの中で\ ``@property``\ "
+"が使えるようになります::"
 
 # ea50a71e81d94327b9ba89c40048e2d5
 #: ../../config.rst:595
@@ -1021,6 +1045,8 @@ msgid ""
 "There are many different ways and it's up to you how you want to manage "
 "your configuration files.  However here a list of good recommendations:"
 msgstr ""
+"他にも多くの違うやり方があり、設定ファイルをどのように管理したいかは"
+"あなたしだいです。ただし、良いと推奨されることのリストは以下のとおりです:"
 
 # 84f5cb5bc09c4506a2f5c105612935f7
 #: ../../config.rst:598
@@ -1029,6 +1055,9 @@ msgid ""
 "config with this default configuration or import it in your own "
 "configuration files before overriding values."
 msgstr ""
+"標準設定はバージョン管理し続けます。この標準設定の内容を（アプリケーションの）"
+"設定へ移すか、上書きする前に自分の設定ファイルへimportします。"
+
 
 # 13768e090b2d4edd8f4dee75a4789cea
 #: ../../config.rst:601
@@ -1041,6 +1070,14 @@ msgid ""
 "for sourcing that activates a virtualenv and exports the development "
 "configuration for you."
 msgstr ""
+"環境変数を使用して設定を交換します。これはPythonインタプリタの外側から行う"
+"ことができ、コードに全く触る必要なく異なる設定の間を素早く容易に交換できる"
+"ため、開発とデプロイ（訳注: 本番環境への移行のような意味合い）を非常に容易"
+"にできます。もしも異なるプロジェクトで作業することがよくある場合、自分用に"
+"virtualenvをactivateし開発設定をexportするためにsourceする（訳注: Python"
+"では「\ ``source <仮想環境の場所>/bin/activate``\ 」を実行すると仮想環境用の"
+"設定をexportして利用できるようになるvirtualenvという仕組みがあります）自分"
+"独自のスクリプトさえ作成できます。"
 
 # ad98eaa6ce944993aad0eba823276cdf
 #: ../../config.rst:608
@@ -1049,11 +1086,14 @@ msgid ""
 "separately to the production server(s).  For some details about how to do"
 " that, head over to the :ref:`fabric-deployment` pattern."
 msgstr ""
+"本番環境へコードと設定を別々に本番環境のサーバへpushするために、\ "
+"`fabric`_\ のようなツールを本番環境で使用します。どのように実施するかに"
+"ついての詳細は、\ :ref:`fabric-deployment`\ パターンを調べてください。"
 
 # 03ca02d2d8394da6bf2f0536404b1f67
 #: ../../config.rst:619
 msgid "Instance Folders"
-msgstr ""
+msgstr "インスタンスフォルダ"
 
 # ce02897abdd9459786e373ce75a97b8c
 #: ../../config.rst:623
@@ -1065,6 +1105,12 @@ msgid ""
 "this only works well if applications are not packages in which case the "
 "root path refers to the contents of the package."
 msgstr ""
+"Flask 0.8ではインスタンスフォルダを導入しました。Flaskは長い間、直接"
+"アプリケーションのフォルダからの相対パスを参照可能にしていました"
+"（\ :attr:`Flask.root_path`\ をとおして）。これは、多くの開発者が"
+"アプリケーションのそばに格納した設定を読み込むやり方でした。しかし残念"
+"ながら、root pathがパッケージのコンテンツを参照するパッケージ化が、"
+"アプリケーションにされていないときだけ、これはうまく働くものです。"
 
 # 7e9d64e926084703ae49766dea8cff34
 #: ../../config.rst:630
@@ -1075,6 +1121,11 @@ msgid ""
 "version control and be deployment specific.  It's the perfect place to "
 "drop things that either change at runtime or configuration files."
 msgstr ""
+"Flask 0.8では新しい属性が導入されています: :attr:`Flask.instance_path`\ "
+"です。それは「インスタンスフォルダ（instance folder）」と呼ばれる新しい"
+"コンセプトを参照します。インスタンスフォルダはバージョン管理対象にはせず、"
+"デプロイ固有のものであるように設計されています。それは実行時に変更する"
+"ものか設定ファイルを入れておくには完璧な場所です。"
 
 # 30ee0433db8f453aa364d9177623e3f1
 #: ../../config.rst:636
@@ -1084,11 +1135,16 @@ msgid ""
 "instance folder.  For explicit configuration use the `instance_path` "
 "parameter::"
 msgstr ""
+"Flaskアプリケーションを作成するときにインスタンスフォルダのパスを明示的に"
+"提供することも、Flaskがインスタンスフォルダを自動的に見つけ出すようにする"
+"こともできます。明示的に設定するには\ `instance_path`\ パラメータを使用"
+"してください::"
 
 # 39d9675d46f34da3a979584b751e6d99
 #: ../../config.rst:643
 msgid "Please keep in mind that this path *must* be absolute when provided."
 msgstr ""
+"パスを提供するときは絶対パスにする\ *必要がある*\ ことを覚えておいてください。"
 
 # 39f569c593ca4dc584dbf04747324d3d
 #: ../../config.rst:645
@@ -1096,21 +1152,23 @@ msgid ""
 "If the `instance_path` parameter is not provided the following default "
 "locations are used:"
 msgstr ""
+"`instance_path`\ パラメータが提供されていない場合、以下の初期設定の場所が"
+"使用されます:"
 
 # dfe31c1c94c844fd985b1d829d288141
 #: ../../config.rst:648
 msgid "Uninstalled module::"
-msgstr ""
+msgstr "インストールされていないmodule::"
 
 # 83f30792010c4f08b5b4b57ac2f82b3e
 #: ../../config.rst:653
 msgid "Uninstalled package::"
-msgstr ""
+msgstr "インストールされていないpackage::"
 
 # 83d7b76a8fd34397ad66ccf015dccbc2
 #: ../../config.rst:659
 msgid "Installed module or package::"
-msgstr ""
+msgstr "インストールされているmoduleまたはpackage::"
 
 # cdc5ad12afd74b7fb96b54d9c3edb358
 #: ../../config.rst:664
@@ -1119,6 +1177,9 @@ msgid ""
 "``/usr`` or the path to your virtualenv.  You can print the value of "
 "``sys.prefix`` to see what the prefix is set to."
 msgstr ""
+"``$PREFIX``\ はPythonがインストールされた場所です。これは\ ``/usr``\ "
+"またはvirtualenvのパスになることがあり得ます。そのPREFIXに何が設定"
+"されたか確認するために、\ ``sys.prefix``\ の値を表示することができます。"
 
 # cfac90b482cd46299b726b20bb1d491a
 #: ../../config.rst:668
@@ -1130,6 +1191,12 @@ msgid ""
 "application root” (the default) to “relative to instance folder” via the "
 "`instance_relative_config` switch to the application constructor::"
 msgstr ""
+"設定オブジェクトは相対ファイル名からの設定ファイルの読み込みを提供する"
+"ため、そうしたいときは、インスタンスパスからの相対ファイル名を介して"
+"読み込むように変更することが可能です。設定ファイル中の相対パスの振る舞いは"
+"「application rootに対して相対的」と（標準設定の）「インスタンスフォルダに"
+"対して相対的」との間を切り替えることが、アプリケーションのコンストラクタで\ "
+"`instance_relative_config`\ スイッチをとおして可能です。"
 
 # fb70a04d5762406880e7c560d612057a
 #: ../../config.rst:677
@@ -1138,6 +1205,9 @@ msgid ""
 "from a module and then override the config from a file in the instance "
 "folder if it exists::"
 msgstr ""
+"moduleから設定を先読みして、それから、インスタンスフォルダがあれば、"
+"インスタンスフォルダにあるファイルの設定で上書きするようにFlaskを設定"
+"するやり方の全ての例がこちらです::"
 
 # e34911ce6a084e8689600ddd326fd343
 #: ../../config.rst:685
@@ -1146,9 +1216,13 @@ msgid ""
 ":attr:`Flask.instance_path`.  Flask also provides a shortcut to open a "
 "file from the instance folder with :meth:`Flask.open_instance_resource`."
 msgstr ""
+"インスタンスフォルダへのパスは\ :attr:`Flask.instance_path`\ をとおして"
+"見つけることができます。Flaskはインスタンスフォルダにあるファイルを開く"
+"ショートカットも、\ :meth:`Flask.open_instance_resource`\ によって提供"
+"します。"
 
 # 29429f5061b949aa9be6d7ced1bef153
 #: ../../config.rst:689
 msgid "Example usage for both::"
-msgstr ""
+msgstr "両者の使用例::"
 
