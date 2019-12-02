@@ -829,7 +829,7 @@ msgid ""
 msgstr ""
 "設定の読み込みは確実に早い段階で行ってください、そうすればFlask拡張が開始時に"
 "設定へアクセスできるようになります。同じように個別のファイルから（設定を）"
-"読み込む手段がconfigオブジェクトにはあります。完全なリファレンスについては、\ "
+"読み込む他の手段がconfigオブジェクトにはあります。完全なリファレンスについては、\ "
 ":class:`~flask.Config`\ オブジェクトのドキュメントを読んでください。"
 
 # 4bab57b47a22476c8440a390d01fb28d
@@ -844,6 +844,9 @@ msgid ""
 "variables, you may find it useful (or necessary) to control your "
 "configuration values directly from the environment."
 msgstr ""
+"環境変数を使用して設定ファイルを指し示すことに加えて、環境（変数）"
+"から直接設定値を制御することが便利（もしくは必要）なことがあるかも"
+"しれません。"
 
 # e1d56fd244174ff79b7631320e34535c
 #: ../../config.rst:451
@@ -851,11 +854,13 @@ msgid ""
 "Environment variables can be set on Linux or OS X with the export command"
 " in the shell before starting the server::"
 msgstr ""
+"環境変数はLinuxまたはOS Xでは、サーバを開始する前にシェルの中でexport"
+"コマンドで設定できます::"
 
 # 1f44852646314bbdb716b576656e9ddd
 #: ../../config.rst:459
 msgid "On Windows systems use the ``set`` builtin instead::"
-msgstr ""
+msgstr "Windowsシステムでは代わりに組込みの\ `set`\ を使用します::"
 
 # fa87cc3074e94cd7a066b4e8494ca97c
 #: ../../config.rst:463
@@ -864,6 +869,9 @@ msgid ""
 "remember that environment variables are strings -- they are not "
 "automatically deserialized into Python types."
 msgstr ""
+"このアプローチは直感的に使えますが、環境変数は文字列（string）で"
+"あることを覚えておくことが重要です -- それらはPythonの型へ自動的には"
+"変換（deserialize）されません。"
 
 # ec2913f71be84181966809c55d5e1773
 #: ../../config.rst:467
@@ -871,6 +879,7 @@ msgid ""
 "Here is an example of a configuration file that uses environment "
 "variables::"
 msgstr ""
+"以下の例では、設定ファイルで環境変数を使用しています::"
 
 # 4a5e88a2fa914450aafb620bfca0fcbf
 #: ../../config.rst:480
@@ -879,6 +888,9 @@ msgid ""
 "boolean ``True`` value in Python, which requires care if an environment "
 "explicitly sets values intended to be ``False``."
 msgstr ""
+"Pythonでは、空の文字（empty string）以外のあらゆる値は、boolean型では\ "
+"``True``\ に解釈され、もし環境（変数）では\ ``False``\ と明示する値を"
+"設定するときには配慮が必要になることに注意してください。"
 
 # 0a0c6a1fbb504e648951815196f5d867
 #: ../../config.rst:484
@@ -889,11 +901,15 @@ msgid ""
 "files.  For a complete reference, read the :class:`~flask.Config` class "
 "documentation."
 msgstr ""
+"設定の読み込みは確実に早い段階で行ってください、そうすればFlask拡張が開始時に"
+"設定へアクセスできるようになります。同じように個別のファイルから（設定を）"
+"読み込む他の手段がconfigオブジェクトにはあります。完全なリファレンスについては、\ "
+":class:`~flask.Config`\ クラスのドキュメントを読んでください。"
 
 # 3bdf591eb6cc4be0ab25943e44b0ed50
 #: ../../config.rst:491
 msgid "Configuration Best Practices"
-msgstr ""
+msgstr "設定のベストプラクティス"
 
 # 96ba8fb4980e485bafe81c75d8afecc6
 #: ../../config.rst:493
@@ -904,6 +920,10 @@ msgid ""
 "general, but there are a couple of things you can keep in mind to improve"
 " that experience:"
 msgstr ""
+"前の方で示したやり方の負の側面は、テストの実施が少々難しくなることです。"
+"この問題に対する100%のひとつだけの解決方法というのは一般的にありませんが、"
+"テスト時の経験を改善するために心に留めておいた方がよいことがいくつかあり"
+"ます:"
 
 # 5e357f95d94a4123adf14c70c65b3310
 #: ../../config.rst:498
@@ -913,6 +933,10 @@ msgid ""
 " configurations attached which makes unit testing a lot easier.  You can "
 "use this to pass in configuration as needed."
 msgstr ""
+"関数の中で自分のアプリケーションを作成し、そのアプリケーションにblueprint"
+"を登録します。このやり方では、ユニットテストをより容易にする異なる設定を"
+"取り付けられた、異なる複数のインスタンスを自分のアプリケーションで作成する"
+"ことができます。必要な設定を投入するために、その関数を使用できます。"
 
 # c4d12427d1084f6ca86d3c7b404f52d6
 #: ../../config.rst:503
@@ -921,6 +945,9 @@ msgid ""
 "limit yourself to request-only accesses to the configuration you can "
 "reconfigure the object later on as needed."
 msgstr ""
+"import時に設定情報が必要になるコードは書かないようにします。もしも"
+"リクエスト時だけ設定情報へアクセスするよう自分自信を制限すれば、必要に"
+"応じて後からオブジェクトの再設定が可能です。"
 
 # ceb7f7f64875496aabac2f0d2c48e134
 #: ../../config.rst:510
