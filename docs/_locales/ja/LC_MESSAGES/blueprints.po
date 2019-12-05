@@ -20,7 +20,7 @@ msgstr ""
 # c02d9e638a5143e8a4b1afc0b7669739
 #: ../../blueprints.rst:4
 msgid "Modular Applications with Blueprints"
-msgstr ""
+msgstr "Blueprintを使ったアプリケーションのモジュール化"
 
 # eecf351890c94c81acf3d6a35d35be1e
 #: ../../blueprints.rst:10
@@ -34,16 +34,24 @@ msgid ""
 "  Rather it is a *blueprint* of how to construct or extend an "
 "application."
 msgstr ""
+"Flaskは\ *blueprints（青写真）*\ という考え方を使ってアプリケーションの"
+"部品を作成し、アプリケーション内またはアプリケーションを横断した共通の"
+"パターンをサポートします。blueprintsは大きなアプリケーションの動きを"
+"非常にシンプルにし、Flask拡張がアプリケーションへ操作を登録するための"
+"中心手段を提供します。\ :class:`Blueprint`\ オブジェクトは\ :class:`Flask`\ "
+"と似た似た働きをしますが、実際にはアプリケーションではありません。むしろ、"
+"それはアプリケーションをどのように建設もしくは拡張するかの\ "
+"*blueprint（青写真）*\ です。"
 
 # bf52b9ba56754ff59c784c051b881571
 #: ../../blueprints.rst:19
 msgid "Why Blueprints?"
-msgstr ""
+msgstr "なぜBlueprintsか？"
 
 # 3cddc2e513394ce0b0c6189082feefcf
 #: ../../blueprints.rst:21
 msgid "Blueprints in Flask are intended for these cases:"
-msgstr ""
+msgstr "Flaskのblueprintは以下のような場面を意図しています:"
 
 # fdd7b6dd2d3649eb9b3a5bb52c1e3593
 #: ../../blueprints.rst:23
@@ -52,6 +60,10 @@ msgid ""
 " applications; a project could instantiate an application object, "
 "initialize several extensions, and register a collection of blueprints."
 msgstr ""
+"アプリケーションをblueprintのセットに分解します。これは大き目な"
+"アプリケーションにとって理想的です; プロジェクトはアプリケーションの"
+"オブジェクトをインスタンス化でき、いくつかのFlask拡張を初期化でき、"
+"そしてblueprintの集合を登録できます。"
 
 # 37abeede2d644ccf9838e3051325f931
 #: ../../blueprints.rst:26
@@ -60,6 +72,10 @@ msgid ""
 "Parameters in the URL prefix/subdomain become common view arguments (with"
 " defaults) across all view functions in the blueprint."
 msgstr ""
+"URLのプレフィックスおよび／またはサブドメインのアプリケーションにblueprint"
+"を登録します。URLのプレフィックス／サブドメインのパラメータは、（標準設定"
+"では）そのblueprint内のすべてのview関数をまたいだviewへの共通の引数になり"
+"ます。"
 
 # 051a0cc893024972a1c4b14243c0d0c1
 #: ../../blueprints.rst:29
@@ -67,6 +83,7 @@ msgid ""
 "Register a blueprint multiple times on an application with different URL "
 "rules."
 msgstr ""
+"違うURLルールを使ってアプリケーションへblueprintを複数回登録します。"
 
 # 83bdabb865b341b7afcda1b72c1f3fe5
 #: ../../blueprints.rst:31
@@ -75,6 +92,10 @@ msgid ""
 "through blueprints.  A blueprint does not have to implement applications "
 "or view functions."
 msgstr ""
+"テンプレートのfilter（訳注: Jinjaテンプレートエンジンの機能のひとつ）、"
+"静的ファイル、テンプレート、その他のユーティリティを、blueprintを通して"
+"提供します。blueprintではアプリケーションやview関数の実装は必須では"
+"ありません。"
 
 # 3afb107944934a3dbc76ee361c410022
 #: ../../blueprints.rst:34
@@ -82,6 +103,8 @@ msgid ""
 "Register a blueprint on an application for any of these cases when "
 "initializing a Flask extension."
 msgstr ""
+"Flask拡張を初期化するとき、以上のいずれかの理由のために、アプリケーションへ"
+"blueprintを登録します。"
 
 # 97e0673d5c7c467d84a926ebcec38377
 #: ../../blueprints.rst:37
@@ -93,6 +116,12 @@ msgid ""
 "applications will have separate configs and will be managed at the WSGI "
 "layer."
 msgstr ""
+"Flaskのblueprintは実際にはアプリケーションではないので、取り外し可能"
+"（pluggable）なappではありません - それは、アプリケーションに登録可能な"
+"操作（operation）であり、複数回の登録すら可能です。なぜ複数の"
+"アプリケーションのオブジェクトを持たないのでしょうか？それをすることも"
+"可能です（\ :ref:`app-dispatch`\ を見てください）が、アプリケーションは"
+"分かれた設定を持ち、WSGIの階層で管理されます。"
 
 # 9aef2a46cb7242e884530b59f5291cf9
 #: ../../blueprints.rst:43
@@ -103,11 +132,16 @@ msgid ""
 "blueprint once an application was created without having to destroy the "
 "whole application object."
 msgstr ""
+"blueprintは代わりにFlaskのレベルでの分離を提供し、アプリケーションの"
+"設定は共有し、そして必要に応じて登録されることでアプリケーションの"
+"オブジェクトを変更できます。マイナス面は、一度アプリケーションが作成"
+"されると、アプリケーションのオブジェクト全体を破壊しない限りblueprintの"
+"登録を外せないことです。"
 
 # 563b209c89c742c08d4aa004952a94ac
 #: ../../blueprints.rst:50
 msgid "The Concept of Blueprints"
-msgstr ""
+msgstr "Blueprintのコンセプト"
 
 # 9b1f6e7b5f2c4689ab7e626a410fe84c
 #: ../../blueprints.rst:52
@@ -117,11 +151,15 @@ msgid ""
 " blueprints when dispatching requests and generating URLs from one "
 "endpoint to another."
 msgstr ""
+"blueprintの基本コンセプトは、アプリケーションに登録されたときに実行する"
+"操作を登録することです。Flaskは、リクエストを振り分けあるエンドポイント"
+"から別のエンドポイントへURLを生成するとき、view関数をblueprintに対応付け"
+"します。"
 
 # 0399b7b317454e7cb3dff793f577c4c4
 #: ../../blueprints.rst:58
 msgid "My First Blueprint"
-msgstr ""
+msgstr "最初のBlueprint"
 
 # 9a28a87831f04425acf0bd949e1e89e7
 #: ../../blueprints.rst:60
@@ -129,6 +167,9 @@ msgid ""
 "This is what a very basic blueprint looks like.  In this case we want to "
 "implement a blueprint that does simple rendering of static templates::"
 msgstr ""
+"以下は、とても基本的なblueprintがどのようになるかを示しています。以下の"
+"場合、静的なテンプレートを表示（rendering）するblueprintを実装しよう"
+"としています::"
 
 # 61eb5afcfc9b4c3d94d3ae687e06a80c
 #: ../../blueprints.rst:77
@@ -141,6 +182,12 @@ msgid ""
 "this case also ``simple_page``). The blueprint's name does not modify the"
 " URL, only the endpoint."
 msgstr ""
+"関数を\ ``@simple_page.route``\ デコレータを利用して結び付け（bind）する"
+"とき、blueprintは、後でアプリケーションに登録されるときに\ ``show``\ "
+"関数を登録するという意図を記録します。さらに、blueprintは関数のエンド"
+"ポイントの先頭へ、\ :class:`blueprint`\ クラスのコンストラクタで与えられた"
+"blueprintの名前（この例では\ ``simple_page``\ ）を付加します。blueprintの"
+"名前はURLは変更せず、エンドポイントだけを変更します。"
 
 # ffc1e55678bd4814bd121548ffc00441
 #: ../../blueprints.rst:86
