@@ -34,9 +34,9 @@ msgid ""
 "  Rather it is a *blueprint* of how to construct or extend an "
 "application."
 msgstr ""
-"Flaskは\ *blueprints（青写真）*\ という考え方を使ってアプリケーションの"
+"Flaskは\ *blueprint（青写真）*\ という考え方を使ってアプリケーションの"
 "部品を作成し、アプリケーション内またはアプリケーションを横断した共通の"
-"パターンをサポートします。blueprintsは大きなアプリケーションの動きを"
+"パターンをサポートします。blueprintは大きなアプリケーションの動きを"
 "非常にシンプルにし、Flask拡張がアプリケーションへ操作を登録するための"
 "中心手段を提供します。\ :class:`Blueprint`\ オブジェクトは\ :class:`Flask`\ "
 "と似た似た働きをしますが、実際にはアプリケーションではありません。むしろ、"
@@ -60,7 +60,7 @@ msgid ""
 " applications; a project could instantiate an application object, "
 "initialize several extensions, and register a collection of blueprints."
 msgstr ""
-"アプリケーションをblueprintのセットに分解します。これは大き目な"
+"アプリケーションをblueprintのセットに分解します。これは大きい"
 "アプリケーションにとって理想的です; プロジェクトはアプリケーションの"
 "オブジェクトをインスタンス化でき、いくつかのFlask拡張を初期化でき、"
 "そしてblueprintの集合を登録できます。"
@@ -73,9 +73,9 @@ msgid ""
 " defaults) across all view functions in the blueprint."
 msgstr ""
 "URLのプレフィックスおよび／またはサブドメインのアプリケーションにblueprint"
-"を登録します。URLのプレフィックス／サブドメインのパラメータは、（標準設定"
-"では）そのblueprint内のすべてのview関数をまたいだviewへの共通の引数になり"
-"ます。"
+"を登録します。そのURLのプレフィックス／サブドメインでのパラメータは、（標準"
+"設定では）そのblueprint内のすべてのview関数をまたいだviewへの共通の引数に"
+"なります。"
 
 # 051a0cc893024972a1c4b14243c0d0c1
 #: ../../blueprints.rst:29
@@ -152,8 +152,8 @@ msgid ""
 "endpoint to another."
 msgstr ""
 "blueprintの基本コンセプトは、アプリケーションに登録されたときに実行する"
-"操作を登録することです。Flaskは、リクエストを振り分けあるエンドポイント"
-"から別のエンドポイントへURLを生成するとき、view関数をblueprintに対応付け"
+"操作を記録することです。Flaskは、あるエンドポイントから別のエンドポイントへ"
+"リクエストを振り分けURLを生成するとき、view関数をblueprintに対応付け"
 "します。"
 
 # 0399b7b317454e7cb3dff793f577c4c4
@@ -192,12 +192,12 @@ msgstr ""
 # ffc1e55678bd4814bd121548ffc00441
 #: ../../blueprints.rst:86
 msgid "Registering Blueprints"
-msgstr ""
+msgstr "Blueprintの登録"
 
 # 2ef94b5d3632478b9e798c6bafc5a97c
 #: ../../blueprints.rst:88
 msgid "So how do you register that blueprint?  Like this::"
-msgstr ""
+msgstr "ではどうやってblueprintを登録するのでしょうか？以下のようにします::"
 
 # ce5a51efa2f2431aaf4054a5f8bbb98f
 #: ../../blueprints.rst:96
@@ -205,6 +205,8 @@ msgid ""
 "If you check the rules registered on the application, you will find "
 "these::"
 msgstr ""
+"もしアプリケーションに登録されたルールをチェックすれば、以下の内容を"
+"見つけ出せるでしょう::"
 
 # f8378ba5bb8c44f193f321a962fbc387
 #: ../../blueprints.rst:104
@@ -214,16 +216,20 @@ msgid ""
 "blueprint.  As you can see, they are also prefixed with the name of the "
 "blueprint and separated by a dot (``.``)."
 msgstr ""
+"最初のひとつは明らかにアプリケーション自身が静的ファイルに対してしたもの"
+"です。他の2つは、\ ``simple_page``\ のblueprintの\ `show`\ 関数に対する"
+"ものです。見て分かるように、それらはblueprint名を最初につけており(prefix）、"
+"ドット（\ ``.``\ ）で分けられています。"
 
 # 34b77ebad2f442b58da5e74fc810a5ff
 #: ../../blueprints.rst:109
 msgid "Blueprints however can also be mounted at different locations::"
-msgstr ""
+msgstr "しかしながら、blueprintは違う場所にも設置（mount）できます::"
 
 # 8a28d9c0f740424e9defd943eb9f7a7a
 #: ../../blueprints.rst:113
 msgid "And sure enough, these are the generated rules::"
-msgstr ""
+msgstr "そして思った通りに、生成されたルールは以下のとおりになります::"
 
 # addf4ebe2cc14bada4181edceb4a7e38
 #: ../../blueprints.rst:120
@@ -232,11 +238,14 @@ msgid ""
 "every blueprint might respond properly to that.  In fact it depends on "
 "how the blueprint is implemented if it can be mounted more than once."
 msgstr ""
+"この上にblueprintを2回以上登録できますが、全てのblueprintが適切には対応"
+"しないかもしれません。事実、blueprintが2回以上設置できるかは、blueprintが"
+"どのように実装されているかに依存します。"
 
 # 68dee2b6f73048e8a9356b1815cbd067
 #: ../../blueprints.rst:125
 msgid "Blueprint Resources"
-msgstr ""
+msgstr "Blueprintのリソース"
 
 # 7f88eb3d57df4e39a80d49a815ff7103
 #: ../../blueprints.rst:127
@@ -244,11 +253,13 @@ msgid ""
 "Blueprints can provide resources as well.  Sometimes you might want to "
 "introduce a blueprint only for the resources it provides."
 msgstr ""
+"blueprintはリソースの提供もできます。ときには、ただblueprintが提供する"
+"リソースのためだけに、blueprintを導入したいときがあるかもしれません。"
 
 # 0ac1391c888240b4a63de573a6291712
 #: ../../blueprints.rst:131
 msgid "Blueprint Resource Folder"
-msgstr ""
+msgstr "Blueprintのリソースフォルダ"
 
 # 34a2fa6db3fa4618bd4c3c9df4f8deef
 #: ../../blueprints.rst:133
@@ -257,6 +268,9 @@ msgid ""
 "in a folder.  While multiple blueprints can originate from the same "
 "folder, it does not have to be the case and it's usually not recommended."
 msgstr ""
+"通常のアプリケーションのように、blueprintはフォルダの中に含まれていると"
+"想定されています。複数のblueprintを同じフォルダから由来させることも可能"
+"ですが、そうする必要はなく、そしてそれは普通は推奨されません。"
 
 # 55d8c6d496f941b5a71d174a4a730353
 #: ../../blueprints.rst:137
@@ -269,6 +283,14 @@ msgid ""
 "contained in will be the resource folder.  You can access the "
 ":attr:`Blueprint.root_path` property to see what the resource folder is::"
 msgstr ""
+"そのフォルダは\ :class:`Blueprint`\ クラスへの2番目の引数から推測され、"
+"普通は\ `__name__`\ になります。この引数は、どの論理Pythonモジュール"
+"または論理Pythonパッケージがblueprintに対応するかを指定します。もし"
+"それがPythonパッケージを指していれば、そのパッケージ（それはファイル"
+"システム上はフォルダになります）はリソースフォルダになります。もしそれが"
+"モジュールであれば、そのモジュールを含んでいるパッケージがリソースフォルダ"
+"になります。リソースフォルダが何か確認するためには、\ :attr:"
+"`Blueprint.root_path`\ プロパティにアクセスできます::"
 
 # cccaa78f5a3f4514af34c3618f8cd307
 #: ../../blueprints.rst:148
@@ -276,11 +298,13 @@ msgid ""
 "To quickly open sources from this folder you can use the "
 ":meth:`~Blueprint.open_resource` function::"
 msgstr ""
+"このフォルダから手早くリソース（訳注: 原文は「sources」ですが、おそらく"
+"誤記）を開くには、\ :meth:`~Blueprint.open_resource`\ 関数を使えます::"
 
 # 15f0996f353649d29b53b2bdc0fe8135
 #: ../../blueprints.rst:155
 msgid "Static Files"
-msgstr ""
+msgstr "静的ファイル"
 
 # 7ba935a7cfb846d19a0a3e7fbd4bc811
 #: ../../blueprints.rst:157
@@ -289,6 +313,9 @@ msgid ""
 "to the folder on the filesystem with the ``static_folder`` argument. It "
 "is either an absolute path or relative to the blueprint's location::"
 msgstr ""
+"blueprintは、\ ``static_folder``\ 引数を使いファイルシステム上のフォルダ"
+"へのパスを提供することで、静的ファイルのフォルダを公開することができます。"
+"それは絶対パスか、blueprintの場所からの相対パスのどちらかです::"
 
 # b6896bcf7287455abe6b10bf0ad8390a
 #: ../../blueprints.rst:163
@@ -299,6 +326,12 @@ msgid ""
 "``url_prefix`` of the blueprint + ``/static``. If the blueprint has the "
 "prefix ``/admin``, the static URL will be ``/admin/static``."
 msgstr ""
+"標準設定では、パスの最も右側の部分が、web上で公開される場所になります。"
+"これは\ ``static_url_path``\ 引数で変えることができます。上の例では"
+"そのフォルダが\ ``static``\ で呼び出されて（call）いるため、これは"
+"blueprintの\ ``url_prefix``\ +\ ``/static``\ でアクセスできます。もしも"
+"blueprintのプレフィックスが\ ``/admin``\ であれば、staticのURLは\ "
+"``/admin/static``\ になります。"
 
 # d0284cb25b7f479d9bece1233a629189
 #: ../../blueprints.rst:169
@@ -307,6 +340,9 @@ msgid ""
 " it with :func:`url_for` like you would with the static folder of the "
 "application::"
 msgstr ""
+"このエンドポイントは\ ``blueprint_name.static``\ になります。そのURLは"
+"アプリケーションのstaticのフォルダと同様に、\ :func:`url_for`\ を使って"
+"生成可能です::"
 
 # 863cfc7ce48e4af68f6ad0ca9a1e4b66
 #: ../../blueprints.rst:175
@@ -318,11 +354,17 @@ msgid ""
 " are not searched if the file does not exist in the application static "
 "folder."
 msgstr ""
+"しかしながら、もしこのblueprintが\ ``url_prefix``\ を持たない場合は、この"
+"blueprintのstaticのフォルダはアクセス不可能になります。これは、この場合"
+"にはURLを\ ``/static``\ にしようとして、それに対してはアプリケーションの\ "
+"``/static``\ の経路（route）が優先されるためです。テンプレートのフォルダと"
+"異なり、blueprintのstaticのフォルダは、もしアプリケーションのstaticの"
+"フォルダが存在しない場合でも使用されません。"
 
 # 1f36255873f9436d89129fb88da370a3
 #: ../../blueprints.rst:183
 msgid "Templates"
-msgstr ""
+msgstr "テンプレート"
 
 # c224ffb038204d9991ece0591bfbbd62
 #: ../../blueprints.rst:185
@@ -331,6 +373,8 @@ msgid ""
 "providing the `template_folder` parameter to the :class:`Blueprint` "
 "constructor::"
 msgstr ""
+"もしBlueprintでテンプレートを公開したい場合は、\ :class:`Blueprint`\ の"
+"コンストラクタに\ `template_folder`\ 引数を提供すれば可能です::"
 
 # 48722da5f541493ca3e0caa8e0ee8b29
 #: ../../blueprints.rst:190
@@ -338,6 +382,8 @@ msgid ""
 "For static files, the path can be absolute or relative to the blueprint "
 "resource folder."
 msgstr ""
+"静的ファイルに対しては、パスは絶対パスか、blueprintのリソースフォルダ"
+"からの相対パスが可能です。"
 
 # d1549439b9194376871fd5f5e46f4d2b
 #: ../../blueprints.rst:193
@@ -351,6 +397,14 @@ msgid ""
 "blueprints provide the same relative template path the first blueprint "
 "registered takes precedence over the others."
 msgstr ""
+"テンプレートのフォルダは、テンプレートを探すパスに追加されますが、実際の"
+"アプリケーションのテンプレートのフォルダよりは優先度が低くなります。"
+"このやり方により、blueprintが提供したテンプレートは、実際のアプリケーション"
+"の中で容易に上書きが可能になります。これは、もしblueprintのテンプレートが"
+"事故で上書きされることを望まない場合には、他のblueprintや実際のアプリケー"
+"ションは、同じ相対パスを持たないようにしなければならないことを意味します。"
+"複数のblueprintが同じ相対パスのテンプレートを提供するときは、最初に登録"
+"されたblueprintが他よりも優先されます。"
 
 # b279110735b14c9ebef69137af25758d
 #: ../../blueprints.rst:202
@@ -363,6 +417,13 @@ msgid ""
 "template overridden by a template named ``index.html`` in the actual "
 "application template folder."
 msgstr ""
+"従って、もし\ ``yourapplication/admin``\ フォルダにblueprintがあって、\ "
+"``'admin/index.html'``\ テンプレートを表示しようとして、\ ``templates``\ "
+"を\ `template_folder`\ として提供していたときは、\ :file:"
+"`yourapplication/admin/templates/admin/index.html`\ のようなファイルを"
+"作成する必要があります。ここで追加の\ ``admin``\ フォルダがある理由は、"
+"このテンプレートが、実際のアプリケーションのテンプレートのフォルダにある\ "
+"``index.html``\ テンプレートによって上書きされることを防ぐためです。"
 
 # 81b51836a99e4abe8d9d1bf3ce10dba9
 #: ../../blueprints.rst:210
@@ -372,6 +433,9 @@ msgid ""
 " to this blueprint, the best idea is to lay out your templates like "
 "this::"
 msgstr ""
+"さらに繰り返します: もしも\ ``admin``\ というblueprintがあり、そのblueprint"
+"に固有の\ :file:`index.html`\ というテンプレートを表示したい場合は、最も"
+"良いアイデアは以下のようにテンプレートをレイアウトすることです::"
 
 # e248d5d0ef5d4e3d836a90955d6c18a6
 #: ../../blueprints.rst:222
@@ -383,11 +447,17 @@ msgid ""
 " print out the steps it goes through to locate templates on every "
 "``render_template`` call."
 msgstr ""
+"そして、テンプレートを表示したいときに、テンプレートを探すときの"
+"テンプレート名に\ :file:`admin/index.html`\ を使用します。もしも正しい"
+"テンプレートの読み込みに問題が生じたときは、設定値\ "
+"``EXPLAIN_TEMPLATE_LOADING``\ を有効にして、\ ``render_template``\ を"
+"呼び出すたびにテンプレートを見つけるために実行しているステップを表示"
+"するよう、Flaskに指示してください。"
 
 # 7ee65d63e5ef4d54b0675ab31cdbb857
 #: ../../blueprints.rst:229
 msgid "Building URLs"
-msgstr ""
+msgstr "URLの構築"
 
 # 0f0627d4bc104d2aad8865c8d81d7b66
 #: ../../blueprints.rst:231
@@ -397,6 +467,9 @@ msgid ""
 "prefix the URL endpoint with the name of the blueprint and a dot "
 "(``.``)::"
 msgstr ""
+"もしあるページから別のページへリンクしたいときは、通常時にするように\ "
+":func:`url_for`\ 関数を使うことができ、blueprintの名前とドット（\ ``.``\ ）"
+"をURLのエンドポイントの前に付けるだけです::"
 
 # 82c26e4cf64f47198ba2aacad0fe1695
 #: ../../blueprints.rst:237
@@ -406,6 +479,9 @@ msgid ""
 "you can use relative redirects by prefixing the endpoint with a dot "
 "only::"
 msgstr ""
+"さらに、もしblueprintのview関数もしくは変換（render）されたテンプレートの"
+"中で、同じblueprintの別のエンドポイントへリンクしたいときは、ドットだけを"
+"エンドポイントの前につける相対リダイレクトを使えます::"
 
 # 8475c82c75a34d9bbf0a84e0f5432c96
 #: ../../blueprints.rst:243
@@ -413,11 +489,13 @@ msgid ""
 "This will link to ``admin.index`` for instance in case the current "
 "request was dispatched to any other admin blueprint endpoint."
 msgstr ""
+"上の例は、そのときのリクエストがadminのblueprintにある別のエンドポイントへ"
+"割り振られたとき、\ ``admin.index``\ へリンクします。"
 
 # e4351a9cb35948c39997bc4758521911
 #: ../../blueprints.rst:247
 msgid "Error Handlers"
-msgstr ""
+msgstr "エラー処理（Error Handlers）"
 
 # b033f1c827c84a59a99a0f2a4adb40af
 #: ../../blueprints.rst:249
@@ -426,11 +504,14 @@ msgid ""
 ":class:`Flask` application object, so it is easy to make Blueprint-"
 "specific custom error pages."
 msgstr ""
+":class:`Flask`\ アプリケーションのオブジェクトと同様に、blueprintは\ "
+"``errorhandler``\ デコレータをサポートしており、従ってblueprint固有の"
+"エラーページを作成するのは簡単です。"
 
 # fd9c137a7757475aa5f49e1786be6ea2
 #: ../../blueprints.rst:253
 msgid "Here is an example for a \"404 Page Not Found\" exception::"
-msgstr ""
+msgstr "「404 Page Not Found」例外に対する例がこちらです::"
 
 # 32b09396d3d540a69a057ce091982b4d
 #: ../../blueprints.rst:259
@@ -446,9 +527,20 @@ msgid ""
 "handling strategies for these errors based on URL prefixes, they may be "
 "defined at the application level using the ``request`` proxy object::"
 msgstr ""
+"殆どのerrorhandlerは、予想したとおりに動きます; しかし、404と405の例外の"
+"処理に関して注意点があります。これらのerrorhandlerが起動されるのは、適切な\ "
+"``raise``\ 文またはそのblueprint内の他のview関数の中で\ ``abort``\ を呼んだ"
+"ときにだけです; それらは、例えば不正なURLアクセスからは起動されません。"
+"これは、blueprintはあるURL空間を「所有」しておらず、従ってアプリケーションの"
+"インスタンスは不正なURLを渡されたとしても、blueprintのどのerrorhandlerを"
+"実行すればよいかを知るすべがないためです。もしURLプレフィックスに基づいて、"
+"これらのエラーに対して異なる処理戦略を実行したいときは、それらは"
+"アプリケーションのレベルで\ ``request``\ の代理（proxy）のオブジェクトで"
+"定義させることができます::"
 
 # 7aa4a2886efb4e18a5de6d8d4a8be5e4
 #: ../../blueprints.rst:277
 msgid "More information on error handling see :ref:`errorpages`."
 msgstr ""
+"エラー処理に関するさらなる情報は\ :ref:`errorpages`\ を確認してください。"
 
