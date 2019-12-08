@@ -33,10 +33,12 @@ msgid ""
 msgstr ""
 "プロジェクトをインストール可能にするということは、このプロジェクトの"
 "環境へFlaskをインストールしたときのように、\ *配布用（distribution)*\ "
-"ファイルを作成し、それを他の環境へインストールできることを意味します。"
-"これは、自分のプロジェクトをデプロイを、他のどのライブラリのインストール"
-"とも同じような扱いにするため、全ての標準的なPythonのツールを使いながら、"
-"何でも管理できるようになります。"
+"ファイルを作成でき、それを他の環境へインストールできることを意味します。"
+"これは、自分のプロジェクトのデプロイを、他のどのライブラリのインストール"
+"とも同じような扱いにするため、全ての標準的なPythonのツールを使って、"
+"全てを管理できるようになります（訳注: パッケージ管理に関していくつかある"
+"Pythonでの標準的なツール・やり方のどれを使っても、インストールやアップ"
+"グレードなどができるようになります）。"
 
 # 5116e1789c09453db19475c69c3e56f7
 #: ../../tutorial/install.rst:10
@@ -56,9 +58,9 @@ msgid ""
 "means you can import it no matter where you run from."
 msgstr ""
 "この時点では、PythonとFlaskがどうやって\ ``flaskr``\ パッケージを使用するか"
-"理解している理由は、プロジェクトのディレクトリから実行しているということ"
-"だけです。インストールするということは、どこから実行してもそれをimportできる"
-"ことを意味します。"
+"理解している理由は、プロジェクトのディレクトリから（flask runコマンドなどを）"
+"実行しているということだけです。インストールするということは、どこから実行"
+"してもそれ（flaskr）をimportできることを意味します。"
 
 # 950ccf2326564c45a52e6c11592fc8c9
 #: ../../tutorial/install.rst:17
@@ -66,7 +68,7 @@ msgid ""
 "You can manage your project's dependencies just like other packages do, "
 "so ``pip install yourproject.whl`` installs them."
 msgstr ""
-"プロジェクトの依存対象を、他のパッケージのようなやり方で管理可能になり、"
+"プロジェクトの依存対象を、他のパッケージと同じようなやり方で管理可能になり、"
 "\ ``pip install yourproject.whl``\ でインストールできるようになります。"
 
 # 3eff4bc3b2384e7fb86684e9b6f79e7a
@@ -83,13 +85,13 @@ msgid ""
 "This is being introduced late in the tutorial, but in your future "
 "projects you should always start with this."
 msgstr ""
-"テストツールは、このチュートリアルでは後の方で紹介されていますが、"
-"自分の将来のプロジェクトでは常にテストツールとともに開始するべきです。"
+"テスト環境は、このチュートリアルでは後の方で紹介されていますが、"
+"自分の将来のプロジェクトでは常にテスト環境と一緒に開始するべきです。"
 
 # ee5647b0192b4faa8fb7c0ddb91618f4
 #: ../../tutorial/install.rst:29
 msgid "Describe the Project"
-msgstr "プロジェクトの説明"
+msgstr "プロジェクトの記述"
 
 # 1c5b7cb1457f444baff600b774f1e7be
 #: ../../tutorial/install.rst:31
@@ -98,7 +100,7 @@ msgid ""
 " it."
 msgstr ""
 "``setup.py``\ ファイルはプロジェクトと、プロジェクトに所属するファイルを"
-"説明します。"
+"記述します。"
 
 # 8592ddcca383428abd0aa38d287c27dc
 #: ../../tutorial/install.rst:34
@@ -145,7 +147,7 @@ msgid ""
 "See the `official packaging guide`_ for another explanation of the files "
 "and options used."
 msgstr ""
-"使用されているファイルとオプションの別の説明については、\ `official packaging "
+"ファイルと使用されているオプションの別の説明については、\ `official packaging "
 "guide`_\ を見てください。"
 
 # 7d08ae7244704983998e7be1197c2678

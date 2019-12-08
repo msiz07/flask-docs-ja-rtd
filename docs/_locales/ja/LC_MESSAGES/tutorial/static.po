@@ -42,9 +42,9 @@ msgid ""
 "the ``flaskr/static`` directory and serves it. The ``base.html`` template"
 " already has a link to the ``style.css`` file:"
 msgstr ""
-"Flaskは\ ``flaskr/static``\ ディレクトリから相対パスで\ ``static``\ なviewを"
-"自動的に追加して提供します。\ ``base.html``\ テンプレートは、既に\ ``style.css``\ "
-"ファイルへのリンクを持っています:"
+"Flaskは\ ``flaskr/static``\ ディレクトリからの相対パスを取る\ ``static``\ の"
+"viewを自動的に追加して提供します。\ ``base.html``\ テンプレートは、既に\ "
+"``style.css``\ ファイルへのリンクを持っています:"
 
 # 271ff208c5ec47e7a085da1a11e288e5
 #: ../../tutorial/static.rst:17
@@ -54,9 +54,9 @@ msgid ""
 "``flaskr/static`` directory and referenced with ``url_for('static', "
 "filename='...')``."
 msgstr ""
-"CSSに加えて、他の種類の静的ファイルにロゴ画像やJavaScriptのファイルが"
+"CSSに加えて、他の種類の静的ファイルにロゴ画像やJavaScript関数のファイルが"
 "あるかもしれません。それらはすべて\ ``flaskr/static``\ ディレクトリの"
-"下に置かれ、\ ``url_for('static, filename='...')``\ を使って参照できます。"
+"下に置かれ、\ ``url_for('static, filename='...')``\ を使って参照されます。"
 
 # 4fe3ae2e836d4a3f83351e4488a8b243
 #: ../../tutorial/static.rst:22
@@ -87,7 +87,7 @@ msgid ""
 "Go to http://127.0.0.1:5000/auth/login and the page should look like the "
 "screenshot below."
 msgstr ""
-"https://127.0.0.1:5000/auth/loginへ行くと、以下のスクリーンショットの"
+"https://127.0.0.1:5000/auth/login\ へ行くと、以下のスクリーンショットの"
 "ようなページが見られるはずです。"
 
 # 6f62a788687e4a6795bf3e421944e851

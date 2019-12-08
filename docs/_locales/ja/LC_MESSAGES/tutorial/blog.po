@@ -31,9 +31,9 @@ msgid ""
 "author of a post to edit or delete it."
 msgstr ""
 "ブログのblueprintを書くために、認証のblueprintを書いたときに学習した"
-"テクニックを同様に使用します。ブログはすべての投稿を一覧にし、ログイン"
-"したユーザには投稿できるようにし、そして投稿した作者はそれを編集または"
-"削除できるようにするべきです。"
+"テクニックを同様に使用します。ブログは、すべての投稿記事を一覧にし、ログイン"
+"したユーザには投稿記事を作成できるようにし、そして投稿記事の作者はそれを"
+"編集または削除できるようにさせます。"
 
 # eb00e3c93bea4ee6884ab1abc7aad438
 #: ../../tutorial/blog.rst:11
@@ -54,8 +54,7 @@ msgstr "青写真（Blueprint）"
 # cb7986eac72c482fb4cb55c9c99434d1
 #: ../../tutorial/blog.rst:18
 msgid "Define the blueprint and register it in the application factory."
-msgstr "blueprintを定義し、application factor（訳注：おそらく原文が"
-"「application **factory**\ 」の誤記）に登録します。"
+msgstr "blueprintを定義し、application factoryの中で登録します。"
 
 # b95fb9db92fc4d7da927901c97270ba4
 # 76ee1b5034a945f892e5173c6f1e6be9
@@ -76,9 +75,9 @@ msgid ""
 ":meth:`app.register_blueprint() <Flask.register_blueprint>`. Place the "
 "new code at the end of the factory function before returning the app."
 msgstr ""
-"blueprintをimportし、\ :meth:`app.register_blueprint() "
-"<Flask.register_blueprint>`\ を使ってfactoryから登録します。新しい"
-"コードをfactory関数の最後でappを返す前の所においてください。"
+"factoryから、blueprintをimportし\ :meth:`app.register_blueprint() "
+"<Flask.register_blueprint>`\ を使って登録します。新しいコードをfactory関数の"
+"最後でappを返す前の所に置いてください。"
 
 # 85d408c34b2d4c85bcfde6a34cd0d0f1
 #: ../../tutorial/blog.rst:37
@@ -111,9 +110,9 @@ msgstr ""
 "しかしながら、この後で定義する\ ``index``\ のviewに対するエンドポイントは\ "
 "``blog.index``\ になります。認証のviewのいくつかは、単なる\ ``index``\ "
 "をエンドポイントして参照します。\ ``url_for('index')``\ または\ "
-"``url_for('blog.index')``\ のどちらも機能するように、\ :meth:`app.add_url_rule()\ "
-"<Flask.add_url_rule>`\ はエンドポイント名\ ``'index'``\ をURLの\ ``/``\ と"
-"関連付け、どれでも同一の\ ``/``\ をURLとして生成します。"
+"``url_for('blog.index')``\ のどちらも機能し、いずれも同一の\ ``/``\ を"
+"URLとして生成するように、\ :meth:`app.add_url_rule()\ <Flask.add_url_rule>`\ "
+"はエンドポイント名\ ``'index'``\ をURLの\ ``/``\ と関連付けます。"
 
 # 0a7fc52d92fd4b458303bbbcb49358a6
 #: ../../tutorial/blog.rst:63
@@ -123,10 +122,10 @@ msgid ""
 " to the ``hello`` view. Then the ``index`` and ``blog.index`` endpoints "
 "and URLs would be different."
 msgstr ""
-"他のアプリケーションでは、ブログのblueprintに\ ``url_prefix``\ を与え、\ "
-"``hello``\ のviewと似たように、application factoryの中で別に\ ``index``\ "
+"他のアプリケーションでは、\ ``hello``\ のviewと似たように、ブログのblueprintに"
+"\ ``url_prefix``\ を与え、application factoryの中で別に\ ``index``\ "
 "のviewを定義するかもしれません。そうすると、\ ``index``\ と\ ``blog.index``\ "
-"のエンドポイントとURLは異なるようになります。"
+"でエンドポイントとURLは異なるようになります。"
 
 # b16f3145a6bf427aad9c9d780744fc6a
 #: ../../tutorial/blog.rst:70
@@ -140,9 +139,9 @@ msgid ""
 "used so that the author information from the ``user`` table is available "
 "in the result."
 msgstr ""
-"indexは最新の投稿を最初にして、投稿をすべて表示します。\ ``user``\ テーブル"
-"からの作者情報を結果の中で使用するために、ここでは\ ``JOIN``\ を使用して"
-"います。"
+"indexは最新の投稿記事を最初にして、投稿記事をすべて表示します。\ ``user``\ "
+"テーブルからの作者情報を結果の中で使用するために、ここでは\ ``JOIN``\ を"
+"使用しています。"
 
 # 7c31de761ec448f194ab49c76a947b5a
 #: ../../tutorial/blog.rst:89
@@ -160,12 +159,11 @@ msgid ""
 "them."
 msgstr ""
 "ユーザがログインしたときは、\ ``header``\ ブロックが\ ``create``\ の"
-"viewへのリンクを付け加えます。ユーザが投稿の作者であったときは、その"
-"投稿に対する\ ``update``\ のviewへリンクする「Edit」が見えるように"
+"viewへのリンクを付け加えます。ユーザが投稿記事の作者であったときは、その"
+"投稿記事に対する\ ``update``\ のviewへリンクする「Edit」が見えるように"
 "なります。\ ``loop.last``\ は\ `Jinja for loops`_\ の内側で利用可能な"
-"特殊な変数です。それは、各行を表示上分離させるようにに、最後の投稿以外"
-"では各投稿で線を表示するために使用されています。"
-""
+"特殊な変数です。それは、最後以外では各投稿記事の後で線を表示し、各行を"
+"表示上分離させるために使用されています。"
 
 # 7c5997f2734b41709697be6be57468c7
 #: ../../tutorial/blog.rst:132
@@ -179,9 +177,9 @@ msgid ""
 "the form is displayed, or the posted data is validated and the post is "
 "added to the database or an error is shown."
 msgstr ""
-"``create``\ のviewは認証の\ ``register``\ と同じように機能します。どちらも"
-"formが表示されるか、または投稿されたデータが検証されてからデータベースへの"
-"その投稿の追加もしくはエラーの表示をします。"
+"``create``\ のviewは認証の\ ``register``\ と同じように機能します。formが"
+"表示されるか、またはpostされたデータが検証されてから、データベースへの"
+"その投稿記事の追加またはエラーの表示がされます。"
 
 # a369e99b60784d5bbaa714e72e058b29
 #: ../../tutorial/blog.rst:138
@@ -213,7 +211,7 @@ msgid ""
 "it from each view."
 msgstr ""
 "``update``\ と\ ``delete``\ のviewは両方とも、\ ``id``\ を使って\ ``post``\ "
-"（投稿）を取得し、ログインしたユーザと作者が一致しているかチェックする必要が"
+"（投稿記事）を取得し、ログインしたユーザと作者が一致しているかチェックする必要が"
 "あります。コードの重複を避けるために、\ ``post``\ を取得する関数を書いて"
 "各viewから呼び出すことが可能です。"
 
@@ -242,9 +240,9 @@ msgid ""
 "doesn't matter because they're not modifying the post."
 msgstr ""
 "``check_author``\ 引数を定義しているのは、作者をチェックせずに\ ``post``\ "
-"を取得するときに関数を使用可能にするためです。"
-"これは、投稿を変更ないためユーザがだれであっても問題ないページで個々の"
-"投稿を表示するためのviewを書く場合、便利でしょう。"
+"を取得するときにこの関数を使用可能にするためです。"
+"これは、個々の投稿記事をページ上に表示する、投稿記事の変更はしないため"
+"ユーザがだれであっても問題ないページのviewを書く場合、便利でしょう。"
 
 # 9a801f9c4cc34679bf4a1cc0103cf328
 #: ../../tutorial/blog.rst:258
@@ -262,12 +260,12 @@ msgstr ""
 "受け取ります。それは、routeの中にある\ ``<int:id>``\ 部分に対応します。"
 "実際のURLは\ ``/1/update``\ のようになります。Flaskは\ ``1``\ を捉えて、"
 "それが\ :class:`int`\ であることを確認し、それを\ ``id``\ 引数として"
-"渡します。もし\ ``int:``\ を指定せずに\ ``<id>``\ を指定した場合は、"
+"渡します。もし\ ``int:``\ を指定せず代わりに\ ``<id>``\ を使用した場合は、"
 "それは文字列になります。updateのページに対応するURLを生成するには、"
-"\ :func:`url_for`\ に\ ``id``\ が渡される必要があり、そうすると"
+"\ :func:`url_for`\ に\ ``id``\ を渡し、"
 "「\ ``url_for('blog.update', id=post['id'])``\ 」（のid部分）に何を"
-"埋めればよいか分かるようになります。これは前述の\ ``index.html``\ "
-"ファイルでも同様です。"
+"埋めればよいか分かるようにする必要があります。これは前述の\ "
+"``index.html``\ ファイルでも同様です。"
 
 # cdb7cf073b364ff38c4e18951d958040
 #: ../../tutorial/blog.rst:268
@@ -280,10 +278,10 @@ msgid ""
 msgstr ""
 "``create``\ と\ ``update``\ のviewはとても似ています。主な違いは、"
 "\ ``update``\ のviewは\ ``post``\ オブジェクトを使用し、\ ``INSERT``\ "
-"の代わりに\ ``UPDATE``\ 問合せ（query）を使用することです。いくらか"
+"の代わりに\ ``UPDATE``\ の問合せ（query）を使用することです。いくらか"
 "賢いリファクタリングをすると、両方のアクションで1つのviewとテンプレートを"
-"使用できるようになりますが、このチュートリアルでは分けたままにした方が"
-"より分かりやすくなります。"
+"使用できるようになるかもしれませんが、このチュートリアルでは分けたままにした"
+"方がより分かりやすくなります。"
 
 # 899a0c75d22e43619ae9d2cd2af9c31e
 #: ../../tutorial/blog.rst:274
@@ -303,7 +301,7 @@ msgstr ""
 "``/<id>/update``\ ）へ編集データをpost（訳注：HTMLのPOSTメソッドで"
 "送信）します。他方のformは1つのボタンだけを含んでいて、\ ``action``\ "
 "属性を指定して、代わりにdeleteのviewへpostします。このボタンは、"
-"送出する前に確認ダイアログを表示するために、いくらかJavaScriptを使用"
+"提出する前に確認ダイアログを表示するために、いくらかJavaScriptを使用"
 "します。"
 
 # 5e442a2d272f4bc7b7a46eaee96f1e38
@@ -317,7 +315,7 @@ msgid ""
 "that's automatically available in templates."
 msgstr ""
 "formの中でどのデータを表示するか選ぶために、``{{ request.form['title']"
-"またはpost['title'] }}``\ パターンが使用されます。formが創出されない"
+" or post['title'] }}``\ パターンが使用されます。formが提出されない"
 "ときは、元の\ ``post``\ データが表示されますが、もし不正なformデータが"
 "postされた場合は、ユーザがエラーを修正できるようにするために、不正な"
 "formデータを表示したくなるので、\ ``request.form``\ が代わりに使われ"
@@ -337,7 +335,7 @@ msgid ""
 "no template, it will only handle the ``POST`` method and then redirect to"
 " the ``index`` view."
 msgstr ""
-"deleteのviewは固有のテンプレートを持たず、削除ボタンは\ ``update.html``\ の"
+"deleteのviewは自身のテンプレートを持たず、削除ボタンは\ ``update.html``\ の"
 "一部になって、\ ``/<id>/delete``\ のURLへpostします。テンプレートがない"
 "ため、それは\ ``POST``\ メソッドだけを処理して、\ ``index``\ のviewへ"
 "リダイレクトします。"
