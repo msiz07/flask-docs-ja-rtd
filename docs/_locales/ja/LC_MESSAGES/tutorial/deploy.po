@@ -35,13 +35,13 @@ msgid ""
 "application."
 msgstr ""
 "チュートリアルのこのパートでは、自分のアプリケーションを展開（deploy）"
-"したいサーバを自分で持っていると仮定しています。配付ファイルを作成して"
-"インストールするやり方の概要を示しますが、どのサーバおよびソフトウェア"
-"を使用するかについては特定しません。開発用のコンピュータで新しい環境を"
-"準備して以下の手順を試すことは可能ですが、本当に公開されるアプリケーション"
-"をホスティングするときは使うべきではないでしょう。アプリケーションを"
-"動かす多くの異なるやり方のリストについては、\ :doc:`/deploying/index`\ を"
-"確認してください。"
+"したいサーバを自分で持っていると仮定しています。配付（distribution）"
+"ファイルを作成してインストールするやり方の概要を示しますが、どのサーバおよび"
+"ソフトウェアを使用するかについては特定しません。開発用のコンピュータで新しい"
+"環境を準備して以下の手順を試すことは可能ですが、本当に公開されるアプリケーション"
+"をホスティングするときは（以下の手順は）使うべきではないでしょう。アプリ"
+"ケーションを動かす多くの異なるやり方のリストについては、\ "
+":doc:`/deploying/index`\ を確認してください。"
 
 # c02c813854da40548a151425518deef0
 #: ../../tutorial/deploy.rst:15
@@ -114,13 +114,13 @@ msgid ""
 "``venv/var/flaskr-instance`` instead."
 msgstr ""
 "Flaskが（編集可能モードではなく）インストールされていると検知したときは、"
-"Flaskはインスタンスフォルダに別のディレクトリを使用します。それは、代わりに"
-"\ ``venv/var/flaskr-instance``\ で見つけられます。"
+"Flaskはインスタンスフォルダに（インストールされた場所とは）別のディレクトリを"
+"使用します。それは、代わりに\ ``venv/var/flaskr-instance``\ で見つけられます。"
 
 # 423736873e614ba08f84920390fd9a2b
 #: ../../tutorial/deploy.rst:62
 msgid "Configure the Secret Key"
-msgstr "秘密の鍵の設定"
+msgstr "秘密鍵（Secret Key）の設定"
 
 # 210b555de2fe49e9b87ca4ff8e97a94a
 #: ../../tutorial/deploy.rst:64
@@ -131,15 +131,15 @@ msgid ""
 "modify the session cookie, or anything else that uses the secret key."
 msgstr ""
 "このチュートリアルの始めに、\ :data:`SECRET_KEY`\ へは標準設定の値を"
-"与えていました。これは本番環境ではいくらかの規則性のない（random）byte"
+"与えていました。これは本番環境ではなにかしら規則性のない（random）byte"
 "へ変更するべきです。さもないと、攻撃者が公開された\ ``'dev'``\ キーを"
-"使用してセッションのクッキーの変更や、その他の秘密の鍵を使ったあらゆる"
+"使用してセッションのクッキーの変更や、その他の秘密鍵を使ったあらゆる"
 "ことをできるようになります。"
 
 # 9a0be69797604e2f8960b3690c5fa367
 #: ../../tutorial/deploy.rst:69
 msgid "You can use the following command to output a random secret key:"
-msgstr "randomな秘密の鍵を表示するには以下のコマンドが使用できます:"
+msgstr "randomな秘密鍵を出力するには以下のコマンドが使用できます:"
 
 # 7e963395b15c4c1c8af85dd1cbb97573
 #: ../../tutorial/deploy.rst:77
@@ -178,9 +178,9 @@ msgid ""
 "provided by Werkzeug for convenience, but is not designed to be "
 "particularly efficient, stable, or secure."
 msgstr ""
-"開発環境ではなく公開されるように実行するときは、組み込みの開発サーバを"
-"使用（\ ``flask run``\ ）するべきではありません。開発サーバは便利なように"
-"Werkzeugによって提供されていますが、効率性、安全性、セキュリティを特別"
+"開発環境ではなく公開されるように（Flaskを）実行するときは、組み込みの開発"
+"サーバを使用（\ ``flask run``\ ）するべきではありません。開発サーバは便利な"
+"ようにWerkzeugによって提供されていますが、効率性、安全性、セキュリティを特別"
 "意識して設計されてはいません。"
 
 # ef05441c3fc4477e963db40963b3d463
@@ -215,7 +215,7 @@ msgstr ""
 "自分のアプリケーションをホストする多くの異なるやり方のリストについては\ "
 ":doc:`/deploying/index`\ を見てください。Waitressはひとつの例に過ぎず、"
 "このチュートリアルではWindowsとLinuxを両方サポートするという理由から選ばれ"
-"ました。WSGIサーバと、自分のプロジェクトで選択できる移行（deployment）の"
+"ました。WSGIサーバと、自分のプロジェクトで選択できる展開（deployment）の"
 "オプションは、より数多く存在しています。"
 
 # 85c57695469e4fd995cc9b89fc1a8b6d

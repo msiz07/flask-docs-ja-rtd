@@ -32,10 +32,10 @@ msgid ""
 " step-by-step nature of the tutorial."
 msgstr ""
 "このチュートリアルを通して、FlaskとPythonのコンセプトについてたくさん学習"
-"しました。チュートリアルに戻り見直して、実施してきたステップと自分のコードと"
-"を比較してください。\ :gh:`プロジェクト例 <example/tutorial>`\ 、それは一歩"
-"ずつ進めるチュートリアルとは少し違うところがあります、と自分のプロジェクトとを"
-"比較してください。"
+"しました。チュートリアルに戻り見直して、自分のコードとそこへ至るために実施して"
+"きたステップとを比較してください。一歩ずつ進めるチュートリアルとは少し違う"
+"ところがある、\ :gh:`プロジェクト例 <example/tutorial>`\ と自分のプロジェクト"
+"とを比較してください。"
 
 # e2c03ca45e4546eaa3fd06cbeadd72e3
 #: ../../tutorial/next.rst:10
@@ -49,12 +49,12 @@ msgid ""
 ":ref:`extensions` which make tasks like working with the database or "
 "validating form data easier and more powerful."
 msgstr ""
-"ここまで見てきたことよりも、さらに多くのことがFlaskにはあります。そうだと"
+"ここまで見てきたものよりも、さらに多くのものがFlaskにはあります。そうだと"
 "しても、今では、自分だけのwebアプリケーション開発を始められるだけのものを"
 "身に付けています。Flaskで何ができるかの概要のために\ :ref:`quickstart`\ を"
 "確認し、それから学習を続けるためにドキュメントへ飛び込んでください。Flaskは\ "
 "`Jinja`_, `Click`_, `Werkzeug`_, そして\ `ItsDangerous`_\ を、見えない"
-"ところで使っており、そしてそれらにも全て独自のドキュメントがあります。"
+"ところで使っており、そしてそれらも全て自身のドキュメントを持っています。"
 "データベースを使った作業やformデータの検証のようなタスクをより容易かつ"
 "強力に行えるようになる\ :ref:`extensions`\ にも興味を持つことでしょう。"
 
@@ -64,8 +64,8 @@ msgid ""
 "If you want to keep developing your Flaskr project, here are some ideas "
 "for what to try next:"
 msgstr ""
-"もし自分のFlaskrプロジェクトの開発を続けたい場合は、次に何を試すかに"
-"ついてのアイデアがここにあります:"
+"もし自分のFlaskrプロジェクトの開発を続けたい場合は、以下は、次に何を試すかに"
+"ついてのアイデアです:"
 
 # 72708a3c9fd34ebbaaf13ad604664f4e
 #: ../../tutorial/next.rst:22
@@ -73,13 +73,13 @@ msgid ""
 "A detail view to show a single post. Click a post's title to go to its "
 "page."
 msgstr ""
-"ひとつの投稿について詳細を表示するview。投稿のタイトルをクリックすると"
+"ひとつの投稿記事について詳細を表示するview。投稿記事のタイトルをクリックすると"
 "そのページへ行きます。"
 
 # f55f0261683b4787b3ddf74a66d01860
 #: ../../tutorial/next.rst:24
 msgid "Like / unlike a post."
-msgstr "投稿に対する好き／嫌い（の投票）"
+msgstr "投稿記事に対する好き／嫌い（の投票）"
 
 # 7469073cc308437faf88350db9fe9092
 #: ../../tutorial/next.rst:25
@@ -90,7 +90,7 @@ msgstr "コメント"
 #: ../../tutorial/next.rst:26
 msgid "Tags. Clicking a tag shows all the posts with that tag."
 msgstr ""
-"タグ。タグをクリックすると、そのタグが付いた投稿を全て表示します。"
+"タグ。タグをクリックすると、そのタグが付いた投稿記事を全て表示します。"
 
 # f5a815de45194d929b69b7a4078c0e30
 #: ../../tutorial/next.rst:27
@@ -100,22 +100,22 @@ msgstr "indexのページを名前でフィルタする検索ボックス。"
 # 8dff011bfacd4289ba7cd95a2c367ff5
 #: ../../tutorial/next.rst:28
 msgid "Paged display. Only show 5 posts per page."
-msgstr "ページに分けた表示。ページごとに5投稿だけ表示します。"
+msgstr "ページに分けた表示。ページごとに5つの投稿記事だけ表示します。"
 
 # d9938744488b4e4982dd725ce0c1fef4
 #: ../../tutorial/next.rst:29
 msgid "Upload an image to go along with a post."
-msgstr "投稿と一緒に使う画像のアップロード。"
+msgstr "投稿記事と一緒に使う画像のアップロード。"
 
 # df4007c45e2249c0815b8628ac7f92a4
 #: ../../tutorial/next.rst:30
 msgid "Format posts using Markdown."
-msgstr "Markdownを使った投稿の整形。"
+msgstr "Markdownを使った投稿記事の整形。"
 
 # c7613daa30dc4d42ae802d6fc30637ed
 #: ../../tutorial/next.rst:31
 msgid "An RSS feed of new posts."
-msgstr "新しい投稿のRSSフィード。"
+msgstr "新しい投稿記事のRSSフィード。"
 
 # 8361dec00bb548d58a04a921b8a0627b
 #: ../../tutorial/next.rst:33

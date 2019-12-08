@@ -35,8 +35,8 @@ msgstr ""
 "ために書くコードになります。Flaskは、やって来る（incoming）リクエストの"
 "URLを、それを処理すべきviewへと照合するためのパターンを使用します。送り"
 "出す（outgoing）レスポンスへとFlaskが変換するデータを、viewは返します。"
-"それとは別方向に、viewに対応するURLを（viewの）名前と引数に基づいて生成"
-"することも、Flaskでは可能です。"
+"URLからview名とは別方向に、viewに対応するURLを（viewの）名前と引数に"
+"基づいて生成することも、Flaskでは可能です。"
 
 # 6889b05a6af14511a1ba49e7b9de80eb
 #: ../../tutorial/views.rst:14
@@ -52,7 +52,7 @@ msgid ""
 " registered with the application when it is available in the factory "
 "function."
 msgstr ""
-":class:`blueprint`\ は、関連するviewおよびその他のコードをグループへと"
+":class:`Blueprint`\ は、関連するviewおよびその他のコードをグループへと"
 "編成する方法です。viewおよびその他のコードを直接アプリケーションに"
 "登録するよりも、それらをblueprintに登録します。それから、factory関数の"
 "中でアプリケーションが利用可能になったときに、blueprintをアプリケーションに"
@@ -67,7 +67,7 @@ msgid ""
 "you'll write the authentication one first."
 msgstr ""
 "Flaskrでは2つのblueprintがあり、ひとつは認証に関する関数のためであり、"
-"ひとつはブログへの投稿に関する関数のためです。それぞれのblueprintの"
+"ひとつはブログへの投稿記事に関する関数のためです。それぞれのblueprintの"
 "コードは、異なるモジュールにして進めます。ブログは認証に関して知って"
 "いる必要があるので、まずは認証のモジュールから書いていきます。"
 
@@ -137,9 +137,9 @@ msgid ""
 msgstr ""
 "ユーザが\ ``/auth/register``\ のURLへ訪ずれたときは、\ ``register``\ "
 "のviewはユーザが記入すべきformを持つ\ `HTML`_\ を返します。ユーザが"
-"formを提出したときは、ユーザの入力を検証し、それから、エラーメッセージと"
-"一緒にフォームを再表示するか、または、新しいユーザを作成してログイン"
-"ページへ行くようにします。"
+"formを提出（submit）したときは、ユーザの入力を検証し、それから、エラー"
+"メッセージと一緒にフォームを再表示するか、または、新しいユーザを作成して"
+"ログインページへ行くようにします。"
 
 # 40dd43916335440a98294bc52e1dd2e7
 #: ../../tutorial/views.rst:76
@@ -207,7 +207,7 @@ msgstr ""
 "調べることで検証します。\ :meth:`db.execute <sqlite3.Connection.execute>`\ "
 "は、ユーザのあらゆる入力をプレースホルダ\ ``?``\ にしたSQLのqueryと、"
 "プレースホルダを置き換える値のtupleを受け取ります。データベースライブラリは"
-"\ *SQL injection attack*\ に対して脆弱にならないように値のエスケープを"
+"\ *SQLインジェクション攻撃*\ に対して脆弱にならないように値のエスケープを"
 "取り計らいます。"
 
 # 9bbd7158ac03480da40853d0e59e419c
@@ -261,8 +261,8 @@ msgid ""
 "If validation fails, the error is shown to the user. :func:`flash` stores"
 " messages that can be retrieved when rendering the template."
 msgstr ""
-"もし検証が失敗した場合は、エラーをユーザへ示します。\ :func:`flush`\ は、"
-"テンプレートを変換するときに取得可能なメッセージを格納します。"
+"もし検証が失敗した場合は、エラーをユーザへ示します。\ :func:`flash`\ は、"
+"テンプレートを変換（render）するときに取得可能なメッセージを格納します。"
 
 # 5d25a7a4f3054a4a80f312381402fee2
 #: ../../tutorial/views.rst:159
@@ -295,7 +295,8 @@ msgstr "``register``\ のviewとは少し違うところがあります:"
 # efe46c07de4145d4b66548fbd17edd25
 #: ../../tutorial/views.rst:201
 msgid "The user is queried first and stored in a variable for later use."
-msgstr "ユーザは最初に問合せ（query）され、後で使用するために変数へ格納されます。"
+msgstr ""
+"ユーザ情報は最初に問合せ（query）され、後で使用するために変数へ格納されます。"
 
 # 2382cf33e47e40f398092936357ea6d0
 #: ../../tutorial/views.rst:203
@@ -350,7 +351,7 @@ msgstr ""
 "どのURLがリクエストされたかに関わらず、view関数の前に実行する関数を登録"
 "します。\ ``load_logged_in_user``\ は、ユーザidが\ :data:`session`\ に"
 "格納されているかチェックし、それからデータベースからユーザのデータを取得し、"
-"それをリクエストの期間中は存続する\ :data:`g.user`\ へ格納します。もし"
+"それをリクエストの期間中は存続する\ :data:`g.user <g>`\ へ格納します。もし"
 "ユーザidがない場合、もしくはidが（セッションに）存在しない場合、\ "
 "``g.user``\ は\ ``None``\ になります。"
 
@@ -367,7 +368,7 @@ msgid ""
 msgstr ""
 "ログアウトするには、ユーザidを\ :data:`session`\ から取り除く必要が"
 "あります。そうすると\ ``load_logged_in_user``\ は以降のリクエストで"
-"ユーザ情報を読み取らなくなります。"
+"ユーザ情報を読み込まなくなります。"
 
 # bd2992b2275643a5aebfc5661c080b6e
 #: ../../tutorial/views.rst:257
@@ -381,7 +382,7 @@ msgid ""
 "logged in. A *decorator* can be used to check this for each view it's "
 "applied to."
 msgstr ""
-"ブログの投稿を作成、編集、削除するにはユーザがログインする必要があります。"
+"ブログの投稿記事を作成、編集、削除するにはユーザがログインする必要があります。"
 "\ *デコレータ（decorator）*\ を使用すると、decoratorを適用した各ページで"
 "ログインをチェックできます。"
 
@@ -395,8 +396,8 @@ msgid ""
 "writing the blog views."
 msgstr ""
 "このdecoratorは、適用した元のviewを包み込む（wrap）新しい関数を返します。"
-"その新しい関数はユーザ情報が読み込まれたかチェックして、そうでない場合は"
-"ログインページへリダイレクトします。もしユーザ情報が読み込まれた場合は、"
+"その新しい関数はユーザ情報が読み込まれているかチェックして、そうでない場合は"
+"ログインページへリダイレクトします。もしユーザ情報が読み込まれている場合は、"
 "元のviewが呼び出されて通常どおりに続けます。ブログのviewを作成するときに"
 "decoratorを使用していきます。"
 
@@ -425,7 +426,7 @@ msgid ""
 "with ``url_for('hello')``. If it took an argument, which you'll see "
 "later, it would be linked to using ``url_for('hello', who='World')``."
 msgstr ""
-"例えば、このチュートリアルの前の方でapp factoryへ追加されたviewの\ "
+"例えば、このチュートリアルの前の方でapp factoryで追加されたviewの\ "
 "``hello()``\ は、名前が\ ``'hello'``\ であり、\ ``url_for('hello')``\ を"
 "使ってリンクすることができます。もし引数を取る場合は、それは後で確認"
 "していきますが、それは\ ``url_for('hello', who='World')``\ を使用して"
@@ -439,8 +440,8 @@ msgid ""
 "wrote above is ``'auth.login'`` because you added it to the ``'auth'`` "
 "blueprint."
 msgstr "blueprintを使用するときは、blueprintの名前は関数名の前に付けられ、"
-"従って先程作成した\ ``login``\ 関数のエンドポイントは、blueprintの\ "
-"``'auth'``\ を追加しているため\ ``'auth.login'``\ になります。"
+"従って先程書いた\ ``login``\ 関数のエンドポイントは、blueprintの\ "
+"``'auth'``\ に追加しているため\ ``'auth.login'``\ になります。"
 
 # 36dc0ce7ddf642a7b27599d16e07f068
 #: ../../tutorial/views.rst:301
