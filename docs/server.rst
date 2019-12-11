@@ -53,7 +53,7 @@ Example::
 
 This works well for the common case but it does not work well for
 development which is why from Flask 0.11 onwards the :command:`flask`
-method is recommended.  The reason for this is that due to how the reload
+command is recommended.  The reason for this is that due to how the reload
 mechanism works there are some bizarre side-effects (like executing
 certain code twice, sometimes crashing without message or dying when a
 syntax or import error happens).
