@@ -1,0 +1,73 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 1.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../index.rst:6
+# d1ca75e0d0a44efbb622ea1c2fbcd81f
+msgid "Welcome to Flask"
+msgstr ""
+
+#: ../../index.rst:13
+# f66ac57a3fb84c069819e6c7876baf4c
+msgid "Welcome to Flask's documentation. Get started with :ref:`installation` and then get an overview with the :ref:`quickstart`. There is also a more detailed :ref:`tutorial` that shows how to create a small but complete application with Flask. Common patterns are described in the :ref:`patterns` section. The rest of the docs describe each component of Flask in detail, with a full reference in the :ref:`api` section."
+msgstr ""
+
+#: ../../index.rst:20
+# 337be1ceb40d45a98a218c0e9213fecd
+msgid "Flask depends on the `Jinja`_ template engine and the `Werkzeug`_ WSGI toolkit. The documentation for these libraries can be found at:"
+msgstr ""
+
+#: ../../index.rst:23
+# daadbbf44d76476689aead07c277bc5d
+msgid "`Jinja documentation <http://jinja.pocoo.org/docs>`_"
+msgstr ""
+
+#: ../../index.rst:24
+# 259ce2847d904befafceaa4a99142e72
+msgid "`Werkzeug documentation <https://werkzeug.palletsprojects.com/>`_"
+msgstr ""
+
+#: ../../index.rst:31
+# fe94cd0531104883b0dd873d8795477d
+msgid "User's Guide"
+msgstr ""
+
+#: ../../index.rst:33
+# 96722e7bd3764984912cc5571f70491c
+msgid "This part of the documentation, which is mostly prose, begins with some background information about Flask, then focuses on step-by-step instructions for web development with Flask."
+msgstr ""
+
+#: ../../index.rst:65
+# 9e2cc0f71a9443bca78ac49ec8c7475a
+msgid "API Reference"
+msgstr ""
+
+#: ../../index.rst:67
+# 36f38a4f5938453392541b94af82bf24
+msgid "If you are looking for information on a specific function, class or method, this part of the documentation is for you."
+msgstr ""
+
+#: ../../index.rst:77
+# 065aae29f19444379a419a28bd1b4ef6
+msgid "Additional Notes"
+msgstr ""
+
+#: ../../index.rst:79
+# 2d16c931c08340a8b715f74c280d5396
+msgid "Design notes, legal information and changelog are here for the interested."
+msgstr ""
+

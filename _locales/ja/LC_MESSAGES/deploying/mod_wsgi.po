@@ -1,0 +1,312 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 1.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+# 5a83eb11c0cb48a38a7d6a13719c5e82
+#: ../../deploying/mod_wsgi.rst:4
+msgid "mod_wsgi (Apache)"
+msgstr ""
+
+# 79c514e33b5e4599ab3c809567ff4e92
+#: ../../deploying/mod_wsgi.rst:6
+msgid "If you are using the `Apache`_ webserver, consider using `mod_wsgi`_."
+msgstr ""
+
+# e390923b0d33415a9c7336cb9e045c6e
+#: ../../deploying/mod_wsgi.rst:8
+msgid "Watch Out"
+msgstr ""
+
+# cb8c815da58a4c8db8ea534a934c5f7e
+#: ../../deploying/mod_wsgi.rst:10
+msgid ""
+"Please make sure in advance that any ``app.run()`` calls you might have "
+"in your application file are inside an ``if __name__ == '__main__':`` "
+"block or moved to a separate file.  Just make sure it's not called "
+"because this will always start a local WSGI server which we do not want "
+"if we deploy that application to mod_wsgi."
+msgstr ""
+
+# 8861f3e7f5a14156bba73ecf020a62d1
+#: ../../deploying/mod_wsgi.rst:19
+msgid "Installing `mod_wsgi`"
+msgstr ""
+
+# ec8f509ea77a45028d25ef104229bf00
+#: ../../deploying/mod_wsgi.rst:21
+msgid ""
+"If you don't have `mod_wsgi` installed yet you have to either install it "
+"using a package manager or compile it yourself.  The mod_wsgi "
+"`installation instructions`_ cover source installations on UNIX systems."
+msgstr ""
+
+# ff5bb394eff74d989d6a6a0ec2ef86ac
+#: ../../deploying/mod_wsgi.rst:25
+msgid ""
+"If you are using Ubuntu/Debian you can apt-get it and activate it as "
+"follows:"
+msgstr ""
+
+# 72c5f1a6e94446eda7d03e0e705b162c
+#: ../../deploying/mod_wsgi.rst:32
+msgid ""
+"If you are using a yum based distribution (Fedora, OpenSUSE, etc..) you "
+"can install it as follows:"
+msgstr ""
+
+# 335b0f2447cd465e9192cfa6a760e7ea
+#: ../../deploying/mod_wsgi.rst:39
+msgid ""
+"On FreeBSD install `mod_wsgi` by compiling the `www/mod_wsgi` port or by "
+"using pkg_add:"
+msgstr ""
+
+# 596ed9be257449efa6da9d3c6bb3550f
+#: ../../deploying/mod_wsgi.rst:46
+msgid ""
+"If you are using pkgsrc you can install `mod_wsgi` by compiling the "
+"`www/ap2-wsgi` package."
+msgstr ""
+
+# 85731f4f9eca4132a466b2dbe12dc954
+#: ../../deploying/mod_wsgi.rst:49
+msgid ""
+"If you encounter segfaulting child processes after the first apache "
+"reload you can safely ignore them.  Just restart the server."
+msgstr ""
+
+# 92873f9670f7478fbd7976209f3187f3
+#: ../../deploying/mod_wsgi.rst:53
+msgid "Creating a `.wsgi` file"
+msgstr ""
+
+# f77f7c8475b24544afed68c5d1135d68
+#: ../../deploying/mod_wsgi.rst:55
+msgid ""
+"To run your application you need a :file:`yourapplication.wsgi` file. "
+"This file contains the code `mod_wsgi` is executing on startup to get the"
+" application object.  The object called `application` in that file is "
+"then used as application."
+msgstr ""
+
+# 20881425ddf944819aaeed6df89f7014
+#: ../../deploying/mod_wsgi.rst:60
+msgid "For most applications the following file should be sufficient::"
+msgstr ""
+
+# a49aa39e78494ec1b76170d0e61d23bb
+#: ../../deploying/mod_wsgi.rst:64
+msgid ""
+"If a factory function is used in a :file:`__init__.py` file, then the "
+"function should be imported::"
+msgstr ""
+
+# 8ae20e375f3b4a3abe803e05e5ea4776
+#: ../../deploying/mod_wsgi.rst:69
+msgid ""
+"If you don't have a factory function for application creation but a "
+"singleton instance you can directly import that one as `application`."
+msgstr ""
+
+# e814d2a5388d4422ad80e057dd74feab
+#: ../../deploying/mod_wsgi.rst:72
+msgid ""
+"Store that file somewhere that you will find it again (e.g.: "
+":file:`/var/www/yourapplication`) and make sure that `yourapplication` "
+"and all the libraries that are in use are on the python load path.  If "
+"you don't want to install it system wide consider using a `virtual "
+"python`_ instance.  Keep in mind that you will have to actually install "
+"your application into the virtualenv as well.  Alternatively there is the"
+" option to just patch the path in the ``.wsgi`` file before the import::"
+msgstr ""
+
+# 0cfca342a5cd4206bf21740133f33295
+#: ../../deploying/mod_wsgi.rst:84
+msgid "Configuring Apache"
+msgstr ""
+
+# 1ab510107c3944c3b29a3045ba4688bb
+#: ../../deploying/mod_wsgi.rst:86
+msgid ""
+"The last thing you have to do is to create an Apache configuration file "
+"for your application.  In this example we are telling `mod_wsgi` to "
+"execute the application under a different user for security reasons:"
+msgstr ""
+
+# f2597da070f541d69d507f407d83ea68
+#: ../../deploying/mod_wsgi.rst:106
+msgid ""
+"Note: WSGIDaemonProcess isn't implemented in Windows and Apache will "
+"refuse to run with the above configuration. On a Windows system, "
+"eliminate those lines:"
+msgstr ""
+
+# 83e2b08d710548c0b3f93c885a23bfeb
+#: ../../deploying/mod_wsgi.rst:120
+msgid ""
+"Note: There have been some changes in access control configuration for "
+"`Apache 2.4`_."
+msgstr ""
+
+# 9b7277157cf5420c9e58670253f8f57c
+#: ../../deploying/mod_wsgi.rst:125
+msgid ""
+"Most notably, the syntax for directory permissions has changed from httpd"
+" 2.2"
+msgstr ""
+
+# eeaa0d4d5a434fb98625ec45ddd4a343
+#: ../../deploying/mod_wsgi.rst:132
+msgid "to httpd 2.4 syntax"
+msgstr ""
+
+# f501517512f74fb19ce13ea81e4603b7
+#: ../../deploying/mod_wsgi.rst:139
+msgid "For more information consult the `mod_wsgi documentation`_."
+msgstr ""
+
+# 2ba41d66e15a44e697e9947290aac2aa
+#: ../../deploying/mod_wsgi.rst:147
+msgid "Troubleshooting"
+msgstr ""
+
+# feeeacf082664e878c43de9525788570
+#: ../../deploying/mod_wsgi.rst:149
+msgid "If your application does not run, follow this guide to troubleshoot:"
+msgstr ""
+
+# 92282cdaf8454a28a4c4d2f9b44c3062
+#: ../../deploying/mod_wsgi.rst:155
+msgid "**Problem:** application does not run, errorlog shows SystemExit ignored"
+msgstr ""
+
+# bdad99a152d44b8eae001d65475826a4
+#: ../../deploying/mod_wsgi.rst:152
+msgid ""
+"You have an ``app.run()`` call in your application file that is not "
+"guarded by an ``if __name__ == '__main__':`` condition.  Either remove "
+"that :meth:`~flask.Flask.run` call from the file and move it into a "
+"separate :file:`run.py` file or put it into such an if block."
+msgstr ""
+
+# 741cf920dc1d4273b153ad5388c4e057
+#: ../../deploying/mod_wsgi.rst:162
+msgid "**Problem:** application gives permission errors"
+msgstr ""
+
+# c3532b13c7894b029d434d07ac6fd994
+#: ../../deploying/mod_wsgi.rst:158
+msgid ""
+"Probably caused by your application running as the wrong user.  Make sure"
+" the folders the application needs access to have the proper privileges "
+"set and the application runs as the correct user (``user`` and ``group`` "
+"parameter to the `WSGIDaemonProcess` directive)"
+msgstr ""
+
+# 24f934218ae34b9c9a74a845adf37112
+#: ../../deploying/mod_wsgi.rst:178
+msgid "**Problem:** application dies with an error on print"
+msgstr ""
+
+# 4d2baf2b51024ea295a706cb6438a3c1
+#: ../../deploying/mod_wsgi.rst:165
+msgid ""
+"Keep in mind that mod_wsgi disallows doing anything with "
+":data:`sys.stdout` and :data:`sys.stderr`.  You can disable this "
+"protection from the config by setting the `WSGIRestrictStdout` to "
+"``off``:"
+msgstr ""
+
+# 9596c01ff5d04dea8d7f9324ae5a2e84
+#: ../../deploying/mod_wsgi.rst:174
+msgid ""
+"Alternatively you can also replace the standard out in the .wsgi file "
+"with a different stream::"
+msgstr ""
+
+# d8e0a4ab63a947b59fc7c4e23d6603c7
+#: ../../deploying/mod_wsgi.rst:188
+msgid "**Problem:** accessing resources gives IO errors"
+msgstr ""
+
+# c505e5e2e3f04beea8034f476abb6889
+#: ../../deploying/mod_wsgi.rst:181
+msgid ""
+"Your application probably is a single .py file you symlinked into the "
+"site-packages folder.  Please be aware that this does not work, instead "
+"you either have to put the folder into the pythonpath the file is stored "
+"in, or convert your application into a package."
+msgstr ""
+
+# c8e981d7b31c47c19b27cfd594e81228
+#: ../../deploying/mod_wsgi.rst:186
+msgid ""
+"The reason for this is that for non-installed packages, the module "
+"filename is used to locate the resources and for symlinks the wrong "
+"filename is picked up."
+msgstr ""
+
+# 9b6ecabc2f8847a0b3ca744abc4ad495
+#: ../../deploying/mod_wsgi.rst:191
+msgid "Support for Automatic Reloading"
+msgstr ""
+
+# 78dbe9a2175545cbadd88e917766a30f
+#: ../../deploying/mod_wsgi.rst:193
+msgid ""
+"To help deployment tools you can activate support for automatic "
+"reloading.  Whenever something changes the ``.wsgi`` file, `mod_wsgi` "
+"will reload all the daemon processes for us."
+msgstr ""
+
+# abe4c91d0f384e5bb1edac7071a0f2bc
+#: ../../deploying/mod_wsgi.rst:197
+msgid "For that, just add the following directive to your `Directory` section:"
+msgstr ""
+
+# 6fd4ed7e63134939bad8eaedff2356bd
+#: ../../deploying/mod_wsgi.rst:204
+msgid "Working with Virtual Environments"
+msgstr ""
+
+# 38fde1d5f82d4937a8cf9d2f02dbc7bb
+#: ../../deploying/mod_wsgi.rst:206
+msgid ""
+"Virtual environments have the advantage that they never install the "
+"required dependencies system wide so you have a better control over what "
+"is used where.  If you want to use a virtual environment with mod_wsgi "
+"you have to modify your ``.wsgi`` file slightly."
+msgstr ""
+
+# 68cb3e525782496798da304e24972e4f
+#: ../../deploying/mod_wsgi.rst:211
+msgid "Add the following lines to the top of your ``.wsgi`` file::"
+msgstr ""
+
+# 6abe8405e25e4d229320e53a42a34405
+#: ../../deploying/mod_wsgi.rst:216
+msgid "For Python 3 add the following lines to the top of your ``.wsgi`` file::"
+msgstr ""
+
+# 2e1cc2136af14e7e9d380000a6ca00b2
+#: ../../deploying/mod_wsgi.rst:222
+msgid ""
+"This sets up the load paths according to the settings of the virtual "
+"environment.  Keep in mind that the path has to be absolute."
+msgstr ""
+

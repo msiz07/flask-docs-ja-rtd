@@ -1,0 +1,358 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 1.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+# f81f667268cd41de8588f99003d1c7f5
+#: ../../tutorial/blog.rst:4
+msgid "Blog Blueprint"
+msgstr "ブログの青写真（Blueprint）"
+
+# 4ba34772fda84b26ac101d9da3c1dbed
+#: ../../tutorial/blog.rst:6
+msgid ""
+"You'll use the same techniques you learned about when writing the "
+"authentication blueprint to write the blog blueprint. The blog should "
+"list all posts, allow logged in users to create posts, and allow the "
+"author of a post to edit or delete it."
+msgstr ""
+"ブログのblueprintを書くために、認証のblueprintを書いたときに学習した"
+"テクニックを同様に使用します。ブログは、すべての投稿記事を一覧にし、ログイン"
+"したユーザには投稿記事を作成できるようにし、そして投稿記事の作者はそれを"
+"編集または削除できるようにさせます。"
+
+# eb00e3c93bea4ee6884ab1abc7aad438
+#: ../../tutorial/blog.rst:11
+msgid ""
+"As you implement each view, keep the development server running. As you "
+"save your changes, try going to the URL in your browser and testing them "
+"out."
+msgstr ""
+"各viewを実装したように、開発サーバは実行したままにしてください。変更を"
+"保存するたびに、ブラウザでそのサーバのURLへ行き、それらの変更をテスト"
+"してください。"
+
+# a3f96ff5e1d948f588654fffcd01bfaa
+#: ../../tutorial/blog.rst:16
+msgid "The Blueprint"
+msgstr "青写真（Blueprint）"
+
+# cb7986eac72c482fb4cb55c9c99434d1
+#: ../../tutorial/blog.rst:18
+msgid "Define the blueprint and register it in the application factory."
+msgstr "blueprintを定義し、application factoryの中で登録します。"
+
+# b95fb9db92fc4d7da927901c97270ba4
+# 76ee1b5034a945f892e5173c6f1e6be9
+# 75104715741743a5a1c1e8f5c142ddc3
+# 6d5817cc6f1e4a2b90f057c21e83547a
+# b652b536fa00411e8d4ab9ac9e3bbd3b
+# 6bdaabb3e5df4074ba4f7558b459b2d2
+#: ../../tutorial/blog.rst:20 ../../tutorial/blog.rst:76
+#: ../../tutorial/blog.rst:142 ../../tutorial/blog.rst:198
+#: ../../tutorial/blog.rst:228 ../../tutorial/blog.rst:320
+msgid "``flaskr/blog.py``"
+msgstr ""
+
+# ac6571cc9e9c4b1bb64cc9b73c16401c
+#: ../../tutorial/blog.rst:33
+msgid ""
+"Import and register the blueprint from the factory using "
+":meth:`app.register_blueprint() <Flask.register_blueprint>`. Place the "
+"new code at the end of the factory function before returning the app."
+msgstr ""
+"factoryから、blueprintをimportし\ :meth:`app.register_blueprint() "
+"<Flask.register_blueprint>`\ を使って登録します。新しいコードをfactory関数の"
+"最後でappを返す前の所に置いてください。"
+
+# 85d408c34b2d4c85bcfde6a34cd0d0f1
+#: ../../tutorial/blog.rst:37
+msgid "``flaskr/__init__.py``"
+msgstr ""
+
+# 3372f4ca6bf74dd4983b0670c24860a5
+#: ../../tutorial/blog.rst:51
+msgid ""
+"Unlike the auth blueprint, the blog blueprint does not have a "
+"``url_prefix``. So the ``index`` view will be at ``/``, the ``create`` "
+"view at ``/create``, and so on. The blog is the main feature of Flaskr, "
+"so it makes sense that the blog index will be the main index."
+msgstr ""
+"authのblueprintと異なり、blogのblueprintは\ ``url_prefix``\ を持ちません。"
+"従って、\ ``index``\ のviewの場所は\ ``/``\ 、\ ``create``\ のviewの場所は\ "
+"``/create``\ 、のようになります。ブログはFlaskrの中心となる目玉機能であり、"
+"従って、ブログのindexがメインのindexになることは理にかなっています。"
+
+# 81409b2ac9d24182a4fb9e992ecb5608
+#: ../../tutorial/blog.rst:56
+msgid ""
+"However, the endpoint for the ``index`` view defined below will be "
+"``blog.index``. Some of the authentication views referred to a plain "
+"``index`` endpoint. :meth:`app.add_url_rule() <Flask.add_url_rule>` "
+"associates the endpoint name ``'index'`` with the ``/`` url so that "
+"``url_for('index')`` or ``url_for('blog.index')`` will both work, "
+"generating the same ``/`` URL either way."
+msgstr ""
+"しかしながら、この後で定義する\ ``index``\ のviewに対するエンドポイントは\ "
+"``blog.index``\ になります。認証のviewのいくつかは、単なる\ ``index``\ "
+"をエンドポイントして参照します。\ ``url_for('index')``\ または\ "
+"``url_for('blog.index')``\ のどちらも機能し、いずれも同一の\ ``/``\ を"
+"URLとして生成するように、\ :meth:`app.add_url_rule()\ <Flask.add_url_rule>`\ "
+"はエンドポイント名\ ``'index'``\ をURLの\ ``/``\ と関連付けます。"
+
+# 0a7fc52d92fd4b458303bbbcb49358a6
+#: ../../tutorial/blog.rst:63
+msgid ""
+"In another application you might give the blog blueprint a ``url_prefix``"
+" and define a separate ``index`` view in the application factory, similar"
+" to the ``hello`` view. Then the ``index`` and ``blog.index`` endpoints "
+"and URLs would be different."
+msgstr ""
+"他のアプリケーションでは、\ ``hello``\ のviewと似たように、ブログのblueprintに"
+"\ ``url_prefix``\ を与え、application factoryの中で別に\ ``index``\ "
+"のviewを定義するかもしれません。そうすると、\ ``index``\ と\ ``blog.index``\ "
+"でエンドポイントとURLは異なるようになります。"
+
+# b16f3145a6bf427aad9c9d780744fc6a
+#: ../../tutorial/blog.rst:70
+msgid "Index"
+msgstr "インデックス（Index）"
+
+# 97f29b53825048f68c8b8ba677409306
+#: ../../tutorial/blog.rst:72
+msgid ""
+"The index will show all of the posts, most recent first. A ``JOIN`` is "
+"used so that the author information from the ``user`` table is available "
+"in the result."
+msgstr ""
+"indexは最新の投稿記事を最初にして、投稿記事をすべて表示します。\ ``user``\ "
+"テーブルからの作者情報を結果の中で使用するために、ここでは\ ``JOIN``\ を"
+"使用しています。"
+
+# 7c31de761ec448f194ab49c76a947b5a
+#: ../../tutorial/blog.rst:89
+msgid "``flaskr/templates/blog/index.html``"
+msgstr ""
+
+# 999875a2d0cc41a78aa06e4dd4e2866f
+#: ../../tutorial/blog.rst:121
+msgid ""
+"When a user is logged in, the ``header`` block adds a link to the "
+"``create`` view. When the user is the author of a post, they'll see an "
+"\"Edit\" link to the ``update`` view for that post. ``loop.last`` is a "
+"special variable available inside `Jinja for loops`_. It's used to "
+"display a line after each post except the last one, to visually separate "
+"them."
+msgstr ""
+"ユーザがログインしたときは、\ ``header``\ ブロックが\ ``create``\ の"
+"viewへのリンクを付け加えます。ユーザが投稿記事の作者であったときは、その"
+"投稿記事に対する\ ``update``\ のviewへリンクする「Edit」が見えるように"
+"なります。\ ``loop.last``\ は\ `Jinja for loops`_\ の内側で利用可能な"
+"特殊な変数です。それは、最後以外では各投稿記事の後で線を表示し、各行を"
+"表示上分離させるために使用されています。"
+
+# 7c5997f2734b41709697be6be57468c7
+#: ../../tutorial/blog.rst:132
+msgid "Create"
+msgstr "作成（Create）"
+
+# ec1087eaade4444c8f62b68f70387802
+#: ../../tutorial/blog.rst:134
+msgid ""
+"The ``create`` view works the same as the auth ``register`` view. Either "
+"the form is displayed, or the posted data is validated and the post is "
+"added to the database or an error is shown."
+msgstr ""
+"``create``\ のviewは認証の\ ``register``\ と同じように機能します。formが"
+"表示されるか、またはpostされたデータが検証されてから、データベースへの"
+"その投稿記事の追加またはエラーの表示がされます。"
+
+# a369e99b60784d5bbaa714e72e058b29
+#: ../../tutorial/blog.rst:138
+msgid ""
+"The ``login_required`` decorator you wrote earlier is used on the blog "
+"views. A user must be logged in to visit these views, otherwise they will"
+" be redirected to the login page."
+msgstr ""
+"前の方で書いた\ ``login_required``\ デコレータは、blogのviewで使用します。"
+"これらのviewへ訪れるためにはユーザはログインする必要があり、そうでなければ"
+"ログインページへとリダイレクトされます。"
+
+# 7aa3d90b2d344c82b846b955a188fddb
+#: ../../tutorial/blog.rst:170
+msgid "``flaskr/templates/blog/create.html``"
+msgstr ""
+
+# 85cfb24b2de04b19a91c7eacecbce451
+#: ../../tutorial/blog.rst:191
+msgid "Update"
+msgstr "更新（Update）"
+
+# a2480d90d2104f2a84af806b0bfeed46
+#: ../../tutorial/blog.rst:193
+msgid ""
+"Both the ``update`` and ``delete`` views will need to fetch a ``post`` by"
+" ``id`` and check if the author matches the logged in user. To avoid "
+"duplicating code, you can write a function to get the ``post`` and call "
+"it from each view."
+msgstr ""
+"``update``\ と\ ``delete``\ のviewは両方とも、\ ``id``\ を使って\ ``post``\ "
+"（投稿記事）を取得し、ログインしたユーザと作者が一致しているかチェックする必要が"
+"あります。コードの重複を避けるために、\ ``post``\ を取得する関数を書いて"
+"各viewから呼び出すことが可能です。"
+
+# ce6758054b274cd0bec79e051ad395bb
+#: ../../tutorial/blog.rst:217
+msgid ""
+":func:`abort` will raise a special exception that returns an HTTP status "
+"code. It takes an optional message to show with the error, otherwise a "
+"default message is used. ``404`` means \"Not Found\", and ``403`` means "
+"\"Forbidden\". (``401`` means \"Unauthorized\", but you redirect to the "
+"login page instead of returning that status.)"
+msgstr ""
+":func:`abort`\ はHTTPのステータスコードを返す特殊な例外を発生させます。"
+"それはオプションでエラーと一緒に表示されるメッセージを引き取り、そうでない"
+"ときは標準設定のメッセージを使用します。\ ``404``\ は「Not Found（見つから"
+"ない）」を意味し、\ ``403``\ は「Forbidden（禁止されている）」を意味します。"
+"（\ ``401``\ は「Unauthorized（認証されていない）」を意味しますが、"
+"ステータスを返す代わりにログインページへリダイレクトします。）"
+
+# b888c5b94c894bde94d9ac0b96befc9d
+#: ../../tutorial/blog.rst:223
+msgid ""
+"The ``check_author`` argument is defined so that the function can be used"
+" to get a ``post`` without checking the author. This would be useful if "
+"you wrote a view to show an individual post on a page, where the user "
+"doesn't matter because they're not modifying the post."
+msgstr ""
+"``check_author``\ 引数を定義しているのは、作者をチェックせずに\ ``post``\ "
+"を取得するときにこの関数を使用可能にするためです。"
+"これは、個々の投稿記事をページ上に表示する、投稿記事の変更はしないため"
+"ユーザがだれであっても問題ないページのviewを書く場合、便利でしょう。"
+
+# 9a801f9c4cc34679bf4a1cc0103cf328
+#: ../../tutorial/blog.rst:258
+msgid ""
+"Unlike the views you've written so far, the ``update`` function takes an "
+"argument, ``id``. That corresponds to the ``<int:id>`` in the route. A "
+"real URL will look like ``/1/update``. Flask will capture the ``1``, "
+"ensure it's an :class:`int`, and pass it as the ``id`` argument. If you "
+"don't specify ``int:`` and instead do ``<id>``, it will be a string. To "
+"generate a URL to the update page, :func:`url_for` needs to be passed the"
+" ``id`` so it knows what to fill in: ``url_for('blog.update', "
+"id=post['id'])``. This is also in the ``index.html`` file above."
+msgstr ""
+"ここまで書いてきたviewと異なり、\ ``update``\ 関数は\ ``id``\ 引数を"
+"受け取ります。それは、routeの中にある\ ``<int:id>``\ 部分に対応します。"
+"実際のURLは\ ``/1/update``\ のようになります。Flaskは\ ``1``\ を捉えて、"
+"それが\ :class:`int`\ であることを確認し、それを\ ``id``\ 引数として"
+"渡します。もし\ ``int:``\ を指定せず代わりに\ ``<id>``\ を使用した場合は、"
+"それは文字列になります。updateのページに対応するURLを生成するには、"
+"\ :func:`url_for`\ に\ ``id``\ を渡し、"
+"「\ ``url_for('blog.update', id=post['id'])``\ 」（のid部分）に何を"
+"埋めればよいか分かるようにする必要があります。これは前述の\ "
+"``index.html``\ ファイルでも同様です。"
+
+# cdb7cf073b364ff38c4e18951d958040
+#: ../../tutorial/blog.rst:268
+msgid ""
+"The ``create`` and ``update`` views look very similar. The main "
+"difference is that the ``update`` view uses a ``post`` object and an "
+"``UPDATE`` query instead of an ``INSERT``. With some clever refactoring, "
+"you could use one view and template for both actions, but for the "
+"tutorial it's clearer to keep them separate."
+msgstr ""
+"``create``\ と\ ``update``\ のviewはとても似ています。主な違いは、"
+"\ ``update``\ のviewは\ ``post``\ オブジェクトを使用し、\ ``INSERT``\ "
+"の代わりに\ ``UPDATE``\ の問合せ（query）を使用することです。いくらか"
+"賢いリファクタリングをすると、両方のアクションで1つのviewとテンプレートを"
+"使用できるようになるかもしれませんが、このチュートリアルでは分けたままにした"
+"方がより分かりやすくなります。"
+
+# 899a0c75d22e43619ae9d2cd2af9c31e
+#: ../../tutorial/blog.rst:274
+msgid "``flaskr/templates/blog/update.html``"
+msgstr ""
+
+# ff1b56c6cd7041b0862794b149437e5e
+#: ../../tutorial/blog.rst:298
+msgid ""
+"This template has two forms. The first posts the edited data to the "
+"current page (``/<id>/update``). The other form contains only a button "
+"and specifies an ``action`` attribute that posts to the delete view "
+"instead. The button uses some JavaScript to show a confirmation dialog "
+"before submitting."
+msgstr ""
+"このテンプレートには2つのformがあります。1つめは、いまのページ（\ "
+"``/<id>/update``\ ）へ編集データをpost（訳注：HTMLのPOSTメソッドで"
+"送信）します。他方のformは1つのボタンだけを含んでいて、\ ``action``\ "
+"属性を指定して、代わりにdeleteのviewへpostします。このボタンは、"
+"提出する前に確認ダイアログを表示するために、いくらかJavaScriptを使用"
+"します。"
+
+# 5e442a2d272f4bc7b7a46eaee96f1e38
+#: ../../tutorial/blog.rst:304
+msgid ""
+"The pattern ``{{ request.form['title'] or post['title'] }}`` is used to "
+"choose what data appears in the form. When the form hasn't been "
+"submitted, the original ``post`` data appears, but if invalid form data "
+"was posted you want to display that so the user can fix the error, so "
+"``request.form`` is used instead. :data:`request` is another variable "
+"that's automatically available in templates."
+msgstr ""
+"formの中でどのデータを表示するか選ぶために、``{{ request.form['title']"
+" or post['title'] }}``\ パターンが使用されます。formが提出されない"
+"ときは、元の\ ``post``\ データが表示されますが、もし不正なformデータが"
+"postされた場合は、ユーザがエラーを修正できるようにするために、不正な"
+"formデータを表示したくなるので、\ ``request.form``\ が代わりに使われ"
+"ます。\ :data:`request`\ はテンプレートの中で自動的に利用可能になる"
+"もう一つの変数です。"
+
+# 40785dca056c4312b6b57e26d435c670
+#: ../../tutorial/blog.rst:313
+msgid "Delete"
+msgstr "消去（Delete）"
+
+# 40787827e2dd4d738a37296880258d23
+#: ../../tutorial/blog.rst:315
+msgid ""
+"The delete view doesn't have its own template, the delete button is part "
+"of ``update.html`` and posts to the ``/<id>/delete`` URL. Since there is "
+"no template, it will only handle the ``POST`` method and then redirect to"
+" the ``index`` view."
+msgstr ""
+"deleteのviewは自身のテンプレートを持たず、削除ボタンは\ ``update.html``\ の"
+"一部になって、\ ``/<id>/delete``\ のURLへpostします。テンプレートがない"
+"ため、それは\ ``POST``\ メソッドだけを処理して、\ ``index``\ のviewへ"
+"リダイレクトします。"
+
+# 81be1b73e78a4fa4b8cc686a31b0264c
+#: ../../tutorial/blog.rst:332
+msgid ""
+"Congratulations, you've now finished writing your application! Take some "
+"time to try out everything in the browser. However, there's still more to"
+" do before the project is complete."
+msgstr ""
+"おめでとうございます、ここまでで自分のアプリケーションを書き上げました！"
+"いくらか時間を取ってブラウザですべて試してみてください。しかしながら、"
+"このプロジェクトが完成する前にもう少しやることが残っています。"
+
+# a369b1f524314e268412d4ec2b30ea77
+#: ../../tutorial/blog.rst:336
+msgid "Continue to :doc:`install`."
+msgstr ":doc:`install`\ へ続きます。"
+

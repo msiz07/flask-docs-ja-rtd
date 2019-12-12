@@ -1,0 +1,263 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 1.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+# 60392632ba5441e387b600794855cd62
+#: ../../signals.rst:4
+msgid "Signals"
+msgstr ""
+
+# 03f2f2ac0a3647e3a24471e07c242263
+#: ../../signals.rst:8
+msgid ""
+"Starting with Flask 0.6, there is integrated support for signalling in "
+"Flask.  This support is provided by the excellent `blinker`_ library and "
+"will gracefully fall back if it is not available."
+msgstr ""
+
+# 8764bb4b996b4d50b64016c9f3784917
+#: ../../signals.rst:12
+msgid ""
+"What are signals?  Signals help you decouple applications by sending "
+"notifications when actions occur elsewhere in the core framework or "
+"another Flask extensions.  In short, signals allow certain senders to "
+"notify subscribers that something happened."
+msgstr ""
+
+# dc2f2ab5fd624d5fbb8864260d0c9061
+#: ../../signals.rst:17
+msgid ""
+"Flask comes with a couple of signals and other extensions might provide "
+"more.  Also keep in mind that signals are intended to notify subscribers "
+"and should not encourage subscribers to modify data.  You will notice "
+"that there are signals that appear to do the same thing like some of the "
+"builtin decorators do (eg: :data:`~flask.request_started` is very similar"
+" to :meth:`~flask.Flask.before_request`).  However, there are differences"
+" in how they work.  The core :meth:`~flask.Flask.before_request` handler,"
+" for example, is executed in a specific order and is able to abort the "
+"request early by returning a response.  In contrast all signal handlers "
+"are executed in undefined order and do not modify any data."
+msgstr ""
+
+# c4923c65e6fe43af8b5de8743a04149c
+#: ../../signals.rst:28
+msgid ""
+"The big advantage of signals over handlers is that you can safely "
+"subscribe to them for just a split second.  These temporary subscriptions"
+" are helpful for unit testing for example.  Say you want to know what "
+"templates were rendered as part of a request: signals allow you to do "
+"exactly that."
+msgstr ""
+
+# f3c68c3f3b924fec9bbeb6bda5edcb33
+#: ../../signals.rst:35
+msgid "Subscribing to Signals"
+msgstr ""
+
+# eee8eeab109b445cb10519141a5c3cb0
+#: ../../signals.rst:37
+msgid ""
+"To subscribe to a signal, you can use the "
+":meth:`~blinker.base.Signal.connect` method of a signal.  The first "
+"argument is the function that should be called when the signal is "
+"emitted, the optional second argument specifies a sender.  To unsubscribe"
+" from a signal, you can use the :meth:`~blinker.base.Signal.disconnect` "
+"method."
+msgstr ""
+
+# 512efa0032874d479aefd90ba41c4f48
+#: ../../signals.rst:43
+msgid ""
+"For all core Flask signals, the sender is the application that issued the"
+" signal.  When you subscribe to a signal, be sure to also provide a "
+"sender unless you really want to listen for signals from all "
+"applications.  This is especially true if you are developing an "
+"extension."
+msgstr ""
+
+# a3901dacf2e648079008e3aa02d2994d
+#: ../../signals.rst:48
+msgid ""
+"For example, here is a helper context manager that can be used in a unit "
+"test to determine which templates were rendered and what variables were "
+"passed to the template::"
+msgstr ""
+
+# fe5987b795f1462b8a49c52bd50c4a04
+#: ../../signals.rst:66
+msgid "This can now easily be paired with a test client::"
+msgstr ""
+
+# 7cbd0f5127cd4de5bba018a0203ff849
+#: ../../signals.rst:76
+msgid ""
+"Make sure to subscribe with an extra ``**extra`` argument so that your "
+"calls don't fail if Flask introduces new arguments to the signals."
+msgstr ""
+
+# 038406268f7a45408ea9bc0fcb830f25
+#: ../../signals.rst:79
+msgid ""
+"All the template rendering in the code issued by the application `app` in"
+" the body of the ``with`` block will now be recorded in the `templates` "
+"variable.  Whenever a template is rendered, the template object as well "
+"as context are appended to it."
+msgstr ""
+
+# a7276710634149228c24933c01f20fe5
+#: ../../signals.rst:84
+msgid ""
+"Additionally there is a convenient helper method "
+"(:meth:`~blinker.base.Signal.connected_to`)  that allows you to "
+"temporarily subscribe a function to a signal with a context manager on "
+"its own.  Because the return value of the context manager cannot be "
+"specified that way, you have to pass the list in as an argument::"
+msgstr ""
+
+# 53e202c019374b3e8efbee90da4e6569
+#: ../../signals.rst:97
+msgid "The example above would then look like this::"
+msgstr ""
+
+# 1d85e94dbdcb42a7b1c8b3ca481e787a
+#: ../../signals.rst:104
+msgid "Blinker API Changes"
+msgstr ""
+
+# 4e708cd208b943f2a3607a869f0b807f
+#: ../../signals.rst:106
+msgid ""
+"The :meth:`~blinker.base.Signal.connected_to` method arrived in Blinker "
+"with version 1.1."
+msgstr ""
+
+# f2a8bff04c9b4e60a66cba8cc40be75f
+#: ../../signals.rst:110
+msgid "Creating Signals"
+msgstr ""
+
+# bab6d6aec5d04fe294261c822c3888c0
+#: ../../signals.rst:112
+msgid ""
+"If you want to use signals in your own application, you can use the "
+"blinker library directly.  The most common use case are named signals in "
+"a custom :class:`~blinker.base.Namespace`..  This is what is recommended "
+"most of the time::"
+msgstr ""
+
+# c74d14c54cd141c383538258097c18d7
+#: ../../signals.rst:120
+msgid "Now you can create new signals like this::"
+msgstr ""
+
+# acc371a588f4413f8f9a826aa7deebba
+#: ../../signals.rst:124
+msgid ""
+"The name for the signal here makes it unique and also simplifies "
+"debugging.  You can access the name of the signal with the "
+":attr:`~blinker.base.NamedSignal.name` attribute."
+msgstr ""
+
+# 3b649f2d7cbe415b99aac9ed00dc2018
+#: ../../signals.rst:128
+msgid "For Extension Developers"
+msgstr ""
+
+# e8a36181f3874e5eaaaac34c0201ae49
+#: ../../signals.rst:130
+msgid ""
+"If you are writing a Flask extension and you want to gracefully degrade "
+"for missing blinker installations, you can do so by using the "
+":class:`flask.signals.Namespace` class."
+msgstr ""
+
+# 26743ec97b564e5d9dfb9ace224beb3c
+#: ../../signals.rst:137
+msgid "Sending Signals"
+msgstr ""
+
+# d366b58d4af4417694ea7b06fad9ffab
+#: ../../signals.rst:139
+msgid ""
+"If you want to emit a signal, you can do so by calling the "
+":meth:`~blinker.base.Signal.send` method.  It accepts a sender as first "
+"argument and optionally some keyword arguments that are forwarded to the "
+"signal subscribers::"
+msgstr ""
+
+# 64aea941f23a43f6b64f8305924fc6e4
+#: ../../signals.rst:150
+msgid ""
+"Try to always pick a good sender.  If you have a class that is emitting a"
+" signal, pass ``self`` as sender.  If you are emitting a signal from a "
+"random function, you can pass ``current_app._get_current_object()`` as "
+"sender."
+msgstr ""
+
+# 77fb3794131e40a48159b34098100637
+#: ../../signals.rst:154
+msgid "Passing Proxies as Senders"
+msgstr ""
+
+# 8bb69257bc204f988f7e3680fdc242f6
+#: ../../signals.rst:156
+msgid ""
+"Never pass :data:`~flask.current_app` as sender to a signal.  Use "
+"``current_app._get_current_object()`` instead.  The reason for this is "
+"that :data:`~flask.current_app` is a proxy and not the real application "
+"object."
+msgstr ""
+
+# 6c3dec1f7a2c401d832180fd86a362c4
+#: ../../signals.rst:163
+msgid "Signals and Flask's Request Context"
+msgstr ""
+
+# 14d74a27364947ef9e60180f9e3a35b9
+#: ../../signals.rst:165
+msgid ""
+"Signals fully support :ref:`request-context` when receiving signals. "
+"Context-local variables are consistently available between "
+":data:`~flask.request_started` and :data:`~flask.request_finished`, so "
+"you can rely on :class:`flask.g` and others as needed.  Note the "
+"limitations described in :ref:`signals-sending` and the "
+":data:`~flask.request_tearing_down` signal."
+msgstr ""
+
+# f2a13d71616f4e1da28af6fa574cbef3
+#: ../../signals.rst:173
+msgid "Decorator Based Signal Subscriptions"
+msgstr ""
+
+# 20133439dc1c422388de47403884f22b
+#: ../../signals.rst:175
+msgid ""
+"With Blinker 1.1 you can also easily subscribe to signals by using the "
+"new :meth:`~blinker.base.NamedSignal.connect_via` decorator::"
+msgstr ""
+
+# b9adde4709304851a11719f8b1081a6f
+#: ../../signals.rst:185
+msgid "Core Signals"
+msgstr ""
+
+# 8155eb933042407a8b81a50494874003
+#: ../../signals.rst:187
+msgid "Take a look at :ref:`core-signals-list` for a list of all builtin signals."
+msgstr ""
+

@@ -1,0 +1,4 @@
+[submodule "flask"]
+	path = flask
+	url = https://github.com/pallets/flask.git
+	branch = 1.1.x

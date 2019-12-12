@@ -1,0 +1,118 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 1.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../becomingbig.rst:4
+# 787cd2e2d0754a0590816a20c3fa8a55
+msgid "Becoming Big"
+msgstr ""
+
+#: ../../becomingbig.rst:6
+# ae85c5eebf014f19ae00475816e66ca9
+msgid "Here are your options when growing your codebase or scaling your application."
+msgstr ""
+
+#: ../../becomingbig.rst:9
+# d650dad6a3764fc89491f3c947aaf838
+msgid "Read the Source."
+msgstr ""
+
+#: ../../becomingbig.rst:11
+# e71b539393d04e5a869f8e30e154e994
+msgid "Flask started in part to demonstrate how to build your own framework on top of existing well-used tools Werkzeug (WSGI) and Jinja (templating), and as it developed, it became useful to a wide audience.  As you grow your codebase, don't just use Flask -- understand it.  Read the source.  Flask's code is written to be read; its documentation is published so you can use its internal APIs.  Flask sticks to documented APIs in upstream libraries, and documents its internal utilities so that you can find the hook points needed for your project."
+msgstr ""
+
+#: ../../becomingbig.rst:21
+# 4d0d795015f040a0a00e6b2316488b87
+msgid "Hook. Extend."
+msgstr ""
+
+#: ../../becomingbig.rst:23
+# 2e820bc9481f419c83afd6b294b56f77
+msgid "The :ref:`api` docs are full of available overrides, hook points, and :ref:`signals`. You can provide custom classes for things like the request and response objects.  Dig deeper on the APIs you use, and look for the customizations which are available out of the box in a Flask release.  Look for ways in which your project can be refactored into a collection of utilities and Flask extensions.  Explore the many `extensions <http://flask.pocoo.org/extensions/>`_ in the community, and look for patterns to build your own extensions if you do not find the tools you need."
+msgstr ""
+
+#: ../../becomingbig.rst:33
+# 5ef745c4b6d441b29ced147490ff6908
+msgid "Subclass."
+msgstr ""
+
+#: ../../becomingbig.rst:35
+# 9ccb5f8cb09642bb98b05d5d95189d9d
+msgid "The :class:`~flask.Flask` class has many methods designed for subclassing. You can quickly add or customize behavior by subclassing :class:`~flask.Flask` (see the linked method docs) and using that subclass wherever you instantiate an application class. This works well with :ref:`app-factories`. See :doc:`/patterns/subclassing` for an example."
+msgstr ""
+
+#: ../../becomingbig.rst:42
+# 4dedd78154f7417c8dc59f7b2c42dd0b
+msgid "Wrap with middleware."
+msgstr ""
+
+#: ../../becomingbig.rst:44
+# 3d58ea3ac639424e8c5793ede176e4e6
+msgid "The :ref:`app-dispatch` chapter shows in detail how to apply middleware. You can introduce WSGI middleware to wrap your Flask instances and introduce fixes and changes at the layer between your Flask application and your HTTP server. Werkzeug includes several `middlewares <https://werkzeug.palletsprojects.com/middleware/>`_."
+msgstr ""
+
+#: ../../becomingbig.rst:51
+# acc1b7b7b7f44e9190746c3e5acb016c
+msgid "Fork."
+msgstr ""
+
+#: ../../becomingbig.rst:53
+# cb343207fcfa4e6d9294d1ab9255e21d
+msgid "If none of the above options work, fork Flask.  The majority of code of Flask is within Werkzeug and Jinja2.  These libraries do the majority of the work. Flask is just the paste that glues those together.  For every project there is the point where the underlying framework gets in the way (due to assumptions the original developers had).  This is natural because if this would not be the case, the framework would be a very complex system to begin with which causes a steep learning curve and a lot of user frustration."
+msgstr ""
+
+#: ../../becomingbig.rst:61
+# 1504e4be90d040bbb94bf4250e426af2
+msgid "This is not unique to Flask.  Many people use patched and modified versions of their framework to counter shortcomings.  This idea is also reflected in the license of Flask.  You don't have to contribute any changes back if you decide to modify the framework."
+msgstr ""
+
+#: ../../becomingbig.rst:66
+# 07f5e968d6b9444c86e8c2ae22ea46cf
+msgid "The downside of forking is of course that Flask extensions will most likely break because the new framework has a different import name. Furthermore integrating upstream changes can be a complex process, depending on the number of changes.  Because of that, forking should be the very last resort."
+msgstr ""
+
+#: ../../becomingbig.rst:73
+# 1795018800bd4390911f58f907dad510
+msgid "Scale like a pro."
+msgstr ""
+
+#: ../../becomingbig.rst:75
+# 7b63cfdddd274c6082366d485eda181d
+msgid "For many web applications the complexity of the code is less an issue than the scaling for the number of users or data entries expected.  Flask by itself is only limited in terms of scaling by your application code, the data store you want to use and the Python implementation and webserver you are running on."
+msgstr ""
+
+#: ../../becomingbig.rst:81
+# c194a0f256fa46e1b9404246d11963e5
+msgid "Scaling well means for example that if you double the amount of servers you get about twice the performance.  Scaling bad means that if you add a new server the application won't perform any better or would not even support a second server."
+msgstr ""
+
+#: ../../becomingbig.rst:86
+# b49d7b57dacb4957aa7e7b991e6df27b
+msgid "There is only one limiting factor regarding scaling in Flask which are the context local proxies.  They depend on context which in Flask is defined as being either a thread, process or greenlet.  If your server uses some kind of concurrency that is not based on threads or greenlets, Flask will no longer be able to support these global proxies.  However the majority of servers are using either threads, greenlets or separate processes to achieve concurrency which are all methods well supported by the underlying Werkzeug library."
+msgstr ""
+
+#: ../../becomingbig.rst:96
+# 86080614ca624c77a2d981e4dfa7b1fe
+msgid "Discuss with the community."
+msgstr ""
+
+#: ../../becomingbig.rst:98
+# 2aab135e71a8460e83ed8af28b6c5301
+msgid "The Flask developers keep the framework accessible to users with codebases big and small. If you find an obstacle in your way, caused by Flask, don't hesitate to contact the developers on the mailing list or IRC channel.  The best way for the Flask and Flask extension developers to improve the tools for larger applications is getting feedback from users."
+msgstr ""
+

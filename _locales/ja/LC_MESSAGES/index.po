@@ -1,0 +1,100 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 1.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+# d1ca75e0d0a44efbb622ea1c2fbcd81f
+#: ../../index.rst:6
+msgid "Welcome to Flask"
+msgstr "Flaskへようこそ"
+
+# f66ac57a3fb84c069819e6c7876baf4c
+#: ../../index.rst:13
+msgid ""
+"Welcome to Flask's documentation. Get started with :ref:`installation` "
+"and then get an overview with the :ref:`quickstart`. There is also a more"
+" detailed :ref:`tutorial` that shows how to create a small but complete "
+"application with Flask. Common patterns are described in the "
+":ref:`patterns` section. The rest of the docs describe each component of "
+"Flask in detail, with a full reference in the :ref:`api` section."
+msgstr ""
+"Flaskのドキュメントへようこそ。\ :ref:`installation`\ から始めて、"
+"それから\ :ref:`quickstart`\ で概要をつかみましょう 。より詳細な\ :ref:`tutorial`\ "
+"では、小さいけれども完成しているFlaskアプリケーションをどのように作成するか示しています。"
+"\ :ref:`patterns`\ セクションでは一般的なパターンを記述しています。この文書のその他の"
+"部分ではFlaskの各コンポーネントについて詳細を記述しており、その完全なリファレンスは"
+"\ :ref:`api`\ セクションにあります。"
+
+# 337be1ceb40d45a98a218c0e9213fecd
+#: ../../index.rst:20
+msgid ""
+"Flask depends on the `Jinja`_ template engine and the `Werkzeug`_ WSGI "
+"toolkit. The documentation for these libraries can be found at:"
+msgstr ""
+"Flaskはテンプレートエンジン\ `Jinja`_\ とWSGIツールキット\ `Werkzeug`_\ を"
+"必要とします。それらのライブラリのドキュメントはこちらです："
+
+# daadbbf44d76476689aead07c277bc5d
+#: ../../index.rst:23
+msgid "`Jinja documentation <http://jinja.pocoo.org/docs>`_"
+msgstr "`Jinjaドキュメント <http://jinja.pocoo.org/docs>`_"
+
+# 259ce2847d904befafceaa4a99142e72
+#: ../../index.rst:24
+msgid "`Werkzeug documentation <https://werkzeug.palletsprojects.com/>`_"
+msgstr "`Werkzeugドキュメント <https://werkzeug.palletsprojects.com/>`_"
+
+# fe94cd0531104883b0dd873d8795477d
+#: ../../index.rst:31
+msgid "User's Guide"
+msgstr "ユーザーガイド"
+
+# 96722e7bd3764984912cc5571f70491c
+#: ../../index.rst:33
+msgid ""
+"This part of the documentation, which is mostly prose, begins with some "
+"background information about Flask, then focuses on step-by-step "
+"instructions for web development with Flask."
+msgstr ""
+"ドキュメントのこのパートでは、大部分は散文的な形になっていますが、"
+"Flaskの背景となる情報から始めて、それからFlaskを使ったweb開発を一歩ずつ"
+"示すことに注力します。"
+
+# 9e2cc0f71a9443bca78ac49ec8c7475a
+#: ../../index.rst:65
+msgid "API Reference"
+msgstr "APIリファレンス"
+
+# 36f38a4f5938453392541b94af82bf24
+#: ../../index.rst:67
+msgid ""
+"If you are looking for information on a specific function, class or "
+"method, this part of the documentation is for you."
+msgstr ""
+"もしも特定の関数、クラス、またはメソッドの情報を探している場合は、"
+"このパートが対応します。"
+
+# 065aae29f19444379a419a28bd1b4ef6
+#: ../../index.rst:77
+msgid "Additional Notes"
+msgstr "追記事項"
+
+# 2d16c931c08340a8b715f74c280d5396
+#: ../../index.rst:79
+msgid "Design notes, legal information and changelog are here for the interested."
+msgstr "関心のある人向けの、設計上の注記、法律関連の情報、そしてchangelogはここです。"
+

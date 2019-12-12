@@ -1,0 +1,177 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 1.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../tutorial/database.rst:4
+# a65bf01707f248b8b7906f0c606c943a
+msgid "Define and Access the Database"
+msgstr ""
+
+#: ../../tutorial/database.rst:6
+# b376328407db4e2498c89c9d4ea452b4
+msgid "The application will use a `SQLite`_ database to store users and posts. Python comes with built-in support for SQLite in the :mod:`sqlite3` module."
+msgstr ""
+
+#: ../../tutorial/database.rst:10
+# 5dafff79f3144781815591e582e52e62
+msgid "SQLite is convenient because it doesn't require setting up a separate database server and is built-in to Python. However, if concurrent requests try to write to the database at the same time, they will slow down as each write happens sequentially. Small applications won't notice this. Once you become big, you may want to switch to a different database."
+msgstr ""
+
+#: ../../tutorial/database.rst:17
+# 10f95297a6db40d6948a3bafb479ee72
+msgid "The tutorial doesn't go into detail about SQL. If you are not familiar with it, the SQLite docs describe the `language`_."
+msgstr ""
+
+#: ../../tutorial/database.rst:25
+# 6e5cb94b977049899e8deea67ffeedac
+msgid "Connect to the Database"
+msgstr ""
+
+#: ../../tutorial/database.rst:27
+# fd024e254cec4b2a9c1aede4ada8e153
+msgid "The first thing to do when working with a SQLite database (and most other Python database libraries) is to create a connection to it. Any queries and operations are performed using the connection, which is closed after the work is finished."
+msgstr ""
+
+#: ../../tutorial/database.rst:32
+# a0666e4c3bba4a6e8409d933e29659cf
+msgid "In web applications this connection is typically tied to the request. It is created at some point when handling a request, and closed before the response is sent."
+msgstr ""
+
+#: ../../tutorial/database.rst:36
+#: ../../tutorial/database.rst:120
+#: ../../tutorial/database.rst:157
+# 1d614eccb21941a285022afd51291625
+# 30ccdebaa37247208a96a241960ce216
+# 2227d4054eb14868954d39e13387cc86
+msgid "``flaskr/db.py``"
+msgstr ""
+
+#: ../../tutorial/database.rst:63
+# f16cd7e3eb96458d8e0f8798b3fbdcf3
+msgid ":data:`g` is a special object that is unique for each request. It is used to store data that might be accessed by multiple functions during the request. The connection is stored and reused instead of creating a new connection if ``get_db`` is called a second time in the same request."
+msgstr ""
+
+#: ../../tutorial/database.rst:69
+# 57c49f37c264451ca62a8b74eef260ea
+msgid ":data:`current_app` is another special object that points to the Flask application handling the request. Since you used an application factory, there is no application object when writing the rest of your code. ``get_db`` will be called when the application has been created and is handling a request, so :data:`current_app` can be used."
+msgstr ""
+
+#: ../../tutorial/database.rst:75
+# 7b1c53689532430cbe7af3b5005ba8b0
+msgid ":func:`sqlite3.connect` establishes a connection to the file pointed at by the ``DATABASE`` configuration key. This file doesn't have to exist yet, and won't until you initialize the database later."
+msgstr ""
+
+#: ../../tutorial/database.rst:79
+# 1ccdf12af69342b5afe5583956828437
+msgid ":class:`sqlite3.Row` tells the connection to return rows that behave like dicts. This allows accessing the columns by name."
+msgstr ""
+
+#: ../../tutorial/database.rst:82
+# 6dbabdd5d4ad496795fe1638a6b519d8
+msgid "``close_db`` checks if a connection was created by checking if ``g.db`` was set. If the connection exists, it is closed. Further down you will tell your application about the ``close_db`` function in the application factory so that it is called after each request."
+msgstr ""
+
+#: ../../tutorial/database.rst:89
+# 4843a3c45dcf4977b32f29c65dc46d3b
+msgid "Create the Tables"
+msgstr ""
+
+#: ../../tutorial/database.rst:91
+# ff0793b8aaff4516980c27db756a3ebc
+msgid "In SQLite, data is stored in *tables* and *columns*. These need to be created before you can store and retrieve data. Flaskr will store users in the ``user`` table, and posts in the ``post`` table. Create a file with the SQL commands needed to create empty tables:"
+msgstr ""
+
+#: ../../tutorial/database.rst:96
+# 8d7aacca972d4058ac35d7a7e6379d0e
+msgid "``flaskr/schema.sql``"
+msgstr ""
+
+#: ../../tutorial/database.rst:117
+# c7b19d386a4f467c83ef0f71bf255707
+msgid "Add the Python functions that will run these SQL commands to the ``db.py`` file:"
+msgstr ""
+
+#: ../../tutorial/database.rst:137
+# ff8806806fec4501a2503e28ce08828f
+msgid ":meth:`open_resource() <Flask.open_resource>` opens a file relative to the ``flaskr`` package, which is useful since you won't necessarily know where that location is when deploying the application later. ``get_db`` returns a database connection, which is used to execute the commands read from the file."
+msgstr ""
+
+#: ../../tutorial/database.rst:143
+# a5c54751d2444cc8a7d30aedf21566e9
+msgid ":func:`click.command` defines a command line command called ``init-db`` that calls the ``init_db`` function and shows a success message to the user. You can read :ref:`cli` to learn more about writing commands."
+msgstr ""
+
+#: ../../tutorial/database.rst:149
+# 87fbdc1f6a1d4465ab8aeb48871ea63f
+msgid "Register with the Application"
+msgstr ""
+
+#: ../../tutorial/database.rst:151
+# d38c3d0f85624753bd0074476728e166
+msgid "The ``close_db`` and ``init_db_command`` functions need to be registered with the application instance; otherwise, they won't be used by the application. However, since you're using a factory function, that instance isn't available when writing the functions. Instead, write a function that takes an application and does the registration."
+msgstr ""
+
+#: ../../tutorial/database.rst:164
+# caed598253a048b189ff92c1bb287107
+msgid ":meth:`app.teardown_appcontext() <Flask.teardown_appcontext>` tells Flask to call that function when cleaning up after returning the response."
+msgstr ""
+
+#: ../../tutorial/database.rst:168
+# 89bd147e9a6f470d8efb73c9c3ccb433
+msgid ":meth:`app.cli.add_command() <click.Group.add_command>` adds a new command that can be called with the ``flask`` command."
+msgstr ""
+
+#: ../../tutorial/database.rst:171
+# 0f7ed85064f3486891bea05ca63e41ce
+msgid "Import and call this function from the factory. Place the new code at the end of the factory function before returning the app."
+msgstr ""
+
+#: ../../tutorial/database.rst:174
+# 7154fede885c4247b0830a1d59ea0549
+msgid "``flaskr/__init__.py``"
+msgstr ""
+
+#: ../../tutorial/database.rst:188
+# f49c496af7b04b13bccc103cdf4d3946
+msgid "Initialize the Database File"
+msgstr ""
+
+#: ../../tutorial/database.rst:190
+# 00d8526ff1464f078f901671952faf4a
+msgid "Now that ``init-db`` has been registered with the app, it can be called using the ``flask`` command, similar to the ``run`` command from the previous page."
+msgstr ""
+
+#: ../../tutorial/database.rst:196
+# 155dfb1c52b44a29adbb3d2d733601f4
+msgid "If you're still running the server from the previous page, you can either stop the server, or run this command in a new terminal. If you use a new terminal, remember to change to your project directory and activate the env as described in :ref:`install-activate-env`. You'll also need to set ``FLASK_APP`` and ``FLASK_ENV`` as shown on the previous page."
+msgstr ""
+
+#: ../../tutorial/database.rst:203
+# 09fe258caa404de785869585c42cec8b
+msgid "Run the ``init-db`` command:"
+msgstr ""
+
+#: ../../tutorial/database.rst:210
+# 13dee5448eda491b9ee8bfa3b14e1d6a
+msgid "There will now be a ``flaskr.sqlite`` file in the ``instance`` folder in your project."
+msgstr ""
+
+#: ../../tutorial/database.rst:213
+# 13d3965d91434749ba352c05805c671a
+msgid "Continue to :doc:`views`."
+msgstr ""
+

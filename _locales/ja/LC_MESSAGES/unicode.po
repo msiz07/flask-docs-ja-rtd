@@ -1,0 +1,224 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 1.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+# 69e594f75cf443baaf5106e096b590b7
+#: ../../unicode.rst:2
+msgid "Unicode in Flask"
+msgstr ""
+
+# 5df1ecb9a02c4820b68debef729939c9
+#: ../../unicode.rst:4
+msgid ""
+"Flask, like Jinja2 and Werkzeug, is totally Unicode based when it comes "
+"to text.  Not only these libraries, also the majority of web related "
+"Python libraries that deal with text.  If you don't know Unicode so far, "
+"you should probably read `The Absolute Minimum Every Software Developer "
+"Absolutely, Positively Must Know About Unicode and Character Sets "
+"<https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-"
+"software-developer-absolutely-positively-must-know-about-unicode-and-"
+"character-sets-no-excuses/>`_. This part of the documentation just tries "
+"to cover the very basics so that you have a pleasant experience with "
+"Unicode related things."
+msgstr ""
+
+# 2371fa88446f456aa25a4ea74071a863
+#: ../../unicode.rst:14
+msgid "Automatic Conversion"
+msgstr ""
+
+# df2c4fd7986f4fbf9f37feaf173ef26a
+#: ../../unicode.rst:16
+msgid ""
+"Flask has a few assumptions about your application (which you can change "
+"of course) that give you basic and painless Unicode support:"
+msgstr ""
+
+# 081f90d4b1eb4c548a539dffbe8f94f5
+#: ../../unicode.rst:19
+msgid "the encoding for text on your website is UTF-8"
+msgstr ""
+
+# ac4a2faeeb884c029b5456a1e8eda52e
+#: ../../unicode.rst:20
+msgid ""
+"internally you will always use Unicode exclusively for text except for "
+"literal strings with only ASCII character points."
+msgstr ""
+
+# eb1758d607b149cab080ed373970b849
+#: ../../unicode.rst:22
+msgid ""
+"encoding and decoding happens whenever you are talking over a protocol "
+"that requires bytes to be transmitted."
+msgstr ""
+
+# 84078fc0ba52451b8c4a36c944d387f2
+#: ../../unicode.rst:25
+msgid "So what does this mean to you?"
+msgstr ""
+
+# 51dc058505104e5590964bc817574fff
+#: ../../unicode.rst:27
+msgid ""
+"HTTP is based on bytes.  Not only the protocol, also the system used to "
+"address documents on servers (so called URIs or URLs).  However HTML "
+"which is usually transmitted on top of HTTP supports a large variety of "
+"character sets and which ones are used, are transmitted in an HTTP "
+"header. To not make this too complex Flask just assumes that if you are "
+"sending Unicode out you want it to be UTF-8 encoded.  Flask will do the "
+"encoding and setting of the appropriate headers for you."
+msgstr ""
+
+# ecd734bc209548dab6829da55651a1f6
+#: ../../unicode.rst:35
+msgid ""
+"The same is true if you are talking to databases with the help of "
+"SQLAlchemy or a similar ORM system.  Some databases have a protocol that "
+"already transmits Unicode and if they do not, SQLAlchemy or your other "
+"ORM should take care of that."
+msgstr ""
+
+# 331726c5341d468a907c2f559e58d5fa
+#: ../../unicode.rst:41
+msgid "The Golden Rule"
+msgstr ""
+
+# 213fc2d1a9f74ac5b9616de58691e69f
+#: ../../unicode.rst:43
+msgid ""
+"So the rule of thumb: if you are not dealing with binary data, work with "
+"Unicode.  What does working with Unicode in Python 2.x mean?"
+msgstr ""
+
+# 1394be55698e458792e5f813604b4fc4
+#: ../../unicode.rst:46
+msgid ""
+"as long as you are using ASCII code points only (basically numbers, some "
+"special characters of Latin letters without umlauts or anything fancy) "
+"you can use regular string literals (``'Hello World'``)."
+msgstr ""
+
+# 15a570a83d4e4e7e99df549100e18f45
+#: ../../unicode.rst:49
+msgid ""
+"if you need anything else than ASCII in a string you have to mark this "
+"string as Unicode string by prefixing it with a lowercase `u`. (like "
+"``u'Hänsel und Gretel'``)"
+msgstr ""
+
+# e1c0eebcd13c45f79fb09c2d8fa298a3
+#: ../../unicode.rst:52
+msgid ""
+"if you are using non-Unicode characters in your Python files you have to "
+"tell Python which encoding your file uses.  Again, I recommend UTF-8 for "
+"this purpose.  To tell the interpreter your encoding you can put the ``# "
+"-*- coding: utf-8 -*-`` into the first or second line of your Python "
+"source file."
+msgstr ""
+
+# 81be3c6736f74aaab8b8b8c7f6689bf5
+#: ../../unicode.rst:57
+msgid ""
+"Jinja is configured to decode the template files from UTF-8.  So make "
+"sure to tell your editor to save the file as UTF-8 there as well."
+msgstr ""
+
+# 5c12711e6d9246b7b4dd26b532c4fc82
+#: ../../unicode.rst:61
+msgid "Encoding and Decoding Yourself"
+msgstr ""
+
+# cf0ff6d4abcb4a179f6d78a366ab6b44
+#: ../../unicode.rst:63
+msgid ""
+"If you are talking with a filesystem or something that is not really "
+"based on Unicode you will have to ensure that you decode properly when "
+"working with Unicode interface.  So for example if you want to load a "
+"file on the filesystem and embed it into a Jinja2 template you will have "
+"to decode it from the encoding of that file.  Here the old problem that "
+"text files do not specify their encoding comes into play.  So do yourself"
+" a favour and limit yourself to UTF-8 for text files as well."
+msgstr ""
+
+# 4d09e1c90dd844a3ab75918d08693141
+#: ../../unicode.rst:71
+msgid ""
+"Anyways.  To load such a file with Unicode you can use the built-in "
+":meth:`str.decode` method::"
+msgstr ""
+
+# b430cd3b0fe945d7be9c44c79621334d
+#: ../../unicode.rst:78
+msgid ""
+"To go from Unicode into a specific charset such as UTF-8 you can use the "
+":meth:`unicode.encode` method::"
+msgstr ""
+
+# 1ba04705613c45b4b4869e9d2df049d5
+#: ../../unicode.rst:86
+msgid "Configuring Editors"
+msgstr ""
+
+# 0522c54800ba4c4bb040f1f9b2d1349b
+#: ../../unicode.rst:88
+msgid ""
+"Most editors save as UTF-8 by default nowadays but in case your editor is"
+" not configured to do this you have to change it.  Here some common ways "
+"to set your editor to store as UTF-8:"
+msgstr ""
+
+# 6b5c6be2305d4fd582ac4be2ec9ec795
+#: ../../unicode.rst:92
+msgid "Vim: put ``set enc=utf-8`` to your ``.vimrc`` file."
+msgstr ""
+
+# 5fbb807ea8054bdba8ccb923f3c3ed01
+#: ../../unicode.rst:94
+msgid ""
+"Emacs: either use an encoding cookie or put this into your ``.emacs`` "
+"file::"
+msgstr ""
+
+# 0531495c24fe417cb512eeeea9df7cbc
+#: ../../unicode.rst:100
+msgid "Notepad++:"
+msgstr ""
+
+# 2c691e2c7cd043d6aa25145c9d2b8c4e
+#: ../../unicode.rst:102
+msgid "Go to *Settings -> Preferences ...*"
+msgstr ""
+
+# cc879e8e1fcc45b5aae3db18d61f5c79
+#: ../../unicode.rst:103
+msgid "Select the \"New Document/Default Directory\" tab"
+msgstr ""
+
+# 63cf37af2a3d4c6f93990866de3ffbc3
+#: ../../unicode.rst:104
+msgid "Select \"UTF-8 without BOM\" as encoding"
+msgstr ""
+
+# f147f15e5dcb4d2ba7f34454dbf884c3
+#: ../../unicode.rst:106
+msgid ""
+"It is also recommended to use the Unix newline format, you can select it "
+"in the same panel but this is not a requirement."
+msgstr ""
+

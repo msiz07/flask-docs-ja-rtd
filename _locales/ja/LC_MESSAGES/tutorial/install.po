@@ -1,0 +1,201 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 1.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+# 0604452f13ab45d295efbe3328e04eac
+#: ../../tutorial/install.rst:2
+msgid "Make the Project Installable"
+msgstr "インストール可能なプロジェクト"
+
+# 122f43b66f744afab1b1636009af4529
+#: ../../tutorial/install.rst:4
+msgid ""
+"Making your project installable means that you can build a *distribution*"
+" file and install that in another environment, just like you installed "
+"Flask in your project's environment. This makes deploying your project "
+"the same as installing any other library, so you're using all the "
+"standard Python tools to manage everything."
+msgstr ""
+"プロジェクトをインストール可能にするということは、このプロジェクトの"
+"環境へFlaskをインストールしたときのように、\ *配布用（distribution)*\ "
+"ファイルを作成でき、それを他の環境へインストールできることを意味します。"
+"これは、自分のプロジェクトのデプロイを、他のどのライブラリのインストール"
+"とも同じような扱いにするため、全ての標準的なPythonのツールを使って、"
+"全てを管理できるようになります（訳注: パッケージ管理に関していくつかある"
+"Pythonでの標準的なツール・やり方のどれを使っても、インストールやアップ"
+"グレードなどができるようになります）。"
+
+# 5116e1789c09453db19475c69c3e56f7
+#: ../../tutorial/install.rst:10
+msgid ""
+"Installing also comes with other benefits that might not be obvious from "
+"the tutorial or as a new Python user, including:"
+msgstr ""
+"インストールするということは、このチュートリアルからは明白ではないかもし"
+"れず、新規のPythonユーザにとっても明白ではないかもしれない、以下のような、"
+"別の利点もあります。"
+
+# 1782961b7da24096924c256c85b737fa
+#: ../../tutorial/install.rst:13
+msgid ""
+"Currently, Python and Flask understand how to use the ``flaskr`` package "
+"only because you're running from your project's directory. Installing "
+"means you can import it no matter where you run from."
+msgstr ""
+"この時点では、PythonとFlaskがどうやって\ ``flaskr``\ パッケージを使用するか"
+"理解している理由は、プロジェクトのディレクトリから（flask runコマンドなどを）"
+"実行しているということだけです。インストールするということは、どこから実行"
+"してもそれ（flaskr）をimportできることを意味します。"
+
+# 950ccf2326564c45a52e6c11592fc8c9
+#: ../../tutorial/install.rst:17
+msgid ""
+"You can manage your project's dependencies just like other packages do, "
+"so ``pip install yourproject.whl`` installs them."
+msgstr ""
+"プロジェクトの依存対象を、他のパッケージと同じようなやり方で管理可能になり、"
+"\ ``pip install yourproject.whl``\ でインストールできるようになります。"
+
+# 3eff4bc3b2384e7fb86684e9b6f79e7a
+#: ../../tutorial/install.rst:20
+msgid ""
+"Test tools can isolate your test environment from your development "
+"environment."
+msgstr ""
+"テストツールがテスト環境を開発環境から隔離できるようになります。"
+
+# 0ae536e2945b4864ba469c88b56844bd
+#: ../../tutorial/install.rst:24
+msgid ""
+"This is being introduced late in the tutorial, but in your future "
+"projects you should always start with this."
+msgstr ""
+"テスト環境は、このチュートリアルでは後の方で紹介されていますが、"
+"自分の将来のプロジェクトでは常にテスト環境と一緒に開始するべきです。"
+
+# ee5647b0192b4faa8fb7c0ddb91618f4
+#: ../../tutorial/install.rst:29
+msgid "Describe the Project"
+msgstr "プロジェクトの記述"
+
+# 1c5b7cb1457f444baff600b774f1e7be
+#: ../../tutorial/install.rst:31
+msgid ""
+"The ``setup.py`` file describes your project and the files that belong to"
+" it."
+msgstr ""
+"``setup.py``\ ファイルはプロジェクトと、プロジェクトに所属するファイルを"
+"記述します。"
+
+# 8592ddcca383428abd0aa38d287c27dc
+#: ../../tutorial/install.rst:34
+msgid "``setup.py``"
+msgstr ""
+
+# ebcd968686ae4273aa79dab013f973ed
+#: ../../tutorial/install.rst:51
+msgid ""
+"``packages`` tells Python what package directories (and the Python files "
+"they contain) to include. ``find_packages()`` finds these directories "
+"automatically so you don't have to type them out. To include other files,"
+" such as the static and templates directories, ``include_package_data`` "
+"is set. Python needs another file named ``MANIFEST.in`` to tell what this"
+" other data is."
+msgstr ""
+"``packages``\ は、どのpackageディレクトリ（およびそれが含んでいるPython"
+"ファイル）を含めるべきかをPythonに教えます。\ ``find_packages()``\ は、"
+"packageディレクトリを全て手入力せずに済むように、packageディレクトリを"
+"自動的に見つけ出します。staticやtemplatesディレクトリのような、（Pythonの"
+"packageではない）その他のファイルを含めるには、\ ``include_package_data``\ "
+"を設定します。そのようなその他のデータが何かを教えるためには、Pythonは\ "
+"``MANIFEST.in``\ というもう一つのファイルを必要とします。"
+
+# 3676254b65154634b22035d9507fb9a4
+#: ../../tutorial/install.rst:58
+msgid "``MANIFEST.in``"
+msgstr ""
+
+# 9b211a7fde1c48819bf99e27222be3c2
+#: ../../tutorial/install.rst:66
+msgid ""
+"This tells Python to copy everything in the ``static`` and ``templates`` "
+"directories, and the ``schema.sql`` file, but to exclude all bytecode "
+"files."
+msgstr ""
+"これはPythonに、\ ``static``\ と\ ``templates``\ ディレクトリにある全てと、"
+"\ ``schema.sql``\ ファイルはコピーし、バイトコードのファイル（訳注：Pythonが"
+"実行時に作成・使用する中間ファイル）は除外するように伝えます。"
+
+# de43139ebb384058840d92eae2d94045
+#: ../../tutorial/install.rst:70
+msgid ""
+"See the `official packaging guide`_ for another explanation of the files "
+"and options used."
+msgstr ""
+"ファイルと使用されているオプションの別の説明については、\ `official packaging "
+"guide`_\ を見てください。"
+
+# 7d08ae7244704983998e7be1197c2678
+#: ../../tutorial/install.rst:77
+msgid "Install the Project"
+msgstr "プロジェクトのインストール"
+
+# 6262364de0c04530bfa38a865b54345d
+#: ../../tutorial/install.rst:79
+msgid "Use ``pip`` to install your project in the virtual environment."
+msgstr "``pip``\ を使って自分のプロジェクトを仮想環境へインストールします。"
+
+# 8f85efba15514a4b82aad73026d61142
+#: ../../tutorial/install.rst:85
+msgid ""
+"This tells pip to find ``setup.py`` in the current directory and install "
+"it in *editable* or *development* mode. Editable mode means that as you "
+"make changes to your local code, you'll only need to re-install if you "
+"change the metadata about the project, such as its dependencies."
+msgstr ""
+"これはpipに、いまのディレクトリから\ ``setup.py``\ を見つけ出し、それを\ "
+"*編集可能（editable）*\ または\ *開発（development）*\ モードでインストール"
+"するように伝えます。編集可能モードは、ローカルのコードを変更したときに、"
+"プロジェクトの依存対象のような、プロジェクトに関するメタデータを変更した"
+"場合だけ再インストールが必要なようにします。"
+
+# 31363c3b5ef644f5ae3ec88ce85ad258
+#: ../../tutorial/install.rst:90
+msgid "You can observe that the project is now installed with ``pip list``."
+msgstr ""
+"この時点でプロジェクトがインストールされたことを、\ ``pip list``\ を使って"
+"確かめることができます。"
+
+# df2290f31b5f4a22a35e28d7c65e7bcb
+#: ../../tutorial/install.rst:109
+msgid ""
+"Nothing changes from how you've been running your project so far. "
+"``FLASK_APP`` is still set to ``flaskr`` and ``flask run`` still runs the"
+" application, but you can call it from anywhere, not just the ``flask-"
+"tutorial`` directory."
+msgstr ""
+"プロジェクトの実行のしかたは今までから変化はありません。\ "
+"``FLASK_APP``\ はまだ\ ``flaskr``\ に設定されており、\ ``flask run``\ "
+"はまだアプリケーションを実行させますが、\ ``flask-tutorial``\ ディレクトリ"
+"からだけではなく、どこからでも呼び出せるようになっています。"
+
+# c3b9606efef14c308d7538f8a7338854
+#: ../../tutorial/install.rst:114
+msgid "Continue to :doc:`tests`."
+msgstr ":doc:`tests`\ へ続きます。"
+

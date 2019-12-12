@@ -1,0 +1,488 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 1.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../upgrading.rst:2
+# e22aeaadf5f24eb89ae88d7514b88f41
+msgid "Upgrading to Newer Releases"
+msgstr ""
+
+#: ../../upgrading.rst:4
+# ff017add2a734ca6a16181161299ec94
+msgid "Flask itself is changing like any software is changing over time.  Most of the changes are the nice kind, the kind where you don't have to change anything in your code to profit from a new release."
+msgstr ""
+
+#: ../../upgrading.rst:8
+# 5e2af73962ed464da57a84ce0a87410b
+msgid "However every once in a while there are changes that do require some changes in your code or there are changes that make it possible for you to improve your own code quality by taking advantage of new features in Flask."
+msgstr ""
+
+#: ../../upgrading.rst:13
+# 953f1e0eebfe4b85b67cd085559f45ee
+msgid "This section of the documentation enumerates all the changes in Flask from release to release and how you can change your code to have a painless updating experience."
+msgstr ""
+
+#: ../../upgrading.rst:17
+# 0ed4c8a009464bbfa336f873d01ff1b2
+msgid "Use the :command:`pip` command to upgrade your existing Flask installation by providing the ``--upgrade`` parameter::"
+msgstr ""
+
+#: ../../upgrading.rst:25
+# 96fc88705046451bac952c56f11dd828
+msgid "Version 0.12"
+msgstr ""
+
+#: ../../upgrading.rst:28
+# 2a187e82738143728f8cbd9354e13776
+msgid "Changes to send_file"
+msgstr ""
+
+#: ../../upgrading.rst:30
+# d52479a553824d54b48a063f935b611f
+msgid "The ``filename`` is no longer automatically inferred from file-like objects. This means that the following code will no longer automatically have ``X-Sendfile`` support, etag generation or MIME-type guessing::"
+msgstr ""
+
+#: ../../upgrading.rst:36
+# d39031b052a94693a4df06fc6a1a8ff8
+msgid "Any of the following is functionally equivalent::"
+msgstr ""
+
+#: ../../upgrading.rst:52
+# bcb50dd0c72d47dea68d46f93dd0c7ae
+msgid "The reason for this is that some file-like objects have an invalid or even misleading ``name`` attribute. Silently swallowing errors in such cases was not a satisfying solution."
+msgstr ""
+
+#: ../../upgrading.rst:56
+# b820f2e7febb4d228f0718352f0e1367
+msgid "Additionally the default of falling back to ``application/octet-stream`` has been restricted. If Flask can't guess one or the user didn't provide one, the function fails if no filename information was provided."
+msgstr ""
+
+#: ../../upgrading.rst:63
+# 9c02d85296114ee2b30ad1bce989c23b
+msgid "Version 0.11"
+msgstr ""
+
+#: ../../upgrading.rst:65
+# c4f0c21d5be84bd49b6dc867b5bf1e96
+msgid "0.11 is an odd release in the Flask release cycle because it was supposed to be the 1.0 release.  However because there was such a long lead time up to the release we decided to push out a 0.11 release first with some changes removed to make the transition easier.  If you have been tracking the master branch which was 1.0 you might see some unexpected changes."
+msgstr ""
+
+#: ../../upgrading.rst:71
+# d6561cec54134dfa9966422144a355d1
+msgid "In case you did track the master branch you will notice that :command:`flask --app` is removed now. You need to use the environment variable to specify an application."
+msgstr ""
+
+#: ../../upgrading.rst:76
+# 0c2bb694e63d4890bcf85f9f6f4f7446
+msgid "Debugging"
+msgstr ""
+
+#: ../../upgrading.rst:78
+# 2eff682c02c34835876e96a7b872ec9b
+msgid "Flask 0.11 removed the ``debug_log_format`` attribute from Flask applications.  Instead the new ``LOGGER_HANDLER_POLICY`` configuration can be used to disable the default log handlers and custom log handlers can be set up."
+msgstr ""
+
+#: ../../upgrading.rst:84
+# bdeef650becf4f408eea458827dd2bf0
+msgid "Error handling"
+msgstr ""
+
+#: ../../upgrading.rst:86
+# 3e4db85b15a54bc59583594c0087c052
+msgid "The behavior of error handlers was changed. The precedence of handlers used to be based on the decoration/call order of :meth:`~flask.Flask.errorhandler` and :meth:`~flask.Flask.register_error_handler`, respectively. Now the inheritance hierarchy takes precedence and handlers for more specific exception classes are executed instead of more general ones. See :ref:`error-handlers` for specifics."
+msgstr ""
+
+#: ../../upgrading.rst:94
+# 3d94e13dd82d4e6ba1b6ebb0a5ef2c9c
+msgid "Trying to register a handler on an instance now raises :exc:`ValueError`."
+msgstr ""
+
+#: ../../upgrading.rst:98
+# b8aff851169e404e8f89cfc42533ac93
+msgid "There used to be a logic error allowing you to register handlers only for exception *instances*. This was unintended and plain wrong, and therefore was replaced with the intended behavior of registering handlers only using exception classes and HTTP error codes."
+msgstr ""
+
+#: ../../upgrading.rst:104
+# 28b4c9e05045411a8ae80819d3251bb6
+msgid "Templating"
+msgstr ""
+
+#: ../../upgrading.rst:106
+# 53f56930003a4c06818a436ce60dcf45
+msgid "The :func:`~flask.templating.render_template_string` function has changed to autoescape template variables by default. This better matches the behavior of :func:`~flask.templating.render_template`."
+msgstr ""
+
+#: ../../upgrading.rst:111
+# f37b6db9a001435087821054edf3cc1f
+msgid "Extension imports"
+msgstr ""
+
+#: ../../upgrading.rst:113
+# ae9ffacbdb8a4e87b4cdd3c823bca1f9
+msgid "Extension imports of the form ``flask.ext.foo`` are deprecated, you should use ``flask_foo``."
+msgstr ""
+
+#: ../../upgrading.rst:116
+# 7bdea38a9a904ac4a8f37b6e4b51b582
+msgid "The old form still works, but Flask will issue a ``flask.exthook.ExtDeprecationWarning`` for each extension you import the old way. We also provide a migration utility called `flask-ext-migrate <https://github.com/pallets/flask-ext-migrate>`_ that is supposed to automatically rewrite your imports for this."
+msgstr ""
+
+#: ../../upgrading.rst:125
+# bccb968bd7fe48b7b2ff5ab062ed562d
+msgid "Version 0.10"
+msgstr ""
+
+#: ../../upgrading.rst:127
+# 3e08357054c7495094dee9ee3a6f0556
+msgid "The biggest change going from 0.9 to 0.10 is that the cookie serialization format changed from pickle to a specialized JSON format.  This change has been done in order to avoid the damage an attacker can do if the secret key is leaked.  When you upgrade you will notice two major changes: all sessions that were issued before the upgrade are invalidated and you can only store a limited amount of types in the session.  The new sessions are by design much more restricted to only allow JSON with a few small extensions for tuples and strings with HTML markup."
+msgstr ""
+
+#: ../../upgrading.rst:136
+# 6531e9a8ebcb4cb38dcb658505042a5c
+msgid "In order to not break people's sessions it is possible to continue using the old session system by using the `Flask-OldSessions`_ extension."
+msgstr ""
+
+#: ../../upgrading.rst:139
+# 6f2c3f1737934de9bb5c726b6cb0678a
+msgid "Flask also started storing the :data:`flask.g` object on the application context instead of the request context.  This change should be transparent for you but it means that you now can store things on the ``g`` object when there is no request context yet but an application context.  The old ``flask.Flask.request_globals_class`` attribute was renamed to :attr:`flask.Flask.app_ctx_globals_class`."
+msgstr ""
+
+#: ../../upgrading.rst:149
+# cf2f5e35a3a94d5cb9a7e49395a3a939
+msgid "Version 0.9"
+msgstr ""
+
+#: ../../upgrading.rst:151
+# 045e062936ec4aaf85448ff09a542d05
+msgid "The behavior of returning tuples from a function was simplified.  If you return a tuple it no longer defines the arguments for the response object you're creating, it's now always a tuple in the form ``(response, status, headers)`` where at least one item has to be provided.  If you depend on the old behavior, you can add it easily by subclassing Flask::"
+msgstr ""
+
+#: ../../upgrading.rst:163
+# 71715ec8b74c43efbce8d493eec87d94
+msgid "If you maintain an extension that was using :data:`~flask._request_ctx_stack` before, please consider changing to :data:`~flask._app_ctx_stack` if it makes sense for your extension.  For instance, the app context stack makes sense for extensions which connect to databases.  Using the app context stack instead of the request context stack will make extensions more readily handle use cases outside of requests."
+msgstr ""
+
+#: ../../upgrading.rst:171
+# 54cca07770cf4581bda71f35cb2692da
+msgid "Version 0.8"
+msgstr ""
+
+#: ../../upgrading.rst:173
+# a97775f8efe54c3993a234713c11b8b9
+msgid "Flask introduced a new session interface system.  We also noticed that there was a naming collision between ``flask.session`` the module that implements sessions and :data:`flask.session` which is the global session object.  With that introduction we moved the implementation details for the session system into a new module called :mod:`flask.sessions`.  If you used the previously undocumented session support we urge you to upgrade."
+msgstr ""
+
+#: ../../upgrading.rst:180
+# be9cec92695b4566947a69ec76e731b9
+msgid "If invalid JSON data was submitted Flask will now raise a :exc:`~werkzeug.exceptions.BadRequest` exception instead of letting the default :exc:`ValueError` bubble up.  This has the advantage that you no longer have to handle that error to avoid an internal server error showing up for the user.  If you were catching this down explicitly in the past as :exc:`ValueError` you will need to change this."
+msgstr ""
+
+#: ../../upgrading.rst:187
+# ce2a4c8212fe48af846cd285e8b757ad
+msgid "Due to a bug in the test client Flask 0.7 did not trigger teardown handlers when the test client was used in a with statement.  This was since fixed but might require some changes in your test suites if you relied on this behavior."
+msgstr ""
+
+#: ../../upgrading.rst:193
+# 9ec958bb30f747f199b1ba35b67ea966
+msgid "Version 0.7"
+msgstr ""
+
+#: ../../upgrading.rst:195
+# 64652cad0cc9407fa98b19901331888b
+msgid "In Flask 0.7 we cleaned up the code base internally a lot and did some backwards incompatible changes that make it easier to implement larger applications with Flask.  Because we want to make upgrading as easy as possible we tried to counter the problems arising from these changes by providing a script that can ease the transition."
+msgstr ""
+
+#: ../../upgrading.rst:201
+# a7784bb4287c498f9ef84846a96f52f2
+msgid "The script scans your whole application and generates a unified diff with changes it assumes are safe to apply.  However as this is an automated tool it won't be able to find all use cases and it might miss some.  We internally spread a lot of deprecation warnings all over the place to make it easy to find pieces of code that it was unable to upgrade."
+msgstr ""
+
+#: ../../upgrading.rst:207
+# f792c926ce3448e08343c48595583fa3
+msgid "We strongly recommend that you hand review the generated patchfile and only apply the chunks that look good."
+msgstr ""
+
+#: ../../upgrading.rst:210
+# fbdb87d0ba0d4a87b6275a667259dd61
+msgid "If you are using git as version control system for your project we recommend applying the patch with ``path -p1 < patchfile.diff`` and then using the interactive commit feature to only apply the chunks that look good."
+msgstr ""
+
+#: ../../upgrading.rst:215
+# 094cd7a80b534bbb9b8ac491ed1ad70a
+msgid "To apply the upgrade script do the following:"
+msgstr ""
+
+#: ../../upgrading.rst:217
+# aa1e12cd589a4363b3378a227f76cf38
+msgid "Download the script: `flask-07-upgrade.py <https://raw.githubusercontent.com/pallets/flask/0.12.3/scripts/flask-07-upgrade.py>`_"
+msgstr ""
+
+#: ../../upgrading.rst:219
+# 022e83a6313b4496b555e4aa65e55735
+msgid "Run it in the directory of your application::"
+msgstr ""
+
+#: ../../upgrading.rst:223
+# 15445d12cd564b1ca69f28632c4bb7c5
+msgid "Review the generated patchfile."
+msgstr ""
+
+#: ../../upgrading.rst:224
+# bd97c17ff7d849d981857e79d7803670
+msgid "Apply the patch::"
+msgstr ""
+
+#: ../../upgrading.rst:228
+# 0f570e8db00b4720b74df6a9d3f78b49
+msgid "If you were using per-module template folders you need to move some templates around.  Previously if you had a folder named :file:`templates` next to a blueprint named ``admin`` the implicit template path automatically was :file:`admin/index.html` for a template file called :file:`templates/index.html`.  This no longer is the case.  Now you need to name the template :file:`templates/admin/index.html`.  The tool will not detect this so you will have to do that on your own."
+msgstr ""
+
+#: ../../upgrading.rst:236
+# 27fa7eeffdd04f06a7bbc17f380116de
+msgid "Please note that deprecation warnings are disabled by default starting with Python 2.7.  In order to see the deprecation warnings that might be emitted you have to enabled them with the :mod:`warnings` module."
+msgstr ""
+
+#: ../../upgrading.rst:240
+# 5ce259855af94b24b4a380e82e467006
+msgid "If you are working with windows and you lack the ``patch`` command line utility you can get it as part of various Unix runtime environments for windows including cygwin, msysgit or ming32.  Also source control systems like svn, hg or git have builtin support for applying unified diffs as generated by the tool.  Check the manual of your version control system for more information."
+msgstr ""
+
+#: ../../upgrading.rst:248
+# afe1a13ec6634c5fbde244a95cbe3fe3
+msgid "Bug in Request Locals"
+msgstr ""
+
+#: ../../upgrading.rst:250
+# 34fd514e07024ab48a14ff289228ef34
+msgid "Due to a bug in earlier implementations the request local proxies now raise a :exc:`RuntimeError` instead of an :exc:`AttributeError` when they are unbound.  If you caught these exceptions with :exc:`AttributeError` before, you should catch them with :exc:`RuntimeError` now."
+msgstr ""
+
+#: ../../upgrading.rst:255
+# 9f5550d32ebb4615a0a83417873cff5e
+msgid "Additionally the :func:`~flask.send_file` function is now issuing deprecation warnings if you depend on functionality that will be removed in Flask 0.11.  Previously it was possible to use etags and mimetypes when file objects were passed.  This was unreliable and caused issues for a few setups.  If you get a deprecation warning, make sure to update your application to work with either filenames there or disable etag attaching and attach them yourself."
+msgstr ""
+
+#: ../../upgrading.rst:263
+# 1157f8dbe33a4fdfbcb3e7d0eb1d301b
+msgid "Old code::"
+msgstr ""
+
+#: ../../upgrading.rst:268
+# 398419437fbf46418c7c8e050318128a
+msgid "New code::"
+msgstr ""
+
+#: ../../upgrading.rst:275
+# b030d093ba244eb4858790b09b76969c
+msgid "Upgrading to new Teardown Handling"
+msgstr ""
+
+#: ../../upgrading.rst:277
+# 3d1d074980714bc6be1dffec0f9f2ccb
+msgid "We streamlined the behavior of the callbacks for request handling.  For things that modify the response the :meth:`~flask.Flask.after_request` decorators continue to work as expected, but for things that absolutely must happen at the end of request we introduced the new :meth:`~flask.Flask.teardown_request` decorator.  Unfortunately that change also made after-request work differently under error conditions. It's not consistently skipped if exceptions happen whereas previously it might have been called twice to ensure it is executed at the end of the request."
+msgstr ""
+
+#: ../../upgrading.rst:287
+# b090d05638df4237a7c71c07ddea40ab
+msgid "If you have database connection code that looks like this::"
+msgstr ""
+
+#: ../../upgrading.rst:294
+# aa3bac7132774996b3447808cbbeccff
+msgid "You are now encouraged to use this instead::"
+msgstr ""
+
+#: ../../upgrading.rst:301
+# b5aadddd61764cd3bf3a0b42f1f0cebf
+msgid "On the upside this change greatly improves the internal code flow and makes it easier to customize the dispatching and error handling.  This makes it now a lot easier to write unit tests as you can prevent closing down of database connections for a while.  You can take advantage of the fact that the teardown callbacks are called when the response context is removed from the stack so a test can query the database after request handling::"
+msgstr ""
+
+#: ../../upgrading.rst:316
+# b0e752063ae24612a5b0afd313ae31c4
+msgid "Manual Error Handler Attaching"
+msgstr ""
+
+#: ../../upgrading.rst:318
+# 62f5026cc87c4c26b43a6336ffc4eb3a
+msgid "While it is still possible to attach error handlers to :attr:`Flask.error_handlers` it's discouraged to do so and in fact deprecated.  In general we no longer recommend custom error handler attaching via assignments to the underlying dictionary due to the more complex internal handling to support arbitrary exception classes and blueprints.  See :meth:`Flask.errorhandler` for more information."
+msgstr ""
+
+#: ../../upgrading.rst:325
+# 6d431320d3bc443282ea4a4c1604b725
+msgid "The proper upgrade is to change this::"
+msgstr ""
+
+#: ../../upgrading.rst:329
+# aa7aaa86ad064117afc4f956117a71cc
+msgid "Into this::"
+msgstr ""
+
+#: ../../upgrading.rst:333
+# e771dec6fa59420ba7ce8433f7686221
+msgid "Alternatively you should just attach the function with a decorator::"
+msgstr ""
+
+#: ../../upgrading.rst:339
+# aa154287904f48288a223c2df55ed9f7
+msgid "(Note that :meth:`register_error_handler` is new in Flask 0.7)"
+msgstr ""
+
+#: ../../upgrading.rst:342
+# 6b1eb74c65ad450c8ab373cd55e7001d
+msgid "Blueprint Support"
+msgstr ""
+
+#: ../../upgrading.rst:344
+# 31378708333a4274a9149ed4085f8ca9
+msgid "Blueprints replace the previous concept of “Modules” in Flask.  They provide better semantics for various features and work better with large applications.  The update script provided should be able to upgrade your applications automatically, but there might be some cases where it fails to upgrade.  What changed?"
+msgstr ""
+
+#: ../../upgrading.rst:350
+# b686f99b21f3497486ac6fe85c7084a7
+msgid "Blueprints need explicit names.  Modules had an automatic name guessing scheme where the shortname for the module was taken from the last part of the import module.  The upgrade script tries to guess that name but it might fail as this information could change at runtime."
+msgstr ""
+
+#: ../../upgrading.rst:355
+# b3a103cf5df343f0a820a5a265bdaeb6
+msgid "Blueprints have an inverse behavior for :meth:`url_for`.  Previously ``.foo`` told :meth:`url_for` that it should look for the endpoint ``foo`` on the application.  Now it means “relative to current module”. The script will inverse all calls to :meth:`url_for` automatically for you.  It will do this in a very eager way so you might end up with some unnecessary leading dots in your code if you're not using modules."
+msgstr ""
+
+#: ../../upgrading.rst:362
+# 850e2c969584482797db0d3a423af16e
+msgid "Blueprints do not automatically provide static folders.  They will also no longer automatically export templates from a folder called :file:`templates` next to their location however but it can be enabled from the constructor.  Same with static files: if you want to continue serving static files you need to tell the constructor explicitly the path to the static folder (which can be relative to the blueprint's module path)."
+msgstr ""
+
+#: ../../upgrading.rst:369
+# b820da3b913049318cd69001741a5ea5
+msgid "Rendering templates was simplified.  Now the blueprints can provide template folders which are added to a general template searchpath. This means that you need to add another subfolder with the blueprint's name into that folder if you want :file:`blueprintname/template.html` as the template name."
+msgstr ""
+
+#: ../../upgrading.rst:375
+# d3fad04849ba46c89a816655bf5498ae
+msgid "If you continue to use the ``Module`` object which is deprecated, Flask will restore the previous behavior as good as possible.  However we strongly recommend upgrading to the new blueprints as they provide a lot of useful improvement such as the ability to attach a blueprint multiple times, blueprint specific error handlers and a lot more."
+msgstr ""
+
+#: ../../upgrading.rst:383
+# 2c3dbcbe25c6410aaee4ab61f7a0b5d1
+msgid "Version 0.6"
+msgstr ""
+
+#: ../../upgrading.rst:385
+# fb3c8d57f9e74226aad54d1839cc6d0e
+msgid "Flask 0.6 comes with a backwards incompatible change which affects the order of after-request handlers.  Previously they were called in the order of the registration, now they are called in reverse order.  This change was made so that Flask behaves more like people expected it to work and how other systems handle request pre- and post-processing.  If you depend on the order of execution of post-request functions, be sure to change the order."
+msgstr ""
+
+#: ../../upgrading.rst:393
+# f78244f2ded14e089a1effa4f662a311
+msgid "Another change that breaks backwards compatibility is that context processors will no longer override values passed directly to the template rendering function.  If for example ``request`` is as variable passed directly to the template, the default context processor will not override it with the current request object.  This makes it easier to extend context processors later to inject additional variables without breaking existing template not expecting them."
+msgstr ""
+
+#: ../../upgrading.rst:402
+# 40d787b97e91460fbb99c90885eb1acc
+msgid "Version 0.5"
+msgstr ""
+
+#: ../../upgrading.rst:404
+# fe62ee371eab4388b55516cd03c60e5d
+msgid "Flask 0.5 is the first release that comes as a Python package instead of a single module.  There were a couple of internal refactoring so if you depend on undocumented internal details you probably have to adapt the imports."
+msgstr ""
+
+#: ../../upgrading.rst:409
+# 2711529948454ea4b97ccd3c6bbfbc94
+msgid "The following changes may be relevant to your application:"
+msgstr ""
+
+#: ../../upgrading.rst:411
+# 0a0f0bfb284d4408bc5567f164cdc50c
+msgid "autoescaping no longer happens for all templates.  Instead it is configured to only happen on files ending with ``.html``, ``.htm``, ``.xml`` and ``.xhtml``.  If you have templates with different extensions you should override the :meth:`~flask.Flask.select_jinja_autoescape` method."
+msgstr ""
+
+#: ../../upgrading.rst:416
+# c3d04978a9c749c28b46f510fb58d0f3
+msgid "Flask no longer supports zipped applications in this release.  This functionality might come back in future releases if there is demand for this feature.  Removing support for this makes the Flask internal code easier to understand and fixes a couple of small issues that make debugging harder than necessary."
+msgstr ""
+
+#: ../../upgrading.rst:421
+# 3aa8a27427404a09b892d1961d5b8248
+msgid "The ``create_jinja_loader`` function is gone.  If you want to customize the Jinja loader now, use the :meth:`~flask.Flask.create_jinja_environment` method instead."
+msgstr ""
+
+#: ../../upgrading.rst:426
+# af1ae28128f44b208ff95d7ac2cedfe3
+msgid "Version 0.4"
+msgstr ""
+
+#: ../../upgrading.rst:428
+# 4c89c67cb315458e8c368c67b7228b7e
+msgid "For application developers there are no changes that require changes in your code.  In case you are developing on a Flask extension however, and that extension has a unittest-mode you might want to link the activation of that mode to the new ``TESTING`` flag."
+msgstr ""
+
+#: ../../upgrading.rst:434
+# df502e4152cb4401860c36aa3647c42c
+msgid "Version 0.3"
+msgstr ""
+
+#: ../../upgrading.rst:436
+# 936e395945024765af2b350a218feb28
+msgid "Flask 0.3 introduces configuration support and logging as well as categories for flashing messages.  All these are features that are 100% backwards compatible but you might want to take advantage of them."
+msgstr ""
+
+#: ../../upgrading.rst:441
+# 46896aa4577a481fa2d872d27ba4086f
+msgid "Configuration Support"
+msgstr ""
+
+#: ../../upgrading.rst:443
+# 398c6f3852434f1590a25dd3bcca9431
+msgid "The configuration support makes it easier to write any kind of application that requires some sort of configuration.  (Which most likely is the case for any application out there)."
+msgstr ""
+
+#: ../../upgrading.rst:447
+# 15751cba6b0e4589a898184faaefe4f7
+msgid "If you previously had code like this::"
+msgstr ""
+
+#: ../../upgrading.rst:452
+# 2e08ab4acf7a460aaa5f559807862d3d
+msgid "You no longer have to do that, instead you can just load a configuration into the config object.  How this works is outlined in :ref:`config`."
+msgstr ""
+
+#: ../../upgrading.rst:456
+# 9400b53821724262b29551c4888f635b
+msgid "Logging Integration"
+msgstr ""
+
+#: ../../upgrading.rst:458
+# f990db3208d1451d9de5f0652dc7cf0d
+msgid "Flask now configures a logger for you with some basic and useful defaults. If you run your application in production and want to profit from automatic error logging, you might be interested in attaching a proper log handler.  Also you can start logging warnings and errors into the logger when appropriately.  For more information on that, read :ref:`application-errors`."
+msgstr ""
+
+#: ../../upgrading.rst:466
+# d91850e84a3347fa81457be0683348e0
+msgid "Categories for Flash Messages"
+msgstr ""
+
+#: ../../upgrading.rst:468
+# d7e4ceaca0ed4b829fd8c8c111aa09a6
+msgid "Flash messages can now have categories attached.  This makes it possible to render errors, warnings or regular messages differently for example. This is an opt-in feature because it requires some rethinking in the code."
+msgstr ""
+
+#: ../../upgrading.rst:472
+# eeadf16623e84f988144d15a622efabf
+msgid "Read all about that in the :ref:`message-flashing-pattern` pattern."
+msgstr ""
+

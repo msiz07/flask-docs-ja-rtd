@@ -1,0 +1,31 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 1.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+# 6cee31402a9f42b68a181f636de81712
+#: ../../patterns/mongokit.rst:4
+msgid "MongoDB with MongoKit"
+msgstr ""
+
+# 5b07904d2ee44994b9fe4d67a290e6e2
+#: ../../patterns/mongokit.rst:6
+msgid ""
+"MongoKit is no longer maintained. See :doc:`/patterns/mongoengine` "
+"instead."
+msgstr ""
+
