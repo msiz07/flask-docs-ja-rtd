@@ -32,11 +32,11 @@ msgid ""
 "a URL to a view based on its name and arguments."
 msgstr ""
 "view関数は、アプリケーションへのリクエストに対するレスポンスを作成する"
-"ために作成するコードになります。Flaskは、やって来るリクエストのURLを"
-"処理すべきviewへと照合するためのパターンを使用します。Flaskが送り出す"
-"レスポンスへと変換するデータを、viewは返します。別の方向から、Flaskは"
-"（viewの）名前と引数に基づいて、viewに対応するURLを生成することも"
-"できます。"
+"ために書くコードになります。Flaskは、やって来る（incoming）リクエストの"
+"URLを、それを処理すべきviewへと照合するためのパターンを使用します。送り"
+"出す（outgoing）レスポンスへとFlaskが変換するデータを、viewは返します。"
+"URLからview名とは別方向に、viewに対応するURLを（viewの）名前と引数に"
+"基づいて生成することも、Flaskでは可能です。"
 
 # 6889b05a6af14511a1ba49e7b9de80eb
 #: ../../tutorial/views.rst:14
@@ -52,10 +52,10 @@ msgid ""
 " registered with the application when it is available in the factory "
 "function."
 msgstr ""
-":class:`blueprint`\ は、関連するviewおよびその他のコードをグループへと"
-"編成するやり方です。viewおよびその他のコードを直接アプリケーションに"
-"登録するよりも、それらをblueprintに登録します。それから、factory関数で"
-"アプリケーションが利用可能になったときに、blueprintをアプリケーションに"
+":class:`Blueprint`\ は、関連するviewおよびその他のコードをグループへと"
+"編成する方法です。viewおよびその他のコードを直接アプリケーションに"
+"登録するよりも、それらをblueprintに登録します。それから、factory関数の"
+"中でアプリケーションが利用可能になったときに、blueprintをアプリケーションに"
 "登録します。"
 
 # a95ba696c5dd40ae9c3b2b9b5c305c7f
@@ -66,10 +66,10 @@ msgid ""
 "separate module. Since the blog needs to know about authentication, "
 "you'll write the authentication one first."
 msgstr ""
-"Flaskrでは2つのblueprintがあり、ひとつは認証関数のためであり、ひとつは"
-"ブログへ投稿する関数のためですそれぞれのblueprintのコードは、異なる"
-"モジュールにして進めます。ブログは認証に関して知ている必要があるので、"
-"まずは認証のものから書いていきます。"
+"Flaskrでは2つのblueprintがあり、ひとつは認証に関する関数のためであり、"
+"ひとつはブログへの投稿記事に関する関数のためです。それぞれのblueprintの"
+"コードは、異なるモジュールにして進めます。ブログは認証に関して知って"
+"いる必要があるので、まずは認証のモジュールから書いていきます。"
 
 # 8d5ca4a73a4e45bd97faaeaf4c5148de
 # bc7e8daa2ba84fce9200c4d0de0f18c7
@@ -91,11 +91,11 @@ msgid ""
 "is passed as the second argument. The ``url_prefix`` will be prepended to"
 " all the URLs associated with the blueprint."
 msgstr ""
-"これは\ ``'auth'``\ と名付けられた\ :class:`blueprint`\ を作成します。"
+"これは\ ``'auth'``\ と名付けられた\ :class:`Blueprint`\ を作成します。"
 "アプリケーションのオブジェクトと似たように、blueprintは自分がどこで定義"
 "されているか知る必要があり、従って\ ``__name__``\ が2番目の引数として"
 "渡されています。\ ``url_prefix``\ は、blueprintと関連付けられている"
-"URL全ての先頭に付けられます。"
+"全てのURLの先頭に付けられます。"
 
 # 196a4c2d9aad4d80aba890a5565d5b8e
 #: ../../tutorial/views.rst:46
@@ -135,11 +135,11 @@ msgid ""
 "the form, it will validate their input and either show the form again "
 "with an error message or create the new user and go to the login page."
 msgstr ""
-"ユーザが\ ``/auth/register``\ URLへ訪ずれたときは、\ ``register``\ "
-"ビューはユーザが記入すべきformと一緒に\ `HTML`_\ を返します。ユーザが"
-"formを提出したときは、ユーザの入力を検証し、それから、エラーメッセージと"
-"一緒にフォームを再表示するか、または、新しいユーザを作成してログイン"
-"ページへ行くでしょう。"
+"ユーザが\ ``/auth/register``\ のURLへ訪ずれたときは、\ ``register``\ "
+"のviewはユーザが記入すべきformを持つ\ `HTML`_\ を返します。ユーザが"
+"formを提出（submit）したときは、ユーザの入力を検証し、それから、エラー"
+"メッセージと一緒にフォームを再表示するか、または、新しいユーザを作成して"
+"ログインページへ行くようにします。"
 
 # 40dd43916335440a98294bc52e1dd2e7
 #: ../../tutorial/views.rst:76
@@ -147,13 +147,13 @@ msgid ""
 "For now you will just write the view code. On the next page, you'll write"
 " templates to generate the HTML form."
 msgstr ""
-"ここでは、viewのコードの作成だけしていきます。次のページでは、HTMLフォームを"
-"生成するテンプレートを作成します。"
+"ここでは、viewのコードだけ書いていきます。次のページでは、HTMLのformを"
+"生成するテンプレートを書いていきます。"
 
 # 53a2c05253c34361879b29caee3ab24e
 #: ../../tutorial/views.rst:111
 msgid "Here's what the ``register`` view function is doing:"
-msgstr "これはview関数の\ ``register``\ が何をするか示しています:"
+msgstr "``register``\ のview関数が何をしているか、以下に示します:"
 
 # 3751500532914958b839707153cdfc67
 #: ../../tutorial/views.rst:113
@@ -165,7 +165,7 @@ msgid ""
 msgstr ""
 ":meth:`@bp.route <Blueprint.route>`\ は、URLの\ ``/register``\ と"
 "view関数の\ ``register``\ とを関連付けます。Flaskが\ ``/auth/register``\ への"
-"リクエストを受信したとき、それはview関数の\ ``register``\ を呼び出し、その"
+"リクエストを受信したとき、Flaskはview関数の\ ``register``\ を呼び出し、その"
 "戻り値をレスポンスとして使用します。"
 
 # 5f92f149f9be417eae083642829a1866
@@ -175,7 +175,7 @@ msgid ""
 "will be ``'POST'``. In this case, start validating the input."
 msgstr ""
 "もしユーザがformを提出した場合、\ :attr:`Request.method <Request.method>`\ "
-"はPOSTになります。その場合は、入力データを検証します。"
+"はPOSTになります。その場合は、入力データの検証を開始します。"
 
 # a2fc88550dd4407b83c0fdeb1a5952ff
 #: ../../tutorial/views.rst:122
@@ -186,7 +186,7 @@ msgid ""
 msgstr ""
 ":attr:`request.form <Request.form>`\ は、提出されたformのキーと値とを"
 "対応付ける、\ :class:`dict`\ の特別なタイプです。ユーザは自分の\ "
-"``username``\ と\ ``password``\ を入力します。"
+"``username``\ と\ ``password``\ を入力する予定です。"
 
 # 211f41286c744615911e1fe358c275d9
 #: ../../tutorial/views.rst:126
@@ -207,7 +207,7 @@ msgstr ""
 "調べることで検証します。\ :meth:`db.execute <sqlite3.Connection.execute>`\ "
 "は、ユーザのあらゆる入力をプレースホルダ\ ``?``\ にしたSQLのqueryと、"
 "プレースホルダを置き換える値のtupleを受け取ります。データベースライブラリは"
-"\ *SQL injection attack*\ に対して脆弱にならないように値のエスケープを"
+"\ *SQLインジェクション攻撃*\ に対して脆弱にならないように値のエスケープを"
 "取り計らいます。"
 
 # 9bbd7158ac03480da40853d0e59e419c
@@ -249,9 +249,9 @@ msgid ""
 ":func:`redirect` generates a redirect response to the generated URL."
 msgstr ""
 "ユーザ情報を格納した後、ログインページへリダイレクトさせます。\ "
-":func:`url_for`\ は、ログインviewの名前から対応するURLを生成します。"
+":func:`url_for`\ は、ログインのviewの名前から対応するURLを生成します。"
 "これはURLを後から変更しても、そこにリンクしている全てのコードを変更"
-"させずにすむようにできるため、URLを直接書き込むよりも好ましいやり方です。\ "
+"させずにすむことが可能になるため、URLを直接書き込むよりも好ましいやり方です。\ "
 ":func:`redirect`\ は、生成されたURLへリダイレクトさせるレスポンスを生成"
 "します。"
 
@@ -261,8 +261,8 @@ msgid ""
 "If validation fails, the error is shown to the user. :func:`flash` stores"
 " messages that can be retrieved when rendering the template."
 msgstr ""
-"もし検証が失敗した場合は、エラーをユーザへ示します。\ :func:`flush`\ は、"
-"テンプレートを変換するときに取得可能なメッセージを格納します。"
+"もし検証が失敗した場合は、エラーをユーザへ示します。\ :func:`flash`\ は、"
+"テンプレートを変換（render）するときに取得可能なメッセージを格納します。"
 
 # 5d25a7a4f3054a4a80f312381402fee2
 #: ../../tutorial/views.rst:159
@@ -295,7 +295,8 @@ msgstr "``register``\ のviewとは少し違うところがあります:"
 # efe46c07de4145d4b66548fbd17edd25
 #: ../../tutorial/views.rst:201
 msgid "The user is queried first and stored in a variable for later use."
-msgstr "ユーザは最初に問合せ（query）され、後で使用するために変数へ格納されます。"
+msgstr ""
+"ユーザ情報は最初に問合せ（query）され、後で使用するために変数へ格納されます。"
 
 # 2382cf33e47e40f398092936357ea6d0
 #: ../../tutorial/views.rst:203
@@ -304,7 +305,7 @@ msgid ""
 "password in the same way as the stored hash and securely compares them. "
 "If they match, the password is valid."
 msgstr ""
-":func:`~werkzeug.securely.check_password_hash`\ は提出されたパスワードを"
+":func:`~werkzeug.securely.check_password_hash`\ は提出されたパスワードを、"
 "格納されたハッシュと同じやり方でハッシュし、セキュリティに注意しながら"
 "それらを比較します。もし一致した場合、パスワードは適正です。"
 
@@ -320,8 +321,8 @@ msgstr ""
 ":data:`session`\ は、リクエストを跨いで格納されるデータの\ :class:`dict`\ "
 "です。検証が成功したときは、ユーザの\ ``id``\ は新しいsessionに格納され"
 "ます。そのデータはブラウザへ送信される\ *cookie*\ に格納され、それから"
-"ブラウザは以降のリクエストで送信し返します。Flaskはデータを改ざんできない"
-"ようにするために、安全にデータを\ *署名*\ します。"
+"ブラウザは以降のリクエストで（cookieを）送信し返します。Flaskはデータを"
+"改ざんできないようにするために、安全にデータを\ *署名*\ します。"
 
 # 0100eff5fddf490db837b1614850a15a
 #: ../../tutorial/views.rst:213
@@ -350,9 +351,9 @@ msgstr ""
 "どのURLがリクエストされたかに関わらず、view関数の前に実行する関数を登録"
 "します。\ ``load_logged_in_user``\ は、ユーザidが\ :data:`session`\ に"
 "格納されているかチェックし、それからデータベースからユーザのデータを取得し、"
-"それをリクエストの期間中は存続する\ :data:`g.user`\ へ格納します。もし"
-"ユーザidがない場合、もしくはidが存在しない場合、\ ``g.user``\ は\ ``None``\ "
-"になります。"
+"それをリクエストの期間中は存続する\ :data:`g.user <g>`\ へ格納します。もし"
+"ユーザidがない場合、もしくはidが（セッションに）存在しない場合、\ "
+"``g.user``\ は\ ``None``\ になります。"
 
 # be9323c7a2d944589d8ab30c2b061700
 #: ../../tutorial/views.rst:242
@@ -367,7 +368,7 @@ msgid ""
 msgstr ""
 "ログアウトするには、ユーザidを\ :data:`session`\ から取り除く必要が"
 "あります。そうすると\ ``load_logged_in_user``\ は以降のリクエストで"
-"ユーザ情報を読み取らなくなります。"
+"ユーザ情報を読み込まなくなります。"
 
 # bd2992b2275643a5aebfc5661c080b6e
 #: ../../tutorial/views.rst:257
@@ -381,7 +382,7 @@ msgid ""
 "logged in. A *decorator* can be used to check this for each view it's "
 "applied to."
 msgstr ""
-"ブログの投稿を作成、編集、削除するにはユーザがログインする必要があります。"
+"ブログの投稿記事を作成、編集、削除するにはユーザがログインする必要があります。"
 "\ *デコレータ（decorator）*\ を使用すると、decoratorを適用した各ページで"
 "ログインをチェックできます。"
 
@@ -395,10 +396,10 @@ msgid ""
 "writing the blog views."
 msgstr ""
 "このdecoratorは、適用した元のviewを包み込む（wrap）新しい関数を返します。"
-"その新しい関数はユーザ情報が読み込まれたかチェックして、そうでない場合は"
-"ログインページへリダイレクトします。もしユーザ情報が読み込まれた場合は、"
-"元のviewが呼び出されて正常に続けます。ブログのviewを作成するときにdecorator"
-"を使用していきます。"
+"その新しい関数はユーザ情報が読み込まれているかチェックして、そうでない場合は"
+"ログインページへリダイレクトします。もしユーザ情報が読み込まれている場合は、"
+"元のviewが呼び出されて通常どおりに続けます。ブログのviewを作成するときに"
+"decoratorを使用していきます。"
 
 # d489f6861b9f4c6d98e65dae8066f6a9
 #: ../../tutorial/views.rst:283
@@ -425,7 +426,7 @@ msgid ""
 "with ``url_for('hello')``. If it took an argument, which you'll see "
 "later, it would be linked to using ``url_for('hello', who='World')``."
 msgstr ""
-"例えば、このチュートリアルの前の方でapp factoryへ追加されたviewの\ "
+"例えば、このチュートリアルの前の方でapp factoryで追加されたviewの\ "
 "``hello()``\ は、名前が\ ``'hello'``\ であり、\ ``url_for('hello')``\ を"
 "使ってリンクすることができます。もし引数を取る場合は、それは後で確認"
 "していきますが、それは\ ``url_for('hello', who='World')``\ を使用して"
@@ -439,8 +440,8 @@ msgid ""
 "wrote above is ``'auth.login'`` because you added it to the ``'auth'`` "
 "blueprint."
 msgstr "blueprintを使用するときは、blueprintの名前は関数名の前に付けられ、"
-"従って先程作成した\ ``login``\ 関数のエンドポイントは、blueprintの\ "
-"``'auth'``\ を追加しているため\ ``'auth.login'``\ になります。"
+"従って先程書いた\ ``login``\ 関数のエンドポイントは、blueprintの\ "
+"``'auth'``\ に追加しているため\ ``'auth.login'``\ になります。"
 
 # 36dc0ce7ddf642a7b27599d16e07f068
 #: ../../tutorial/views.rst:301

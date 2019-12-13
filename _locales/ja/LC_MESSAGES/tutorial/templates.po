@@ -32,7 +32,7 @@ msgid ""
 "template files will be stored in the ``templates`` directory inside the "
 "``flaskr`` package."
 msgstr ""
-"アプリケーションの認証viewは書きましたが、もしサーバを実行してどのURLへ"
+"アプリケーションの認証のviewは書きましたが、もしサーバを実行してどのURLへ"
 "行っても、\ ``TemplateNotFound``\ エラーを見ることになるでしょう。それは"
 "viewが\ :func:`render_template`\ を呼び出していても、まだテンプレートを"
 "書いていないためです。テンプレートファイルは\ ``flaskr``\ パッケージ内の\ "
@@ -62,8 +62,8 @@ msgid ""
 "*safe* values that look the same in the browser but don't cause unwanted "
 "effects."
 msgstr ""
-"この（チュートリアルの）アプリケーションの中で、ユーザのブラウザに表示する\ "
-"`HTML`_\ へテンプレートを表示（render）するためにテンプレートを使用していきます。"
+"この（チュートリアルの）アプリケーションでは、ユーザのブラウザに表示する\ "
+"`HTML`_\ へ変換（render）するためにテンプレートを使用していきます。"
 "Flaskでは、HTMLテンプレートの中で変換されるあらゆるデータを\ *自動エスケープ*\ "
 "するように、Jinjaが設定されています。これは、ユーザが入力したものを安全に"
 "表示できるということです; ``<``\ や\ ``>``\ のような、HTMLに干渉しかねない"
@@ -82,7 +82,7 @@ msgid ""
 "change indentation."
 msgstr ""
 "Jinjaは大部分でPythonのように見え、振る舞います。特別な区切り文字（delimiter）が"
-"テンプレートの中の静的データとJinj文法を区別するために使われます。\ ``{{``\ "
+"テンプレートの中の静的データとJinja文法を区別するために使われます。\ ``{{``\ "
 "と\ ``}}``\ の間のすべてのものが、最終ドキュメントとして出力される式（expression）"
 "になります。\ ``{%``\ と\ ``%}``\ は、\ ``if``\ や\ ``for``\ のような制御フロー文"
 "（control flow statement）を示します。ブロック内の静的テキストがインデントを"
@@ -102,9 +102,10 @@ msgid ""
 "template, each template will *extend* a base template and override "
 "specific sections."
 msgstr ""
-"アプリケーションの各ページは、違う本体の周囲に同じベーシックレイアウトを"
-"持ちます。各テンプレートで全てのHTML構造を書く代わりに、各テンプレートは"
-"ベースのテンプレートを\ *拡張*\ して、特定のセクションを上書きします。"
+"アプリケーションの各ページは、違う本体（body）を取り囲む同じベーシック"
+"レイアウトを持ちます。各テンプレートで全てのHTML構造を書く代わりに、"
+"各テンプレートはベースのテンプレートを\ *拡張*\ して、特定のセクションを"
+"上書きします。"
 
 # cf09f4409f0e49f29509c57e2c17efc2
 #: ../../tutorial/templates.rst:46
@@ -121,11 +122,10 @@ msgid ""
 "URLs to views instead of writing them out manually."
 msgstr ""
 ":data:`g`\ は自動的にテンプレート中で利用可能になります。\ ``g.user``\ "
-"が設定されているか（\ ``load_logged_in_user``\ で設定が決まります）に"
-"基づいて、ユーザ名とログアウトリンクが表示されるか、登録とログインへの"
-"リンクが表示されます。\ :func:`url_for`\ も自動的に利用可能になり、URLを"
-"手作業でviewの中へ書く代わりに、viewに対応するURLを生成するために使用され"
-"ます。"
+"が設定されているか（\ ``load_logged_in_user``\ で設定されます）に基づいて、"
+"ユーザ名とログアウトリンクが表示されるか、登録とログインへのリンクが表示"
+"されます。\ :func:`url_for`\ も自動的に利用可能になり、URLを手作業でviewの"
+"中へ書く代わりに、viewに対応するURLを生成するために使用されます。"
 
 # f6ddc4f6eb934db1a16d3beb07f3fb23
 #: ../../tutorial/templates.rst:80
@@ -135,10 +135,11 @@ msgid ""
 ":func:`flash` in the views to show error messages, and this is the code "
 "that will display them."
 msgstr ""
-"ページタイトルの後、そしてコンテンツの前に、テンプレートは\ :func:"
+"ページタイトルの後、そしてcontentの前に、テンプレートは\ :func:"
 "`get_flashed_messages`\ から返される各メッセージ上をループします。"
-"エラーを表示するためにviewの中で\ :func:`flash`\ を使用したとき、それを"
-"表示するコードがこちらです。"
+"エラーを表示するためにviewの中で\ :func:`flash`\ を使用しており、"
+"それ（viewの中でflashを使ったエラーメッセージ）を表示するコードがこれ"
+"（テンプレート中のget_flashed_messages）になります。"
 
 # 1e17e6673e85485ab7c9f91de1f5aa7b
 #: ../../tutorial/templates.rst:85
@@ -146,7 +147,7 @@ msgid ""
 "There are three blocks defined here that will be overridden in the other "
 "templates:"
 msgstr ""
-"ここでは、他のテンプレートで上書きされるであろう3つのブロックが定義されています:"
+"ここでは、他のテンプレートで上書きされる予定の3つのブロックが定義されています:"
 
 # 1e920c39bc6f4efb88352947c0e3e7e0
 #: ../../tutorial/templates.rst:88
@@ -154,7 +155,8 @@ msgid ""
 "``{% block title %}`` will change the title displayed in the browser's "
 "tab and window title."
 msgstr ""
-"``{% block title %}``\ は、ブラウザ中で表示されるタイトルを変更します。"
+"``{% block title %}``\ は、ブラウザのタブおよびウィンドウのタイトルで表示"
+"されるタイトルを変更します。"
 
 # 8515917a309b4ec2a54c3b242a96e8da
 #: ../../tutorial/templates.rst:91
@@ -162,7 +164,7 @@ msgid ""
 "``{% block header %}`` is similar to ``title`` but will change the title "
 "displayed on the page."
 msgstr ""
-"``{T block header %}``\ は\ ``title``\ と似ていますが、ページ上に表示"
+"``{% block header %}``\ は\ ``title``\ と似ていますが、ページ上に表示"
 "されるタイトルを変更します。"
 
 # b2e481b2b8e4478d91f30a5a01f09c0e
@@ -171,8 +173,8 @@ msgid ""
 "``{% block content %}`` is where the content of each page goes, such as "
 "the login form or a blog post."
 msgstr ""
-"``{% block content %}``\ は、ログインフォームやブログ投稿など、各ページの"
-"コンテンツが行くところです。"
+"``{% block content %}``\ は、ログインフォームやブログの投稿記事など、"
+"各ページのコンテンツが行くところです。"
 
 # eab634ab4dfb4476abd6ffdc3a05f9f0
 #: ../../tutorial/templates.rst:97
@@ -181,9 +183,9 @@ msgid ""
 " others organized, the templates for a blueprint will be placed in a "
 "directory with the same name as the blueprint."
 msgstr ""
-"ベーステンプレートは\ ``templates``\ ディレクトリに直接置かれます。その他を"
-"編成された状態に保つため、blueprintのテンプレートはblueprintと同じ名前の"
-"ディレクトリに置かれます。"
+"ベースのテンプレート（訳注: 上で示したbase.html）は\ ``templates``\ ディレクトリ"
+"に直接置かれます。その他を編成された状態に保つため、blueprintのテンプレートは"
+"blueprintと同じ名前のディレクトリに置かれます。"
 
 # 51a96aeb3cbb4eb292a61aaa817e4afa
 #: ../../tutorial/templates.rst:103
@@ -204,9 +206,9 @@ msgid ""
 "appear inside ``{% block %}`` tags that override blocks from the base "
 "template."
 msgstr ""
-"``{% extends 'base.html' %}``\ は、このテンプレートはベーステンプレート"
-"からブロックを置き換えるべきだということをJijaへ伝えます。表示される"
-"全てのコンテンツは、ベーステンプレートのブロックを上書きする\ ``{% block %}``\ "
+"``{% extends 'base.html' %}``\ は、このテンプレートはベースのテンプレート"
+"からブロックを置き換えるものだということをJinjaへ伝えます。表示される"
+"全てのcontentは、ベースのテンプレートのブロックを上書きする\ ``{% block %}``\ "
 "タグの内側で現れる必要があります。"
 
 # 2cb446d687694aa290ea8b6378a15391
@@ -220,7 +222,7 @@ msgstr ""
 "``{% block title %}``\ を\ ``{% block header %}``\ の内側に置くのは、ここで"
 "使われている便利なパターンです。これは、ウィンドウとページが同じタイトルを"
 "2回書くことなく共有できるように、タイトルのブロックを設定し、それから"
-"その値をヘッダのブロックの中に出力します。"
+"そのタイトルの値をヘッダのブロックの中に出力します。"
 
 # a80d0c18af844222b993c780d59be402
 #: ../../tutorial/templates.rst:134
@@ -238,7 +240,7 @@ msgstr ""
 "伝えます。もしその属性をサポートしない古いブラウザをユーザが使用している"
 "場合は、もしくは、リクエストを作成するためにブラウザ以外の何かをユーザが"
 "使用している場合は、まだFlaskのviewでデータを検証したいでしょう。サーバ側"
-"で常に十分に検証することは、クライアント側で何かしらの検証を同様に行うと"
+"で常に網羅的に検証することは、クライアント側で何かしらの検証を同様に行うと"
 "しても、とても重要です。"
 
 # 630b73e5bfdf43348bac9727f31cf958
@@ -272,8 +274,8 @@ msgid ""
 "then go to http://127.0.0.1:5000/auth/register."
 msgstr ""
 "この時点で認証のテンプレートは書けたので、ユーザを登録可能です。サーバが"
-"まだ起動している（していなければ\ ``flask run``\ ）ことを確認してから、"
-"https://127.0.0.1:5000/auth/registerへ行ってください。"
+"まだ起動している（していなければ\ ``flask run``\ する）ことを確認してから、"
+"\ https://127.0.0.1:5000/auth/register\ へ行ってください。"
 
 # 31a244d0475b44ff878cd1dca220ca3f
 #: ../../tutorial/templates.rst:176
@@ -287,8 +289,8 @@ msgstr ""
 "試しにformを記入せずに「Register」ボタンを押すと、ブラウザがエラーメッセージを"
 "表示することが確認できます。試しに\ ``required``\ 属性を\ ``register.html``\ "
 "テンプレートから削除してから「Register」をもう一度クリックしてください。"
-"ブラウザがエラーを表示する代わりに、ページを再読み込みしてから、\ :func:`flash`\ "
-"から来るエラーがviewの中に表示されます。"
+"ブラウザがエラーを表示する代わりに、ページを再読み込みしてから、viewの中の\ "
+":func:`flash`\ から来るエラーが表示されます。"
 
 # 0923244ad7274073b59a4ebf8ffe0f12
 #: ../../tutorial/templates.rst:182
