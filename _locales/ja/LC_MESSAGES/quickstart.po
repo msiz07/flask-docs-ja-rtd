@@ -985,7 +985,8 @@ msgstr ""
 "その時点のリクエストのメソッドは\ :attr:`~flask.Request.method`\ 属性を"
 "使えば利用可能です。formのデータ（\ ``POST``\ または\ ``PUT``\ リクエスト"
 "で送信されるデータ）へアクセスするには、\ :attr:`~flask.Request.form`\ "
-"属性を使用できます。以下は言及した2つの属性についての全体の例です::"
+"属性を使用できます。以下は言及した2つの属性についての不足のない（どちらの"
+"用法も示した）例です::"
 
 # 14d6cf3b8a7646e7adf38e2f108e7dcf
 #: ../../quickstart.rst:532
@@ -1067,7 +1068,7 @@ msgstr ""
 ":class:`file`\ オブジェクトのように振る舞いますが、サーバのファイルシステム"
 "へそのファイルを格納できるようにする\ "
 ":meth:`~werkzeug.datastructures.FileStorage.save`\ メソッドも持っています。"
-"以下は、それらがどのように動作するかを示す簡単な例です::"
+"以下は、それがどのように働くかを示す簡単な例です::"
 
 # 5b10e1a8187140718e1900aad951fb6d
 #: ../../quickstart.rst:576
@@ -1139,7 +1140,7 @@ msgid ""
 "the :meth:`~flask.make_response` function and then modify it."
 msgstr ""
 "クッキーはレスポンスオブジェクトに設定されていることに注目してください。"
-"通常はview関数でただ文字列を返すだけなので、あなたにとって良いように、"
+"通常はview関数からはただ文字列を返すだけなので、あなたにとって良いように、"
 "Flaskはそれら（訳注: view関数の戻り値、クッキーなど）をレスポンスオブジェクト"
 "へと変換します。もしそれを自分で明示的に実行したい場合は、"
 "\ :meth:`~flask.make_response`\ 関数を使用して、それ（レスポンスオブジェクト）"
@@ -1173,9 +1174,9 @@ msgid ""
 "function; to abort a request early with an error code, use the "
 ":func:`~flask.abort` function::"
 msgstr ""
-"ユーザを別のエンドポイントへ転送するには、\ :func:`~flask.redirect`\ 関数を"
-"使用します; リクエストを早い段階でエラーコードと一緒に異常終了させるには、\ "
-":func:`~flask.abort`\ 関数を使用します::"
+"ユーザを別のエンドポイントへリダイレクトするには、\ :func:`~flask.redirect`\ "
+"関数を使用します; リクエストを早い段階でエラーコードと一緒に異常終了させる"
+"には、\ :func:`~flask.abort`\ 関数を使用します::"
 
 # 9f34090436554a55866a15a4ca27b16b
 #: ../../quickstart.rst:657
@@ -1185,7 +1186,7 @@ msgid ""
 "shows how that works."
 msgstr ""
 "これは、ユーザをindexページからアクセスできないページ（401はアクセス拒否を"
-"意味します）へと転送するため、いくぶんポイントを捉えていない例ですが、"
+"意味します）へとリダイレクトするため、いくぶんポイントを捉えていない例ですが、"
 "上記の関数がどのように機能するかを示しています。"
 
 # 721b9a305ab54c6690605de3ac784087
@@ -1236,8 +1237,8 @@ msgstr ""
 "戻り値がstringの場合、stringをレスポンスのbodyに、ステータスコードを\ "
 "``200 OK``\ に、そしてmimeタイプを\ :mimetype:`text/html`\ にしたレスポンス"
 "オブジェクトへ変換されます。もし戻り値がdictの場合、レスポンスを作成するために"
-"\ :func:`jsonify`\ が呼び出されます。Flaskが（view関数の）戻り値をレスポンス"
-"へ変換するロジックは以下のとおりです:"
+"\ :func:`~flask.json.jsonify`\ が呼び出されます。Flaskが（view関数の）戻り値を"
+"レスポンスへ変換するロジックは以下のとおりです:"
 
 # 8ae8a215218348f5816a9f575ea46ca4
 #: ../../quickstart.rst:690
@@ -1261,8 +1262,8 @@ msgstr ""
 #: ../../quickstart.rst:694
 msgid "If it's a dict, a response object is created using ``jsonify``."
 msgstr ""
-"もしdictであれば、レスポンスオブジェクトは\ ``jsonify``\ を使用して"
-"作成されます。"
+"もしdictであれば、レスポンスオブジェクトは\ :func:`~flask.json.jsonify`\ "
+"を使用して作成されます。"
 
 # cad6d48163454e75a92762542b440826
 #: ../../quickstart.rst:695
@@ -1309,14 +1310,14 @@ msgid ""
 ":func:`~flask.make_response` and get the response object to modify it, "
 "then return it::"
 msgstr ""
-"必要なことは、\ :func:`~flask.make_response`\ でreturn式を囲み、変更する"
+"必要なことは、\ :func:`~flask.make_response`\ でreturnの式を囲み、変更する"
 "ためにレスポンスオブジェクトを取得し、それからそのレスポンスオブジェクトを"
-"戻すだけです。"
+"返すだけです。"
 
 # d5d7f3690389476e84f1494d2fc2db0d
 #: ../../quickstart.rst:725
 msgid "APIs with JSON"
-msgstr "JSONのAPIs"
+msgstr "JSONを使ったAPIs"
 
 # f0a88465cfb94ce1b85dedf84428315f
 #: ../../quickstart.rst:727
@@ -1342,7 +1343,7 @@ msgstr ""
 "したくなるかもしれません。そのような場合は、サポートされているJSONのデータ"
 "タイプのシリアライズ（訳注: この場合ネットワークで通信可能な形式にする"
 "ような意味合い）をする\ :func:`~flask.json.jsonify`\ 関数を使用します。"
-"もしくは、より複雑なアプリケーションをサポートするコミュニティのFlask拡張を"
+"もしくは、より複雑なアプリケーションをサポートする、コミュニティのFlask拡張を"
 "調べてください。"
 
 # f13176e1cc944419a1ff9215f0b719c7
@@ -1364,8 +1365,8 @@ msgstr ""
 "から次のリクエストへと格納できるようにする、\ :class:`~flask.session`\ と"
 "呼ばれる2番目のオブジェクトもあります。これはクッキー上に実装されていて、"
 "クッキーに暗号学的な署名をします。これが意味することは、ユーザは自分の"
-"クッキーの内容を見ることはできますが、変更は、署名に使われた秘密鍵を知らない"
-"かぎり、できないということです。"
+"クッキーの内容を見ることはできますが、署名に使われた秘密鍵を知らない"
+"かぎり、変更はできないということです。"
 
 # 9e1ae91bfa0b4ea7916348dffd5b231d
 #: ../../quickstart.rst:768
@@ -1374,7 +1375,7 @@ msgid ""
 "sessions work::"
 msgstr ""
 "セッションを使用するためには、秘密鍵を設定しなければなりません。"
-"セッションの機能のしかたは、以下のとおりです::"
+"セッションがどのように働くかは、以下のとおりです::"
 
 # db405d20c07c4eb5b1a9ae8f322aa86d
 #: ../../quickstart.rst:802
@@ -1398,10 +1399,11 @@ msgid ""
 "generator. Use the following command to quickly generate a value for "
 ":attr:`Flask.secret_key` (or :data:`SECRET_KEY`)::"
 msgstr ""
-"秘密鍵はできるだけ無作為なものにするべきです。暗号学的に無作為なデータの"
-"生成装置に基づいた、非常に無作為なデータを生成する方法がオペレーティング"
-"システムにはあります。手早く\ :attr:`Flask.secret_key`\ （もしくは\ "
-":data:`SECRET_KEY`\ ）の値を生成するには、以下のコマンドを使用してください::"
+"秘密鍵はできるだけでたらめなものにするべきです。暗号学的にでたらめである"
+"データの生成装置に基づいた、非常にでたらめなデータを生成する方法が"
+"オペレーティングシステムにはあります。手早く\ :attr:`Flask.secret_key`\ "
+"（もしくは\ :data:`SECRET_KEY`\ ）の値を生成するには、以下のコマンドを使用"
+"してください::"
 
 # 62d4501db7b84fe9a5117527974bc508
 #: ../../quickstart.rst:815
@@ -1413,12 +1415,12 @@ msgid ""
 "cookie in your page responses compared to the size supported by web "
 "browsers."
 msgstr ""
-"クッキーに基づいたsessionについての注意: Flaskはsessionオブジェクトに"
-"置かれた値を取り上げ、クッキーへシリアライズします。"
-"実際にクッキーが有効であるときに、複数のリクエストを跨がって持続していない"
-"値を（sessionで）見つけた場合、そして明確なエラーメッセージを得られない"
-"ときは、ページのレスポンスにあるクッキーのサイズをチェックし、webブラウザに"
-"よってサポートされているサイズと比較してください。"
+"クッキーに基づいたセッションについての注意: Flaskはsessionオブジェクトに"
+"置かれた値を取り上げ、クッキーへシリアライズします。もしも複数のリクエストを"
+"跨いだ持続をしていない値が（sessionで）見つかり、実際にクッキーは有効であり、"
+"そして明確なエラーメッセージを得られないときは、ページのレスポンスにある"
+"クッキーのサイズをチェックし、webブラウザによってサポートされているサイズと"
+"比較してください。"
 
 # e6a85b189a624020b836bdcb796d651c
 #: ../../quickstart.rst:821
@@ -1448,7 +1450,7 @@ msgid ""
 msgstr ""
 "良いアプリケーションおよびユーザインタフェースとは、すべてフィードバック"
 "次第です。もしユーザが十分なフィードバックを得られない場合、おそらく"
-"アプリケーションが嫌いになって終わりです。Flaskはフラッシュ表示の仕組み"
+"アプリケーションを嫌いになって終わりです。Flaskはフラッシュ表示の仕組み"
 "（flashing system）によって、ユーザへフィードバックを与える非常にシンプルな"
 "方法を提供します。フラッシュ表示の仕組みは、リクエストの最後にメッセージを"
 "記録し、次の（ただ次だけの）リクエストでアクセスできるようにします。これは、"
@@ -1463,9 +1465,9 @@ msgid ""
 "pattern` for a full example."
 msgstr ""
 "メッセージをフラッシュ表示させるには\ :func:`~flask.flash`\ メソッドを"
-"使用し、メッセージを捉えるには、テンプレートでも利用可能である、\ :func:"
-"`~flask.get_flashed_messages`\ が使用できます。全体の例については"
-"\ :ref:`message-flashing-pattern`\ を調べてください。"
+"使用し、メッセージを捉えるには、テンプレートでも利用可能な\ :func:"
+"`~flask.get_flashed_messages`\ が使用できます。不足のない（どちらの用法も"
+"示した）例については\ :ref:`message-flashing-pattern`\ を調べてください。"
 
 # 7521c668f6414c36987312e5267db5a8
 #: ../../quickstart.rst:842
@@ -1488,7 +1490,7 @@ msgstr ""
 "サーバへ送信するクライアント側のコードがあるかもしれません。これは、ユーザの"
 "データ改ざんや、クライアントのコードの失敗によって引き起こされるかもしれません。"
 "その状況では殆どの場合は\ ``400 Bad Request``\ を返せば大丈夫ですが、ときには"
-"それではうまくいかず、さらにコードは動かし続けなければならないことがあります。"
+"それでは通用せず、コードを動かし続けなければならないことがあります。"
 
 # 56290c07aca64000a942857ae6c7c747
 #: ../../quickstart.rst:854
@@ -1499,7 +1501,7 @@ msgid ""
 msgstr ""
 "起きてしまったそのようなうさんくさい何かをログしたいことがあるかもしれません"
 "（You may still want to log that something fishy happened）。これはloggerを"
-"重宝する状況です。Flask 0.3以後、loggerが使用できるように事前設定されて"
+"重宝する状況です。Flask 0.3以降は、loggerが使用できるように事前設定されて"
 "います。"
 
 # 9d985c3b693e484d8c2c1228630ec292
@@ -1514,7 +1516,7 @@ msgid ""
 ":class:`~logging.Logger`, so head over to the official :mod:`logging` "
 "docs for more information."
 msgstr ""
-"付随している\ :attr:`~flask.Flask.logger`\ はPython標準のロギングの"
+"付与されている\ :attr:`~flask.Flask.logger`\ はPython標準のロギングの"
 "\ :class:`~logging.Logger`\ なので、さらなる情報は公式の\ :mod:`logging`\ "
 "ドキュメントを確認してください。"
 
@@ -1536,8 +1538,8 @@ msgid ""
 "middlewares from the Werkzeug package to work around bugs in lighttpd, "
 "you can do it like this::"
 msgstr ""
-"アプリケーションにWSGIのミドルウェアを追加したい場合、内部のWSGI"
-"アプリケーションをラップします。例えば、lighttpdのバグへ対処するために"
+"アプリケーションにWSGIのミドルウェアを追加したい場合は、内部のWSGI"
+"アプリケーションをラップできます。例えば、lighttpdのバグへ対処するために"
 "Werkzeugパッケージにあるミドルウェアのひとつを使いたい場合、以下のように"
 "実施できます::"
 
@@ -1554,13 +1556,13 @@ msgid ""
 "simple and easy to use with Flask."
 msgstr ""
 "（Flask）拡張は、よくあるタスクを達成する手助けをするパッケージです。"
-"例えば、Flask-SQLAlchemyはシンプルかつ容易に（SQLAlchemyを）Flaskと一緒に"
-"使用するための、SQLAlchemyのサポートを提供します。"
+"例えば、Flask-SQLAlchemyはSQLAlchemyのサポートを提供し、シンプルかつ容易に"
+"SQLAlchemyをFlaskと一緒に使用できるようにします。"
 
 # e41d486b941e48e385847ce3b902e50e
 #: ../../quickstart.rst:888
 msgid "For more on Flask extensions, have a look at :ref:`extensions`."
-msgstr "Flash拡張についてさらには、\ :ref:`extensions`\ を調べてください。"
+msgstr "Flask拡張についてさらには、\ :ref:`extensions`\ を調べてください。"
 
 # 09f396485bfb49639fd4ad512116d750
 #: ../../quickstart.rst:891
@@ -1570,6 +1572,7 @@ msgstr "webサーバへのデプロイ"
 # 97c96b4cd53247b7919f931b1ead81b9
 #: ../../quickstart.rst:893
 msgid "Ready to deploy your new Flask app? Go to :ref:`deployment`."
-msgstr "新しいFlaskアプリをデプロイする準備ができましたか？\ :ref:`deployment`\ "
+msgstr ""
+"新しいFlaskアプリをデプロイする準備ができましたか？\ :ref:`deployment`\ "
 "へ進んでください。"
 
