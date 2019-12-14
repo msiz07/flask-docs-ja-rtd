@@ -20,7 +20,7 @@ msgstr ""
 # db0210e4bf5b4ce0b72fa26189acd456
 #: ../../patterns/appfactories.rst:4
 msgid "Application Factories"
-msgstr ""
+msgstr "アプリケーション製造工場（Application Factories）"
 
 # 43074d5043684e83b184d2d0f1c24041
 #: ../../patterns/appfactories.rst:6
@@ -32,11 +32,16 @@ msgid ""
 "this object into a function, you can then create multiple instances of "
 "this app later."
 msgstr ""
+"もしパッケージとblueprintをアプリケーションで既に使っている場合（\ "
+":ref:`blueprints`\ 参照）、さらによい経験へ改善させるとてもよい方法がいくつか"
+"あります。よくあるパターンでは、blueprintがimportされたときにアプリケーション"
+"のオブジェクトを作成します。しかし、もしこのオブジェクト作成を関数の内側に"
+"移動させれば、あとでこのアプリのインスタンスを複数作成できるようになります。"
 
 # 7e14aaf62b1947159178e41321b228e4
 #: ../../patterns/appfactories.rst:12
 msgid "So why would you want to do this?"
-msgstr ""
+msgstr "では、なぜそれをしたいのでしょうか？"
 
 # 751afc2dc9a84aa79170957782ddf096
 #: ../../patterns/appfactories.rst:14
@@ -44,6 +49,8 @@ msgid ""
 "Testing.  You can have instances of the application with different "
 "settings to test every case."
 msgstr ""
+"テスト。各ケースのために違う設定を使ったアプリケーションのインスタンスを"
+"持つことが可能です。"
 
 # 46c4347048ce45a5bc409e99430c49ea
 #: ../../patterns/appfactories.rst:16
@@ -54,21 +61,28 @@ msgid ""
 " can have multiple instances of the same application running in the same "
 "application process which can be handy."
 msgstr ""
+"複数インスタンス。同じアプリケーションの違うバージョンを実行したいと想像"
+"してください。自分のwebサーバに違う設定をセットアップした複数のインスタンス"
+"を持つことも、もちろん可能ですが、しかしもしfactoryを使うと、同じアプリ"
+"ケーションのプロセスで走っている同じアプリケーションの複数のインスタンス"
+"を持つことができ、便利です。"
 
 # 26c898a9b2814f43bb2e481875bdeb40
 #: ../../patterns/appfactories.rst:22
 msgid "So how would you then actually implement that?"
-msgstr ""
+msgstr "では、どうやって実際にそれを実装するのでしょうか？"
 
 # 1ce2f203b1e049c8a1dc0c412651a875
 #: ../../patterns/appfactories.rst:25
 msgid "Basic Factories"
-msgstr ""
+msgstr "基本的なFactory（Basic Factories）"
 
 # cf5eb756e2044688ba00c4fe9cef05b7
 #: ../../patterns/appfactories.rst:27
 msgid "The idea is to set up the application in a function.  Like this::"
 msgstr ""
+"関数の中でアプリケーションをセットアップするというアイデアです。"
+"このようになります::"
 
 # bd25dd3fb47c4fe9b51997496faafa3a
 #: ../../patterns/appfactories.rst:43
@@ -78,16 +92,20 @@ msgid ""
 "  How do you get access to the application with the config?  Use "
 ":data:`~flask.current_app`::"
 msgstr ""
+"マイナス面は、blueprintの中でのimport時にはアプリケーションを使えない"
+"ことです。しかし、リクエストの中ではblueprintからアプリケーションを使う"
+"ことができます。どうやって設定されたアプリケーションにアクセスするので"
+"しょうか？\ :data:`~flask.current_app`\ を使います::"
 
 # b78da6f25679490c85d472b9632153ab
 #: ../../patterns/appfactories.rst:55
 msgid "Here we look up the name of a template in the config."
-msgstr ""
+msgstr "上の例では、テンプレートの名前をconfigから探しています。"
 
 # f990e427b7014e94a0b571720dd068ea
 #: ../../patterns/appfactories.rst:58
 msgid "Factories & Extensions"
-msgstr ""
+msgstr "FactoryとFlask拡張（Factories & Extensions）"
 
 # 0f1edb16591c42ec8e00bec74e24e8de
 #: ../../patterns/appfactories.rst:60
@@ -95,6 +113,9 @@ msgid ""
 "It's preferable to create your extensions and app factories so that the "
 "extension object does not initially get bound to the application."
 msgstr ""
+"Flask拡張のオブジェクトが最初からアプリケーションに結び付けられないために、"
+"好ましいのは自分のFlask拡張（のオブジェクト）とapp factoryを（別々に）作成"
+"することです。"
 
 # 6276eb07ba3443c4afe712c27297aa27
 #: ../../patterns/appfactories.rst:63
@@ -103,16 +124,18 @@ msgid ""
 "sqlalchemy.palletsprojects.com/>`_, as an example, you should not do "
 "something along those lines::"
 msgstr ""
+"例えば\ `Flask-SQLAlchemy <https://flask-sqlalchemy.palletsprojects.com>`_\ "
+"を使うとき、以下のようなコードを使って何かをするべきではありません::"
 
 # b5839792395346df89167323d2ff37c0
 #: ../../patterns/appfactories.rst:72
 msgid "But, rather, in model.py (or equivalent)::"
-msgstr ""
+msgstr "しかし、むしろ、以下の内容はmodel.py（もしくは同等のもの）の中にし::"
 
 # 690ebf8292844bde8e3f6680d5894357
 #: ../../patterns/appfactories.rst:76
 msgid "and in your application.py (or equivalent)::"
-msgstr ""
+msgstr "そしてapplication.py（もしくは同等のもの）は以下のようにします::"
 
 # 91428f1a3e914f1db744fabd132432bf
 #: ../../patterns/appfactories.rst:85
@@ -122,16 +145,21 @@ msgid ""
 " For more information about the design of extensions refer to "
 ":doc:`/extensiondev`."
 msgstr ""
+"この設計パターンを使うと、Flask拡張にはアプリケーション固有の状態を格納せず、"
+"そのためひとつのFlask拡張オブジェクトを複数のappで使用できます。Flask拡張の"
+"設計に関するさらなる情報は、\ :doc:`/extensiondev`\ を確認してください。"
 
 # 2810986151fe444a8143bac008cb85c9
 #: ../../patterns/appfactories.rst:90
 msgid "Using Applications"
-msgstr ""
+msgstr "アプリケーションの使用"
 
 # bce65ec6579c4689bc2efd90d7b19c72
 #: ../../patterns/appfactories.rst:92
 msgid "To run such an application, you can use the :command:`flask` command::"
 msgstr ""
+"このようなアプリケーションを実行するために、\ :command:`flask`\ コマンドを"
+"使用できます。"
 
 # 046a8950135c441786ebadc6cf0b87d8
 #: ../../patterns/appfactories.rst:97
@@ -140,6 +168,9 @@ msgid ""
 "``make_app``) in ``myapp``. You can also pass arguments to the factory "
 "like this::"
 msgstr ""
+"Flaskは自動的にfactory（\ ``create_app``\ または ``make_app``\ )を\ "
+"``myapp``\ の中から見つけ出します。以下のように、factoryへ引数を渡すことも"
+"可能です::"
 
 # 9ef58389dbf240669819d7089fcf9205
 #: ../../patterns/appfactories.rst:103
@@ -147,11 +178,14 @@ msgid ""
 "Then the ``create_app`` factory in ``myapp`` is called with the string "
 "``'dev'`` as the argument. See :doc:`/cli` for more detail."
 msgstr ""
+"こうすると、\ ``myapp``\ の中の\ ``create_app`` factoryが\ ``'dev'``\ "
+"文字列を引数に使って呼び出されます。さらなる詳細は\ :doc:`/cli`\ を確認"
+"してください。"
 
 # f0794ca000be4135a5f336177744b8c6
 #: ../../patterns/appfactories.rst:107
 msgid "Factory Improvements"
-msgstr ""
+msgstr "Factoryの改善（Factory Improvements）"
 
 # a2d80e4636b14474afbea81bd3f1cd80
 #: ../../patterns/appfactories.rst:109
@@ -159,6 +193,8 @@ msgid ""
 "The factory function above is not very clever, but you can improve it. "
 "The following changes are straightforward to implement:"
 msgstr ""
+"上記のfactory関数は非常に賢いものではありませんが、改善可能です。"
+"実装しやすいものは以下の変更です:"
 
 # 9b620674a9eb444aba3daa058da50aba
 #: ../../patterns/appfactories.rst:112
@@ -166,6 +202,8 @@ msgid ""
 "Make it possible to pass in configuration values for unit tests so that "
 "you don't have to create config files on the filesystem."
 msgstr ""
+"ユニットテストから設定値を投入可能にし、ファイルシステム上に（ユニット"
+"テスト用の）設定ファイルを作成せずに済むようにします。"
 
 # bf3fd59eec8f45b0b153e21dfdf2ae13
 #: ../../patterns/appfactories.rst:114
@@ -174,6 +212,9 @@ msgid ""
 "that you have a place to modify attributes of the application (like "
 "hooking in before/after request handlers etc.)"
 msgstr ""
+"（リクエスト処理のbefore/afterフックのように）アプリケーションの属性を"
+"変更する場所を持てるように、アプリケーションを設定するときblueprintから"
+"関数を呼び出します。"
 
 # ffe55ae57dbc42eeb42959c79524373e
 #: ../../patterns/appfactories.rst:117
@@ -181,4 +222,6 @@ msgid ""
 "Add in WSGI middlewares when the application is being created if "
 "necessary."
 msgstr ""
+"必要に応じて、アプリケーションが作成されるときWSGIミドルウェアの中に"
+"追加します。"
 
