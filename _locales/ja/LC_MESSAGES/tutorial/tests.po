@@ -29,10 +29,10 @@ msgid ""
 "wrote works the way you expect. Flask provides a test client that "
 "simulates requests to the application and returns the response data."
 msgstr ""
-"アプリケーションに対してユニットテストを書くことで、自分で書いたコードが自分の"
-"期待した通りに機能することをチェックできるようになります。Flaskはアプリケーション"
-"へのリクエストを模擬してレスポンスデータを返す、テスト用のクライアントを提供"
-"します。"
+"自分のアプリケーションに対してユニットテストを書くことで、自分で書いた"
+"コードが自分の期待通りに機能することをチェックできるようになります。Flaskは"
+"アプリケーションへのリクエストを模擬（simulate）してレスポンスデータを返す、"
+"テスト用のクライアントを提供します。"
 
 # c276b117b8ad459a991769ef1c0691ad
 #: ../../tutorial/tests.rst:10
@@ -44,7 +44,7 @@ msgid ""
 msgstr ""
 "可能な限り多くの自分のコードをテストするべきです。関数内のコードは、"
 "関数が呼び出されたときだけ走り、\ ``if``\ ブロックのような分岐箇所は、"
-"条件があった時だけ走ります。それぞれの関数は、それぞれの分岐を網羅する"
+"条件が合った時だけ走ります。それぞれの関数が、それぞれの分岐を網羅する"
 "データでテストされていることを確認したくなるでしょう。"
 
 # 75b1dee9bbf447ccbb7a0baa94becc38
@@ -58,11 +58,11 @@ msgid ""
 "in the browser. Despite this, test coverage is an important tool to use "
 "during development."
 msgstr ""
-"網羅性が100%に近づくほど、変更したときに他の振る舞いへ予想外の変化を"
-"起こさないという安心感がより得られるようになります。しかしながら、100%の"
-"網羅性は、アプリケーションにはバグがないということを保証するわけでは"
+"網羅性が100%に近づくほど、変更したときに変更箇所以外の振る舞いへ予想外の"
+"変化を起こさないという安心感がより得られるようになります。しかしながら、"
+"100%の網羅性は、アプリケーションにはバグがないということを保証するわけでは"
 "ありません。特に、それは、ユーザがブラウザの中でアプリケーションとどの"
-"ようにやり取りするかについてはテストしません。とはいえ、テストの網羅性は"
+"ようにやり取りするかについてはテストしません。とはいえ、テスト網羅性は"
 "開発中に使用できる重要なツールです。"
 
 # 292f17dc647746eea790f33850f8ed9c
@@ -80,8 +80,8 @@ msgid ""
 "You'll use `pytest`_ and `coverage`_ to test and measure your code. "
 "Install them both:"
 msgstr ""
-"コードのテストおよび測定に、ここでは\ `pytest`_\ と\ `coverage`_\ を"
-"使用します。両方ともインストールしましょう:"
+"コードのテストおよび（網羅性の）測定に、ここでは\ `pytest`_\ と\ "
+"`coverage`_\ を使用します。両方ともインストールしましょう:"
 
 # b593cdbe5ca1441d852bd5b4d9d86eb6
 #: ../../tutorial/tests.rst:38
@@ -99,11 +99,11 @@ msgid ""
 "``test_``."
 msgstr ""
 "テスト用コードは\ ``tests``\ ディレクトリに置きます。このディレクトリは、\ "
-"``flaskr``\ パッケージの内側ではなく\ *隣に*\ です。以下の\ ``tests/conftest.py``\ "
-"ファイルは、各テストで使用していく\ *据え付け品（fixtures）*\ と呼ばれる"
-"準備用（setup）関数を含んでいます。テストは\ ``test_``\ で始まるPython"
-"モジュールで、それらのモジュール内の各テスト関数も同様に\ ``test_``\ "
-"で始まります。"
+"``flaskr``\ パッケージの内側ではなく\ *隣に*\ です。以下の\ "
+"``tests/conftest.py``\ ファイルは、各テストで使用していく\ *据え付け品"
+"（fixtures）*\ と呼ばれる準備用（setup）関数を含んでいます。テストは\ "
+"``test_``\ で始まるPythonモジュールの中にあり、それらのモジュール内の"
+"各テスト関数も同様に\ ``test_``\ で始まります。"
 
 # b259a473fe9e4943a99d36df5249404a
 #: ../../tutorial/tests.rst:47
@@ -112,7 +112,7 @@ msgid ""
 "data that will be used in the tests. Write a SQL file to insert that "
 "data."
 msgstr ""
-"各テストは新しい一時的なデータベースを作成し、テスト中に使用される"
+"各テストで新しく一時的なデータベースを作成し、テスト中に使用される"
 "データをいくらか挿入します。そのデータをinsertするためのSQLファイルを"
 "書きましょう。"
 
@@ -128,8 +128,8 @@ msgid ""
 "configure the application and database for testing instead of using your "
 "local development configuration."
 msgstr ""
-"``app``\ のfixutureはfactoryを呼び出して、ローカル開発用に使用する設定の"
-"代わりに、アプリケーションとデータベースをテスト用に設定する\ "
+"以下にあるfixutureの\ ``app``\ 関数ではfactoryを呼び出して、ローカル開発用の"
+"設定を使用する代わりに、アプリケーションとデータベースをテスト用に設定する\ "
 "``test_config``\ を渡します。"
 
 # 0f77dd1c31b94ad98575f27c921d1196
@@ -149,10 +149,10 @@ msgid ""
 "removed."
 msgstr ""
 ":func:`tempfile.mkstemp`\ は一時ファイルを作成して開き、そのfileオブジェクト"
-"とパスを返します。\ ``DATABASE``\ のパスは上書きされてインスタンスフォルダ"
-"の代わりに、一時ファイルのパスを指すようになります。パスを設定した後、"
-"データベースの表が作成されテストデータが挿入されます。テストが終了した"
-"後は、一時ファイルが閉じられ消去されます。"
+"とパスを返します。\ ``DATABASE``\ のパスは上書きされて、インスタンスフォルダ"
+"の代わりに、作成した一時ファイルのパスを指すようになります。パスを設定した後、"
+"データベースの表が作成されテストデータが挿入されます。テストが終了した後は、"
+"一時ファイルが閉じられ削除されます。"
 
 # ce0754f2a58c44fca1f53e3efeeabdb9
 #: ../../tutorial/tests.rst:116
@@ -162,9 +162,9 @@ msgid ""
 "also use the flag to make testing them easier."
 msgstr ""
 ":data:`TESTING`\ は、appがテストモードであることをFlaskへ伝えます。Flaskは"
-"いくらかの内部的な振る舞いを変更してテストしやすいようにし、さらにテストを"
-"より容易にするために、別の（Flaskの）拡張がこの（TESTING）フラグを使用する"
-"ことも可能です。"
+"いくらか内部的な振る舞いを変更してテストしやすいようにし、さらに、その他の"
+"（Flaskの）拡張も自身をテストしやすくするために、この（TESTING）フラグを"
+"使用する可能性があります。"
 
 # 15ea38e4f9a14460b474ce5a390811b4
 #: ../../tutorial/tests.rst:120
@@ -174,10 +174,10 @@ msgid ""
 "fixture. Tests will use the client to make requests to the application "
 "without running the server."
 msgstr ""
-"``client``\ のfixtureは、\ ``app``\ のfixtureによって作成されたアプリケーション"
-"のオブジェクトを使って、\ :meth:`app.test_client() <Flask.test_client>`\ を"
-"呼び出します。テストではclient（のfixture）を使用して、サーバを実行させずに、"
-"アプリケーションへのリクエストを作成します。"
+"fixtureの\ ``client``\ 関数は、fixtureの\ ``app``\ 関数によって作成された"
+"アプリケーションのオブジェクトを使って、\ :meth:`app.test_client() "
+"<Flask.test_client>`\ を呼び出します。テストではこのclientを使用して、"
+"サーバを実行させずに、アプリケーションへのリクエストを作成します。"
 
 # ecca3ecb7ac64ee1ac4d61b5ee5d911d
 #: ../../tutorial/tests.rst:125
@@ -186,9 +186,9 @@ msgid ""
 ":meth:`app.test_cli_runner() <Flask.test_cli_runner>` creates a runner "
 "that can call the Click commands registered with the application."
 msgstr ""
-"``runner``\ のfixtureは\ ``client``\ と似ています。\ :meth:`app.test_cli_runner() "
-"<Flask.test_cli_runner>`\ は、アプリケーションに登録されたClickのコマンドを"
-"呼び出し可能なrunner（実行者）を作成します。"
+"fixtureの\ ``runner``\ 関数は\ ``client``\ と似ています。\ "
+":meth:`app.test_cli_runner() <Flask.test_cli_runner>`\ は、アプリケーション"
+"に登録されたClickのコマンドを呼び出し可能なrunner（実行者）を作成します。"
 
 # 9f8f772acf8b4b28a03bcae3d7815fa0
 #: ../../tutorial/tests.rst:129
@@ -200,11 +200,10 @@ msgid ""
 "to the test function."
 msgstr ""
 "Pytestは、テスト用関数内の引数名とfictureの関数名とを照合することで、"
-"fixtureを使用します。"
-"例えば、次に作成する予定の\ ``test_hello``\ 関数"
-"は\ ``client``\ 引数を取ります。Pytestはその引数名を\ ``client``\ の"
-"fixtureの関数と照合し、それを呼び出し、そしてテスト関数へ（fixutureの"
-"関数の）戻り値を渡します。"
+"fixtureを使用します。例えば、次に作成する予定の\ ``test_hello``\ 関数"
+"は\ ``client``\ 引数を取ります。Pytestはその引数名をfixtureの\ ``client``\ "
+"関数と照合し、それを呼び出し、そしてテスト関数へ（fixutureの関数の）"
+"戻り値を渡します。"
 
 # 015ab0badd7d46daab6c2d589f206a5e
 #: ../../tutorial/tests.rst:137
@@ -229,9 +228,9 @@ msgid ""
 "not passed, there should be some default configuration, otherwise the "
 "configuration should be overridden."
 msgstr ""
-"変化する可能性がある唯一の振る舞いは、テスト用設定を渡すことです。もし"
+"変えることができる唯一の振る舞いは、テスト用設定を渡すことです。もし"
 "設定が渡されない場合、なにかしらの標準設定になっているはずであり、そうで"
-"なければ設定は上書きされているはずです。"
+"なければ設定は上書きされるはずです。"
 
 # 135ac0e577ba44f5b51d22494625f176
 #: ../../tutorial/tests.rst:147
@@ -246,7 +245,7 @@ msgid ""
 "checks that the response data matches."
 msgstr ""
 "このチュートリアルの始めでfactoryを書いたとき、\ ``hello``\ 経路（route）"
-"を例として追加しました。それは「Hello, World!」を返すので、テストでは"
+"を例として追加しました。それは「Hello, World!」を返すので、テストではその"
 "レスポンスデータが合っているかをチェックします。"
 
 # 2e5e16898b3542209f92a34c089b381e
@@ -261,9 +260,9 @@ msgid ""
 "connection each time it's called. After the context, the connection "
 "should be closed."
 msgstr ""
-"アプリケーションの状況（context）内では、\ ``get_db``\ は呼び出される"
-"たびに同じ接続（connection）を返すべきです。そのcontextが終わった後"
-"では、connectionは閉じられているべきです。"
+"アプリケーションのcontext内では、\ ``get_db``\ は呼び出される"
+"たびに同じ接続（connection）を返すはずです。そのcontextが終わった後"
+"では、connectionは閉じられているはずです。"
 
 # 18c4a36b1ab84bf9af305bb665578ab7
 # 5c0831ee5e664fe0930f1fd24a3c7dba
@@ -278,7 +277,7 @@ msgid ""
 " message."
 msgstr ""
 "``init-db``\ コマンドは\ ``init_db``\ 関数を呼び出して、メッセージを出力"
-"するべきです。"
+"するはずです。"
 
 # 3824be01fbe24c10876c3027d1d4b94d
 #: ../../tutorial/tests.rst:211
@@ -288,10 +287,10 @@ msgid ""
 "``runner`` fixture you wrote above is used to call the ``init-db`` "
 "command by name."
 msgstr ""
-"このテストはPytestの\ ``monkeypatch``\ のfixtureを使って、\ ``init_db``\ "
+"このテストはPytestのfixtureの\ ``monkeypatch``\ を使って、\ ``init_db``\ "
 "関数を、それが呼び出された時には記録を残す関数へ置き換えます。\ "
-"ここで書いた\ ``runner``\ のfixtureは、\ ``init-db``\ コマンドを名前を"
-"使って呼び出すために使用されています。"
+"先ほど書いたfixtureの\ ``runner``\ 関数（が返すオブジェクト）は、\ "
+"``init-db``\ コマンドを名前を使って呼び出すために使用されています。"
 
 # 7348cc7a0145448d800143e2f1bd8265
 #: ../../tutorial/tests.rst:218
@@ -310,7 +309,7 @@ msgstr ""
 "大部分のviewでは、ユーザがログインしている必要があります。テストの中でこれを"
 "行う最も簡単なやり方は、クライアントを使って\ ``login``\ のviewへ\ ``POST``\ "
 "リクエストを作成することです。クライアント作成などを行う処理を毎回書くよりも、"
-"それを行うメソッドを持つクラスを書いて、そのクラスへ各テスト用のクライアント"
+"それを行うメソッドを持つクラスを書いて、各テストでそのクラスへクライアント"
 "を渡すfixtureを使用することができます。"
 
 # 7681b1926a97471bb2062e76a084948e
@@ -320,9 +319,9 @@ msgid ""
 " in as the ``test`` user, which was inserted as part of the test data in "
 "the ``app`` fixture."
 msgstr ""
-"\ ``auth``\ のfixtureでは、\ ``auth.login()``\ をテスト中で呼び出して、\ "
-"``app``\ のfixutureの中でテスト用データの一部として挿入された\ ``test``\ "
-"ユーザとしてログインすることができます。"
+"fixtureの\ ``auth``\ 関数と合わせると、テスト中に\ ``auth.login()``\ を"
+"呼び出し、fixutureの\ ``app``\ 関数の中でテスト用データの一部として挿入"
+"された\ ``test``\ ユーザとしてログインすることができます。"
 
 # dae2022dc8e84d579e29f6c5e8d0940b
 #: ../../tutorial/tests.rst:251
@@ -332,10 +331,10 @@ msgid ""
 "data should be in the database. Invalid data should display error "
 "messages."
 msgstr ""
-"``register``\ のviewは\ ``GET``\ でうまく表示できるべきです。適切なデータを"
+"``register``\ のviewは\ ``GET``\ でうまく表示できるはずです。適切なデータを"
 "使った\ ``POST``\ では、ログインのURLへリダイレクトして、ユーザのデータを"
-"データベースへ入れるべきです。適切でないデータではエラーメッセージを表示する"
-"べきです。"
+"データベースへ入れるはずです。適切でないデータではエラーメッセージを表示する"
+"はずです。"
 
 # d3d15921054f46bfbca94f14902e204b
 # 5e78eb3fe85b4766b88f85128cee0dd6
@@ -353,9 +352,9 @@ msgid ""
 ":meth:`client.post() <werkzeug.test.Client.post>` makes a ``POST`` "
 "request, converting the ``data`` dict into form data."
 msgstr ""
-":meth:`client.get() <werkzeug.test.client.get>`\ は\ ``GET``\ リクエスト"
-"を作成して、Flaskによって返される\ :class:`Reponse`\ オブジェクトを返し"
-"ます。同様に、\ :meth:`client.post() <werkzeug.test.client.post>`\ は\ "
+":meth:`client.get() <werkzeug.test.Client.get>`\ は\ ``GET``\ リクエスト"
+"を作成して、Flaskによって返された\ :class:`Reponse`\ オブジェクトを返し"
+"ます。同様に、\ :meth:`client.post() <werkzeug.test.Client.post>`\ は\ "
 "``POST``\ リクエストを作成して、\ ``data``\ のdictをformのデータへ変換"
 "します。"
 
@@ -366,8 +365,8 @@ msgid ""
 "checked for a ``200 OK`` :attr:`~Response.status_code`. If rendering "
 "failed, Flask would return a ``500 Internal Server Error`` code."
 msgstr ""
-"ページがうまく表示されているかをテストするために、単純なリクエストが"
-"作成され、\ ``200 OK``\ の\ :attr:`~Response.status_code`\ がチェック"
+"ページがうまく表示されているかをテストするために、単純なリクエストが作成"
+"され、\ ``200 OK``\ の\ :attr:`~Response.status_code`\ に対するチェックが"
 "されます。もし表示が失敗した場合、Flaskは\ ``500 Internal Server Error``\ の"
 "コード（status code）を返します。"
 
@@ -427,7 +426,7 @@ msgid ""
 "accessing ``session`` outside of a request would raise an error."
 msgstr ""
 "``client``\ を\ ``with``\ ブロックの中で使用すると、レスポンスが返された"
-"後に\ :data:`session`\ のようなコンテキスト変数（訳注: リクエストの処理中"
+"後に\ :data:`session`\ のようなcontextの変数（訳注: リクエストの処理中"
 "だけ設定されている変数のような意味合い）へアクセスできるようになります。"
 "通常は、\ ``session``\ へリクエストの外側からアクセスしようとするとエラーを"
 "引き起こします。"
@@ -439,7 +438,7 @@ msgid ""
 "not contain ``user_id`` after logging out."
 msgstr ""
 "``logout``\ のテストは\ ``login``\ の反対になります。\ :data:`session`\ "
-"はログアウトした後\ ``user_id``\ を含まないようにするべきです 。"
+"はログアウトした後\ ``user_id``\ を含まないようにするはずです 。"
 
 # 3f07fd00ab7e440cba68d4f71bcd2148
 #: ../../tutorial/tests.rst:357
@@ -453,9 +452,9 @@ msgid ""
 "``auth.login()`` and subsequent requests from the client will be logged "
 "in as the ``test`` user."
 msgstr ""
-"全てのブログのviewは、前の方で書いた\ ``auth``\ のfixutureを使用します。"
-"クライアントからの\ ``auth.login()``\ の呼出およびそれ以降のリクエストは、"
-"\ ``test``\ ユーザとしてログインされたものになります。"
+"全てのブログのviewは、前の方で書いたfixutureの\ ``auth``\ を使用します。"
+"\ ``auth.login()``\ を呼び出すと、それ以降のクライアントからのリクエスト"
+"は、\ ``test``\ ユーザとしてログインされたものになります。"
 
 # 61bd02173f3c425cbed28119b7680d45
 #: ../../tutorial/tests.rst:363
@@ -465,8 +464,8 @@ msgid ""
 " link to edit the post."
 msgstr ""
 "``index``\ のviewはテストデータを使って追加された投稿記事についての情報を表示"
-"するべきです。作者としてログインしたときは、投稿記事を編集できるリンクがある"
-"べきです。"
+"するはずです。作者としてログインしたときは、投稿記事を編集できるリンクがある"
+"はずです。"
 
 # bd551aa6f1b645ef9650c2f8ef5de09c
 #: ../../tutorial/tests.rst:367
@@ -501,9 +500,9 @@ msgstr ""
 "ユーザは、\ ``create``, ``update``, ``delete``\ のviewへアクセスするには、"
 "ログインしている必要があります。投稿記事の\ ``update``, ``delete``\ へ"
 "アクセスするには、ログインしているユーザは作者である必要があり、そうでない"
-"ときは\ ``403 Forbidden``\ ステータスが返されます。もし\ ``post``\ が存在"
-"しない\ ``id``\ と一緒に与えられた場合は、\ ``update``\ と\ ``delete``\ は\ "
-"``404 Not Found``\ を返すべきです。"
+"ときは\ ``403 Forbidden``\ ステータスが返されます。もし与えられた\ ``id``\ "
+"の\ ``post``\ が存在しない場合は、\ ``update``\ と\ ``delete``\ は\ "
+"``404 Not Found``\ を返すはずです。"
 
 # b1732f383ed44e58b45861690871f9f8
 #: ../../tutorial/tests.rst:433
@@ -515,10 +514,10 @@ msgid ""
 " error message on invalid data."
 msgstr ""
 "``create``\ と\ ``update``\ のviewは\ ``GET``\ リクエストへ対応して表示し\ "
-"``200 OK``\ を返すべきです。正しいデータが\ ``POST``\ リクエストで送られて"
+"``200 OK``\ を返すはずです。正しいデータが\ ``POST``\ リクエストで送られて"
 "きたときは、\ ``create``\ は新しい投稿記事のデータをデータベースへ挿入し、\ "
-"``update``\ は既存のデータを変更するべきです。どちらのページも不正なデータ"
-"が送られてきたときはエラーメッセージを表示するべきです。"
+"``update``\ は既存のデータを変更するはずです。どちらのページも不正なデータ"
+"が送られてきたときはエラーメッセージを表示するはずです。"
 
 # 152f03a1a0774dbb9cfa60e0bd8861c6
 #: ../../tutorial/tests.rst:473
@@ -526,7 +525,7 @@ msgid ""
 "The ``delete`` view should redirect to the index URL and the post should "
 "no longer exist in the database."
 msgstr ""
-"``delete``\ のviewはindexのURLへリダイレクトするべきであり、データベースに"
+"``delete``\ のviewはindexのURLへリダイレクトするはずであり、データベースに"
 "投稿記事はもはや存在しないはずです。"
 
 # c77a6516e1324918b1dcf40cef36e494
@@ -541,9 +540,10 @@ msgid ""
 "with coverage less verbose, can be added to the project's ``setup.cfg`` "
 "file."
 msgstr ""
-"必要ではないですが、（テストメッセージの）出力が多過ぎないようにしつつ、"
-"coverage（訳注: テストツールの名前）と一緒にテストを実行する、いくらかの"
-"追加設定をプロジェクトの\ ``setup.cfg``\ ファイルへ加えます。"
+"必要ではないですが、"
+"coverage（訳注: テストツールの名前）を使ったテストを実行するとき、（テスト"
+"メッセージの）出力が多過ぎないようにする、いくらかの追加設定をプロジェクト"
+"の\ ``setup.cfg``\ ファイルへ加えます。"
 
 # 56f0ff06e9da48d1ac5b190ff7452248
 #: ../../tutorial/tests.rst:497
@@ -556,7 +556,7 @@ msgid ""
 "To run the tests, use the ``pytest`` command. It will find and run all "
 "the test functions you've written."
 msgstr ""
-"テストを実行するには、\ ``pytest``\ コマンドを使用します。それは、それ"
+"テストを実行するには、\ ``pytest``\ コマンドを使用します。それは、これ"
 "まで書いたテスト関数をすべて見つけ出して実行します。"
 
 # 475c369ef42c42d990e7d3a0c02cebba
@@ -587,7 +587,8 @@ msgstr "簡潔な網羅性レポートを端末の中で見ることができま
 #: ../../tutorial/tests.rst:552
 msgid "An HTML report allows you to see which lines were covered in each file:"
 msgstr ""
-"HTMLレポートでは各ファイルのどの行がテストで網羅されているか見ることができます:"
+"HTMLレポートでは各ファイルのどの行がテストで網羅されているか見ることが"
+"できます:"
 
 # 3314bd1c2b39406ca6ff57b2af88be37
 #: ../../tutorial/tests.rst:558
@@ -595,8 +596,8 @@ msgid ""
 "This generates files in the ``htmlcov`` directory. Open "
 "``htmlcov/index.html`` in your browser to see the report."
 msgstr ""
-"このコマンドは\ ``htmlcov``\ ディレクトリにファイルを生成します。このレポートを"
-"見るには\ ``htmlcov/index.html``\ をブラウザで開きます。"
+"このコマンドは\ ``htmlcov``\ ディレクトリにファイルを生成します。この"
+"レポートを見るには\ ``htmlcov/index.html``\ をブラウザで開きます。"
 
 # fae859ab990f4382b8f56a877fb647a5
 #: ../../tutorial/tests.rst:561
