@@ -20,7 +20,7 @@ msgstr ""
 # 1dae90216daa4358ab0187edd570d335
 #: ../../tutorial/factory.rst:4
 msgid "Application Setup"
-msgstr "アプリケーションの用意"
+msgstr "アプリケーションの用意（Application Setup）"
 
 # 8a24ec84dbb84f8e98a450907fa2b254
 #: ../../tutorial/factory.rst:6
@@ -42,10 +42,10 @@ msgid ""
 " simple and useful in some cases, it can cause some tricky issues as the "
 "project grows."
 msgstr ""
-"最も直観的なFlaskアプリケーションの作成方法は、コードの最上部に直接グローバルに\ "
-":class:`Flask`\ インスタンスを作成することで、前ページの例「Hello, World!」の"
-"ようなやり方です。これは場合によってはシンプルで便利ですが、プロジェクトが"
-"成長すると何かしら扱いにくい問題を引き起こす可能性があります。"
+"最も直観的なFlaskアプリケーションの作成方法は、コードの最上部にグローバルな\ "
+":class:`Flask`\ インスタンスを直接作成することで、前ページの例「Hello, "
+"World!」のようなやり方です。これは場合によってはシンプルで便利ですが、"
+"プロジェクトが成長すると何かしら扱いにくい問題を引き起こす可能性があります。"
 
 # 0a76c7e9ba3b46a899c6a4ad0181bce2
 #: ../../tutorial/factory.rst:16
@@ -57,9 +57,10 @@ msgid ""
 "will be returned."
 msgstr ""
 ":class:`Flask`\ インスタンスをグローバルに作成する代わりに、関数の内側で"
-"作成するようにします。この関数は\ *アプリケーション製造工場（application factory）*\ "
-"として知られています。設定、登録、用意などアプリケーションが必要とするあらゆる"
-"ことは、この関数の内側で起こり、それからアプリケーションが（関数から）返されます。"
+"作成するようにします。この関数は\ *アプリケーション製造工場（application "
+"factory）*\ として知られています。アプリケーションが必要とするあらゆる"
+"設定、登録、用意などは、この関数の内側で起こり、それからアプリケーションが"
+"（factory関数から）返されます。"
 
 # 645f1b51129c44bda59a2be9c4300101
 #: ../../tutorial/factory.rst:24
@@ -111,7 +112,7 @@ msgid ""
 "convenient way to tell it that."
 msgstr ""
 "``__name__``\ は、この時点でのPythonのmodule名です。appは、いくつかpathを"
-"用意するために、どこにappが位置しているか知る必要があり、\ ``__name__``\ "
+"用意するために、appがどの場所にあるか知る必要があり、\ ``__name__``\ "
 "はそれを伝えるための便利なやり方です。"
 
 # ae57d7591db14cb4b3690303c4d64a37
@@ -146,9 +147,9 @@ msgid ""
 "but it should be overridden with a random value when deploying."
 msgstr ""
 ":data:`SECRET_KEY`\ は、データを安全に保つためにFlaskとその拡張によって"
-"使用されます。開発中に便利な値を提供するために、それは\ ``'dev'``\ に"
+"使用されます。開発中には便利な値を提供するために、ここでは\ ``'dev'``\ に"
 "設定されていますが、デプロイ（訳注：本番環境などへの移行）をするときには"
-"乱数へ上書きするべきです。"
+"乱数で上書きするべきです。"
 
 # b0c29ca6aaef4879ae08dcd540fb5419
 #: ../../tutorial/factory.rst:96
@@ -196,7 +197,7 @@ msgid ""
 "automatically, but it needs to be created because your project will "
 "create the SQLite database file there."
 msgstr ""
-":func:`os.makedirs`\ は\ :attr:`app.instance_path <Flask.instance_path`\ "
+":func:`os.makedirs`\ は\ :attr:`app.instance_path <Flask.instance_path>`\ "
 "が確実に存在するようにします。Flaskはインスタンスフォルダを自動的には"
 "作成しませんが、このプロジェクトではそこにSQLiteデータベースファイルを"
 "作成するために必要になります。"
@@ -209,9 +210,9 @@ msgid ""
 "creates a connection between the URL ``/hello`` and a function that "
 "returns a response, the string ``'Hello, World!'`` in this case."
 msgstr ""
-":meth:`@app.route() <Flask.route>`\ はチュートリアルの残りの部分へ乗り込む"
-"前に、アプリケーションが機能していることを確かめるための簡易な経路を作成"
-"します。その経路はURLの\ ``/hello``\ と、この場合は文字列\ ``'Hello, "
+":meth:`@app.route() <Flask.route>`\ はチュートリアルの残りの部分へ進む前に、"
+"アプリケーションが機能していることを確かめるための簡易な経路（route）を"
+"作成します。その経路は、URLの\ ``/hello``\ と、この場合は文字列\ ``'Hello, "
 "World!'``\ というレスポンスを返す関数とを、結び付けます。"
 
 # 470dfecce5fb4dc689aafb0537106df3
@@ -265,7 +266,7 @@ msgstr ""
 # e60642b58ee341cf88d1905251752196
 #: ../../tutorial/factory.rst:162
 msgid "You'll see output similar to this:"
-msgstr "以下と同じような出力が見られるでしょう:"
+msgstr "以下と似たような出力が見られるでしょう:"
 
 # 3ffbe1c5b2f14ea995ee1e0c71cd5835
 #: ../../tutorial/factory.rst:174
@@ -274,9 +275,9 @@ msgid ""
 "\"Hello, World!\" message. Congratulations, you're now running your Flask"
 " web application!"
 msgstr ""
-"http://127.0.0.1:5000/hello\ をブラウザで訪れると「Hello, World!」メッセージを"
-"見られるはずです。おめでとうございます、この時点で自分のFlask webアプリケーションを"
-"実行中です！"
+"http://127.0.0.1:5000/hello\ をブラウザで訪れると「Hello, World!」"
+"メッセージを見られるはずです。おめでとうございます、この時点で自分の"
+"Flask webアプリケーションを実行中です！"
 
 # 6c057672de284ae5a719c4f0db3b95f5
 #: ../../tutorial/factory.rst:178
