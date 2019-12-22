@@ -43,7 +43,7 @@ msgid ""
 " already has a link to the ``style.css`` file:"
 msgstr ""
 "Flaskは\ ``flaskr/static``\ ディレクトリからの相対パスを取る\ ``static``\ の"
-"viewを自動的に追加して提供します。\ ``base.html``\ テンプレートは、既に\ "
+"viewを自動的に追加して支給します。\ ``base.html``\ テンプレートは、既に\ "
 "``style.css``\ ファイルへのリンクを持っています:"
 
 # 271ff208c5ec47e7a085da1a11e288e5
@@ -99,7 +99,7 @@ msgid ""
 msgstr ""
 "`Mozillaのドキュメント <CSS_>`_\ でCSSについてさらに読むことができます。"
 "もし静的ファイルを変更する場合は、ブラウザのページを更新してください。もし"
-"変更が表示されない場合、試しにブラウザのキャッシュをクリアしてください。"
+"変更が表示されない場合、ブラウザのキャッシュのクリアを試してください。"
 
 # 9da2bf151a724b248330eeb59dc332d3
 #: ../../tutorial/static.rst:72
