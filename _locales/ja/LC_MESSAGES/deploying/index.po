@@ -20,7 +20,7 @@ msgstr ""
 # 731d82fe3f954089b77e02a0f6a0c41c
 #: ../../deploying/index.rst:4
 msgid "Deployment Options"
-msgstr ""
+msgstr "展開の選択肢（Deployment Options）"
 
 # 91428b27883e468b8939ba6b51c6c614
 #: ../../deploying/index.rst:6
@@ -29,6 +29,10 @@ msgid ""
 "suitable for production** as it doesn't scale well.  Some of the options "
 "available for properly running Flask in production are documented here."
 msgstr ""
+"軽量で簡単に使用できますが、規模の拡大・縮小をうまくはできないため、\ "
+"**Flaskの組み込みサーバは本番環境のために適したものではありません**\ 。"
+"本番環境でうまくFlaskを実行するために使用可能な選択肢のいくつかが、ここで"
+"説明されています。"
 
 # 8dd80ad09fc6442a98e2641062129882
 #: ../../deploying/index.rst:10
@@ -38,11 +42,15 @@ msgid ""
 "it.  Just remember that your :class:`Flask` application object is the "
 "actual WSGI application."
 msgstr ""
+"もしもここのリストにはないWSGIサーバへFlaskアプリケーションをデプロイしたい"
+"場合、WSGI appの使い方に関するそのサーバのドキュメントを調べてください。"
+"\ :class:`Flask`\ アプリケーションのオブジェクトは実際にWSGIアプリケーション"
+"であることを、まずは思い出してください。"
 
 # 740d247009c64c7a905492b485016b23
 #: ../../deploying/index.rst:17
 msgid "Hosted options"
-msgstr ""
+msgstr "ホストされる場合の選択肢（Hosted Options）"
 
 # cbec1ab64f3740d883da67cfa7656083
 #: ../../deploying/index.rst:19
@@ -50,6 +58,8 @@ msgid ""
 "`Deploying Flask on Heroku <https://devcenter.heroku.com/articles"
 "/getting-started-with-python>`_"
 msgstr ""
+"`Heroku上へのFlaskのデプロイ <https://devcenter.heroku.com/articles"
+"/getting-started-with-python>`_"
 
 # 2a38354e726344289b424313eb5958be
 #: ../../deploying/index.rst:20
@@ -58,6 +68,9 @@ msgid ""
 "<https://cloud.google.com/appengine/docs/standard/python/getting-started"
 "/python-standard-env>`_"
 msgstr ""
+"`Google App Engine上へのFlaskのデプロイ "
+"<https://cloud.google.com/appengine/docs/standard/python/getting-started"
+"/python-standard-env>`_"
 
 # 0f296b5106234217ba0a7c2557d895fe
 #: ../../deploying/index.rst:21
@@ -66,6 +79,9 @@ msgid ""
 "<https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-"
 "python-flask.html>`_"
 msgstr ""
+"`AWS Elastic Beanstalk上へのFlaskのデプロイ "
+"<https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-"
+"python-flask.html>`_"
 
 # 2bb0262c0ac44148a09ba02a67d6d922
 #: ../../deploying/index.rst:22
@@ -73,6 +89,8 @@ msgid ""
 "`Deploying on Azure (IIS) <https://docs.microsoft.com/en-us/azure/app-"
 "service/containers/how-to-configure-python>`_"
 msgstr ""
+"`Azure (IIS) 上へのデプロイ <https://docs.microsoft.com/en-us/azure/app-"
+"service/containers/how-to-configure-python>`_"
 
 # 2bce0f8afbd94c238a5f9f6fb39ac775
 #: ../../deploying/index.rst:23
@@ -80,9 +98,11 @@ msgid ""
 "`Deploying on PythonAnywhere "
 "<https://help.pythonanywhere.com/pages/Flask/>`_"
 msgstr ""
+"`PythonAnywhere上へのデプロイ "
+"<https://help.pythonanywhere.com/pages/Flask/>`_"
 
 # 8d7cc0e76e9f4349bc95b9e4fce5bd97
 #: ../../deploying/index.rst:26
 msgid "Self-hosted options"
-msgstr ""
+msgstr "自分のサーバでホストするときの選択肢（Self-hosted options）"
 
