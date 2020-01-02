@@ -31,11 +31,17 @@ msgid ""
 "FastCGI server first. The most popular one is `flup`_ which we will use "
 "for this guide. Make sure to have it installed to follow along."
 msgstr ""
+"FastCGIは\ `nginx`_, `lighttpd`_, `cherokee`_\ のようなサーバでのデプロイの"
+"選択肢です; 他の選択肢については\ :doc:`uwsgi`\ と\ :doc:`wsgi-standalone`\ "
+"を見てください。自分のWSGIアプリケーションをそれらのサーバのどれかと一緒に"
+"使うためには、最初にFastCGIサーバが必要になるでしょう。最も人気があるものは\ "
+"`flup`_\ であり、このガイドで使用します。以下の内容に沿ってフォローしていく"
+"には、flupを確実にインストールしておいてください。"
 
 # d4f0787f4ad04f88ae9e8534d1e911e0
 #: ../../deploying/fastcgi.rst:12
 msgid "Watch Out"
-msgstr ""
+msgstr "注意"
 
 # 5d9bdbf9e0464f2a9ea48e62e7f1f6b0
 #: ../../deploying/fastcgi.rst:14
@@ -46,11 +52,16 @@ msgid ""
 "because this will always start a local WSGI server which we do not want "
 "if we deploy that application to FastCGI."
 msgstr ""
+"予め自分のアプリケーションのファイル内にあるかもしれない全ての\ ``app.run()``\ "
+"呼び出しは、\ ``if __name__ == '__main__':``\ ブロックの内側にあるか、別の"
+"ファイルに移動していることを確実にしておいてください。FastCGIへアプリケーション"
+"をデプロイするときは望まないローカルWSGIサーバを常に開始してしまうために、"
+"app.run()が呼び出されないことを、まずは確認してください。"
 
 # c09e2aac6c1a42418f81c71f43a67569
 #: ../../deploying/fastcgi.rst:21
 msgid "Creating a `.fcgi` file"
-msgstr ""
+msgstr "`.fcgi`\ ファイルの作成"
 
 # caa3c5786e214640bb84ea7961698806
 #: ../../deploying/fastcgi.rst:23
@@ -58,6 +69,8 @@ msgid ""
 "First you need to create the FastCGI server file.  Let's call it "
 "`yourapplication.fcgi`::"
 msgstr ""
+"最初にFastCGIサーバのファイルを作成する必要があります。それを\ "
+"`yourapplication.fcgi`\ と呼ぶことにしましょう::"
 
 # 0902adc978ca4d08ac0dbff127f10e2e
 #: ../../deploying/fastcgi.rst:33
@@ -67,11 +80,15 @@ msgid ""
 "FastCGI server.  For that to work you need to pass the path to the socket"
 " to the :class:`~flup.server.fcgi.WSGIServer`::"
 msgstr ""
+"これはApacheで動かすには十分ですが、nginxおよび古いバージョンのlighttpdでは"
+"FastCGIサーバとやり取りするために、明示的にsocketを渡す必要があります。それを"
+"動かすためには、socketのpathを\ :class:`~flup.server.fcgi.WSGIServer`\ へ渡す"
+"必要があります::"
 
 # 4c7e4f81d7764fc4a237c4417a37ada1
 #: ../../deploying/fastcgi.rst:40
 msgid "The path has to be the exact same path you define in the server config."
-msgstr ""
+msgstr "pathはサーバの設定の中で定義したpathと正確に一致する必要があります。"
 
 # 342b843e5f6c4113b3ee8ae597bd5e97
 #: ../../deploying/fastcgi.rst:43
@@ -80,6 +97,9 @@ msgid ""
 "again. It makes sense to have that in :file:`/var/www/yourapplication` or"
 " something similar."
 msgstr ""
+":file:`yourapplication.fcgi`\ ファイルをどこか再び見つけ出せる場所に保存して"
+"ください。\ :file:`/var/www/yourapplication`\ または似たような何かの中にする"
+"ことは合理的です。"
 
 # c748f63aaef34b349e075bafe0e8167f
 #: ../../deploying/fastcgi.rst:47
@@ -87,11 +107,14 @@ msgid ""
 "Make sure to set the executable bit on that file so that the servers can "
 "execute it:"
 msgstr ""
+"サーバが実行できるように、そのファイルのexecutable bit（訳注: ファイルの実行"
+"を許可するか指定するための情報で、UNIX系ではchmodコマンドで設定できます）を"
+"確実に設定してください:"
 
 # 6ec5b6ea46e047e88a1bbe7df73237a3
 #: ../../deploying/fastcgi.rst:55
 msgid "Configuring Apache"
-msgstr ""
+msgstr "Apacheの設定"
 
 # dfddb4e81bac49479d2b709e5d3bd922
 #: ../../deploying/fastcgi.rst:57
@@ -105,6 +128,16 @@ msgid ""
 "following example uses FastCgiServer to start 5 instances of the "
 "application which will handle all incoming requests::"
 msgstr ""
+"上記の例は基本的なApacheでのデプロイには十分ですが、アプリケーションのURLに\ 、"
+"例えば\ `example.com/yourapplication.fcgi/news/``\ のように、\ `.fcgi`\ ファイル"
+"が見えるようになります。URLの中にyourapplication.fcgiが見えないようにアプリケー"
+"ションを設定する方法はいくつかあります。好ましいやり方は、FastCgiサーバへの"
+"リクエストの経路を決める設定ディレクティブScriptAliasとSetHandlerを使用する"
+"ことです。以下の例は、全ての受信リクエストを処理するアプリケーションのインス"
+"タンスを5つ開始するFastCgiServerを使用します（訳注: 以下の例にある\ "
+"``mod_fastcgi``\ は、この日本語ドキュメント作成時点（2019年1月）で開発が停止"
+"しており、ソースコードは10年以上更新がなく、Apache2.4系には未対応でコンパイル"
+"できません）::"
 
 # fd39c25f2d024e5db36dabd2d2e5e062
 #: ../../deploying/fastcgi.rst:82
@@ -114,6 +147,10 @@ msgid ""
 "Note that in the following the path is not real, it's simply used as an "
 "identifier to other directives such as AliasMatch::"
 msgstr ""
+"それらのプロセスはApacheにより管理されます。もし独立したFastCGIサーバを使用"
+"したい場合、代わりにFastCgiExternalServerディレクティブを使用できます。以下の"
+"設定ではpathは実際のものではなく、AliasMatchのような他のディレクティブに対する"
+"単なる識別子として使用されていることに注意してください::"
 
 # d846c941c54c469485cf7c51157fad82
 #: ../../deploying/fastcgi.rst:90
@@ -122,21 +159,24 @@ msgid ""
 "use WSGI middleware to remove yourapplication.fcgi from the URLs. Set "
 ".htaccess::"
 msgstr ""
+"例えば共有されているwebホストのように、もしScriptAliasを設定できない場合、"
+"URLからyourapplication.fcgiを取り除くためにWSGIミドルウェアを使用できます。"
+".htaccessの設定::"
 
 # 1c4814c229624c328587038244fd0c8e
 #: ../../deploying/fastcgi.rst:109
 msgid "Set yourapplication.fcgi::"
-msgstr ""
+msgstr "yourapplication.fcgiの設定::"
 
 # 6e793f4443d146338809809254c42fea
 #: ../../deploying/fastcgi.rst:133
 msgid "Configuring lighttpd"
-msgstr ""
+msgstr "lighttpdの設定"
 
 # 371fd4cf8d36479eb71f764f6be3ac62
 #: ../../deploying/fastcgi.rst:135
 msgid "A basic FastCGI configuration for lighttpd looks like that::"
-msgstr ""
+msgstr "lighttpd用の基本的なFastCGIの設定は以下のようになります::"
 
 # 4582cf54277c46b2bf2eb8842c671c08
 #: ../../deploying/fastcgi.rst:155
@@ -147,6 +187,12 @@ msgid ""
 "lighttpd bug with the "
 ":class:`~werkzeug.contrib.fixers.LighttpdCGIRootFix` middleware."
 msgstr ""
+"FastCGIを有効にし、モジュールのaliasおよびrewriteを行うことを覚えておいて"
+"ください。以下の設定はアプリケーションを\ ``/yourapplication``\ に結び付け"
+"ます。アプリケーションをURLのrootとして働くようにしたい場合、\ "
+":class:`~werkzeug.contrib.fixers.LighttpdCGIRootFix`\ ミドルウェア（訳注: "
+"werkzeugの0.9以降、CGIRootFixに名前が変更されています）を使ってlighttpdのバグ"
+"を回避する必要があります。"
 
 # b2723d15011f4e32826d6bb3af0c7527
 #: ../../deploying/fastcgi.rst:160
@@ -157,11 +203,16 @@ msgid ""
 "<https://redmine.lighttpd.net/projects/lighttpd/wiki/Docs_ModFastCGI>`_ "
 "(note that explicitly passing a socket to run() is no longer necessary)."
 msgstr ""
+"上記を適用するのは、確実に、URLをrootに取り付ける（mount）ときだけにして"
+"ください。\ `FastCGIとPython "
+"<https://redmine.lighttpd.net/projects/lighttpd/wiki/Docs_ModFastCGI>`_ \ "
+"についてのさらなる情報についてはLightyのドキュメントを見てください（明示的に"
+"socketをrun()へ渡すことは必要ではなくなったことに注意してください）。"
 
 # aafe9bf02c534e0a961af50f38d6c117
 #: ../../deploying/fastcgi.rst:166
 msgid "Configuring nginx"
-msgstr ""
+msgstr "nginxの設定"
 
 # cd92edfbef3e4ed28a13086e775e73cf
 #: ../../deploying/fastcgi.rst:168
@@ -169,11 +220,13 @@ msgid ""
 "Installing FastCGI applications on nginx is a bit different because by "
 "default no FastCGI parameters are forwarded."
 msgstr ""
+"標準設定ではFastCGIのパラメータが何も転送されないため、nginxへのFastCGIの"
+"インストールは少し違います。"
 
 # 4971e638cb5e4b35b3a07309813389d9
 #: ../../deploying/fastcgi.rst:171
 msgid "A basic Flask FastCGI configuration for nginx looks like this::"
-msgstr ""
+msgstr "nginx用の基本的なFlaskのFastCGI設定は以下のようになります::"
 
 # 5c80b48f4e564eca919ab657bd4cfe3b
 #: ../../deploying/fastcgi.rst:183
@@ -182,11 +235,15 @@ msgid ""
 " want to have it in the URL root it's a bit simpler because you don't "
 "have to figure out how to calculate ``PATH_INFO`` and ``SCRIPT_NAME``::"
 msgstr ""
+"この設定はアプリケーションを\ ``/yourapplication``\ に結び付けます。もし"
+"アプリケーションをURLのrootにしたい場合、どうやって\ ``PATH_INFO``\ と\ "
+"``SCRIPT_NAME``\ とを計算するか理解する必要がなくなるため、少しシンプルに"
+"なります::"
 
 # cfb98b5b13d444c4822edb3ca5470232
 #: ../../deploying/fastcgi.rst:196
 msgid "Running FastCGI Processes"
-msgstr ""
+msgstr "FastCGIプロセスの実行"
 
 # c91092eb622843628b734ad7b2bfd85a
 #: ../../deploying/fastcgi.rst:198
@@ -201,11 +258,21 @@ msgid ""
 "note that this is a manual solution which does not persist across system "
 "restart::"
 msgstr ""
+"nginx他はFastCGIのアプリケーションの読み込み（load）をしないため、自分で"
+"（FastCGIプロセスの実行を）行う必要があります。\ `supervisordがFastCGIプロセス"
+"を管理可能です。 "
+"<http://supervisord.org/configuration.html#fcgi-program-x-section-settings>`_\ "
+"他のFastCGI管理ツールを探すことも、例えばSysvの\ ``init.d``\ スクリプトを使い、"
+"起動時に自分の\ `.fcgi`\ ファイルを実行するスクリプトを作成することも可能です。"
+"一時的な解決策として、\ ``.fcgi``\ スクリプトを常にGNU screenツールの中で実行"
+"することも可能です。詳細は\ ``man screen``\ を見てください。さらに、GNU screen"
+"はシステムを再起動したときは引き継がれない主導の解決策であることに注意してくだ"
+"さい::"
 
 # 7904b509c5254dbe83fc2a278e79bdbf
 #: ../../deploying/fastcgi.rst:211
 msgid "Debugging"
-msgstr ""
+msgstr "デバッグ"
 
 # 49f7be88368340d1b1198fae9e9925b2
 #: ../../deploying/fastcgi.rst:213
@@ -216,6 +283,11 @@ msgid ""
 " the only thing that can really give you ideas why it breaks is switching"
 " to the correct user and executing the application by hand."
 msgstr ""
+"FastCGIのデプロイは、殆どのwebサーバでデバッグが困難になる傾向があります。"
+"サーバのログは「premature end of headers」という行だけしか伝えてくれない"
+"ことが、とてもよくあります。アプリケーションをデバッグするために、なぜ壊れる"
+"かというアイデアを本当に教えてくれる唯一のことは、適正なユーザに切り替え、"
+"手動でアプリケーションを実行することです。"
 
 # 876c4adf5a6b406d81d8b9d48817d7e6
 #: ../../deploying/fastcgi.rst:219
@@ -223,6 +295,8 @@ msgid ""
 "This example assumes your application is called `application.fcgi` and "
 "that your web server user is `www-data`::"
 msgstr ""
+"以下の例では、アプリケーションが\ `application.fcgi`\ と呼ばれ、webサーバの"
+"ユーザは\ `www-data`\ と想定しています::"
 
 # 90946d42e3df4660aeab10a5ad1b5da7
 #: ../../deploying/fastcgi.rst:229
@@ -230,11 +304,15 @@ msgid ""
 "In this case the error seems to be \"yourapplication\" not being on the "
 "python path.  Common problems are:"
 msgstr ""
+"このケースでは、エラーは「yourapplication」がpythonのpathにないということの"
+"ようです。ありがちな問題は:"
 
 # 004c4eb5c2734017bbc8e1e499c9394e
 #: ../../deploying/fastcgi.rst:232
 msgid "Relative paths being used.  Don't rely on the current working directory."
 msgstr ""
+"相対パスが使われています。そのときの作業ディレクトリの場所に依存しないように"
+"してください。"
 
 # c9f4b32939934aa1bf9cb201c30bc787
 #: ../../deploying/fastcgi.rst:233
@@ -242,9 +320,10 @@ msgid ""
 "The code depending on environment variables that are not set by the web "
 "server."
 msgstr ""
+"コードが、webサーバによって設定されていない環境変数に依存しています。"
 
 # 9ff49f369445471aa1ab15b40307d745
 #: ../../deploying/fastcgi.rst:235
 msgid "Different python interpreters being used."
-msgstr ""
+msgstr "違うpythonインタプリタが使用されています。"
 
