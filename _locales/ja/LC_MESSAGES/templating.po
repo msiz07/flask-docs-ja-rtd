@@ -20,7 +20,7 @@ msgstr ""
 # e18b9baec7bb41c99f7416240297921e
 #: ../../templating.rst:4
 msgid "Templates"
-msgstr ""
+msgstr "テンプレート"
 
 # d2aefb3be3a24b76be1d71f8c41c5b91
 #: ../../templating.rst:6
