@@ -32,10 +32,10 @@ msgid ""
 "the application server can serve uWSGI, FastCGI, and HTTP protocols."
 msgstr ""
 "uWSGIは\ `nginx`_, `lighttpd`_, `cherokee`_\ のようなサーバでのデプロイの"
-"選択肢です; 他の選択肢については\ :doc:`fastcti`\ と\ :doc:`wsgi-standalone`\ "
+"選択肢です; 他の選択肢については\ :doc:`fastcgi`\ と\ :doc:`wsgi-standalone`\ "
 "を見てください。自分のWSGIアプリケーションをuWSGIプロトコルと一緒に使うために"
 "は、最初にuWSGIサーバが必要になるでしょう。uWSGIはプロトコルでもありアプリ"
-"ケーションサーバでもあります; アプリケーションサーバはuWSGI、fastcti、そして"
+"ケーションサーバでもあります; アプリケーションサーバはuWSGI、fastcgi、そして"
 "HTTPプロトコルに対応可能です。"
 
 # 6c0e59a7e79648868d7c17401bfc5ffd
