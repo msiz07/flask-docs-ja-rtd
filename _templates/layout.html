@@ -4,4 +4,45 @@
 {% if IS_READTHEDOCS %}
     <meta name="google-site-verification" content="{{ GOOGLE_SITE_VERIFICATION }}" />
 {% endif %}
+<style>
+    /* cf, https://unguis.cre8or.jp/web/1934 */
+    .trans-translated-text {
+        position: relative;
+    }
+
+    .trans-translated-text:hover {
+        background: #deb3ba;
+    }
+
+    .trans-original-text {
+        display: none;
+        position: absolute;
+        /*
+        bottom: -2.8em;
+        left: 0.3em;
+        */
+        left: 0.5em;
+        top: 100%; /* -8px; */
+        z-index: 9999;
+        padding: 0.3em 0.5em;
+        color: #FFFFFF;
+        background: #c72439;
+        border-radius: 0.5em;
+    }
+
+    .trans-original-text:after {
+        width: 100%;
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0.5em;
+        top: -8px;
+        border-top: 8px solid transparent;
+        border-left: 8px solid #c72439;
+    }
+
+    .trans-translated-text:hover .trans-original-text {
+        display: block;
+    }
+</style>
 {% endblock %}
