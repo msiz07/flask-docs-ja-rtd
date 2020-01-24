@@ -1,6 +1,7 @@
 {%- extends "!layout.html" %}
 {%- block extrahead %}
 {{ super() }}
+    <link rel="stylesheet" href="_static/trans-tooltip.css" />
 {% if IS_READTHEDOCS %}
     <meta name="google-site-verification" content="{{ GOOGLE_SITE_VERIFICATION }}" />
 {% endif %}
