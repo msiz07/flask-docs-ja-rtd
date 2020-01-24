@@ -20,8 +20,7 @@ import os
 html_context['IS_READTHEDOCS'] = os.environ.get("READTHEDOCS", False)
 html_context['GOOGLE_SITE_VERIFICATION'] = os.environ.get('GOOGLE_SITE_VERIFICATION', "DUMMY")
 
-# tooltip original text -----
-# -- custom transform for keep left original text translated
+# support for tooltip showing original text ----------------------------
 from os import path
 from typing import Any, Dict, List, Tuple, TypeVar
 from docutils.utils import relative_path
@@ -29,11 +28,7 @@ from sphinx.locale import init as init_locale
 from sphinx.transforms import SphinxTransform
 from sphinx.util import logging
 from sphinx.util.i18n import docname_to_domain
-from sphinx.util.nodes import (
-    #LITERAL_TYPE_NODES, IMAGE_TYPE_NODES, NodeMatcher,
-    #is_pending_meta, traverse_translatable_index,
-    extract_messages,
-)
+from sphinx.util.nodes import extract_messages
 
 if False:
     # For type annotation
@@ -44,11 +39,12 @@ original_text_attr = "data-trans-original-text"
 original_text_css = "trans-original-text"
 translated_text_css= "trans-translated-text"
 
+# custom transform for keep left original text translated, implemented
 # based on (mostly copied from) sphinx.transforms.i18n.Locale
-class PreserveTranslatableMessageAsAttribute(SphinxTransform):
+class CopyLocaleOriginalMessageAsAttribute(SphinxTransform):
     """
-    Add original text to translatable nodes as data-orig attribute.
-    """
+    Add original text to translated nodes as %s attribute.
+    """ % original_text_attr
 
     #default_priority = 20 # priority of sphinx.transforms.i18n.Locale
     default_priority = 15
@@ -82,13 +78,12 @@ class PreserveTranslatableMessageAsAttribute(SphinxTransform):
             node[original_text_attr] = msg
 
 from sphinx.util.docutils import is_html5_writer_available
-#if not html5_ready or self.config.html4_writer:
 if not is_html5_writer_available():
     from sphinx.writers.html import HTMLTranslator
 else:
     from sphinx.writers.html5 import HTML5Translator as HTMLTranslator
 
-class PreseveTranslatableMessageTranslator(HTMLTranslator):
+class KeepLocaleOriginalMessageHTMLTranslator(HTMLTranslator):
     from sphinx.util import logging
     logger = logging.getLogger(__name__)
 
@@ -126,7 +121,7 @@ class PreseveTranslatableMessageTranslator(HTMLTranslator):
         return super().dispatch_departure(node)
 
 
-# setup to be called by sphinx -----
+# setup to be called by sphinx -----------------------------------------
 
 setup_original = setup  # from 'flask/docs/conf.py'
 
@@ -139,12 +134,12 @@ def setup(app):
     app.confdir = app.srcdir
 
     # for original text tooltip support
-    app.add_transform(PreserveTranslatableMessageAsAttribute)
-    app.registry.add_translator("html", PreseveTranslatableMessageTranslator)
+    app.add_transform(CopyLocaleOriginalMessageAsAttribute)
+    app.registry.add_translator("html", KeepLocaleOriginalMessageHTMLTranslator)
 
     setup_original(app)
 
-    # html_static_path is initialized in setup_original, so add
-    # the current directory's _static after setup_original
+    # ``html_static_path`` is initialized in setup_original, so append
+    # the current directory's _static subdirectory after setup_original
     html_static_path.append(os.path.join(BASEDIR, '_static'))
 
