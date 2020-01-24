@@ -96,11 +96,10 @@ class PreseveTranslatableMessageTranslator(HTMLTranslator):
         """
         Add "%s" to class attribute if node has "%s" attr.
 
-        After the above, call super()."``dispatch_visit`` + node class
-        name" with `node` as parameter.
+        After the above, call "super().``dispatch_visit`` + node class name"
+        with `node` as parameter.
         """ % (translated_text_css, original_text_attr)
 
-        #self.logger.info("node class name: %s" % node.__class__.__name__)
         if node.__dict__.get("attributes", False):
             if node.__dict__.get("attributes").get(original_text_attr, False):
               node_classes = node.get("classes", [])
@@ -114,14 +113,10 @@ class PreseveTranslatableMessageTranslator(HTMLTranslator):
         Add ``<span>`` with "%s" css class for translation original text just
         before close tag if node has "%s" attr.
 
-        After the above, call super()."``dispatch_departure`` + node class
-        name" with `node` as parameter.
+        After the above, call super()."``dispatch_departure`` + node class name"
+        with `node` as parameter.
         """ % (original_text_css, original_text_attr)
 
-        #import pdb; pdb.set_trace()
-        #self.logger.info("node class name: %s" % node.__class__.__name__)
-        #if node.__class__.__name__ == 'paragraph':
-        #    import pdb; pdb.set_trace()
         if node.__dict__.get('attributes', False):
             if node.__dict__.get('attributes').get(original_text_attr, False):
                 self.body.append("""<span class="%s">""" % original_text_css)
@@ -137,8 +132,8 @@ setup_original = setup  # from 'flask/docs/conf.py'
 
 def setup(app):
     from sphinx.util import logging
-    logger = logging.getLogger(__name__)
-    logger.info("setup called")
+    #logger = logging.getLogger(__name__)
+    #logger.info("setup in conf.py is called")
 
     app.srcdir = os.path.join(BASEDIR, 'flask', 'docs')
     app.confdir = app.srcdir
@@ -148,4 +143,8 @@ def setup(app):
     app.registry.add_translator("html", PreseveTranslatableMessageTranslator)
 
     setup_original(app)
+
+    # html_static_path is initialized in setup_original, so add
+    # the current directory's _static after setup_original
+    html_static_path.append(os.path.join(BASEDIR, '_static'))
 
