@@ -126,8 +126,7 @@ class KeepLocaleOriginalMessageHTMLTranslator(HTMLTranslator):
 setup_original = setup  # from 'flask/docs/conf.py'
 
 def setup(app):
-    from sphinx.util import logging
-    #logger = logging.getLogger(__name__)
+    logger = logging.getLogger(__name__)
     #logger.info("setup in conf.py is called")
 
     app.srcdir = os.path.join(BASEDIR, 'flask', 'docs')
@@ -135,7 +134,7 @@ def setup(app):
 
     # for original text tooltip support
     app.add_transform(CopyLocaleOriginalMessageAsAttribute)
-    app.registry.add_translator("html", KeepLocaleOriginalMessageHTMLTranslator)
+    app.set_translator("html", KeepLocaleOriginalMessageHTMLTranslator)
 
     setup_original(app)
 
@@ -143,3 +142,8 @@ def setup(app):
     # the current directory's _static subdirectory after setup_original
     html_static_path.append(os.path.join(BASEDIR, '_static'))
 
+    # to check builder in readthedocs env
+    def show_builder_name(event_app):
+        logger.info("builder name: %s" % event_app.builder.name)
+        logger.info(event_app.builder)
+    app.connect('builder-inited', show_builder_name)
