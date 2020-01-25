@@ -24,6 +24,8 @@ html_context['GOOGLE_SITE_VERIFICATION'] = os.environ.get('GOOGLE_SITE_VERIFICAT
 from os import path
 from typing import Any, Dict, List, Tuple, TypeVar
 from docutils.utils import relative_path
+from docutils.nodes import Node, Element, literal
+from sphinx.builders.html import StandaloneHTMLBuilder
 from sphinx.locale import init as init_locale
 from sphinx.transforms import SphinxTransform
 from sphinx.util import logging
@@ -43,7 +45,7 @@ translated_text_css= "trans-translated-text"
 # based on (mostly copied from) sphinx.transforms.i18n.Locale
 class CopyLocaleOriginalMessageAsAttribute(SphinxTransform):
     """
-    Add original text to translated nodes as %s attribute.
+    Add locale original text to translated nodes as %s attribute.
     """ % original_text_attr
 
     #default_priority = 20 # priority of sphinx.transforms.i18n.Locale
@@ -77,48 +79,57 @@ class CopyLocaleOriginalMessageAsAttribute(SphinxTransform):
             #self.logger.info("add %s attr to node." % original_text_attr)
             node[original_text_attr] = msg
 
-from sphinx.util.docutils import is_html5_writer_available
-if not is_html5_writer_available():
-    from sphinx.writers.html import HTMLTranslator
-else:
-    from sphinx.writers.html5 import HTML5Translator as HTMLTranslator
+def is_translated_node(node: Node) -> bool:
+    if not isinstance(node, Element):
+        return False
+    return original_text_attr in node.attributes
 
-class KeepLocaleOriginalMessageHTMLTranslator(HTMLTranslator):
-    from sphinx.util import logging
+class AddClassAttributeToLocaleTranslatedNode(SphinxTransform):
+    """
+    Add %s class attribute to translated text node.
+    """ % translated_text_css
+
+    #default_priority = 20 # priority of sphinx.transforms.i18n.Locale
+    #default_priority = 999 # priority of sphinx.transforms.i18n.RemoveTranslatableInline
+    default_priority = 999
+
     logger = logging.getLogger(__name__)
 
-    def dispatch_visit(self, node):
-        """
-        Add "%s" to class attribute if node has "%s" attr.
+    def apply(self, **kwargs: Any) -> None:
+        # XXX check if this is reliable
+        settings, source = self.document.settings, self.document['source']
+        assert source.startswith(self.env.srcdir)
 
-        After the above, call "super().``dispatch_visit`` + node class name"
-        with `node` as parameter.
-        """ % (translated_text_css, original_text_attr)
-
-        if node.__dict__.get("attributes", False):
-            if node.__dict__.get("attributes").get(original_text_attr, False):
+        # add translated_text_css to classes
+        for node in self.document.traverse(is_translated_node):
               node_classes = node.get("classes", [])
               node_classes.append(translated_text_css)
               node['classes'] = node_classes
 
-        return super().dispatch_visit(node)
+class AppendLocaleOriginalMessage(SphinxTransform):
+    """
+    Append locale original text node with %s class to translated text node.
+    """ % translated_text_css
 
-    def dispatch_departure(self, node):
-        """
-        Add ``<span>`` with "%s" css class for translation original text just
-        before close tag if node has "%s" attr.
+    #default_priority = 20 # priority of sphinx.transforms.i18n.Locale
+    #default_priority = 999 # priority of sphinx.transforms.i18n.RemoveTranslatableInline
+    default_priority = 999
 
-        After the above, call super()."``dispatch_departure`` + node class name"
-        with `node` as parameter.
-        """ % (original_text_css, original_text_attr)
+    logger = logging.getLogger(__name__)
 
-        if node.__dict__.get('attributes', False):
-            if node.__dict__.get('attributes').get(original_text_attr, False):
-                self.body.append("""<span class="%s">""" % original_text_css)
-                self.body.append("%s" % node.get(original_text_attr))
-                self.body.append("</span>" )
+    def apply(self, **kwargs: Any) -> None:
+        # XXX check if this is reliable
+        settings, source = self.document.settings, self.document['source']
+        assert source.startswith(self.env.srcdir)
 
-        return super().dispatch_departure(node)
+        # append original msg node as literal node
+        for node in self.document.traverse(is_translated_node):
+            msg = node[original_text_attr]
+            orig_text_node = literal(text=msg)
+            classes = orig_text_node.attributes.get("classes", [])
+            classes.append(original_text_css)
+            orig_text_node["classes"] = classes
+            node.append(orig_text_node)
 
 
 # setup to be called by sphinx -----------------------------------------
@@ -126,16 +137,25 @@ class KeepLocaleOriginalMessageHTMLTranslator(HTMLTranslator):
 setup_original = setup  # from 'flask/docs/conf.py'
 
 def setup(app):
-    from sphinx.util import logging
-    #logger = logging.getLogger(__name__)
+    logger = logging.getLogger(__name__)
     #logger.info("setup in conf.py is called")
 
     app.srcdir = os.path.join(BASEDIR, 'flask', 'docs')
     app.confdir = app.srcdir
 
+    # to check builder in readthedocs env
+    def show_builder_name(event_app):
+        logger.info("builder name: %s" % event_app.builder.name)
+        logger.info(event_app.builder)
+    app.connect('builder-inited', show_builder_name)
+
     # for original text tooltip support
-    app.add_transform(CopyLocaleOriginalMessageAsAttribute)
-    app.registry.add_translator("html", KeepLocaleOriginalMessageHTMLTranslator)
+    def add_transform(event_app):
+        if isinstance(event_app.builder, StandaloneHTMLBuilder):
+            app.add_transform(CopyLocaleOriginalMessageAsAttribute)
+            app.add_transform(AddClassAttributeToLocaleTranslatedNode)
+            app.add_transform(AppendLocaleOriginalMessage)
+    app.connect('builder-inited', add_transform)
 
     setup_original(app)
 
