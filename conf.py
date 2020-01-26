@@ -150,12 +150,13 @@ def setup(app):
     app.connect('builder-inited', show_builder_name)
 
     # for original text tooltip support
-    def add_transform(event_app):
+    def setup_html_biulder_extras(event_app):
         if isinstance(event_app.builder, StandaloneHTMLBuilder):
             app.add_transform(CopyLocaleOriginalMessageAsAttribute)
             app.add_transform(AddClassAttributeToLocaleTranslatedNode)
             app.add_transform(AppendLocaleOriginalMessage)
-    app.connect('builder-inited', add_transform)
+            app.add_css_file("trans-tooltip.css")
+    app.connect('builder-inited', setup_html_biulder_extras)
 
     setup_original(app)
 
