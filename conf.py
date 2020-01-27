@@ -89,10 +89,12 @@ def append_css_class(node, class_):
     node_classes.append(class_)
     node['classes'] = node_classes
 
-class AddClassAttributeToLocaleTranslatedNode(SphinxTransform):
+
+class PostProcessLocaleOriginalMessage(SphinxTransform):
     """
     Add %s class attribute to translated text node.
-    """ % translated_text_css
+    Append locale original text node with %s class to translated text node.
+    """ % (translated_text_css, original_text_css)
 
     #default_priority = 20 # priority of sphinx.transforms.i18n.Locale
     #default_priority = 999 # priority of sphinx.transforms.i18n.RemoveTranslatableInline
@@ -105,28 +107,11 @@ class AddClassAttributeToLocaleTranslatedNode(SphinxTransform):
         settings, source = self.document.settings, self.document['source']
         assert source.startswith(self.env.srcdir)
 
-        # add translated_text_css to classes
         for node in self.document.traverse(is_translated_node):
+            # add translated_text_css to classes
             append_css_class(node, translated_text_css)
 
-class AppendLocaleOriginalMessage(SphinxTransform):
-    """
-    Append locale original text node with %s class to translated text node.
-    """ % translated_text_css
-
-    #default_priority = 20 # priority of sphinx.transforms.i18n.Locale
-    #default_priority = 999 # priority of sphinx.transforms.i18n.RemoveTranslatableInline
-    default_priority = 999
-
-    logger = logging.getLogger(__name__)
-
-    def apply(self, **kwargs: Any) -> None:
-        # XXX check if this is reliable
-        settings, source = self.document.settings, self.document['source']
-        assert source.startswith(self.env.srcdir)
-
-        # append original msg node as literal node
-        for node in self.document.traverse(is_translated_node):
+            # append original msg node as literal node
             msg = node[original_text_attr]
             orig_text_node = literal(text=msg)
             append_css_class(orig_text_node, original_text_css)
@@ -158,8 +143,7 @@ def setup(app):
         if not isinstance(event_app.builder, StandaloneHTMLBuilder):
             return
         event_app.add_transform(CopyLocaleOriginalMessageAsAttribute)
-        event_app.add_transform(AddClassAttributeToLocaleTranslatedNode)
-        event_app.add_transform(AppendLocaleOriginalMessage)
+        event_app.add_transform(PostProcessLocaleOriginalMessage)
         event_app.add_css_file("trans-tooltip.css")
     app.connect('builder-inited', setup_html_builder_extras)
 
