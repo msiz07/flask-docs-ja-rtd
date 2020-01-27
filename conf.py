@@ -84,6 +84,11 @@ def is_translated_node(node: Node) -> bool:
         return False
     return original_text_attr in node.attributes
 
+def append_css_class(node, class_):
+    node_classes = node.get("classes", [])
+    node_classes.append(class_)
+    node['classes'] = node_classes
+
 class AddClassAttributeToLocaleTranslatedNode(SphinxTransform):
     """
     Add %s class attribute to translated text node.
@@ -102,9 +107,7 @@ class AddClassAttributeToLocaleTranslatedNode(SphinxTransform):
 
         # add translated_text_css to classes
         for node in self.document.traverse(is_translated_node):
-              node_classes = node.get("classes", [])
-              node_classes.append(translated_text_css)
-              node['classes'] = node_classes
+            append_css_class(node, translated_text_css)
 
 class AppendLocaleOriginalMessage(SphinxTransform):
     """
@@ -126,9 +129,7 @@ class AppendLocaleOriginalMessage(SphinxTransform):
         for node in self.document.traverse(is_translated_node):
             msg = node[original_text_attr]
             orig_text_node = literal(text=msg)
-            classes = orig_text_node.attributes.get("classes", [])
-            classes.append(original_text_css)
-            orig_text_node["classes"] = classes
+            append_css_class(orig_text_node, original_text_css)
             node.append(orig_text_node)
 
 
@@ -150,13 +151,17 @@ def setup(app):
     app.connect('builder-inited', show_builder_name)
 
     # for original text tooltip support
-    def setup_html_biulder_extras(event_app):
-        if isinstance(event_app.builder, StandaloneHTMLBuilder):
-            app.add_transform(CopyLocaleOriginalMessageAsAttribute)
-            app.add_transform(AddClassAttributeToLocaleTranslatedNode)
-            app.add_transform(AppendLocaleOriginalMessage)
-            app.add_css_file("trans-tooltip.css")
-    app.connect('builder-inited', setup_html_biulder_extras)
+    def setup_html_builder_extras(event_app):
+        lang = event_app.config.language
+        if lang is None:
+            return
+        if not isinstance(event_app.builder, StandaloneHTMLBuilder):
+            return
+        event_app.add_transform(CopyLocaleOriginalMessageAsAttribute)
+        event_app.add_transform(AddClassAttributeToLocaleTranslatedNode)
+        event_app.add_transform(AppendLocaleOriginalMessage)
+        event_app.add_css_file("trans-tooltip.css")
+    app.connect('builder-inited', setup_html_builder_extras)
 
     setup_original(app)
 
