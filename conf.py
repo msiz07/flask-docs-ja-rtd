@@ -43,7 +43,7 @@ translated_text_css= "trans-translated-text"
 
 # custom transform for keep left original text translated, implemented
 # based on (mostly copied from) sphinx.transforms.i18n.Locale
-class CopyLocaleOriginalMessageAsAttribute(SphinxTransform):
+class PreserveLocaleOriginalMessage(SphinxTransform):
     """
     Add locale original text to translated nodes as %s attribute.
     """ % original_text_attr
@@ -84,13 +84,10 @@ def is_translated_node(node: Node) -> bool:
         return False
     return original_text_attr in node.attributes
 
-def append_css_class(node, class_):
-    node_classes = node.get("classes", [])
-    node_classes.append(class_)
-    node['classes'] = node_classes
+def append_css_class(node, class_) -> None:
+    node.coerce_append_attr_list('classes', class_)
 
-
-class PostProcessLocaleOriginalMessage(SphinxTransform):
+class PostProcessTranslatedNode(SphinxTransform):
     """
     Add %s class attribute to translated text node.
     Append locale original text node with %s class to translated text node.
@@ -112,8 +109,7 @@ class PostProcessLocaleOriginalMessage(SphinxTransform):
             append_css_class(node, translated_text_css)
 
             # append original msg node as literal node
-            msg = node[original_text_attr]
-            orig_text_node = literal(text=msg)
+            orig_text_node = literal(text=node[original_text_attr])
             append_css_class(orig_text_node, original_text_css)
             node.append(orig_text_node)
 
@@ -142,8 +138,8 @@ def setup(app):
             return
         if not isinstance(event_app.builder, StandaloneHTMLBuilder):
             return
-        event_app.add_transform(CopyLocaleOriginalMessageAsAttribute)
-        event_app.add_transform(PostProcessLocaleOriginalMessage)
+        event_app.add_transform(PreserveLocaleOriginalMessage)
+        event_app.add_transform(PostProcessTranslatedNode)
         event_app.add_css_file("trans-tooltip.css")
     app.connect('builder-inited', setup_html_builder_extras)
 
