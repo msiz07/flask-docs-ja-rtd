@@ -18,6 +18,7 @@ if "%1" == "" goto help
 if "%1" == "gettext" goto gettext
 if "%1" == "locale" goto locale
 if "%1" == "html_ja" goto html_ja
+if "%1" == "rtd_ja" goto rtd_ja
 
 %SPHINXBUILD% >NUL 2>NUL
 if errorlevel 9009 (
@@ -49,6 +50,11 @@ goto end
 
 :html_ja
 %SPHINXBUILD% -M html %SOURCEDIR% %BUILDDIR% -D language=ja %SPHINXOPTS%
+goto end
+
+:rtd_ja
+REM %SPHINXBUILD% -P -T -E -b readthedocs -D language=ja %SOURCEDIR% %BUILDDIR%/html
+%SPHINXBUILD% -M readthedocs %SOURCEDIR% %BUILDDIR% -D language=ja %SPHINXOPTS%
 goto end
 
 :end

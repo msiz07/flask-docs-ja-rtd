@@ -7,7 +7,7 @@ from setuptools import setup
 with io.open("README.rst", "rt", encoding="utf8") as f:
     readme = f.read()
 
-with io.open("src/flask/__init__.py", "rt", encoding="utf8") as f:
+with io.open("flask/src/flask/__init__.py", "rt", encoding="utf8") as f:
     version = re.search(r'__version__ = "(.*?)"', f.read()).group(1)
 
 setup(
@@ -45,8 +45,8 @@ setup(
         "Topic :: Software Development :: Libraries :: Application Frameworks",
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
-    packages=find_packages("src"),
-    package_dir={"": "src"},
+    packages=find_packages("flask/src"),
+    package_dir={"": "flask/src"},
     include_package_data=True,
     python_requires=">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*",
     install_requires=[
@@ -78,6 +78,9 @@ setup(
             "sphinxcontrib-log-cabinet",
             "sphinx-issues",
             "sphinx-intl",
+        ],
+        "readthedocs": [
+            "readthedocs-sphinx-ext",
         ]
     },
     entry_points={"console_scripts": ["flask = flask.cli:main"]},

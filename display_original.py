@@ -119,7 +119,7 @@ def setup(app):
         event_app.add_transform(PreserveLocaleOriginalMessage)
         event_app.add_transform(PostProcessTranslatedNode)
         event_app.add_css_file("trans-tooltip.css")
-        visitor_methods = { event_app.builder.name:
+        visitor_methods = { "html":
                                 (visit_locale_original_text,
                                  depart_locale_original_text)
                           }
