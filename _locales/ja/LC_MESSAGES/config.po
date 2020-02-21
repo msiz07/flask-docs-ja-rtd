@@ -1,0 +1,1248 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 1.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+# 2ea2700375974295ab429c44093278ae
+#: ../../config.rst:4
+msgid "Configuration Handling"
+msgstr "設定の処理の仕方（Configuration Handling）"
+
+# 5885056d476241118880490c67cf0e51
+#: ../../config.rst:6
+msgid ""
+"Applications need some kind of configuration.  There are different "
+"settings you might want to change depending on the application "
+"environment like toggling the debug mode, setting the secret key, and "
+"other such environment-specific things."
+msgstr ""
+"アプリケーションにある種の設定が必要です。デバッグモードの切り替え、"
+"secret keyの設定、その他の環境固有なもののように、アプリケーションの"
+"環境に依存して変更したいであろう異なる設定があるでしょう。"
+
+# d844bf7c1809493c9b6bd69566773c66
+#: ../../config.rst:11
+msgid ""
+"The way Flask is designed usually requires the configuration to be "
+"available when the application starts up.  You can hard code the "
+"configuration in the code, which for many small applications is not "
+"actually that bad, but there are better ways."
+msgstr ""
+"Flaskの設計のやり方では普通、アプリケーションを開始するときは設定"
+"情報が利用可能であることを要求します。設定情報はコードの中へハード"
+"コードでき、それは多くの小さいアプリケーションに対してはそれほど悪い"
+"ことではありませんが、もっと良いやり方もあります。"
+
+# 603f45a3ad544721a041bb7647bd25ff
+#: ../../config.rst:16
+msgid ""
+"Independent of how you load your config, there is a config object "
+"available which holds the loaded configuration values: The "
+":attr:`~flask.Flask.config` attribute of the :class:`~flask.Flask` "
+"object.  This is the place where Flask itself puts certain configuration "
+"values and also where extensions can put their configuration values.  But"
+" this is also where you can have your own configuration."
+msgstr ""
+"設定をどうやって読み込むかにかかわらず、利用可能な設定オブジェクトで読み"
+"込んだ設定値を保持します: :class:`~flask.Flask`\ オブジェクトの\ "
+":attr:`~flask.Flask.config`\ 属性です。これはFlask自身がある種の設定値を"
+"置き、Flask拡張も設定値を置くことがある場所です。しかしながら、これは"
+"あなたが独自の設定を持てる場所でもあります。"
+
+# a164f84380914d6b85f4dde1520aefd9
+#: ../../config.rst:25
+msgid "Configuration Basics"
+msgstr "設定の基本"
+
+# 1e468cedc8fb497b8ee0dfed9d0d97e7
+#: ../../config.rst:27
+msgid ""
+"The :attr:`~flask.Flask.config` is actually a subclass of a dictionary "
+"and can be modified just like any dictionary::"
+msgstr ""
+":attr:`~flask.Flask.config`\ は、実際にはdicitonaryのサブクラスで、どんな"
+"dictionaryとも同じようなやり方で変更できます::"
+
+# a7f3382428b14be1ad941aba86238dfd
+#: ../../config.rst:33
+msgid ""
+"Certain configuration values are also forwarded to the "
+":attr:`~flask.Flask` object so you can read and write them from there::"
+msgstr ""
+"ある種の設定値は\ :attr:`~flask.Flask`\ オブジェクトへも送られるため、"
+"それらはFlaskオブジェクトを使っても読み取りおよび書き込みできます（訳注: "
+"例えば\ ``app.config['TESTING']``\ が、Flaskオブジェクトである\ ``app``\ の"
+"属性\ ``app.testing``\ でもアクセスできるようになります）::"
+
+# 59a7b54aca19431091dafe1cac1aacd0
+#: ../../config.rst:38
+msgid ""
+"To update multiple keys at once you can use the :meth:`dict.update` "
+"method::"
+msgstr ""
+"一度に複数のキーを更新するには、\ :meth:`dict.update`\ メソッドを"
+"使用できます::"
+
+# a816fac978de40b59c13ef6a1608c6a5
+#: ../../config.rst:48
+msgid "Environment and Debug Features"
+msgstr "environmentとdebugの目玉機能（Environment and Debug Features）"
+
+# 4d165060d0d4439fb0028d5fbd7e5f68
+#: ../../config.rst:50
+msgid ""
+"The :data:`ENV` and :data:`DEBUG` config values are special because they "
+"may behave inconsistently if changed after the app has begun setting up. "
+"In order to set the environment and debug mode reliably, Flask uses "
+"environment variables."
+msgstr ""
+":data:`ENV`\ と\ :data:`DEBUG`\ の設定値は特殊で、もしもappが準備を開始"
+"した（has begun setting up）後でそれらを変更すると、整合性のない振る舞いを"
+"することがあります。environment（訳注: ENV設定値のような意味合い）とデバッグ"
+"モード（訳注: DEBUG設定値のような意味合い）を信頼性を保ちながら設定するため"
+"に、Flaskは環境変数を使用します。"
+
+# 3f957dd14b5a4a5e9b38697c64c51371
+#: ../../config.rst:55
+msgid ""
+"The environment is used to indicate to Flask, extensions, and other "
+"programs, like Sentry, what context Flask is running in. It is controlled"
+" with the :envvar:`FLASK_ENV` environment variable and defaults to "
+"``production``."
+msgstr ""
+"Flask、Flask拡張、その他Sentryのようなプログラムへ、どんな文脈（context）で"
+"Flaskを実行しているかを伝えるときに、environmentが使用されます。それは\ "
+":envvar:`FLASK_ENV`\ 環境変数で制御され、その標準設定は\ ``produciton``\ "
+"です。"
+
+# 9feb71c7125949be918382f81ff63014
+#: ../../config.rst:60
+msgid ""
+"Setting :envvar:`FLASK_ENV` to ``development`` will enable debug mode. "
+"``flask run`` will use the interactive debugger and reloader by default "
+"in debug mode. To control this separately from the environment, use the "
+":envvar:`FLASK_DEBUG` flag."
+msgstr ""
+":envvar:`FLASK_ENV`\ を\ ``development``\ に設定すると、デバッグモードが"
+"有効になります。\ ``flask run``\ は、デバッグモードでは標準設定でインタ"
+"ラクティブなデバッガとリローダ（訳注: アプリのソースコードを変更したとき"
+"再読み込みする機能）を使用するようになります。environment（訳注: 通常は"
+"FLASK_ENV環境変数を使って設定するENV設定値のこと）とは別にデバッグモード"
+"を制御するには、\ :envvar:`FLASK_DEBUG`\ フラグを使います。"
+
+# 88b5327c4dc6438b935ef1b4d0f05cb6
+#: ../../config.rst:65
+msgid ""
+"Added :envvar:`FLASK_ENV` to control the environment separately from "
+"debug mode. The development environment enables debug mode."
+msgstr ""
+"デバッグモードと分けてenvironmentを制御するために\ :envvar:`FLASK_ENV`\ "
+"が追加されました。environmentをdevelopmentにするとデバッグモードを有効に"
+"します。"
+
+# 736cd2bedf1449f688985f02b74e2c1b
+#: ../../config.rst:69
+msgid ""
+"To switch Flask to the development environment and enable debug mode, set"
+" :envvar:`FLASK_ENV`::"
+msgstr ""
+"Flaskを開発（development）のenvironmentへ変更してデバッグモードを有効に"
+"するには、\ :envvar:`FLASK_ENV`\ を以下のように設定します::"
+
+# 44d1b8d293b740c4900e570f15b43c97
+#: ../../config.rst:75
+msgid "(On Windows, use ``set`` instead of ``export``.)"
+msgstr "（Windowsでは、\ ``export``\ の代わりに\ ``set``\ を使用します。）"
+
+# 871b2cfb100e4467b0318c0d3e91e9c1
+#: ../../config.rst:77
+msgid ""
+"Using the environment variables as described above is recommended. While "
+"it is possible to set :data:`ENV` and :data:`DEBUG` in your config or "
+"code, this is strongly discouraged. They can't be read early by the "
+"``flask`` command, and some systems or extensions may have already "
+"configured themselves based on a previous value."
+msgstr ""
+"上記のように環境変数を使用することを推奨します。\ :data:`ENV`\ と\ "
+":data:`DEBUG`\ をconfigまたはコードの中で設定することは可能ですが、その"
+"ようにはしないことを強く勧めます。configまたはコードの中で設定した値は\ "
+"``flask``\ コマンドでは早い段階で読み取ることができず、そしていくつかの"
+"システムまたはFlask拡張は、それらが読み取られるより前の値で既に設定を"
+"済ませてしまっているかもしれません。"
+
+# a6c8e37e34a34d05ad1333f444da4594
+#: ../../config.rst:85
+msgid "Builtin Configuration Values"
+msgstr "組込みの設定値"
+
+# f08f8002a5ac4bf99239f959080c13ab
+#: ../../config.rst:87
+msgid "The following configuration values are used internally by Flask:"
+msgstr "以下の設定値はFlaskで内部的に使用されます:"
+
+# bc985e2103fb4257ae299d0eabddd097
+#: ../../config.rst:91
+msgid ""
+"What environment the app is running in. Flask and extensions may enable "
+"behaviors based on the environment, such as enabling debug mode. The "
+":attr:`~flask.Flask.env` attribute maps to this config key. This is set "
+"by the :envvar:`FLASK_ENV` environment variable and may not behave as "
+"expected if set in code."
+msgstr ""
+"appをどのenvironmentで走らせるかを指定します。FlaskとFlask拡張は、デバッグ"
+"モードの有効化のように、environmentに基づいて振る舞いを有効にする場合が"
+"あります。\ :attr:`~flask.Flask.env`\ 属性は、この設定キーに対応付けられます"
+"（訳注: \ ``app.config['ENV']``\ のようにも\ ``app.env``\ のようにもアクセス"
+"できます）。これは、\ :envvar:`FLASK_ENV`\ 環境変数によって設定され、コード"
+"の中で設定された場合には期待通りに振る舞わないかもしれません。"
+
+# 23bb350edcce4285aa31d99a1faa551c
+#: ../../config.rst:97
+msgid "**Do not enable development when deploying in production.**"
+msgstr ""
+"**本番環境にデプロイするときは、development設定を有効にしないでください。**"
+
+# c72888176e18437b863eee6992e1ab63
+#: ../../config.rst:99
+msgid "Default: ``'production'``"
+msgstr "標準設定: ``'production'``"
+
+# de1cf21d7fe04461b7b2d018d385d1bc
+#: ../../config.rst:105
+msgid ""
+"Whether debug mode is enabled. When using ``flask run`` to start the "
+"development server, an interactive debugger will be shown for unhandled "
+"exceptions, and the server will be reloaded when code changes. The "
+":attr:`~flask.Flask.debug` attribute maps to this config key. This is "
+"enabled when :data:`ENV` is ``'development'`` and is overridden by the "
+"``FLASK_DEBUG`` environment variable. It may not behave as expected if "
+"set in code."
+msgstr ""
+"デバッグモードを有効にするかどうかを指定します。\ ``flask run``\ を使用して"
+"開発サーバを開始するときは、捕捉されない例外はインタラクティブなデバッガで"
+"表示され、コードが変更されたときは再読み込みされるようになります。\ :attr:"
+"`~flask.Flask.debug`\ 属性がこの設定キーに対応付けられます（訳注：\ "
+"``app.config['DEBUG']``\ のようにも\ ``app.debug``\ のようにもアクセス"
+"できます）。これは\ :data:`ENV`\ が\ ``'development'``\ のときは有効になり、\ "
+"``FLASK_DEBUG``\ 環境変数によって上書きされます。コードの中で設定された"
+"場合には期待通りに振る舞わないかもしれません。"
+
+# 4be061ef82314161b04fd4bbd76f7992
+#: ../../config.rst:113
+msgid "**Do not enable debug mode when deploying in production.**"
+msgstr ""
+"**本番環境にデプロイするときは、デバッグモードを有効にしないでください。**"
+
+# 55218389be79440b8ad2289e13ee1eaa
+#: ../../config.rst:115
+msgid ""
+"Default: ``True`` if :data:`ENV` is ``'development'``, or ``False`` "
+"otherwise."
+msgstr ""
+"標準設定: もしも\ :data:`ENV`\ が\ ``'development``\ であれば\ ``True``\ 、"
+"そうでなければ\ ``False``\ 。"
+
+# 46c5f77df00c406794532a4c25166bca
+#: ../../config.rst:120
+msgid ""
+"Enable testing mode. Exceptions are propagated rather than handled by the"
+" the app's error handlers. Extensions may also change their behavior to "
+"facilitate easier testing. You should enable this in your own tests."
+msgstr ""
+"テストモードを有効にします。例外が発生したとき、appのエラーハンドラで処理"
+"させる代わりに、影響を伝搬させるようにします。より容易なテストを促進させる"
+"ために、Flask拡張も振る舞いを変えるかもしれません。あなたが自分のテストを"
+"するときは、これは有効にするべきです。"
+
+# c7084410f68e4058b9cec646e59dfdac
+# 625f9333322e48acb103d19170661877
+# 84cac43a6b8042348a5da689838e8e69
+# fa4e7dfb913d44d597e50202694ff1bd
+# 155d769506724d7ba0b3ff13d3090525
+# a97ebee273fa417b918c8f305998a20a
+#: ../../config.rst:124 ../../config.rst:148 ../../config.rst:209
+#: ../../config.rst:247 ../../config.rst:326 ../../config.rst:347
+msgid "Default: ``False``"
+msgstr "標準設定: ``False``"
+
+# e538981ac3a3407ba3614e510a21f1bc
+#: ../../config.rst:128
+msgid ""
+"Exceptions are re-raised rather than being handled by the app's error "
+"handlers. If not set, this is implicitly true if ``TESTING`` or ``DEBUG``"
+" is enabled."
+msgstr ""
+"例外が発生したとき、appのエラーハンドラで処理させる代わりに、発生させ直し"
+"します。設定されていない場合、これは\ ``TESTING``\ または\ ``DEBUG``\ が"
+"有効なときは暗黙的にtrueになります。"
+
+# fd6eece39d4043a592d50761f33a0e35
+# e8ef3456ef5440aba5b340ac164dec69
+# a7ed20b38d6444ad9c9a851be3c3757d
+# 03b5cfec44894d50b67903751c6020e8
+# 7f200138c5964341ac76c82ac101829d
+# 9275fa6afa0c4d81b0aa3480dd3db73e
+# b6a6cdcaf3c9409faada7c8de436ea76
+# 3f3baec90b3e40c6bebcdbcd6926199b
+# aa03ef387c524a0998f8bfa136fab466
+# 4d41cfa9ae904f8c805bc627041ba4c7
+#: ../../config.rst:132 ../../config.rst:140 ../../config.rst:158
+#: ../../config.rst:172 ../../config.rst:187 ../../config.rst:194
+#: ../../config.rst:217 ../../config.rst:274 ../../config.rst:301
+#: ../../config.rst:339
+msgid "Default: ``None``"
+msgstr "標準設定: ``None``"
+
+# 92cdaa88f84443c1b91e736a9b7bef68
+#: ../../config.rst:136
+msgid ""
+"Don't pop the request context when an exception occurs. If not set, this "
+"is true if ``DEBUG`` is true. This allows debuggers to introspect the "
+"request data on errors, and should normally not need to be set directly."
+msgstr ""
+"例外が発生したとき、request context（訳注: リクエスト固有なデータなどを"
+"格納し、リクエストの期間中はどこからでも保持・操作できるようにするための"
+"オブジェクト）を取り除きません。もし設定されていない場合、これは\ ``DEBUG``\ "
+"がtrueなときはtrueです。これは、エラーが起きたときにデバッガがリクエストの"
+"データを調べることを可能にし、通常は直接設定する必要はありません。"
+
+# 19dfd03d9733473bb8f6d983c6527851
+#: ../../config.rst:144
+msgid ""
+"If there is no handler for an ``HTTPException``-type exception, re-raise "
+"it to be handled by the interactive debugger instead of returning it as a"
+" simple error response."
+msgstr ""
+"もしも\ ``HTTPException``-タイプの例外に対する処理（handler）がない場合、単純な"
+"エラーレスポンスとして返す代わりに、インタラクティブなデバッガで処理できるよう"
+"に、その例外を発生させ直します。"
+
+# a721c51ccd8144218e09f1d854641ac1
+#: ../../config.rst:152
+msgid ""
+"Trying to access a key that doesn't exist from request dicts like "
+"``args`` and ``form`` will return a 400 Bad Request error page. Enable "
+"this to treat the error as an unhandled exception instead so that you get"
+" the interactive debugger. This is a more specific version of "
+"``TRAP_HTTP_EXCEPTIONS``. If unset, it is enabled in debug mode."
+msgstr ""
+"（無効の時は）リクエストのdictから、\ ``args``\ や\ ``form``\ のような"
+"存在しないキーへアクセスしようとしたときは、400 Bad Requestエラーページを"
+"返します。エラーとして扱う代わりに未処理の例外として扱い、インタラクティブな"
+"デバッガを使えるようにするには、これを有効にします。これは\ "
+"``TRAP_HTTP_EXCEPTIONS``\ をより具体的にしたバージョンです。もし未設定の"
+"場合、デバッグモードで有効になります。"
+
+# c899cc9e42ad42e88b82a416f7a6c6c2
+#: ../../config.rst:162
+msgid ""
+"A secret key that will be used for securely signing the session cookie "
+"and can be used for any other security related needs by extensions or "
+"your application. It should be a long random string of bytes, although "
+"unicode is accepted too. For example, copy the output of this to your "
+"config::"
+msgstr ""
+"セッションのクッキーを安全に署名するために使用され、さらに自分のアプリ"
+"ケーションやFlask拡張が必要とする、その他のあらゆるセキュリティに関する"
+"用途で使用されるsecret keyです。これはでたらめな（random）長い文字列の"
+"バイトにするべきであり、unicodeも許容されています。例えば、以下のコマンド"
+"の出力結果を自分の設定にコピーします::"
+
+# 27f91b2adbc14a70af288b884b1d38b3
+#: ../../config.rst:170
+msgid ""
+"**Do not reveal the secret key when posting questions or committing "
+"code.**"
+msgstr ""
+"**質問を投稿するときやコードをコミットするときは、このsecret keyを"
+"表に出さないようにしてください。**"
+
+# ed712a29ba8b40319a08eadb195b7e90
+#: ../../config.rst:176
+msgid ""
+"The name of the session cookie. Can be changed in case you already have a"
+" cookie with the same name."
+msgstr ""
+"セッションのクッキーの名前です。同じ名前を使ったクッキーを既に持っている"
+"場合には、変更が可能です。"
+
+# 2dfb81cec1b74d38afda48ef468e82c5
+#: ../../config.rst:179
+msgid "Default: ``'session'``"
+msgstr "標準設定: ``'session'``"
+
+# c1d25563d0d848428ba9ca2933d308bd
+#: ../../config.rst:183
+msgid ""
+"The domain match rule that the session cookie will be valid for. If not "
+"set, the cookie will be valid for all subdomains of :data:`SERVER_NAME`. "
+"If ``False``, the cookie's domain will not be set."
+msgstr ""
+"セッションのクッキーが有効になるドメインに該当させるルールを指定します。"
+"もし設定されていない場合、クッキーは\ :data:`SERVER_NAME`\ のすべての"
+"サブドメインで有効になります。もし\ ``False``\ の場合、クッキーのドメイン"
+"は設定されません。"
+
+# ef52b6ee78274ab2bfacc2c60a107b8a
+#: ../../config.rst:191
+msgid ""
+"The path that the session cookie will be valid for. If not set, the "
+"cookie will be valid underneath ``APPLICATION_ROOT`` or ``/`` if that is "
+"not set."
+msgstr ""
+"セッションのクッキーが有効となるパスを指定します。もし設定されていない"
+"場合、クッキーは\ ``APPLICATION_ROOT``\ の下、または\ ``APPLICATION_ROOT``\ "
+"が設定されていない場合は\ ``/``\ の下で有効になります。"
+
+# e8042c80cf10405290368ade7da7260c
+#: ../../config.rst:198
+msgid ""
+"Browsers will not allow JavaScript access to cookies marked as \"HTTP "
+"only\" for security."
+msgstr ""
+"セキュリティのために、「HTTP only」と印付られたクッキーへJavaScriptが"
+"アクセスすることを、ブラウザは許可しないようにします（訳注: 「HTTP only」"
+"と指定されたクッキーへはJavaScriptからアクセスできないように、ブラウザ"
+"側で処理するという意味合いだと思います）。"
+
+# a9b8917115d8465397e3c2f9e9573e0c
+# a3fd5f57b0ba488c82e879eaa2842ffd
+# 65de55937f0b43de86508a8c34f229a4
+# f71a5105f8574879a735a428697fab23
+#: ../../config.rst:201 ../../config.rst:239 ../../config.rst:310
+#: ../../config.rst:319
+msgid "Default: ``True``"
+msgstr "標準設定: ``True``"
+
+# 0a02c143f4584da5b21e76f7bebc8396
+#: ../../config.rst:205
+msgid ""
+"Browsers will only send cookies with requests over HTTPS if the cookie is"
+" marked \"secure\". The application must be served over HTTPS for this to"
+" make sense."
+msgstr ""
+"クッキーが「secure」と印付られていた場合、HTTPS上のリクエストを使ったとき"
+"だけブラウザがそのクッキーを送信するようにします。これが意味をなすには、"
+"アプリケーションはHTTPSを使用してサービスを提供している必要があります。"
+
+# 257bc2166b1c400589b78a59a5659b69
+#: ../../config.rst:213
+msgid ""
+"Restrict how cookies are sent with requests from external sites. Can be "
+"set to ``'Lax'`` (recommended) or ``'Strict'``. See :ref:`security-"
+"cookie`."
+msgstr ""
+"クッキーが外部サイトからのリクエストと一緒に送信されるやり方を制限します。"
+"\ ``'Lax'``\ （推奨）または\ ``'Strict'``\ が設定可能です。"
+"\ :ref:`security-cookie`\ を確認してください。"
+
+# 368bf983395642a59409be53490906dc
+#: ../../config.rst:223
+msgid ""
+"If ``session.permanent`` is true, the cookie's expiration will be set "
+"this number of seconds in the future. Can either be a "
+":class:`datetime.timedelta` or an ``int``."
+msgstr ""
+"もし\ ``session.permanent``\ がtrueである場合は、クッキーの消滅期限は"
+"未来のこの秒数に設定されます。\ :class:`datetime.timedelta`\ または\ "
+"``int``\ のいずれかが可能です。"
+
+# 5f5bb3bf9e35444e8740fedabc0f534a
+#: ../../config.rst:227
+msgid ""
+"Flask's default cookie implementation validates that the cryptographic "
+"signature is not older than this value."
+msgstr ""
+"Flaskの標準設定でのクッキー実装は、暗号法上の署名がこの値より古くないかを"
+"検証します。"
+
+# 401cffbfb030423ebb1536b4c0423d4d
+#: ../../config.rst:230
+msgid "Default: ``timedelta(days=31)`` (``2678400`` seconds)"
+msgstr "標準設定: ``timedelta(days=31)`` (``2678400`` 秒)"
+
+# 184d82de539646719a7f74d4dee98ba2
+#: ../../config.rst:234
+msgid ""
+"Control whether the cookie is sent with every response when "
+"``session.permanent`` is true. Sending the cookie every time (the "
+"default) can more reliably keep the session from expiring, but uses more "
+"bandwidth. Non-permanent sessions are not affected."
+msgstr ""
+"``session.permanent``\ がtrueのとき、すべてのレスポンスで一緒にクッキーを"
+"送信するかを制御します。毎回クッキーを送信する（標準設定）と、クッキーの"
+"消滅からセッションを守ることが、より高い信頼性で可能ですが、しかし"
+"より多くの帯域（通信データ量）を使用します。持続しない（non-permanent）"
+"セッションは影響を受けません。"
+
+# d223792fbe684f27ae205bb2cadbc967
+#: ../../config.rst:243
+msgid ""
+"When serving files, set the ``X-Sendfile`` header instead of serving the "
+"data with Flask. Some web servers, such as Apache, recognize this and "
+"serve the data more efficiently. This only makes sense when using such a "
+"server."
+msgstr ""
+"ファイルを供給するとき、Flaskでデータを供給する代わりに\ ``X-Sendfile``\ "
+"ヘッダを設定します。例えばApacheのような、いくつかのwebサーバーではこれを"
+"認識してデータをより効率的に供給します。そのようなサーバを使用しているとき"
+"だけこれは意味をなします。"
+
+# f048644e95e8484eaee03eccf85f8aa0
+#: ../../config.rst:251
+msgid ""
+"When serving files, set the cache control max age to this number of "
+"seconds.  Can either be a :class:`datetime.timedelta` or an ``int``. "
+"Override this value on a per-file basis using "
+":meth:`~flask.Flask.get_send_file_max_age` on the application or "
+"blueprint."
+msgstr ""
+"ファイルを供給するとき、この値の秒数にキャッシュ制御最大年齢（cache "
+"control max age）を設定します。\ :class:`datetime.timedelta`\ または\ "
+"``int``\ のいずれかに設定可能です。アプリケーションまたはblueprint上で"
+"\ :meth:`~flask.Flask.get_send_file_max_age`\ を使用すると、ファイル"
+"ごとにこの値を上書きします。"
+
+# 67bfe8c7890f4815b125dc4b57a5b385
+#: ../../config.rst:256
+msgid "Default: ``timedelta(hours=12)`` (``43200`` seconds)"
+msgstr "標準設定: ``timedelta(hours=12)`` (``43200`` 秒)"
+
+# f7f87992e6a540a792c6de0552e204ec
+#: ../../config.rst:260
+msgid ""
+"Inform the application what host and port it is bound to. Required for "
+"subdomain route matching support."
+msgstr ""
+"どのホストとポートを使用するかアプリケーションに知らせます。サブドメインの"
+"ルートとのマッチングのサポートに必要になります。"
+
+# 6d0c8f137ddf42d3aff9556ebd6ab5ed
+#: ../../config.rst:263
+msgid ""
+"If set, will be used for the session cookie domain if "
+":data:`SESSION_COOKIE_DOMAIN` is not set. Modern web browsers will not "
+"allow setting cookies for domains without a dot. To use a domain locally,"
+" add any names that should route to the app to your ``hosts`` file. ::"
+msgstr ""
+"もし設定された場合、\ :data:`SESSION_COOKIE_DOMAIN`\ が設定されていない"
+"ときはセッションのクッキーのドメインに使用されます。最近の（modern）web"
+"ブラウザはドット（「.」）のないドメインに対してはクッキーの設定を許可"
+"しません。ドメインを（自分のPCなど）ローカルで使用するには、ローカルの\ "
+"``hosts``\ ファイルにappへの経路を提供（route）する名前を何でもよいので"
+"追加してください::"
+
+# 5bd129e1c694408a94a2ef598b0b1689
+#: ../../config.rst:271
+msgid ""
+"If set, ``url_for`` can generate external URLs with only an application "
+"context instead of a request context."
+msgstr ""
+"もし設定された場合、\ ``url_for``\ が外側のURL（訳注：引数「_external」"
+"を指定した、パスだけでなく、ドメイン名なども含めたURL）を生成できるのは、"
+"request contextの代わりに、application contextを使ってだけになります。"
+
+# e4aaa7f149804756857fb026e428e33e
+#: ../../config.rst:278
+msgid ""
+"Inform the application what path it is mounted under by the application /"
+" web server.  This is used for generating URLs outside the context of a "
+"request (inside a request, the dispatcher is responsible for setting "
+"``SCRIPT_NAME`` instead; see :ref:`Application Dispatching <app-"
+"dispatch>` for examples of dispatch configuration)."
+msgstr ""
+"アプリケーションに、アプリケーションサーバ / webサーバによってどのパスに"
+"設置（mount）されているかを知らせます。これはリクエストのcontextの外側で"
+"（訳注： request contextが登録できてない状態という意味合い、\ "
+":doc:`reqcontext`\ 参照）URLを生成するために使用されます（リクエストの内側"
+"では、振り分け機能（dispatcher）が代わりに\ ``SCRIPT_NAME``\ （訳注: アプリ"
+"ケーションのエンドポイントのURLでのパス部分とほぼ同じ意味合い）を設定する責任"
+"を担います; 振り分け（dispatch）設定の例は\ :ref:`Application Dispatching "
+"<app-dispatch>`\ を確認してください）（訳注： ``SCRIPT_NAME``\ などについて"
+"は、wsgiの仕様参照<https://wsgi.readthedocs.io/en/latest/definitions.html>）。"
+
+# c88ef0c816234a25989893c550413d10
+#: ../../config.rst:284
+msgid ""
+"Will be used for the session cookie path if ``SESSION_COOKIE_PATH`` is "
+"not set."
+msgstr ""
+"``SESSION_COOKIE_PATH``\ が設定されてない場合、セッションのクッキーのパス"
+"に使用されます。"
+
+# 444ad2f56b804f50aaec2913981d82dc
+#: ../../config.rst:287
+msgid "Default: ``'/'``"
+msgstr "標準設定: ``'/'``"
+
+# 63f2b497555c471ab57d06b25b8d258a
+#: ../../config.rst:291
+msgid ""
+"Use this scheme for generating external URLs when not in a request "
+"context."
+msgstr ""
+"request contextの中でないとき、外側のURL（訳注： 「url_for」に引数"
+"「_external」を指定した、パスだけでなく、ドメイン名なども含めたURLとほぼ"
+"同じ意味合い）を生成するためにこのscheme（訳注: URLのプロトコル（「://」の"
+"左側）部分）を使用します。"
+
+# 30e4c713ac9a461c86b7f5fb932bc0a8
+#: ../../config.rst:293
+msgid "Default: ``'http'``"
+msgstr "標準設定: ``'http'``"
+
+# 8cd322c417dc4078b819b1c98b184191
+#: ../../config.rst:297
+msgid ""
+"Don't read more than this many bytes from the incoming request data. If "
+"not set and the request does not specify a ``CONTENT_LENGTH``, no data "
+"will be read for security."
+msgstr ""
+"受信リクエストのデータを、このバイト数より多くは読み取らないようにします。"
+"もし未設定であってリクエストが\ ``CONTENT_LENGTH``\ を指定していない場合、"
+"セキュリティのために全くデータを読み取りません。"
+
+# d7414a5346664e6a9cec906bcdc0b3b2
+#: ../../config.rst:305
+msgid ""
+"Serialize objects to ASCII-encoded JSON. If this is disabled, the JSON "
+"will be returned as a Unicode string, or encoded as ``UTF-8`` by "
+"``jsonify``. This has security implications when rendering the JSON into "
+"JavaScript in templates, and should typically remain enabled."
+msgstr ""
+"オブジェクトをASCIIにエンコードしたJSONへシリアライズします。もしこれが"
+"無効にされている場合、\ ``jsonify``\ によって、JSONはUnicode文字列、または\ "
+"``UTF-8``\ へエンコードされてから返されます。テンプレートの中でJSONを"
+"JavaScriptへ変換するとき、これはセキュリティ上の問題を生じる可能性があり、"
+"したがって典型的には有効のままにしておくべきです。"
+
+# 0193f5d49d904999b0d2811d9e5cd7aa
+#: ../../config.rst:314
+msgid ""
+"Sort the keys of JSON objects alphabetically. This is useful for caching "
+"because it ensures the data is serialized the same way no matter what "
+"Python's hash seed is. While not recommended, you can disable this for a "
+"possible performance improvement at the cost of caching."
+msgstr ""
+"JSONオブジェクトのキーをアルファベット順にソートします。これはPythonのhash"
+"のシード（訳注: Pythonが内部でオブジェクトを管理・処理するときに使用している"
+"情報）が何であっても同じようなデータにシリアライズされることを保証するため、"
+"キャッシュするときに便利です。推奨はされませんが、これを無効にすると、"
+"キャッシュを犠牲にする代わりに性能が向上する可能性があります。"
+
+# a2af0419c97743209e892efa542e32b6
+#: ../../config.rst:323
+msgid ""
+"``jsonify`` responses will be output with newlines, spaces, and "
+"indentation for easier reading by humans. Always enabled in debug mode."
+msgstr ""
+"``jsonify``\ レスポンスで、人が読みやすいように改行、スペース、インデントを"
+"して出力するようにします。デバッグモードでは、常に有効にされます。"
+
+# 95ec27cb25d040cc9126bb7151ae1f0b
+#: ../../config.rst:330
+msgid "The mimetype of ``jsonify`` responses."
+msgstr "``jsonify``\ レスポンスのmimetypeです。"
+
+# 67fcb2e122284c2595ac21b67441aef1
+#: ../../config.rst:332
+msgid "Default: ``'application/json'``"
+msgstr "標準設定: ``'application/json'``"
+
+# 2669eb1f9a5c4e56a129f48cddaef173
+#: ../../config.rst:336
+msgid ""
+"Reload templates when they are changed. If not set, it will be enabled in"
+" debug mode."
+msgstr ""
+"テンプレートが変更されたとき、再読み込みします。もし未設定の場合、デバッグ"
+"モードでは有効になります。"
+
+# 2465d24ed8b1459a8a25bfb16bca2608
+#: ../../config.rst:343
+msgid ""
+"Log debugging information tracing how a template file was loaded. This "
+"can be useful to figure out why a template was not loaded or the wrong "
+"file appears to be loaded."
+msgstr ""
+"テンプレートファイルがどのように読み込まれたかトレースするデバッグ情報を"
+"ログします。テンプレートが読み込まれなかった、もしくは誤ったファイルが"
+"読み込まれて表示されたのが何故かを調べるときに役立つ場合があります。"
+
+# aeff790621904322959d38d881ed38fb
+#: ../../config.rst:351
+msgid ""
+"Warn if cookie headers are larger than this many bytes. Defaults to "
+"``4093``. Larger cookies may be silently ignored by browsers. Set to "
+"``0`` to disable the warning."
+msgstr ""
+"クッキーのヘッダがこのバイト数よりも大きい場合に警告します。標準設定は\ "
+"``4093``\ です。大きなクッキーはブラウザにより何の反応もなしに無視される"
+"場合があります。この警告を無効にするには\ ``0``\ に設定します。"
+
+# b6cfb61d1cf647f49ed14494b13e71da
+#: ../../config.rst:383
+msgid ""
+"``LOGGER_NAME`` and ``LOGGER_HANDLER_POLICY`` were removed. See "
+":doc:`/logging` for information about configuration."
+msgstr ""
+"``LOGGER_NAME``\ と\ ``LOGGER_HANDLER_POLICY``\ は削除されました。"
+"（ログの）設定に関する情報は\ :doc:`/logging`\ を確認してください。"
+
+# 97b6f193b1ca44d0b19a6341ecec16d8
+#: ../../config.rst:387
+msgid "Added :data:`ENV` to reflect the :envvar:`FLASK_ENV` environment variable."
+msgstr ""
+":envvar:`FLASK_ENV`\ 環境変数を反映するため\ :data:`ENV`\ が追加されました。"
+
+# eb8a2b57adaf46eab06ffa2473d66cdb
+#: ../../config.rst:390
+msgid ""
+"Added :data:`SESSION_COOKIE_SAMESITE` to control the session cookie's "
+"``SameSite`` option."
+msgstr ""
+"セッションのクッキーの\ ``SameSite``\ オプションを制御するために\ "
+":data:`SESSION_COOKIE_SAMESITE`\ が追加されました。"
+
+# 06ec17339766474681fcaaadfa5ebe7d
+#: ../../config.rst:393
+msgid "Added :data:`MAX_COOKIE_SIZE` to control a warning from Werkzeug."
+msgstr ""
+"Werkzeugからの警告を制御するために\ :data:`MAX_COOKIE_SIZE`\ が追加されました。"
+
+# 7d1b664f411047ab8cd471c9ce7552a7
+#: ../../config.rst:379
+msgid ""
+"``SESSION_REFRESH_EACH_REQUEST``, ``TEMPLATES_AUTO_RELOAD``, "
+"``LOGGER_HANDLER_POLICY``, ``EXPLAIN_TEMPLATE_LOADING``"
+msgstr ""
+
+# c6376a8e427146ada075aa8feac31f81
+#: ../../config.rst:376
+msgid "``JSON_AS_ASCII``, ``JSON_SORT_KEYS``, ``JSONIFY_PRETTYPRINT_REGULAR``"
+msgstr ""
+
+# 01215966e12c47bba958f85e2278c4b5
+#: ../../config.rst:373
+msgid "``PREFERRED_URL_SCHEME``"
+msgstr ""
+
+# 37434fbb8bbf4691a6157fd89ee0b4ac
+#: ../../config.rst:367
+msgid ""
+"``TRAP_BAD_REQUEST_ERRORS``, ``TRAP_HTTP_EXCEPTIONS``, "
+"``APPLICATION_ROOT``, ``SESSION_COOKIE_DOMAIN``, ``SESSION_COOKIE_PATH``,"
+" ``SESSION_COOKIE_HTTPONLY``, ``SESSION_COOKIE_SECURE``"
+msgstr ""
+
+# 15a3f65c6ce446e5b866c91655f090d6
+#: ../../config.rst:364
+msgid "``PROPAGATE_EXCEPTIONS``, ``PRESERVE_CONTEXT_ON_EXCEPTION``"
+msgstr ""
+
+# ba91ab7969dc46729c17da5086d07aed
+#: ../../config.rst:361
+msgid "``MAX_CONTENT_LENGTH``"
+msgstr ""
+
+# 06430a8e200941ee8f700e90b8bfc283
+#: ../../config.rst:358
+msgid "``SERVER_NAME``"
+msgstr ""
+
+# c4715f81989043b094dfa896b470a7c9
+#: ../../config.rst:355
+msgid "``LOGGER_NAME``"
+msgstr ""
+
+# 0c66c64a85184544bb6e1628173d025b
+#: ../../config.rst:397
+msgid "Configuring from Files"
+msgstr "ファイルからの設定の読み取り（Configuring from Files）"
+
+# c808853796cf4a1282fec93b01a9c8c5
+#: ../../config.rst:399
+msgid ""
+"Configuration becomes more useful if you can store it in a separate file,"
+" ideally located outside the actual application package. This makes "
+"packaging and distributing your application possible via various package "
+"handling tools (:ref:`distribute-deployment`) and finally modifying the "
+"configuration file afterwards."
+msgstr ""
+"ファイルを分けて、理想的には実際のアプリケーションのパッケージからは外側に"
+"あるファイルで、そのファイルの中に設定を格納できる場合、設定をより便利に行え"
+"ます。これは、様々なパッケージ処理ツール（\ :ref:`distribute-deployment`\ ）"
+"を通して自分のアプリケーションをパッケージ化および配布できるようにし、そして"
+"最終的に設定ファイルを後から変更できるようにします。"
+
+# 07057a6b0806498cb5373e672c8db0ea
+#: ../../config.rst:405
+msgid "So a common pattern is this::"
+msgstr "したがって、よくあるパターンは以下のとおりです::"
+
+# 9960357878ce48e8aff80d97d04345e9
+#: ../../config.rst:411
+msgid ""
+"This first loads the configuration from the "
+"`yourapplication.default_settings` module and then overrides the values "
+"with the contents of the file the :envvar:`YOURAPPLICATION_SETTINGS` "
+"environment variable points to.  This environment variable can be set on "
+"Linux or OS X with the export command in the shell before starting the "
+"server::"
+msgstr ""
+"これは、最初に\ `yourapplication.default_settings`\ モジュールから設定を読み"
+"込み、それから\ :envvar:`YOURAPPLICATION_SETTINGS`\ 環境変数が指し示すファイル"
+"の内容を使って値を上書きします。この環境変数はLinuxまたはOS Xでは、サーバを"
+"開始する前にシェルの中でexportコマンドで設定できます::"
+
+# 3677c27aacac45ce82578770a0ec124f
+#: ../../config.rst:423
+msgid "On Windows systems use the `set` builtin instead::"
+msgstr "Windowsシステムでは代わりに組込みの\ `set`\ を使用します::"
+
+# 40d0a4083b6e42588805b0da3f765cee
+#: ../../config.rst:427
+msgid ""
+"The configuration files themselves are actual Python files.  Only values "
+"in uppercase are actually stored in the config object later on.  So make "
+"sure to use uppercase letters for your config keys."
+msgstr ""
+"設定ファイルそれ自身は実際にはPythonファイルです。大文字の値だけが（訳注: "
+"設定ファイルであるPythonファイルのモジュール変数で変数名が大文字だけのもの"
+"だけが）、実際にはconfigオブジェクトの中へ後で格納されます。従って、自分の"
+"設定のキーでは、確実に大文字を使用するようにしてください。"
+
+# 419c23b3b79f4d889c203028e6f13b0e
+#: ../../config.rst:431
+msgid "Here is an example of a configuration file::"
+msgstr "以下は設定ファイルの例です::"
+
+# 91050a38de414a699f64ea1c57ff843f
+#: ../../config.rst:437
+msgid ""
+"Make sure to load the configuration very early on, so that extensions "
+"have the ability to access the configuration when starting up.  There are"
+" other methods on the config object as well to load from individual "
+"files.  For a complete reference, read the :class:`~flask.Config` "
+"object's documentation."
+msgstr ""
+"設定の読み込みは確実に早い段階で行ってください、そうすればFlask拡張が開始時に"
+"設定へアクセスできるようになります。configオブジェクトには、個別のファイルから"
+"（設定を）読み込む他の手段もあります。完全なリファレンスについては、\ "
+":class:`~flask.Config`\ オブジェクトのドキュメントを読んでください。"
+
+# 4bab57b47a22476c8440a390d01fb28d
+#: ../../config.rst:445
+msgid "Configuring from Environment Variables"
+msgstr "環境変数からの設定の読み取り（Configuring from Environment Variables）"
+
+# 6cb98fa1318c49ff9eba483cdb0a25e4
+#: ../../config.rst:447
+msgid ""
+"In addition to pointing to configuration files using environment "
+"variables, you may find it useful (or necessary) to control your "
+"configuration values directly from the environment."
+msgstr ""
+"環境変数を使用して設定ファイルを指し示すことに加えて、環境（environment）"
+"から直接設定値を制御することが便利（もしくは必要）なことがあるかもしれ"
+"ません。"
+
+# e1d56fd244174ff79b7631320e34535c
+#: ../../config.rst:451
+msgid ""
+"Environment variables can be set on Linux or OS X with the export command"
+" in the shell before starting the server::"
+msgstr ""
+"環境変数はLinuxまたはOS Xでは、サーバを開始する前にシェルの中でexport"
+"コマンドで設定できます::"
+
+# 1f44852646314bbdb716b576656e9ddd
+#: ../../config.rst:459
+msgid "On Windows systems use the ``set`` builtin instead::"
+msgstr "Windowsシステムでは代わりに組込みの\ `set`\ を使用します::"
+
+# fa87cc3074e94cd7a066b4e8494ca97c
+#: ../../config.rst:463
+msgid ""
+"While this approach is straightforward to use, it is important to "
+"remember that environment variables are strings -- they are not "
+"automatically deserialized into Python types."
+msgstr ""
+"このアプローチは直感的に使えますが、環境変数は文字列（string）である"
+"ことを覚えておくことが重要です -- それらはPythonの型へ自動的には変換"
+"（deserialize）されません。"
+
+# ec2913f71be84181966809c55d5e1773
+#: ../../config.rst:467
+msgid ""
+"Here is an example of a configuration file that uses environment "
+"variables::"
+msgstr ""
+"以下は、環境変数を使用している設定ファイルの例です::"
+
+# 4a5e88a2fa914450aafb620bfca0fcbf
+#: ../../config.rst:480
+msgid ""
+"Notice that any value besides an empty string will be interpreted as a "
+"boolean ``True`` value in Python, which requires care if an environment "
+"explicitly sets values intended to be ``False``."
+msgstr ""
+"Pythonでは、空の文字（empty string）以外のあらゆる値は、boolean型では\ "
+"``True``\ に解釈され、もし環境（変数）では\ ``False``\ を意図して明示的に"
+"値を設定するときには配慮が必要になることに注意してください。"
+
+# 0a0c6a1fbb504e648951815196f5d867
+#: ../../config.rst:484
+msgid ""
+"Make sure to load the configuration very early on, so that extensions "
+"have the ability to access the configuration when starting up.  There are"
+" other methods on the config object as well to load from individual "
+"files.  For a complete reference, read the :class:`~flask.Config` class "
+"documentation."
+msgstr ""
+"設定の読み込みは確実に早い段階で行ってください、そうすればFlask拡張が開始時に"
+"設定へアクセスできるようになります。configオブジェクトには、個別のファイルから"
+"（設定を）読み込む他の手段もあります。完全なリファレンスについては、\ "
+":class:`~flask.Config`\ クラスのドキュメントを読んでください。"
+
+# 3bdf591eb6cc4be0ab25943e44b0ed50
+#: ../../config.rst:491
+msgid "Configuration Best Practices"
+msgstr "設定のベストプラクティス"
+
+# 96ba8fb4980e485bafe81c75d8afecc6
+#: ../../config.rst:493
+#, python-format
+msgid ""
+"The downside with the approach mentioned earlier is that it makes testing"
+" a little harder.  There is no single 100% solution for this problem in "
+"general, but there are a couple of things you can keep in mind to improve"
+" that experience:"
+msgstr ""
+"前の方で示したやり方のマイナス面は、テストの実施が少々難しくなることです。"
+"この問題に対する100%のひとつだけの解決方法というのは一般的にありませんが、"
+"テスト時の経験を改善するために心に留めておいた方がよいことがいくつかあり"
+"ます:"
+
+# 5e357f95d94a4123adf14c70c65b3310
+#: ../../config.rst:498
+msgid ""
+"Create your application in a function and register blueprints on it. That"
+" way you can create multiple instances of your application with different"
+" configurations attached which makes unit testing a lot easier.  You can "
+"use this to pass in configuration as needed."
+msgstr ""
+"関数の中で自分のアプリケーションを作成し、そのアプリケーションにblueprint"
+"を登録します。このやり方では、自分のアプリケーションの複数のインスタンスを"
+"作成し、ユニットテストをより容易にする異なる設定を取り付けることができます。"
+"必要に応じて設定を投入するために、このやり方を使用できます。"
+
+# c4d12427d1084f6ca86d3c7b404f52d6
+#: ../../config.rst:503
+msgid ""
+"Do not write code that needs the configuration at import time.  If you "
+"limit yourself to request-only accesses to the configuration you can "
+"reconfigure the object later on as needed."
+msgstr ""
+"import時に設定情報が必要になるコードは書かないようにします。もしも設定情報へ"
+"リクエストだけのアクセスをするよう自分自身を制限すれば、必要に応じて後から"
+"オブジェクトの再設定が可能です。"
+
+# ceb7f7f64875496aabac2f0d2c48e134
+#: ../../config.rst:510
+msgid "Development / Production"
+msgstr "開発環境 / 本番環境"
+
+# c5b164650ed04c54ae5d3c7fe9e33561
+#: ../../config.rst:512
+msgid ""
+"Most applications need more than one configuration.  There should be at "
+"least separate configurations for the production server and the one used "
+"during development.  The easiest way to handle this is to use a default "
+"configuration that is always loaded and part of the version control, and "
+"a separate configuration that overrides the values as necessary as "
+"mentioned in the example above::"
+msgstr ""
+"殆どのアプリケーションでは2つ以上の設定を必要とします。少なくとも、本番環境の"
+"サーバと開発中に使うサーバとの設定は分けるべきです。これを扱う最も簡単なやり方"
+"は、バージョン管理の一部にして常に読み込まれる標準設定と、上記の例で言及した"
+"ように必要に応じて値を上書きする分かれた設定を使用することです。"
+
+# d860cba516644adebbb474a5e8379867
+#: ../../config.rst:523
+msgid ""
+"Then you just have to add a separate :file:`config.py` file and export "
+"``YOURAPPLICATION_SETTINGS=/path/to/config.py`` and you are done.  "
+"However there are alternative ways as well.  For example you could use "
+"imports or subclassing."
+msgstr ""
+"それから、分かれた\ :file:`config.py`\ ファイルを追加し、\ "
+"``YOURAPPLICATION_SETTINGS=/path/to/config.py``\ をexportする必要がある"
+"だけで、出来上がりです。ただし、さらに別のやり方もあります。例えば、"
+"importやサブクラス作成も使えます。"
+
+# 5baeeb1f916143d2a42b87a92adc4fab
+#: ../../config.rst:528
+msgid ""
+"What is very popular in the Django world is to make the import explicit "
+"in the config file by adding ``from yourapplication.default_settings "
+"import *`` to the top of the file and then overriding the changes by "
+"hand. You could also inspect an environment variable like "
+"``YOURAPPLICATION_MODE`` and set that to `production`, `development` etc "
+"and import different hard-coded files based on that."
+msgstr ""
+"Django界隈で人気があるのは、\ ``from yourapplication.default_settings "
+"import *``\ を設定ファイルの最初に置いておくことで設定ファイルの中でimport"
+"することを明確にし、それから手作業で変更を上書きしていくことです。\ "
+"``YOURAPPLICATION_MODE``\ のような環境変数を調べることも可能で、それを\ "
+"`production`, `development`\ などに設定しておき、その値に基づいて違うように"
+"ハードコードされたファイルをimportします。"
+
+# 64b4408faf2642f182fc390bc60d662e
+#: ../../config.rst:535
+msgid ""
+"An interesting pattern is also to use classes and inheritance for "
+"configuration::"
+msgstr ""
+"設定のためにクラスを使用し継承することも、興味深いパターンのひとつです::"
+
+# c35aa6885e464a11ada5896a199c8ea5
+#: ../../config.rst:552
+msgid ""
+"To enable such a config you just have to call into "
+":meth:`~flask.Config.from_object`::"
+msgstr ""
+"このような設定を有効にするために必要なのは、ただ\ "
+":meth:`~flask.Config.from_object`\ を呼び出すだけです。"
+
+# 8d229d75b36849aa97e815363c88b717
+#: ../../config.rst:557
+msgid ""
+"Note that :meth:`~flask.Config.from_object` does not instantiate the "
+"class object. If you need to instantiate the class, such as to access a "
+"property, then you must do so before calling "
+":meth:`~flask.Config.from_object`::"
+msgstr ""
+":meth:`~flask.Config.from_object`\ はクラスオブジェクトをインスタンス化"
+"しないことに注目してください。もしも、propertyへのアクセスなどをするために"
+"クラスをインスタンス化する必要があるときは、\ :meth:"
+"`~flask.Config.from_object`\ を呼び出す前に実施する必要があります（訳注: "
+"以下の例でfrom_objectの引数が「ProductionConfig()」と初期化しているところが"
+"該当）::"
+
+# 2adb308eaa8d494d82be20ab879abb1f
+#: ../../config.rst:569
+msgid ""
+"Instantiating the configuration object allows you to use ``@property`` in"
+" your configuration classes::"
+msgstr ""
+"設定オブジェクトをインスタンス化すると、設定クラスの中で\ ``@property``\ "
+"が使えるようになります::"
+
+# ea50a71e81d94327b9ba89c40048e2d5
+#: ../../config.rst:595
+msgid ""
+"There are many different ways and it's up to you how you want to manage "
+"your configuration files.  However here a list of good recommendations:"
+msgstr ""
+"他にも多くの違うやり方があり、設定ファイルをどのように管理したいかは"
+"あなたしだいです。ただし、良いと推奨されることのリストは以下のとおりです:"
+
+# 84f5cb5bc09c4506a2f5c105612935f7
+#: ../../config.rst:598
+msgid ""
+"Keep a default configuration in version control.  Either populate the "
+"config with this default configuration or import it in your own "
+"configuration files before overriding values."
+msgstr ""
+"標準設定をバージョン管理（対象）の中に残しておきます。値を上書きする前に、"
+"この標準設定の内容を（アプリケーションの）設定へ移すか、自分の設定ファイル"
+"へimportします。"
+
+
+# 13768e090b2d4edd8f4dee75a4789cea
+#: ../../config.rst:601
+msgid ""
+"Use an environment variable to switch between the configurations. This "
+"can be done from outside the Python interpreter and makes development and"
+" deployment much easier because you can quickly and easily switch between"
+" different configs without having to touch the code at all.  If you are "
+"working often on different projects you can even create your own script "
+"for sourcing that activates a virtualenv and exports the development "
+"configuration for you."
+msgstr ""
+"環境変数を使用して設定を切り替えます。これはPythonインタプリタの外側から行う"
+"ことができ、コードに全く触る必要なく異なる設定の間を素早く容易に切り替えられる"
+"ため、開発とデプロイ（訳注: 本番環境への移行のような意味合い）を非常に容易に"
+"します。もしも異なるプロジェクトで作業することがよくある場合、自分用に"
+"virtualenvをactivateし開発設定をexportするためにsourceする（訳注: こことは"
+"別にインストールのドキュメントで紹介していますが、Pythonでは「\ ``source "
+"<仮想環境の場所>/bin/activate``\ 」を実行すると仮想環境用の設定をexportして"
+"利用できるようになるvirtualenvという仕組みがあります）、自分独自のスクリプト"
+"さえ作成できます。"
+
+# ad98eaa6ce944993aad0eba823276cdf
+#: ../../config.rst:608
+msgid ""
+"Use a tool like `fabric`_ in production to push code and configurations "
+"separately to the production server(s).  For some details about how to do"
+" that, head over to the :ref:`fabric-deployment` pattern."
+msgstr ""
+"コードと設定を別々に本番環境のサーバへ押し入れる（push）ために、\ "
+"`fabric`_\ のようなツールを本番環境で使用します。どのように実施するかに"
+"ついての詳細は、\ :ref:`fabric-deployment`\ パターンを調べてください。"
+
+# 03ca02d2d8394da6bf2f0536404b1f67
+#: ../../config.rst:619
+msgid "Instance Folders"
+msgstr "インスタンスフォルダ"
+
+# ce02897abdd9459786e373ce75a97b8c
+#: ../../config.rst:623
+msgid ""
+"Flask 0.8 introduces instance folders.  Flask for a long time made it "
+"possible to refer to paths relative to the application's folder directly "
+"(via :attr:`Flask.root_path`).  This was also how many developers loaded "
+"configurations stored next to the application.  Unfortunately however "
+"this only works well if applications are not packages in which case the "
+"root path refers to the contents of the package."
+msgstr ""
+"Flask 0.8ではインスタンスフォルダを導入しました。Flaskは長い間、アプリ"
+"ケーションのフォルダからの相対パスを直接参照できるようにしていました"
+"（\ :attr:`~flask.Flask.root_path`\ をとおして）。これは、多くの開発者が"
+"アプリケーションの隣に格納した設定を読み込むやり方でもありました。しかし残念"
+"ながら、root path（root_pathの設定値）がパッケージのコンテンツを参照して"
+"しまうパッケージ化が、アプリケーションにされていないときだけ、これはうまく"
+"働くものです。"
+
+# 7e9d64e926084703ae49766dea8cff34
+#: ../../config.rst:630
+msgid ""
+"With Flask 0.8 a new attribute was introduced: "
+":attr:`Flask.instance_path`.  It refers to a new concept called the "
+"“instance folder”.  The instance folder is designed to not be under "
+"version control and be deployment specific.  It's the perfect place to "
+"drop things that either change at runtime or configuration files."
+msgstr ""
+"Flask 0.8では新しい属性が導入されています: :attr:`~flask.Flask.instance_path`\ "
+"です。それは「インスタンスフォルダ（instance folder）」と呼ばれる新しい"
+"コンセプトを参照します。インスタンスフォルダは、バージョン管理対象にはせず、"
+"デプロイ固有のものであるように設計されています。それは実行時に変化するものや"
+"設定ファイルを入れておくには、完璧な場所です。"
+
+# 30ee0433db8f453aa364d9177623e3f1
+#: ../../config.rst:636
+msgid ""
+"You can either explicitly provide the path of the instance folder when "
+"creating the Flask application or you can let Flask autodetect the "
+"instance folder.  For explicit configuration use the `instance_path` "
+"parameter::"
+msgstr ""
+"Flaskアプリケーションを作成するときにインスタンスフォルダのパスを明示的に"
+"提供することも、Flaskがインスタンスフォルダを自動的に見つけ出すようにする"
+"こともできます。明示的に設定するには\ `instance_path`\ パラメータを使用"
+"してください::"
+
+# 39d9675d46f34da3a979584b751e6d99
+#: ../../config.rst:643
+msgid "Please keep in mind that this path *must* be absolute when provided."
+msgstr ""
+"パスを提供するときは絶対パスにする\ *必要がある*\ ことを覚えておいてください。"
+
+# 39f569c593ca4dc584dbf04747324d3d
+#: ../../config.rst:645
+msgid ""
+"If the `instance_path` parameter is not provided the following default "
+"locations are used:"
+msgstr ""
+"`instance_path`\ パラメータが提供されていない場合、以下の標準設定（default）"
+"の場所が使用されます:"
+
+# dfe31c1c94c844fd985b1d829d288141
+#: ../../config.rst:648
+msgid "Uninstalled module::"
+msgstr "インストールされていないmodule::"
+
+# 83f30792010c4f08b5b4b57ac2f82b3e
+#: ../../config.rst:653
+msgid "Uninstalled package::"
+msgstr "インストールされていないpackage::"
+
+# 83d7b76a8fd34397ad66ccf015dccbc2
+#: ../../config.rst:659
+msgid "Installed module or package::"
+msgstr "インストールされているmoduleまたはpackage::"
+
+# cdc5ad12afd74b7fb96b54d9c3edb358
+#: ../../config.rst:664
+msgid ""
+"``$PREFIX`` is the prefix of your Python installation.  This can be "
+"``/usr`` or the path to your virtualenv.  You can print the value of "
+"``sys.prefix`` to see what the prefix is set to."
+msgstr ""
+"``$PREFIX``\ はPythonのインストールでのプレフィックス（訳注: Pythonの"
+"主要なフォルダ・ファイルがインストールされた場所で、インストール時などに"
+"指定し、Python実行時に標準ライブラリなどのファイルを探すときは、自動的に"
+"プレフィックスの下を探します）です。これは\ ``/usr``\ またはvirtualenvの"
+"パスになることがあり得ます。そのプレフィックスに何が設定されたか確認する"
+"ために、\ ``sys.prefix``\ の値を表示することができます。"
+
+# cfac90b482cd46299b726b20bb1d491a
+#: ../../config.rst:668
+msgid ""
+"Since the config object provided loading of configuration files from "
+"relative filenames we made it possible to change the loading via "
+"filenames to be relative to the instance path if wanted.  The behavior of"
+" relative paths in config files can be flipped between “relative to the "
+"application root” (the default) to “relative to instance folder” via the "
+"`instance_relative_config` switch to the application constructor::"
+msgstr ""
+"configオブジェクトは相対ファイル名からの設定ファイルの読み込みを提供する"
+"ため、望む場合は、instance path（instance_pathの設定値）からの相対ファイル"
+"名を介して（設定ファイルを）読み込むように変更することが可能です。設定ファイル"
+"中の相対パスの振る舞いは「application rootに対して相対的」と（標準設定の）"
+"「インスタンスフォルダに対して相対的」との間を切り替えることが、アプリケーション"
+"のコンストラクタで\ `instance_relative_config`\ スイッチをとおして可能です。"
+
+# fb70a04d5762406880e7c560d612057a
+#: ../../config.rst:677
+msgid ""
+"Here is a full example of how to configure Flask to preload the config "
+"from a module and then override the config from a file in the instance "
+"folder if it exists::"
+msgstr ""
+"moduleから設定を先読みして、それから、インスタンスフォルダがあれば、"
+"インスタンスフォルダにあるファイルの設定で上書きするようにFlaskを設定"
+"するやり方の、一通りの（不足のない）例がこちらです::"
+
+# e34911ce6a084e8689600ddd326fd343
+#: ../../config.rst:685
+msgid ""
+"The path to the instance folder can be found via the "
+":attr:`Flask.instance_path`.  Flask also provides a shortcut to open a "
+"file from the instance folder with :meth:`Flask.open_instance_resource`."
+msgstr ""
+"インスタンスフォルダへのパスは\ :attr:`~flask.Flask.instance_path`\ を"
+"とおして見つけることができます。Flaskはインスタンスフォルダにあるファイル"
+"を開くショートカットも、\ :meth:`~flask.Flask.open_instance_resource`\ に"
+"よって提供します。"
+
+# 29429f5061b949aa9be6d7ced1bef153
+#: ../../config.rst:689
+msgid "Example usage for both::"
+msgstr "両者の使用例::"
+
