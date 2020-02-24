@@ -1,0 +1,570 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 1.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+# 3e190b72b8a84bca9376b6306cbc7f92
+#: ../../errorhandling.rst:4
+msgid "Application Errors"
+msgstr "アプリケーションのエラー"
+
+# aaf066c9ee164e79a528c2c570527934
+#: ../../errorhandling.rst:8
+#, python-format
+msgid ""
+"Applications fail, servers fail.  Sooner or later you will see an "
+"exception in production.  Even if your code is 100% correct, you will "
+"still see exceptions from time to time.  Why?  Because everything else "
+"involved will fail.  Here are some situations where perfectly fine code "
+"can lead to server errors:"
+msgstr ""
+"アプリケーションには障害が発生し、サーバにも障害が発生します。遅かれ"
+"早かれ、本番環境で例外（exception）が見つかるでしょう。もしコードが100%正しい"
+"としても、時には例外が見つかります。なぜでしょうか？コード以外の関連する"
+"全てモノに障害が発生するためです。ここでは、完全によくできたコードがサーバの"
+"エラーに至る状況をいくつか示します:"
+
+# 285e029b8cc24fd0975e8249641d20c4
+#: ../../errorhandling.rst:14
+msgid ""
+"the client terminated the request early and the application was still "
+"reading from the incoming data"
+msgstr ""
+"クライアントがリクエストを早いうちに終了させて、アプリケーションが受信"
+"データの読み取り中です"
+
+# aaea8c12bafb4eb193b45e0fbda8d7c7
+#: ../../errorhandling.rst:16
+msgid "the database server was overloaded and could not handle the query"
+msgstr ""
+"データベース・サーバが過負荷であり、問合せ（query）を処理できません"
+
+# a5100876973d4c6bb630d734593ade17
+#: ../../errorhandling.rst:17
+msgid "a filesystem is full"
+msgstr "ファイルシステムに空きがありません"
+
+# cb1229a599b74f429b88300a8628acaa
+#: ../../errorhandling.rst:18
+msgid "a harddrive crashed"
+msgstr "ハードドライブ（ハードディスク）がクラッシュしました"
+
+# 01b5e3a3e71b4ad5a454d4632763f758
+#: ../../errorhandling.rst:19
+msgid "a backend server overloaded"
+msgstr "背後（backend）のサーバが過負荷です"
+
+# b2ad471731184167a89305fc742206d6
+#: ../../errorhandling.rst:20
+msgid "a programming error in a library you are using"
+msgstr "使用しているライブラリにプログラムのエラーがあります"
+
+# b2c3c4593de2482089262f32ffbe8eb0
+#: ../../errorhandling.rst:21
+msgid "network connection of the server to another system failed"
+msgstr "サーバから他のシステムへのネットワーク接続に障害が発生しました"
+
+# 10721206cc274416a14aff2e8c7bb2d9
+#: ../../errorhandling.rst:23
+msgid ""
+"And that's just a small sample of issues you could be facing.  So how do "
+"we deal with that sort of problem?  By default if your application runs "
+"in production mode, Flask will display a very simple page for you and log"
+" the exception to the :attr:`~flask.Flask.logger`."
+msgstr ""
+"そして、これは直面するであろう問題の小さなサンプルでしかありません。では"
+"このような問題にどう対処するのでしょうか？標準設定では、もしアプリケーションが"
+"本番環境（production）モードで走っている場合、Flaskはとてもシンプルなページを"
+"表示し、\ :attr:`~flask.Flask.logger`\ へ例外をログします。"
+
+# b2f377030ee849a2a434442d22f9b78b
+#: ../../errorhandling.rst:28
+msgid ""
+"But there is more you can do, and we will cover some better setups to "
+"deal with errors."
+msgstr "しかし、もっとできることがあり、エラーを処理するためのより良い"
+"いくつかの準備（setup）についてこの文書で扱います。"
+
+# 3891696d55c64d0bab22dc7ed0665265
+#: ../../errorhandling.rst:32
+msgid "Error Logging Tools"
+msgstr "エラーログ処理ツール"
+
+# 71b7f5f7a52f49e7beece378eae0f2a7
+#: ../../errorhandling.rst:34
+msgid ""
+"Sending error mails, even if just for critical ones, can become "
+"overwhelming if enough users are hitting the error and log files are "
+"typically never looked at. This is why we recommend using `Sentry "
+"<https://sentry.io/>`_ for dealing with application errors.  It's "
+"available as an Open Source project `on GitHub "
+"<https://github.com/getsentry/sentry>`_ and is also available as a "
+"`hosted version <https://sentry.io/signup/>`_ which you can try for free."
+" Sentry aggregates duplicate errors, captures the full stack trace and "
+"local variables for debugging, and sends you mails based on new errors or"
+" frequency thresholds."
+msgstr ""
+"エラーメールを送信していると、たとえ非常に重大なものだけにした場合でも、"
+"多くのユーザがエラーに当たると圧倒されるものになり、ログファイルは典型的"
+"には見られなくなります。これが、アプリケーションのエラー処理のための\ "
+"`Sentry <https://sentry.io/>`_\ を勧める理由です。それはオープンソースの"
+"プロジェクトとして\ `GitHub上 <https://github.com/getsentry/sentry>`_\ で"
+"入手可能であり、無料で試すことのできる\ `ホストされたバージョン "
+"<https://sentry.io/signup/>`_\ としても利用可能です。Sentryは重複するエラー"
+"を収集し、スタックトレース全体とローカル変数をデバッグのために捕捉し、そして"
+"新しいエラーであるか、もしくは閾値を超える頻度であることに基づいてメール送信"
+"します。"
+
+# 666480a5278c4cae84d1382de89619d3
+#: ../../errorhandling.rst:45
+msgid ""
+"To use Sentry you need to install the `sentry-sdk` client with extra "
+"`flask` dependencies::"
+msgstr ""
+"Sentryを使うには、\ `sentry-sdk`\ クライアントを、追加分の\ `flask`\ "
+"依存対象と一緒にインストールする必要があります::"
+
+# 1149606e1d854910ba3d28ad6a8c7ce4
+#: ../../errorhandling.rst:49
+msgid "And then add this to your Flask app::"
+msgstr "そしてそれから、以下をFlaskのappに追加します::"
+
+# a42b114764a6494899da531583ed6dd9
+#: ../../errorhandling.rst:56
+msgid ""
+"The `YOUR_DSN_HERE` value needs to be replaced with the DSN value you get"
+" from your Sentry installation."
+msgstr ""
+"`YOUR_DSN_HERE`\ の値は、インストールしたSentryから得たDSNの値に置き換える"
+"必要があります。"
+
+# c2fa84fed3f94eaf904f690a5ab34057
+#: ../../errorhandling.rst:59
+msgid ""
+"After installation, failures leading to an Internal Server Error are "
+"automatically reported to Sentry and from there you can receive error "
+"notifications."
+msgstr ""
+"インストールの後、Internal Server Errorに至る障害は自動的にSentryへ報告"
+"され、そこからエラー通知を受け取ることができます。"
+
+# a00a426e6b614343ae874343847e5a2c
+#: ../../errorhandling.rst:63
+msgid "Follow-up reads:"
+msgstr "さらに追いかけるときに読むもの:"
+
+# 26275a08d2fa4d1e89a6f4d01d9124d9
+#: ../../errorhandling.rst:65
+msgid ""
+"Sentry also supports catching errors from your worker queue (RQ, Celery) "
+"in a similar fashion.  See the `Python SDK docs "
+"<https://docs.sentry.io/platforms/python/>`_ for more information."
+msgstr ""
+"Sentryは（RQ, Celery（訳注: RQ・Celeryともに、ジョブをキューに投入し、ワーカーで"
+"キューからジョブを取り出して実行させる、ジョブキューのPythonのライブラリ）の"
+"ような）ワーカーのキューでのエラーを同じように捕捉することもサポートしています。"
+"さらなる情報は\ `Python SDKドキュメント "
+"<https://docs.sentry.io/platforms/python/>`_\ を見てください。"
+
+# 0692bcc0c4894d97982510686ac348a1
+#: ../../errorhandling.rst:68
+msgid ""
+"`Getting started with Sentry "
+"<https://docs.sentry.io/quickstart/?platform=python>`_"
+msgstr ""
+"`Sentry入門 <https://docs/sentry.io/quickstart/?platform=python>`_"
+
+# a353059f243f436ba5e981610db276d6
+#: ../../errorhandling.rst:69
+msgid ""
+"`Flask-specific documentation "
+"<https://docs.sentry.io/platforms/python/flask/>`_."
+msgstr ""
+"`Flask-特化のドキュメント <https://docs.sentry.io/platforms/python/flask/>`_\ 。"
+
+# af36f041daa54811ba60901d73a453d2
+#: ../../errorhandling.rst:74
+msgid "Error handlers"
+msgstr "エラー処理器（Error handlers）"
+
+# 05ca80a2003346b5bc99adb44dab84a2
+#: ../../errorhandling.rst:76
+msgid ""
+"You might want to show custom error pages to the user when an error "
+"occurs. This can be done by registering error handlers."
+msgstr ""
+"エラーが起きたとき、独自のエラーページを見せたいかもしれません。これは、"
+"error handlerを登録することで可能です。"
+
+# 87eaf88a3de540f0867f0411bdc57b01
+#: ../../errorhandling.rst:79
+msgid ""
+"An error handler is a normal view function that returns a response, but "
+"instead of being registered for a route, it is registered for an "
+"exception or HTTP status code that would be raised while trying to handle"
+" a request."
+msgstr ""
+"error handlerはレスポンスを返す普通のview関数ですが、経路（route）に対して"
+"登録する代わりに、リクエストを処理しようと試みるときに発生することがある"
+"例外またはHTTPステータスコードに対して登録します。"
+
+# e853d3e4feee488e83cf92cd75e25d6b
+#: ../../errorhandling.rst:84
+msgid "Registering"
+msgstr "登録"
+
+# eb825af47ef543e7b15f2b2036306145
+#: ../../errorhandling.rst:86
+msgid ""
+"Register handlers by decorating a function with "
+":meth:`~flask.Flask.errorhandler`. Or use "
+":meth:`~flask.Flask.register_error_handler` to register the function "
+"later. Remember to set the error code when returning the response. ::"
+msgstr ""
+":meth:`~flask.Flask.errorhandler`\ を使って関数を修飾（decorating）して"
+"handlerを登録します（訳注: Pythonのdecorator機能を使って登録します）。"
+"または、\ :meth:`~flask.Flask.register_error_handler`\ を使って、後から"
+"関数を登録します。レスポンスを返すときにはエラーコードを設定することを"
+"覚えておいてください。::"
+
+# 4b350a309a1546cf81da3e0ffd4ea616
+#: ../../errorhandling.rst:98
+msgid ""
+":exc:`werkzeug.exceptions.HTTPException` subclasses like "
+":exc:`~werkzeug.exceptions.BadRequest` and their HTTP codes are "
+"interchangeable when registering handlers. (``BadRequest.code == 400``)"
+msgstr ""
+":exc:`~werkzeug.exceptions.BadRequest`\ のような\ "
+":exc:`werkzeug.exceptions.HTTPException`\ のサブクラスとそれらのHTTPコードは、"
+"handlerを登録するとき相互に交換可能です。（\ ``BadRequest.code == 400``\ ）"
+
+# 99e9c340e42e49d881204eaebeb2b663
+#: ../../errorhandling.rst:102
+msgid ""
+"Non-standard HTTP codes cannot be registered by code because they are not"
+" known by Werkzeug. Instead, define a subclass of "
+":class:`~werkzeug.exceptions.HTTPException` with the appropriate code and"
+" register and raise that exception class. ::"
+msgstr ""
+"非標準のHTTPコード（訳注: HTTPプロトコルの仕様に定義されていないHTTPレスポンス"
+"コード）はWerkzeugで分からないため、コードによる登録ができません。代わりに、"
+"適切なコードを使って\ :class:`~werkzeug.exceptions.HTTPException`\ のサブ"
+"クラスを定義し、そのクラス（とhandler）を登録し、その例外クラス（の例外）を"
+"発生させます::"
+
+# 3cf5f0edc29141309f7c7b44424b0105
+#: ../../errorhandling.rst:115
+msgid ""
+"Handlers can be registered for any exception class, not just "
+":exc:`~werkzeug.exceptions.HTTPException` subclasses or HTTP status "
+"codes. Handlers can be registered for a specific class, or for all "
+"subclasses of a parent class."
+msgstr ""
+"handlerは、\ :exc:`~werkzeug.exceptions.HTTPException`\ サブクラスまたはHTTP"
+"ステータスコードに対してだけでなく、どのような例外クラスに対しても登録可能"
+"です。handlerは特定のクラスに対しても、ある親クラスの全てのサブクラスに対"
+"しても、登録可能です。"
+
+# 4b8f182f2327474fb3cdbe69bb480e50
+#: ../../errorhandling.rst:121
+msgid "Handling"
+msgstr "処理（Handling）"
+
+# 63c65fab3338406389bf44fa76b051db
+#: ../../errorhandling.rst:123
+msgid ""
+"When an exception is caught by Flask while handling a request, it is "
+"first looked up by code. If no handler is registered for the code, it is "
+"looked up by its class hierarchy; the most specific handler is chosen. If"
+" no handler is registered, :class:`~werkzeug.exceptions.HTTPException` "
+"subclasses show a generic message about their code, while other "
+"exceptions are converted to a generic 500 Internal Server Error."
+msgstr ""
+"リクエストを処理しているときに例外がFlaskによって捕捉されたとき、handlerは"
+"最初にコード（訳注: HTTPコードのことだと思います）によって検索されます。もし"
+"コードに対するhandlerが登録されてない場合、handlerはクラス階層によって検索"
+"されます; 最も具体的な（訳注: クラス階層上で最もサブクラス化された）handler"
+"が選ばれます。もしhandlerが登録されていない場合、\ "
+":class:`~werkzeug.exceptions.HTTPException`\ のサブクラスはそのコードに関"
+"する汎用的なメッセージを表示し、その他の例外は汎用的な500 Internal Server "
+"Errorへ変換されます。"
+
+# 2a0ccea1479c43dc80915cc0298f2a46
+#: ../../errorhandling.rst:130
+msgid ""
+"For example, if an instance of :exc:`ConnectionRefusedError` is raised, "
+"and a handler is registered for :exc:`ConnectionError` and "
+":exc:`ConnectionRefusedError`, the more specific "
+":exc:`ConnectionRefusedError` handler is called with the exception "
+"instance to generate the response."
+msgstr ""
+"例えば、もし\ :exc:`ConnectionRefusedError`\ のインスタンスが発生し、そして\ "
+":exc:`ConnectionError`\ と\ :exc:`ConnectionRefusedError`\ に対するhandlerが"
+"登録されていた場合、レスポンスを生成するために、最も具体的な\ "
+":exc:`ConnectionRefusedError`\ のhandlerが例外のインスタンスを使って呼び出され"
+"ます。"
+
+# 4533431d0e274e1ca66872d9fefe3e6b
+#: ../../errorhandling.rst:136
+msgid ""
+"Handlers registered on the blueprint take precedence over those "
+"registered globally on the application, assuming a blueprint is handling "
+"the request that raises the exception. However, the blueprint cannot "
+"handle 404 routing errors because the 404 occurs at the routing level "
+"before the blueprint can be determined."
+msgstr ""
+"blueprintに登録されたhandlerは、blueprintが例外を発生させたリクエストを処理"
+"することを仮定して、アプリケーションでグローバルに登録されたものよりも優先"
+"されます。しかしながら、404エラーはblueprintが決定される前の経路決定"
+"（routing）のレベルで起こるため、blueprintでは404 routing errorは処理できま"
+"せん。"
+
+# 851bb6d470df4053a1b398338a8edaa1
+#: ../../errorhandling.rst:144
+msgid "Generic Exception Handlers"
+msgstr "汎用の例外の処理器（Generic Exception Handlers）"
+
+# 88d05982f4064894a5f13cb67bb1a868
+#: ../../errorhandling.rst:146
+msgid ""
+"It is possible to register error handlers for very generic base classes "
+"such as ``HTTPException`` or even ``Exception``. However, be aware that "
+"these will catch more than you might expect."
+msgstr ""
+"非常に汎用的な基底クラスへ対して、例えば\ ``HTTPException``\ または\ "
+"``Exception``\ にさえ、error handlerを登録することができます。しかしながら、"
+"これらはおそらくあなたが予想するよりも多くのものを捕捉するであろうことに"
+"注意してください。"
+
+# 631a5bd940a840888bc8a28befc6baba
+#: ../../errorhandling.rst:150
+msgid ""
+"An error handler for ``HTTPException`` might be useful for turning the "
+"default HTML errors pages into JSON, for example. However, this handler "
+"will trigger for things you don't cause directly, such as 404 and 405 "
+"errors during routing. Be sure to craft your handler carefully so you "
+"don't lose information about the HTTP error."
+msgstr ""
+"``HTTPException``\ に対するerror handlerは、例えば、標準のHTMLエラーページを"
+"JSONへ変換するには便利かもしれません。しかしながら、このhandlerは、例えば経路"
+"決定（routing）のときの404と405エラーのように、あなたが直接引き起こさないもの"
+"に対しても発動するでしょう。HTTPエラーに関する情報を失わないように、自分の"
+"handlerは必ず注意して作り上げるようにしてください。"
+
+# ad3fc7887516438088ba57745906f141
+#: ../../errorhandling.rst:176
+msgid ""
+"An error handler for ``Exception`` might seem useful for changing how all"
+" errors, even unhandled ones, are presented to the user. However, this is"
+" similar to doing ``except Exception:`` in Python, it will capture *all* "
+"otherwise unhandled errors, including all HTTP status codes. In most "
+"cases it will be safer to register handlers for more specific exceptions."
+" Since ``HTTPException`` instances are valid WSGI responses, you could "
+"also pass them through directly."
+msgstr ""
+"``Exception``\ に対するerror handlerは、全てのエラー、処理されてないもの"
+"さえも、ユーザへどのように表示するかを変更するには便利にみえるかもしれま"
+"せん。しかしながら、これはPythonで\ ``except Exception:``\ を行うことと"
+"似たものであり、それは、さもなければ処理されないエラーを\ *全て*\ 、HTTP"
+"ステータスコードを含めて、捕捉するでしょう。殆どの場合、より具体的な例外"
+"に対するhandlerを登録する方がより安全です。\ ``HTTPException``\ のインス"
+"タンスは正当なWSGIレスポンスなので、それらを直接そのまま渡すことも可能です。"
+
+# 9694712d77ff4d0a801665d2f80d46d3
+#: ../../errorhandling.rst:197
+msgid ""
+"Error handlers still respect the exception class hierarchy. If you "
+"register handlers for both ``HTTPException`` and ``Exception``, the "
+"``Exception`` handler will not handle ``HTTPException`` subclasses "
+"because it the ``HTTPException`` handler is more specific."
+msgstr ""
+"error handlerでも例外のクラス階層を尊重します。もし\ ``HTTPException``\ と\ "
+"``Exception``\ の両方に対してhandlerを登録した場合、``HTTPException``\ の"
+"handlerの方がより具体的であるため、\ ``Exception``\ のhandlerは\ "
+"``HTTPException``\ サブクラスを処理しません。"
+
+# f639dfa2de3d4848ab87371fec358016
+#: ../../errorhandling.rst:203
+msgid "Unhandled Exceptions"
+msgstr "処理されなかった例外（Unhandled Exceptions）"
+
+# 19ec5dd6111343fdb3d0abdde95e9d3d
+#: ../../errorhandling.rst:205
+msgid ""
+"When there is no error handler registered for an exception, a 500 "
+"Internal Server Error will be returned instead. See "
+":meth:`flask.Flask.handle_exception` for information about this behavior."
+msgstr ""
+"例外に対してerror handlerが登録されていないとき、500 Internal Server "
+"Errorが代わりに返されます。この振る舞いに関する情報については\ "
+":meth:`flask.Flask.handle_exception`\ を見てください。"
+
+# 6445bfe8aff34a4d82ddfa44fdbc4f5f
+#: ../../errorhandling.rst:210
+msgid ""
+"If there is an error handler registered for ``InternalServerError``, this"
+" will be invoked. As of Flask 1.1.0, this error handler will always be "
+"passed an instance of ``InternalServerError``, not the original unhandled"
+" error. The original error is available as ``e.original_error``. Until "
+"Werkzeug 1.0.0, this attribute will only exist during unhandled errors, "
+"use ``getattr`` to get access it for compatibility."
+msgstr ""
+"``InternalServerError``\ に対してerror handlerが登録されていた場合、これが"
+"呼び起されます。Flask 1.1.0以降、このerror handlerにはオリジナルの処理され"
+"なかったエラーではなく、常に\ ``InternalServerError``\ のインスタンスが"
+"渡されます。オリジナルのエラーは\ ``e.original_error``\ として利用可能です。"
+"Werkzeug 1.0.0まででは、この属性は処理されなかったエラーの間でだけ存在して"
+"おり、互換性のために\ ``getattr``\ を使ってアクセスしてください。"
+
+# 95b922e803d34a46855e9ce92c73848e
+#: ../../errorhandling.rst:232
+msgid "Logging"
+msgstr "ログ処理（Logging）"
+
+# 9a220a932e2342798f69f538693563a7
+#: ../../errorhandling.rst:234
+msgid ""
+"See :doc:`/logging` for information on how to log exceptions, such as by "
+"emailing them to admins."
+msgstr ""
+"どのように例外をログするか、例えば管理者へメールするなど、についての情報は\ "
+":doc:`logging`\ を見てください。"
+
+# a875ccc78e6f4625a64ba8ebd52e5783
+#: ../../errorhandling.rst:239
+msgid "Debugging Application Errors"
+msgstr "アプリケーションのエラーのデバッグ"
+
+# a0d8703c6e624d04a06c0e1072867113
+#: ../../errorhandling.rst:241
+msgid ""
+"For production applications, configure your application with logging and "
+"notifications as described in :ref:`application-errors`.  This section "
+"provides pointers when debugging deployment configuration and digging "
+"deeper with a full-featured Python debugger."
+msgstr ""
+"本番環境のアプリケーションでは、\ :ref:`application-errors`\ で記述されている"
+"ようにログ処理と通知を使って、自分のアプリケーションを設定してください。この"
+"セクションは、デプロイの設定をデバッグし、機能の揃ったPythonのデバッガでより"
+"深く掘り下げるときのポインタを提供します。"
+
+# 1c0d1a855ee44ad1a38e1524918b33c5
+#: ../../errorhandling.rst:248
+msgid "When in Doubt, Run Manually"
+msgstr "疑わしいときは、手で実行してください"
+
+# 99c92cfcefe94b749b5c04912ae6f41a
+#: ../../errorhandling.rst:250
+msgid ""
+"Having problems getting your application configured for production?  If "
+"you have shell access to your host, verify that you can run your "
+"application manually from the shell in the deployment environment.  Be "
+"sure to run under the same user account as the configured deployment to "
+"troubleshoot permission issues.  You can use Flask's builtin development "
+"server with `debug=True` on your production host, which is helpful in "
+"catching configuration issues, but **be sure to do this temporarily in a "
+"controlled environment.** Do not run in production with `debug=True`."
+msgstr ""
+"本番環境用に自分のアプリケーションを設定するのに問題を抱えていますか？"
+"もしホスト（コンピュータのこと）のシェルにアクセスできる場合、自分のアプリ"
+"ケーションを、デプロイされている環境のシェルから手で実行できるか確かめて"
+"ください。権限の問題を解決するために、必ずデプロイの設定と同じユーザ"
+"アカウントのもとで実行してください。Flaskの組込まれた開発サーバを\ "
+"`debug=True`\ を使って本番環境のホストで使用することが可能で、それは設定"
+"の問題を捕捉するには役立ちますが、\ **必ず制御された環境の中で一時的に"
+"実行してください。**\ 本番環境では\ `debug=True`\ を使って実行しないで"
+"ください。"
+
+# 04a47fe20a5547da8e528f59b3d20e3a
+#: ../../errorhandling.rst:263
+msgid "Working with Debuggers"
+msgstr "デバッガを使った作業"
+
+# 44ceccacb1e7463b96c0905ba918115a
+#: ../../errorhandling.rst:265
+msgid ""
+"To dig deeper, possibly to trace code execution, Flask provides a "
+"debugger out of the box (see :ref:`debug-mode`).  If you would like to "
+"use another Python debugger, note that debuggers interfere with each "
+"other.  You have to set some options in order to use your favorite "
+"debugger:"
+msgstr ""
+"より深く掘り下げるために、例えばコードの実行をトレースするために、Flaskは"
+"最初からデバッガを提供しています（\ :ref:`debug-mode`\ を見てください）。"
+"もし別のPythonデバッガを使いたい場合、デバッガはそれぞれ干渉し合うことに"
+"注意してください。自分の好きなデバッガを使うためにはいくつかのオプションを"
+"設定する必要があります:"
+
+# 67157ba8e4314fb58bb1a46903a93d22
+#: ../../errorhandling.rst:270
+msgid "``debug``        - whether to enable debug mode and catch exceptions"
+msgstr ""
+"``debug``              - デバッグモードを有効にして例外を捕捉するかどうか"
+
+# 626f1f104e3646db9d581b2e14abebea
+#: ../../errorhandling.rst:271
+msgid "``use_debugger`` - whether to use the internal Flask debugger"
+msgstr ""
+"``user_debugger``      - 内部のFlaskデバッガを使うかどうか"
+
+# 4b6d4a23856c4f979786a48c19f082ec
+#: ../../errorhandling.rst:272
+msgid ""
+"``use_reloader`` - whether to reload and fork the process if modules were"
+" changed"
+msgstr ""
+"``user_reloader``      - moduleが変更されたとき、再読み込みしてプロセスをfork"
+"するか（新しくプロセスを作成するか）どうか"
+
+# 45ddb3bd7924495585a27edfb77fabbe
+#: ../../errorhandling.rst:275
+msgid ""
+"``debug`` must be True (i.e., exceptions must be caught) in order for the"
+" other two options to have any value."
+msgstr ""
+"``debug``\ は、他の2つのオプションが何かしら値を持つためには、Trueにする"
+"必要が（つまり、例外を捕捉する必要が）あります。"
+
+# 14fe729e77fe4e4b8618af0519567846
+#: ../../errorhandling.rst:278
+msgid ""
+"If you're using Aptana/Eclipse for debugging you'll need to set both "
+"``use_debugger`` and ``use_reloader`` to False."
+msgstr ""
+"もしAptana/Eclipseをデバッグに使用している場合、\ ``use_debugger``\ と\ "
+"``use_reloader``\ の両方をFalseに設定する必要があります。"
+
+# c5ef089bd44f439aa53840d500656168
+#: ../../errorhandling.rst:281
+msgid ""
+"A possible useful pattern for configuration is to set the following in "
+"your config.yaml (change the block as appropriate for your application, "
+"of course)::"
+msgstr ""
+"設定のために役に立つあり得るパターンは、config.yamlに以下を設定すること"
+"です（もちろん、自分のアプリケーションに適切なようにブロックを変更して"
+"ください）::"
+
+# 259418463ae8483e8718d09cabb15a2b
+#: ../../errorhandling.rst:288
+msgid ""
+"Then in your application's entry-point (main.py), you could have "
+"something like::"
+msgstr ""
+"それから、自分のアプリケーションの開始地点（main.py）の中で、以下の"
+"ようなものを持つことができます::"
+
