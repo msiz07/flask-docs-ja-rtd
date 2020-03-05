@@ -36,12 +36,12 @@ msgid ""
 msgstr ""
 "Flaskは\ *blueprint（青写真）*\ という考え方を使ってアプリケーションの"
 "部品を作成し、アプリケーション内またはアプリケーションを横断した共通の"
-"パターンをサポートします。blueprintは大きなアプリケーションの動きを"
-"非常にシンプルにし、Flask拡張がアプリケーションへ操作を登録するための"
-"中心手段を提供します。\ :class:`Blueprint`\ オブジェクトは\ :class:`Flask`\ "
-"と似た似た働きをしますが、実際にはアプリケーションではありません。むしろ、"
-"それはアプリケーションをどのように建設もしくは拡張するかの\ "
-"*blueprint（青写真）*\ です。"
+"パターンをサポートします。blueprintは大きなアプリケーションの動き方を"
+"非常にシンプルにし、Flask拡張がアプリケーションへ操作（operation）を登録"
+"するための中心手段を提供します。\ :class:`Blueprint`\ オブジェクトは\ "
+":class:`Flask`\ と似た似た働きをしますが、実際にはアプリケーションでは"
+"ありません。むしろ、それはアプリケーションをどのように建設もしくは拡張"
+"するかの\ *blueprint（青写真）*\ です。"
 
 # bf52b9ba56754ff59c784c051b881571
 #: ../../blueprints.rst:19
@@ -72,10 +72,10 @@ msgid ""
 "Parameters in the URL prefix/subdomain become common view arguments (with"
 " defaults) across all view functions in the blueprint."
 msgstr ""
-"URLのプレフィックスおよび／またはサブドメインのアプリケーションにblueprint"
-"を登録します。そのURLのプレフィックス／サブドメインでのパラメータは、（標準"
-"設定では）そのblueprint内のすべてのview関数をまたいだviewへの共通の引数に"
-"なります。"
+"URLのプレフィックスおよび／またはサブドメインの所でblueprintをアプリケー"
+"ションに登録します。そのURLのプレフィックス／サブドメインでのパラメータ"
+"は、（標準設定では）そのblueprint内のすべてのview関数をまたいで、viewへの"
+"共通の引数になります。"
 
 # 051a0cc893024972a1c4b14243c0d0c1
 #: ../../blueprints.rst:29
@@ -118,10 +118,11 @@ msgid ""
 msgstr ""
 "Flaskのblueprintは実際にはアプリケーションではないので、取り外し可能"
 "（pluggable）なappではありません - それは、アプリケーションに登録可能な"
-"操作（operation）であり、複数回の登録すら可能です。なぜ複数の"
-"アプリケーションのオブジェクトを持たないのでしょうか？それをすることも"
-"可能です（\ :ref:`app-dispatch`\ を見てください）が、アプリケーションは"
-"分かれた設定を持ち、WSGIの階層で管理されます。"
+"操作（operation）であり、複数回の登録すら可能です。（blueprintをわざわざ"
+"使わず）なぜ複数のアプリケーションのオブジェクトを持たないのでしょうか？"
+"それをすることも可能です（\ :ref:`app-dispatch`\ を見てください）が、"
+"（そのときは）アプリケーションは分かれた設定を持ち、WSGIの階層で管理"
+"されます。"
 
 # 9aef2a46cb7242e884530b59f5291cf9
 #: ../../blueprints.rst:43
@@ -132,11 +133,11 @@ msgid ""
 "blueprint once an application was created without having to destroy the "
 "whole application object."
 msgstr ""
-"blueprintは代わりにFlaskのレベルでの分離を提供し、アプリケーションの"
-"設定は共有し、そして必要に応じて登録されることでアプリケーションの"
-"オブジェクトを変更できます。マイナス面は、一度アプリケーションが作成"
-"されると、アプリケーションのオブジェクト全体を破壊しない限りblueprintの"
-"登録を外せないことです。"
+"blueprintは、代わりに（WSGIアプリケーションである）Flaskのレベルでの"
+"分離を提供し、アプリケーションの設定は共有し、そして必要に応じて"
+"（blueprintが）登録されることでアプリケーションのオブジェクトを変更でき"
+"ます。マイナス面は、一度アプリケーションが作成されると、アプリケーション"
+"のオブジェクト全体を破壊しない限りblueprintの登録を外せないことです。"
 
 # 563b209c89c742c08d4aa004952a94ac
 #: ../../blueprints.rst:50
@@ -151,10 +152,12 @@ msgid ""
 " blueprints when dispatching requests and generating URLs from one "
 "endpoint to another."
 msgstr ""
-"blueprintの基本コンセプトは、アプリケーションに登録されたときに実行する"
-"操作を記録することです。Flaskは、あるエンドポイントから別のエンドポイントへ"
-"リクエストを振り分けURLを生成するとき、view関数をblueprintに対応付け"
-"します。"
+"blueprintの基本コンセプトは、アプリケーションに（blueprintが）登録された"
+"場合に実行する操作（operation）を記録することです。Flaskは、リクエストを"
+"振り分けるときや、あるエンドポイントから別のエンドポイントへのURLを生成"
+"するときに（訳注: URLの生成については、このドキュメントの後半にある、URL"
+"の構築（Building URLs）に関する処理を指していると思います）、view関数を"
+"blueprintと関連付けます。"
 
 # 0399b7b317454e7cb3dff793f577c4c4
 #: ../../blueprints.rst:58
@@ -168,7 +171,7 @@ msgid ""
 "implement a blueprint that does simple rendering of static templates::"
 msgstr ""
 "以下は、とても基本的なblueprintがどのようになるかを示しています。以下の"
-"場合、静的なテンプレートを表示（rendering）するblueprintを実装しよう"
+"ケースでは、静的なテンプレートを表示（rendering）するblueprintを実装しよう"
 "としています::"
 
 # 61eb5afcfc9b4c3d94d3ae687e06a80c
@@ -183,11 +186,12 @@ msgid ""
 " URL, only the endpoint."
 msgstr ""
 "関数を\ ``@simple_page.route``\ デコレータを利用して結び付け（bind）する"
-"とき、blueprintは、後でアプリケーションに登録されるときに\ ``show``\ "
-"関数を登録するという意図を記録します。さらに、blueprintは関数のエンド"
-"ポイントの先頭へ、\ :class:`Blueprint`\ クラスのコンストラクタで与えられた"
-"blueprintの名前（この例では\ ``simple_page``\ ）を付加します。blueprintの"
-"名前はURLは変更せず、エンドポイントだけを変更します。"
+"とき、blueprintは、後で（blueprintがアプリケーションに）登録されるときに\ "
+"``show``\ 関数をアプリケーションへ登録するという意図を記録します。さらに、"
+"blueprintは関数のエンドポイントの先頭へ、\ :class:`Blueprint`\ クラスの"
+"コンストラクタで与えられたblueprintの名前（この例では\ ``simple_page``\ ）"
+"を付加します。blueprintの名前はURLは変更せず、エンドポイントだけを変更"
+"します。"
 
 # ffc1e55678bd4814bd121548ffc00441
 #: ../../blueprints.rst:86
@@ -205,8 +209,9 @@ msgid ""
 "If you check the rules registered on the application, you will find "
 "these::"
 msgstr ""
-"もしアプリケーションに登録されたルールをチェックすれば、以下の内容を"
-"見つけ出せるでしょう::"
+"もしアプリケーションに登録されたルール（訳注: URLとエンドポイントなどとの"
+"対応関係を定義したもの、通常はWerkzeugのwerkzeug.routing.Ruleクラスの"
+"オブジェクト）をチェックすれば、以下の内容を見つけ出せるでしょう::"
 
 # f8378ba5bb8c44f193f321a962fbc387
 #: ../../blueprints.rst:104
@@ -218,8 +223,8 @@ msgid ""
 msgstr ""
 "最初のひとつは明らかにアプリケーション自身が静的ファイルに対してしたもの"
 "です。他の2つは、\ ``simple_page``\ のblueprintの\ `show`\ 関数に対する"
-"ものです。見て分かるように、それらはblueprint名を最初につけており(prefix）、"
-"ドット（\ ``.``\ ）で分けられています。"
+"ものです。見て分かるように、それら（show関数のエンドポイント）はblueprint名"
+"も最初に付けられていて（prefix）、ドット（\ ``.``\ ）で分けられています。"
 
 # 34b77ebad2f442b58da5e74fc810a5ff
 #: ../../blueprints.rst:109
@@ -229,7 +234,7 @@ msgstr "しかしながら、blueprintは違う場所にも設置（mount）で�
 # 8a28d9c0f740424e9defd943eb9f7a7a
 #: ../../blueprints.rst:113
 msgid "And sure enough, these are the generated rules::"
-msgstr "そして思った通りに、生成されたルールは以下のとおりになります::"
+msgstr "そして思ったとおりに、生成されたルールは以下のようになります::"
 
 # addf4ebe2cc14bada4181edceb4a7e38
 #: ../../blueprints.rst:120
@@ -239,8 +244,8 @@ msgid ""
 "how the blueprint is implemented if it can be mounted more than once."
 msgstr ""
 "この上にblueprintを2回以上登録できますが、全てのblueprintが適切には対応"
-"しないかもしれません。事実、blueprintが2回以上設置できるかは、blueprintが"
-"どのように実装されているかに依存します。"
+"しないかもしれません。事実、blueprintが2回以上設置（mount）できるかは、"
+"blueprintがどのように実装されているかに依存します。"
 
 # 68dee2b6f73048e8a9356b1815cbd067
 #: ../../blueprints.rst:125
@@ -285,12 +290,14 @@ msgid ""
 msgstr ""
 "そのフォルダは\ :class:`Blueprint`\ クラスへの2番目の引数から推測され、"
 "普通は\ `__name__`\ になります。この引数は、どの論理Pythonモジュール"
-"または論理Pythonパッケージがblueprintに対応するかを指定します。もし"
-"それがPythonパッケージを指していれば、そのパッケージ（それはファイル"
-"システム上はフォルダになります）はリソースフォルダになります。もしそれが"
-"モジュールであれば、そのモジュールを含んでいるパッケージがリソースフォルダ"
-"になります。リソースフォルダが何か確認するためには、\ :attr:"
-"`Blueprint.root_path`\ プロパティにアクセスできます::"
+"または論理Pythonパッケージがblueprintに対応するかを指定します（訳注: "
+"Pythonでは大まかには、モジュールは単一の.pyファイル、パッケージはモジュール"
+"などを格納するフォルダのことを言います）。もしそれがPythonパッケージを"
+"指していれば、そのパッケージ（それはファイルシステム上はフォルダになります）"
+"はリソースフォルダになります。もしそれがモジュールであれば、そのモジュールを"
+"含んでいるパッケージがリソースフォルダになります。リソースフォルダが何か"
+"確認するためには、\ :attr:`Blueprint.root_path`\ プロパティにアクセスでき"
+"ます::"
 
 # cccaa78f5a3f4514af34c3618f8cd307
 #: ../../blueprints.rst:148
@@ -356,10 +363,11 @@ msgid ""
 msgstr ""
 "しかしながら、もしこのblueprintが\ ``url_prefix``\ を持たない場合は、この"
 "blueprintのstaticのフォルダはアクセス不可能になります。これは、この場合"
-"にはURLを\ ``/static``\ にしようとして、それに対してはアプリケーションの\ "
-"``/static``\ の経路（route）が優先されるためです。テンプレートのフォルダと"
-"異なり、blueprintのstaticのフォルダは、もしアプリケーションのstaticの"
-"フォルダが存在しない場合でも使用されません。"
+"には（blueprintの静的ファイルのフォルダの）URLを\ ``/static``\ にしようと"
+"して、それに対してはアプリケーションの\ ``/static``\ の経路（route）が"
+"優先されるためです。テンプレートのフォルダと異なり、blueprintのstaticの"
+"フォルダは、もしアプリケーションのstaticのフォルダが存在しない場合でも"
+"使用されません。"
 
 # 1f36255873f9436d89129fb88da370a3
 #: ../../blueprints.rst:183
@@ -382,8 +390,9 @@ msgid ""
 "For static files, the path can be absolute or relative to the blueprint "
 "resource folder."
 msgstr ""
-"静的ファイルに対しては、パスは絶対パスか、blueprintのリソースフォルダ"
-"からの相対パスが可能です。"
+"テンプレートに対しては（訳注: 原文は「For static files」ですが、おそらく"
+"誤記）、パスは絶対パスか、blueprintのリソースフォルダからの相対パスが可能"
+"です。"
 
 # d1549439b9194376871fd5f5e46f4d2b
 #: ../../blueprints.rst:193
@@ -397,13 +406,13 @@ msgid ""
 "blueprints provide the same relative template path the first blueprint "
 "registered takes precedence over the others."
 msgstr ""
-"テンプレートのフォルダは、テンプレートを探すパスに追加されますが、実際の"
-"アプリケーションのテンプレートのフォルダよりは優先度が低くなります。"
-"このやり方により、blueprintが提供したテンプレートは、実際のアプリケーション"
-"の中で容易に上書きが可能になります。これは、もしblueprintのテンプレートが"
-"事故で上書きされることを望まない場合には、他のblueprintや実際のアプリケー"
-"ションは、同じ相対パスを持たないようにしなければならないことを意味します。"
-"複数のblueprintが同じ相対パスのテンプレートを提供するときは、最初に登録"
+"（blueprintの）テンプレートのフォルダは、テンプレートを探すパスに追加され"
+"ますが、実際のアプリケーションのテンプレートのフォルダよりは優先度が低く"
+"なります。このやり方により、blueprintが提供したテンプレートは、実際のアプリ"
+"ケーションの中で容易に上書きが可能になります。これは、もしblueprintのテンプ"
+"レートが事故で上書きされることを望まない場合には、他のblueprintや実際のアプ"
+"リケーションは、同じ相対パスを持たないようにしなければならないことを意味し"
+"ます。複数のblueprintが同じ相対パスのテンプレートを提供するときは、最初に登録"
 "されたblueprintが他よりも優先されます。"
 
 # b279110735b14c9ebef69137af25758d
@@ -490,7 +499,7 @@ msgid ""
 "request was dispatched to any other admin blueprint endpoint."
 msgstr ""
 "上の例は、そのときのリクエストがadminのblueprintにある別のエンドポイントへ"
-"割り振られたとき、\ ``admin.index``\ へリンクします。"
+"割り振られていたとき、\ ``admin.index``\ へリンクします。"
 
 # e4351a9cb35948c39997bc4758521911
 #: ../../blueprints.rst:247
@@ -529,7 +538,7 @@ msgid ""
 msgstr ""
 "殆どのerrorhandlerは、予想したとおりに動きます; しかし、404と405の例外の"
 "処理に関して注意点があります。これらのerrorhandlerが起動されるのは、適切な\ "
-"``raise``\ 文またはそのblueprint内の他のview関数の中で\ ``abort``\ を呼んだ"
+"``raise``\ 文または\ ``abort``\ を、そのblueprint内の他のview関数の中で呼んだ"
 "ときにだけです; それらは、例えば不正なURLアクセスからは起動されません。"
 "これは、blueprintはあるURL空間を「所有」しておらず、従ってアプリケーションの"
 "インスタンスは不正なURLを渡されたとしても、blueprintのどのerrorhandlerを"
