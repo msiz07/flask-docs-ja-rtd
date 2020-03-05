@@ -185,7 +185,7 @@ msgstr ""
 "関数を\ ``@simple_page.route``\ デコレータを利用して結び付け（bind）する"
 "とき、blueprintは、後でアプリケーションに登録されるときに\ ``show``\ "
 "関数を登録するという意図を記録します。さらに、blueprintは関数のエンド"
-"ポイントの先頭へ、\ :class:`blueprint`\ クラスのコンストラクタで与えられた"
+"ポイントの先頭へ、\ :class:`Blueprint`\ クラスのコンストラクタで与えられた"
 "blueprintの名前（この例では\ ``simple_page``\ ）を付加します。blueprintの"
 "名前はURLは変更せず、エンドポイントだけを変更します。"
 
