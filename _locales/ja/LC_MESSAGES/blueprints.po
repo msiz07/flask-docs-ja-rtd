@@ -60,7 +60,7 @@ msgid ""
 " applications; a project could instantiate an application object, "
 "initialize several extensions, and register a collection of blueprints."
 msgstr ""
-"アプリケーションをblueprintのセットに分解します。これは大きい"
+"アプリケーションをblueprintのセットに分解。これは大きい"
 "アプリケーションにとって理想的です; プロジェクトはアプリケーションの"
 "オブジェクトをインスタンス化でき、いくつかのFlask拡張を初期化でき、"
 "そしてblueprintの集合を登録できます。"
@@ -72,10 +72,11 @@ msgid ""
 "Parameters in the URL prefix/subdomain become common view arguments (with"
 " defaults) across all view functions in the blueprint."
 msgstr ""
-"URLのプレフィックスおよび／またはサブドメインの所でblueprintをアプリケー"
-"ションに登録します。そのURLのプレフィックス／サブドメインでのパラメータ"
-"は、（標準設定では）そのblueprint内のすべてのview関数をまたいで、viewへの"
-"共通の引数になります。"
+"URLのプレフィックスおよび／またはサブドメインに対してblueprintをアプリケー"
+"ションに登録。そのURLのプレフィックス／サブドメインの中でのパラメータを、"
+"そのblueprint内のすべてのview関数をとおして、viewへの（既定値を伴った）共通"
+"の引数にします（訳注: 後の方にある「最初のBlueprint」の節のサンプルコードや"
+"「Blueprintの登録」の節の記載内容に対応した処理のことだと思います）。"
 
 # 051a0cc893024972a1c4b14243c0d0c1
 #: ../../blueprints.rst:29
@@ -83,7 +84,8 @@ msgid ""
 "Register a blueprint multiple times on an application with different URL "
 "rules."
 msgstr ""
-"違うURLルールを使ってアプリケーションへblueprintを複数回登録します。"
+"違うURLルール（訳注: ここでは、URLとエンドポイントなどとの対応関係を定義"
+"したもの）を使ってアプリケーションへblueprintを複数回登録。"
 
 # 83bdabb865b341b7afcda1b72c1f3fe5
 #: ../../blueprints.rst:31
@@ -94,8 +96,7 @@ msgid ""
 msgstr ""
 "テンプレートのfilter（訳注: Jinjaテンプレートエンジンの機能のひとつ）、"
 "静的ファイル、テンプレート、その他のユーティリティを、blueprintを通して"
-"提供します。blueprintではアプリケーションやview関数の実装は必須では"
-"ありません。"
+"提供。blueprintではアプリケーションやview関数の実装は必須ではありません。"
 
 # 3afb107944934a3dbc76ee361c410022
 #: ../../blueprints.rst:34
@@ -104,7 +105,7 @@ msgid ""
 "initializing a Flask extension."
 msgstr ""
 "Flask拡張を初期化するとき、以上のいずれかの理由のために、アプリケーションへ"
-"blueprintを登録します。"
+"blueprintを登録。"
 
 # 97e0673d5c7c467d84a926ebcec38377
 #: ../../blueprints.rst:37
@@ -152,12 +153,12 @@ msgid ""
 " blueprints when dispatching requests and generating URLs from one "
 "endpoint to another."
 msgstr ""
-"blueprintの基本コンセプトは、アプリケーションに（blueprintが）登録された"
-"場合に実行する操作（operation）を記録することです。Flaskは、リクエストを"
-"振り分けるときや、あるエンドポイントから別のエンドポイントへのURLを生成"
-"するときに（訳注: URLの生成については、このドキュメントの後半にある、URL"
-"の構築（Building URLs）に関する処理を指していると思います）、view関数を"
-"blueprintと関連付けます。"
+"blueprintの基本コンセプトは、（blueprintが）アプリケーションに登録された"
+"場合には実行する操作（operation）を記録することです。Flaskは、リクエストを"
+"振り分けるときや、あるエンドポイントから別のエンドポイントへのURLを生成する"
+"ときに、view関数をblueprintと関連付けます（訳注: URLの生成については、この"
+"ドキュメントの後半にある、URLの構築（Building URLs）に関する処理を指して"
+"いると思います）。"
 
 # 0399b7b317454e7cb3dff793f577c4c4
 #: ../../blueprints.rst:58
