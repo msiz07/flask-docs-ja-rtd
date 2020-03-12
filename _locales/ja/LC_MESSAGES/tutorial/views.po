@@ -20,7 +20,7 @@ msgstr ""
 # 93d382664c0c447dac2cb49313db520f
 #: ../../tutorial/views.rst:4
 msgid "Blueprints and Views"
-msgstr "青写真（blueprints）とビュー（views）"
+msgstr "青写真とビュー（Blueprints and Views）"
 
 # d987890f2cfd4a378283a2071b4f9f7d
 #: ../../tutorial/views.rst:6
@@ -31,10 +31,10 @@ msgid ""
 "an outgoing response. Flask can also go the other direction and generate "
 "a URL to a view based on its name and arguments."
 msgstr ""
-"view関数は、アプリケーションへのリクエストに対するレスポンスを作成する"
-"ために書くコードになります。Flaskは、やって来る（incoming）リクエストの"
-"URLを、それを処理すべきviewへと照合するためのパターンを使用します。送り"
-"出す（outgoing）レスポンスへとFlaskが変換するデータを、viewは返します。"
+"viewの関数は、アプリケーションへのリクエストに対して応答するために書くコード"
+"になります。Flaskは、受信する（incoming）リクエストのURLを、それを処理すべき"
+"viewへと照らし合わせるためにパターンを使用します。送信する（outgoing）"
+"レスポンスへとFlaskが変換するデータを、viewは返します。"
 "URLからview名とは別方向に、viewに対応するURLを（viewの）名前と引数に"
 "基づいて生成することも、Flaskでは可能です。"
 
@@ -68,8 +68,8 @@ msgid ""
 msgstr ""
 "Flaskrでは2つのblueprintがあり、ひとつは認証に関する関数のためであり、"
 "ひとつはブログへの投稿記事に関する関数のためです。それぞれのblueprintの"
-"コードは、異なるモジュールにして進めます。ブログは認証に関して知って"
-"いる必要があるので、まずは認証のモジュールから書いていきます。"
+"コードは、異なるモジュールにして進めます。ブログ（のコード）は認証に関"
+"して知っている必要があるので、まずは認証のモジュールから書いていきます。"
 
 # 8d5ca4a73a4e45bd97faaeaf4c5148de
 # bc7e8daa2ba84fce9200c4d0de0f18c7
@@ -94,8 +94,8 @@ msgstr ""
 "これは\ ``'auth'``\ と名付けられた\ :class:`Blueprint`\ を作成します。"
 "アプリケーションのオブジェクトと似たように、blueprintは自分がどこで定義"
 "されているか知る必要があり、従って\ ``__name__``\ が2番目の引数として"
-"渡されています。\ ``url_prefix``\ は、blueprintと関連付けられている"
-"全てのURLの先頭に付けられます。"
+"渡されています。\ ``url_prefix``\ は、blueprintと関連付けられる全てのURL"
+"の（パス部分の）先頭に付けられます。"
 
 # 196a4c2d9aad4d80aba890a5565d5b8e
 #: ../../tutorial/views.rst:46
@@ -119,8 +119,8 @@ msgid ""
 "The authentication blueprint will have views to register new users and to"
 " log in and log out."
 msgstr ""
-"この認証のblueprintは、新しいユーザを登録して、ログインとログアウトができる"
-"ようにするviewを持つようにします。"
+"この認証のblueprintは、新しいユーザの登録と、ログインとログアウトのviewを"
+"持つようにします。"
 
 # f771f3a1b0284ef5b734ce11acb571c0
 #: ../../tutorial/views.rst:67
@@ -147,13 +147,13 @@ msgid ""
 "For now you will just write the view code. On the next page, you'll write"
 " templates to generate the HTML form."
 msgstr ""
-"ここでは、viewのコードだけ書いていきます。次のページでは、HTMLのformを"
+"まずは、viewのコードだけ書いていきます。次のページでは、HTMLのformを"
 "生成するテンプレートを書いていきます。"
 
 # 53a2c05253c34361879b29caee3ab24e
 #: ../../tutorial/views.rst:111
 msgid "Here's what the ``register`` view function is doing:"
-msgstr "``register``\ のview関数が何をしているか、以下に示します:"
+msgstr "``register``\ のviewの関数が何をしているか、以下に示します:"
 
 # 3751500532914958b839707153cdfc67
 #: ../../tutorial/views.rst:113
@@ -164,9 +164,9 @@ msgid ""
 " value as the response."
 msgstr ""
 ":meth:`@bp.route <Blueprint.route>`\ は、URLの\ ``/register``\ と"
-"view関数の\ ``register``\ とを関連付けます。Flaskが\ ``/auth/register``\ への"
-"リクエストを受信したとき、Flaskはview関数の\ ``register``\ を呼び出し、その"
-"戻り値をレスポンスとして使用します。"
+"\ ``register``\ のviewの関数とを関連付けます。Flaskが\ ``/auth/register``\ "
+"へのリクエストを受信したとき、Flaskは\ ``register``\ のviewを呼び出し、"
+"その戻り値をレスポンスとして使用します。"
 
 # 5f92f149f9be417eae083642829a1866
 #: ../../tutorial/views.rst:118
@@ -205,9 +205,9 @@ msgid ""
 msgstr ""
 "``username``\ が登録済でないことを、データベースに問合せして結果が返るか"
 "調べることで検証します。\ :meth:`db.execute <sqlite3.Connection.execute>`\ "
-"は、ユーザのあらゆる入力をプレースホルダ\ ``?``\ にしたSQLのqueryと、"
+"は、ユーザのどの入力にも対応するプレースホルダ\ ``?``\ を持つSQLのqueryと、"
 "プレースホルダを置き換える値のtupleを受け取ります。データベースライブラリは"
-"\ *SQLインジェクション攻撃*\ に対して脆弱にならないように値のエスケープを"
+"\ *SQLインジェクション攻撃*\ に対して脆弱にならないように、値のエスケープを"
 "取り計らいます。"
 
 # 9bbd7158ac03480da40853d0e59e419c
@@ -234,10 +234,11 @@ msgid ""
 msgstr ""
 "もし検証が成功した場合は、新しいユーザのデータをデータベースへinsert"
 "します。セキュリティのために、パスワードは決してデータベースへ直接格納"
-"すべきではありません。代わりに、\ :func:`~werkzeug.security.generate_password_hash`\ "
-"を使用してパスワードを安全にハッシュし、そのハッシュを格納します。このqueryは"
-"データを変更するため、変更を保存した後に\ :meth:`db.commit() "
-"<sqlite3.Connection.commit>`\ を呼び出す必要があります。"
+"しないようにするべきです。代わりに、\ :func:"
+"`~werkzeug.security.generate_password_hash`\ を使用してパスワードを安全に"
+"ハッシュし、そのハッシュを格納します。このqueryはデータを変更するため、"
+"変更を保存した後に\ :meth:`db.commit() <sqlite3.Connection.commit>`\ を"
+"呼び出す必要があります。"
 
 # bf107b82dc6a487fa2fc34b23bb59ffe
 #: ../../tutorial/views.rst:149
@@ -249,11 +250,11 @@ msgid ""
 ":func:`redirect` generates a redirect response to the generated URL."
 msgstr ""
 "ユーザ情報を格納した後、ログインページへリダイレクトさせます。\ "
-":func:`url_for`\ は、ログインのviewの名前から対応するURLを生成します。"
-"これはURLを後から変更しても、そこにリンクしている全てのコードを変更"
-"させずにすむことが可能になるため、URLを直接書き込むよりも好ましいやり方です。\ "
-":func:`redirect`\ は、生成されたURLへリダイレクトさせるレスポンスを生成"
-"します。"
+":func:`url_for`\ は、ログインのviewの名前（関数の名前）から対応するURLを"
+"生成します。これはURLを後から変更しても、そこにリンクしている全てのコード"
+"を変更させずにすむことが可能になるため、URLを（コードの中に）直接書き込む"
+"よりも好ましいやり方です。\ :func:`redirect`\ は、生成されたURLへ"
+"リダイレクトさせるレスポンスを生成します。"
 
 # 0b153d00360e413fad1582e4f589d778
 #: ../../tutorial/views.rst:156
@@ -273,9 +274,9 @@ msgid ""
 "HTML, which you'll write in the next step of the tutorial."
 msgstr ""
 "ユーザが最初に\ ``auth/register``\ へ進んだときは、または検証での"
-"エラーがあったときには、登録フォームのあるHTMLページを表示すべきです。\ "
+"エラーがあったときには、登録formのあるHTMLページを表示すべきです。\ "
 ":func:`render_template`\ は、このチュートリアルの次のステップで作成する、"
-"そのHTMLを含んだテンプレートを変換します。"
+"登録formのあるHTMLを含んだテンプレートを変換します。"
 
 # 64169ef34f354311a377f9ebd2ba9303
 #: ../../tutorial/views.rst:167
@@ -305,9 +306,9 @@ msgid ""
 "password in the same way as the stored hash and securely compares them. "
 "If they match, the password is valid."
 msgstr ""
-":func:`~werkzeug.securely.check_password_hash`\ は提出されたパスワードを、"
-"格納されたハッシュと同じやり方でハッシュし、セキュリティに注意しながら"
-"それらを比較します。もし一致した場合、パスワードは適正です。"
+":func:`~werkzeug.security.check_password_hash`\ は提出（submit）された"
+"パスワードを、格納されたハッシュと同じやり方でハッシュし、セキュリティに"
+"注意しながらそれらを比較します。もし一致した場合、パスワードは適正です。"
 
 # ccfb0cea4fe84c7487ee38d28222de37
 #: ../../tutorial/views.rst:207
@@ -322,7 +323,7 @@ msgstr ""
 "です。検証が成功したときは、ユーザの\ ``id``\ は新しいsessionに格納され"
 "ます。そのデータはブラウザへ送信される\ *cookie*\ に格納され、それから"
 "ブラウザは以降のリクエストで（cookieを）送信し返します。Flaskはデータを"
-"改ざんできないようにするために、安全にデータを\ *署名*\ します。"
+"改ざんできないようにするために、安全にデータを\ *署名します*\ 。"
 
 # 0100eff5fddf490db837b1614850a15a
 #: ../../tutorial/views.rst:213
@@ -348,12 +349,12 @@ msgid ""
 "``None``."
 msgstr ""
 ":meth:`bp.before_app_request() <Blueprint.before_app_request>`\ は"
-"どのURLがリクエストされたかに関わらず、view関数の前に実行する関数を登録"
+"どのURLがリクエストされたかに関わらず、viewの関数の前に実行する関数を登録"
 "します。\ ``load_logged_in_user``\ は、ユーザidが\ :data:`session`\ に"
 "格納されているかチェックし、それからデータベースからユーザのデータを取得し、"
 "それをリクエストの期間中は存続する\ :data:`g.user <g>`\ へ格納します。もし"
-"ユーザidがない場合、もしくはidが（セッションに）存在しない場合、\ "
-"``g.user``\ は\ ``None``\ になります。"
+"ユーザidが（セッションに）ない場合、もしくはそのidが（データベースに）存在"
+"しない場合、\ ``g.user``\ は\ ``None``\ になります。"
 
 # be9323c7a2d944589d8ab30c2b061700
 #: ../../tutorial/views.rst:242
@@ -383,7 +384,7 @@ msgid ""
 "applied to."
 msgstr ""
 "ブログの投稿記事を作成、編集、削除するにはユーザがログインする必要があります。"
-"\ *デコレータ（decorator）*\ を使用すると、decoratorを適用した各ページで"
+"\ *デコレータ（decorator）*\ を使用すると、decoratorを適用した各viewで"
 "ログインをチェックできます。"
 
 # b0b730e5bac94f598f2c21e135fc2b11
@@ -395,11 +396,11 @@ msgid ""
 "view is called and continues normally. You'll use this decorator when "
 "writing the blog views."
 msgstr ""
-"このdecoratorは、適用した元のviewを包み込む（wrap）新しい関数を返します。"
-"その新しい関数はユーザ情報が読み込まれているかチェックして、そうでない場合は"
-"ログインページへリダイレクトします。もしユーザ情報が読み込まれている場合は、"
-"元のviewが呼び出されて通常どおりに続けます。ブログのviewを作成するときに"
-"decoratorを使用していきます。"
+"このdecoratorは適用した元のview（の関数）を包み込む（wrap）、新しいviewの"
+"関数を返します。その新しい関数はユーザ情報が読み込まれているかチェックして、"
+"読み込まれていない場合はログインページへリダイレクトします。もしユーザ情報が"
+"読み込まれている場合は、元のviewが呼び出されて通常どおりに続けます。ブログの"
+"viewを作成するとき、このdecoratorを使用していきます。"
 
 # d489f6861b9f4c6d98e65dae8066f6a9
 #: ../../tutorial/views.rst:283
@@ -416,7 +417,7 @@ msgid ""
 msgstr ""
 ":func:`url_for`\ 関数はviewの名前と引数に基づいて対応するURLを生成します。"
 "viewに関連付けられた名前は\ *エンドポイント*\ とも呼ばれ、標準設定ではview"
-"関数の名前と同じになります。"
+"の関数の名前と同じになります。"
 
 # 19638529d10e4210886fd686f77e5a27
 #: ../../tutorial/views.rst:290
@@ -426,11 +427,11 @@ msgid ""
 "with ``url_for('hello')``. If it took an argument, which you'll see "
 "later, it would be linked to using ``url_for('hello', who='World')``."
 msgstr ""
-"例えば、このチュートリアルの前の方でapp factoryで追加されたviewの\ "
-"``hello()``\ は、名前が\ ``'hello'``\ であり、\ ``url_for('hello')``\ を"
-"使ってリンクすることができます。もし引数を取る場合は、それは後で確認"
-"していきますが、それは\ ``url_for('hello', who='World')``\ を使用して"
-"リンクできるでしょう。"
+"例えば、このチュートリアルの前の方でapp factoryに追加されたviewの\ "
+"``hello()``\ は、名前（関数名・エンドポイント）が\ ``'hello'``\ で"
+"あり、\ ``url_for('hello')``\ を使ってリンクすることができます。もし"
+"引数を取る場合は、それは後で確認していきますが、それは\ "
+"``url_for('hello', who='World')``\ を使用してリンクできるでしょう。"
 
 # e9bf16ae80e1439aabcbd68d621fa965
 #: ../../tutorial/views.rst:296
@@ -439,9 +440,11 @@ msgid ""
 "name of the function, so the endpoint for the ``login`` function you "
 "wrote above is ``'auth.login'`` because you added it to the ``'auth'`` "
 "blueprint."
-msgstr "blueprintを使用するときは、blueprintの名前は関数名の前に付けられ、"
+msgstr ""
+"blueprintを使用するときは、blueprintの名前は関数名の前に付けられ、"
 "従って先程書いた\ ``login``\ 関数のエンドポイントは、blueprintの\ "
-"``'auth'``\ に追加しているため\ ``'auth.login'``\ になります。"
+"``'auth'``\ にlogin関数を追加しているため\ ``'auth.login'``\ に"
+"なります。"
 
 # 36dc0ce7ddf642a7b27599d16e07f068
 #: ../../tutorial/views.rst:301

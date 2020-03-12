@@ -20,7 +20,7 @@ msgstr ""
 # 0604452f13ab45d295efbe3328e04eac
 #: ../../tutorial/install.rst:2
 msgid "Make the Project Installable"
-msgstr "インストール可能なプロジェクト"
+msgstr "インストール可能なプロジェクト（Make the Project Installable）"
 
 # 122f43b66f744afab1b1636009af4529
 #: ../../tutorial/install.rst:4
@@ -31,14 +31,14 @@ msgid ""
 "the same as installing any other library, so you're using all the "
 "standard Python tools to manage everything."
 msgstr ""
-"プロジェクトをインストール可能にするということは、このプロジェクトの"
-"環境へFlaskをインストールしたときのように、\ *配布用（distribution)*\ "
-"ファイルを作成でき、それを他の環境へインストールできることを意味します。"
+"プロジェクトをインストール可能にするということは、\ *配布用（distribution)*\ "
+"ファイルを作成でき、このプロジェクトの環境へFlaskをインストールしたときのよう"
+"に、その配布用ファイルを他の環境へインストールできることを意味します。"
 "これは、自分のプロジェクトのデプロイを、他のどのライブラリのインストール"
-"とも同じような扱いにするため、全ての標準的なPythonのツールを使って、"
-"全てを管理できるようになります（訳注: パッケージ管理に関していくつかある"
-"Pythonでの標準的なツール・やり方のどれを使っても、インストールやアップ"
-"グレードなどができるようになります）。"
+"とも同じような扱いにし、従ってあなたは（このプロジェクトでは）何でも管理"
+"するときには全て標準的なPythonのツールを使っています。（訳注: パッケージ管理"
+"に関していくつかあるPythonでの標準的なツール・やり方を使って、インストールや"
+"アップグレードなどをしています）。"
 
 # 5116e1789c09453db19475c69c3e56f7
 #: ../../tutorial/install.rst:10
@@ -58,9 +58,9 @@ msgid ""
 "means you can import it no matter where you run from."
 msgstr ""
 "この時点では、PythonとFlaskがどうやって\ ``flaskr``\ パッケージを使用するか"
-"理解している理由は、プロジェクトのディレクトリから（flask runコマンドなどを）"
-"実行しているということだけです。インストールするということは、どこから実行"
-"してもそれ（flaskr）をimportできることを意味します。"
+"理解している唯一の理由は、プロジェクトのディレクトリから（flask runコマンド"
+"などを）実行しているということだけです。インストールするということは、どこから"
+"実行してもそれ（flaskr）をimportできることを意味します。"
 
 # 950ccf2326564c45a52e6c11592fc8c9
 #: ../../tutorial/install.rst:17
@@ -69,7 +69,7 @@ msgid ""
 "so ``pip install yourproject.whl`` installs them."
 msgstr ""
 "プロジェクトの依存対象を、他のパッケージと同じようなやり方で管理可能になり、"
-"\ ``pip install yourproject.whl``\ でインストールできるようになります。"
+"従って\ ``pip install yourproject.whl``\ でインストールできるようになります。"
 
 # 3eff4bc3b2384e7fb86684e9b6f79e7a
 #: ../../tutorial/install.rst:20
@@ -77,7 +77,7 @@ msgid ""
 "Test tools can isolate your test environment from your development "
 "environment."
 msgstr ""
-"テストツールがテスト環境を開発環境から隔離できるようになります。"
+"テストツールがテスト用の環境を開発用の環境から隔離できるようになります。"
 
 # 0ae536e2945b4864ba469c88b56844bd
 #: ../../tutorial/install.rst:24
@@ -85,13 +85,13 @@ msgid ""
 "This is being introduced late in the tutorial, but in your future "
 "projects you should always start with this."
 msgstr ""
-"テスト環境は、このチュートリアルでは後の方で紹介されていますが、"
-"自分の将来のプロジェクトでは常にテスト環境と一緒に開始するべきです。"
+"テスト用の環境は、このチュートリアルでは後の方で紹介されていますが、"
+"自分の将来のプロジェクトでは常にテスト用の環境と一緒に開始するべきです。"
 
 # ee5647b0192b4faa8fb7c0ddb91618f4
 #: ../../tutorial/install.rst:29
 msgid "Describe the Project"
-msgstr "プロジェクトの記述"
+msgstr "プロジェクトの記述（Describe the Project）"
 
 # 1c5b7cb1457f444baff600b774f1e7be
 #: ../../tutorial/install.rst:31
@@ -118,11 +118,11 @@ msgid ""
 " other data is."
 msgstr ""
 "``packages``\ は、どのpackageディレクトリ（およびそれが含んでいるPython"
-"ファイル）を含めるべきかをPythonに教えます。\ ``find_packages()``\ は、"
+"ファイル）を含めるべきかをPythonに伝えます。\ ``find_packages()``\ は、"
 "packageディレクトリを全て手入力せずに済むように、packageディレクトリを"
 "自動的に見つけ出します。staticやtemplatesディレクトリのような、（Pythonの"
 "packageではない）その他のファイルを含めるには、\ ``include_package_data``\ "
-"を設定します。そのようなその他のデータが何かを教えるためには、Pythonは\ "
+"を設定します。そのようなその他のデータが何かを伝えるためには、Pythonは\ "
 "``MANIFEST.in``\ というもう一つのファイルを必要とします。"
 
 # 3676254b65154634b22035d9507fb9a4

@@ -244,9 +244,11 @@ msgstr ""
 "これはどのように防ぐのでしょうか？基本的には、サーバ上の内容を変更する"
 "リクエストではそれぞれ、一度限りのトークン（訳注：認証などに使用する、"
 "大抵はでたらめな文字列）を使用して、それをクッキーに格納して、"
-"\ **さらに**\ それをformデータとも一緒に送信します。サーバで再びデータを"
-"受信した後は、そのときに2つのデータを比較して、確実に同一であるかを確か"
-"める必要があるでしょう。"
+"\ **さらに**\ それをformデータとも一緒に送信します（訳注: サーバがformを"
+"含んだページのレスポンスをWebブラウザなどへ送信するとき、そのレスポンスの"
+"ヘッダの中で、クッキーにそのレスポンス固有のトークンを設定するような処理"
+"を指していると思います）。サーバで再びデータを受信した後は、そのときに2つの"
+"トークンを比較して、確実に同一であるかを確かめる必要があるでしょう。"
 
 # 11cedf4d53e244dabbdaf91a82a6ed78
 #: ../../security.rst:101
@@ -270,7 +272,7 @@ msgid ""
 "level arrays to JSON. This was because of a security vulnerability in "
 "ECMAScript 4."
 msgstr ""
-"Flask 0.10とそれ以前では、\ :func:`~flask.jsonify`\ は最上位レベルの"
+"Flask 0.10とそれ以前では、\ :func:`~flask.json.jsonify`\ は最上位レベルの"
 "配列（top-level arrays）をJSONへシリアライズ（訳注：ネットワークで送受信"
 "できるデータ形式へ変換するような処理）しませんでした。これはECMAScript 4"
 "にあるセキュリティ上の脆弱性によるものでした。"
@@ -289,7 +291,7 @@ msgstr ""
 "ECMAScript 5ではこの脆弱性は解決しており、従っていまだに脆弱性があるのは"
 "非常に古いブラウザだけです。そのようなブラウザはすべて\ `別のより深刻な"
 "脆弱性があり <https://github.com/pallets/flask/issues/248#issuecomment-59934857>`_\ "
-"、従ってこの振る舞いは変更されていて、\ :func:`~flask.jsonify`\ は今では"
+"、従ってこの振る舞いは変更されていて、\ :func:`~flask.json.jsonify`\ は今では"
 "配列のシリアライズをサポートしています。"
 
 # 40a06406cbca4cd2918f57306894c341
@@ -308,7 +310,7 @@ msgstr ""
 "ブラウザは、セキュリティを制御するために様々なレスポンスのヘッダを認識"
 "します。自分のアプリケーションで使うように、以下のヘッダをそれぞれ確認"
 "しておくことをお勧めします。\ `Flask-Talisman`_\ というFlask拡張は、"
-"HTTPSヘッダとセキュリティに関するヘッダを管理するために使用できます。"
+"HTTPSとセキュリティに関するヘッダを管理するために使用できます。"
 
 # 606dba6f02c74707aef49ef05c1e3229
 #: ../../security.rst:130
@@ -321,7 +323,7 @@ msgid ""
 "Tells the browser to convert all HTTP requests to HTTPS, preventing man-"
 "in-the-middle (MITM) attacks. ::"
 msgstr ""
-"全てのHTTPリクエストをHTTPへ変換するようブラウザに指示して、man-in-the-middle"
+"全てのHTTPリクエストをHTTPSへ変換するようブラウザに指示して、man-in-the-middle"
 "（MITM）攻撃を防ぎます。::"
 
 # 9630e5ea3aab46088deb54b80974781a
@@ -397,8 +399,8 @@ msgid ""
 "translated invisibly to clicks on your page's elements. This is also "
 "known as \"clickjacking\". ::"
 msgstr ""
-"自分のサイトの\ ``iframe``\ の中に、他のサイトを埋め込むことを防ぎます。"
-"これは、外部フレームでのクリックが自分のページの要素をクリックすること"
+"外部サイトが\ ``iframe``\ の中に、あなたのサイトを埋め込むことを防ぎます。"
+"これは、外側のフレームでのクリックがあなたのページの要素をクリックすること"
 "へと、目に見えないやり方で変換できるようにする攻撃の類を防ぎます。これは"
 "「clickjacking」としても知られています。::"
 
@@ -441,8 +443,10 @@ msgid ""
 "cookie. They can be set on other cookies too."
 msgstr ""
 "以下のオプションはセキュリティを改善するために、\ ``Set-cookie``\ ヘッダへ"
-"追加することができます。Flaskには、これらをセッションのクッキーへ設定させる"
-"構成オプションがあります。これらは、他のクッキーへも設定可能です。"
+"追加することができます。Flaskには、これらをセッションのクッキー（訳注: "
+"Flaskがsessionオブジェクトでアクセス可能にしているデータを格納しており、"
+"FlaskのSESSION_COOKIE_NAME設定で指定されているcookie）へ設定させる構成"
+"オプションがあります。これらは、他のクッキーへも設定可能です。"
 
 # 64d690f0bf09477fbc111af3ff9f7b27
 #: ../../security.rst:197
@@ -481,10 +485,10 @@ msgid ""
 "neither option is set, the cookie will be removed when the browser is "
 "closed. ::"
 msgstr ""
-"``Expires``\ または\ ``Max-Age``\ オプションを指定すると、与えられた"
-"時間が過ぎた後、または現在時刻にageを加えた後、クッキーを削除します。"
-"もしどちらのオプションも設定されていない場合は、ブラウザが閉じられた"
-"ときにクッキーは削除されまれます。"
+"``Expires``\ または\ ``Max-Age``\ オプションを指定すると、Expiresでは"
+"与えられた時刻、Max-Ageでは現在時刻にageを加えた時刻、を過ぎた後にそれぞれ"
+"クッキーを削除します。もしどちらのオプションも設定されていない場合は、"
+"ブラウザが閉じられたときにクッキーは削除されまれます。::"
 
 # 93584cb51b904be6aa7cbc9bf49a02e8
 #: ../../security.rst:223
@@ -544,7 +548,7 @@ msgid ""
 "Be careful when enabling this, as it is very difficult to undo if you set"
 " up or upgrade your key incorrectly."
 msgstr ""
-"もしも鍵を不正に設定もしくは更新してしまった場合は、元に戻すことが非常に"
+"もしも鍵を不適当に設定もしくは更新してしまった場合は、元に戻すことが非常に"
 "難しいため、これを有効にするときは注意してください。"
 
 # 3b624609acbe42998fdcb3a3df476525

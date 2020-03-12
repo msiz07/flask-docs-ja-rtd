@@ -54,7 +54,7 @@ msgid ""
 "First we imported the :class:`~flask.Flask` class.  An instance of this "
 "class will be our WSGI application."
 msgstr ""
-"最初に、\ :class:`~flask.Flask`\ クラスをimportします。このクラスの"
+"最初に、\ :class:`~flask.Flask`\ クラスをimportしています。このクラスの"
 "インスタンスはWSGI（訳注: Pythonで標準化されている、WebアプリとWebサーバ"
 "間のインタフェース）アプリケーションになります。"
 
@@ -77,7 +77,8 @@ msgstr ""
 "変化する（\ ``'__main__'``\ もしくは実際のimport名）ため、もし（この例の"
 "ように）１つだけのモジュールを使っているときは、\ ``__name__``\ を使うべき"
 "です。これはテンプレート、静的ファイルなどを探す場所をFlaskが知るために必要に"
-"なります。さらなる情報については、\ :class:`~flask.Flask`\ を調べてください。"
+"なります。さらなる情報については、\ :class:`~flask.Flask`\ のドキュメントを"
+"調べてください。"
 
 # a6f42a311f6843ccacc8e3660800438a
 #: ../../quickstart.rst:34
@@ -95,10 +96,10 @@ msgid ""
 " particular function, and returns the message we want to display in the "
 "user's browser."
 msgstr ""
-"対応するURLを生成するときにも使用される名前（訳注: :func:`~flask.url_for`\ "
-"で関数に対応するURLを作成するときに使うエンドポイント名を指してると思います）"
-"が関数には与えられ、そして関数はユーザのブラウザに表示したいメッセージを返し"
-"ます。"
+"関数には名前が与えられ、その名前は対応するURLを生成するときにも使用されます"
+"（訳注: 関数名が\ :func:`~flask.url_for`\ で対応するURLを作成するときに使う"
+"エンドポイント名になることを指していると思います）。そして関数は、ユーザの"
+"ブラウザに表示したいメッセージを返します。"
 
 # c157b28898f44db8aba4c31269fb5ce2
 #: ../../quickstart.rst:40
@@ -109,7 +110,7 @@ msgid ""
 msgstr ""
 "これを\ :file:`hello.py`\ のような名前で保存するだけです。Flask自身と衝突"
 "しないようにするため、自分のアプリケーションは\ :file:`flask.py`\ と名付け"
-"ないようにしてください。"
+"ないように必ずしてください。"
 
 # b18f6d432b6d42f7855c20046abbd57a
 #: ../../quickstart.rst:44
@@ -152,10 +153,10 @@ msgid ""
 "testing but probably not what you want to use in production. For "
 "deployment options see :ref:`deployment`."
 msgstr ""
-"これは、テスト用には十分ですが、おそらく本番環境では使用したくはならない"
-"であろう、とても単純な内蔵サーバを起動します。デプロイ（訳注: 実行環境への"
-"移行のような意味合い）のオプションについては、\ :ref:`deployment`\ を参照"
-"してください。"
+"これはとてもシンプルな内蔵サーバを起動し、それはテスト用には十分ですが、"
+"おそらく本番環境では使用したくはならないでしょう。デプロイ（訳注: 実行環境"
+"への移行のような意味合い）のオプションについては、\ :ref:`deployment`\ を"
+"参照してください。"
 
 # 3d41fb22c4a145018ed6b41a66972e41
 #: ../../quickstart.rst:72
@@ -291,8 +292,9 @@ msgstr ""
 "\ :command:`flask`\ スクリプトはローカルの開発サーバをスタートするには便利"
 "ですが、コードを変更するたびに手動で再起動が必要になるでしょう。それはあまり"
 "便利ではなく、そしてFlaskはもっと便利に使えます。もしデバッグサポートを有効"
-"にすれば、コードを変更したときにサーバは自分自信で再読み込みするようになり、"
-"もし問題が起きた場合には役に立つデバッガも提供するようにもなります。"
+"にすれば、コードを変更したときにサーバは自分自信で再読み込み（reload）する"
+"ようになり、さらに、もし問題が起きた場合には役に立つデバッガも提供するよう"
+"にもなります。"
 
 # f9428ba54a004a179667264525d12114
 #: ../../quickstart.rst:133
@@ -308,7 +310,8 @@ msgstr ""
 # f2dcb5cc8fec4d86a5ca87408cd60f2d
 #: ../../quickstart.rst:140
 msgid "(On Windows you need to use ``set`` instead of ``export``.)"
-msgstr "（Windowsでは、\ ``export``\ の代わりに\ ``set``\ を使う必要があります）"
+msgstr ""
+"（Windowsでは、\ ``export``\ の代わりに\ ``set``\ を使う必要があります）"
 
 # f7c99a21dd2c4988932eb134a0cfa742
 #: ../../quickstart.rst:142
@@ -318,12 +321,12 @@ msgstr "これは以下のことを行います:"
 # 8543ab5fe10244038bc0f06d395cb22f
 #: ../../quickstart.rst:144
 msgid "it activates the debugger"
-msgstr "デバッガーを有効にします"
+msgstr "デバッガを有効にします"
 
 # bc18b2158b3f4d51ace2a0953972ecf5
 #: ../../quickstart.rst:145
 msgid "it activates the automatic reloader"
-msgstr "自動リロード（再読み込み）を有効にします"
+msgstr "自動再読み込みを有効にします"
 
 # c4f88dedb4dc4718b367cb7f7bc5ed38
 #: ../../quickstart.rst:146
@@ -342,7 +345,7 @@ msgstr ""
 # acfb8dc0c0e54f30a8ce9d393e95f205
 #: ../../quickstart.rst:151
 msgid "There are more parameters that are explained in the :ref:`server` docs."
-msgstr "\ :ref:`server`\ ドキュメントでより多くのパラメータを説明しています。"
+msgstr "\ :ref:`server`\ のドキュメントでより多くのパラメータを説明しています。"
 
 # ab11579bf7a6480f924a7dcc93c5636e
 #: ../../quickstart.rst:153
@@ -359,9 +362,9 @@ msgid ""
 " machines**."
 msgstr ""
 "たとえforkした環境（訳注: :ref:`working-with-debuggers`\ 参照、外部"
-"デバッガを使用したい場合にはforkした環境というものを設定可能）では"
-"インタラクティブなデバッガが動かない（それによって本番環境のサーバでの"
-"内蔵デバッガの使用を殆ど不可能にします）としても、それでも（デバッグ"
+"デバッガを使用したい場合にFlaskではforkした環境というものを設定可能）では"
+"インタラクティブなデバッガが動かない（それによって本番環境のサーバでは"
+"内蔵デバッガが殆ど使用不可能になります）としても、それでも（デバッグ"
 "モードや外部デバッガの使用は）任意のコードを実行できるようにします。"
 "これは深刻なセキュリティ上のリスクであり、従って\ **本番環境のマシンでは"
 "決して使用してはいけません**\ 。"
@@ -400,8 +403,8 @@ msgid ""
 "they can remember and use to directly visit a page."
 msgstr ""
 "最近のwebアプリケーションは、ユーザに役立つような意味のあるURLを使用します。"
-"もし、記憶して直接指定できる意味のあるURLを使用しているページであれば、ユーザ"
-"はそのページをより好きになり、再訪問するようになるでしょう。"
+"もし、ページへ直接訪れるために記憶し直接指定できる意味のあるURLを使用して"
+"いれば、ユーザはそのページをより好きになり、再訪問するようになるでしょう。"
 
 # aa74313583dc4755ae650e65fa6d2272
 #: ../../quickstart.rst:182
@@ -409,8 +412,8 @@ msgid ""
 "Use the :meth:`~flask.Flask.route` decorator to bind a function to a URL."
 " ::"
 msgstr ""
-"関数とURLを結び付けたいときは、\ :meth:`~flask.Flask.route`\ デコレータを"
-"使用します ::"
+"関数とURLを結び付け（bind）したいときは、\ :meth:`~flask.Flask.route`\ "
+"デコレータを使用します。 ::"
 
 # 70bdee9a7e91483e99eb7f7125b7f226
 #: ../../quickstart.rst:192
@@ -419,7 +422,7 @@ msgid ""
 "multiple rules to a function."
 msgstr ""
 "もっとできることがあります！URLの一部を動的に変化させたり、複数のルールを"
-"関数に取り付けることも可能です。"
+"関数に付与することも可能です。"
 
 # 657fca8ce6ed4c17bda18dad7314d7e2
 #: ../../quickstart.rst:196
@@ -513,7 +516,7 @@ msgid ""
 "a trailing slash, Flask redirects you to the canonical URL with the "
 "trailing slash."
 msgstr ""
-"``projects``\ エンドポイントの正規化（訳注: 表記の揺らぎを統一するような"
+"``projects``\ エンドポイントの正規化（訳注: 記法の揺らぎを統一するような"
 "意味合い）されたURLでは、最後にスラッシュがあります。"
 "これはファイルシステムでのフォルダに似ています。もし最後のスラッシュなしでURLへ"
 "アクセスした場合、Flaskは最後にスラッシュのある正規化されたURLへ転送"
@@ -529,8 +532,8 @@ msgid ""
 " same page twice."
 msgstr ""
 "``about``\ エンドポイントの正規化されたURLでは、最後にスラッシュがありません。"
-"これはファイルシステムでのファイルのパス名に似ています。もし最後のスラッシュ"
-"付きでURLへアクセスしたときは404 \"Not Found\"エラーが発生します。"
+"これはファイルシステムでのファイルのパス名に似ています。もし最後にスラッシュを"
+"付けたURLへアクセスしたときは404の「Not Found」エラーが発生します。"
 "こうすると、これらのリソースに対するURLを唯ひとつに保てるため、検索エンジンが"
 "同じページを重複して登録することを防ぐ手助けになります。"
 
@@ -549,9 +552,10 @@ msgid ""
 "parameters."
 msgstr ""
 "ある特定の関数に対応するURLを構築するには、\ :func:`~flask.url_for`\ "
-"関数を使用します。それは関数名を最初の引数に、さらに、URLルールの変数部分に"
-"対応する、好きな数だけのキーワード引数を受け付けます。不明な変数パートは"
-"queryパラメータとしてURLの後ろ（訳注: ``?key=value``\ の部分）に付けられます。"
+"関数を使用します。それは関数名を最初の引数に受け付けて、さらに、URLルールの"
+"変数部分に対応する、好きな数だけのキーワード引数を受け付けます。不明な変数"
+"パートはqueryパラメータとしてURLの後ろ（訳注: ``?key=value``\ の部分）に"
+"付けられます。"
 
 # ac32a3cf62ea4e5c9ec25f8008c7ac56
 #: ../../quickstart.rst:263
@@ -561,13 +565,16 @@ msgid ""
 msgstr ""
 "URLをテンプレートへハードコーディングする代わりに、（関数名から）URLへと"
 "逆変換する\ :func:`~flask.url_for`\ 関数を使ってURLを構築する方が、なぜ"
-"好ましいのでしょうか？"
+"好ましいのでしょうか？（訳注: テンプレートの中でリンクなどがあったとき、"
+"そこへURLを直接記述するのではなく、リンク先で使いたい関数名からURLへ"
+"変換する処理を記述した方がなぜ好ましいか、という意味合い）"
 
 # 09e7a3f768e048cea2955bebbe7d7bc8
 #: ../../quickstart.rst:266
 msgid "Reversing is often more descriptive than hard-coding the URLs."
 msgstr ""
-"URLをハードコーディングするよりもURLへ逆変換する方が、より分かり易いためです。"
+"URLをハードコーディングするよりもURLへ逆変換する方が、分かり易いことが"
+"多いためです。"
 
 # 453717212689453881fa3d42fba9a152
 #: ../../quickstart.rst:267
@@ -575,8 +582,9 @@ msgid ""
 "You can change your URLs in one go instead of needing to remember to "
 "manually change hard-coded URLs."
 msgstr ""
-"ハードコーディングされたURLを忘れずに手作業で変更する必要がある代わりに、"
-"URLを一気に変更することができます。"
+"（URLを変更するとき）ハードコーディングされた（複数の場所に埋め込まれて"
+"いるかもしれない）URLを忘れずに手作業で変更する必要がある代わりに、"
+"（関数とURLを対応付けている箇所で）一気に変更することができます。"
 
 # b44ae5f4fc404bfcb7456c79960dff79
 #: ../../quickstart.rst:269
@@ -605,7 +613,7 @@ msgid ""
 msgstr ""
 "もしアプリケーションがURLのroot以外、例えば、\ ``/``\ の代わりに"
 "\ ``/myapplication``\ へ置かれたときでも、\ :func:`~flask.url_for`\ は"
-"あなたにとって適切なように処理します。"
+"適切に処理します。"
 
 # 8dc3ef7a952742ff9cb3c62cc9b14930
 #: ../../quickstart.rst:277
@@ -639,9 +647,9 @@ msgid ""
 msgstr ""
 "webアプリはURLへアクセスするときに異なるHTTPメソッドを使用します。"
 "Flaskで作業するときは、HTTPメソッドに親しんでおいた方が良いでしょう。"
-"標準設定の経路設定（route）は、\ ``GET``\ メソッドにだけ応答します。異なる"
-"HTTPメソッドを処理するには、\ :meth:`~flask.Flask.route`\ デコレータの"
-"\ ``method``\ 引数を使用することができます。 ::"
+"標準設定の経路（route）は、\ ``GET``\ メソッドにだけ応答します。異なる"
+"HTTPメソッドを処理するために、\ :meth:`~flask.Flask.route`\ デコレータの"
+"\ ``method``\ 引数を使用できます。 ::"
 
 # d63448edcde34047ab82deb7257d33b7
 #: ../../quickstart.rst:332
@@ -650,10 +658,10 @@ msgid ""
 "method and handles ``HEAD`` requests according to the `HTTP RFC`_. "
 "Likewise, ``OPTIONS`` is automatically implemented for you."
 msgstr ""
-"もし\ ``GET``\ が存在する場合、Flaskは自動的に\ ``HEAD``\ メソッドの"
-"サポートを追加して、\ `HTTP RFC`_\ に従って \``HEAD``\ リクエストを"
-"処理します。同様に、あなたにとって良いように、\ ``OPTIONS``\ も自動的に"
-"実装されます。"
+"もし\ ``GET``\ が（method引数の中に）存在する場合、Flaskは自動的に\ "
+"``HEAD``\ メソッドのサポートを追加して、\ `HTTP RFC`_\ に従って \``HEAD``\ "
+"リクエストを処理します。同様に、あなたにとって良いように、\ ``OPTIONS``\ も"
+"自動的に実装されます。"
 
 # 6c5aea7e032948ff9e5fa4bc4af698f7
 #: ../../quickstart.rst:339
@@ -670,11 +678,11 @@ msgid ""
 " or next to your module and it will be available at ``/static`` on the "
 "application."
 msgstr ""
-"動的なwebアプリケーションでも静的ファイルを必要とします。それは普通、CSSと"
-"JavaScriptがもたらされるところです。webサーバがそれらを扱うように構成"
-"されていると理想的ですが、開発中はFlaskで同様な対応が可能です。パッケージ"
-"の中またはモジュールの隣に\ :file:`static`\ というフォルダを作成するだけで、"
-"アプリケーションから\ ``/static``\ で利用できるようになります。"
+"動的なwebアプリケーションでも静的ファイルを必要とします。普通は、静的"
+"ファイルはCSSとJavaScriptがもたらされるところです。webサーバがそれらを扱う"
+"ように構成されていると理想的ですが、開発中はFlaskで同様な対応が可能です。"
+"パッケージの中またはモジュールの隣に\ :file:`static`\ というフォルダを作成"
+"するだけで、アプリケーションから\ ``/static``\ で利用できるようになります。"
 
 # 1f8e37650de54f4f80cee9e75f40425b
 #: ../../quickstart.rst:347
@@ -722,7 +730,7 @@ msgstr ""
 "テンプレートを変換するには\ :func:`~flask.render_template`\ メソッドを"
 "使用できます。あなたがしなければならないことは、テンプレート名と、キーワード"
 "引数としてテンプレートエンジンに渡したい変数の提供だけです。テンプレートを"
-"どのように変換するかの単純な例はいかのとおりです::"
+"どのように変換するかの単純な例は以下のとおりです::"
 
 # 7316df5bcfd94924bcedf3803133ade6
 #: ../../quickstart.rst:373
@@ -738,12 +746,12 @@ msgstr ""
 # bc57deee9a4f4179bfe57d7bf9419815
 #: ../../quickstart.rst:377
 msgid "**Case 1**: a module::"
-msgstr "**ケース 1**: a module::"
+msgstr "**ケース 1**: モジュール::"
 
 # 20cce9db4bfb44e68ca697aef783168a
 #: ../../quickstart.rst:383
 msgid "**Case 2**: a package::"
-msgstr "**ケース 2**: a package::"
+msgstr "**ケース 2**: パッケージ::"
 
 # 6da51e4b81ea47a3b1f481dc87e32150
 #: ../../quickstart.rst:390
@@ -780,10 +788,10 @@ msgid ""
 " documentation.  Basically template inheritance makes it possible to keep"
 " certain elements on each page (like header, navigation and footer)."
 msgstr ""
-"継承を使うとテンプレートは非常に便利です。どのように動作するか知りたいとき"
-"は\ :ref:`template-inheritance`\ パターンのドキュメントを確認してください。"
-"基本的にテンプレートの継承は（ヘッダ、ナビゲーション、フッタのように）ある"
-"要素を各ページで保持できるようにします。"
+"継承を使うとテンプレートは非常に便利です。テンプレートがどのように働くか"
+"知りたいときは\ :ref:`template-inheritance`\ パターンのドキュメントを確認"
+"してください。基本的にテンプレートの継承は（ヘッダ、ナビゲーション、フッタの"
+"ように）ある要素を各ページで保持できるようにします。"
 
 # f02d8ac777084080ae360f01507b5a31
 #: ../../quickstart.rst:415
@@ -796,11 +804,12 @@ msgid ""
 "template.  Head over to the Jinja 2 documentation for more examples."
 msgstr ""
 "自動エスケープが有効なので、もし\ ``name``\ がHTMLを含んでいた場合は、"
-"自動的にエスケープされます。もし変数を信頼できて安全なHTMLであると"
+"自動的にエスケープされます。もし変数を信頼できて、それが安全なHTMLであると"
 "分かっている（例えばwikiのマークアップをHTMLへ変換するモジュールから"
 "来ているなど）場合は、\ :class:`~jinja2.Markup`\ クラスを使うか、"
-"\ ``|safe``\ フィルタをテンプレートの中で使って、安全だと印を付けることが"
-"できます。さらなる例はJinja2ドキュメントを確認してください。"
+"\ ``|safe``\ フィルタ（訳注: ここのフィルタはjinja2テンプレートエンジンの"
+"機能のひとつ）をテンプレートの中で使って、安全だと印を付けることができます。"
+"さらなる例はJinja2ドキュメントを確認してください。"
 
 # a2f2b69650e4428d9a47f88f19150375
 #: ../../quickstart.rst:422
@@ -808,7 +817,7 @@ msgid ""
 "Here is a basic introduction to how the :class:`~jinja2.Markup` class "
 "works::"
 msgstr ""
-":class:`~jinja2.Markup`\ クラスがどう機能するかの基礎的なイントロダクションは"
+":class:`~jinja2.Markup`\ クラスがどう働くかの基礎的なイントロダクションは"
 "以下のとおりです::"
 
 # 6ae3854c4d104c078ec6cb013116c29c
@@ -821,8 +830,8 @@ msgid ""
 msgstr ""
 "自動エスケープは全てのテンプレートで有効というわけではなくなっています。"
 "テンプレートが以下の拡張子であるときは、自動エスケープをトリガーします:\ "
-"``.html``, ``.htm``, ``.xml``, ``.xhtml``\ 。テンプレートが文字列から"
-"読み込まれると、自動エスケープは無効になります。"
+"``.html``, ``.htm``, ``.xml``, ``.xhtml``\ 。文字列から読み込まれた"
+"テンプレートでは、自動エスケープは無効になります。"
 
 # fa932796c4c14cbebc704b43ab91cc99
 #: ../../quickstart.rst:439
@@ -832,9 +841,9 @@ msgid ""
 "that object (:class:`~flask.g`) and the :ref:`sqlite3` for more "
 "information."
 msgstr ""
-":class:`~flask.g`\ オブジェクトが何なのか不明ですか？それは、必要に応じて"
-"情報を格納できるものであり、より詳細な情報はそのオブジェクト（\ :class:"
-"`~flask.g`\ ）と\ :ref:`sqlite3`\ のドキュメントをチェックしてください。"
+":class:`~flask.g`\ オブジェクトが何なのか不確かですか？それは、独自のニーズ"
+"のために必要に応じて情報を格納できるものであり、より詳細な情報はそのオブジェクト"
+"（\ :class:`~flask.g`\ ）と\ :ref:`sqlite3`\ のドキュメントをチェックしてください。"
 
 # 6a9fedfc38dd4c21832ce9c2cd09fc1d
 #: ../../quickstart.rst:446
@@ -855,12 +864,13 @@ msgstr ""
 "グローバルな\ :class:`~flask.request`\ オブジェクトで提供されます。もし"
 "Python経験が多少あるならば、そのオブジェクトがグローバルでありながら"
 "スレッドセーフでもあるように、Flaskがどうやって管理しているのか、不思議に"
-"思うかもしれません。その答えはローカル用コンテキスト（context locals）です:"
+"思うかもしれません。その答えはコンテキストの局所的オブジェクト（context "
+"locals）です:"
 
 # fd8badb94239489e969133535e116e56
 #: ../../quickstart.rst:458
 msgid "Context Locals"
-msgstr "ローカル用コンテキスト（Context Locals）"
+msgstr "コンテキストの局所的オブジェクト（Context Locals）"
 
 # 03e43f149ad149909e9006c79de4555f
 #: ../../quickstart.rst:460
@@ -887,7 +897,7 @@ msgid ""
 msgstr ""
 "いくつかのFlaskのオブジェクトはグローバルなオブジェクトですが、普通の種類の"
 "ものではありません。それらのオブジェクトは実際には、ある特定のコンテキスト"
-"にローカルなオブジェクトへのプロキシになります。長ったらしい説明ですが、"
+"に対して局所的なオブジェクトへのプロキシになります。長ったらしい説明ですが、"
 "実際には、理解するのは非常に簡単です。"
 
 # 51a9d817179849368b705fa237171e01
@@ -929,10 +939,12 @@ msgstr ""
 "しないために、リクエストオブジェクトに依存しているコードが突然止まることに"
 "気付くでしょう。解決方法は、自分でリクエストオブジェクトを作成して"
 "コンテキストに結び付けることです。ユニットテストのための最も簡単な解決方法は"
-"コンテキストマネージャ\ :meth:`~flask.Flask.test_request_context`\ を使用"
-"することです。\ ``with``\ 文と組み合わせると、テスト用のリクエストとやり取り"
-"できるように、テスト用リクエストとコンテキストとを結び付けます。以下はその"
-"例です::"
+"コンテキストマネージャ（訳注: Pythonの仕様にある、with文と組み合わせて特別な"
+"処理をする仕組みで、ここの「コンテキスト」はHTTPリクエストとは関係ないか、"
+"またはHTTPリクエストのコンテキストとPython仕様にあるコンテキストの両者をかけた"
+"意味合い）の\ :meth:`~flask.Flask.test_request_context`\ を使用することです。\ "
+"``with``\ 文と組み合わせると、テスト用のリクエストとやり取りできるように、"
+"テスト用リクエストとコンテキストとを結び付けます。以下はその例です::"
 
 # 0d17e4e527ae4f34a20f9f646b084229
 #: ../../quickstart.rst:495
@@ -973,7 +985,8 @@ msgstr ""
 "その時点のリクエストのメソッドは\ :attr:`~flask.Request.method`\ 属性を"
 "使えば利用可能です。formのデータ（\ ``POST``\ または\ ``PUT``\ リクエスト"
 "で送信されるデータ）へアクセスするには、\ :attr:`~flask.Request.form`\ "
-"属性を使用できます。以下は言及した2つの属性についての全体の例です::"
+"属性を使用できます。以下は言及した2つの属性についての不足のない（どちらの"
+"用法も示した）例です::"
 
 # 14d6cf3b8a7646e7adf38e2f108e7dcf
 #: ../../quickstart.rst:532
@@ -1055,7 +1068,7 @@ msgstr ""
 ":class:`file`\ オブジェクトのように振る舞いますが、サーバのファイルシステム"
 "へそのファイルを格納できるようにする\ "
 ":meth:`~werkzeug.datastructures.FileStorage.save`\ メソッドも持っています。"
-"以下は、それらがどのように動作するかを示す簡単な例です::"
+"以下は、それがどのように働くかを示す簡単な例です::"
 
 # 5b10e1a8187140718e1900aad951fb6d
 #: ../../quickstart.rst:576
@@ -1127,7 +1140,7 @@ msgid ""
 "the :meth:`~flask.make_response` function and then modify it."
 msgstr ""
 "クッキーはレスポンスオブジェクトに設定されていることに注目してください。"
-"通常はview関数でただ文字列を返すだけなので、あなたにとって良いように、"
+"通常はview関数からはただ文字列を返すだけなので、あなたにとって良いように、"
 "Flaskはそれら（訳注: view関数の戻り値、クッキーなど）をレスポンスオブジェクト"
 "へと変換します。もしそれを自分で明示的に実行したい場合は、"
 "\ :meth:`~flask.make_response`\ 関数を使用して、それ（レスポンスオブジェクト）"
@@ -1161,9 +1174,9 @@ msgid ""
 "function; to abort a request early with an error code, use the "
 ":func:`~flask.abort` function::"
 msgstr ""
-"ユーザを別のエンドポイントへ転送するには、\ :func:`~flask.redirect`\ 関数を"
-"使用します; リクエストを早い段階でエラーコードと一緒に異常終了させるには、\ "
-":func:`~flask.abort`\ 関数を使用します::"
+"ユーザを別のエンドポイントへリダイレクトするには、\ :func:`~flask.redirect`\ "
+"関数を使用します; リクエストを早い段階でエラーコードと一緒に異常終了させる"
+"には、\ :func:`~flask.abort`\ 関数を使用します::"
 
 # 9f34090436554a55866a15a4ca27b16b
 #: ../../quickstart.rst:657
@@ -1173,7 +1186,7 @@ msgid ""
 "shows how that works."
 msgstr ""
 "これは、ユーザをindexページからアクセスできないページ（401はアクセス拒否を"
-"意味します）へと転送するため、いくぶんポイントを捉えていない例ですが、"
+"意味します）へとリダイレクトするため、いくぶんポイントを捉えていない例ですが、"
 "上記の関数がどのように機能するかを示しています。"
 
 # 721b9a305ab54c6690605de3ac784087
@@ -1224,8 +1237,8 @@ msgstr ""
 "戻り値がstringの場合、stringをレスポンスのbodyに、ステータスコードを\ "
 "``200 OK``\ に、そしてmimeタイプを\ :mimetype:`text/html`\ にしたレスポンス"
 "オブジェクトへ変換されます。もし戻り値がdictの場合、レスポンスを作成するために"
-"\ :func:`jsonify`\ が呼び出されます。Flaskが（view関数の）戻り値をレスポンス"
-"へ変換するロジックは以下のとおりです:"
+"\ :func:`~flask.json.jsonify`\ が呼び出されます。Flaskが（view関数の）戻り値を"
+"レスポンスへ変換するロジックは以下のとおりです:"
 
 # 8ae8a215218348f5816a9f575ea46ca4
 #: ../../quickstart.rst:690
@@ -1249,8 +1262,8 @@ msgstr ""
 #: ../../quickstart.rst:694
 msgid "If it's a dict, a response object is created using ``jsonify``."
 msgstr ""
-"もしdictであれば、レスポンスオブジェクトは\ ``jsonify``\ を使用して"
-"作成されます。"
+"もしdictであれば、レスポンスオブジェクトは\ :func:`~flask.json.jsonify`\ "
+"を使用して作成されます。"
 
 # cad6d48163454e75a92762542b440826
 #: ../../quickstart.rst:695
@@ -1297,14 +1310,14 @@ msgid ""
 ":func:`~flask.make_response` and get the response object to modify it, "
 "then return it::"
 msgstr ""
-"必要なことは、\ :func:`~flask.make_response`\ でreturn式を囲み、変更する"
+"必要なことは、\ :func:`~flask.make_response`\ でreturnの式を囲み、変更する"
 "ためにレスポンスオブジェクトを取得し、それからそのレスポンスオブジェクトを"
-"戻すだけです。"
+"返すだけです。"
 
 # d5d7f3690389476e84f1494d2fc2db0d
 #: ../../quickstart.rst:725
 msgid "APIs with JSON"
-msgstr "JSONのAPIs"
+msgstr "JSONを使ったAPIs"
 
 # f0a88465cfb94ce1b85dedf84428315f
 #: ../../quickstart.rst:727
@@ -1330,7 +1343,7 @@ msgstr ""
 "したくなるかもしれません。そのような場合は、サポートされているJSONのデータ"
 "タイプのシリアライズ（訳注: この場合ネットワークで通信可能な形式にする"
 "ような意味合い）をする\ :func:`~flask.json.jsonify`\ 関数を使用します。"
-"もしくは、より複雑なアプリケーションをサポートするコミュニティのFlask拡張を"
+"もしくは、より複雑なアプリケーションをサポートする、コミュニティのFlask拡張を"
 "調べてください。"
 
 # f13176e1cc944419a1ff9215f0b719c7
@@ -1352,8 +1365,8 @@ msgstr ""
 "から次のリクエストへと格納できるようにする、\ :class:`~flask.session`\ と"
 "呼ばれる2番目のオブジェクトもあります。これはクッキー上に実装されていて、"
 "クッキーに暗号学的な署名をします。これが意味することは、ユーザは自分の"
-"クッキーの内容を見ることはできますが、変更は、署名に使われた秘密鍵を知らない"
-"かぎり、できないということです。"
+"クッキーの内容を見ることはできますが、署名に使われた秘密鍵を知らない"
+"かぎり、変更はできないということです。"
 
 # 9e1ae91bfa0b4ea7916348dffd5b231d
 #: ../../quickstart.rst:768
@@ -1362,7 +1375,7 @@ msgid ""
 "sessions work::"
 msgstr ""
 "セッションを使用するためには、秘密鍵を設定しなければなりません。"
-"セッションの機能のしかたは、以下のとおりです::"
+"セッションがどのように働くかは、以下のとおりです::"
 
 # db405d20c07c4eb5b1a9ae8f322aa86d
 #: ../../quickstart.rst:802
@@ -1386,10 +1399,11 @@ msgid ""
 "generator. Use the following command to quickly generate a value for "
 ":attr:`Flask.secret_key` (or :data:`SECRET_KEY`)::"
 msgstr ""
-"秘密鍵はできるだけ無作為なものにするべきです。暗号学的に無作為なデータの"
-"生成装置に基づいた、非常に無作為なデータを生成する方法がオペレーティング"
-"システムにはあります。手早く\ :attr:`Flask.secret_key`\ （もしくは\ "
-":data:`SECRET_KEY`\ ）の値を生成するには、以下のコマンドを使用してください::"
+"秘密鍵はできるだけでたらめなものにするべきです。暗号学的にでたらめである"
+"データの生成装置に基づいた、非常にでたらめなデータを生成する方法が"
+"オペレーティングシステムにはあります。手早く\ :attr:`Flask.secret_key`\ "
+"（もしくは\ :data:`SECRET_KEY`\ ）の値を生成するには、以下のコマンドを使用"
+"してください::"
 
 # 62d4501db7b84fe9a5117527974bc508
 #: ../../quickstart.rst:815
@@ -1401,12 +1415,12 @@ msgid ""
 "cookie in your page responses compared to the size supported by web "
 "browsers."
 msgstr ""
-"クッキーに基づいたsessionについての注意: Flaskはsessionオブジェクトに"
-"置かれた値を取り上げ、クッキーへシリアライズします。"
-"実際にクッキーが有効であるときに、複数のリクエストを跨がって持続していない"
-"値を（sessionで）見つけた場合、そして明確なエラーメッセージを得られない"
-"ときは、ページのレスポンスにあるクッキーのサイズをチェックし、webブラウザに"
-"よってサポートされているサイズと比較してください。"
+"クッキーに基づいたセッションについての注意: Flaskはsessionオブジェクトに"
+"置かれた値を取り上げ、クッキーへシリアライズします。もしも複数のリクエストを"
+"跨いだ持続をしていない値が（sessionで）見つかり、実際にクッキーは有効であり、"
+"そして明確なエラーメッセージを得られないときは、ページのレスポンスにある"
+"クッキーのサイズをチェックし、webブラウザによってサポートされているサイズと"
+"比較してください。"
 
 # e6a85b189a624020b836bdcb796d651c
 #: ../../quickstart.rst:821
@@ -1436,7 +1450,7 @@ msgid ""
 msgstr ""
 "良いアプリケーションおよびユーザインタフェースとは、すべてフィードバック"
 "次第です。もしユーザが十分なフィードバックを得られない場合、おそらく"
-"アプリケーションが嫌いになって終わりです。Flaskはフラッシュ表示の仕組み"
+"アプリケーションを嫌いになって終わりです。Flaskはフラッシュ表示の仕組み"
 "（flashing system）によって、ユーザへフィードバックを与える非常にシンプルな"
 "方法を提供します。フラッシュ表示の仕組みは、リクエストの最後にメッセージを"
 "記録し、次の（ただ次だけの）リクエストでアクセスできるようにします。これは、"
@@ -1451,9 +1465,9 @@ msgid ""
 "pattern` for a full example."
 msgstr ""
 "メッセージをフラッシュ表示させるには\ :func:`~flask.flash`\ メソッドを"
-"使用し、メッセージを捉えるには、テンプレートでも利用可能である、\ :func:"
-"`~flask.get_flashed_messages`\ が使用できます。全体の例については"
-"\ :ref:`message-flashing-pattern`\ を調べてください。"
+"使用し、メッセージを捉えるには、テンプレートでも利用可能な\ :func:"
+"`~flask.get_flashed_messages`\ が使用できます。不足のない（どちらの用法も"
+"示した）例については\ :ref:`message-flashing-pattern`\ を調べてください。"
 
 # 7521c668f6414c36987312e5267db5a8
 #: ../../quickstart.rst:842
@@ -1476,7 +1490,7 @@ msgstr ""
 "サーバへ送信するクライアント側のコードがあるかもしれません。これは、ユーザの"
 "データ改ざんや、クライアントのコードの失敗によって引き起こされるかもしれません。"
 "その状況では殆どの場合は\ ``400 Bad Request``\ を返せば大丈夫ですが、ときには"
-"それではうまくいかず、さらにコードは動かし続けなければならないことがあります。"
+"それでは通用せず、コードを動かし続けなければならないことがあります。"
 
 # 56290c07aca64000a942857ae6c7c747
 #: ../../quickstart.rst:854
@@ -1487,7 +1501,7 @@ msgid ""
 msgstr ""
 "起きてしまったそのようなうさんくさい何かをログしたいことがあるかもしれません"
 "（You may still want to log that something fishy happened）。これはloggerを"
-"重宝する状況です。Flask 0.3以後、loggerが使用できるように事前設定されて"
+"重宝する状況です。Flask 0.3以降は、loggerが使用できるように事前設定されて"
 "います。"
 
 # 9d985c3b693e484d8c2c1228630ec292
@@ -1502,7 +1516,7 @@ msgid ""
 ":class:`~logging.Logger`, so head over to the official :mod:`logging` "
 "docs for more information."
 msgstr ""
-"付随している\ :attr:`~flask.Flask.logger`\ はPython標準のロギングの"
+"付与されている\ :attr:`~flask.Flask.logger`\ はPython標準のロギングの"
 "\ :class:`~logging.Logger`\ なので、さらなる情報は公式の\ :mod:`logging`\ "
 "ドキュメントを確認してください。"
 
@@ -1524,8 +1538,8 @@ msgid ""
 "middlewares from the Werkzeug package to work around bugs in lighttpd, "
 "you can do it like this::"
 msgstr ""
-"アプリケーションにWSGIのミドルウェアを追加したい場合、内部のWSGI"
-"アプリケーションをラップします。例えば、lighttpdのバグへ対処するために"
+"アプリケーションにWSGIのミドルウェアを追加したい場合は、内部のWSGI"
+"アプリケーションをラップできます。例えば、lighttpdのバグへ対処するために"
 "Werkzeugパッケージにあるミドルウェアのひとつを使いたい場合、以下のように"
 "実施できます::"
 
@@ -1542,13 +1556,13 @@ msgid ""
 "simple and easy to use with Flask."
 msgstr ""
 "（Flask）拡張は、よくあるタスクを達成する手助けをするパッケージです。"
-"例えば、Flask-SQLAlchemyはシンプルかつ容易に（SQLAlchemyを）Flaskと一緒に"
-"使用するための、SQLAlchemyのサポートを提供します。"
+"例えば、Flask-SQLAlchemyはSQLAlchemyのサポートを提供し、シンプルかつ容易に"
+"SQLAlchemyをFlaskと一緒に使用できるようにします。"
 
 # e41d486b941e48e385847ce3b902e50e
 #: ../../quickstart.rst:888
 msgid "For more on Flask extensions, have a look at :ref:`extensions`."
-msgstr "Flash拡張についてさらには、\ :ref:`extensions`\ を調べてください。"
+msgstr "Flask拡張についてさらには、\ :ref:`extensions`\ を調べてください。"
 
 # 09f396485bfb49639fd4ad512116d750
 #: ../../quickstart.rst:891
@@ -1558,6 +1572,7 @@ msgstr "webサーバへのデプロイ"
 # 97c96b4cd53247b7919f931b1ead81b9
 #: ../../quickstart.rst:893
 msgid "Ready to deploy your new Flask app? Go to :ref:`deployment`."
-msgstr "新しいFlaskアプリをデプロイする準備ができましたか？\ :ref:`deployment`\ "
+msgstr ""
+"新しいFlaskアプリをデプロイする準備ができましたか？\ :ref:`deployment`\ "
 "へ進んでください。"
 

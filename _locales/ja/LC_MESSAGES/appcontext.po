@@ -43,10 +43,10 @@ msgid ""
 "pushed when a request context is pushed."
 msgstr ""
 "これは、リクエストの期間中はリクエストのレベルのデータを把握する\ "
-":doc:`/reqcontext`\ と似ています。request contextがpushされたとき、対応する"
-"application contextもpushされます（訳注：application contextとrequest context"
-"はFlask内でスタックのデータ構造を使って管理されており、一般的にスタックへ"
-"データを追加することをpushといいます）。"
+":doc:`/reqcontext`\ と似ています。request contextがpushされたとき、対応"
+"するapplication contextもpushされます（訳注：application contextとrequest "
+"contextはFlask内でスタックのデータ構造を使って管理されており、一般的に"
+"スタックへデータを追加することをpushといいます）。"
 
 # a9f2c2afc6044e11bffe2f7578143469
 #: ../../appcontext.rst:18
@@ -64,16 +64,18 @@ msgid ""
 "writing reusable :doc:`blueprints </blueprints>` or :doc:`extensions "
 "</extensions>` there won't be an ``app`` instance to import at all."
 msgstr ""
-":class:`Flask`\ アプリケーションのオブジェクトには、\ :attr:`~Flask.config`\ の"
-"ような、viewや\ :doc:`CLI commands </cli>`\ の中からアクセスするときに便利な"
-"属性があります。しかしながら、\ ``app``\ のインスタンスを自分のプロジェクトの"
-"モジュール内にimportすることは、巡回importの問題に陥りやすくなります。"
-"\ :doc:`app factoryパターン </patterns/appfactories>`\ を使用したり、再利用"
-"可能な\ :doc:`blueprints </blueprints>`\ または\ :doc:`Flask拡張 </extensions>`\ "
-"を書いたりするときは、importするための\ ``app``\ のインスタンスがそもそも存在"
-"しないでしょう。（訳注: app factoryパターンでのfactory以外のコード、blueprint、"
-"Flask拡張のコードでは、自身の処理中でのappインスタンス作成や、グローバル変数"
-"などを使ったappインスタンスへのアクセスを前提にできない制約が生じます）"
+":class:`Flask`\ アプリケーションのオブジェクトには、\ "
+":attr:`~Flask.config`\ のような、viewや\ :doc:`CLI commands </cli>`\ "
+"の中からアクセスするときに便利な属性があります。しかしながら、\ ``app``\ "
+"のインスタンスを自分のプロジェクトのモジュール内にimportすることは、"
+"巡回import（circular import）の問題に陥りやすくなります。\ :doc:`app "
+"factoryパターン </patterns/appfactories>`\ を使用したり、再利用可能な\ "
+":doc:`blueprints </blueprints>`\ または\ :doc:`Flask拡張 </extensions>`\ "
+"を書いたりするときは、importするための\ ``app``\ のインスタンスがそもそも"
+"存在しないでしょう。（訳注: app factoryパターンでのfactory以外のコード、"
+"blueprint、Flask拡張のコードでは、自身の処理中でのappインスタンス作成や、"
+"グローバル変数を使ったappインスタンスへのアクセスなどができない前提の"
+"もとで書くことになります）"
 
 # c25f76ea224949a19dedede3430302a1
 #: ../../appcontext.rst:29
@@ -120,12 +122,13 @@ msgid ""
 " it pops the request context then the application context. Typically, an "
 "application context will have the same lifetime as a request."
 msgstr ""
-"application contextは必要に応じて作成され破壊されます。Flaskアプリケーションが"
-"リクエストの処理を始めたとき、Flaskアプリケーションはapplication contextと\ "
-":doc:`request context </reqcontext>`\ をpushします。リクエストが終了する"
-"とき、Flaskアプリケーションはrequest contextをpopし（訳注: 一般的にスタック"
-"からデータを取り出すことをpopといいます）、それからapplication contextをpop"
-"します。典型的には、application contextはリクエストと同じ生存期間を持ちます。"
+"application contextは必要に応じて作成され破壊されます。Flask"
+"アプリケーションがリクエストの処理を始めたとき、Flaskアプリケーションは"
+"application contextと\ :doc:`request context </reqcontext>`\ をpush"
+"します。リクエストが終了するとき、Flaskアプリケーションはrequest contextを"
+"popし（訳注: 一般的にスタックからデータを取り出すことをpopといいます）、"
+"それからapplication contextをpopします。典型的には、application contextは"
+"リクエストと同じ生存期間を持ちます。"
 
 # 0c0730da1eb141b1b15ace2aae548017
 #: ../../appcontext.rst:51
@@ -161,11 +164,11 @@ msgid ""
 "``with`` block, and everything that runs in the block will have access to"
 " :data:`current_app`. ::"
 msgstr ""
-"もし自分のアプリケーションを設定中、例えばFlask拡張を初期化しているときなど、"
-"にこのエラーを見た場合、\ ``app``\ への直接アクセスが可能なのでcontextを"
-"手動でpushすることが可能です。\ ``with``\ ブロックの中で\ "
-":meth:`~Flask.app_context`\ を使用すると、ブロック内で実行されるものは全て"
-"\ :data:`current_app`\ へアクセスできるようになります。 ::"
+"もし自分のアプリケーションを設定中、例えばFlask拡張を初期化しているとき"
+"など、にこのエラーを見た場合、\ ``app``\ への直接アクセスが可能なので"
+"contextを手動でpushすることが可能です。\ ``with``\ ブロックの中で\ "
+":meth:`~Flask.app_context`\ を使用すると、ブロックの内側で実行している"
+"ものは全て\ :data:`current_app`\ へアクセスできるようになります。 ::"
 
 # 68e8e28d51134ed98203f3b40225cebb
 #: ../../appcontext.rst:83
@@ -216,7 +219,8 @@ msgstr ""
 #: ../../appcontext.rst:103
 msgid "A common use for :data:`g` is to manage resources during a request."
 msgstr ""
-":data:`g`\ のよくある利用方法はリクエストの期間中リソースを管理することです。"
+":data:`g`\ のよくある利用方法はリクエストの期間中リソースを管理すること"
+"です。"
 
 # d0b7f1998ff541099541084aad8a797f
 #: ../../appcontext.rst:105
@@ -224,8 +228,8 @@ msgid ""
 "``get_X()`` creates resource ``X`` if it does not exist, caching it as "
 "``g.X``."
 msgstr ""
-"``get_X()``\ で、リソース\ ``X``\ が存在しない場合にはそれを作成し、\ ``g.X``\ "
-"としてキャッシュします。"
+"``get_X()``\ で、リソース\ ``X``\ が存在しない場合にはそれを作成し、\ "
+"``g.X``\ としてキャッシュします。"
 
 # 7b4c850355474ab89e6e8dbf141ac0e6
 #: ../../appcontext.rst:107
@@ -233,8 +237,8 @@ msgid ""
 "``teardown_X()`` closes or otherwise deallocates the resource if it "
 "exists. It is registered as a :meth:`~Flask.teardown_appcontext` handler."
 msgstr ""
-"``teardown_X()``\ で、リソースがもし存在する場合にはそれを閉じるか、もしくは"
-"（訳注: メモリなどの）割り当てを解消します。その処理は\ :meth:"
+"``teardown_X()``\ で、リソースがもし存在する場合にはそれを閉じるか、"
+"もしくは（訳注: メモリなどの）割り当てを解消します。その処理は\ :meth:"
 "`~Flask.teardown_appcontext`\ ハンドラとして（appに）登録されます。"
 
 # f071b56992174291aec8194e3fdbc5bd
@@ -262,7 +266,7 @@ msgid ""
 "local from ``get_db()``::"
 msgstr ""
 ":class:`werkzeug.local.LocalProxy`\ を使用して、\ ``get_db()``\ から"
-"context範囲内で有効なもの（context local）を新しく作成することが可能です\ ::"
+"context内限定のもの（context local）を新しく作成することが可能です\ ::"
 
 # 5a8f7022d94b45778f0dfa23ad7a4bf3
 #: ../../appcontext.rst:138

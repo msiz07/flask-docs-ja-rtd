@@ -1,7 +1,7 @@
 {%- extends "!layout.html" %}
 {%- block extrahead %}
-{{ super() }}
-{% if IS_READTHEDOCS %}
+  {{ super() }}
+  {% if IS_READTHEDOCS %}
     <meta name="google-site-verification" content="{{ GOOGLE_SITE_VERIFICATION }}" />
-{% endif %}
+  {% endif %}
 {% endblock %}
