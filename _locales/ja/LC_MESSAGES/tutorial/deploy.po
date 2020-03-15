@@ -56,9 +56,10 @@ msgid ""
 "*wheel* format, with the ``.whl`` extension. Make sure the wheel library "
 "is installed first:"
 msgstr ""
-"どこかへ自分のアプリケーションを展開したいときは、配付ファイルをビルド"
-"します。現時点の標準的なPythonの配付ファイルは、拡張子が\ ``.whl``\ の\ "
-"*wheel*\ 形式です。始めに、wheelライブラリを確実にインストールしておきます:"
+"どこかへ自分のアプリケーションを展開（deploy）したいときは、配付ファイルを"
+"構築（build）します。現時点の標準的なPythonの配付ファイルは、拡張子が\ "
+"``.whl``\ の\ *wheel*\ 形式です。始めに、wheelライブラリを確実にインストール"
+"しておきます:"
 
 # bd909c76d3f34a499cf49f87069c70f3
 #: ../../tutorial/deploy.rst:26
@@ -132,9 +133,9 @@ msgid ""
 msgstr ""
 "このチュートリアルの始めに、\ :data:`SECRET_KEY`\ へは標準設定の値を"
 "与えていました。これは本番環境ではなにかしら規則性のない（random）byte"
-"へ変更するべきです。さもないと、攻撃者が公開された\ ``'dev'``\ キーを"
-"使用してセッションのクッキーの変更や、その他の秘密鍵を使ったあらゆる"
-"ことをできるようになります。"
+"へ変更するべきです。さもないと、攻撃者が公開された\ ``'dev'``\ （に設定"
+"されている）キーを使用してセッションのクッキーの変更や、その他の秘密鍵を"
+"使ったあらゆることをできるようになります。"
 
 # 9a0be69797604e2f8960b3690c5fa367
 #: ../../tutorial/deploy.rst:69
@@ -147,7 +148,7 @@ msgid ""
 "Create the ``config.py`` file in the instance folder, which the factory "
 "will read from if it exists. Copy the generated value into it."
 msgstr ""
-"もし存在していたらfactoryが読み取りにいく、\ ``config.py``\ ファイルを"
+"もし存在していたらfactoryが読み取りにいく\ ``config.py``\ ファイルを、"
 "インスタンスフォルダに作成します。生成した値（秘密の鍵）をその中に"
 "コピーします。"
 
@@ -162,7 +163,7 @@ msgid ""
 "You can also set any other necessary configuration here, although "
 "``SECRET_KEY`` is the only one needed for Flaskr."
 msgstr ""
-"その他にも、必要な設定は何でもここで設定できますが、Flaskが必要と"
+"その他にも、必要な設定は何でもここで設定できますが、Flaskrが必要と"
 "するのは\ ``SECRET_KEY``\ だけです。"
 
 # 6211fcc27add481a95507aa86a250e5c
@@ -180,7 +181,7 @@ msgid ""
 msgstr ""
 "開発環境ではなく公開されるように（Flaskを）実行するときは、組み込みの開発"
 "サーバを使用（\ ``flask run``\ ）するべきではありません。開発サーバは便利な"
-"ようにWerkzeugによって提供されていますが、効率性、安全性、セキュリティを特別"
+"ようにWerkzeugによって提供されていますが、効率性、安定性、セキュリティを特別"
 "意識して設計されてはいません。"
 
 # ef05441c3fc4477e963db40963b3d463

@@ -30,8 +30,8 @@ msgid ""
 "module."
 msgstr ""
 "このアプリケーションではユーザ情報と投稿記事を格納するために\ `SQLite`_\ "
-"データベースを使用していきます。Pythonでは組み込みのSQLiteサポートが"
-"\ :mod:`sqlite3`\ モジュールにあります。"
+"データベースを使用していきます。Pythonでは、組み込みのSQLiteサポートの"
+"\ :mod:`sqlite3`\ モジュールが一緒に提供されています。"
 
 # 5dafff79f3144781815591e582e52e62
 #: ../../tutorial/database.rst:10
@@ -45,8 +45,8 @@ msgid ""
 msgstr ""
 "SQLiteは、データベースサーバを別に用意する必要がなく、Pythonに組み込まれて"
 "いるために便利です。しかし、もし並列なリクエストが同時にデータベースへの"
-"書き込みを試みた場合、それぞれの書き込みが直列で処理されるため、どちらの"
-"処理も遅くなります。これは、小さなアプリケーションでは気付かないでしょう。"
+"書き込みを試みた場合、それぞれの書き込みが直列で処理されるため、それらの"
+"処理は遅くなります。これは、小さなアプリケーションでは気付かないでしょう。"
 "もし大きくなってきたら、違うデータベースへ切り替えたくなるかもしれません。"
 
 # 10f95297a6db40d6948a3bafb479ee72
@@ -55,8 +55,11 @@ msgid ""
 "The tutorial doesn't go into detail about SQL. If you are not familiar "
 "with it, the SQLite docs describe the `language`_."
 msgstr ""
-"このチュートリアルではSQLについての詳細には進みません。もしSQLに慣れて"
-"いない場合は、SQLiteのドキュメントが\ `language`_\ を説明しています。"
+"このチュートリアルではSQLについての詳細には深入りしません。もしSQLに慣れて"
+"いない場合は、SQLiteのドキュメントが\ `SQL言語`_\ を説明しています。"
+"
+
+.. _SQL言語: language"
 
 # 6e5cb94b977049899e8deea67ffeedac
 #: ../../tutorial/database.rst:25
@@ -104,10 +107,10 @@ msgid ""
 "connection if ``get_db`` is called a second time in the same request."
 msgstr ""
 ":data:`g`\ は特別なオブジェクトで、リクエストごとに個別なものになります。"
-"それはリクエストの間は複数の関数によってアクセスされるようなデータを格納"
-"するために使われます。connectionは（gオブジェクトに）格納されて、同じ"
-"リクエストの中でもし\ ``get_db``\ が2回呼び出された場合、新しいconnectionを"
-"作成する代わりに、再利用されます。"
+"それは、リクエストの（処理）期間中は複数の関数によってアクセスされるような"
+"データを格納するために使われます。connectionは（gオブジェクトに）格納されて、"
+"もしも同じリクエストの中で\ ``get_db``\ が2回呼び出された場合、新しい"
+"connectionを作成する代わりに、再利用されます。"
 
 # 57c49f37c264451ca62a8b74eef260ea
 #: ../../tutorial/database.rst:69
@@ -119,12 +122,12 @@ msgid ""
 "handling a request, so :data:`current_app` can be used."
 msgstr ""
 ":data:`current_app`\ はもうひとつの特別なオブジェクトで、リクエストを"
-"処理中のFlaskアプリケーションを指し示します。application factoryを利用"
-"しているため、残りのコードを書いているときは、アプリケーションのオブジェクト"
+"処理中のFlaskアプリケーションを指し示します。application factoryを利用して"
+"いるため、残りのコードを書いているときは、アプリケーションのオブジェクト"
 "は存在しません"
 "（訳注: Flaskアプリを作成するコードはapplication factoryだけで、その他の"
-"殆どの箇所ではapplication factoryを呼んでアプリケーションを作成・利用する"
-"コードは基本的に書かないというような意味合いだと思います）。"
+"箇所ではapplication factoryを呼んでアプリケーションのインスタンスを直接"
+"作成・利用するコードは基本的に書かないというような意味合いだと思います）。"
 "\ ``get_db``\ が呼び出されるのは、アプリケーションが作成されてリクエストを"
 "処理しているときであるため、\ :data:`current_app`\ が使用できます。"
 
@@ -135,9 +138,9 @@ msgid ""
 "by the ``DATABASE`` configuration key. This file doesn't have to exist "
 "yet, and won't until you initialize the database later."
 msgstr ""
-":func:`sqlite3.connect`\ は、設定（訳注: current_app.config）のキー\ "
-"``DATABASE``\ で示されるファイルへのconnectを確立します。このファイルはまだ"
-"存在せず、後程データベースを初期化するまで存在しないままです。"
+":func:`sqlite3.connect`\ は、設定の（訳注: current_app.configの）キー\ "
+"``DATABASE``\ で示されるファイルへのconnectionを確立します。このファイルは"
+"まだ存在せず、後程データベースを初期化するまで存在しないままです。"
 
 # 1ccdf12af69342b5afe5583956828437
 #: ../../tutorial/database.rst:79
@@ -179,7 +182,7 @@ msgstr ""
 "ます。これらはデータを格納および取得できるようになる前に作成されている"
 "必要があります。Flaskrではユーザ情報は\ ``user``\ 表に、投稿記事は\ ``post``\ "
 "表に格納していきます。空の表を作成するために必要なSQLコマンドのファイル"
-"を作成します。"
+"を作成します:"
 
 # 8d7aacca972d4058ac35d7a7e6379d0e
 #: ../../tutorial/database.rst:96
@@ -206,10 +209,9 @@ msgid ""
 msgstr ""
 ":meth:`open_resource() <Flask.open_resource>`\ は、パッケージ\ ``flaskr``\ "
 "から相対的な場所で指定されたファイルを開きます。後でアプリケーションを"
-"デプロイしたとき、（open_resourceを使用するために）その場所（訳注: デプロイ"
-"された場所）を知る必要がないためそれは便利です。\ ``get_db``\ は、ファイル"
-"から読み取ったコマンドを実行するために使用される、データベースのconnectionを"
-"返します。"
+"デプロイしたとき、アプリケーションの場所を知らなくてもファイルが開けるため、"
+"それは便利です。\ ``get_db``\ は、ファイルから読み取ったコマンドを実行する"
+"ために使用される、データベースのconnectionを返します。"
 
 # a5c54751d2444cc8a7d30aedf21566e9
 #: ../../tutorial/database.rst:143
@@ -220,8 +222,8 @@ msgid ""
 msgstr ""
 ":func:`click.command`\ は、\ ``init_db``\ 関数を呼び出して成功時の"
 "メッセージを表示する、\ ``init-db``\ と呼ばれる、コマンドラインから"
-"使用できるコマンドを定義します。command作成に関してさらに学習するため"
-"には\ :ref:`call`\ を読むことができます。"
+"使用できるコマンドを定義します。\ :ref:`call`\ を読むと、command作成に"
+"関してさらに学習できます。"
 
 # 87fbdc1f6a1d4465ab8aeb48871ea63f
 #: ../../tutorial/database.rst:149
@@ -241,8 +243,11 @@ msgstr ""
 "インスタンスに登録される必要があります; さもなければ、アプリケーション"
 "によって使用されないでしょう。しかしながら、このアプリケーションではfactory"
 "関数を使用しているので、（close_dbとinit_db_command）関数を書いているときは"
-"そのインスタンスが利用可能ではありません。代わりに、アプリケーションを受け"
-"取って登録を行う関数を作成します。"
+"アプリケーションのインスタンスが利用可能ではありません（訳注: factoryを"
+"使わずモジュールの変数に\ ``app = Flask(__name__)``\ とインスタンスを格納"
+"したときのように、関数からアプリケーションのインスタンスに直接アクセスでき"
+"ないというような意味合い）。代わりに、アプリケーションを受け取って登録を"
+"行う関数を作成します。"
 
 # caed598253a048b189ff92c1bb287107
 #: ../../tutorial/database.rst:164
@@ -303,10 +308,10 @@ msgid ""
 "env as described in :ref:`install-activate-env`. You'll also need to set "
 "``FLASK_APP`` and ``FLASK_ENV`` as shown on the previous page."
 msgstr ""
-"もし前のページのサーバをまだ実行中である場合は、サーバを停止するか、この"
-"コマンドを新しい端末で実行することができます。もし新しい端末を使用する"
+"もし前のページのサーバをまだ実行中である場合は、サーバを停止することも、"
+"このコマンドを新しい端末で実行することもできます。もし新しい端末を使用する"
 "場合は、プロジェクトのディレクトリへ移動して、\ :ref:`install-activate-env`\ "
-"で説明したように環境を有効にする（activate）ことを思い出してください。"
+"で説明したように環境を有効にする（activate）ことを覚えておいてください。"
 "さらに、前のページで示したように、\ ``FLASK_APP``\ と\ ``FLASK_ENV``\ の"
 "設定も必要です。"
 

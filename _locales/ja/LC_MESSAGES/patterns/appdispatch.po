@@ -20,7 +20,7 @@ msgstr ""
 # f77f35becfde412f894643ddc2e8055c
 #: ../../patterns/appdispatch.rst:4
 msgid "Application Dispatching"
-msgstr ""
+msgstr "アプリケーションの振り分け（Application Dispatching）"
 
 # 983396e6e0f04af38d39485859219281
 #: ../../patterns/appdispatch.rst:6
@@ -32,6 +32,12 @@ msgid ""
 "you want.  The usefulness of this depends on how the applications work "
 "internally."
 msgstr ""
+"アプリケーションの振り分けは、WSGIレベルで複数のFlaskアプリケーションを"
+"併合するプロセスです。Flaskアプリケーションだけでなく、どんなWSGI"
+"アプリケーションでも併合できます。これは、もし望むならば、DjangoとFlask"
+"のアプリケーションを同じインタープリタで横並びに走らせることを可能に"
+"します。このことの有益性は、内部的なアプリケーションの動き方に依存"
+"します。"
 
 # 310d603dd5f34cd2a2a63a8ae121da57
 #: ../../patterns/appdispatch.rst:13
@@ -41,11 +47,15 @@ msgid ""
 " Flask applications that are entirely isolated from each other. They run "
 "different configurations and are dispatched on the WSGI level."
 msgstr ""
+":ref:`モジュール化のアプローチ <larger-applications>`\ との根本的な違いは、"
+"こちらのケースでは同一または異なるFlaskアプリケーションをお互いから全く"
+"分離して走らせていることです。それらは異なる設定で走り、WSGIのレベルで"
+"振り分けられます（dispatched）。"
 
 # dfcabfad8e2042c0abee68cc5ecf5f36
 #: ../../patterns/appdispatch.rst:20
 msgid "Working with this Document"
-msgstr ""
+msgstr "このドキュメントでの作業（Working with this Document）"
 
 # d6db1262615441ef88aa1147bd866e50
 #: ../../patterns/appdispatch.rst:22
@@ -55,6 +65,11 @@ msgid ""
 ":ref:`deployment`. For development, Werkzeug provides a builtin server "
 "for development available at :func:`werkzeug.serving.run_simple`::"
 msgstr ""
+"以下に示す技法と例は、それぞれどんなWSGIサーバでも走らせることが可能な\ "
+"``application``\ オブジェクトをもたらします。本番環境用には、\ :ref:"
+"`deployment`\ を確認してください。開発用には、Werkzeugは\ :func:"
+"`werkzeug.serving.run_simple`\ で利用可能な開発用の組込みサーバを"
+"提供しています::"
 
 # 6ca86a918fd24079821418b05cb91d9d
 #: ../../patterns/appdispatch.rst:30
@@ -63,6 +78,9 @@ msgid ""
 "intended for use in production.  Use a :ref:`full-blown WSGI server "
 "<deployment>`."
 msgstr ""
+":func:`run_simple <werkzeug.serving.run_simple>`\ は本番環境で使用する"
+"ためにのものではないことに注意してください。（本番環境では）\ :ref:"
+"`成熟したWSGIサーバ <deployment>` を使用してください。"
 
 # 14ea9bce361242a68c5ff4fd9dc3e7d4
 #: ../../patterns/appdispatch.rst:33
@@ -72,11 +90,15 @@ msgid ""
 "example with debugging and :func:`run_simple "
 "<werkzeug.serving.run_simple>`::"
 msgstr ""
+"インタラクティブなデバッガを使用するためには、アプリケーションとsimple "
+"serverの両方でデバッグ機能（debugging）が有効になっている必要があります。"
+"以下は、デバッグ機能と\ :func:`run_simple <werkzeug.serving.run_simple>`\ を"
+"使った「hello world」の例です::"
 
 # 3739c7668cf64f76a1b563ca00542b98
 #: ../../patterns/appdispatch.rst:53
 msgid "Combining Applications"
-msgstr ""
+msgstr "アプリケーションの併合（Combining Applications）"
 
 # c3412cbaa97f43a98dd2f0af50f989eb
 #: ../../patterns/appdispatch.rst:55
@@ -88,6 +110,13 @@ msgid ""
 "are combined by the dispatcher middleware into a larger one that is "
 "dispatched based on prefix."
 msgstr ""
+"もしも全く分かれたアプリケーションがあって、それらを同じPythonの"
+"インタープリタのプロセスで隣同士で動かしたい場合には、\ :class:"
+"`werkzeug.middleware.dispatcher.DispatcherMiddleware`\ を活用できます。"
+"そのときの考え方は、Flaskアプリケーションはそれぞれ正当なWSGIアプリ"
+"ケーションであり、それらはより大きなアプリケーションへdispatcher "
+"middlewareによって併合され、（URLのパスの）先頭部分（prefix）に"
+"基づいて振り分けられるというものです。"
 
 # de89a7ce5a67449eb8541ee0539b41e9
 #: ../../patterns/appdispatch.rst:62
@@ -95,11 +124,13 @@ msgid ""
 "For example you could have your main application run on ``/`` and your "
 "backend interface on ``/backend``::"
 msgstr ""
+"例えば、メインのアプリケーションを\ ``/``\ で走らせ、バックエンドの"
+"インタフェースを\ ``/backend``\ で走らせることができます::"
 
 # 727cc95b142f4f60af6d7a559e852193
 #: ../../patterns/appdispatch.rst:75
 msgid "Dispatch by Subdomain"
-msgstr ""
+msgstr "サブドメインによる振り分け"
 
 # 46b331d810dc462a928fc562bd541b9e
 #: ../../patterns/appdispatch.rst:77
@@ -111,6 +142,11 @@ msgid ""
 "application to support creating new instances in functions have a look at"
 " the :ref:`app-factories` pattern."
 msgstr ""
+"ときには、同じアプリケーションの複数のインスタンスを違う設定で使いたい"
+"かもしれません。アプリケーションが関数の内側で作られ、アプリケーションを"
+"初期化するためにその関数を呼び出せると仮定します。関数の中での新しい"
+"インスタンスの作成をサポートするアプリケーションを開発するには、\ "
+":ref:`app-factories`\ を確認してください。"
 
 # 38373cc4de44498e8d3ef34d32a6b80f
 #: ../../patterns/appdispatch.rst:84
@@ -122,6 +158,12 @@ msgid ""
 "listen on all subdomains you can use a very simple WSGI application to do"
 " the dynamic application creation."
 msgstr ""
+"とてもありがちな例は、アプリケーションをサブドメインごとに作成すること"
+"でしょう。例えば、全てのサブドメインへの全てのリクエストを自分のアプリ"
+"ケーションへ振り分けるようにwebサーバを設定し、それからサブドメインの"
+"情報を使用してユーザ固有のインスタンスを作成します。全てのサブドメインを"
+"受信するように一度サーバを準備（set up）すれば、動的なアプリケーション"
+"作成をするとてもシンプルなWSGIアプリケーションを使用できます。"
 
 # dc151dc909e04f7fa4f0bf0f0cc8babf
 #: ../../patterns/appdispatch.rst:91
@@ -131,16 +173,20 @@ msgid ""
 "delegates it to your Flask application.  If that application does not "
 "exist yet, it is dynamically created and remembered::"
 msgstr ""
+"この観点での抽象化の完璧なレベルは、WSGIの階層です。（以下の例では）受信"
+"するリクエストを調べ、そしてリクエストをFlaskアプリケーションへ移譲する、"
+"独自のWSGIアプリケーションを自分で作ります。もしもそのアプリケーションが"
+"まだ存在しない場合、それは動的に作成され記憶されます::"
 
 # 578f7473e86341d5bc608d94e58b32bc
 #: ../../patterns/appdispatch.rst:122
 msgid "This dispatcher can then be used like this::"
-msgstr ""
+msgstr "そして、この振り分け機能（dispatcher）は、以下のように使用できます::"
 
 # e5d133f87e96426d93c682e4d1981623
 #: ../../patterns/appdispatch.rst:144
 msgid "Dispatch by Path"
-msgstr ""
+msgstr "パスによる振り分け（Dispatch by Path）"
 
 # d707172dcc024e5ea710b703ac3cd769
 #: ../../patterns/appdispatch.rst:146
@@ -149,6 +195,9 @@ msgid ""
 "the ``Host`` header to figure out the subdomain one simply looks at the "
 "request path up to the first slash::"
 msgstr ""
+"URLのパスによる振り分けは非常に似ています。サブドメインを理解するために\ "
+"``Host``\ ヘッダを調べる代わりに、シンプルにリクエストのパスを最初の"
+"スラッシュまで調べます::"
 
 # db5b2d63bd46495fbd0c8ee3e7a6dafb
 #: ../../patterns/appdispatch.rst:178
@@ -157,4 +206,7 @@ msgid ""
 "falls back to another application if the creator function returns "
 "``None``::"
 msgstr ""
+"これとサブドメインのものとの大きな違いは、こちら（上述のコード例）は、"
+"もしもアプリケーション作成関数が\ ``None``\ を返したときは、別の"
+"アプリケーションで代わりに対応（fall back）することです::"
 

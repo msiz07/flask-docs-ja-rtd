@@ -20,7 +20,7 @@ msgstr ""
 # 9cd8d3337f6c4a718f12b26aa2fa67a5
 #: ../../logging.rst:2
 msgid "Logging"
-msgstr ""
+msgstr "ログ処理（Logging）"
 
 # 445fb48cfe0a466db5e657e82b655691
 #: ../../logging.rst:4
@@ -30,11 +30,17 @@ msgid ""
 "which takes the same name as :attr:`app.name <flask.Flask.name>`. This "
 "logger can also be used to log your own messages."
 msgstr ""
+"Flaskは標準的なPythonの\ :mod:`logger`\ を使用します。Flaskアプリケーション"
+"に関するメッセージは、\ :attr:`app.name <flask.Flask.name>`\ と同じ名前を"
+"取り入れた\ :meth:`app.logger <flask.Flask.logger>`\ を使ってログされます。"
+"このloggerは自分独自のメッセージをログするためにも使用されます（訳注: "
+"Flask自体のログだけでなく、Flaskアプリ開発者がアプリのログを出力するため"
+"にも使用するという意味合いだと思います）。"
 
 # 32060d07e20c4a6582224f8eabbaae2e
 #: ../../logging.rst:25
 msgid "Basic Configuration"
-msgstr ""
+msgstr "基本設定（Basic Configuration）"
 
 # 96f94e1b8ce646269c6333911c540ce1
 #: ../../logging.rst:27
@@ -45,6 +51,11 @@ msgid ""
 "add a default handler. If possible, configure logging before creating the"
 " application object."
 msgstr ""
+"自分のプロジェクト用にログ処理を設定したいときは、プログラム開始時に出来る"
+"だけ早く実施するべきです。もしログ処理を設定する前に\ :meth:`app.logger "
+"<flask.Flask.logger>`\ が使われたときは、標準の処理器（handler）が追加"
+"されます。可能であれば、アプリケーションのオブジェクトを作成する前にログ"
+"処理を設定してください。"
 
 # f916edc1793249c6b081031b6614f976
 #: ../../logging.rst:32
@@ -52,6 +63,9 @@ msgid ""
 "This example uses :func:`~logging.config.dictConfig` to create a logging "
 "configuration similar to Flask's default, except for all logs::"
 msgstr ""
+"以下の例では、全てのログを対象にしていること以外はFlaskの標準設定と似た"
+"ログ処理設定を作成するために、\ :func:`~logging.config.dictConfig`\ を使用"
+"しています::"
 
 # 972dff3eddab44d5b5d0d2c50c45e691
 #: ../../logging.rst:57
@@ -68,11 +82,17 @@ msgid ""
 "(which is usually :data:`sys.stderr`). Outside a request, it will log to "
 ":data:`sys.stderr`."
 msgstr ""
+"もし自分度ログ処理設定をしない場合、Flaskは\ :meth:`app.logger "
+"<flask.Flask.logger>`\ へ\ :class:`~logging.StreamHandler`\ を自動的に"
+"追加するでしょう。リクエストの処理中は、WSGIサーバによって\ "
+"``environment['wsgi.errors']``\ で指定されたストリーム（普通は\ "
+":data:`sys.stderr`\ です）へ書き込みます。リクエストの外側では、\ "
+":data:`sys.stderr`\ へログします。"
 
 # 18e58fd131224d9a9ee26fb99951d870
 #: ../../logging.rst:67
 msgid "Removing the Default Handler"
-msgstr ""
+msgstr "標準の処理器（Handler）の除去"
 
 # 42a9de7a9a484b15bbd26c03f94c84b9
 #: ../../logging.rst:69
@@ -81,11 +101,15 @@ msgid ""
 "<flask.Flask.logger>`, and need to remove the default handler, you can "
 "import and remove it::"
 msgstr ""
+"もし\ :meth:`app.logger <flask.Flask.logger>`\ へアクセスした後でログ処理"
+"設定をし、標準のhandlerを取り除く必要がある場合、それをimportしてremove"
+"できます（訳注: 以下のコード例で「import」「remove～」とあるような処理が"
+"できます）::"
 
 # f67b1bbcf2e2456eae82866aa7394883
 #: ../../logging.rst:79
 msgid "Email Errors to Admins"
-msgstr ""
+msgstr "管理者へのエラーのメール送信"
 
 # d81bcfed5c8e44b1a9e74e70990b8319
 #: ../../logging.rst:81
@@ -95,6 +119,10 @@ msgid ""
 " will probably send log messages to a file, and you'll only check that "
 "file if a user tells you something went wrong."
 msgstr ""
+"本番環境用に遠隔サーバでアプリケーションを走らせているとき、おそらく"
+"あなたはそれほど頻繁にログメッセージを調べようとはしないでしょう。WSGI"
+"サーバはおそらくログメッセージをファイルへ送り、もしもユーザが何か上手く"
+"いってないと伝えたときだけ、ログをチェックするでしょう。"
 
 # a05a56b32aea41488c5094fdbbee2ca9
 #: ../../logging.rst:86
@@ -103,6 +131,9 @@ msgid ""
 ":class:`logging.handlers.SMTPHandler` to send an email when errors and "
 "higher are logged. ::"
 msgstr ""
+"バグの発見と修正に関して先手を取れるよう、エラーもしくはより重大なことが"
+"ログされたときにはメールを送信するための\ :class:"
+"`logging.handlers.SMTPHandler`\ を設定できます。::"
 
 # 66b51268c8054ee78f3f02aabab6610b
 #: ../../logging.rst:107
@@ -110,11 +141,14 @@ msgid ""
 "This requires that you have an SMTP server set up on the same server. See"
 " the Python docs for more information about configuring the handler."
 msgstr ""
+"これには、同じサーバでSMTPサーバが準備されていることが必要です。この"
+"handlerの設定に関するさらなる情報についてはPythonのドキュメントを見て"
+"ください。"
 
 # 566e82779eec46d0986d20bafdcf0464
 #: ../../logging.rst:112
 msgid "Injecting Request Information"
-msgstr ""
+msgstr "リクエストの情報の注入"
 
 # 55f7880c223a40c39c9acb18fc0c7171
 #: ../../logging.rst:114
@@ -125,11 +159,16 @@ msgid ""
 "the formatter for Flask's default handler, the mail handler defined "
 "above, or any other handler. ::"
 msgstr ""
+"例えばIPアドレス等、リクエストに関する情報をもっと見ることは、いくらかの"
+"エラーのデバッグする手助けになることがあります。メッセージ中で使用可能に"
+"なる独自のフィールドを注入するために、\ :class:`logging.Formatter`\ の"
+"サブクラスを作成できます。Flaskの標準handler、先ほど定義したメールの"
+"handler、およびあらゆるその他のhandlerに対してformatterを変更できます。::"
 
 # 9e7f426db8464fceaf0d5f5b298e1575
 #: ../../logging.rst:143
 msgid "Other Libraries"
-msgstr ""
+msgstr "他のライブラリ"
 
 # 85ec1a4ef8fc48cab04eb2d7e00c810c
 #: ../../logging.rst:145
@@ -138,6 +177,10 @@ msgid ""
 " messages from those logs too. The simplest way to do this is to add "
 "handlers to the root logger instead of only the app logger. ::"
 msgstr ""
+"他のライブラリでloggingを広く使用していて、それらのログからも関連する"
+"メッセージを見たくなることがあるかもしれません。これを行う最も単純な"
+"やり方は、app.loggerにだけhandlerを追加する代わりに、root（大本）の"
+"loggerにhandlerを追加することです。::"
 
 # 294cecfcd0564731ba4704299d3ec30d
 #: ../../logging.rst:155
@@ -146,6 +189,8 @@ msgid ""
 " you care about separately, instead of configuring only the root logger. "
 "::"
 msgstr ""
+"自分のプロジェクト次第で、rootのloggerだけを設定する代わりに、扱っている"
+"loggerをそれぞれ別々に設定する方がより便利かもしれません。"
 
 # 41df0a5c72f34072a0ab9bc5e30d1d37
 #: ../../logging.rst:168
@@ -159,11 +204,14 @@ msgid ""
 "logger. If the root logger has no handlers configured, Werkzeug adds a "
 ":class:`~logging.StreamHandler` to its logger."
 msgstr ""
+"Werkzeugは基本的なリクエスト／レスポンスの情報を\ ``'werkzeug'``\ のlogger"
+"へログします。もしrootのloggerにhandlerが設定されていない場合、werkzeugは"
+"\ :class:`~logging.StreamHandler`\ をwerkzeugのloggerへ追加します。"
 
 # 1748e8b0ca2346679db2c8f09439ccce
 #: ../../logging.rst:176
 msgid "Flask Extensions"
-msgstr ""
+msgstr "Flask拡張"
 
 # a6e82f52b00040288b0f5ee3d9613a14
 #: ../../logging.rst:178
@@ -172,4 +220,7 @@ msgid ""
 ":meth:`app.logger <flask.Flask.logger>` or its own named logger. Consult "
 "each extension's documentation for details."
 msgstr ""
+"状況次第で、Flask拡張は\ :meth:`app.logger <flask.Flask.logger>`\ もしくは"
+"独自の名前のloggerへログすることを選択するかもしれません。詳細については、"
+"それぞれのFlask拡張のドキュメントを調べてください。"
 

@@ -44,7 +44,7 @@ msgid ""
 "directory from now on. The file names at the top of each code block are "
 "relative to this directory."
 msgstr ""
-"このチュートリアルでは、ここからは\ ``flask-tutorial``\ ディレクトリから"
+"このチュートリアルでは、ここからは\ ``flask-tutorial``\ ディレクトリで"
 "作業していると想定します。コード記述部分の上にあるファイル名は、それぞれ"
 "flask-tutorialディレクトリから相対的なものになります。"
 
@@ -113,7 +113,7 @@ msgstr ""
 # 5a52d24154744a5ab618d8d503731972
 #: ../../tutorial/layout.rst:50
 msgid "Any other project files you might add in the future."
-msgstr "あらゆる他のプロジェクト用ファイルを、将来あなたが加えるかもしれません。"
+msgstr "将来自分で追加するかもしれない、その他のあらゆるファイル。"
 
 # 2e539f0c70404b7ab5aea521e2bd995e
 #: ../../tutorial/layout.rst:54
