@@ -29,11 +29,10 @@ msgstr "Pythonのバージョン"
 
 # 4d56e43578524f3ba7a8b83fc9b09ac5
 #: ../../flask/docs/installation.rst:9
-#, fuzzy
 msgid ""
 "We recommend using the latest version of Python 3. Flask supports Python "
 "3.5 and newer, Python 2.7, and PyPy."
-msgstr "Python 3の最新バージョンを使うことを推奨します。FlaskはPython 3.4以降、Python 2.7、そしてPyPyをサポートします。"
+msgstr "Python 3の最新バージョンを使うことを推奨します。FlaskはPython 3.5以降、Python 2.7、そしてPyPyをサポートします。"
 
 # 8eeec08d592b4542a5b95959ae657c49
 #: ../../flask/docs/installation.rst:13
