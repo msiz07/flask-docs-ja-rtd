@@ -264,7 +264,6 @@ msgstr ""
 
 # 53ec2063b0f64f12ba3618df677c84d1
 #: ../../flask/docs/appcontext.rst:143
-#, fuzzy
 msgid ""
 "If you're writing an extension, :data:`g` should be reserved for user "
 "code. You may store internal data on the context itself, but be sure to "
@@ -275,7 +274,7 @@ msgstr ""
 "もしFlask拡張を書いている場合は、\\ :data:`g`\\ "
 "はユーザのコードのために予約しておく（使わないでおく）べきです。内部データをcontext自身に格納してもよいですが、十分に独自性のある名前を使うことを確実におさえてください。その時点のcontextは\\"
 " :data:`_app_ctx_stack.top <_app_ctx_stack>`\\ を使ってアクセスされます。さらなる情報は\\ "
-":doc:`extensiondev`\\ を確認してください。"
+":doc:`/extensiondev`\\ を確認してください。"
 
 # fda42d7a7ce14e41a9c351a06f88d227
 #: ../../flask/docs/appcontext.rst:151
