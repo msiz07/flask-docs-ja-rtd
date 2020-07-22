@@ -24,14 +24,13 @@ msgstr "Flask拡張の開発"
 
 # b9b9314d4f7041de93344467d1cb7b6b
 #: ../../flask/docs/extensiondev.rst:4
-#, fuzzy
 msgid ""
 "Flask, being a microframework, often requires some repetitive steps to "
 "get a third party library working. Many such extensions are already "
 "available on `PyPI`_."
 msgstr ""
 "Flaskは、小さなフレームワークなので、サードパーティのライブラリを機能させるために、しばしば反復的なステップを要求します。そのようなFlask拡張の多くは\\"
-" `PyPI <https://pypi.org/search/?c=Framework+%3A%3A+Flask>`_\\ で入手可能です。"
+" `PyPI`_\\ で入手可能です。"
 
 # 67d2ec6fde344ea79695b8c8a950410b
 #: ../../flask/docs/extensiondev.rst:8
@@ -421,7 +420,6 @@ msgstr "他から学習しましょう"
 
 # b0bfa4bbeed2416ab6f901fa93a5dd4d
 #: ../../flask/docs/extensiondev.rst:274
-#, fuzzy
 msgid ""
 "This documentation only touches the bare minimum for extension "
 "development. If you want to learn more, it's a very good idea to check "
@@ -433,14 +431,10 @@ msgid ""
 "but also avoids having multiple developers working in isolation on pretty"
 " much the same problem."
 msgstr ""
-"このドキュメントではFlask拡張開発の必要最小限だけに触れています。もしさらに学びたいときは、\\ `Flask Extension "
-"Registry`_\\ "
+"このドキュメントではFlask拡張開発の必要最小限だけに触れています。もしさらに学びたいときは、\\ `PyPI`_\\ "
 "にある既存のFlask拡張をチェックするのはとても良いアイデアです。もしも途方に暮れたときは、魅力的なAPIへのアイデアを得るために\\ "
-"`mailinglist`_\\ と\\ `IRC channel`_\\ "
-"もあります。特に、もし誰もしたことのないことをやろうとしている場合は、さらにいくらかのインプットを得るのはとても良いアイデアになるかもしれません。これは人々がFlask拡張から何を求めることがあるかについての使えるフィードバックを生み出すだけでなく、殆ど同じ問題に対して複数の開発者が分け隔てられたまま作業することも回避させます。\\"
-" **（訳注: この日本語訳作成時点で、この段落にある**\\ `Flask Extension Registry`_\\ "
-"**はメンテナンスが停止されていますので、ご注意ください。また最新版のドキュメントでは**\\ `IRC channel`_\\ **は**\\ "
-"`Discord server <https://discord.gg/t6rrQZH>`_\\ **に置き換えられています）**"
+"`mailinglist`_\\ と\\ `Discord server`_\\ "
+"もあります。特に、もし誰もしたことのないことをやろうとしている場合は、さらにいくらかのインプットを得るのはとても良いアイデアになるかもしれません。これは人々がFlask拡張から何を求めることがあるかについての使えるフィードバックを生み出すだけでなく、殆ど同じ問題に対して複数の開発者が分け隔てられたまま作業することも回避させます。"
 
 # b09b269cd0164789bc152b9d0573ed75
 #: ../../flask/docs/extensiondev.rst:283
@@ -486,13 +480,13 @@ msgstr ""
 
 # 5d6a7813ec5247fd88197eabac557aa2
 #: ../../flask/docs/extensiondev.rst:304
-#, fuzzy
 msgid ""
 "The naming scheme is *Flask-ExtensionName* or *ExtensionName-Flask*. It "
 "must provide exactly one package or module named "
 "``flask_extension_name``."
 msgstr ""
-"approved extensionは\\ ``flask_extensionname``\\ "
+"名前の構成は\ *Flask-ExtensionName*\ または\ *ExtensionName-Flask*\ です。"
+"Flask拡張は\\ ``flask_extensionname``\\ "
 "という名前の、正確に１つのパッケージもしくはモジュールを提供する必要があります。"
 
 #: ../../flask/docs/extensiondev.rst:307
@@ -503,9 +497,8 @@ msgstr ""
 
 # 6dd6c3156ecb43a4ab79d55b6f06b0df
 #: ../../flask/docs/extensiondev.rst:309
-#, fuzzy
 msgid "The extension's API must have the following characteristics:"
-msgstr "approved extensionsのAPIは以下の特性に対してチェックされているようにします:"
+msgstr "Flask拡張のAPIは以下の特性を持つ必要があります:"
 
 #: ../../flask/docs/extensiondev.rst:311
 msgid ""
@@ -516,11 +509,13 @@ msgstr ""
 
 # 51ca334b44014763b5a7c19738db27d1
 #: ../../flask/docs/extensiondev.rst:314
-#, fuzzy
 msgid ""
 "It must be possible to use the factory pattern for creating applications."
 " Use the ``ext.init_app()`` pattern."
-msgstr "アプリケーションを作成するためのfactoryパターンが使用可能である必要があります。"
+msgstr ""
+"アプリケーションを作成するためのfactoryパターンが使用可能である必要があり"
+"ます。"
+"\ ``ext.init_app()``\ パターンを使用してください。"
 
 #: ../../flask/docs/extensiondev.rst:317
 msgid ""
@@ -538,12 +533,14 @@ msgstr ""
 
 # aabcb7954a1b40689d66bb1c9033d34d
 #: ../../flask/docs/extensiondev.rst:323
-#, fuzzy
 msgid ""
 "The documentation must use the ``flask`` theme from the `Official Pallets"
 " Themes`_. A link to the documentation or project website must be in the "
 "PyPI metadata or the readme."
-msgstr "ドキュメントは\\ `Official Pallets Themes`_\\ の\\ ``flask``\\ テーマを使用する必要があります。"
+msgstr ""
+"ドキュメントは\\ `Official Pallets Themes`_\\ の\\ ``flask``\\ テーマを使用する必要があります。"
+"ドキュメントまたはプロジェクトのwebサイトへのリンクがPyPIメタデータまたは"
+"readmeの中にある必要があります。"
 
 #: ../../flask/docs/extensiondev.rst:326
 msgid ""
