@@ -214,7 +214,6 @@ msgstr "contextはスタックなので、他のcontextがリクエストの期�
 
 # dd92f59997754f049d183d469af4d5c4
 #: ../../flask/docs/reqcontext.rst:109
-#, fuzzy
 msgid ""
 "After the request is dispatched and a response is generated and sent, the"
 " request context is popped, which then pops the application context. "
@@ -223,7 +222,7 @@ msgid ""
 "execute even if an unhandled exception occurred during dispatch."
 msgstr ""
 "リクエストが割り振られ（dispatch）てレスポンスが生成され送信された後、request "
-"contextはpopされ、それからそれはapplication contextをpopします。それらがpopされる直前に、\\ "
+"contextはpopされ、それからapplication contextをpopします。それらがpopされる直前に、\\ "
 ":meth:`~Flask.teardown_request`\\ と\\ "
 ":meth:`~Flask.teardown_appcontext`\\ "
 "関数が実行されます。これらはdispatch中に捕捉されない例外が発生した場合でも実行されます。"
@@ -347,7 +346,6 @@ msgstr ""
 
 # b92e3c892d024cc1b424db9ed628f0c3
 #: ../../flask/docs/reqcontext.rst:171
-#, fuzzy
 msgid ""
 "During testing, it can be useful to defer popping the contexts after the "
 "request ends, so that their data can be accessed in the test function. "
@@ -356,7 +354,7 @@ msgid ""
 msgstr ""
 "テストの間は、テスト用の関数の中でcontextのデータにアクセス可能にするために、リクエストが終わった後でのcontextのpopを遅らせると便利な場合があります。\\"
 " :meth:`~Flask.test_client`\\ を\\ ``with``\\ "
-"ブロックと一緒に使用すると、withブロックから抜けるまでの間はcontextを保持します。"
+"ブロックとして使用すると、withブロックから抜けるまでの間はcontextを保持します。"
 
 # c739acfe5d394792ae09520800fece81
 #: ../../flask/docs/reqcontext.rst:205
@@ -467,7 +465,6 @@ msgstr "Flaskによって提供されるオブジェクトのいくつかは、�
 
 # d8bc2fc8d8cb4b2dbe8684fcfb9488b4
 #: ../../flask/docs/reqcontext.rst:253
-#, fuzzy
 msgid ""
 "Most of the time you don't have to care about that, but there are some "
 "exceptions where it is good to know that this object is actually a proxy:"
@@ -483,13 +480,13 @@ msgstr "このプロキシのオブジェクトは、実際のオブジェクト
 
 # 307ef84da8a446c19465680ed13ad638
 #: ../../flask/docs/reqcontext.rst:259
-#, fuzzy
 msgid ""
 "The reference to the proxied object is needed in some situations, such as"
 " sending :ref:`signals` or passing data to a background thread."
 msgstr ""
-"もしも特定のオブジェクト参照（object reference）が重要なとき、例えば\\ :ref:`signals`\\ "
-"を送ったりバックグラウンドのスレッドにデータ送ったりするとき。"
+"例えば\\ :ref:`signals`\\ を送ったりバックグラウンドのスレッドにデータ"
+"渡したりするときなど、ある状況では、proxyされているオブジェクトへの"
+"参照（object reference）が必要になります。"
 
 # 447bd3d7cb7840e9864f1450d63fc687
 #: ../../flask/docs/reqcontext.rst:263
