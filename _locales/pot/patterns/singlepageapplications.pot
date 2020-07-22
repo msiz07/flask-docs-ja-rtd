@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"POT-Creation-Date: 2020-07-22 20:39+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,18 +16,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../patterns/singlepageapplications.rst:2
-# 940cdb8b5a494226a52490522ddd2615
+#: ../../flask/docs/patterns/singlepageapplications.rst:2
 msgid "Single-Page Applications"
 msgstr ""
 
-#: ../../patterns/singlepageapplications.rst:4
-# 03162543a1f340b4a351d03256aa8ef4
+#: ../../flask/docs/patterns/singlepageapplications.rst:4
 msgid "Flask can be used to serve Single-Page Applications (SPA) by placing static files produced by your frontend framework in a subfolder inside of your project. You will also need to create a catch-all endpoint that routes all requests to your SPA."
 msgstr ""
 
-#: ../../patterns/singlepageapplications.rst:9
-# 12f40e62bcee4d8896e665aa7395095a
+#: ../../flask/docs/patterns/singlepageapplications.rst:9
 msgid "The following example demonstrates how to serve an SPA along with an API::"
 msgstr ""
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"POT-Creation-Date: 2020-07-22 20:39+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,103 +16,83 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../patterns/wtforms.rst:2
-# 5b0af29515264c0cb306a397b5ad149a
+#: ../../flask/docs/patterns/wtforms.rst:2
 msgid "Form Validation with WTForms"
 msgstr ""
 
-#: ../../patterns/wtforms.rst:4
-# 836445675b924dc58e048415f5438237
+#: ../../flask/docs/patterns/wtforms.rst:4
 msgid "When you have to work with form data submitted by a browser view, code quickly becomes very hard to read.  There are libraries out there designed to make this process easier to manage.  One of them is `WTForms`_ which we will handle here.  If you find yourself in the situation of having many forms, you might want to give it a try."
 msgstr ""
 
-#: ../../patterns/wtforms.rst:10
-# 54c7aa6ceb664bd49eaed4f4dab091db
+#: ../../flask/docs/patterns/wtforms.rst:10
 msgid "When you are working with WTForms you have to define your forms as classes first.  I recommend breaking up the application into multiple modules (:ref:`larger-applications`) for that and adding a separate module for the forms."
 msgstr ""
 
-#: ../../patterns/wtforms.rst:15
-# 7dd7274d25c542268cdfa74296bc7a4b
+#: ../../flask/docs/patterns/wtforms.rst:15
 msgid "Getting the most out of WTForms with an Extension"
 msgstr ""
 
-#: ../../patterns/wtforms.rst:17
-# 3b11a0e903d348798fc0c0fc3056e45c
+#: ../../flask/docs/patterns/wtforms.rst:17
 msgid "The `Flask-WTF`_ extension expands on this pattern and adds a few little helpers that make working with forms and Flask more fun.  You can get it from `PyPI <https://pypi.org/project/Flask-WTF/>`_."
 msgstr ""
 
-#: ../../patterns/wtforms.rst:25
-# 84288bf7a2c24f99809baeed1f11bf6e
+#: ../../flask/docs/patterns/wtforms.rst:25
 msgid "The Forms"
 msgstr ""
 
-#: ../../patterns/wtforms.rst:27
-# d39d08fb068d47b1b5eb2b1d2ae95e19
+#: ../../flask/docs/patterns/wtforms.rst:27
 msgid "This is an example form for a typical registration page::"
 msgstr ""
 
-#: ../../patterns/wtforms.rst:42
-# 1d5d53bac89549909dc8940333e2ac9b
+#: ../../flask/docs/patterns/wtforms.rst:42
 msgid "In the View"
 msgstr ""
 
-#: ../../patterns/wtforms.rst:44
-# a2038eb5a2494439b6e42950c1cdf398
+#: ../../flask/docs/patterns/wtforms.rst:44
 msgid "In the view function, the usage of this form looks like this::"
 msgstr ""
 
-#: ../../patterns/wtforms.rst:57
-# b3ff962ebda84329a5ef48354013aa5f
+#: ../../flask/docs/patterns/wtforms.rst:57
 msgid "Notice we're implying that the view is using SQLAlchemy here (:ref:`sqlalchemy-pattern`), but that's not a requirement, of course.  Adapt the code as necessary."
 msgstr ""
 
-#: ../../patterns/wtforms.rst:61
-# e8b707d990174f7cb0885293904cd486
+#: ../../flask/docs/patterns/wtforms.rst:61
 msgid "Things to remember:"
 msgstr ""
 
-#: ../../patterns/wtforms.rst:63
-# 8761d80fb73347a093ab562eb83e11bd
+#: ../../flask/docs/patterns/wtforms.rst:63
 msgid "create the form from the request :attr:`~flask.request.form` value if the data is submitted via the HTTP ``POST`` method and :attr:`~flask.request.args` if the data is submitted as ``GET``."
 msgstr ""
 
-#: ../../patterns/wtforms.rst:66
-# 53f4c7e7da0246339af050c4319da6a5
+#: ../../flask/docs/patterns/wtforms.rst:66
 msgid "to validate the data, call the :func:`~wtforms.form.Form.validate` method, which will return ``True`` if the data validates, ``False`` otherwise."
 msgstr ""
 
-#: ../../patterns/wtforms.rst:69
-# abd7cdb3cd284170a7370f41c9862f0a
+#: ../../flask/docs/patterns/wtforms.rst:69
 msgid "to access individual values from the form, access `form.<NAME>.data`."
 msgstr ""
 
-#: ../../patterns/wtforms.rst:72
-# b0d64d4b97094355959f55471201bdc8
+#: ../../flask/docs/patterns/wtforms.rst:72
 msgid "Forms in Templates"
 msgstr ""
 
-#: ../../patterns/wtforms.rst:74
-# 685fe87cb95345d98f667743e2c57656
+#: ../../flask/docs/patterns/wtforms.rst:74
 msgid "Now to the template side.  When you pass the form to the templates, you can easily render them there.  Look at the following example template to see how easy this is.  WTForms does half the form generation for us already. To make it even nicer, we can write a macro that renders a field with label and a list of errors if there are any."
 msgstr ""
 
-#: ../../patterns/wtforms.rst:80
-# cb1fbc5ee6d1474ba1d17e81dff90d55
+#: ../../flask/docs/patterns/wtforms.rst:80
 msgid "Here's an example :file:`_formhelpers.html` template with such a macro:"
 msgstr ""
 
-#: ../../patterns/wtforms.rst:97
-# 52e074beaa914f9c8b5894412bc03a98
+#: ../../flask/docs/patterns/wtforms.rst:97
 msgid "This macro accepts a couple of keyword arguments that are forwarded to WTForm's field function, which renders the field for us.  The keyword arguments will be inserted as HTML attributes.  So, for example, you can call ``render_field(form.username, class='username')`` to add a class to the input element.  Note that WTForms returns standard Python unicode strings, so we have to tell Jinja2 that this data is already HTML-escaped with the ``|safe`` filter."
 msgstr ""
 
-#: ../../patterns/wtforms.rst:105
-# 7767ab81bee441ecbaa9ab8f229a8569
+#: ../../flask/docs/patterns/wtforms.rst:105
 msgid "Here is the :file:`register.html` template for the function we used above, which takes advantage of the :file:`_formhelpers.html` template:"
 msgstr ""
 
-#: ../../patterns/wtforms.rst:122
-# 0b76868a16be4a11ad202d683eea936d
+#: ../../flask/docs/patterns/wtforms.rst:122
 msgid "For more information about WTForms, head over to the `WTForms website`_."
 msgstr ""
 

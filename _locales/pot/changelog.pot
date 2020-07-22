@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"POT-Creation-Date: 2020-07-22 20:39+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,1924 +16,1538 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../changelog.rst:2
-# e06915498c024ed6b17e5e7ead0c614b
+#: ../../flask/docs/changelog.rst:2
 msgid "Changelog"
 msgstr ""
 
-#: ../../../CHANGES.rst:4
-# 4396d1a2644d4def800faa73abca5607
+#: ../../flask/CHANGES.rst:4
 msgid "Version 1.1.1"
 msgstr ""
 
-#: ../../../CHANGES.rst:6
-# 59ad4b2fd36f4a13b35e5246dcff5b5a
+#: ../../flask/CHANGES.rst:6
 msgid "Released 2019-07-08"
 msgstr ""
 
-#: ../../../CHANGES.rst:8
-# f49cda6ad6044438bb3ed6016e3fc50e
+#: ../../flask/CHANGES.rst:8
 msgid "The ``flask.json_available`` flag was added back for compatibility with some extensions. It will raise a deprecation warning when used, and will be removed in version 2.0.0. :issue:`3288`"
 msgstr ""
 
-#: ../../../CHANGES.rst:14
-# 8ff3e2a7c38b447aa942540aa702ef42
+#: ../../flask/CHANGES.rst:14
 msgid "Version 1.1.0"
 msgstr ""
 
-#: ../../../CHANGES.rst:16
-#: ../../../CHANGES.rst:106
-# 0aaa94e352924f409613d4e069205dc0
-# f98876bac25748afad15394f62d3782d
+#: ../../flask/CHANGES.rst:16
+#: ../../flask/CHANGES.rst:106
 msgid "Released 2019-07-04"
 msgstr ""
 
-#: ../../../CHANGES.rst:18
-# 0d538c7f46d24cf785f0a0b916bfb982
+#: ../../flask/CHANGES.rst:18
 msgid "Bump minimum Werkzeug version to >= 0.15."
 msgstr ""
 
-#: ../../../CHANGES.rst:19
-# cd7280d97b2246559943aa2c1136c906
+#: ../../flask/CHANGES.rst:19
 msgid "Drop support for Python 3.4."
 msgstr ""
 
-#: ../../../CHANGES.rst:20
-# ce6b0e5d541c4d828718c8dfa8c1d199
+#: ../../flask/CHANGES.rst:20
 msgid "Error handlers for ``InternalServerError`` or ``500`` will always be passed an instance of ``InternalServerError``. If they are invoked due to an unhandled exception, that original exception is now available as ``e.original_exception`` rather than being passed directly to the handler. The same is true if the handler is for the base ``HTTPException``. This makes error handler behavior more consistent. :pr:`3266`"
 msgstr ""
 
-#: ../../../CHANGES.rst:28
-# a76adc86f65e45f88764a789385fe79b
+#: ../../flask/CHANGES.rst:28
 msgid ":meth:`Flask.finalize_request` is called for all unhandled exceptions even if there is no ``500`` error handler."
 msgstr ""
 
-#: ../../../CHANGES.rst:31
-# 582f53d23be04fea953856a67a661c2a
+#: ../../flask/CHANGES.rst:31
 msgid ":attr:`Flask.logger` takes the same name as :attr:`Flask.name` (the value passed as ``Flask(import_name)``. This reverts 1.0's behavior of always logging to ``\"flask.app\"``, in order to support multiple apps in the same process. A warning will be shown if old configuration is detected that needs to be moved. :issue:`2866`"
 msgstr ""
 
-#: ../../../CHANGES.rst:37
-# c538d6840c5545909841f97daeaf0292
+#: ../../flask/CHANGES.rst:37
 msgid ":meth:`flask.RequestContext.copy` includes the current session object in the request context copy. This prevents ``session`` pointing to an out-of-date object. :issue:`2935`"
 msgstr ""
 
-#: ../../../CHANGES.rst:40
-# 652088823bf648caa28dd6d9d5ca9877
+#: ../../flask/CHANGES.rst:40
 msgid "Using built-in RequestContext, unprintable Unicode characters in Host header will result in a HTTP 400 response and not HTTP 500 as previously. :pr:`2994`"
 msgstr ""
 
-#: ../../../CHANGES.rst:43
-# 54ad3b6b91e74b58b27644596a29ad83
+#: ../../flask/CHANGES.rst:43
 msgid ":func:`send_file` supports :class:`~os.PathLike` objects as described in PEP 0519, to support :mod:`pathlib` in Python 3. :pr:`3059`"
 msgstr ""
 
-#: ../../../CHANGES.rst:46
-# b5ff075a0b2b4c7ca60dbe9c551f6af3
+#: ../../flask/CHANGES.rst:46
 msgid ":func:`send_file` supports :class:`~io.BytesIO` partial content. :issue:`2957`"
 msgstr ""
 
-#: ../../../CHANGES.rst:48
-# 113a9ed227414da6a39ee72d95a237c6
+#: ../../flask/CHANGES.rst:48
 msgid ":func:`open_resource` accepts the \"rt\" file mode. This still does the same thing as \"r\". :issue:`3163`"
 msgstr ""
 
-#: ../../../CHANGES.rst:50
-# 237a99f3308c40eea8da537eddb1734c
+#: ../../flask/CHANGES.rst:50
 msgid "The :attr:`MethodView.methods` attribute set in a base class is used by subclasses. :issue:`3138`"
 msgstr ""
 
-#: ../../../CHANGES.rst:52
-# 27db5603ad874d79b69117ab3b773c51
+#: ../../flask/CHANGES.rst:52
 msgid ":attr:`Flask.jinja_options` is a ``dict`` instead of an ``ImmutableDict`` to allow easier configuration. Changes must still be made before creating the environment. :pr:`3190`"
 msgstr ""
 
-#: ../../../CHANGES.rst:55
-# e2f897ce72314e35b00d1ccf24e4b687
+#: ../../flask/CHANGES.rst:55
 msgid "Flask's ``JSONMixin`` for the request and response wrappers was moved into Werkzeug. Use Werkzeug's version with Flask-specific support. This bumps the Werkzeug dependency to >= 0.15. :issue:`3125`"
 msgstr ""
 
-#: ../../../CHANGES.rst:59
-# a99d47e731804a26bd15c646cc49fec0
+#: ../../flask/CHANGES.rst:59
 msgid "The ``flask`` command entry point is simplified to take advantage of Werkzeug 0.15's better reloader support. This bumps the Werkzeug dependency to >= 0.15. :issue:`3022`"
 msgstr ""
 
-#: ../../../CHANGES.rst:62
-# b94689e360004c09b861824192d90518
+#: ../../flask/CHANGES.rst:62
 msgid "Support ``static_url_path`` that ends with a forward slash. :issue:`3134`"
 msgstr ""
 
-#: ../../../CHANGES.rst:64
-# 0f08fc4bdd434795bffb41725ded95c2
+#: ../../flask/CHANGES.rst:64
 msgid "Support empty ``static_folder`` without requiring setting an empty ``static_url_path`` as well. :pr:`3124`"
 msgstr ""
 
-#: ../../../CHANGES.rst:66
-# fda968c29331438f9ccdd55f0ba1aab4
+#: ../../flask/CHANGES.rst:66
 msgid ":meth:`jsonify` supports :class:`dataclasses.dataclass` objects. :pr:`3195`"
 msgstr ""
 
-#: ../../../CHANGES.rst:68
-# 765a8f58097143babf9f26916423d1d6
+#: ../../flask/CHANGES.rst:68
 msgid "Allow customizing the :attr:`Flask.url_map_class` used for routing. :pr:`3069`"
 msgstr ""
 
-#: ../../../CHANGES.rst:70
-# 3c22dd33f94a4a308e8952aa926a48e7
+#: ../../flask/CHANGES.rst:70
 msgid "The development server port can be set to 0, which tells the OS to pick an available port. :issue:`2926`"
 msgstr ""
 
-#: ../../../CHANGES.rst:72
-# 9a298cb37c11450e9fae0c738f37f125
+#: ../../flask/CHANGES.rst:72
 msgid "The return value from :meth:`cli.load_dotenv` is more consistent with the documentation. It will return ``False`` if python-dotenv is not installed, or if the given path isn't a file. :issue:`2937`"
 msgstr ""
 
-#: ../../../CHANGES.rst:75
-# dbb19a9a67e947cab45c0388d0ba931d
+#: ../../flask/CHANGES.rst:75
 msgid "Signaling support has a stub for the ``connect_via`` method when the Blinker library is not installed. :pr:`3208`"
 msgstr ""
 
-#: ../../../CHANGES.rst:77
-# ca7e627d803047afade4a6d9b87f36ff
+#: ../../flask/CHANGES.rst:77
 msgid "Add an ``--extra-files`` option to the ``flask run`` CLI command to specify extra files that will trigger the reloader on change. :issue:`2897`"
 msgstr ""
 
-#: ../../../CHANGES.rst:80
-# a26194ce66ec4a4fa75f5c230b11eb58
+#: ../../flask/CHANGES.rst:80
 msgid "Allow returning a dictionary from a view function. Similar to how returning a string will produce a ``text/html`` response, returning a dict will call ``jsonify`` to produce a ``application/json`` response. :pr:`3111`"
 msgstr ""
 
-#: ../../../CHANGES.rst:84
-# 844165c57cb94322be17604881adabb1
+#: ../../flask/CHANGES.rst:84
 msgid "Blueprints have a ``cli`` Click group like ``app.cli``. CLI commands registered with a blueprint will be available as a group under the ``flask`` command. :issue:`1357`."
 msgstr ""
 
-#: ../../../CHANGES.rst:87
-# a71702e412934f07bb8841cdbfece20c
+#: ../../flask/CHANGES.rst:87
 msgid "When using the test client as a context manager (``with client:``), all preserved request contexts are popped when the block exits, ensuring nested contexts are cleaned up correctly. :pr:`3157`"
 msgstr ""
 
-#: ../../../CHANGES.rst:90
-# d8b35002a129403693719c2521824d9e
+#: ../../flask/CHANGES.rst:90
 msgid "Show a better error message when the view return type is not supported. :issue:`3214`"
 msgstr ""
 
-#: ../../../CHANGES.rst:92
-# 454093c530ce4318b35d11556e62b5e8
+#: ../../flask/CHANGES.rst:92
 msgid "``flask.testing.make_test_environ_builder()`` has been deprecated in favour of a new class ``flask.testing.EnvironBuilder``. :pr:`3232`"
 msgstr ""
 
-#: ../../../CHANGES.rst:94
-# a64c861acb2341b7a537a08e4802e0c7
+#: ../../flask/CHANGES.rst:94
 msgid "The ``flask run`` command no longer fails if Python is not built with SSL support. Using the ``--cert`` option will show an appropriate error message. :issue:`3211`"
 msgstr ""
 
-#: ../../../CHANGES.rst:97
-# e17a8fdc208a46ed9e596362272e58e4
+#: ../../flask/CHANGES.rst:97
 msgid "URL matching now occurs after the request context is pushed, rather than when it's created. This allows custom URL converters to access the app and request contexts, such as to query a database for an id. :issue:`3088`"
 msgstr ""
 
-#: ../../../CHANGES.rst:104
-# 479eb4e5790543e18ae1afdb6076a681
+#: ../../flask/CHANGES.rst:104
 msgid "Version 1.0.4"
 msgstr ""
 
-#: ../../../CHANGES.rst:108
-# 04b7f47e0dd64beaad94d605c0935043
+#: ../../flask/CHANGES.rst:108
 msgid "The key information for ``BadRequestKeyError`` is no longer cleared outside debug mode, so error handlers can still access it. This requires upgrading to Werkzeug 0.15.5. :issue:`3249`"
 msgstr ""
 
-#: ../../../CHANGES.rst:111
-# 6014adc7d4b9433f814351c5e4092742
+#: ../../flask/CHANGES.rst:111
 msgid "``send_file`` url quotes the \":\" and \"/\" characters for more compatible UTF-8 filename support in some browsers. :issue:`3074`"
 msgstr ""
 
-#: ../../../CHANGES.rst:113
-# 85815dd3700c4899a344128bd3de17d0
+#: ../../flask/CHANGES.rst:113
 msgid "Fixes for PEP451 import loaders and pytest 5.x. :issue:`3275`"
 msgstr ""
 
-#: ../../../CHANGES.rst:114
-# a0f539883ae3405ba6144b89fb699564
+#: ../../flask/CHANGES.rst:114
 msgid "Show message about dotenv on stderr instead of stdout. :issue:`3285`"
 msgstr ""
 
-#: ../../../CHANGES.rst:118
-# d0a42eea0cb54cedbc921fca75872ba1
+#: ../../flask/CHANGES.rst:118
 msgid "Version 1.0.3"
 msgstr ""
 
-#: ../../../CHANGES.rst:120
-# eeea350f939640deb18802ea85cc6490
+#: ../../flask/CHANGES.rst:120
 msgid "Released 2019-05-17"
 msgstr ""
 
-#: ../../../CHANGES.rst:122
-# 26d2d9834e074c11af2927b22fd1d500
+#: ../../flask/CHANGES.rst:122
 msgid ":func:`send_file` encodes filenames as ASCII instead of Latin-1 (ISO-8859-1). This fixes compatibility with Gunicorn, which is stricter about header encodings than PEP 3333. :issue:`2766`"
 msgstr ""
 
-#: ../../../CHANGES.rst:125
-# a1295e6eada24cc491c0ceb6c7551c1e
+#: ../../flask/CHANGES.rst:125
 msgid "Allow custom CLIs using ``FlaskGroup`` to set the debug flag without it always being overwritten based on environment variables. :pr:`2765`"
 msgstr ""
 
-#: ../../../CHANGES.rst:128
-# bf44b39940864052a7cb13cd66ab4760
+#: ../../flask/CHANGES.rst:128
 msgid "``flask --version`` outputs Werkzeug's version and simplifies the Python version. :pr:`2825`"
 msgstr ""
 
-#: ../../../CHANGES.rst:130
-# ba1743ff38ec465c89d3caf15729636f
+#: ../../flask/CHANGES.rst:130
 msgid ":func:`send_file` handles an ``attachment_filename`` that is a native Python 2 string (bytes) with UTF-8 coded bytes. :issue:`2933`"
 msgstr ""
 
-#: ../../../CHANGES.rst:132
-# 691de1eae9e444af8a7587dacb367db7
+#: ../../flask/CHANGES.rst:132
 msgid "A catch-all error handler registered for ``HTTPException`` will not handle ``RoutingException``, which is used internally during routing. This fixes the unexpected behavior that had been introduced in 1.0. :pr:`2986`"
 msgstr ""
 
-#: ../../../CHANGES.rst:136
-# 2028e1a7e24f4ea68af7382cdad22e20
+#: ../../flask/CHANGES.rst:136
 msgid "Passing the ``json`` argument to ``app.test_client`` does not push/pop an extra app context. :issue:`2900`"
 msgstr ""
 
-#: ../../../CHANGES.rst:141
-# 19a389b7ea574793ac1a4a026f5cde12
+#: ../../flask/CHANGES.rst:141
 msgid "Version 1.0.2"
 msgstr ""
 
-#: ../../../CHANGES.rst:143
-# 33fd38b44e584342b3dc214ec57b42de
+#: ../../flask/CHANGES.rst:143
 msgid "Released 2018-05-02"
 msgstr ""
 
-#: ../../../CHANGES.rst:145
-# 665ecc22531a452b8d07561b970e504c
+#: ../../flask/CHANGES.rst:145
 msgid "Fix more backwards compatibility issues with merging slashes between a blueprint prefix and route. :pr:`2748`"
 msgstr ""
 
-#: ../../../CHANGES.rst:147
-# e13286e092c748f5a55412cf5dc16e5f
+#: ../../flask/CHANGES.rst:147
 msgid "Fix error with ``flask routes`` command when there are no routes. :issue:`2751`"
 msgstr ""
 
-#: ../../../CHANGES.rst:152
-# 514abe9183044a24b2ebe43e98a205ae
+#: ../../flask/CHANGES.rst:152
 msgid "Version 1.0.1"
 msgstr ""
 
-#: ../../../CHANGES.rst:154
-#: ../../../CHANGES.rst:334
-# 63a63c69803b4d3c8b181b36f1405f67
-# 0572367126be48cebcb047e576949971
+#: ../../flask/CHANGES.rst:154
+#: ../../flask/CHANGES.rst:334
 msgid "Released 2018-04-29"
 msgstr ""
 
-#: ../../../CHANGES.rst:156
-# be6319d84fbc4cb7b1557132dd474f73
+#: ../../flask/CHANGES.rst:156
 msgid "Fix registering partials (with no ``__name__``) as view functions. :pr:`2730`"
 msgstr ""
 
-#: ../../../CHANGES.rst:158
-# a6fc103acf7b4d528ccd0954a79ed291
+#: ../../flask/CHANGES.rst:158
 msgid "Don't treat lists returned from view functions the same as tuples. Only tuples are interpreted as response data. :issue:`2736`"
 msgstr ""
 
-#: ../../../CHANGES.rst:160
-# d97517bed116443c922af38420051bd1
+#: ../../flask/CHANGES.rst:160
 msgid "Extra slashes between a blueprint's ``url_prefix`` and a route URL are merged. This fixes some backwards compatibility issues with the change in 1.0. :issue:`2731`, :issue:`2742`"
 msgstr ""
 
-#: ../../../CHANGES.rst:163
-# f956cf11d4ce4151b37d0f9b4696eab3
+#: ../../flask/CHANGES.rst:163
 msgid "Only trap ``BadRequestKeyError`` errors in debug mode, not all ``BadRequest`` errors. This allows ``abort(400)`` to continue working as expected. :issue:`2735`"
 msgstr ""
 
-#: ../../../CHANGES.rst:166
-# 0b3aa5a27f4242308102dbc1102785b5
+#: ../../flask/CHANGES.rst:166
 msgid "The ``FLASK_SKIP_DOTENV`` environment variable can be set to ``1`` to skip automatically loading dotenv files. :issue:`2722`"
 msgstr ""
 
-#: ../../../CHANGES.rst:171
-# e4517059193c430f8499d66dda44d1cd
+#: ../../flask/CHANGES.rst:171
 msgid "Version 1.0"
 msgstr ""
 
-#: ../../../CHANGES.rst:173
-#: ../../../CHANGES.rst:342
-# 14d5713f4e204e4298b1da6b46d7a708
-# bd5e01fcab274921b0018fb67a4ed2e3
+#: ../../flask/CHANGES.rst:173
+#: ../../flask/CHANGES.rst:342
 msgid "Released 2018-04-26"
 msgstr ""
 
-#: ../../../CHANGES.rst:175
-# 2ac60097bc5445eaa70c8673c708d979
+#: ../../flask/CHANGES.rst:175
 msgid "Python 2.6 and 3.3 are no longer supported."
 msgstr ""
 
-#: ../../../CHANGES.rst:176
-# c52e4f99335d41ae9cbe33666ce33eaa
+#: ../../flask/CHANGES.rst:176
 msgid "Bump minimum dependency versions to the latest stable versions: Werkzeug >= 0.14, Jinja >= 2.10, itsdangerous >= 0.24, Click >= 5.1. :issue:`2586`"
 msgstr ""
 
-#: ../../../CHANGES.rst:179
-# 61847728902349deae09aac7ad7b44d0
+#: ../../flask/CHANGES.rst:179
 msgid "Skip :meth:`app.run <Flask.run>` when a Flask application is run from the command line. This avoids some behavior that was confusing to debug."
 msgstr ""
 
-#: ../../../CHANGES.rst:182
-# 46e75358959342928ca6dcc224674c66
+#: ../../flask/CHANGES.rst:182
 msgid "Change the default for :data:`JSONIFY_PRETTYPRINT_REGULAR` to ``False``. :func:`~json.jsonify` returns a compact format by default, and an indented format in debug mode. :pr:`2193`"
 msgstr ""
 
-#: ../../../CHANGES.rst:185
-# 35173ad9201e48aa94c0521942b49559
+#: ../../flask/CHANGES.rst:185
 msgid ":meth:`Flask.__init__ <Flask>` accepts the ``host_matching`` argument and sets it on :attr:`~Flask.url_map`. :issue:`1559`"
 msgstr ""
 
-#: ../../../CHANGES.rst:187
-# 3183d5103db542a798d105916a81e711
+#: ../../flask/CHANGES.rst:187
 msgid ":meth:`Flask.__init__ <Flask>` accepts the ``static_host`` argument and passes it as the ``host`` argument when defining the static route. :issue:`1559`"
 msgstr ""
 
-#: ../../../CHANGES.rst:190
-# 955cb4c364fb48269a30b078b226de27
+#: ../../flask/CHANGES.rst:190
 msgid ":func:`send_file` supports Unicode in ``attachment_filename``. :pr:`2223`"
 msgstr ""
 
-#: ../../../CHANGES.rst:192
-# f03a1e7ac3844d60b43fdb02efc81467
+#: ../../flask/CHANGES.rst:192
 msgid "Pass ``_scheme`` argument from :func:`url_for` to :meth:`~Flask.handle_url_build_error`. :pr:`2017`"
 msgstr ""
 
-#: ../../../CHANGES.rst:194
-# 709b2777d3ab4e95bad25f8020615d74
+#: ../../flask/CHANGES.rst:194
 msgid ":meth:`~Flask.add_url_rule` accepts the ``provide_automatic_options`` argument to disable adding the ``OPTIONS`` method. :pr:`1489`"
 msgstr ""
 
-#: ../../../CHANGES.rst:197
-# 57aad980348940a9b78a27ae8db0ac3e
+#: ../../flask/CHANGES.rst:197
 msgid ":class:`~views.MethodView` subclasses inherit method handlers from base classes. :pr:`1936`"
 msgstr ""
 
-#: ../../../CHANGES.rst:199
-# bd6299c7c7ed4940a0c5428463170aa1
+#: ../../flask/CHANGES.rst:199
 msgid "Errors caused while opening the session at the beginning of the request are handled by the app's error handlers. :pr:`2254`"
 msgstr ""
 
-#: ../../../CHANGES.rst:201
-# ee2d271f7c434d3197d2990a53c8b75f
+#: ../../flask/CHANGES.rst:201
 msgid "Blueprints gained :attr:`~Blueprint.json_encoder` and :attr:`~Blueprint.json_decoder` attributes to override the app's encoder and decoder. :pr:`1898`"
 msgstr ""
 
-#: ../../../CHANGES.rst:204
-# d9ac5f3807954a5ab214e9dd2a68a3b0
+#: ../../flask/CHANGES.rst:204
 msgid ":meth:`Flask.make_response` raises ``TypeError`` instead of ``ValueError`` for bad response types. The error messages have been improved to describe why the type is invalid. :pr:`2256`"
 msgstr ""
 
-#: ../../../CHANGES.rst:207
-# 41d73e8107534ce9a443b8bcfba05dc3
+#: ../../flask/CHANGES.rst:207
 msgid "Add ``routes`` CLI command to output routes registered on the application. :pr:`2259`"
 msgstr ""
 
-#: ../../../CHANGES.rst:209
-# 2b44073c94074015bb0c1263c92f542d
+#: ../../flask/CHANGES.rst:209
 msgid "Show warning when session cookie domain is a bare hostname or an IP address, as these may not behave properly in some browsers, such as Chrome. :pr:`2282`"
 msgstr ""
 
-#: ../../../CHANGES.rst:212
-# 77d6c0766839441d87bfb6ef74eaa1b4
+#: ../../flask/CHANGES.rst:212
 msgid "Allow IP address as exact session cookie domain. :pr:`2282`"
 msgstr ""
 
-#: ../../../CHANGES.rst:213
-# a4b305d085e7404197890fbebb4f5852
+#: ../../flask/CHANGES.rst:213
 msgid "``SESSION_COOKIE_DOMAIN`` is set if it is detected through ``SERVER_NAME``. :pr:`2282`"
 msgstr ""
 
-#: ../../../CHANGES.rst:215
-# abe25a79d038492e93d939b4c7ce4529
+#: ../../flask/CHANGES.rst:215
 msgid "Auto-detect zero-argument app factory called ``create_app`` or ``make_app`` from ``FLASK_APP``. :pr:`2297`"
 msgstr ""
 
-#: ../../../CHANGES.rst:217
-# 4f678f3e160c4aa488596404f598c7e2
+#: ../../flask/CHANGES.rst:217
 msgid "Factory functions are not required to take a ``script_info`` parameter to work with the ``flask`` command. If they take a single parameter or a parameter named ``script_info``, the :class:`~cli.ScriptInfo` object will be passed. :pr:`2319`"
 msgstr ""
 
-#: ../../../CHANGES.rst:221
-# 223c7ca61d534ac290375567fff6a42f
+#: ../../flask/CHANGES.rst:221
 msgid "``FLASK_APP`` can be set to an app factory, with arguments if needed, for example ``FLASK_APP=myproject.app:create_app('dev')``. :pr:`2326`"
 msgstr ""
 
-#: ../../../CHANGES.rst:224
-# ddd60738e9d34a5686577f8b8b42d30f
+#: ../../flask/CHANGES.rst:224
 msgid "``FLASK_APP`` can point to local packages that are not installed in editable mode, although ``pip install -e`` is still preferred. :pr:`2414`"
 msgstr ""
 
-#: ../../../CHANGES.rst:227
-# dcbac3dba3804ee09850c7cdb874b9c5
+#: ../../flask/CHANGES.rst:227
 msgid "The :class:`~views.View` class attribute :attr:`~views.View.provide_automatic_options` is set in :meth:`~views.View.as_view`, to be detected by :meth:`~Flask.add_url_rule`. :pr:`2316`"
 msgstr ""
 
-#: ../../../CHANGES.rst:231
-# 090bb7241a6f45338a12d2bb4910495e
+#: ../../flask/CHANGES.rst:231
 msgid "Error handling will try handlers registered for ``blueprint, code``, ``app, code``, ``blueprint, exception``, ``app, exception``. :pr:`2314`"
 msgstr ""
 
-#: ../../../CHANGES.rst:234
-# 2809a0cce6aa4b46a5922e6ff84564a2
+#: ../../flask/CHANGES.rst:234
 msgid "``Cookie`` is added to the response's ``Vary`` header if the session is accessed at all during the request (and not deleted). :pr:`2288`"
 msgstr ""
 
-#: ../../../CHANGES.rst:236
-# acebeaee396f427cb0415ddbb0ec82dc
+#: ../../flask/CHANGES.rst:236
 msgid ":meth:`~Flask.test_request_context` accepts ``subdomain`` and ``url_scheme`` arguments for use when building the base URL. :pr:`1621`"
 msgstr ""
 
-#: ../../../CHANGES.rst:239
-# 9a57bedfe7dd4ed88d2fa060c3e8edad
+#: ../../flask/CHANGES.rst:239
 msgid "Set :data:`APPLICATION_ROOT` to ``'/'`` by default. This was already the implicit default when it was set to ``None``."
 msgstr ""
 
-#: ../../../CHANGES.rst:241
-# d5d5683c60d142f38dea76663cbed660
+#: ../../flask/CHANGES.rst:241
 msgid ":data:`TRAP_BAD_REQUEST_ERRORS` is enabled by default in debug mode. ``BadRequestKeyError`` has a message with the bad key in debug mode instead of the generic bad request message. :pr:`2348`"
 msgstr ""
 
-#: ../../../CHANGES.rst:244
-# 5db038eb16fb4a498199119e3d181961
+#: ../../flask/CHANGES.rst:244
 msgid "Allow registering new tags with :class:`~json.tag.TaggedJSONSerializer` to support storing other types in the session cookie. :pr:`2352`"
 msgstr ""
 
-#: ../../../CHANGES.rst:247
-# 119ffd3e512d4a7aa0c3298b4a70b134
+#: ../../flask/CHANGES.rst:247
 msgid "Only open the session if the request has not been pushed onto the context stack yet. This allows :func:`~stream_with_context` generators to access the same session that the containing view uses. :pr:`2354`"
 msgstr ""
 
-#: ../../../CHANGES.rst:251
-# a8061e3dd0434f02833ea07e534466db
+#: ../../flask/CHANGES.rst:251
 msgid "Add ``json`` keyword argument for the test client request methods. This will dump the given object as JSON and set the appropriate content type. :pr:`2358`"
 msgstr ""
 
-#: ../../../CHANGES.rst:254
-# f7f10a32de8248c58e7547613839cf5f
+#: ../../flask/CHANGES.rst:254
 msgid "Extract JSON handling to a mixin applied to both the :class:`Request` and :class:`Response` classes. This adds the :meth:`~Response.is_json` and :meth:`~Response.get_json` methods to the response to make testing JSON response much easier. :pr:`2358`"
 msgstr ""
 
-#: ../../../CHANGES.rst:258
-# 89a6c693fc5a4357bd48c40d709b4474
+#: ../../flask/CHANGES.rst:258
 msgid "Removed error handler caching because it caused unexpected results for some exception inheritance hierarchies. Register handlers explicitly for each exception if you want to avoid traversing the MRO. :pr:`2362`"
 msgstr ""
 
-#: ../../../CHANGES.rst:262
-# c0a8c06f2c684ab091643bdeee66fcd8
+#: ../../flask/CHANGES.rst:262
 msgid "Fix incorrect JSON encoding of aware, non-UTC datetimes. :pr:`2374`"
 msgstr ""
 
-#: ../../../CHANGES.rst:263
-# 1e1ab9908ab648a3989b850df9d2c9c9
+#: ../../flask/CHANGES.rst:263
 msgid "Template auto reloading will honor debug mode even even if :attr:`~Flask.jinja_env` was already accessed. :pr:`2373`"
 msgstr ""
 
-#: ../../../CHANGES.rst:265
-# d8f09368d40a408fb1b265fcb535f4df
+#: ../../flask/CHANGES.rst:265
 msgid "The following old deprecated code was removed. :issue:`2385`"
 msgstr ""
 
-#: ../../../CHANGES.rst:267
-# 7c27886edad04d788d503731a850863e
+#: ../../flask/CHANGES.rst:267
 msgid "``flask.ext`` - import extensions directly by their name instead of through the ``flask.ext`` namespace. For example, ``import flask.ext.sqlalchemy`` becomes ``import flask_sqlalchemy``."
 msgstr ""
 
-#: ../../../CHANGES.rst:271
-# 32cce00faccb43128e745c1bc8306aed
+#: ../../flask/CHANGES.rst:271
 msgid "``Flask.init_jinja_globals`` - extend :meth:`Flask.create_jinja_environment` instead."
 msgstr ""
 
-#: ../../../CHANGES.rst:273
-# 37f3aae75c5e48098848cf09c87230f9
+#: ../../flask/CHANGES.rst:273
 msgid "``Flask.error_handlers`` - tracked by :attr:`Flask.error_handler_spec`, use :meth:`Flask.errorhandler` to register handlers."
 msgstr ""
 
-#: ../../../CHANGES.rst:276
-# 4019655ad6614d4eaad4fce8380e0ccb
+#: ../../flask/CHANGES.rst:276
 msgid "``Flask.request_globals_class`` - use :attr:`Flask.app_ctx_globals_class` instead."
 msgstr ""
 
-#: ../../../CHANGES.rst:278
-# f59ebc8f80a94a018c607336c4515df3
+#: ../../flask/CHANGES.rst:278
 msgid "``Flask.static_path`` - use :attr:`Flask.static_url_path` instead."
 msgstr ""
 
-#: ../../../CHANGES.rst:280
-# 9e04bfb4920c4b15b4f8b38da8ba7f58
+#: ../../flask/CHANGES.rst:280
 msgid "``Request.module`` - use :attr:`Request.blueprint` instead."
 msgstr ""
 
-#: ../../../CHANGES.rst:282
-# e313a7e5d4e745f4bf9d21b86d6e302e
+#: ../../flask/CHANGES.rst:282
 msgid "The :attr:`Request.json` property is no longer deprecated. :issue:`1421`"
 msgstr ""
 
-#: ../../../CHANGES.rst:284
-# 904088f50c954dd7bf7509453f39a61a
+#: ../../flask/CHANGES.rst:284
 msgid "Support passing a :class:`~werkzeug.test.EnvironBuilder` or ``dict`` to :meth:`test_client.open <werkzeug.test.Client.open>`. :pr:`2412`"
 msgstr ""
 
-#: ../../../CHANGES.rst:286
-# 86b782c892084911a871d8b2a8c0af11
+#: ../../flask/CHANGES.rst:286
 msgid "The ``flask`` command and :meth:`Flask.run` will load environment variables from ``.env`` and ``.flaskenv`` files if python-dotenv is installed. :pr:`2416`"
 msgstr ""
 
-#: ../../../CHANGES.rst:289
-# 0c58d5aeaa5d4cd2b0f94c11b4031053
+#: ../../flask/CHANGES.rst:289
 msgid "When passing a full URL to the test client, the scheme in the URL is used instead of :data:`PREFERRED_URL_SCHEME`. :pr:`2430`"
 msgstr ""
 
-#: ../../../CHANGES.rst:291
-# 5be7675f52e34280b872c64e2cbab292
+#: ../../flask/CHANGES.rst:291
 msgid ":attr:`Flask.logger` has been simplified. ``LOGGER_NAME`` and ``LOGGER_HANDLER_POLICY`` config was removed. The logger is always named ``flask.app``. The level is only set on first access, it doesn't check :attr:`Flask.debug` each time. Only one format is used, not different ones depending on :attr:`Flask.debug`. No handlers are removed, and a handler is only added if no handlers are already configured. :pr:`2436`"
 msgstr ""
 
-#: ../../../CHANGES.rst:298
-# ca4e3a6221a74f618dcb56d33397737b
+#: ../../flask/CHANGES.rst:298
 msgid "Blueprint view function names may not contain dots. :pr:`2450`"
 msgstr ""
 
-#: ../../../CHANGES.rst:299
-# 152bc1daa5a4457cb92734f1f2272742
+#: ../../flask/CHANGES.rst:299
 msgid "Fix a ``ValueError`` caused by invalid ``Range`` requests in some cases. :issue:`2526`"
 msgstr ""
 
-#: ../../../CHANGES.rst:301
-# d7d408b1a80d402a850cb6a173ad72ea
+#: ../../flask/CHANGES.rst:301
 msgid "The development server uses threads by default. :pr:`2529`"
 msgstr ""
 
-#: ../../../CHANGES.rst:302
-# 6c64ed3e9b5c4b9a92adc37459bdea64
+#: ../../flask/CHANGES.rst:302
 msgid "Loading config files with ``silent=True`` will ignore :data:`~errno.ENOTDIR` errors. :pr:`2581`"
 msgstr ""
 
-#: ../../../CHANGES.rst:304
-# eb09ffa7785647268aa22c170a2c0100
+#: ../../flask/CHANGES.rst:304
 msgid "Pass ``--cert`` and ``--key`` options to ``flask run`` to run the development server over HTTPS. :pr:`2606`"
 msgstr ""
 
-#: ../../../CHANGES.rst:306
-# e67e0d89e3b34fc285eb7176303c01b1
+#: ../../flask/CHANGES.rst:306
 msgid "Added :data:`SESSION_COOKIE_SAMESITE` to control the ``SameSite`` attribute on the session cookie. :pr:`2607`"
 msgstr ""
 
-#: ../../../CHANGES.rst:308
-# 0890c817469640ec97b7e1ecf63df4e7
+#: ../../flask/CHANGES.rst:308
 msgid "Added :meth:`~flask.Flask.test_cli_runner` to create a Click runner that can invoke Flask CLI commands for testing. :pr:`2636`"
 msgstr ""
 
-#: ../../../CHANGES.rst:310
-# d0794f94f1d549288521ab55cb72c600
+#: ../../flask/CHANGES.rst:310
 msgid "Subdomain matching is disabled by default and setting :data:`SERVER_NAME` does not implicitly enable it. It can be enabled by passing ``subdomain_matching=True`` to the ``Flask`` constructor. :pr:`2635`"
 msgstr ""
 
-#: ../../../CHANGES.rst:314
-# 1b93aad989044f4c8b7d1ef8d12c6a65
+#: ../../flask/CHANGES.rst:314
 msgid "A single trailing slash is stripped from the blueprint ``url_prefix`` when it is registered with the app. :pr:`2629`"
 msgstr ""
 
-#: ../../../CHANGES.rst:316
-# 455653fa73d64f9e9a17ffe6a90aa9b3
+#: ../../flask/CHANGES.rst:316
 msgid ":meth:`Request.get_json` doesn't cache the result if parsing fails when ``silent`` is true. :issue:`2651`"
 msgstr ""
 
-#: ../../../CHANGES.rst:318
-# 917862e19023497d86353ff11dca489e
+#: ../../flask/CHANGES.rst:318
 msgid ":func:`Request.get_json` no longer accepts arbitrary encodings. Incoming JSON should be encoded using UTF-8 per :rfc:`8259`, but Flask will autodetect UTF-8, -16, or -32. :pr:`2691`"
 msgstr ""
 
-#: ../../../CHANGES.rst:321
-# 75b4a4f7f44d4c879fe5f7f7e594177f
+#: ../../flask/CHANGES.rst:321
 msgid "Added :data:`MAX_COOKIE_SIZE` and :attr:`Response.max_cookie_size` to control when Werkzeug warns about large cookies that browsers may ignore. :pr:`2693`"
 msgstr ""
 
-#: ../../../CHANGES.rst:324
-# d923701d7fb54f81b34bfddca05e4815
+#: ../../flask/CHANGES.rst:324
 msgid "Updated documentation theme to make docs look better in small windows. :pr:`2709`"
 msgstr ""
 
-#: ../../../CHANGES.rst:326
-# 278802ccfce1451aa2c87909253cd31a
+#: ../../flask/CHANGES.rst:326
 msgid "Rewrote the tutorial docs and example project to take a more structured approach to help new users avoid common pitfalls. :pr:`2676`"
 msgstr ""
 
-#: ../../../CHANGES.rst:332
-# d0ddae54400a41bf8a86dfd511b296b4
+#: ../../flask/CHANGES.rst:332
 msgid "Version 0.12.4"
 msgstr ""
 
-#: ../../../CHANGES.rst:336
-# 094febab74934514b35a659d8c93afff
+#: ../../flask/CHANGES.rst:336
 msgid "Repackage 0.12.3 to fix package layout issue. :issue:`2728`"
 msgstr ""
 
-#: ../../../CHANGES.rst:340
-# 6baad1c2360f4dbf8db3329c437f998d
+#: ../../flask/CHANGES.rst:340
 msgid "Version 0.12.3"
 msgstr ""
 
-#: ../../../CHANGES.rst:344
-# 757ffa11447f496b903605074f33c33e
+#: ../../flask/CHANGES.rst:344
 msgid ":func:`Request.get_json` no longer accepts arbitrary encodings. Incoming JSON should be encoded using UTF-8 per :rfc:`8259`, but Flask will autodetect UTF-8, -16, or -32. :issue:`2692`"
 msgstr ""
 
-#: ../../../CHANGES.rst:347
-# f39ebc6eac2545caa83099c7d341e14e
+#: ../../flask/CHANGES.rst:347
 msgid "Fix a Python warning about imports when using ``python -m flask``. :issue:`2666`"
 msgstr ""
 
-#: ../../../CHANGES.rst:349
-# b505785ea3be4c5da14d1be74827e46d
+#: ../../flask/CHANGES.rst:349
 msgid "Fix a ``ValueError`` caused by invalid ``Range`` requests in some cases."
 msgstr ""
 
-#: ../../../CHANGES.rst:354
-# 46d38dca431846d3aae6e3080932f996
+#: ../../flask/CHANGES.rst:354
 msgid "Version 0.12.2"
 msgstr ""
 
-#: ../../../CHANGES.rst:356
-# af11c7a451344edc9ddc8a3946761ae2
+#: ../../flask/CHANGES.rst:356
 msgid "Released 2017-05-16"
 msgstr ""
 
-#: ../../../CHANGES.rst:358
-# 4f3d722581a0460098950bfe2add6831
+#: ../../flask/CHANGES.rst:358
 msgid "Fix a bug in ``safe_join`` on Windows."
 msgstr ""
 
-#: ../../../CHANGES.rst:362
-# 8e4d697c6d23440b8a84dc6c775b2501
+#: ../../flask/CHANGES.rst:362
 msgid "Version 0.12.1"
 msgstr ""
 
-#: ../../../CHANGES.rst:364
-# 67cbd8a5f81b46c783c95c8b13c77ceb
+#: ../../flask/CHANGES.rst:364
 msgid "Released 2017-03-31"
 msgstr ""
 
-#: ../../../CHANGES.rst:366
-# 9bdc71f64583419a8f88104ad645bdc6
+#: ../../flask/CHANGES.rst:366
 msgid "Prevent ``flask run`` from showing a ``NoAppException`` when an ``ImportError`` occurs within the imported application module."
 msgstr ""
 
-#: ../../../CHANGES.rst:368
-# 32b02866dd344c58a0ca8dac310e8938
+#: ../../flask/CHANGES.rst:368
 msgid "Fix encoding behavior of ``app.config.from_pyfile`` for Python 3. :issue:`2118`"
 msgstr ""
 
-#: ../../../CHANGES.rst:370
-# 78cec278e70d480699ace45bf680a2d9
+#: ../../flask/CHANGES.rst:370
 msgid "Use the ``SERVER_NAME`` config if it is present as default values for ``app.run``. :issue:`2109`, :pr:`2152`"
 msgstr ""
 
-#: ../../../CHANGES.rst:372
-# a36db310e0bc488389108025c253f78d
+#: ../../flask/CHANGES.rst:372
 msgid "Call ``ctx.auto_pop`` with the exception object instead of ``None``, in the event that a ``BaseException`` such as ``KeyboardInterrupt`` is raised in a request handler."
 msgstr ""
 
-#: ../../../CHANGES.rst:378
-# e2eb4d031df24d26bb015ffb2096667f
+#: ../../flask/CHANGES.rst:378
 msgid "Version 0.12"
 msgstr ""
 
-#: ../../../CHANGES.rst:380
-# f4c8df3345074e6cb5fe738347f69077
+#: ../../flask/CHANGES.rst:380
 msgid "Released 2016-12-21, codename Punsch"
 msgstr ""
 
-#: ../../../CHANGES.rst:382
-# 0fe21761566d4178a1cf6a03788da78a
+#: ../../flask/CHANGES.rst:382
 msgid "The cli command now responds to ``--version``."
 msgstr ""
 
-#: ../../../CHANGES.rst:383
-# f5782f6ad0d6404ba1a0b46489d36d35
+#: ../../flask/CHANGES.rst:383
 msgid "Mimetype guessing and ETag generation for file-like objects in ``send_file`` has been removed. :issue:`104`, :pr`1849`"
 msgstr ""
 
-#: ../../../CHANGES.rst:385
-# 346d43baafad4f38bbe0281ca071065f
+#: ../../flask/CHANGES.rst:385
 msgid "Mimetype guessing in ``send_file`` now fails loudly and doesn't fall back to ``application/octet-stream``. :pr:`1988`"
 msgstr ""
 
-#: ../../../CHANGES.rst:387
-# a92865af494e47afb136c125a459cafd
+#: ../../flask/CHANGES.rst:387
 msgid "Make ``flask.safe_join`` able to join multiple paths like ``os.path.join`` :pr:`1730`"
 msgstr ""
 
-#: ../../../CHANGES.rst:389
-# dc144fab028f4345886e82bf585ce6ff
+#: ../../flask/CHANGES.rst:389
 msgid "Revert a behavior change that made the dev server crash instead of returning an Internal Server Error. :pr:`2006`"
 msgstr ""
 
-#: ../../../CHANGES.rst:391
-# 3f9d53d1cf9b41c693b3c31869701290
+#: ../../flask/CHANGES.rst:391
 msgid "Correctly invoke response handlers for both regular request dispatching as well as error handlers."
 msgstr ""
 
-#: ../../../CHANGES.rst:393
-# 3abb8ecc027246f3a8f2992bc855472f
+#: ../../flask/CHANGES.rst:393
 msgid "Disable logger propagation by default for the app logger."
 msgstr ""
 
-#: ../../../CHANGES.rst:394
-# 421aa9a94fe745038c8ff6618247420b
+#: ../../flask/CHANGES.rst:394
 msgid "Add support for range requests in ``send_file``."
 msgstr ""
 
-#: ../../../CHANGES.rst:395
-# e0b9891a1de04572ae9b964b430f17b8
+#: ../../flask/CHANGES.rst:395
 msgid "``app.test_client`` includes preset default environment, which can now be directly set, instead of per ``client.get``."
 msgstr ""
 
-#: ../../../CHANGES.rst:397
-# 6fc965ac0c974075b1936775859e6ad7
+#: ../../flask/CHANGES.rst:397
 msgid "Fix crash when running under PyPy3. :pr:`1814`"
 msgstr ""
 
-#: ../../../CHANGES.rst:401
-# 2b37ed7691304887a04cd508b4755082
+#: ../../flask/CHANGES.rst:401
 msgid "Version 0.11.1"
 msgstr ""
 
-#: ../../../CHANGES.rst:403
-# 7fb22efb61e74e0a85bb90948e20a71c
+#: ../../flask/CHANGES.rst:403
 msgid "Released 2016-06-07"
 msgstr ""
 
-#: ../../../CHANGES.rst:405
-# 86eee59f485642fdaf8d6934cf413cbc
+#: ../../flask/CHANGES.rst:405
 msgid "Fixed a bug that prevented ``FLASK_APP=foobar/__init__.py`` from working. :pr:`1872`"
 msgstr ""
 
-#: ../../../CHANGES.rst:410
-# 83d5ee80d2c44532ba30a2e9ea094f04
+#: ../../flask/CHANGES.rst:410
 msgid "Version 0.11"
 msgstr ""
 
-#: ../../../CHANGES.rst:412
-# a1df698f590c454e94f5a67600b2843b
+#: ../../flask/CHANGES.rst:412
 msgid "Released 2016-05-29, codename Absinthe"
 msgstr ""
 
-#: ../../../CHANGES.rst:414
-# 25d97d33ae5d4a87b913e9cfb2ba0756
+#: ../../flask/CHANGES.rst:414
 msgid "Added support to serializing top-level arrays to :func:`flask.jsonify`. This introduces a security risk in ancient browsers. See :ref:`json-security` for details."
 msgstr ""
 
-#: ../../../CHANGES.rst:417
-# 290d8ade9c534c0fb63d87af60f4c912
+#: ../../flask/CHANGES.rst:417
 msgid "Added before_render_template signal."
 msgstr ""
 
-#: ../../../CHANGES.rst:418
-# b1396239457048fba17bcd1b623e466b
+#: ../../flask/CHANGES.rst:418
 msgid "Added ``**kwargs`` to :meth:`flask.Test.test_client` to support passing additional keyword arguments to the constructor of :attr:`flask.Flask.test_client_class`."
 msgstr ""
 
-#: ../../../CHANGES.rst:421
-# 5838f27ee0b64b4e8686ff64f0f2199c
+#: ../../flask/CHANGES.rst:421
 msgid "Added ``SESSION_REFRESH_EACH_REQUEST`` config key that controls the set-cookie behavior. If set to ``True`` a permanent session will be refreshed each request and get their lifetime extended, if set to ``False`` it will only be modified if the session actually modifies. Non permanent sessions are not affected by this and will always expire if the browser window closes."
 msgstr ""
 
-#: ../../../CHANGES.rst:427
-# 51d8ad112fb749819ac8bc676cc56ab9
+#: ../../flask/CHANGES.rst:427
 msgid "Made Flask support custom JSON mimetypes for incoming data."
 msgstr ""
 
-#: ../../../CHANGES.rst:428
-# 1079261f67aa47efbab8797c06c2123b
+#: ../../flask/CHANGES.rst:428
 msgid "Added support for returning tuples in the form ``(response, headers)`` from a view function."
 msgstr ""
 
-#: ../../../CHANGES.rst:430
-# 5ec2f68465df45ec9765f3c85c92ba3b
+#: ../../flask/CHANGES.rst:430
 msgid "Added :meth:`flask.Config.from_json`."
 msgstr ""
 
-#: ../../../CHANGES.rst:431
-# eb210e086ad348fba1858cb79bff8805
+#: ../../flask/CHANGES.rst:431
 msgid "Added :attr:`flask.Flask.config_class`."
 msgstr ""
 
-#: ../../../CHANGES.rst:432
-# 99bf84402e1f4a9cb727c8a3b1fb2f6b
+#: ../../flask/CHANGES.rst:432
 msgid "Added :meth:`flask.Config.get_namespace`."
 msgstr ""
 
-#: ../../../CHANGES.rst:433
-# 6ba77b6c67ac47e091a44162102d2487
+#: ../../flask/CHANGES.rst:433
 msgid "Templates are no longer automatically reloaded outside of debug mode. This can be configured with the new ``TEMPLATES_AUTO_RELOAD`` config key."
 msgstr ""
 
-#: ../../../CHANGES.rst:436
-# 622895eb19be4365b47b47e1c83924ac
+#: ../../flask/CHANGES.rst:436
 msgid "Added a workaround for a limitation in Python 3.3's namespace loader."
 msgstr ""
 
-#: ../../../CHANGES.rst:438
-# b31e47c289314565b966548cef1c4631
+#: ../../flask/CHANGES.rst:438
 msgid "Added support for explicit root paths when using Python 3.3's namespace packages."
 msgstr ""
 
-#: ../../../CHANGES.rst:440
-# b00553ae0fe84e278980fdebe2acb810
+#: ../../flask/CHANGES.rst:440
 msgid "Added :command:`flask` and the ``flask.cli`` module to start the local debug server through the click CLI system. This is recommended over the old ``flask.run()`` method as it works faster and more reliable due to a different design and also replaces ``Flask-Script``."
 msgstr ""
 
-#: ../../../CHANGES.rst:445
-# f08f12df8c8d4f4a946557d8b38fc585
+#: ../../flask/CHANGES.rst:445
 msgid "Error handlers that match specific classes are now checked first, thereby allowing catching exceptions that are subclasses of HTTP exceptions (in ``werkzeug.exceptions``). This makes it possible for an extension author to create exceptions that will by default result in the HTTP error of their choosing, but may be caught with a custom error handler if desired."
 msgstr ""
 
-#: ../../../CHANGES.rst:451
-# a3cb2788d1294f27a804c3bee7df0bbf
+#: ../../flask/CHANGES.rst:451
 msgid "Added :meth:`flask.Config.from_mapping`."
 msgstr ""
 
-#: ../../../CHANGES.rst:452
-# ff2900abdacd4e549e9f65972961d3af
+#: ../../flask/CHANGES.rst:452
 msgid "Flask will now log by default even if debug is disabled. The log format is now hardcoded but the default log handling can be disabled through the ``LOGGER_HANDLER_POLICY`` configuration key."
 msgstr ""
 
-#: ../../../CHANGES.rst:455
-# e9633d5452c2461983cc86353bac6074
+#: ../../flask/CHANGES.rst:455
 msgid "Removed deprecated module functionality."
 msgstr ""
 
-#: ../../../CHANGES.rst:456
-# 057840b7883541d6b04b007fc9e1f96a
+#: ../../flask/CHANGES.rst:456
 msgid "Added the ``EXPLAIN_TEMPLATE_LOADING`` config flag which when enabled will instruct Flask to explain how it locates templates. This should help users debug when the wrong templates are loaded."
 msgstr ""
 
-#: ../../../CHANGES.rst:459
-# 2dfce12752aa40929651028c52d55bf3
+#: ../../flask/CHANGES.rst:459
 msgid "Enforce blueprint handling in the order they were registered for template loading."
 msgstr ""
 
-#: ../../../CHANGES.rst:461
-# 818ac815e3044727af79a785533ded0d
+#: ../../flask/CHANGES.rst:461
 msgid "Ported test suite to py.test."
 msgstr ""
 
-#: ../../../CHANGES.rst:462
-# 45521cd67aa14a4286b30f60a1229ab1
+#: ../../flask/CHANGES.rst:462
 msgid "Deprecated ``request.json`` in favour of ``request.get_json()``."
 msgstr ""
 
-#: ../../../CHANGES.rst:463
-# 15f0c85467b44c4dbcc2c33a421208b4
+#: ../../flask/CHANGES.rst:463
 msgid "Add \"pretty\" and \"compressed\" separators definitions in jsonify() method. Reduces JSON response size when ``JSONIFY_PRETTYPRINT_REGULAR=False`` by removing unnecessary white space included by default after separators."
 msgstr ""
 
-#: ../../../CHANGES.rst:467
-# df55a64552f84352851e52eda2db4c22
+#: ../../flask/CHANGES.rst:467
 msgid "JSON responses are now terminated with a newline character, because it is a convention that UNIX text files end with a newline and some clients don't deal well when this newline is missing. This came up originally as a part of https://github.com/postmanlabs/httpbin/issues/168. :pr:`1262`"
 msgstr ""
 
-#: ../../../CHANGES.rst:472
-# 692b6863177d4745a4f28f66485def1d
+#: ../../flask/CHANGES.rst:472
 msgid "The automatically provided ``OPTIONS`` method is now correctly disabled if the user registered an overriding rule with the lowercase-version ``options``. :issue:`1288`"
 msgstr ""
 
-#: ../../../CHANGES.rst:475
-# b16439a73ffb442d8ffffb369cfa8d11
+#: ../../flask/CHANGES.rst:475
 msgid "``flask.json.jsonify`` now supports the ``datetime.date`` type. :pr:`1326`"
 msgstr ""
 
-#: ../../../CHANGES.rst:477
-# cb3b59ad78aa4a7c942bfabb54f6c281
+#: ../../flask/CHANGES.rst:477
 msgid "Don't leak exception info of already caught exceptions to context teardown handlers. :pr:`1393`"
 msgstr ""
 
-#: ../../../CHANGES.rst:479
-# e96b9532d4d4474b8a258633a87d04b5
+#: ../../flask/CHANGES.rst:479
 msgid "Allow custom Jinja environment subclasses. :pr:`1422`"
 msgstr ""
 
-#: ../../../CHANGES.rst:480
-# c6e02846565043489bea6962e52a3486
+#: ../../flask/CHANGES.rst:480
 msgid "Updated extension dev guidelines."
 msgstr ""
 
-#: ../../../CHANGES.rst:481
-# 33970fdc5b8149c0839c1f6e07b7bf31
+#: ../../flask/CHANGES.rst:481
 msgid "``flask.g`` now has ``pop()`` and ``setdefault`` methods."
 msgstr ""
 
-#: ../../../CHANGES.rst:482
-# f7fe9aa7394741878da19f373648dcdc
+#: ../../flask/CHANGES.rst:482
 msgid "Turn on autoescape for ``flask.templating.render_template_string`` by default. :pr:`1515`"
 msgstr ""
 
-#: ../../../CHANGES.rst:484
-# 9d6210e7035545c39718ef6b3b4c1cd6
+#: ../../flask/CHANGES.rst:484
 msgid "``flask.ext`` is now deprecated. :pr:`1484`"
 msgstr ""
 
-#: ../../../CHANGES.rst:485
-# de284897400c421db272c550074be3d8
+#: ../../flask/CHANGES.rst:485
 msgid "``send_from_directory`` now raises BadRequest if the filename is invalid on the server OS. :pr:`1763`"
 msgstr ""
 
-#: ../../../CHANGES.rst:487
-# c724a4490a3043c69ae4978cf1c30d8b
+#: ../../flask/CHANGES.rst:487
 msgid "Added the ``JSONIFY_MIMETYPE`` configuration variable. :pr:`1728`"
 msgstr ""
 
-#: ../../../CHANGES.rst:488
-# cf3cbbe549344d5285738d11e9a927bf
+#: ../../flask/CHANGES.rst:488
 msgid "Exceptions during teardown handling will no longer leave bad application contexts lingering around."
 msgstr ""
 
-#: ../../../CHANGES.rst:490
-# f55e6002658848e5ae5a1be8ab3ac58b
+#: ../../flask/CHANGES.rst:490
 msgid "Fixed broken ``test_appcontext_signals()`` test case."
 msgstr ""
 
-#: ../../../CHANGES.rst:491
-# f922547ec46a4a63881b34d2f117b2c6
+#: ../../flask/CHANGES.rst:491
 msgid "Raise an :exc:`AttributeError` in :func:`flask.helpers.find_package` with a useful message explaining why it is raised when a PEP 302 import hook is used without an ``is_package()`` method."
 msgstr ""
 
-#: ../../../CHANGES.rst:494
-# de23e7ec44a14a9cbbaaf00c43b7a3c3
+#: ../../flask/CHANGES.rst:494
 msgid "Fixed an issue causing exceptions raised before entering a request or app context to be passed to teardown handlers."
 msgstr ""
 
-#: ../../../CHANGES.rst:496
-# 8a460640884b4c18b45ade709911ce11
+#: ../../flask/CHANGES.rst:496
 msgid "Fixed an issue with query parameters getting removed from requests in the test client when absolute URLs were requested."
 msgstr ""
 
-#: ../../../CHANGES.rst:498
-# f6c39f1362a64b73b2dd13fc8aa6e0b3
+#: ../../flask/CHANGES.rst:498
 msgid "Made ``@before_first_request`` into a decorator as intended."
 msgstr ""
 
-#: ../../../CHANGES.rst:499
-# ac44572474f74b0dbd408f4840e6d6de
+#: ../../flask/CHANGES.rst:499
 msgid "Fixed an etags bug when sending a file streams with a name."
 msgstr ""
 
-#: ../../../CHANGES.rst:500
-# 3af74360031043cf87d8ccc4eeeff694
+#: ../../flask/CHANGES.rst:500
 msgid "Fixed ``send_from_directory`` not expanding to the application root path correctly."
 msgstr ""
 
-#: ../../../CHANGES.rst:502
-# b704f4be3a884a7ba6a0e1cc87822e4f
+#: ../../flask/CHANGES.rst:502
 msgid "Changed logic of before first request handlers to flip the flag after invoking. This will allow some uses that are potentially dangerous but should probably be permitted."
 msgstr ""
 
-#: ../../../CHANGES.rst:505
-# 23511869f55e4440b628c4cd7f93995f
+#: ../../flask/CHANGES.rst:505
 msgid "Fixed Python 3 bug when a handler from ``app.url_build_error_handlers`` reraises the ``BuildError``."
 msgstr ""
 
-#: ../../../CHANGES.rst:510
-# fa970248595942de83a8213fc959509b
+#: ../../flask/CHANGES.rst:510
 msgid "Version 0.10.1"
 msgstr ""
 
-#: ../../../CHANGES.rst:512
-# ad15591416f4469fb8c5adc035a798f4
+#: ../../flask/CHANGES.rst:512
 msgid "Released 2013-06-14"
 msgstr ""
 
-#: ../../../CHANGES.rst:514
-# 196d19c96b7e43ad8371233a7effffcf
+#: ../../flask/CHANGES.rst:514
 msgid "Fixed an issue where ``|tojson`` was not quoting single quotes which made the filter not work properly in HTML attributes. Now it's possible to use that filter in single quoted attributes. This should make using that filter with angular.js easier."
 msgstr ""
 
-#: ../../../CHANGES.rst:518
-# 9915c8d3aa0e46218144a366f1529cda
+#: ../../flask/CHANGES.rst:518
 msgid "Added support for byte strings back to the session system. This broke compatibility with the common case of people putting binary data for token verification into the session."
 msgstr ""
 
-#: ../../../CHANGES.rst:521
-# 75dd145792a44d6287797250de4e536e
+#: ../../flask/CHANGES.rst:521
 msgid "Fixed an issue where registering the same method twice for the same endpoint would trigger an exception incorrectly."
 msgstr ""
 
-#: ../../../CHANGES.rst:526
-# f06d5e51144146788cd260797e600c04
+#: ../../flask/CHANGES.rst:526
 msgid "Version 0.10"
 msgstr ""
 
-#: ../../../CHANGES.rst:528
-# b02b6f29b1214c8daff10cc4ce516cbc
+#: ../../flask/CHANGES.rst:528
 msgid "Released 2013-06-13, codename Limoncello"
 msgstr ""
 
-#: ../../../CHANGES.rst:530
-# 7b449ff241e34d6bb11249882081b64b
+#: ../../flask/CHANGES.rst:530
 msgid "Changed default cookie serialization format from pickle to JSON to limit the impact an attacker can do if the secret key leaks. See :ref:`upgrading-to-010` for more information."
 msgstr ""
 
-#: ../../../CHANGES.rst:533
-# b2bbaa3356b84b5a846309f61731fa77
+#: ../../flask/CHANGES.rst:533
 msgid "Added ``template_test`` methods in addition to the already existing ``template_filter`` method family."
 msgstr ""
 
-#: ../../../CHANGES.rst:535
-# 849d2b6e75d94e3dbfdfc94e3b9c56ec
+#: ../../flask/CHANGES.rst:535
 msgid "Added ``template_global`` methods in addition to the already existing ``template_filter`` method family."
 msgstr ""
 
-#: ../../../CHANGES.rst:537
-# 36557d3ac87045b7bc90d8e278c8e6dd
+#: ../../flask/CHANGES.rst:537
 msgid "Set the content-length header for x-sendfile."
 msgstr ""
 
-#: ../../../CHANGES.rst:538
-# ba959ae062cc45c99217a992e75d3329
+#: ../../flask/CHANGES.rst:538
 msgid "``tojson`` filter now does not escape script blocks in HTML5 parsers."
 msgstr ""
 
-#: ../../../CHANGES.rst:540
-# 32d65f44ae5149509d13bf335885d84f
+#: ../../flask/CHANGES.rst:540
 msgid "``tojson`` used in templates is now safe by default due. This was allowed due to the different escaping behavior."
 msgstr ""
 
-#: ../../../CHANGES.rst:542
-# 3fced050a9f3438e97154ec9aefd743a
+#: ../../flask/CHANGES.rst:542
 msgid "Flask will now raise an error if you attempt to register a new function on an already used endpoint."
 msgstr ""
 
-#: ../../../CHANGES.rst:544
-# 6cb0de49897b4844981b1361c4ac42d5
+#: ../../flask/CHANGES.rst:544
 msgid "Added wrapper module around simplejson and added default serialization of datetime objects. This allows much easier customization of how JSON is handled by Flask or any Flask extension."
 msgstr ""
 
-#: ../../../CHANGES.rst:548
-# ab0dc225395549c3b49f952bcb91cb64
+#: ../../flask/CHANGES.rst:548
 msgid "Removed deprecated internal ``flask.session`` module alias. Use ``flask.sessions`` instead to get the session module. This is not to be confused with ``flask.session`` the session proxy."
 msgstr ""
 
-#: ../../../CHANGES.rst:551
-# dfa11572189640d98359de5630f7ac9f
+#: ../../flask/CHANGES.rst:551
 msgid "Templates can now be rendered without request context. The behavior is slightly different as the ``request``, ``session`` and ``g`` objects will not be available and blueprint's context processors are not called."
 msgstr ""
 
-#: ../../../CHANGES.rst:555
-# c61f3921c68549cbb8ce073971e00e75
+#: ../../flask/CHANGES.rst:555
 msgid "The config object is now available to the template as a real global and not through a context processor which makes it available even in imported templates by default."
 msgstr ""
 
-#: ../../../CHANGES.rst:558
-# 428a267d149b4a0a8cab45ffd8b82fb5
+#: ../../flask/CHANGES.rst:558
 msgid "Added an option to generate non-ascii encoded JSON which should result in less bytes being transmitted over the network. It's disabled by default to not cause confusion with existing libraries that might expect ``flask.json.dumps`` to return bytestrings by default."
 msgstr ""
 
-#: ../../../CHANGES.rst:563
-# 902dd229fc7e46c39f7f3c0dee52c861
+#: ../../flask/CHANGES.rst:563
 msgid "``flask.g`` is now stored on the app context instead of the request context."
 msgstr ""
 
-#: ../../../CHANGES.rst:565
-# 70abd39ce4be4fc2a1c8ddef9f81e126
+#: ../../flask/CHANGES.rst:565
 msgid "``flask.g`` now gained a ``get()`` method for not erroring out on non existing items."
 msgstr ""
 
-#: ../../../CHANGES.rst:567
-# 54de351aa86d4a23974333ed342e421f
+#: ../../flask/CHANGES.rst:567
 msgid "``flask.g`` now can be used with the ``in`` operator to see what's defined and it now is iterable and will yield all attributes stored."
 msgstr ""
 
-#: ../../../CHANGES.rst:569
-# 9e93d501df8647eea4541dd3888b0ecd
+#: ../../flask/CHANGES.rst:569
 msgid "``flask.Flask.request_globals_class`` got renamed to ``flask.Flask.app_ctx_globals_class`` which is a better name to what it does since 0.10."
 msgstr ""
 
-#: ../../../CHANGES.rst:572
-# 8f36ec4e5dfd46cba4848b6434122cf5
+#: ../../flask/CHANGES.rst:572
 msgid "``request``, ``session`` and ``g`` are now also added as proxies to the template context which makes them available in imported templates. One has to be very careful with those though because usage outside of macros might cause caching."
 msgstr ""
 
-#: ../../../CHANGES.rst:576
-# 5611f53d9b4a4e2993b4dc72b18777b9
+#: ../../flask/CHANGES.rst:576
 msgid "Flask will no longer invoke the wrong error handlers if a proxy exception is passed through."
 msgstr ""
 
-#: ../../../CHANGES.rst:578
-# d4cc43e4236c48e18168abeeeab22f0a
+#: ../../flask/CHANGES.rst:578
 msgid "Added a workaround for chrome's cookies in localhost not working as intended with domain names."
 msgstr ""
 
-#: ../../../CHANGES.rst:580
-# 761bbf7ce131499086b1946064326d5e
+#: ../../flask/CHANGES.rst:580
 msgid "Changed logic for picking defaults for cookie values from sessions to work better with Google Chrome."
 msgstr ""
 
-#: ../../../CHANGES.rst:582
-# 269352a32c5c45e4843f488827e02475
+#: ../../flask/CHANGES.rst:582
 msgid "Added ``message_flashed`` signal that simplifies flashing testing."
 msgstr ""
 
-#: ../../../CHANGES.rst:583
-# e398d3dddeca4ba3a760a7a76a8346e6
+#: ../../flask/CHANGES.rst:583
 msgid "Added support for copying of request contexts for better working with greenlets."
 msgstr ""
 
-#: ../../../CHANGES.rst:585
-# e340342f22054c868de9a313b796755a
+#: ../../flask/CHANGES.rst:585
 msgid "Removed custom JSON HTTP exception subclasses. If you were relying on them you can reintroduce them again yourself trivially. Using them however is strongly discouraged as the interface was flawed."
 msgstr ""
 
-#: ../../../CHANGES.rst:588
-# 66563d7a503142f4870d60247f1a5e91
+#: ../../flask/CHANGES.rst:588
 msgid "Python requirements changed: requiring Python 2.6 or 2.7 now to prepare for Python 3.3 port."
 msgstr ""
 
-#: ../../../CHANGES.rst:590
-# 8d23f541013c4379b41b5b4eb94bd2bd
+#: ../../flask/CHANGES.rst:590
 msgid "Changed how the teardown system is informed about exceptions. This is now more reliable in case something handles an exception halfway through the error handling process."
 msgstr ""
 
-#: ../../../CHANGES.rst:593
-# 9d416170fd1f42e4a56abf4dc0b3c945
+#: ../../flask/CHANGES.rst:593
 msgid "Request context preservation in debug mode now keeps the exception information around which means that teardown handlers are able to distinguish error from success cases."
 msgstr ""
 
-#: ../../../CHANGES.rst:596
-# bf0a9ea1c357448796b4b032ccd21928
+#: ../../flask/CHANGES.rst:596
 msgid "Added the ``JSONIFY_PRETTYPRINT_REGULAR`` configuration variable."
 msgstr ""
 
-#: ../../../CHANGES.rst:597
-# 76542c79bc864ea296e5a752b4f7defd
+#: ../../flask/CHANGES.rst:597
 msgid "Flask now orders JSON keys by default to not trash HTTP caches due to different hash seeds between different workers."
 msgstr ""
 
-#: ../../../CHANGES.rst:599
-# defcbb58194a4508b328f9817e875e83
+#: ../../flask/CHANGES.rst:599
 msgid "Added ``appcontext_pushed`` and ``appcontext_popped`` signals."
 msgstr ""
 
-#: ../../../CHANGES.rst:600
-# ceb8fc9e9a184506b323116575240663
+#: ../../flask/CHANGES.rst:600
 msgid "The builtin run method now takes the ``SERVER_NAME`` into account when picking the default port to run on."
 msgstr ""
 
-#: ../../../CHANGES.rst:602
-# d48794152a984eed81fc9706917378c5
+#: ../../flask/CHANGES.rst:602
 msgid "Added ``flask.request.get_json()`` as a replacement for the old ``flask.request.json`` property."
 msgstr ""
 
-#: ../../../CHANGES.rst:607
-# c6566680ebfd4f949d6f8611ffed56bb
+#: ../../flask/CHANGES.rst:607
 msgid "Version 0.9"
 msgstr ""
 
-#: ../../../CHANGES.rst:609
-# 1b29ffaea2b849e0a4e47773ab686095
+#: ../../flask/CHANGES.rst:609
 msgid "Released 2012-07-01, codename Campari"
 msgstr ""
 
-#: ../../../CHANGES.rst:611
-# 7f9997a96a2d4eb4a154d03110ca4144
+#: ../../flask/CHANGES.rst:611
 msgid "The :func:`flask.Request.on_json_loading_failed` now returns a JSON formatted response by default."
 msgstr ""
 
-#: ../../../CHANGES.rst:613
-# e94629a2deb44b889fc491496cfaf7c4
+#: ../../flask/CHANGES.rst:613
 msgid "The :func:`flask.url_for` function now can generate anchors to the generated links."
 msgstr ""
 
-#: ../../../CHANGES.rst:615
-# ca0983f706d442828f9880ab1bf52e98
+#: ../../flask/CHANGES.rst:615
 msgid "The :func:`flask.url_for` function now can also explicitly generate URL rules specific to a given HTTP method."
 msgstr ""
 
-#: ../../../CHANGES.rst:617
-# 383fe79d1b7a46e3a4be7776cbffdb3b
+#: ../../flask/CHANGES.rst:617
 msgid "Logger now only returns the debug log setting if it was not set explicitly."
 msgstr ""
 
-#: ../../../CHANGES.rst:619
-# 344a8e0f3f464c12a05d9880525486d6
+#: ../../flask/CHANGES.rst:619
 msgid "Unregister a circular dependency between the WSGI environment and the request object when shutting down the request. This means that environ ``werkzeug.request`` will be ``None`` after the response was returned to the WSGI server but has the advantage that the garbage collector is not needed on CPython to tear down the request unless the user created circular dependencies themselves."
 msgstr ""
 
-#: ../../../CHANGES.rst:625
-# 9ce7ff291608489b87b35d9e730675a2
+#: ../../flask/CHANGES.rst:625
 msgid "Session is now stored after callbacks so that if the session payload is stored in the session you can still modify it in an after request callback."
 msgstr ""
 
-#: ../../../CHANGES.rst:628
-# 67e1b25df61c4ff0b7edaa204a1e8e04
+#: ../../flask/CHANGES.rst:628
 msgid "The :class:`flask.Flask` class will avoid importing the provided import name if it can (the required first parameter), to benefit tools which build Flask instances programmatically. The Flask class will fall back to using import on systems with custom module hooks, e.g. Google App Engine, or when the import name is inside a zip archive (usually a .egg) prior to Python 2.7."
 msgstr ""
 
-#: ../../../CHANGES.rst:634
-# 2dde8112a49a4db199e9880262981941
+#: ../../flask/CHANGES.rst:634
 msgid "Blueprints now have a decorator to add custom template filters application wide, :meth:`flask.Blueprint.app_template_filter`."
 msgstr ""
 
-#: ../../../CHANGES.rst:636
-# 6b4556661cf444f8b903d55f06cc19ff
+#: ../../flask/CHANGES.rst:636
 msgid "The Flask and Blueprint classes now have a non-decorator method for adding custom template filters application wide, :meth:`flask.Flask.add_template_filter` and :meth:`flask.Blueprint.add_app_template_filter`."
 msgstr ""
 
-#: ../../../CHANGES.rst:640
-# 962ac44fef6e4351bffb822888e958b8
+#: ../../flask/CHANGES.rst:640
 msgid "The :func:`flask.get_flashed_messages` function now allows rendering flashed message categories in separate blocks, through a ``category_filter`` argument."
 msgstr ""
 
-#: ../../../CHANGES.rst:643
-# b6d075bc5d0c499096c9499c698a89b9
+#: ../../flask/CHANGES.rst:643
 msgid "The :meth:`flask.Flask.run` method now accepts ``None`` for ``host`` and ``port`` arguments, using default values when ``None``. This allows for calling run using configuration values, e.g. ``app.run(app.config.get('MYHOST'), app.config.get('MYPORT'))``, with proper behavior whether or not a config file is provided."
 msgstr ""
 
-#: ../../../CHANGES.rst:648
-# c4ff48477ae242199aff44f8396d20ed
+#: ../../flask/CHANGES.rst:648
 msgid "The :meth:`flask.render_template` method now accepts a either an iterable of template names or a single template name. Previously, it only accepted a single template name. On an iterable, the first template found is rendered."
 msgstr ""
 
-#: ../../../CHANGES.rst:652
-# 9b58c5a6e86847dfab8ae7037ff85a1a
+#: ../../flask/CHANGES.rst:652
 msgid "Added :meth:`flask.Flask.app_context` which works very similar to the request context but only provides access to the current application. This also adds support for URL generation without an active request context."
 msgstr ""
 
-#: ../../../CHANGES.rst:656
-# 0a3010c2aab14c0fa211a67608d2270b
+#: ../../flask/CHANGES.rst:656
 msgid "View functions can now return a tuple with the first instance being an instance of :class:`flask.Response`. This allows for returning ``jsonify(error=\"error msg\"), 400`` from a view function."
 msgstr ""
 
-#: ../../../CHANGES.rst:659
-# d6d39a50bbce459ba15cd0908a328137
+#: ../../flask/CHANGES.rst:659
 msgid ":class:`~flask.Flask` and :class:`~flask.Blueprint` now provide a :meth:`~flask.Flask.get_send_file_max_age` hook for subclasses to override behavior of serving static files from Flask when using :meth:`flask.Flask.send_static_file` (used for the default static file handler) and :func:`~flask.helpers.send_file`. This hook is provided a filename, which for example allows changing cache controls by file extension. The default max-age for ``send_file`` and static files can be configured through a new ``SEND_FILE_MAX_AGE_DEFAULT`` configuration variable, which is used in the default ``get_send_file_max_age`` implementation."
 msgstr ""
 
-#: ../../../CHANGES.rst:669
-# e18009d22d9e40f8b6a6fce1a5fcc748
+#: ../../flask/CHANGES.rst:669
 msgid "Fixed an assumption in sessions implementation which could break message flashing on sessions implementations which use external storage."
 msgstr ""
 
-#: ../../../CHANGES.rst:672
-# ee9dd98668c44be1a509d50f4b419b42
+#: ../../flask/CHANGES.rst:672
 msgid "Changed the behavior of tuple return values from functions. They are no longer arguments to the response object, they now have a defined meaning."
 msgstr ""
 
-#: ../../../CHANGES.rst:675
-# 4f0a6f3cbe42401785bd6d640c72f1f2
+#: ../../flask/CHANGES.rst:675
 msgid "Added :attr:`flask.Flask.request_globals_class` to allow a specific class to be used on creation of the :data:`~flask.g` instance of each request."
 msgstr ""
 
-#: ../../../CHANGES.rst:678
-# a09f2d676b9848c79e31d4adbb9a7c07
+#: ../../flask/CHANGES.rst:678
 msgid "Added ``required_methods`` attribute to view functions to force-add methods on registration."
 msgstr ""
 
-#: ../../../CHANGES.rst:680
-# 938f6a04cb1841f1a6e2c762f28e1670
+#: ../../flask/CHANGES.rst:680
 msgid "Added :func:`flask.after_this_request`."
 msgstr ""
 
-#: ../../../CHANGES.rst:681
-# 408217980b1a4877b89efccf30421556
+#: ../../flask/CHANGES.rst:681
 msgid "Added :func:`flask.stream_with_context` and the ability to push contexts multiple times without producing unexpected behavior."
 msgstr ""
 
-#: ../../../CHANGES.rst:686
-# 03e21a5c55e246f3848d7bd7554a1a64
+#: ../../flask/CHANGES.rst:686
 msgid "Version 0.8.1"
 msgstr ""
 
-#: ../../../CHANGES.rst:688
-# fdd364cd1d9342618d93ec486a255349
+#: ../../flask/CHANGES.rst:688
 msgid "Released 2012-07-01"
 msgstr ""
 
-#: ../../../CHANGES.rst:690
-# 5c4461bf0d5f4969908c83a9ec4043e0
+#: ../../flask/CHANGES.rst:690
 msgid "Fixed an issue with the undocumented ``flask.session`` module to not work properly on Python 2.5. It should not be used but did cause some problems for package managers."
 msgstr ""
 
-#: ../../../CHANGES.rst:696
-# 4b20fad63d644505826d08e0df6564ab
+#: ../../flask/CHANGES.rst:696
 msgid "Version 0.8"
 msgstr ""
 
-#: ../../../CHANGES.rst:698
-# ef0a9295591a4af9b0d908f7241907e1
+#: ../../flask/CHANGES.rst:698
 msgid "Released 2011-09-29, codename Rakija"
 msgstr ""
 
-#: ../../../CHANGES.rst:700
-# 9d35104807bd42aaba1a4680cc61957a
+#: ../../flask/CHANGES.rst:700
 msgid "Refactored session support into a session interface so that the implementation of the sessions can be changed without having to override the Flask class."
 msgstr ""
 
-#: ../../../CHANGES.rst:703
-# d8bd86f2b7e448a59ba640fab2637b65
+#: ../../flask/CHANGES.rst:703
 msgid "Empty session cookies are now deleted properly automatically."
 msgstr ""
 
-#: ../../../CHANGES.rst:704
-# bcbe08429f1846e59bd22580d79a0ecf
+#: ../../flask/CHANGES.rst:704
 msgid "View functions can now opt out of getting the automatic OPTIONS implementation."
 msgstr ""
 
-#: ../../../CHANGES.rst:706
-# 42c799835ae14c08b8c2b0a61e74aee3
+#: ../../flask/CHANGES.rst:706
 msgid "HTTP exceptions and Bad Request errors can now be trapped so that they show up normally in the traceback."
 msgstr ""
 
-#: ../../../CHANGES.rst:708
-# 60245eab95ca42ea9ec76caf0f55b2ef
+#: ../../flask/CHANGES.rst:708
 msgid "Flask in debug mode is now detecting some common problems and tries to warn you about them."
 msgstr ""
 
-#: ../../../CHANGES.rst:710
-# 5f584f7454774a0d8dd9ced59b6b6f7b
+#: ../../flask/CHANGES.rst:710
 msgid "Flask in debug mode will now complain with an assertion error if a view was attached after the first request was handled. This gives earlier feedback when users forget to import view code ahead of time."
 msgstr ""
 
-#: ../../../CHANGES.rst:714
-# 78e01390bbfa417abfed9dbe498a6295
+#: ../../flask/CHANGES.rst:714
 msgid "Added the ability to register callbacks that are only triggered once at the beginning of the first request. (:meth:`Flask.before_first_request`)"
 msgstr ""
 
-#: ../../../CHANGES.rst:717
-# 355bcb3ddf194b989c28ffc7e5afe7fd
+#: ../../flask/CHANGES.rst:717
 msgid "Malformed JSON data will now trigger a bad request HTTP exception instead of a value error which usually would result in a 500 internal server error if not handled. This is a backwards incompatible change."
 msgstr ""
 
-#: ../../../CHANGES.rst:721
-# 21e6906fd71445aea79209f9c422ae3f
+#: ../../flask/CHANGES.rst:721
 msgid "Applications now not only have a root path where the resources and modules are located but also an instance path which is the designated place to drop files that are modified at runtime (uploads etc.). Also this is conceptually only instance depending and outside version control so it's the perfect place to put configuration files etc. For more information see :ref:`instance-folders`."
 msgstr ""
 
-#: ../../../CHANGES.rst:727
-# f02c7c6720c44c48b88231a0d48222e3
+#: ../../flask/CHANGES.rst:727
 msgid "Added the ``APPLICATION_ROOT`` configuration variable."
 msgstr ""
 
-#: ../../../CHANGES.rst:728
-# 1d5a32900a3f41dc86519db4d260febe
+#: ../../flask/CHANGES.rst:728
 msgid "Implemented :meth:`~flask.testing.TestClient.session_transaction` to easily modify sessions from the test environment."
 msgstr ""
 
-#: ../../../CHANGES.rst:730
-# 459de2b3bf2645a48fd865e9fe034e1e
+#: ../../flask/CHANGES.rst:730
 msgid "Refactored test client internally. The ``APPLICATION_ROOT`` configuration variable as well as ``SERVER_NAME`` are now properly used by the test client as defaults."
 msgstr ""
 
-#: ../../../CHANGES.rst:733
-# 79efbee9c34d4f71a5e05a954d092740
+#: ../../flask/CHANGES.rst:733
 msgid "Added :attr:`flask.views.View.decorators` to support simpler decorating of pluggable (class-based) views."
 msgstr ""
 
-#: ../../../CHANGES.rst:735
-# b2c38926a37d4e739e7f8e67080e06a2
+#: ../../flask/CHANGES.rst:735
 msgid "Fixed an issue where the test client if used with the \"with\" statement did not trigger the execution of the teardown handlers."
 msgstr ""
 
-#: ../../../CHANGES.rst:737
-# 5abeb4608dc04e7086128cb116eab1bf
+#: ../../flask/CHANGES.rst:737
 msgid "Added finer control over the session cookie parameters."
 msgstr ""
 
-#: ../../../CHANGES.rst:738
-# 0723646ed6f54847a108dd9bf2cff1ae
+#: ../../flask/CHANGES.rst:738
 msgid "HEAD requests to a method view now automatically dispatch to the ``get`` method if no handler was implemented."
 msgstr ""
 
-#: ../../../CHANGES.rst:740
-# 5436457810a0438cbe93bb2a0a2c4d67
+#: ../../flask/CHANGES.rst:740
 msgid "Implemented the virtual :mod:`flask.ext` package to import extensions from."
 msgstr ""
 
-#: ../../../CHANGES.rst:742
-# 888c504a4a6b40b69b09966ab2a429c2
+#: ../../flask/CHANGES.rst:742
 msgid "The context preservation on exceptions is now an integral component of Flask itself and no longer of the test client. This cleaned up some internal logic and lowers the odds of runaway request contexts in unittests."
 msgstr ""
 
-#: ../../../CHANGES.rst:746
-# 4fb35a54b33747aab279cefd98f0a3d1
+#: ../../flask/CHANGES.rst:746
 msgid "Fixed the Jinja2 environment's ``list_templates`` method not returning the correct names when blueprints or modules were involved."
 msgstr ""
 
-#: ../../../CHANGES.rst:752
-# c102ea4a05624ac58e51ed7e88a047b4
+#: ../../flask/CHANGES.rst:752
 msgid "Version 0.7.2"
 msgstr ""
 
-#: ../../../CHANGES.rst:754
-# 3c37a808f52a40e090d2a9fcc38149cf
+#: ../../flask/CHANGES.rst:754
 msgid "Released 2011-07-06"
 msgstr ""
 
-#: ../../../CHANGES.rst:756
-# 3db9c3257cf64b34bcad24fa3be6f33d
+#: ../../flask/CHANGES.rst:756
 msgid "Fixed an issue with URL processors not properly working on blueprints."
 msgstr ""
 
-#: ../../../CHANGES.rst:761
-# 0bc0ef2b8b0f47ca9de6794b24b7fbf9
+#: ../../flask/CHANGES.rst:761
 msgid "Version 0.7.1"
 msgstr ""
 
-#: ../../../CHANGES.rst:763
-# 8c3f527b647d4e218d2580476f3dc32b
+#: ../../flask/CHANGES.rst:763
 msgid "Released 2011-06-29"
 msgstr ""
 
-#: ../../../CHANGES.rst:765
-# 57bc14f6edc446059189d8d354fa459e
+#: ../../flask/CHANGES.rst:765
 msgid "Added missing future import that broke 2.5 compatibility."
 msgstr ""
 
-#: ../../../CHANGES.rst:766
-# c3d8b6048d3b4a64afd3e9dade4d43d1
+#: ../../flask/CHANGES.rst:766
 msgid "Fixed an infinite redirect issue with blueprints."
 msgstr ""
 
-#: ../../../CHANGES.rst:770
-# 26bb348c1a74473a8faa103ab5bd5c89
+#: ../../flask/CHANGES.rst:770
 msgid "Version 0.7"
 msgstr ""
 
-#: ../../../CHANGES.rst:772
-# ad79f3d54ab0456289fb51f40ee54589
+#: ../../flask/CHANGES.rst:772
 msgid "Released 2011-06-28, codename Grappa"
 msgstr ""
 
-#: ../../../CHANGES.rst:774
-# e412eca7c65045b69abb642a0a4db515
+#: ../../flask/CHANGES.rst:774
 msgid "Added :meth:`~flask.Flask.make_default_options_response` which can be used by subclasses to alter the default behavior for ``OPTIONS`` responses."
 msgstr ""
 
-#: ../../../CHANGES.rst:777
-# eab4677d18024a748afc28703f7cf33a
+#: ../../flask/CHANGES.rst:777
 msgid "Unbound locals now raise a proper :exc:`RuntimeError` instead of an :exc:`AttributeError`."
 msgstr ""
 
-#: ../../../CHANGES.rst:779
-# fbcdabfe56bd41fa97c43cb965fa2918
+#: ../../flask/CHANGES.rst:779
 msgid "Mimetype guessing and etag support based on file objects is now deprecated for :func:`flask.send_file` because it was unreliable. Pass filenames instead or attach your own etags and provide a proper mimetype by hand."
 msgstr ""
 
-#: ../../../CHANGES.rst:783
-# 44b9913f7a65441b85218d67f41468c7
+#: ../../flask/CHANGES.rst:783
 msgid "Static file handling for modules now requires the name of the static folder to be supplied explicitly. The previous autodetection was not reliable and caused issues on Google's App Engine. Until 1.0 the old behavior will continue to work but issue dependency warnings."
 msgstr ""
 
-#: ../../../CHANGES.rst:787
-# 35079e191d4048d582119960295350a8
+#: ../../flask/CHANGES.rst:787
 msgid "Fixed a problem for Flask to run on jython."
 msgstr ""
 
-#: ../../../CHANGES.rst:788
-# 65b7d90fbb2040caa167b26db0121bf0
+#: ../../flask/CHANGES.rst:788
 msgid "Added a ``PROPAGATE_EXCEPTIONS`` configuration variable that can be used to flip the setting of exception propagation which previously was linked to ``DEBUG`` alone and is now linked to either ``DEBUG`` or ``TESTING``."
 msgstr ""
 
-#: ../../../CHANGES.rst:792
-# 5bd11bcc32bd41f2b8633211249d73a0
+#: ../../flask/CHANGES.rst:792
 msgid "Flask no longer internally depends on rules being added through the ``add_url_rule`` function and can now also accept regular werkzeug rules added to the url map."
 msgstr ""
 
-#: ../../../CHANGES.rst:795
-# 0a5f3eb15354406f9c8f2318fd6c0c2c
+#: ../../flask/CHANGES.rst:795
 msgid "Added an ``endpoint`` method to the flask application object which allows one to register a callback to an arbitrary endpoint with a decorator."
 msgstr ""
 
-#: ../../../CHANGES.rst:798
-# ef4ac11b3ad54ef18c12484f954e7c7f
+#: ../../flask/CHANGES.rst:798
 msgid "Use Last-Modified for static file sending instead of Date which was incorrectly introduced in 0.6."
 msgstr ""
 
-#: ../../../CHANGES.rst:800
-# 24b3905c4f624156957a66f6642954e5
+#: ../../flask/CHANGES.rst:800
 msgid "Added ``create_jinja_loader`` to override the loader creation process."
 msgstr ""
 
-#: ../../../CHANGES.rst:802
-# 6d58fd0d7e75480d9eb78969e3f63571
+#: ../../flask/CHANGES.rst:802
 msgid "Implemented a silent flag for ``config.from_pyfile``."
 msgstr ""
 
-#: ../../../CHANGES.rst:803
-# 6f9301b5c1af40818244d9be786f3727
+#: ../../flask/CHANGES.rst:803
 msgid "Added ``teardown_request`` decorator, for functions that should run at the end of a request regardless of whether an exception occurred. Also the behavior for ``after_request`` was changed. It's now no longer executed when an exception is raised. See :ref:`upgrading-to-new-teardown-handling`"
 msgstr ""
 
-#: ../../../CHANGES.rst:808
-# 2e7bdf1d57c84f26872c838402966646
+#: ../../flask/CHANGES.rst:808
 msgid "Implemented :func:`flask.has_request_context`"
 msgstr ""
 
-#: ../../../CHANGES.rst:809
-# ffc5e800565e4c2c87b818dbacc0f39c
+#: ../../flask/CHANGES.rst:809
 msgid "Deprecated ``init_jinja_globals``. Override the :meth:`~flask.Flask.create_jinja_environment` method instead to achieve the same functionality."
 msgstr ""
 
-#: ../../../CHANGES.rst:812
-# b000833350754ed4b3fc5eac728a8cab
+#: ../../flask/CHANGES.rst:812
 msgid "Added :func:`flask.safe_join`"
 msgstr ""
 
-#: ../../../CHANGES.rst:813
-# 02385eb189524945a5621057926e79e7
+#: ../../flask/CHANGES.rst:813
 msgid "The automatic JSON request data unpacking now looks at the charset mimetype parameter."
 msgstr ""
 
-#: ../../../CHANGES.rst:815
-# 4b60e62246a448f384c3c82187e987a4
+#: ../../flask/CHANGES.rst:815
 msgid "Don't modify the session on :func:`flask.get_flashed_messages` if there are no messages in the session."
 msgstr ""
 
-#: ../../../CHANGES.rst:817
-# 115560ccdb604bffb633e837d5cc07af
+#: ../../flask/CHANGES.rst:817
 msgid "``before_request`` handlers are now able to abort requests with errors."
 msgstr ""
 
-#: ../../../CHANGES.rst:819
-# 957ab2ef4998435e849e4512b00db6a1
+#: ../../flask/CHANGES.rst:819
 msgid "It is not possible to define user exception handlers. That way you can provide custom error messages from a central hub for certain errors that might occur during request processing (for instance database connection errors, timeouts from remote resources etc.)."
 msgstr ""
 
-#: ../../../CHANGES.rst:823
-# f5246dab7a264b6198492819dd1ceabe
+#: ../../flask/CHANGES.rst:823
 msgid "Blueprints can provide blueprint specific error handlers."
 msgstr ""
 
-#: ../../../CHANGES.rst:824
-# 0e6873e1a35b4883b3d425cbdc413957
+#: ../../flask/CHANGES.rst:824
 msgid "Implemented generic :ref:`views` (class-based views)."
 msgstr ""
 
-#: ../../../CHANGES.rst:828
-# 9ef3d77db6a549a48a829a183c4cb260
+#: ../../flask/CHANGES.rst:828
 msgid "Version 0.6.1"
 msgstr ""
 
-#: ../../../CHANGES.rst:830
-# b739067deae640a4b57aaf770d96a449
+#: ../../flask/CHANGES.rst:830
 msgid "Released 2010-12-31"
 msgstr ""
 
-#: ../../../CHANGES.rst:832
-# 32e1f40043d8429993ebec9d86912372
+#: ../../flask/CHANGES.rst:832
 msgid "Fixed an issue where the default ``OPTIONS`` response was not exposing all valid methods in the ``Allow`` header."
 msgstr ""
 
-#: ../../../CHANGES.rst:834
-# 649103eb3cac4e1fbbeb229ce6232ed1
+#: ../../flask/CHANGES.rst:834
 msgid "Jinja2 template loading syntax now allows \"./\" in front of a template load path. Previously this caused issues with module setups."
 msgstr ""
 
-#: ../../../CHANGES.rst:837
-# 52dee5d92d434cabbec04c1051444807
+#: ../../flask/CHANGES.rst:837
 msgid "Fixed an issue where the subdomain setting for modules was ignored for the static folder."
 msgstr ""
 
-#: ../../../CHANGES.rst:839
-# 66e863cf14ed45d799c12a40588e88ad
+#: ../../flask/CHANGES.rst:839
 msgid "Fixed a security problem that allowed clients to download arbitrary files if the host server was a windows based operating system and the client uses backslashes to escape the directory the files where exposed from."
 msgstr ""
 
-#: ../../../CHANGES.rst:846
-# e4fb9dc543b44a2cb99992cd37199489
+#: ../../flask/CHANGES.rst:846
 msgid "Version 0.6"
 msgstr ""
 
-#: ../../../CHANGES.rst:848
-# a399543ce4c3418eb3cf5fb64b89aa39
+#: ../../flask/CHANGES.rst:848
 msgid "Released 2010-07-27, codename Whisky"
 msgstr ""
 
-#: ../../../CHANGES.rst:850
-# 1b3ad4e3e44643b0b838042b07ae717d
+#: ../../flask/CHANGES.rst:850
 msgid "After request functions are now called in reverse order of registration."
 msgstr ""
 
-#: ../../../CHANGES.rst:852
-# 4b694f375c9f4653a7148147e02119b2
+#: ../../flask/CHANGES.rst:852
 msgid "OPTIONS is now automatically implemented by Flask unless the application explicitly adds 'OPTIONS' as method to the URL rule. In this case no automatic OPTIONS handling kicks in."
 msgstr ""
 
-#: ../../../CHANGES.rst:855
-# d5933c310d5e4f29834b2d5486275806
+#: ../../flask/CHANGES.rst:855
 msgid "Static rules are now even in place if there is no static folder for the module. This was implemented to aid GAE which will remove the static folder if it's part of a mapping in the .yml file."
 msgstr ""
 
-#: ../../../CHANGES.rst:858
-# d692bbd668394fdcb716ce7120c73fd5
+#: ../../flask/CHANGES.rst:858
 msgid "The :attr:`~flask.Flask.config` is now available in the templates as ``config``."
 msgstr ""
 
-#: ../../../CHANGES.rst:860
-# 9d4ebcf5f8fc42479a9fa6e2c6107578
+#: ../../flask/CHANGES.rst:860
 msgid "Context processors will no longer override values passed directly to the render function."
 msgstr ""
 
-#: ../../../CHANGES.rst:862
-# eb05c47a0d114afc8f8f5ac306b66c8f
+#: ../../flask/CHANGES.rst:862
 msgid "Added the ability to limit the incoming request data with the new ``MAX_CONTENT_LENGTH`` configuration value."
 msgstr ""
 
-#: ../../../CHANGES.rst:864
-# 31c29f4b780b48868bc21644a02e3b4b
+#: ../../flask/CHANGES.rst:864
 msgid "The endpoint for the :meth:`flask.Module.add_url_rule` method is now optional to be consistent with the function of the same name on the application object."
 msgstr ""
 
-#: ../../../CHANGES.rst:867
-# 435569b65c504c2db053dca9a4e9c1a2
+#: ../../flask/CHANGES.rst:867
 msgid "Added a :func:`flask.make_response` function that simplifies creating response object instances in views."
 msgstr ""
 
-#: ../../../CHANGES.rst:869
-# f80a0f4a5a5c444e997e903810dcd8af
+#: ../../flask/CHANGES.rst:869
 msgid "Added signalling support based on blinker. This feature is currently optional and supposed to be used by extensions and applications. If you want to use it, make sure to have `blinker`_ installed."
 msgstr ""
 
-#: ../../../CHANGES.rst:872
-# c101f953880f41c4b9208f6c7fed344f
+#: ../../flask/CHANGES.rst:872
 msgid "Refactored the way URL adapters are created. This process is now fully customizable with the :meth:`~flask.Flask.create_url_adapter` method."
 msgstr ""
 
-#: ../../../CHANGES.rst:875
-# a120ed437e29482898311719b7f64b21
+#: ../../flask/CHANGES.rst:875
 msgid "Modules can now register for a subdomain instead of just an URL prefix. This makes it possible to bind a whole module to a configurable subdomain."
 msgstr ""
 
-#: ../../../CHANGES.rst:883
-# 815a7bfb714f49438c3438392e9a913b
+#: ../../flask/CHANGES.rst:883
 msgid "Version 0.5.2"
 msgstr ""
 
-#: ../../../CHANGES.rst:885
-# e4da1e12a7b0483987b12abdbf5acd02
+#: ../../flask/CHANGES.rst:885
 msgid "Released 2010-07-15"
 msgstr ""
 
-#: ../../../CHANGES.rst:887
-# fa057650438b4ad3b47a36f00e1fc9d5
+#: ../../flask/CHANGES.rst:887
 msgid "Fixed another issue with loading templates from directories when modules were used."
 msgstr ""
 
-#: ../../../CHANGES.rst:892
-# 5222a56a95474187b1197f4981b17ffd
+#: ../../flask/CHANGES.rst:892
 msgid "Version 0.5.1"
 msgstr ""
 
-#: ../../../CHANGES.rst:894
-# 28da2dd744c14012a0557eab464a1ee8
+#: ../../flask/CHANGES.rst:894
 msgid "Released 2010-07-06"
 msgstr ""
 
-#: ../../../CHANGES.rst:896
-# cbb468a6d0904e8fac40baecd0c516ba
+#: ../../flask/CHANGES.rst:896
 msgid "Fixes an issue with template loading from directories when modules where used."
 msgstr ""
 
-#: ../../../CHANGES.rst:901
-# 6e088f8da0e74e89b50477afd749585c
+#: ../../flask/CHANGES.rst:901
 msgid "Version 0.5"
 msgstr ""
 
-#: ../../../CHANGES.rst:903
-# 37f0e9f6f3104d699cd3428f4aaeb783
+#: ../../flask/CHANGES.rst:903
 msgid "Released 2010-07-06, codename Calvados"
 msgstr ""
 
-#: ../../../CHANGES.rst:905
-# a356be43b44d4441a5e230c42c99ae53
+#: ../../flask/CHANGES.rst:905
 msgid "Fixed a bug with subdomains that was caused by the inability to specify the server name. The server name can now be set with the ``SERVER_NAME`` config key. This key is now also used to set the session cookie cross-subdomain wide."
 msgstr ""
 
-#: ../../../CHANGES.rst:909
-# 9c1479907db14b5ca1735b1e9d4f4dc6
+#: ../../flask/CHANGES.rst:909
 msgid "Autoescaping is no longer active for all templates. Instead it is only active for ``.html``, ``.htm``, ``.xml`` and ``.xhtml``. Inside templates this behavior can be changed with the ``autoescape`` tag."
 msgstr ""
 
-#: ../../../CHANGES.rst:912
-# e0b5003966a8407ab366240aa5da233e
+#: ../../flask/CHANGES.rst:912
 msgid "Refactored Flask internally. It now consists of more than a single file."
 msgstr ""
 
-#: ../../../CHANGES.rst:914
-# 18cc59914c1f4d4aa3e55f7e5490eca7
+#: ../../flask/CHANGES.rst:914
 msgid ":func:`flask.send_file` now emits etags and has the ability to do conditional responses builtin."
 msgstr ""
 
-#: ../../../CHANGES.rst:916
-# bc37a54e0d95406c8e6dc1815333a33a
+#: ../../flask/CHANGES.rst:916
 msgid "(temporarily) dropped support for zipped applications. This was a rarely used feature and led to some confusing behavior."
 msgstr ""
 
-#: ../../../CHANGES.rst:918
-# d71029b501ee4f1bb63d9893f8737ddf
+#: ../../flask/CHANGES.rst:918
 msgid "Added support for per-package template and static-file directories."
 msgstr ""
 
-#: ../../../CHANGES.rst:919
-# c7f62b5ce62f4b00bc43d2aba1300990
+#: ../../flask/CHANGES.rst:919
 msgid "Removed support for ``create_jinja_loader`` which is no longer used in 0.5 due to the improved module support."
 msgstr ""
 
-#: ../../../CHANGES.rst:921
-# 18ac6c6e690b4ea282a3261d09e758ca
+#: ../../flask/CHANGES.rst:921
 msgid "Added a helper function to expose files from any directory."
 msgstr ""
 
-#: ../../../CHANGES.rst:925
-# f85b5ca48e0b46b68f44fc3f768c26e6
+#: ../../flask/CHANGES.rst:925
 msgid "Version 0.4"
 msgstr ""
 
-#: ../../../CHANGES.rst:927
-# 636f7a16edba4c1480f4073be3cfeae2
+#: ../../flask/CHANGES.rst:927
 msgid "Released 2010-06-18, codename Rakia"
 msgstr ""
 
-#: ../../../CHANGES.rst:929
-# a62793633d2b4ce796ab04e38be27427
+#: ../../flask/CHANGES.rst:929
 msgid "Added the ability to register application wide error handlers from modules."
 msgstr ""
 
-#: ../../../CHANGES.rst:931
-# 12fd6c513e5349ab8e636fa142221143
+#: ../../flask/CHANGES.rst:931
 msgid ":meth:`~flask.Flask.after_request` handlers are now also invoked if the request dies with an exception and an error handling page kicks in."
 msgstr ""
 
-#: ../../../CHANGES.rst:934
-# 758c9bb62bbc45b0a4f4572dc642f06e
+#: ../../flask/CHANGES.rst:934
 msgid "Test client has not the ability to preserve the request context for a little longer. This can also be used to trigger custom requests that do not pop the request stack for testing."
 msgstr ""
 
-#: ../../../CHANGES.rst:937
-# fcfd506e3985485a842b9d4aa578cd20
+#: ../../flask/CHANGES.rst:937
 msgid "Because the Python standard library caches loggers, the name of the logger is configurable now to better support unittests."
 msgstr ""
 
-#: ../../../CHANGES.rst:939
-# 2f522399ab8a4c16873d952535111bad
+#: ../../flask/CHANGES.rst:939
 msgid "Added ``TESTING`` switch that can activate unittesting helpers."
 msgstr ""
 
-#: ../../../CHANGES.rst:940
-# f1a4f529022c4b56a3b349298e9cbbf5
+#: ../../flask/CHANGES.rst:940
 msgid "The logger switches to ``DEBUG`` mode now if debug is enabled."
 msgstr ""
 
-#: ../../../CHANGES.rst:944
-# 01cf4029324546109e84a07e4703575b
+#: ../../flask/CHANGES.rst:944
 msgid "Version 0.3.1"
 msgstr ""
 
-#: ../../../CHANGES.rst:946
-# fd94028534b24f7cb37ba672e69abedc
+#: ../../flask/CHANGES.rst:946
 msgid "Released 2010-05-28"
 msgstr ""
 
-#: ../../../CHANGES.rst:948
-# 1ae516e5b6a447b8b181f5de019e272c
+#: ../../flask/CHANGES.rst:948
 msgid "Fixed a error reporting bug with :meth:`flask.Config.from_envvar`"
 msgstr ""
 
-#: ../../../CHANGES.rst:949
-# 946902885729447db82863ca9eb1b738
+#: ../../flask/CHANGES.rst:949
 msgid "Removed some unused code from flask"
 msgstr ""
 
-#: ../../../CHANGES.rst:950
-# eb7f16160df249b1bfa5963490636f2f
+#: ../../flask/CHANGES.rst:950
 msgid "Release does no longer include development leftover files (.git folder for themes, built documentation in zip and pdf file and some .pyc files)"
 msgstr ""
 
-#: ../../../CHANGES.rst:956
-# 238620f4dddb4c65912dfc5ea4a8b7ce
+#: ../../flask/CHANGES.rst:956
 msgid "Version 0.3"
 msgstr ""
 
-#: ../../../CHANGES.rst:958
-# 4627321d46c34794b4b5c09ab15615b2
+#: ../../flask/CHANGES.rst:958
 msgid "Released 2010-05-28, codename Schnaps"
 msgstr ""
 
-#: ../../../CHANGES.rst:960
-# 5767b89bc3df42f8a0a689567db813e3
+#: ../../flask/CHANGES.rst:960
 msgid "Added support for categories for flashed messages."
 msgstr ""
 
-#: ../../../CHANGES.rst:961
-# 158e7d16f945462a9a3a134baed8c48b
+#: ../../flask/CHANGES.rst:961
 msgid "The application now configures a :class:`logging.Handler` and will log request handling exceptions to that logger when not in debug mode. This makes it possible to receive mails on server errors for example."
 msgstr ""
 
-#: ../../../CHANGES.rst:965
-# fa4dc3d5fdea4409a583332770a64b2c
+#: ../../flask/CHANGES.rst:965
 msgid "Added support for context binding that does not require the use of the with statement for playing in the console."
 msgstr ""
 
-#: ../../../CHANGES.rst:967
-# d7983efe91c1417680a2792bed98a82a
+#: ../../flask/CHANGES.rst:967
 msgid "The request context is now available within the with statement making it possible to further push the request context or pop it."
 msgstr ""
 
-#: ../../../CHANGES.rst:969
-# 16a0d5daae4a498dacffb45df81f430e
+#: ../../flask/CHANGES.rst:969
 msgid "Added support for configurations."
 msgstr ""
 
-#: ../../../CHANGES.rst:973
-# f6aa3056f2964c0e984d053c0b5a73c4
+#: ../../flask/CHANGES.rst:973
 msgid "Version 0.2"
 msgstr ""
 
-#: ../../../CHANGES.rst:975
-# 478a29edc44a4180ad5efa3f5498ccd9
+#: ../../flask/CHANGES.rst:975
 msgid "Released 2010-05-12, codename J?germeister"
 msgstr ""
 
-#: ../../../CHANGES.rst:977
-# dd7407d6d91645e1ba0a3c1fe68b8e75
+#: ../../flask/CHANGES.rst:977
 msgid "Various bugfixes"
 msgstr ""
 
-#: ../../../CHANGES.rst:978
-# 4fb7df339e594119b4083d811081224f
+#: ../../flask/CHANGES.rst:978
 msgid "Integrated JSON support"
 msgstr ""
 
-#: ../../../CHANGES.rst:979
-# f35c449c73ac4dacb08409a71aa11259
+#: ../../flask/CHANGES.rst:979
 msgid "Added :func:`~flask.get_template_attribute` helper function."
 msgstr ""
 
-#: ../../../CHANGES.rst:980
-# 2cfe0befbf454c5d936c7869652780eb
+#: ../../flask/CHANGES.rst:980
 msgid ":meth:`~flask.Flask.add_url_rule` can now also register a view function."
 msgstr ""
 
-#: ../../../CHANGES.rst:982
-# 7e768553cb614f21bb3565e1f19723e7
+#: ../../flask/CHANGES.rst:982
 msgid "Refactored internal request dispatching."
 msgstr ""
 
-#: ../../../CHANGES.rst:983
-# c245819b015c4c56aad6f91854cf0a87
+#: ../../flask/CHANGES.rst:983
 msgid "Server listens on 127.0.0.1 by default now to fix issues with chrome."
 msgstr ""
 
-#: ../../../CHANGES.rst:985
-# 8c3a7b41952f41babf56443d4dcb521e
+#: ../../flask/CHANGES.rst:985
 msgid "Added external URL support."
 msgstr ""
 
-#: ../../../CHANGES.rst:986
-# 722033dc467c4b379efb855369fa0d4b
+#: ../../flask/CHANGES.rst:986
 msgid "Added support for :func:`~flask.send_file`"
 msgstr ""
 
-#: ../../../CHANGES.rst:987
-# 2041585ffeea4388aaf6192c18756b1a
+#: ../../flask/CHANGES.rst:987
 msgid "Module support and internal request handling refactoring to better support pluggable applications."
 msgstr ""
 
-#: ../../../CHANGES.rst:989
-# 1f7a64db612e4a32a84c436db261df7f
+#: ../../flask/CHANGES.rst:989
 msgid "Sessions can be set to be permanent now on a per-session basis."
 msgstr ""
 
-#: ../../../CHANGES.rst:990
-# 624a033c86aa43cd9be055f95294a290
+#: ../../flask/CHANGES.rst:990
 msgid "Better error reporting on missing secret keys."
 msgstr ""
 
-#: ../../../CHANGES.rst:991
-# 115a6b7fdf384aa8a9ce363f825c9411
+#: ../../flask/CHANGES.rst:991
 msgid "Added support for Google Appengine."
 msgstr ""
 
-#: ../../../CHANGES.rst:995
-# b947c20466dd4c91ada1ee0fff80644a
+#: ../../flask/CHANGES.rst:995
 msgid "Version 0.1"
 msgstr ""
 
-#: ../../../CHANGES.rst:997
-# 901dea426ec94b078a17801ec85c24a1
+#: ../../flask/CHANGES.rst:997
 msgid "Released 2010-04-16"
 msgstr ""
 
-#: ../../../CHANGES.rst:999
-# c9dcb2b34d5e4f12b75364e83b91e7b1
+#: ../../flask/CHANGES.rst:999
 msgid "First public preview release."
 msgstr ""
 

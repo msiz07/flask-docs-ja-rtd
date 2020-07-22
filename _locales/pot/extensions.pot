@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"POT-Creation-Date: 2020-07-22 20:39+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,43 +16,35 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../extensions.rst:4
-# 5f8f7c3411a6459d842cd45e511cdfc7
+#: ../../flask/docs/extensions.rst:4
 msgid "Extensions"
 msgstr ""
 
-#: ../../extensions.rst:6
-# 308d0bd9271843efa8112dba4fab1cbf
+#: ../../flask/docs/extensions.rst:6
 msgid "Extensions are extra packages that add functionality to a Flask application. For example, an extension might add support for sending email or connecting to a database. Some extensions add entire new frameworks to help build certain types of applications, like a REST API."
 msgstr ""
 
-#: ../../extensions.rst:13
-# 9af0eb3ae1d04b9ca8641d5497efec2c
+#: ../../flask/docs/extensions.rst:13
 msgid "Finding Extensions"
 msgstr ""
 
-#: ../../extensions.rst:15
-# c8aac38331fe4ab687912957b0fd2130
+#: ../../flask/docs/extensions.rst:15
 msgid "Flask extensions are usually named \"Flask-Foo\" or \"Foo-Flask\". Many extensions are listed in the `Extension Registry`_, which can be updated by extension developers. You can also search PyPI for packages tagged with `Framework :: Flask <pypi_>`_."
 msgstr ""
 
-#: ../../extensions.rst:22
-# 2070656598124bceb1474c8f1c31df0f
+#: ../../flask/docs/extensions.rst:22
 msgid "Using Extensions"
 msgstr ""
 
-#: ../../extensions.rst:24
-# 02a6f89c545c42128a78b18aa0e9980e
+#: ../../flask/docs/extensions.rst:24
 msgid "Consult each extension's documentation for installation, configuration, and usage instructions. Generally, extensions pull their own configuration from :attr:`app.config <flask.Flask.config>` and are passed an application instance during initialization. For example, an extension called \"Flask-Foo\" might be used like this::"
 msgstr ""
 
-#: ../../extensions.rst:44
-# cf5d607e97da48c99b3c2f4193f268d7
+#: ../../flask/docs/extensions.rst:44
 msgid "Building Extensions"
 msgstr ""
 
-#: ../../extensions.rst:46
-# 40452fb0b85342d78ae473018ee4835e
+#: ../../flask/docs/extensions.rst:46
 msgid "While the `Extension Registry`_ contains many Flask extensions, you may not find an extension that fits your need. If this is the case, you can create your own. Read :ref:`extension-dev` to develop your own Flask extension."
 msgstr ""
 

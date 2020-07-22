@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"POT-Creation-Date: 2020-07-22 20:39+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,33 +16,27 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../patterns/deferredcallbacks.rst:4
-# bab6e851201f4fd58e7ae125d636b78d
+#: ../../flask/docs/patterns/deferredcallbacks.rst:4
 msgid "Deferred Request Callbacks"
 msgstr ""
 
-#: ../../patterns/deferredcallbacks.rst:6
-# 41c7dccbe3f84891a9d6f6de1f91f5b7
+#: ../../flask/docs/patterns/deferredcallbacks.rst:6
 msgid "One of the design principles of Flask is that response objects are created and passed down a chain of potential callbacks that can modify them or replace them. When the request handling starts, there is no response object yet. It is created as necessary either by a view function or by some other component in the system."
 msgstr ""
 
-#: ../../patterns/deferredcallbacks.rst:12
-# 7e30aac6074b4975b6d2d7349066b634
+#: ../../flask/docs/patterns/deferredcallbacks.rst:12
 msgid "What happens if you want to modify the response at a point where the response does not exist yet?  A common example for that would be a :meth:`~flask.Flask.before_request` callback that wants to set a cookie on the response object."
 msgstr ""
 
-#: ../../patterns/deferredcallbacks.rst:17
-# fdece27740a240ecab50fca0308047ab
+#: ../../flask/docs/patterns/deferredcallbacks.rst:17
 msgid "One way is to avoid the situation. Very often that is possible. For instance you can try to move that logic into a :meth:`~flask.Flask.after_request` callback instead. However, sometimes moving code there makes it more more complicated or awkward to reason about."
 msgstr ""
 
-#: ../../patterns/deferredcallbacks.rst:22
-# 52c9b33702844756952bebf3fe18198e
+#: ../../flask/docs/patterns/deferredcallbacks.rst:22
 msgid "As an alternative, you can use :func:`~flask.after_this_request` to register callbacks that will execute after only the current request. This way you can defer code execution from anywhere in the application, based on the current request."
 msgstr ""
 
-#: ../../patterns/deferredcallbacks.rst:27
-# 2fdf795073fa4551ad66ed15e9a5e2a1
+#: ../../flask/docs/patterns/deferredcallbacks.rst:27
 msgid "At any time during a request, we can register a function to be called at the end of the request. For example you can remember the current language of the user in a cookie in a :meth:`~flask.Flask.before_request` callback::"
 msgstr ""
 

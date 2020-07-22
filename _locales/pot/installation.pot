@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"POT-Creation-Date: 2020-07-22 20:39+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,207 +16,165 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../installation.rst:4
-# e157c3941a4b4e09a16cb970ac6aec2a
+#: ../../flask/docs/installation.rst:4
 msgid "Installation"
 msgstr ""
 
-#: ../../installation.rst:7
-# 63aedc5f41f6451cae5dd371deccfa34
+#: ../../flask/docs/installation.rst:7
 msgid "Python Version"
 msgstr ""
 
-#: ../../installation.rst:9
-# 4d56e43578524f3ba7a8b83fc9b09ac5
+#: ../../flask/docs/installation.rst:9
 msgid "We recommend using the latest version of Python 3. Flask supports Python 3.4 and newer, Python 2.7, and PyPy."
 msgstr ""
 
-#: ../../installation.rst:13
-# 8eeec08d592b4542a5b95959ae657c49
+#: ../../flask/docs/installation.rst:13
 msgid "Dependencies"
 msgstr ""
 
-#: ../../installation.rst:15
-# 9d39bac996fd424f93809aae5a49ac9b
+#: ../../flask/docs/installation.rst:15
 msgid "These distributions will be installed automatically when installing Flask."
 msgstr ""
 
-#: ../../installation.rst:17
-# b48059ca4b23420daa23931d664e5e95
+#: ../../flask/docs/installation.rst:17
 msgid "`Werkzeug`_ implements WSGI, the standard Python interface between applications and servers."
 msgstr ""
 
-#: ../../installation.rst:19
-# ae816060c4484a6c9cac1acac840794c
+#: ../../flask/docs/installation.rst:19
 msgid "`Jinja`_ is a template language that renders the pages your application serves."
 msgstr ""
 
-#: ../../installation.rst:21
-# 17c77296e00a463f84c61107f753fddd
+#: ../../flask/docs/installation.rst:21
 msgid "`MarkupSafe`_ comes with Jinja. It escapes untrusted input when rendering templates to avoid injection attacks."
 msgstr ""
 
-#: ../../installation.rst:23
-# cfe57330d5c7415e987f584dd4d8cd24
+#: ../../flask/docs/installation.rst:23
 msgid "`ItsDangerous`_ securely signs data to ensure its integrity. This is used to protect Flask's session cookie."
 msgstr ""
 
-#: ../../installation.rst:25
-# c25c36dc154244f9a0c3d35b4976b5d3
+#: ../../flask/docs/installation.rst:25
 msgid "`Click`_ is a framework for writing command line applications. It provides the ``flask`` command and allows adding custom management commands."
 msgstr ""
 
-#: ../../installation.rst:35
-# 051c8a687e264005afa46defd256086b
+#: ../../flask/docs/installation.rst:35
 msgid "Optional dependencies"
 msgstr ""
 
-#: ../../installation.rst:37
-# 95bc8b64afa74782aed01f408ab6adf2
+#: ../../flask/docs/installation.rst:37
 msgid "These distributions will not be installed automatically. Flask will detect and use them if you install them."
 msgstr ""
 
-#: ../../installation.rst:40
-# 8dc9d625d840486593021cee4e4aa518
+#: ../../flask/docs/installation.rst:40
 msgid "`Blinker`_ provides support for :ref:`signals`."
 msgstr ""
 
-#: ../../installation.rst:41
-# cb2ef5c48c094920b26541c05ff94fd1
+#: ../../flask/docs/installation.rst:41
 msgid "`SimpleJSON`_ is a fast JSON implementation that is compatible with Python's ``json`` module. It is preferred for JSON operations if it is installed."
 msgstr ""
 
-#: ../../installation.rst:44
-# d55383d9056646dab84fcf815b6d3e86
+#: ../../flask/docs/installation.rst:44
 msgid "`python-dotenv`_ enables support for :ref:`dotenv` when running ``flask`` commands."
 msgstr ""
 
-#: ../../installation.rst:46
-# 11289bb8e1584c3d99b1439aaa08a416
+#: ../../flask/docs/installation.rst:46
 msgid "`Watchdog`_ provides a faster, more efficient reloader for the development server."
 msgstr ""
 
-#: ../../installation.rst:55
-# 154bca3616c54f9ab99cd7d8121c7c8e
+#: ../../flask/docs/installation.rst:55
 msgid "Virtual environments"
 msgstr ""
 
-#: ../../installation.rst:57
-# bec2422cce4047ed8515d2ac31b3b73f
+#: ../../flask/docs/installation.rst:57
 msgid "Use a virtual environment to manage the dependencies for your project, both in development and in production."
 msgstr ""
 
-#: ../../installation.rst:60
-# 449c3cf910494e0fa4e95067b0645a1b
+#: ../../flask/docs/installation.rst:60
 msgid "What problem does a virtual environment solve? The more Python projects you have, the more likely it is that you need to work with different versions of Python libraries, or even Python itself. Newer versions of libraries for one project can break compatibility in another project."
 msgstr ""
 
-#: ../../installation.rst:65
-# 09ccdd77eabf485cab8d042088563cb3
+#: ../../flask/docs/installation.rst:65
 msgid "Virtual environments are independent groups of Python libraries, one for each project. Packages installed for one project will not affect other projects or the operating system's packages."
 msgstr ""
 
-#: ../../installation.rst:69
-# 292c7344fc164103861e0d6ee6ee151f
+#: ../../flask/docs/installation.rst:69
 msgid "Python 3 comes bundled with the :mod:`venv` module to create virtual environments. If you're using a modern version of Python, you can continue on to the next section."
 msgstr ""
 
-#: ../../installation.rst:73
-# f47c8483cc7e468e91883f1c02d6b173
+#: ../../flask/docs/installation.rst:73
 msgid "If you're using Python 2, see :ref:`install-install-virtualenv` first."
 msgstr ""
 
-#: ../../installation.rst:78
-# 0e7f95f687b14254a38de43d3597a849
+#: ../../flask/docs/installation.rst:78
 msgid "Create an environment"
 msgstr ""
 
-#: ../../installation.rst:80
-# ee239683c3304cd6ad01d61ea6e346c0
+#: ../../flask/docs/installation.rst:80
 msgid "Create a project folder and a :file:`venv` folder within:"
 msgstr ""
 
-#: ../../installation.rst:88
-#: ../../installation.rst:101
-#: ../../installation.rst:118
-# 863123a4fe9c4baf9bd727ea0a37502d
-# 6745d1dfe14c442ab033b7aa157ea5c8
-# 0ae70b05b7f24fc8b3a2e103d1a67dd8
+#: ../../flask/docs/installation.rst:88
+#: ../../flask/docs/installation.rst:101
+#: ../../flask/docs/installation.rst:118
 msgid "On Windows:"
 msgstr ""
 
-#: ../../installation.rst:94
-# 5165b25e340c41d79bdef1f226e47a5f
+#: ../../flask/docs/installation.rst:94
 msgid "If you needed to install virtualenv because you are using Python 2, use the following command instead:"
 msgstr ""
 
-#: ../../installation.rst:110
-# ce63e938272446ac94b98b8662a3d529
+#: ../../flask/docs/installation.rst:110
 msgid "Activate the environment"
 msgstr ""
 
-#: ../../installation.rst:112
-# 860a08f601df4f378706dd4a3a880be6
+#: ../../flask/docs/installation.rst:112
 msgid "Before you work on your project, activate the corresponding environment:"
 msgstr ""
 
-#: ../../installation.rst:124
-# 16426b3193204430901979c5edadc436
+#: ../../flask/docs/installation.rst:124
 msgid "Your shell prompt will change to show the name of the activated environment."
 msgstr ""
 
-#: ../../installation.rst:127
-# 250e7c8fbcb14e7aa56d7ca105bb3e70
+#: ../../flask/docs/installation.rst:127
 msgid "Install Flask"
 msgstr ""
 
-#: ../../installation.rst:129
-# 69d26899c0a5459d9da9f722058cd5aa
+#: ../../flask/docs/installation.rst:129
 msgid "Within the activated environment, use the following command to install Flask:"
 msgstr ""
 
-#: ../../installation.rst:135
-# 382bd278f4564330b6dabb344d20ea79
+#: ../../flask/docs/installation.rst:135
 msgid "Flask is now installed. Check out the :doc:`/quickstart` or go to the :doc:`Documentation Overview </index>`."
 msgstr ""
 
-#: ../../installation.rst:139
-# c3c2a3611ba64b0880b47742d3efdcde
+#: ../../flask/docs/installation.rst:139
 msgid "Living on the edge"
 msgstr ""
 
-#: ../../installation.rst:141
-# 1cf672e9b42d4c9aaa0ec8ab76ea7c1b
+#: ../../flask/docs/installation.rst:141
 msgid "If you want to work with the latest Flask code before it's released, install or update the code from the master branch:"
 msgstr ""
 
-#: ../../installation.rst:151
-# 3c4d97fa6c0740d59de813c40f7c870b
+#: ../../flask/docs/installation.rst:151
 msgid "Install virtualenv"
 msgstr ""
 
-#: ../../installation.rst:153
-# 6ab80c4dff674feb9158430a42508b8c
+#: ../../flask/docs/installation.rst:153
 msgid "If you are using Python 2, the venv module is not available. Instead, install `virtualenv`_."
 msgstr ""
 
-#: ../../installation.rst:156
-# 6ce85be2269a4e67bf5852b9e88c75ea
+#: ../../flask/docs/installation.rst:156
 msgid "On Linux, virtualenv is provided by your package manager:"
 msgstr ""
 
-#: ../../installation.rst:169
-# 37931981d144449f964dcebe4f53eee4
+#: ../../flask/docs/installation.rst:169
 msgid "If you are on Mac OS X or Windows, download `get-pip.py`_, then:"
 msgstr ""
 
-#: ../../installation.rst:176
-# d3a3ff0e9ff84ff4aaecda9a2c557d25
+#: ../../flask/docs/installation.rst:176
 msgid "On Windows, as an administrator:"
 msgstr ""
 
-#: ../../installation.rst:183
-# e5525821c9244dd1b1f0e3a7e4eb75f9
+#: ../../flask/docs/installation.rst:183
 msgid "Now you can return above and :ref:`install-create-env`."
 msgstr ""
 

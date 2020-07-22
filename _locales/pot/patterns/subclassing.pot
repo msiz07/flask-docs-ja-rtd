@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"POT-Creation-Date: 2020-07-22 20:39+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,23 +16,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../patterns/subclassing.rst:2
-# 6df4bad413ad40f48653cfe4d7fabd3c
+#: ../../flask/docs/patterns/subclassing.rst:2
 msgid "Subclassing Flask"
 msgstr ""
 
-#: ../../patterns/subclassing.rst:4
-# 69ba5990e62e41318f50353616cc1cb6
+#: ../../flask/docs/patterns/subclassing.rst:4
 msgid "The :class:`~flask.Flask` class is designed for subclassing."
 msgstr ""
 
-#: ../../patterns/subclassing.rst:6
-# 132d939372f149059a20cebfcbcdcbab
+#: ../../flask/docs/patterns/subclassing.rst:6
 msgid "For example, you may want to override how request parameters are handled to preserve their order::"
 msgstr ""
 
-#: ../../patterns/subclassing.rst:17
-# 9a8128e81be44b1082ebd776fde6291c
+#: ../../flask/docs/patterns/subclassing.rst:17
 msgid "This is the recommended approach for overriding or augmenting Flask's internal functionality."
 msgstr ""
 

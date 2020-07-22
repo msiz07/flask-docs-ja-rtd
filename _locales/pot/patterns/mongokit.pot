@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"POT-Creation-Date: 2020-07-22 20:39+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,13 +16,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../patterns/mongokit.rst:4
-# 6cee31402a9f42b68a181f636de81712
+#: ../../flask/docs/patterns/mongokit.rst:4
 msgid "MongoDB with MongoKit"
 msgstr ""
 
-#: ../../patterns/mongokit.rst:6
-# 5b07904d2ee44994b9fe4d67a290e6e2
+#: ../../flask/docs/patterns/mongokit.rst:6
 msgid "MongoKit is no longer maintained. See :doc:`/patterns/mongoengine` instead."
 msgstr ""
 

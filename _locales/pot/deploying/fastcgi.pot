@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"POT-Creation-Date: 2020-07-22 20:39+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,163 +16,131 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../deploying/fastcgi.rst:4
-# 5f7264f79f8f4c05bc24f87493f9a58b
+#: ../../flask/docs/deploying/fastcgi.rst:4
 msgid "FastCGI"
 msgstr ""
 
-#: ../../deploying/fastcgi.rst:6
-# 39e788ff531249ddab85d89dc330d276
+#: ../../flask/docs/deploying/fastcgi.rst:6
 msgid "FastCGI is a deployment option on servers like `nginx`_, `lighttpd`_, and `cherokee`_; see :doc:`uwsgi` and :doc:`wsgi-standalone` for other options. To use your WSGI application with any of them you will need a FastCGI server first. The most popular one is `flup`_ which we will use for this guide. Make sure to have it installed to follow along."
 msgstr ""
 
-#: ../../deploying/fastcgi.rst:12
-# d4f0787f4ad04f88ae9e8534d1e911e0
+#: ../../flask/docs/deploying/fastcgi.rst:12
 msgid "Watch Out"
 msgstr ""
 
-#: ../../deploying/fastcgi.rst:14
-# 5d9bdbf9e0464f2a9ea48e62e7f1f6b0
+#: ../../flask/docs/deploying/fastcgi.rst:14
 msgid "Please make sure in advance that any ``app.run()`` calls you might have in your application file are inside an ``if __name__ == '__main__':`` block or moved to a separate file.  Just make sure it's not called because this will always start a local WSGI server which we do not want if we deploy that application to FastCGI."
 msgstr ""
 
-#: ../../deploying/fastcgi.rst:21
-# c09e2aac6c1a42418f81c71f43a67569
+#: ../../flask/docs/deploying/fastcgi.rst:21
 msgid "Creating a `.fcgi` file"
 msgstr ""
 
-#: ../../deploying/fastcgi.rst:23
-# caa3c5786e214640bb84ea7961698806
+#: ../../flask/docs/deploying/fastcgi.rst:23
 msgid "First you need to create the FastCGI server file.  Let's call it `yourapplication.fcgi`::"
 msgstr ""
 
-#: ../../deploying/fastcgi.rst:33
-# 0902adc978ca4d08ac0dbff127f10e2e
+#: ../../flask/docs/deploying/fastcgi.rst:33
 msgid "This is enough for Apache to work, however nginx and older versions of lighttpd need a socket to be explicitly passed to communicate with the FastCGI server.  For that to work you need to pass the path to the socket to the :class:`~flup.server.fcgi.WSGIServer`::"
 msgstr ""
 
-#: ../../deploying/fastcgi.rst:40
-# 4c7e4f81d7764fc4a237c4417a37ada1
+#: ../../flask/docs/deploying/fastcgi.rst:40
 msgid "The path has to be the exact same path you define in the server config."
 msgstr ""
 
-#: ../../deploying/fastcgi.rst:43
-# 342b843e5f6c4113b3ee8ae597bd5e97
+#: ../../flask/docs/deploying/fastcgi.rst:43
 msgid "Save the :file:`yourapplication.fcgi` file somewhere you will find it again. It makes sense to have that in :file:`/var/www/yourapplication` or something similar."
 msgstr ""
 
-#: ../../deploying/fastcgi.rst:47
-# c748f63aaef34b349e075bafe0e8167f
+#: ../../flask/docs/deploying/fastcgi.rst:47
 msgid "Make sure to set the executable bit on that file so that the servers can execute it:"
 msgstr ""
 
-#: ../../deploying/fastcgi.rst:55
-# 6ec5b6ea46e047e88a1bbe7df73237a3
+#: ../../flask/docs/deploying/fastcgi.rst:55
 msgid "Configuring Apache"
 msgstr ""
 
-#: ../../deploying/fastcgi.rst:57
-# dfddb4e81bac49479d2b709e5d3bd922
+#: ../../flask/docs/deploying/fastcgi.rst:57
 msgid "The example above is good enough for a basic Apache deployment but your `.fcgi` file will appear in your application URL e.g. ``example.com/yourapplication.fcgi/news/``. There are few ways to configure your application so that yourapplication.fcgi does not appear in the URL. A preferable way is to use the ScriptAlias and SetHandler configuration directives to route requests to the FastCGI server. The following example uses FastCgiServer to start 5 instances of the application which will handle all incoming requests::"
 msgstr ""
 
-#: ../../deploying/fastcgi.rst:82
-# fd39c25f2d024e5db36dabd2d2e5e062
+#: ../../flask/docs/deploying/fastcgi.rst:82
 msgid "These processes will be managed by Apache. If you're using a standalone FastCGI server, you can use the FastCgiExternalServer directive instead. Note that in the following the path is not real, it's simply used as an identifier to other directives such as AliasMatch::"
 msgstr ""
 
-#: ../../deploying/fastcgi.rst:90
-# d846c941c54c469485cf7c51157fad82
+#: ../../flask/docs/deploying/fastcgi.rst:90
 msgid "If you cannot set ScriptAlias, for example on a shared web host, you can use WSGI middleware to remove yourapplication.fcgi from the URLs. Set .htaccess::"
 msgstr ""
 
-#: ../../deploying/fastcgi.rst:109
-# 1c4814c229624c328587038244fd0c8e
+#: ../../flask/docs/deploying/fastcgi.rst:109
 msgid "Set yourapplication.fcgi::"
 msgstr ""
 
-#: ../../deploying/fastcgi.rst:133
-# 6e793f4443d146338809809254c42fea
+#: ../../flask/docs/deploying/fastcgi.rst:133
 msgid "Configuring lighttpd"
 msgstr ""
 
-#: ../../deploying/fastcgi.rst:135
-# 371fd4cf8d36479eb71f764f6be3ac62
+#: ../../flask/docs/deploying/fastcgi.rst:135
 msgid "A basic FastCGI configuration for lighttpd looks like that::"
 msgstr ""
 
-#: ../../deploying/fastcgi.rst:155
-# 4582cf54277c46b2bf2eb8842c671c08
+#: ../../flask/docs/deploying/fastcgi.rst:155
 msgid "Remember to enable the FastCGI, alias and rewrite modules. This configuration binds the application to ``/yourapplication``.  If you want the application to work in the URL root you have to work around a lighttpd bug with the :class:`~werkzeug.contrib.fixers.LighttpdCGIRootFix` middleware."
 msgstr ""
 
-#: ../../deploying/fastcgi.rst:160
-# b2723d15011f4e32826d6bb3af0c7527
+#: ../../flask/docs/deploying/fastcgi.rst:160
 msgid "Make sure to apply it only if you are mounting the application the URL root. Also, see the Lighty docs for more information on `FastCGI and Python <https://redmine.lighttpd.net/projects/lighttpd/wiki/Docs_ModFastCGI>`_ (note that explicitly passing a socket to run() is no longer necessary)."
 msgstr ""
 
-#: ../../deploying/fastcgi.rst:166
-# aafe9bf02c534e0a961af50f38d6c117
+#: ../../flask/docs/deploying/fastcgi.rst:166
 msgid "Configuring nginx"
 msgstr ""
 
-#: ../../deploying/fastcgi.rst:168
-# cd92edfbef3e4ed28a13086e775e73cf
+#: ../../flask/docs/deploying/fastcgi.rst:168
 msgid "Installing FastCGI applications on nginx is a bit different because by default no FastCGI parameters are forwarded."
 msgstr ""
 
-#: ../../deploying/fastcgi.rst:171
-# 4971e638cb5e4b35b3a07309813389d9
+#: ../../flask/docs/deploying/fastcgi.rst:171
 msgid "A basic Flask FastCGI configuration for nginx looks like this::"
 msgstr ""
 
-#: ../../deploying/fastcgi.rst:183
-# 5c80b48f4e564eca919ab657bd4cfe3b
+#: ../../flask/docs/deploying/fastcgi.rst:183
 msgid "This configuration binds the application to ``/yourapplication``.  If you want to have it in the URL root it's a bit simpler because you don't have to figure out how to calculate ``PATH_INFO`` and ``SCRIPT_NAME``::"
 msgstr ""
 
-#: ../../deploying/fastcgi.rst:196
-# cfb98b5b13d444c4822edb3ca5470232
+#: ../../flask/docs/deploying/fastcgi.rst:196
 msgid "Running FastCGI Processes"
 msgstr ""
 
-#: ../../deploying/fastcgi.rst:198
-# c91092eb622843628b734ad7b2bfd85a
+#: ../../flask/docs/deploying/fastcgi.rst:198
 msgid "Since nginx and others do not load FastCGI apps, you have to do it by yourself.  `Supervisor can manage FastCGI processes. <http://supervisord.org/configuration.html#fcgi-program-x-section-settings>`_ You can look around for other FastCGI process managers or write a script to run your `.fcgi` file at boot, e.g. using a SysV ``init.d`` script. For a temporary solution, you can always run the ``.fcgi`` script inside GNU screen.  See ``man screen`` for details, and note that this is a manual solution which does not persist across system restart::"
 msgstr ""
 
-#: ../../deploying/fastcgi.rst:211
-# 7904b509c5254dbe83fc2a278e79bdbf
+#: ../../flask/docs/deploying/fastcgi.rst:211
 msgid "Debugging"
 msgstr ""
 
-#: ../../deploying/fastcgi.rst:213
-# 49f7be88368340d1b1198fae9e9925b2
+#: ../../flask/docs/deploying/fastcgi.rst:213
 msgid "FastCGI deployments tend to be hard to debug on most web servers.  Very often the only thing the server log tells you is something along the lines of \"premature end of headers\".  In order to debug the application the only thing that can really give you ideas why it breaks is switching to the correct user and executing the application by hand."
 msgstr ""
 
-#: ../../deploying/fastcgi.rst:219
-# 876c4adf5a6b406d81d8b9d48817d7e6
+#: ../../flask/docs/deploying/fastcgi.rst:219
 msgid "This example assumes your application is called `application.fcgi` and that your web server user is `www-data`::"
 msgstr ""
 
-#: ../../deploying/fastcgi.rst:229
-# 90946d42e3df4660aeab10a5ad1b5da7
+#: ../../flask/docs/deploying/fastcgi.rst:229
 msgid "In this case the error seems to be \"yourapplication\" not being on the python path.  Common problems are:"
 msgstr ""
 
-#: ../../deploying/fastcgi.rst:232
-# 004c4eb5c2734017bbc8e1e499c9394e
+#: ../../flask/docs/deploying/fastcgi.rst:232
 msgid "Relative paths being used.  Don't rely on the current working directory."
 msgstr ""
 
-#: ../../deploying/fastcgi.rst:233
-# c9f4b32939934aa1bf9cb201c30bc787
+#: ../../flask/docs/deploying/fastcgi.rst:233
 msgid "The code depending on environment variables that are not set by the web server."
 msgstr ""
 
-#: ../../deploying/fastcgi.rst:235
-# 9ff49f369445471aa1ab15b40307d745
+#: ../../flask/docs/deploying/fastcgi.rst:235
 msgid "Different python interpreters being used."
 msgstr ""
 

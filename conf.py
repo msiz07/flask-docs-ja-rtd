@@ -10,7 +10,7 @@ sys.path.append(BASEDIR)
 # Translation (ja) -----------------------------------------------------
 locale_dirs = [os.path.join(BASEDIR, '_locales')]
 gettext_compact = False
-gettext_uuid = True
+gettext_uuid = False
 #language = 'ja'
 
 # Google Search Console support in ReadTheDocs site --------------------

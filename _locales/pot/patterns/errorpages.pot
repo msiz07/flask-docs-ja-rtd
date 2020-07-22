@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"POT-Creation-Date: 2020-07-22 20:39+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,118 +16,95 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../patterns/errorpages.rst:4
-# 2b5edb9adbd84e3a982ecfaef5075c64
+#: ../../flask/docs/patterns/errorpages.rst:4
 msgid "Custom Error Pages"
 msgstr ""
 
-#: ../../patterns/errorpages.rst:6
-# 5086f8d8cd834200888a67c862224fe9
+#: ../../flask/docs/patterns/errorpages.rst:6
 msgid "Flask comes with a handy :func:`~flask.abort` function that aborts a request with an HTTP error code early.  It will also provide a plain black and white error page for you with a basic description, but nothing fancy."
 msgstr ""
 
-#: ../../patterns/errorpages.rst:10
-# 3a987403d6aa4b5fa9f0f9aa7a877535
+#: ../../flask/docs/patterns/errorpages.rst:10
 msgid "Depending on the error code it is less or more likely for the user to actually see such an error."
 msgstr ""
 
-#: ../../patterns/errorpages.rst:14
-# e2a21281fc17409a9c7297a3c9c0d11b
+#: ../../flask/docs/patterns/errorpages.rst:14
 msgid "Common Error Codes"
 msgstr ""
 
-#: ../../patterns/errorpages.rst:16
-# 8f909c7eb1714798b3ec09a48696f1db
+#: ../../flask/docs/patterns/errorpages.rst:16
 msgid "The following error codes are some that are often displayed to the user, even if the application behaves correctly:"
 msgstr ""
 
-#: ../../patterns/errorpages.rst:24
-# 6a7a681aad394e68b3da5ae766836ddd
+#: ../../flask/docs/patterns/errorpages.rst:24
 msgid "*404 Not Found*"
 msgstr ""
 
-#: ../../patterns/errorpages.rst:20
-# 73202620f9b4473cb730b6669f997cb2
+#: ../../flask/docs/patterns/errorpages.rst:20
 msgid "The good old \"chap, you made a mistake typing that URL\" message.  So common that even novices to the internet know that 404 means: damn, the thing I was looking for is not there.  It's a very good idea to make sure there is actually something useful on a 404 page, at least a link back to the index."
 msgstr ""
 
-#: ../../patterns/errorpages.rst:29
-# ac8453437dc34a468da2c42d2f935291
+#: ../../flask/docs/patterns/errorpages.rst:29
 msgid "*403 Forbidden*"
 msgstr ""
 
-#: ../../patterns/errorpages.rst:27
-# 8823595b16274605823fffa872a2797d
+#: ../../flask/docs/patterns/errorpages.rst:27
 msgid "If you have some kind of access control on your website, you will have to send a 403 code for disallowed resources.  So make sure the user is not lost when they try to access a forbidden resource."
 msgstr ""
 
-#: ../../patterns/errorpages.rst:38
-# e4d27aec51254162b1a0c1ed1674e10d
+#: ../../flask/docs/patterns/errorpages.rst:38
 msgid "*410 Gone*"
 msgstr ""
 
-#: ../../patterns/errorpages.rst:32
-# 6b623dda94854be39ccccd00529d9d53
+#: ../../flask/docs/patterns/errorpages.rst:32
 msgid "Did you know that there the \"404 Not Found\" has a brother named \"410 Gone\"?  Few people actually implement that, but the idea is that resources that previously existed and got deleted answer with 410 instead of 404.  If you are not deleting documents permanently from the database but just mark them as deleted, do the user a favour and use the 410 code instead and display a message that what they were looking for was deleted for all eternity."
 msgstr ""
 
-#: ../../patterns/errorpages.rst:45
-# ffbce68a625b4d45abd22124ba4ad24c
+#: ../../flask/docs/patterns/errorpages.rst:45
 msgid "*500 Internal Server Error*"
 msgstr ""
 
-#: ../../patterns/errorpages.rst:41
-# 5090eb3b1d5247e383613f5c89894963
+#: ../../flask/docs/patterns/errorpages.rst:41
 msgid "Usually happens on programming errors or if the server is overloaded. A terribly good idea is to have a nice page there, because your application *will* fail sooner or later (see also: :ref:`application-errors`)."
 msgstr ""
 
-#: ../../patterns/errorpages.rst:48
-# b8f7c5d94b0f4a51a0f29eb1a02c43e9
+#: ../../flask/docs/patterns/errorpages.rst:48
 msgid "Error Handlers"
 msgstr ""
 
-#: ../../patterns/errorpages.rst:50
-# baeb66f1a71f48a79cb7d0fe4c5c3933
+#: ../../flask/docs/patterns/errorpages.rst:50
 msgid "An error handler is a function that returns a response when a type of error is raised, similar to how a view is a function that returns a response when a request URL is matched. It is passed the instance of the error being handled, which is most likely a :exc:`~werkzeug.exceptions.HTTPException`. An error handler for \"500 Internal Server Error\" will be passed uncaught exceptions in addition to explicit 500 errors."
 msgstr ""
 
-#: ../../patterns/errorpages.rst:57
-# 8a7c8fdbaaa9435f911df523ff9df814
+#: ../../flask/docs/patterns/errorpages.rst:57
 msgid "An error handler is registered with the :meth:`~flask.Flask.errorhandler` decorator or the :meth:`~flask.Flask.register_error_handler` method. A handler can be registered for a status code, like 404, or for an exception class."
 msgstr ""
 
-#: ../../patterns/errorpages.rst:61
-# b18c5870efbc48d082ed36082da2f9fd
+#: ../../flask/docs/patterns/errorpages.rst:61
 msgid "The status code of the response will not be set to the handler's code. Make sure to provide the appropriate HTTP status code when returning a response from a handler."
 msgstr ""
 
-#: ../../patterns/errorpages.rst:65
-# b17d8e1716fa44edb04f43a5abea7abf
+#: ../../flask/docs/patterns/errorpages.rst:65
 msgid "A handler for \"500 Internal Server Error\" will not be used when running in debug mode. Instead, the interactive debugger will be shown."
 msgstr ""
 
-#: ../../patterns/errorpages.rst:68
-# 538100715350452f8891907d2799cbdb
+#: ../../flask/docs/patterns/errorpages.rst:68
 msgid "Here is an example implementation for a \"404 Page Not Found\" exception::"
 msgstr ""
 
-#: ../../patterns/errorpages.rst:77
-# 56aa1a3cddf9491da68d47d9dd1d83a7
+#: ../../flask/docs/patterns/errorpages.rst:77
 msgid "When using the :ref:`application factory pattern <app-factories>`::"
 msgstr ""
 
-#: ../../patterns/errorpages.rst:89
-# afdbe7da2c0840febb27df08690395fd
+#: ../../flask/docs/patterns/errorpages.rst:89
 msgid "An example template might be this:"
 msgstr ""
 
-#: ../../patterns/errorpages.rst:103
-# 5d4cd52857c34f44b5910f4094038e8e
+#: ../../flask/docs/patterns/errorpages.rst:103
 msgid "Returning API errors as JSON"
 msgstr ""
 
-#: ../../patterns/errorpages.rst:105
-# 7c28509855fd450f8f04e50ead9158af
+#: ../../flask/docs/patterns/errorpages.rst:105
 msgid "When using Flask for web APIs, you can use the same techniques as above to return JSON responses to API errors.  :func:`~flask.abort` is called with a ``description`` parameter. The :meth:`~flask.errorhandler` will use that as the JSON error message, and set the status code to 404."
 msgstr ""
 

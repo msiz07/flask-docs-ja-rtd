@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"POT-Creation-Date: 2020-07-22 20:39+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,58 +16,47 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../patterns/apierrors.rst:2
-# 61436902668d4135966d554e139cb205
+#: ../../flask/docs/patterns/apierrors.rst:2
 msgid "Implementing API Exceptions"
 msgstr ""
 
-#: ../../patterns/apierrors.rst:4
-# e808fcc236e446358b90ea809f1456e4
+#: ../../flask/docs/patterns/apierrors.rst:4
 msgid "It's very common to implement RESTful APIs on top of Flask.  One of the first things that developers run into is the realization that the builtin exceptions are not expressive enough for APIs and that the content type of :mimetype:`text/html` they are emitting is not very useful for API consumers."
 msgstr ""
 
-#: ../../patterns/apierrors.rst:9
-# 9bcf269a402241429f5ed32612375853
+#: ../../flask/docs/patterns/apierrors.rst:9
 msgid "The better solution than using ``abort`` to signal errors for invalid API usage is to implement your own exception type and install an error handler for it that produces the errors in the format the user is expecting."
 msgstr ""
 
-#: ../../patterns/apierrors.rst:14
-# d4030a7ac345437b91353f4f8624f156
+#: ../../flask/docs/patterns/apierrors.rst:14
 msgid "Simple Exception Class"
 msgstr ""
 
-#: ../../patterns/apierrors.rst:16
-# 7c944a4f801749378eb6e6e22e9c55c4
+#: ../../flask/docs/patterns/apierrors.rst:16
 msgid "The basic idea is to introduce a new exception that can take a proper human readable message, a status code for the error and some optional payload to give more context for the error."
 msgstr ""
 
-#: ../../patterns/apierrors.rst:20
-# e61bcfa62e8344fabf6e62f11af6fdcd
+#: ../../flask/docs/patterns/apierrors.rst:20
 msgid "This is a simple example::"
 msgstr ""
 
-#: ../../patterns/apierrors.rst:39
-# 30a4c7c14c324ceeaf2817118f417db3
+#: ../../flask/docs/patterns/apierrors.rst:39
 msgid "A view can now raise that exception with an error message.  Additionally some extra payload can be provided as a dictionary through the `payload` parameter."
 msgstr ""
 
-#: ../../patterns/apierrors.rst:44
-# a678bc1185df4855b7326bd647ff81e4
+#: ../../flask/docs/patterns/apierrors.rst:44
 msgid "Registering an Error Handler"
 msgstr ""
 
-#: ../../patterns/apierrors.rst:46
-# c2554bfc60684e57828d1e0f2b7a4ca3
+#: ../../flask/docs/patterns/apierrors.rst:46
 msgid "At that point views can raise that error, but it would immediately result in an internal server error.  The reason for this is that there is no handler registered for this error class.  That however is easy to add::"
 msgstr ""
 
-#: ../../patterns/apierrors.rst:57
-# 9f7745905abc4e009a237a9f372d42be
+#: ../../flask/docs/patterns/apierrors.rst:57
 msgid "Usage in Views"
 msgstr ""
 
-#: ../../patterns/apierrors.rst:59
-# 1766d422891f494fa86399a93c519925
+#: ../../flask/docs/patterns/apierrors.rst:59
 msgid "Here is how a view can use that functionality::"
 msgstr ""
 

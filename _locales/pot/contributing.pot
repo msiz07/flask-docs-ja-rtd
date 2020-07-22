@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"POT-Creation-Date: 2020-07-22 20:39+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,263 +16,211 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../../CONTRIBUTING.rst:2
-# e699e6bafde64d69a9c328eab0a295b8
+#: ../../flask/CONTRIBUTING.rst:2
 msgid "How to contribute to Flask"
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:4
-# 28cb95917f9b48239b5cb33676c70a67
+#: ../../flask/CONTRIBUTING.rst:4
 msgid "Thank you for considering contributing to Flask!"
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:7
-# 1ad5b603355442f7bc8a1981b3a89898
+#: ../../flask/CONTRIBUTING.rst:7
 msgid "Support questions"
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:9
-# 22080b51dbda4fd6b3fb624931e59fac
+#: ../../flask/CONTRIBUTING.rst:9
 msgid "Please, don't use the issue tracker for this. Use one of the following resources for questions about your own code:"
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:12
-# e0d6f86933474f8fb70581380b3cd389
+#: ../../flask/CONTRIBUTING.rst:12
 msgid "The ``#get-help`` channel on our Discord chat: https://discordapp.com/invite/t6rrQZH"
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:14
-# 7cff50c93eb44432bfdcf4b5341f004e
+#: ../../flask/CONTRIBUTING.rst:14
 msgid "The IRC channel ``#pocoo`` on FreeNode is linked to Discord, but Discord is preferred."
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:17
-# 35bc0976d2f8472db5487d9febf21926
+#: ../../flask/CONTRIBUTING.rst:17
 msgid "The mailing list flask@python.org for long term discussion or larger issues."
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:18
-# 9060dfbb85a24315a84f98bd632a636e
+#: ../../flask/CONTRIBUTING.rst:18
 msgid "Ask on `Stack Overflow`_. Search with Google first using: ``site:stackoverflow.com flask {search term, exception message, etc.}``"
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:24
-# 6cf537c23f8741a2af434ca04fe284f7
+#: ../../flask/CONTRIBUTING.rst:24
 msgid "Reporting issues"
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:26
-# 1946b1190eb74bc5b8b07b5150938d1c
+#: ../../flask/CONTRIBUTING.rst:26
 msgid "Describe what you expected to happen."
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:27
-# 6aa3fc6c9d784b8b87f7df91fce7ec16
+#: ../../flask/CONTRIBUTING.rst:27
 msgid "If possible, include a `minimal reproducible example`_ to help us identify the issue. This also helps check that the issue is not with your own code."
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:30
-# 9c974c114e5e4d0f9033e3b3bcc6a35d
+#: ../../flask/CONTRIBUTING.rst:30
 msgid "Describe what actually happened. Include the full traceback if there was an exception."
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:32
-# 7ea532354ecb4f63a61a8bdbd03809dc
+#: ../../flask/CONTRIBUTING.rst:32
 msgid "List your Python, Flask, and Werkzeug versions. If possible, check if this issue is already fixed in the repository."
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:38
-# b12eb0d02f3e4a79b6bbf1d4da8b8557
+#: ../../flask/CONTRIBUTING.rst:38
 msgid "Submitting patches"
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:40
-# 42e4bb05a7bc4be48e0ff209c0768bd7
+#: ../../flask/CONTRIBUTING.rst:40
 msgid "Use `Black`_ to autoformat your code. This should be done for you as a git `pre-commit`_ hook, which gets installed when you run ``pip install -e .[dev]``. You may also wish to use Black's `Editor integration`_."
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:43
-# 2a8eae3ca3c441a0bf9a7f7e9719ba55
+#: ../../flask/CONTRIBUTING.rst:43
 msgid "Include tests if your patch is supposed to solve a bug, and explain clearly under which circumstances the bug happens. Make sure the test fails without your patch."
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:46
-# 8caa25923905408fb353b2f5f2a2ec7b
+#: ../../flask/CONTRIBUTING.rst:46
 msgid "Include a string like \"Fixes #123\" in your commit message (where 123 is the issue you fixed). See `Closing issues using keywords <https://help.github.com/articles/creating-a-pull-request/>`__."
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:52
-# 741f55e3673b4d93bcc3c70253d45eb6
+#: ../../flask/CONTRIBUTING.rst:52
 msgid "First time setup"
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:54
-# c2772df8e3f34984a10c88e5047d1471
+#: ../../flask/CONTRIBUTING.rst:54
 msgid "Download and install the `latest version of git`_."
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:55
-# e238106caf584e23bf3652059141c338
+#: ../../flask/CONTRIBUTING.rst:55
 msgid "Configure git with your `username`_ and `email`_::"
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:60
-# 30967200b1c54511a5e025eb4772ffbd
+#: ../../flask/CONTRIBUTING.rst:60
 msgid "Make sure you have a `GitHub account`_."
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:61
-# 9c62cb93a4da4fcda3587f7231ee24a0
+#: ../../flask/CONTRIBUTING.rst:61
 msgid "Fork Flask to your GitHub account by clicking the `Fork`_ button."
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:62
-# 7d3d3f3a76c34b3c9d1763c5dee58db8
+#: ../../flask/CONTRIBUTING.rst:62
 msgid "`Clone`_ your GitHub fork locally::"
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:67
-# c0c89b19c6be4ea6be457c3a051f77be
+#: ../../flask/CONTRIBUTING.rst:67
 msgid "Add the main repository as a remote to update later::"
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:72
-# 425612b7622f4f7c8bad21e41b928f27
+#: ../../flask/CONTRIBUTING.rst:72
 msgid "Create a virtualenv::"
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:78
-# 5259e4180f98494892bd8ca31344e7d3
+#: ../../flask/CONTRIBUTING.rst:78
 msgid "Install Flask in editable mode with development dependencies::"
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:82
-# 74b3dc8c45a84ca4a2d30840767cdde7
+#: ../../flask/CONTRIBUTING.rst:82
 msgid "Install the pre-commit hooks:"
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:84
-# efb7c9a2af364aaf8ad7cc56bdd0d8b2
+#: ../../flask/CONTRIBUTING.rst:84
 msgid "pre-commit install --install-hooks"
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:94
-# 67f706ffa45946d6943233ce9113e860
+#: ../../flask/CONTRIBUTING.rst:94
 msgid "Start coding"
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:96
-# 3504645e961a41a69fa26b21a511e1a7
+#: ../../flask/CONTRIBUTING.rst:96
 msgid "Create a branch to identify the issue you would like to work on. If you're submitting a bug or documentation fix, branch off of the latest \".x\" branch::"
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:102
-# 8546fd8a3ce74bec85939fa6adda5e17
+#: ../../flask/CONTRIBUTING.rst:102
 msgid "If you're submitting a feature addition or change, branch off of the \"master\" branch::"
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:107
-# b00b2f289d8246b081ad0d5f1dbe8879
+#: ../../flask/CONTRIBUTING.rst:107
 msgid "Using your favorite editor, make your changes, `committing as you go`_."
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:108
-# 0c4d33195b824cfba99830c85b72d164
+#: ../../flask/CONTRIBUTING.rst:108
 msgid "Include tests that cover any code changes you make. Make sure the test fails without your patch. `Run the tests. <contributing-testsuite_>`_."
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:110
-# cca92ef9985a4b70a50b9eda042e4586
+#: ../../flask/CONTRIBUTING.rst:110
 msgid "Push your commits to GitHub and `create a pull request`_ by using::"
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:114
-# 2d8ecdda7a0945a5a1901a5b1479d9f3
+#: ../../flask/CONTRIBUTING.rst:114
 msgid "Celebrate 🎉"
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:125
-# a49a2c8261ab48fb944ca6c31cc4dcb4
+#: ../../flask/CONTRIBUTING.rst:125
 msgid "Running the tests"
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:127
-# 7c6b0f1a5608496d97ff7515b6a804ed
+#: ../../flask/CONTRIBUTING.rst:127
 msgid "Run the basic test suite with::"
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:131
-# d3210f6fe2c949faaa9f8dd3893952ea
+#: ../../flask/CONTRIBUTING.rst:131
 msgid "This only runs the tests for the current environment. Whether this is relevant depends on which part of Flask you're working on. Travis-CI will run the full suite when you submit your pull request."
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:135
-# 9ea910408b8d464fa9744cf7cc306cc8
+#: ../../flask/CONTRIBUTING.rst:135
 msgid "The full test suite takes a long time to run because it tests multiple combinations of Python and dependencies. You need to have Python 2.7, 3.4, 3.5 3.6, and PyPy 2.7 installed to run all of the environments. Then run::"
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:142
-# fe6041b3913149beb3c2de9f43d6fa7e
+#: ../../flask/CONTRIBUTING.rst:142
 msgid "Running test coverage"
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:144
-# f3ae3d516c9c4a1797e8f3d32fb305cd
+#: ../../flask/CONTRIBUTING.rst:144
 msgid "Generating a report of lines that do not have test coverage can indicate where to start contributing. Run ``pytest`` using ``coverage`` and generate a report on the terminal and as an interactive HTML document::"
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:153
-# f7b47d256bc849dca1fab77eae6503b3
+#: ../../flask/CONTRIBUTING.rst:153
 msgid "Read more about `coverage <https://coverage.readthedocs.io>`_."
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:155
-# 2c0a283e154e480c9364f26e0834b05f
+#: ../../flask/CONTRIBUTING.rst:155
 msgid "Running the full test suite with ``tox`` will combine the coverage reports from all runs."
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:160
-# 58b167a58d174a888c5c37e7d3d71b92
+#: ../../flask/CONTRIBUTING.rst:160
 msgid "Building the docs"
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:162
-# e1b8995a4ccb4673a47e8c9465697b45
+#: ../../flask/CONTRIBUTING.rst:162
 msgid "Build the docs in the ``docs`` directory using Sphinx::"
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:167
-# b3a68c6262fe4ee689552e99767e061d
+#: ../../flask/CONTRIBUTING.rst:167
 msgid "Open ``_build/html/index.html`` in your browser to view the docs."
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:169
-# 087f05723434455bb98c201e36a1a471
+#: ../../flask/CONTRIBUTING.rst:169
 msgid "Read more about `Sphinx <https://www.sphinx-doc.org/en/master/>`_."
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:173
-# 8b295e5b2ffb43be8693cb7772e29f0d
+#: ../../flask/CONTRIBUTING.rst:173
 msgid "Caution: zero-padded file modes"
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:175
-# 2c13d723ce32444583871e160ebbffdc
+#: ../../flask/CONTRIBUTING.rst:175
 msgid "This repository contains several zero-padded file modes that may cause issues when pushing this repository to git hosts other than GitHub. Fixing this is destructive to the commit history, so we suggest ignoring these warnings. If it fails to push and you're using a self-hosted git service like GitLab, you can turn off repository checks in the admin panel."
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:181
-# f5782efd5490467fbbc9423cb5748c32
+#: ../../flask/CONTRIBUTING.rst:181
 msgid "These files can also cause issues while cloning. If you have ::"
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:186
-# aa9a2224f87b404d8504fe613778e671
+#: ../../flask/CONTRIBUTING.rst:186
 msgid "or ::"
 msgstr ""
 
-#: ../../../CONTRIBUTING.rst:191
-# 4da576ec63a540a684656ae5d47f06af
+#: ../../flask/CONTRIBUTING.rst:191
 msgid "set in your git configuration file, cloning this repository will fail. The only solution is to set both of the above settings to false while cloning, and then setting them back to true after the cloning is finished."
 msgstr ""
 

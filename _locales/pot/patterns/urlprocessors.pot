@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"POT-Creation-Date: 2020-07-22 20:39+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,63 +16,51 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../patterns/urlprocessors.rst:2
-# da0e5ee25d7a4ea694bb8eaad502e4b0
+#: ../../flask/docs/patterns/urlprocessors.rst:2
 msgid "Using URL Processors"
 msgstr ""
 
-#: ../../patterns/urlprocessors.rst:6
-# f45822dbfd224ad594dfbbd14e1deb7f
+#: ../../flask/docs/patterns/urlprocessors.rst:6
 msgid "Flask 0.7 introduces the concept of URL processors.  The idea is that you might have a bunch of resources with common parts in the URL that you don't always explicitly want to provide.  For instance you might have a bunch of URLs that have the language code in it but you don't want to have to handle it in every single function yourself."
 msgstr ""
 
-#: ../../patterns/urlprocessors.rst:12
-# f5e6dee0f2a744ce96c7178edb5d97bc
+#: ../../flask/docs/patterns/urlprocessors.rst:12
 msgid "URL processors are especially helpful when combined with blueprints.  We will handle both application specific URL processors here as well as blueprint specifics."
 msgstr ""
 
-#: ../../patterns/urlprocessors.rst:17
-# 60d2e9656b7946ba95d4cf927cb59481
+#: ../../flask/docs/patterns/urlprocessors.rst:17
 msgid "Internationalized Application URLs"
 msgstr ""
 
-#: ../../patterns/urlprocessors.rst:19
-# 091f126a15284824a9d3482105ca7515
+#: ../../flask/docs/patterns/urlprocessors.rst:19
 msgid "Consider an application like this::"
 msgstr ""
 
-#: ../../patterns/urlprocessors.rst:35
-# 98a8373c91de43878141731c1ce4a703
+#: ../../flask/docs/patterns/urlprocessors.rst:35
 msgid "This is an awful lot of repetition as you have to handle the language code setting on the :data:`~flask.g` object yourself in every single function. Sure, a decorator could be used to simplify this, but if you want to generate URLs from one function to another you would have to still provide the language code explicitly which can be annoying."
 msgstr ""
 
-#: ../../patterns/urlprocessors.rst:41
-# e5fea8bbae454526a66219b9676aad2e
+#: ../../flask/docs/patterns/urlprocessors.rst:41
 msgid "For the latter, this is where :func:`~flask.Flask.url_defaults` functions come in.  They can automatically inject values into a call for :func:`~flask.url_for` automatically.  The code below checks if the language code is not yet in the dictionary of URL values and if the endpoint wants a value named ``'lang_code'``::"
 msgstr ""
 
-#: ../../patterns/urlprocessors.rst:54
-# 59e6fecb12c94423bb79f59e984895e7
+#: ../../flask/docs/patterns/urlprocessors.rst:54
 msgid "The method :meth:`~werkzeug.routing.Map.is_endpoint_expecting` of the URL map can be used to figure out if it would make sense to provide a language code for the given endpoint."
 msgstr ""
 
-#: ../../patterns/urlprocessors.rst:58
-# 34af0f37c07f453da525dd19d0a68c8f
+#: ../../flask/docs/patterns/urlprocessors.rst:58
 msgid "The reverse of that function are :meth:`~flask.Flask.url_value_preprocessor`\\s.  They are executed right after the request was matched and can execute code based on the URL values.  The idea is that they pull information out of the values dictionary and put it somewhere else::"
 msgstr ""
 
-#: ../../patterns/urlprocessors.rst:68
-# 36e7d06354a4414cb05f029503d17ae8
+#: ../../flask/docs/patterns/urlprocessors.rst:68
 msgid "That way you no longer have to do the `lang_code` assignment to :data:`~flask.g` in every function.  You can further improve that by writing your own decorator that prefixes URLs with the language code, but the more beautiful solution is using a blueprint.  Once the ``'lang_code'`` is popped from the values dictionary and it will no longer be forwarded to the view function reducing the code to this::"
 msgstr ""
 
-#: ../../patterns/urlprocessors.rst:99
-# 72eb811b0c0545b4ab9c33205f19401b
+#: ../../flask/docs/patterns/urlprocessors.rst:99
 msgid "Internationalized Blueprint URLs"
 msgstr ""
 
-#: ../../patterns/urlprocessors.rst:101
-# 2eea97f05bf34d9d8e03855ee12d7ff5
+#: ../../flask/docs/patterns/urlprocessors.rst:101
 msgid "Because blueprints can automatically prefix all URLs with a common string it's easy to automatically do that for every function.  Furthermore blueprints can have per-blueprint URL processors which removes a whole lot of logic from the :meth:`~flask.Flask.url_defaults` function because it no longer has to check if the URL is really interested in a ``'lang_code'`` parameter::"
 msgstr ""
 

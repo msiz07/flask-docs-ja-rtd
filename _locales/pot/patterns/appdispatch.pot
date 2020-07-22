@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"POT-Creation-Date: 2020-07-22 20:39+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,93 +16,75 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../patterns/appdispatch.rst:4
-# f77f35becfde412f894643ddc2e8055c
+#: ../../flask/docs/patterns/appdispatch.rst:4
 msgid "Application Dispatching"
 msgstr ""
 
-#: ../../patterns/appdispatch.rst:6
-# 983396e6e0f04af38d39485859219281
+#: ../../flask/docs/patterns/appdispatch.rst:6
 msgid "Application dispatching is the process of combining multiple Flask applications on the WSGI level.  You can combine not only Flask applications but any WSGI application.  This would allow you to run a Django and a Flask application in the same interpreter side by side if you want.  The usefulness of this depends on how the applications work internally."
 msgstr ""
 
-#: ../../patterns/appdispatch.rst:13
-# 310d603dd5f34cd2a2a63a8ae121da57
+#: ../../flask/docs/patterns/appdispatch.rst:13
 msgid "The fundamental difference from the :ref:`module approach <larger-applications>` is that in this case you are running the same or different Flask applications that are entirely isolated from each other. They run different configurations and are dispatched on the WSGI level."
 msgstr ""
 
-#: ../../patterns/appdispatch.rst:20
-# dfcabfad8e2042c0abee68cc5ecf5f36
+#: ../../flask/docs/patterns/appdispatch.rst:20
 msgid "Working with this Document"
 msgstr ""
 
-#: ../../patterns/appdispatch.rst:22
-# d6db1262615441ef88aa1147bd866e50
+#: ../../flask/docs/patterns/appdispatch.rst:22
 msgid "Each of the techniques and examples below results in an ``application`` object that can be run with any WSGI server.  For production, see :ref:`deployment`. For development, Werkzeug provides a builtin server for development available at :func:`werkzeug.serving.run_simple`::"
 msgstr ""
 
-#: ../../patterns/appdispatch.rst:30
-# 6ca86a918fd24079821418b05cb91d9d
+#: ../../flask/docs/patterns/appdispatch.rst:30
 msgid "Note that :func:`run_simple <werkzeug.serving.run_simple>` is not intended for use in production.  Use a :ref:`full-blown WSGI server <deployment>`."
 msgstr ""
 
-#: ../../patterns/appdispatch.rst:33
-# 14ea9bce361242a68c5ff4fd9dc3e7d4
+#: ../../flask/docs/patterns/appdispatch.rst:33
 msgid "In order to use the interactive debugger, debugging must be enabled both on the application and the simple server. Here is the \"hello world\" example with debugging and :func:`run_simple <werkzeug.serving.run_simple>`::"
 msgstr ""
 
-#: ../../patterns/appdispatch.rst:53
-# 3739c7668cf64f76a1b563ca00542b98
+#: ../../flask/docs/patterns/appdispatch.rst:53
 msgid "Combining Applications"
 msgstr ""
 
-#: ../../patterns/appdispatch.rst:55
-# c3412cbaa97f43a98dd2f0af50f989eb
+#: ../../flask/docs/patterns/appdispatch.rst:55
 msgid "If you have entirely separated applications and you want them to work next to each other in the same Python interpreter process you can take advantage of the :class:`werkzeug.wsgi.DispatcherMiddleware`.  The idea here is that each Flask application is a valid WSGI application and they are combined by the dispatcher middleware into a larger one that is dispatched based on prefix."
 msgstr ""
 
-#: ../../patterns/appdispatch.rst:62
-# de89a7ce5a67449eb8541ee0539b41e9
+#: ../../flask/docs/patterns/appdispatch.rst:62
 msgid "For example you could have your main application run on ``/`` and your backend interface on ``/backend``::"
 msgstr ""
 
-#: ../../patterns/appdispatch.rst:75
-# 727cc95b142f4f60af6d7a559e852193
+#: ../../flask/docs/patterns/appdispatch.rst:75
 msgid "Dispatch by Subdomain"
 msgstr ""
 
-#: ../../patterns/appdispatch.rst:77
-# 46b331d810dc462a928fc562bd541b9e
+#: ../../flask/docs/patterns/appdispatch.rst:77
 msgid "Sometimes you might want to use multiple instances of the same application with different configurations.  Assuming the application is created inside a function and you can call that function to instantiate it, that is really easy to implement.  In order to develop your application to support creating new instances in functions have a look at the :ref:`app-factories` pattern."
 msgstr ""
 
-#: ../../patterns/appdispatch.rst:84
-# 38373cc4de44498e8d3ef34d32a6b80f
+#: ../../flask/docs/patterns/appdispatch.rst:84
 msgid "A very common example would be creating applications per subdomain.  For instance you configure your webserver to dispatch all requests for all subdomains to your application and you then use the subdomain information to create user-specific instances.  Once you have your server set up to listen on all subdomains you can use a very simple WSGI application to do the dynamic application creation."
 msgstr ""
 
-#: ../../patterns/appdispatch.rst:91
-# dc151dc909e04f7fa4f0bf0f0cc8babf
+#: ../../flask/docs/patterns/appdispatch.rst:91
 msgid "The perfect level for abstraction in that regard is the WSGI layer.  You write your own WSGI application that looks at the request that comes and delegates it to your Flask application.  If that application does not exist yet, it is dynamically created and remembered::"
 msgstr ""
 
-#: ../../patterns/appdispatch.rst:122
-# 578f7473e86341d5bc608d94e58b32bc
+#: ../../flask/docs/patterns/appdispatch.rst:122
 msgid "This dispatcher can then be used like this::"
 msgstr ""
 
-#: ../../patterns/appdispatch.rst:144
-# e5d133f87e96426d93c682e4d1981623
+#: ../../flask/docs/patterns/appdispatch.rst:144
 msgid "Dispatch by Path"
 msgstr ""
 
-#: ../../patterns/appdispatch.rst:146
-# d707172dcc024e5ea710b703ac3cd769
+#: ../../flask/docs/patterns/appdispatch.rst:146
 msgid "Dispatching by a path on the URL is very similar.  Instead of looking at the ``Host`` header to figure out the subdomain one simply looks at the request path up to the first slash::"
 msgstr ""
 
-#: ../../patterns/appdispatch.rst:178
-# db5b2d63bd46495fbd0c8ee3e7a6dafb
+#: ../../flask/docs/patterns/appdispatch.rst:178
 msgid "The big difference between this and the subdomain one is that this one falls back to another application if the creator function returns ``None``::"
 msgstr ""
 

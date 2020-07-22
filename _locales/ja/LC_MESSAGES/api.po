@@ -8,22 +8,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"POT-Creation-Date: 2020-07-22 20:39+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
+"Generated-By: Babel 2.8.0\n"
 
 # 8186878dbd8040279c5b8adf15101907
-#: ../../api.rst:4
+#: ../../flask/docs/api.rst:4
 msgid "API"
 msgstr ""
 
 # 4237fd1a33f247b59536141c0ac6e33a
-#: ../../api.rst:8
+#: ../../flask/docs/api.rst:8
 msgid ""
 "This part of the documentation covers all the interfaces of Flask.  For "
 "parts where Flask depends on external libraries, we document the most "
@@ -31,7 +31,7 @@ msgid ""
 msgstr ""
 
 # dc063d5031a0469db303a79f87f984cf
-#: ../../api.rst:14
+#: ../../flask/docs/api.rst:14
 msgid "Application Object"
 msgstr ""
 
@@ -404,7 +404,8 @@ msgstr ""
 # d77428a7ee52425d9740e4b2c5552a66
 # 61d0c203112945d9be0c51e0ed784223
 # e302c3f1700f40dea6bcce45ff9c1dc9
-#: ../../api.rst:739 flask.Flask.add_url_rule:34 flask.Flask.route:11 of
+#: ../../flask/docs/api.rst:739 flask.Flask.add_url_rule:34
+#: flask.Flask.route:11 of
 msgid "the URL rule as string"
 msgstr ""
 
@@ -2324,7 +2325,7 @@ msgid ""
 msgstr ""
 
 # 9b07fe6979a843ed9ff93d02531a7575
-#: ../../api.rst:22
+#: ../../flask/docs/api.rst:22
 msgid "Blueprint Objects"
 msgstr ""
 
@@ -2695,7 +2696,7 @@ msgid ""
 msgstr ""
 
 # 82ab6fec1c1d48988ae7f6d64c6e0205
-#: ../../api.rst:29
+#: ../../flask/docs/api.rst:29
 msgid "Incoming Request Data"
 msgstr ""
 
@@ -2723,24 +2724,24 @@ msgid ""
 msgstr ""
 
 # 760836574fff46618707e0a47fa5a460
-#: ../../api.rst:37
+#: ../../flask/docs/api.rst:37
 msgid "The underlying WSGI environment."
 msgstr ""
 
 # cd6d7de6e5a9474a8d891ddf00b94aab
-#: ../../api.rst:46
+#: ../../flask/docs/api.rst:46
 msgid ""
 "Provides different ways to look at the current :rfc:`3987`. Imagine your "
 "application is listening on the following application root::"
 msgstr ""
 
 # e1cfd987f95f418486738846b9ebd91b
-#: ../../api.rst:52
+#: ../../flask/docs/api.rst:52
 msgid "And a user requests the following URI::"
 msgstr ""
 
 # 329e3d11bab64cf2ae14a23dab99c888
-#: ../../api.rst:56
+#: ../../flask/docs/api.rst:56
 msgid ""
 "In this case the values of the above mentioned attributes would be the "
 "following:"
@@ -2748,62 +2749,62 @@ msgstr ""
 
 # b4a0e896c53045c2a97c2138b71868e8
 # 02578a19b4454e7dba23f820836ed4db
-#: ../../api.rst:60 ../../api.rst:676
+#: ../../flask/docs/api.rst:60 ../../flask/docs/api.rst:676
 msgid "`path`"
 msgstr ""
 
 # 294d505b19ac4707b0a323fa34721374
-#: ../../api.rst:60
+#: ../../flask/docs/api.rst:60
 msgid "``u'/π/page.html'``"
 msgstr ""
 
 # e592dcede0f347e0ad8fe4c6808e140f
-#: ../../api.rst:61
+#: ../../flask/docs/api.rst:61
 msgid "`full_path`"
 msgstr ""
 
 # 3edb92546d35491c961248566afcb797
-#: ../../api.rst:61
+#: ../../flask/docs/api.rst:61
 msgid "``u'/π/page.html?x=y'``"
 msgstr ""
 
 # 10c0e353c7dc4606807e787c35a544cd
-#: ../../api.rst:62
+#: ../../flask/docs/api.rst:62
 msgid "`script_root`"
 msgstr ""
 
 # 51b9726e84014fe0b1cbdba2e52c77bd
-#: ../../api.rst:62
+#: ../../flask/docs/api.rst:62
 msgid "``u'/myapplication'``"
 msgstr ""
 
 # 131f9d5add3f406c80856755305d8086
-#: ../../api.rst:63
+#: ../../flask/docs/api.rst:63
 msgid "`base_url`"
 msgstr ""
 
 # 4fc5c9d5dc314de39db08fc5a21569c9
-#: ../../api.rst:63
+#: ../../flask/docs/api.rst:63
 msgid "``u'http://www.example.com/myapplication/π/page.html'``"
 msgstr ""
 
 # 271a7dc850304ed78b9743eb45132ab8
-#: ../../api.rst:64
+#: ../../flask/docs/api.rst:64
 msgid "`url`"
 msgstr ""
 
 # 40c15dab5515435684a71df7829b9b6d
-#: ../../api.rst:64
+#: ../../flask/docs/api.rst:64
 msgid "``u'http://www.example.com/myapplication/π/page.html?x=y'``"
 msgstr ""
 
 # 1f46fc3723c8442b99b3736016f94912
-#: ../../api.rst:65
+#: ../../flask/docs/api.rst:65
 msgid "`url_root`"
 msgstr ""
 
 # c36ad3c313c942c3afe5b8d60134a711
-#: ../../api.rst:65
+#: ../../flask/docs/api.rst:65
 msgid "``u'http://www.example.com/myapplication/'``"
 msgstr ""
 
@@ -2834,6 +2835,22 @@ msgstr ""
 msgid ""
 "List of mimetypes this client supports as "
 ":class:`~werkzeug.datastructures.MIMEAccept` object."
+msgstr ""
+
+#: flask.Request.access_control_request_headers:1 of
+msgid ""
+"Sent with a preflight request to indicate which headers will be sent with"
+" the cross origin request. Set "
+":attr:`~CORSResponseMixin.access_control_allow_headers` on the response "
+"to indicate which headers are allowed."
+msgstr ""
+
+#: flask.Request.access_control_request_method:1 of
+msgid ""
+"Sent with a preflight request to indicate which method will be used for "
+"the cross origin request. Set "
+":attr:`~CORSResponseMixin.access_control_allow_methods` on the response "
+"to indicate which methods are allowed."
 msgstr ""
 
 # 64226706dd854961913759b576104ff4
@@ -3251,22 +3268,6 @@ msgstr ""
 msgid "`True` if the request is secure."
 msgstr ""
 
-# 1e0094027de34599a98c0eb1bbb0ee0f
-#: flask.Request.is_xhr:1 of
-msgid ""
-"True if the request was triggered via a JavaScript XMLHttpRequest. This "
-"only works with libraries that support the ``X-Requested-With`` header "
-"and set it to \"XMLHttpRequest\".  Libraries that do that are prototype, "
-"jQuery and Mochikit and probably some more."
-msgstr ""
-
-# 44bf94b8873f4ebf8c346df653a6414e
-#: flask.Request.is_xhr:6 of
-msgid ""
-"``X-Requested-With`` is not standard and is unreliable. You may be able "
-"to use :attr:`AcceptMixin.accept_mimetypes` instead."
-msgstr ""
-
 # c76d2743ea65428192733951b3bd6806
 #: flask.Request.json:1 of
 msgid ""
@@ -3327,6 +3328,13 @@ msgid ""
 "method returns a value, it is used as the return value for "
 ":meth:`get_json`. The default implementation raises "
 ":exc:`~werkzeug.exceptions.BadRequest`."
+msgstr ""
+
+#: flask.Request.origin:1 of
+msgid ""
+"The host that the request originated from. Set "
+":attr:`~CORSResponseMixin.access_control_allow_origin` on the response to"
+" indicate which origins are allowed."
 msgstr ""
 
 # 0a6cd479843448eaae0daa96e61378a9
@@ -3485,7 +3493,7 @@ msgid ""
 msgstr ""
 
 # 3e68b6924f2a41938c0bcfd8de510441
-#: ../../api.rst:71
+#: ../../flask/docs/api.rst:71
 msgid ""
 "To access incoming request data, you can use the global `request` object."
 "  Flask parses incoming request data for you and gives you access to it "
@@ -3496,12 +3504,12 @@ msgstr ""
 
 # c676567fe09d4a57a92af46b58ee9d5e
 # ca824b21305640a7baf3fe4afe570103
-#: ../../api.rst:77 ../../api.rst:120
+#: ../../flask/docs/api.rst:77 ../../flask/docs/api.rst:120
 msgid "This is a proxy.  See :ref:`notes-on-proxies` for more information."
 msgstr ""
 
 # fd20f04d89c7446b9bdde75564294882
-#: ../../api.rst:79
+#: ../../flask/docs/api.rst:79
 msgid ""
 "The request object is an instance of a "
 ":class:`~werkzeug.wrappers.Request` subclass and provides all of the "
@@ -3510,7 +3518,7 @@ msgid ""
 msgstr ""
 
 # 0d3b5b2521a34d6b81e398f038587cb8
-#: ../../api.rst:85
+#: ../../flask/docs/api.rst:85
 msgid "Response Objects"
 msgstr ""
 
@@ -3544,19 +3552,19 @@ msgid "Added :attr:`max_cookie_size`."
 msgstr ""
 
 # adcd93014aad4785a59fee4fdd6ad295
-#: ../../api.rst:92
+#: ../../flask/docs/api.rst:92
 msgid ""
 "A :class:`~werkzeug.datastructures.Headers` object representing the "
 "response headers."
 msgstr ""
 
 # a86c307af3734494bfe0756989fd62b2
-#: ../../api.rst:96
+#: ../../flask/docs/api.rst:96
 msgid "A string with a response status."
 msgstr ""
 
 # 10a9e82f753d423daaaab5610d5cc165
-#: ../../api.rst:100
+#: ../../flask/docs/api.rst:100
 msgid "The response status as integer."
 msgstr ""
 
@@ -3654,12 +3662,12 @@ msgid ""
 msgstr ""
 
 # 90f1676169444ac2b5e09481f00b9267
-#: ../../api.rst:104
+#: ../../flask/docs/api.rst:104
 msgid "Sessions"
 msgstr ""
 
 # a3669dd4c2a84b3a943203799b307ffa
-#: ../../api.rst:106
+#: ../../flask/docs/api.rst:106
 msgid ""
 "If you have set :attr:`Flask.secret_key` (or configured it from "
 ":data:`SECRET_KEY`) you can use sessions in Flask applications. A session"
@@ -3670,29 +3678,29 @@ msgid ""
 msgstr ""
 
 # fd5f4377129b4530aa86bf7d6356e4fb
-#: ../../api.rst:113
+#: ../../flask/docs/api.rst:113
 msgid "To access the current session you can use the :class:`session` object:"
 msgstr ""
 
 # 7237319292e948a3af0c611bd43d6de6
-#: ../../api.rst:117
+#: ../../flask/docs/api.rst:117
 msgid ""
 "The session object works pretty much like an ordinary dict, with the "
 "difference that it keeps track of modifications."
 msgstr ""
 
 # 7087894359514b21a4ca2d135899d29a
-#: ../../api.rst:122
+#: ../../flask/docs/api.rst:122
 msgid "The following attributes are interesting:"
 msgstr ""
 
 # 4853459c2cfe4948b3dbec626f104652
-#: ../../api.rst:126
+#: ../../flask/docs/api.rst:126
 msgid "``True`` if the session is new, ``False`` otherwise."
 msgstr ""
 
 # 175259355dbc4b8a939dc0a6e901d423
-#: ../../api.rst:130
+#: ../../flask/docs/api.rst:130
 msgid ""
 "``True`` if the session object detected a modification.  Be advised that "
 "modifications on mutable structures are not picked up automatically, in "
@@ -3701,7 +3709,7 @@ msgid ""
 msgstr ""
 
 # 9b71172733a2467e90438ce87d4ae58c
-#: ../../api.rst:143
+#: ../../flask/docs/api.rst:143
 msgid ""
 "If set to ``True`` the session lives for "
 ":attr:`~flask.Flask.permanent_session_lifetime` seconds.  The default is "
@@ -3710,12 +3718,12 @@ msgid ""
 msgstr ""
 
 # f5c4902eb19f460484c180e3e6d6afa4
-#: ../../api.rst:150
+#: ../../flask/docs/api.rst:150
 msgid "Session Interface"
 msgstr ""
 
 # a98d9c0ab65a44f78e7dfff5e4ef6c7a
-#: ../../api.rst:154
+#: ../../flask/docs/api.rst:154
 msgid ""
 "The session interface provides a simple way to replace the session "
 "implementation that Flask is using."
@@ -3952,6 +3960,11 @@ msgid ""
 "different users."
 msgstr ""
 
+#: flask.sessions.SecureCookieSession.get:1
+#: flask.sessions.SecureCookieSession.setdefault:3 of
+msgid "Return the value for key if key is in the dictionary, else default."
+msgstr ""
+
 # f706cb56e56c4ed38e4d831b964b9566
 #: flask.sessions.SecureCookieSession.modified:1 of
 msgid ""
@@ -3960,6 +3973,10 @@ msgid ""
 "example a nested dict) then this must be set to ``True`` manually when "
 "modifying that data. The session cookie will only be written to the "
 "response if this is ``True``."
+msgstr ""
+
+#: flask.sessions.SecureCookieSession.setdefault:1 of
+msgid "Insert key with a value of default if key is not in the dictionary."
 msgstr ""
 
 # 8631ebf18af04be5a356fba47bea9081
@@ -3995,12 +4012,12 @@ msgid "This reflects the ``'_permanent'`` key in the dict."
 msgstr ""
 
 # 0f872d554aac40c9af3e72f265e5f3ee
-#: ../../api.rst:174
+#: ../../flask/docs/api.rst:174
 msgid "Notice"
 msgstr ""
 
 # 318ac7d61df84996888ef80177a9361a
-#: ../../api.rst:176
+#: ../../flask/docs/api.rst:176
 msgid ""
 "The ``PERMANENT_SESSION_LIFETIME`` config key can also be an integer "
 "starting with Flask 0.8.  Either catch this down yourself or use the "
@@ -4009,7 +4026,7 @@ msgid ""
 msgstr ""
 
 # 41e73d229f594af4abb04a384b114a2d
-#: ../../api.rst:183
+#: ../../flask/docs/api.rst:183
 msgid "Test Client"
 msgstr ""
 
@@ -4101,7 +4118,7 @@ msgid ""
 msgstr ""
 
 # af3b28ea059d4f3a9a078aeab500e86b
-#: ../../api.rst:192
+#: ../../flask/docs/api.rst:192
 msgid "Test CLI Runner"
 msgstr ""
 
@@ -4147,12 +4164,12 @@ msgid "a :class:`~click.testing.Result` object."
 msgstr ""
 
 # 43b51dd933f54c5ba09ade6a01cf570d
-#: ../../api.rst:201
+#: ../../flask/docs/api.rst:201
 msgid "Application Globals"
 msgstr ""
 
 # 1aacf8ae4f024834b86e5daafc6445c7
-#: ../../api.rst:205
+#: ../../flask/docs/api.rst:205
 msgid ""
 "To share data that is valid for one request only from one function to "
 "another, a global variable is not good enough because it would break in "
@@ -4163,7 +4180,7 @@ msgid ""
 msgstr ""
 
 # 847d08c17cf245c482c905fee804e060
-#: ../../api.rst:214
+#: ../../flask/docs/api.rst:214
 msgid ""
 "A namespace object that can store data during an :doc:`application "
 "context </appcontext>`. This is an instance of "
@@ -4172,7 +4189,7 @@ msgid ""
 msgstr ""
 
 # 45e16394e4234976b655c13dd988d3e1
-#: ../../api.rst:219
+#: ../../flask/docs/api.rst:219
 msgid ""
 "This is a good place to store resources during a request. During testing,"
 " you can use the :ref:`faking-resources` pattern to pre-configure such "
@@ -4181,12 +4198,12 @@ msgstr ""
 
 # 3f084b5425fd467e9b217d8879c7af8d
 # 06c02d86eee14e4e926b886ce721f7df
-#: ../../api.rst:223 ../../api.rst:247
+#: ../../flask/docs/api.rst:223 ../../flask/docs/api.rst:247
 msgid "This is a proxy. See :ref:`notes-on-proxies` for more information."
 msgstr ""
 
 # 62bac0aa20504914b15ffdaad1bb01a5
-#: ../../api.rst:225
+#: ../../flask/docs/api.rst:225
 msgid "Bound to the application context instead of the request context."
 msgstr ""
 
@@ -4265,12 +4282,12 @@ msgid "default: Value to set and return if the attribute is not present."
 msgstr ""
 
 # ea3fa0135eea4887b3fbe5d1868499c9
-#: ../../api.rst:233
+#: ../../flask/docs/api.rst:233
 msgid "Useful Functions and Classes"
 msgstr ""
 
 # 36f8303743984a2b809c53d0556d56c9
-#: ../../api.rst:237
+#: ../../flask/docs/api.rst:237
 msgid ""
 "A proxy to the application handling the current request. This is useful "
 "to access the application without needing to import it, or if it can't be"
@@ -4279,7 +4296,7 @@ msgid ""
 msgstr ""
 
 # 0bd830058199445683e88a306c046bb0
-#: ../../api.rst:242
+#: ../../flask/docs/api.rst:242
 msgid ""
 "This is only available when an :doc:`application context </appcontext>` "
 "is pushed. This happens automatically during requests and CLI commands. "
@@ -4431,20 +4448,17 @@ msgstr ""
 msgid "if provided this explicitly specifies an HTTP method."
 msgstr ""
 
-# 5ea5ca93a8a04eebb77823aed2bf7899
 #: flask.abort:1 of
 msgid ""
 "Raises an :py:exc:`HTTPException` for the given status code or WSGI "
-"application::"
+"application."
 msgstr ""
 
-# cd0229296d2c4d6eac4bbdaa692e5844
-#: flask.abort:7 of
+#: flask.abort:4 of
 msgid ""
-"Can be passed a WSGI application or a status code.  If a status code is "
-"given it's looked up in the list of exceptions and will raise that "
-"exception, if passed a WSGI application it will wrap it in a proxy WSGI "
-"exception and raise that::"
+"If a status code is given, it will be looked up in the list of exceptions"
+" and will raise that exception.  If passed a WSGI application, it will "
+"wrap it in a proxy WSGI exception and raise that::"
 msgstr ""
 
 # 274c1379ac1644f891089204d8630e73
@@ -4730,8 +4744,8 @@ msgstr ""
 # d378259a35df4c2faec6f734c71aa05e
 # 8acc2ec2e47141c8bf1f2bc600dd7fc6
 # f5770f327b2241c5b73f5873f77890c2
-#: ../../api.rst:411 ../../api.rst:571 flask.json.jsonify:18 flask.safe_join:4
-#: flask.send_from_directory:5 of
+#: ../../flask/docs/api.rst:411 ../../flask/docs/api.rst:571
+#: flask.json.jsonify:18 flask.safe_join:4 flask.send_from_directory:5 of
 msgid "Example usage::"
 msgstr ""
 
@@ -4854,7 +4868,7 @@ msgid ""
 msgstr ""
 
 # 9a9cb35e4ca64740a2be53f4c4535a35
-#: ../../api.rst:277
+#: ../../flask/docs/api.rst:277
 msgid "Message Flashing"
 msgstr ""
 
@@ -4945,12 +4959,12 @@ msgid "whitelist of categories to limit return values"
 msgstr ""
 
 # 5aa12dec607a4225a278364e5c3ae5b6
-#: ../../api.rst:284
+#: ../../flask/docs/api.rst:284
 msgid "JSON Support"
 msgstr ""
 
 # 533a84b2261f425aae5dbd8af0eb2d13
-#: ../../api.rst:288
+#: ../../flask/docs/api.rst:288
 msgid ""
 "Flask uses ``simplejson`` for the JSON implementation.  Since simplejson "
 "is provided by both the standard library as well as extension, Flask will"
@@ -4960,17 +4974,17 @@ msgid ""
 msgstr ""
 
 # e93bd177353d47f0b4d35d979b505728
-#: ../../api.rst:294
+#: ../../flask/docs/api.rst:294
 msgid "So for starters instead of doing::"
 msgstr ""
 
 # 0900f3561a2f4c69866da020ecd5caff
-#: ../../api.rst:301
+#: ../../flask/docs/api.rst:301
 msgid "You can instead just do this::"
 msgstr ""
 
 # 44dea395e0c149adb6a3472383b52bdf
-#: ../../api.rst:305
+#: ../../flask/docs/api.rst:305
 msgid ""
 "For usage examples, read the :mod:`json` documentation in the standard "
 "library.  The following extensions are by default applied to the stdlib's"
@@ -4978,12 +4992,12 @@ msgid ""
 msgstr ""
 
 # af3c925bde254f6483289ddc623a1024
-#: ../../api.rst:309
+#: ../../flask/docs/api.rst:309
 msgid "``datetime`` objects are serialized as :rfc:`822` strings."
 msgstr ""
 
 # 864b67d7e0b74010b9a2c76aa24f66eb
-#: ../../api.rst:310
+#: ../../flask/docs/api.rst:310
 msgid ""
 "Any object with an ``__html__`` method (like :class:`~flask.Markup`) will"
 " have that method called and then the return value is serialized as "
@@ -4991,7 +5005,7 @@ msgid ""
 msgstr ""
 
 # cba4222cea814cec82c1cc48393238a0
-#: ../../api.rst:314
+#: ../../flask/docs/api.rst:314
 msgid ""
 "The :func:`~htmlsafe_dumps` function of this json module is also "
 "available as a filter called ``|tojson`` in Jinja2.  Note that in "
@@ -5002,12 +5016,12 @@ msgid ""
 msgstr ""
 
 # 732d69b4c2b7486081437ec30d6242e2
-#: ../../api.rst:326
+#: ../../flask/docs/api.rst:326
 msgid "Auto-Sort JSON Keys"
 msgstr ""
 
 # d332802adb8741bc98a09bb69a4c3f22
-#: ../../api.rst:328
+#: ../../flask/docs/api.rst:328
 msgid ""
 "The configuration variable ``JSON_SORT_KEYS`` (:ref:`config`) can be set "
 "to false to stop Flask from auto-sorting keys.  By default sorting is "
@@ -5015,7 +5029,7 @@ msgid ""
 msgstr ""
 
 # 77053fadd7db408191b38c838358854b
-#: ../../api.rst:332
+#: ../../flask/docs/api.rst:332
 msgid ""
 "Notice that disabling key sorting can cause issues when using content "
 "based HTTP caches and Python's hash randomization feature."
@@ -5402,7 +5416,7 @@ msgid "BSD-3-Clause"
 msgstr ""
 
 # a1c7770e05d54978bc66329f0a50d478
-#: ../../api.rst:354
+#: ../../flask/docs/api.rst:354
 msgid "Template Rendering"
 msgstr ""
 
@@ -5460,7 +5474,7 @@ msgid "the name of the variable of macro to access"
 msgstr ""
 
 # 2f72505f8f114d19b8260b15e792beeb
-#: ../../api.rst:365
+#: ../../flask/docs/api.rst:365
 msgid "Configuration"
 msgstr ""
 
@@ -5694,7 +5708,7 @@ msgid ""
 msgstr ""
 
 # 2a241cea59ae4404ae76e7697a175c7a
-#: ../../api.rst:372
+#: ../../flask/docs/api.rst:372
 msgid "Stream Helpers"
 msgstr ""
 
@@ -5719,7 +5733,7 @@ msgid "Alternatively it can also be used around a specific generator::"
 msgstr ""
 
 # 67e7eaa9018b4a3c91237cfe2ee2b4ef
-#: ../../api.rst:377
+#: ../../flask/docs/api.rst:377
 msgid "Useful Internals"
 msgstr ""
 
@@ -5812,7 +5826,7 @@ msgid "Binds the request context to the current context."
 msgstr ""
 
 # 7fd43072251443c78ea1c0ce26ae27c5
-#: ../../api.rst:384
+#: ../../flask/docs/api.rst:384
 msgid ""
 "The internal :class:`~werkzeug.local.LocalStack` that holds "
 ":class:`~flask.ctx.RequestContext` instances. Typically, the "
@@ -5821,67 +5835,67 @@ msgid ""
 msgstr ""
 
 # 4cb64b7036b24d19b2b82f100ba5edac
-#: ../../api.rst:390
+#: ../../flask/docs/api.rst:390
 msgid "The following attributes are always present on each layer of the stack:"
 msgstr ""
 
 # 7f181b151063489892253a4b97932f2d
-#: ../../api.rst:394
+#: ../../flask/docs/api.rst:394
 msgid "`app`"
 msgstr ""
 
 # efe1b945d4d9434fa33f584907a22a6f
-#: ../../api.rst:394
+#: ../../flask/docs/api.rst:394
 msgid "the active Flask application."
 msgstr ""
 
 # 97b50ce0e3b14264873438eb15ea16b1
-#: ../../api.rst:397
+#: ../../flask/docs/api.rst:397
 msgid "`url_adapter`"
 msgstr ""
 
 # 202c79e676124ea4b77cc7442d9bdf98
-#: ../../api.rst:397
+#: ../../flask/docs/api.rst:397
 msgid "the URL adapter that was used to match the request."
 msgstr ""
 
 # 634bbe8d8cba40debe09169f11ed8ba8
-#: ../../api.rst:400
+#: ../../flask/docs/api.rst:400
 msgid "`request`"
 msgstr ""
 
 # 89c2632514984b53a757e2a15bfed73a
-#: ../../api.rst:400
+#: ../../flask/docs/api.rst:400
 msgid "the current request object."
 msgstr ""
 
 # 9354c395a6974fa9b4427195297d4d61
-#: ../../api.rst:403
+#: ../../flask/docs/api.rst:403
 msgid "`session`"
 msgstr ""
 
 # 1051184ebbde4d9299772ff7db712d2e
-#: ../../api.rst:403
+#: ../../flask/docs/api.rst:403
 msgid "the active session object."
 msgstr ""
 
 # 21c53ccb0eba4d6aa76201d186489bb5
-#: ../../api.rst:406
+#: ../../flask/docs/api.rst:406
 msgid "`g`"
 msgstr ""
 
 # a05d8492b3d64ccd982a716453f5d94a
-#: ../../api.rst:406
+#: ../../flask/docs/api.rst:406
 msgid "an object with all the attributes of the :data:`flask.g` object."
 msgstr ""
 
 # 51492d495408409a89ef26a3a6775ac3
-#: ../../api.rst:409
+#: ../../flask/docs/api.rst:409
 msgid "`flashes`"
 msgstr ""
 
 # 904916e08eb74e5ba4a6bea72ce41fcb
-#: ../../api.rst:409
+#: ../../flask/docs/api.rst:409
 msgid "an internal cache for the flashed messages."
 msgstr ""
 
@@ -5906,7 +5920,7 @@ msgid "Binds the app context to the current context."
 msgstr ""
 
 # b4fbd1697a9645158c4c93857246e32d
-#: ../../api.rst:425
+#: ../../flask/docs/api.rst:425
 msgid ""
 "The internal :class:`~werkzeug.local.LocalStack` that holds "
 ":class:`~flask.ctx.AppContext` instances. Typically, the "
@@ -5976,24 +5990,24 @@ msgid "The prefix that should be used for all URLs defined on the blueprint."
 msgstr ""
 
 # 652f4ddb726942129df93987b5b9486e
-#: ../../api.rst:439
+#: ../../flask/docs/api.rst:439
 msgid "Signals"
 msgstr ""
 
 # 612465bc23d1482bbe84237d50a8b5b2
-#: ../../api.rst:445
+#: ../../flask/docs/api.rst:445
 msgid ""
 "``True`` if the signaling system is available.  This is the case when "
 "`blinker`_ is installed."
 msgstr ""
 
 # 0d923e444952416ead415a521e01641d
-#: ../../api.rst:448
+#: ../../flask/docs/api.rst:448
 msgid "The following signals exist in Flask:"
 msgstr ""
 
 # 01fe4320682b4d19b9d565e219a9aa94
-#: ../../api.rst:452
+#: ../../flask/docs/api.rst:452
 msgid ""
 "This signal is sent when a template was successfully rendered.  The "
 "signal is invoked with the instance of the template as `template` and the"
@@ -6008,13 +6022,15 @@ msgstr ""
 # 1838c88525854f16b6097ed42882a261
 # c85bdf253c564e20bb8bf63b56ec1853
 # 4da17592370f472f9e71b636f276ca42
-#: ../../api.rst:456 ../../api.rst:473 ../../api.rst:490 ../../api.rst:503
-#: ../../api.rst:519 ../../api.rst:534 ../../api.rst:553 ../../api.rst:608
+#: ../../flask/docs/api.rst:456 ../../flask/docs/api.rst:473
+#: ../../flask/docs/api.rst:490 ../../flask/docs/api.rst:503
+#: ../../flask/docs/api.rst:519 ../../flask/docs/api.rst:534
+#: ../../flask/docs/api.rst:553 ../../flask/docs/api.rst:608
 msgid "Example subscriber::"
 msgstr ""
 
 # f9265ef820dc4105b5196f43b6889912
-#: ../../api.rst:469
+#: ../../flask/docs/api.rst:469
 msgid ""
 "This signal is sent before template rendering process. The signal is "
 "invoked with the instance of the template as `template` and the context "
@@ -6022,7 +6038,7 @@ msgid ""
 msgstr ""
 
 # 7b04df996f7c4457ba7fceb100fda6ff
-#: ../../api.rst:485
+#: ../../flask/docs/api.rst:485
 msgid ""
 "This signal is sent when the request context is set up, before any "
 "request processing happens.  Because the request context is already "
@@ -6031,14 +6047,14 @@ msgid ""
 msgstr ""
 
 # 3cce4890598447ba9e6670f9125b1a99
-#: ../../api.rst:500
+#: ../../flask/docs/api.rst:500
 msgid ""
 "This signal is sent right before the response is sent to the client. It "
 "is passed the response to be sent named `response`."
 msgstr ""
 
 # f066a309638d48cb9db38c4df8a9e203
-#: ../../api.rst:514
+#: ../../flask/docs/api.rst:514
 msgid ""
 "This signal is sent when an exception happens during request processing. "
 "It is sent *before* the standard exception handling kicks in and even in "
@@ -6047,7 +6063,7 @@ msgid ""
 msgstr ""
 
 # c86ef583b9694eafa047129ac4610ab8
-#: ../../api.rst:529
+#: ../../flask/docs/api.rst:529
 msgid ""
 "This signal is sent when the request is tearing down.  This is always "
 "called, even if an exception is caused.  Currently functions listening to"
@@ -6056,7 +6072,7 @@ msgid ""
 msgstr ""
 
 # 50db4649dacc45189f9e4c1af1ecf5a8
-#: ../../api.rst:542
+#: ../../flask/docs/api.rst:542
 msgid ""
 "As of Flask 0.9, this will also be passed an `exc` keyword argument that "
 "has a reference to the exception that caused the teardown if there was "
@@ -6064,7 +6080,7 @@ msgid ""
 msgstr ""
 
 # a6b7c723166240788588d8fb3b65c9cb
-#: ../../api.rst:548
+#: ../../flask/docs/api.rst:548
 msgid ""
 "This signal is sent when the app context is tearing down.  This is always"
 " called, even if an exception is caused.  Currently functions listening "
@@ -6073,14 +6089,14 @@ msgid ""
 msgstr ""
 
 # b570a4e7a0b449c5be6f94fa1f41eb31
-#: ../../api.rst:561
+#: ../../flask/docs/api.rst:561
 msgid ""
 "This will also be passed an `exc` keyword argument that has a reference "
 "to the exception that caused the teardown if there was one."
 msgstr ""
 
 # ce1ed71953f64c73ab015c6b2ed9e236
-#: ../../api.rst:566
+#: ../../flask/docs/api.rst:566
 msgid ""
 "This signal is sent when an application context is pushed.  The sender is"
 " the application.  This is usually useful for unittests in order to "
@@ -6089,12 +6105,12 @@ msgid ""
 msgstr ""
 
 # c93fa8b9321d4745b0da70b8d36003b2
-#: ../../api.rst:583
+#: ../../flask/docs/api.rst:583
 msgid "And in the testcode::"
 msgstr ""
 
 # 4b636fd2050f4b0199206f2183e6ab53
-#: ../../api.rst:595
+#: ../../flask/docs/api.rst:595
 msgid ""
 "This signal is sent when an application context is popped.  The sender is"
 " the application.  This usually falls in line with the "
@@ -6102,7 +6118,7 @@ msgid ""
 msgstr ""
 
 # 1acda3fcf0034d61aaad23178e025a1c
-#: ../../api.rst:604
+#: ../../flask/docs/api.rst:604
 msgid ""
 "This signal is sent when the application is flashing a message.  The "
 "messages is sent as `message` keyword argument and the category as "
@@ -6110,7 +6126,7 @@ msgid ""
 msgstr ""
 
 # 3d78ca25944a4b64a601a7901e24b68d
-#: ../../api.rst:621
+#: ../../flask/docs/api.rst:621
 msgid ""
 "An alias for :class:`blinker.base.Namespace` if blinker is available, "
 "otherwise a dummy class that creates fake signals.  This class is "
@@ -6119,7 +6135,7 @@ msgid ""
 msgstr ""
 
 # 2890e83fdf434334a9b08c846b445aee
-#: ../../api.rst:628
+#: ../../flask/docs/api.rst:628
 msgid ""
 "Creates a new signal for this namespace if blinker is available, "
 "otherwise returns a fake signal that has a send method that will do "
@@ -6128,7 +6144,7 @@ msgid ""
 msgstr ""
 
 # dd2186ad313848469b6df231de8e389a
-#: ../../api.rst:639
+#: ../../flask/docs/api.rst:639
 msgid "Class-Based Views"
 msgstr ""
 
@@ -6220,34 +6236,34 @@ msgid ""
 msgstr ""
 
 # 18f1d7d10d964306a9eabdd9a6392dd1
-#: ../../api.rst:654
+#: ../../flask/docs/api.rst:654
 msgid "URL Route Registrations"
 msgstr ""
 
 # 343c891f77de40209a53d2279f8f6e6c
-#: ../../api.rst:656
+#: ../../flask/docs/api.rst:656
 msgid "Generally there are three ways to define rules for the routing system:"
 msgstr ""
 
 # b1150b9d9c9d40f08e239c8e4873221c
-#: ../../api.rst:658
+#: ../../flask/docs/api.rst:658
 msgid "You can use the :meth:`flask.Flask.route` decorator."
 msgstr ""
 
 # 8c19ed806c4f461587e02b2b4778dc18
-#: ../../api.rst:659
+#: ../../flask/docs/api.rst:659
 msgid "You can use the :meth:`flask.Flask.add_url_rule` function."
 msgstr ""
 
 # 829400d5ab264736b9c2e40bd57ae71b
-#: ../../api.rst:660
+#: ../../flask/docs/api.rst:660
 msgid ""
 "You can directly access the underlying Werkzeug routing system which is "
 "exposed as :attr:`flask.Flask.url_map`."
 msgstr ""
 
 # 91b0ad78d49d418f91fed58f245b7c01
-#: ../../api.rst:663
+#: ../../flask/docs/api.rst:663
 msgid ""
 "Variable parts in the route can be specified with angular brackets "
 "(``/user/<username>``).  By default a variable part in the URL accepts "
@@ -6256,82 +6272,82 @@ msgid ""
 msgstr ""
 
 # f047b1724aed412b999e31254aee525e
-#: ../../api.rst:668
+#: ../../flask/docs/api.rst:668
 msgid "Variable parts are passed to the view function as keyword arguments."
 msgstr ""
 
 # 3c6192dd68a948308dd375a326f99259
-#: ../../api.rst:670
+#: ../../flask/docs/api.rst:670
 msgid "The following converters are available:"
 msgstr ""
 
 # 9b15b4db939844fc93e3fe8149eabf5f
-#: ../../api.rst:673
+#: ../../flask/docs/api.rst:673
 msgid "`string`"
 msgstr ""
 
 # c36b6ac4e93f41359d176cde20dd3e71
-#: ../../api.rst:673
+#: ../../flask/docs/api.rst:673
 msgid "accepts any text without a slash (the default)"
 msgstr ""
 
 # 1d94e5cb82f54c68ad5384b9c448428e
-#: ../../api.rst:674
+#: ../../flask/docs/api.rst:674
 msgid "`int`"
 msgstr ""
 
 # a3c098b3573e48aab697f3950ee67db6
-#: ../../api.rst:674
+#: ../../flask/docs/api.rst:674
 msgid "accepts integers"
 msgstr ""
 
 # c32d05d41d9644c694020646054cda2d
-#: ../../api.rst:675
+#: ../../flask/docs/api.rst:675
 msgid "`float`"
 msgstr ""
 
 # 1cdd430e37d74524a24a7faac5a2fcbf
-#: ../../api.rst:675
+#: ../../flask/docs/api.rst:675
 msgid "like `int` but for floating point values"
 msgstr ""
 
 # dafb0714e5004d0ea57d577cc29f5e6e
-#: ../../api.rst:676
+#: ../../flask/docs/api.rst:676
 msgid "like the default but also accepts slashes"
 msgstr ""
 
 # e26dc8dfdcc44d4b888295e2d96f925c
-#: ../../api.rst:677
+#: ../../flask/docs/api.rst:677
 msgid "`any`"
 msgstr ""
 
 # 2c2e90c6c97344a0988092bf5237a2c7
-#: ../../api.rst:677
+#: ../../flask/docs/api.rst:677
 msgid "matches one of the items provided"
 msgstr ""
 
 # db21ff1f525a4a9984c4a772d12e6ef3
-#: ../../api.rst:678
+#: ../../flask/docs/api.rst:678
 msgid "`uuid`"
 msgstr ""
 
 # 7bfb5cbfcdb2458bbc375d9d0cdf270a
-#: ../../api.rst:678
+#: ../../flask/docs/api.rst:678
 msgid "accepts UUID strings"
 msgstr ""
 
 # 9d88aaa6bf4242209f57634979801724
-#: ../../api.rst:681
+#: ../../flask/docs/api.rst:681
 msgid "Custom converters can be defined using :attr:`flask.Flask.url_map`."
 msgstr ""
 
 # a93aa0d705324cff9a04e234bab0633a
-#: ../../api.rst:683
+#: ../../flask/docs/api.rst:683
 msgid "Here are some examples::"
 msgstr ""
 
 # f39617b7953849dbbd37888ad45a8c71
-#: ../../api.rst:697
+#: ../../flask/docs/api.rst:697
 msgid ""
 "An important detail to keep in mind is how Flask deals with trailing "
 "slashes.  The idea is to keep each URL unique so the following rules "
@@ -6339,7 +6355,7 @@ msgid ""
 msgstr ""
 
 # 79996cf001a642dea9379fa3788a45b3
-#: ../../api.rst:701
+#: ../../flask/docs/api.rst:701
 msgid ""
 "If a rule ends with a slash and is requested without a slash by the user,"
 " the user is automatically redirected to the same page with a trailing "
@@ -6347,21 +6363,21 @@ msgid ""
 msgstr ""
 
 # 0c107d0f475d4bdea525798fdfb7962e
-#: ../../api.rst:704
+#: ../../flask/docs/api.rst:704
 msgid ""
 "If a rule does not end with a trailing slash and the user requests the "
 "page with a trailing slash, a 404 not found is raised."
 msgstr ""
 
 # 78aa1ccbc4d442f6ae04ccd70e4d2161
-#: ../../api.rst:707
+#: ../../flask/docs/api.rst:707
 msgid ""
 "This is consistent with how web servers deal with static files.  This "
 "also makes it possible to use relative link targets safely."
 msgstr ""
 
 # f18a7760e9a147079bad37152d6c1fed
-#: ../../api.rst:710
+#: ../../flask/docs/api.rst:710
 msgid ""
 "You can also define multiple rules for the same function.  They have to "
 "be unique however.  Defaults can also be specified.  Here for example is "
@@ -6369,14 +6385,14 @@ msgid ""
 msgstr ""
 
 # f023bbb6f5014de5a5e6cc5466fc7a48
-#: ../../api.rst:719
+#: ../../flask/docs/api.rst:719
 msgid ""
 "This specifies that ``/users/`` will be the URL for page one and "
 "``/users/page/N`` will be the URL for page ``N``."
 msgstr ""
 
 # 10956cf7c3a94e93a679e6302d51412a
-#: ../../api.rst:722
+#: ../../flask/docs/api.rst:722
 msgid ""
 "If a URL contains a default value, it will be redirected to its simpler "
 "form with a 301 redirect. In the above example, ``/users/page/1`` will be"
@@ -6386,7 +6402,7 @@ msgid ""
 msgstr ""
 
 # 38ec03b943d64f4c9c5ac3ebc28996bb
-#: ../../api.rst:733
+#: ../../flask/docs/api.rst:733
 msgid ""
 "Here are the parameters that :meth:`~flask.Flask.route` and "
 ":meth:`~flask.Flask.add_url_rule` accept.  The only difference is that "
@@ -6395,17 +6411,17 @@ msgid ""
 msgstr ""
 
 # 48e106bb280b4bdda0a85f6554747cb4
-#: ../../api.rst:739
+#: ../../flask/docs/api.rst:739
 msgid "`rule`"
 msgstr ""
 
 # 60d55fd087b54436a9572af4bc506217
-#: ../../api.rst:740
+#: ../../flask/docs/api.rst:740
 msgid "`endpoint`"
 msgstr ""
 
 # be4e77a78ed84bcb8d011b7580beda38
-#: ../../api.rst:740
+#: ../../flask/docs/api.rst:740
 msgid ""
 "the endpoint for the registered URL rule.  Flask itself assumes that the "
 "name of the view function is the name of the endpoint if not explicitly "
@@ -6413,12 +6429,12 @@ msgid ""
 msgstr ""
 
 # 1b9daffc09254075af85c850ae5cd2bf
-#: ../../api.rst:743
+#: ../../flask/docs/api.rst:743
 msgid "`view_func`"
 msgstr ""
 
 # da80f358936a458d82810b5ce558d70f
-#: ../../api.rst:743
+#: ../../flask/docs/api.rst:743
 msgid ""
 "the function to call when serving a request to the provided endpoint.  If"
 " this is not provided one can specify the function later by storing it in"
@@ -6427,36 +6443,36 @@ msgid ""
 msgstr ""
 
 # 6f0742e881ae4a87868a93edd57f5204
-#: ../../api.rst:748
+#: ../../flask/docs/api.rst:748
 msgid "`defaults`"
 msgstr ""
 
 # c2ec46c6d23b4cc38e111beec1988f31
-#: ../../api.rst:748
+#: ../../flask/docs/api.rst:748
 msgid ""
 "A dictionary with defaults for this rule.  See the example above for how "
 "defaults work."
 msgstr ""
 
 # 0616e9b905b9495e9def3a221cf7efa0
-#: ../../api.rst:750
+#: ../../flask/docs/api.rst:750
 msgid "`subdomain`"
 msgstr ""
 
 # 4894afac789e427dac934f47767e1308
-#: ../../api.rst:750
+#: ../../flask/docs/api.rst:750
 msgid ""
 "specifies the rule for the subdomain in case subdomain matching is in "
 "use.  If not specified the default subdomain is assumed."
 msgstr ""
 
 # d86baee678b74c549f3e9e8e937fc2f6
-#: ../../api.rst:753
+#: ../../flask/docs/api.rst:753
 msgid "`**options`"
 msgstr ""
 
 # 86145695b1d44c00a141eccbb8629683
-#: ../../api.rst:753
+#: ../../flask/docs/api.rst:753
 msgid ""
 "the options to be forwarded to the underlying "
 ":class:`~werkzeug.routing.Rule` object.  A change to Werkzeug is handling"
@@ -6468,12 +6484,12 @@ msgid ""
 msgstr ""
 
 # 3680a37904754168ae48fec5c5d6806f
-#: ../../api.rst:766
+#: ../../flask/docs/api.rst:766
 msgid "View Function Options"
 msgstr ""
 
 # 3ab36fc0c4084ed89f295b41ae85cace
-#: ../../api.rst:768
+#: ../../flask/docs/api.rst:768
 msgid ""
 "For internal usage the view functions can have some attributes attached "
 "to customize behavior the view function would normally not have control "
@@ -6483,7 +6499,7 @@ msgid ""
 msgstr ""
 
 # 17fa8f970c754a769a98f14fc427693f
-#: ../../api.rst:773
+#: ../../flask/docs/api.rst:773
 msgid ""
 "`__name__`: The name of a function is by default used as endpoint.  If "
 "endpoint is provided explicitly this value is used.  Additionally this "
@@ -6492,7 +6508,7 @@ msgid ""
 msgstr ""
 
 # a0e451ddec0444148f0b9e41f383fbe2
-#: ../../api.rst:778
+#: ../../flask/docs/api.rst:778
 msgid ""
 "`methods`: If methods are not provided when the URL rule is added, Flask "
 "will look on the view function object itself if a `methods` attribute "
@@ -6501,7 +6517,7 @@ msgid ""
 msgstr ""
 
 # 030ac347e5eb4b9aaa9ed10844c28bc2
-#: ../../api.rst:783
+#: ../../flask/docs/api.rst:783
 msgid ""
 "`provide_automatic_options`: if this attribute is set Flask will either "
 "force enable or disable the automatic implementation of the HTTP "
@@ -6510,7 +6526,7 @@ msgid ""
 msgstr ""
 
 # b6ed5d71777740c1b9f080e8ff994d0a
-#: ../../api.rst:789
+#: ../../flask/docs/api.rst:789
 msgid ""
 "`required_methods`: if this attribute is set, Flask will always add these"
 " methods when registering a URL rule even if the methods were explicitly "
@@ -6518,17 +6534,17 @@ msgid ""
 msgstr ""
 
 # f28c1c63b60449d484eba621ffd8c9be
-#: ../../api.rst:793
+#: ../../flask/docs/api.rst:793
 msgid "Full example::"
 msgstr ""
 
 # 06bc8fe084284b49a33f3a3d34ea96f4
-#: ../../api.rst:805
+#: ../../flask/docs/api.rst:805
 msgid "The `provide_automatic_options` functionality was added."
 msgstr ""
 
 # 9623239c309147e9bd42d76d8adba934
-#: ../../api.rst:809
+#: ../../flask/docs/api.rst:809
 msgid "Command Line Interface"
 msgstr ""
 
@@ -6756,7 +6772,7 @@ msgid ""
 msgstr ""
 
 # a1906d448fc6465089169caa2c3919bc
-#: ../../api.rst:828
+#: ../../flask/docs/api.rst:828
 msgid ""
 "Marks a function so that an instance of :class:`ScriptInfo` is passed as "
 "first argument to the click callback."
@@ -6795,4 +6811,40 @@ msgid ""
 "This is useful for executing small snippets of management code without "
 "having to manually configure the application."
 msgstr ""
+
+# 1e0094027de34599a98c0eb1bbb0ee0f
+#~ msgid ""
+#~ "True if the request was triggered "
+#~ "via a JavaScript XMLHttpRequest. This "
+#~ "only works with libraries that support"
+#~ " the ``X-Requested-With`` header and "
+#~ "set it to \"XMLHttpRequest\".  Libraries "
+#~ "that do that are prototype, jQuery "
+#~ "and Mochikit and probably some more."
+#~ msgstr ""
+
+# 44bf94b8873f4ebf8c346df653a6414e
+#~ msgid ""
+#~ "``X-Requested-With`` is not standard and"
+#~ " is unreliable. You may be able "
+#~ "to use :attr:`AcceptMixin.accept_mimetypes` instead."
+#~ msgstr ""
+
+# 5ea5ca93a8a04eebb77823aed2bf7899
+#~ msgid ""
+#~ "Raises an :py:exc:`HTTPException` for the "
+#~ "given status code or WSGI application::"
+#~ msgstr ""
+
+# cd0229296d2c4d6eac4bbdaa692e5844
+#~ msgid ""
+#~ "Can be passed a WSGI application "
+#~ "or a status code.  If a status "
+#~ "code is given it's looked up in"
+#~ " the list of exceptions and will "
+#~ "raise that exception, if passed a "
+#~ "WSGI application it will wrap it "
+#~ "in a proxy WSGI exception and "
+#~ "raise that::"
+#~ msgstr ""
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"POT-Creation-Date: 2020-07-22 20:39+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,33 +16,27 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../patterns/requestchecksum.rst:2
-# 6edabd49a57a4868af4ce16578462590
+#: ../../flask/docs/patterns/requestchecksum.rst:2
 msgid "Request Content Checksums"
 msgstr ""
 
-#: ../../patterns/requestchecksum.rst:4
-# f6064aafe95544b0bac045330721f70a
+#: ../../flask/docs/patterns/requestchecksum.rst:4
 msgid "Various pieces of code can consume the request data and preprocess it. For instance JSON data ends up on the request object already read and processed, form data ends up there as well but goes through a different code path.  This seems inconvenient when you want to calculate the checksum of the incoming request data.  This is necessary sometimes for some APIs."
 msgstr ""
 
-#: ../../patterns/requestchecksum.rst:11
-# eab052a615384fe5a6015952b514c49c
+#: ../../flask/docs/patterns/requestchecksum.rst:11
 msgid "Fortunately this is however very simple to change by wrapping the input stream."
 msgstr ""
 
-#: ../../patterns/requestchecksum.rst:14
-# 8778b129a6574e67bb2816050e208391
+#: ../../flask/docs/patterns/requestchecksum.rst:14
 msgid "The following example calculates the SHA1 checksum of the incoming data as it gets read and stores it in the WSGI environment::"
 msgstr ""
 
-#: ../../patterns/requestchecksum.rst:41
-# b2bced15d6594f9a9363f367d363d7b1
+#: ../../flask/docs/patterns/requestchecksum.rst:41
 msgid "To use this, all you need to do is to hook the calculating stream in before the request starts consuming data.  (Eg: be careful accessing ``request.form`` or anything of that nature.  ``before_request_handlers`` for instance should be careful not to access it)."
 msgstr ""
 
-#: ../../patterns/requestchecksum.rst:46
-# 92a7c01421de4a5984d0c3de75053c43
+#: ../../flask/docs/patterns/requestchecksum.rst:46
 msgid "Example usage::"
 msgstr ""
 
