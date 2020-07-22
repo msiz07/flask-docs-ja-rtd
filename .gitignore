@@ -22,6 +22,9 @@ htmlcov/
 .coverage.*
 *,cover
 
+# sphinx temporary files
+.doctrees
+
 # Translation (ja)
 *.mo
 
