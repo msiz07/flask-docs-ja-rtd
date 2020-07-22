@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 20:39+0900\n"
+"POT-Creation-Date: 2020-07-22 21:10+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -246,12 +246,11 @@ msgid ""
 "  Defaults to the name of the `static_folder` folder."
 msgstr ""
 
-# 8d3776d6a25f4ba0bbadf3e35eba2219
 #: flask.Flask:70 of
 msgid ""
-"the folder with static files that should be served at `static_url_path`."
-"  Defaults to the ``'static'`` folder in the root path of the "
-"application."
+"The folder with static files that is served at ``static_url_path``. "
+"Relative to the application ``root_path`` or an absolute path. Defaults "
+"to ``'static'``."
 msgstr ""
 
 # d6a247578b38406bb307447077dc91f1
@@ -6846,5 +6845,13 @@ msgstr ""
 #~ "WSGI application it will wrap it "
 #~ "in a proxy WSGI exception and "
 #~ "raise that::"
+#~ msgstr ""
+
+# 8d3776d6a25f4ba0bbadf3e35eba2219
+#~ msgid ""
+#~ "the folder with static files that "
+#~ "should be served at `static_url_path`.  "
+#~ "Defaults to the ``'static'`` folder in"
+#~ " the root path of the application."
 #~ msgstr ""
 

@@ -8,34 +8,34 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"POT-Creation-Date: 2020-07-22 21:10+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
+"Generated-By: Babel 2.8.0\n"
 
 # 787cd2e2d0754a0590816a20c3fa8a55
-#: ../../becomingbig.rst:4
+#: ../../flask/docs/becomingbig.rst:4
 msgid "Becoming Big"
 msgstr ""
 
 # ae85c5eebf014f19ae00475816e66ca9
-#: ../../becomingbig.rst:6
+#: ../../flask/docs/becomingbig.rst:6
 msgid ""
 "Here are your options when growing your codebase or scaling your "
 "application."
 msgstr ""
 
 # d650dad6a3764fc89491f3c947aaf838
-#: ../../becomingbig.rst:9
+#: ../../flask/docs/becomingbig.rst:9
 msgid "Read the Source."
 msgstr ""
 
 # e71b539393d04e5a869f8e30e154e994
-#: ../../becomingbig.rst:11
+#: ../../flask/docs/becomingbig.rst:11
 msgid ""
 "Flask started in part to demonstrate how to build your own framework on "
 "top of existing well-used tools Werkzeug (WSGI) and Jinja (templating), "
@@ -48,31 +48,29 @@ msgid ""
 msgstr ""
 
 # 4d0d795015f040a0a00e6b2316488b87
-#: ../../becomingbig.rst:21
+#: ../../flask/docs/becomingbig.rst:21
 msgid "Hook. Extend."
 msgstr ""
 
-# 2e820bc9481f419c83afd6b294b56f77
-#: ../../becomingbig.rst:23
+#: ../../flask/docs/becomingbig.rst:23
 msgid ""
 "The :ref:`api` docs are full of available overrides, hook points, and "
 ":ref:`signals`. You can provide custom classes for things like the "
-"request and response objects.  Dig deeper on the APIs you use, and look "
+"request and response objects. Dig deeper on the APIs you use, and look "
 "for the customizations which are available out of the box in a Flask "
-"release.  Look for ways in which your project can be refactored into a "
-"collection of utilities and Flask extensions.  Explore the many "
-"`extensions <http://flask.pocoo.org/extensions/>`_ in the community, and "
-"look for patterns to build your own extensions if you do not find the "
-"tools you need."
+"release. Look for ways in which your project can be refactored into a "
+"collection of utilities and Flask extensions. Explore the many "
+":doc:`/extensions` in the community, and look for patterns to build your "
+"own extensions if you do not find the tools you need."
 msgstr ""
 
 # 5ef745c4b6d441b29ced147490ff6908
-#: ../../becomingbig.rst:33
+#: ../../flask/docs/becomingbig.rst:33
 msgid "Subclass."
 msgstr ""
 
 # 9ccb5f8cb09642bb98b05d5d95189d9d
-#: ../../becomingbig.rst:35
+#: ../../flask/docs/becomingbig.rst:35
 msgid ""
 "The :class:`~flask.Flask` class has many methods designed for "
 "subclassing. You can quickly add or customize behavior by subclassing "
@@ -83,12 +81,12 @@ msgid ""
 msgstr ""
 
 # 4dedd78154f7417c8dc59f7b2c42dd0b
-#: ../../becomingbig.rst:42
+#: ../../flask/docs/becomingbig.rst:42
 msgid "Wrap with middleware."
 msgstr ""
 
 # 3d58ea3ac639424e8c5793ede176e4e6
-#: ../../becomingbig.rst:44
+#: ../../flask/docs/becomingbig.rst:44
 msgid ""
 "The :ref:`app-dispatch` chapter shows in detail how to apply middleware. "
 "You can introduce WSGI middleware to wrap your Flask instances and "
@@ -98,12 +96,12 @@ msgid ""
 msgstr ""
 
 # acc1b7b7b7f44e9190746c3e5acb016c
-#: ../../becomingbig.rst:51
+#: ../../flask/docs/becomingbig.rst:51
 msgid "Fork."
 msgstr ""
 
 # cb343207fcfa4e6d9294d1ab9255e21d
-#: ../../becomingbig.rst:53
+#: ../../flask/docs/becomingbig.rst:53
 msgid ""
 "If none of the above options work, fork Flask.  The majority of code of "
 "Flask is within Werkzeug and Jinja2.  These libraries do the majority of "
@@ -116,7 +114,7 @@ msgid ""
 msgstr ""
 
 # 1504e4be90d040bbb94bf4250e426af2
-#: ../../becomingbig.rst:61
+#: ../../flask/docs/becomingbig.rst:61
 msgid ""
 "This is not unique to Flask.  Many people use patched and modified "
 "versions of their framework to counter shortcomings.  This idea is also "
@@ -125,7 +123,7 @@ msgid ""
 msgstr ""
 
 # 07f5e968d6b9444c86e8c2ae22ea46cf
-#: ../../becomingbig.rst:66
+#: ../../flask/docs/becomingbig.rst:66
 msgid ""
 "The downside of forking is of course that Flask extensions will most "
 "likely break because the new framework has a different import name. "
@@ -135,12 +133,12 @@ msgid ""
 msgstr ""
 
 # 1795018800bd4390911f58f907dad510
-#: ../../becomingbig.rst:73
+#: ../../flask/docs/becomingbig.rst:73
 msgid "Scale like a pro."
 msgstr ""
 
 # 7b63cfdddd274c6082366d485eda181d
-#: ../../becomingbig.rst:75
+#: ../../flask/docs/becomingbig.rst:75
 msgid ""
 "For many web applications the complexity of the code is less an issue "
 "than the scaling for the number of users or data entries expected.  Flask"
@@ -150,7 +148,7 @@ msgid ""
 msgstr ""
 
 # c194a0f256fa46e1b9404246d11963e5
-#: ../../becomingbig.rst:81
+#: ../../flask/docs/becomingbig.rst:81
 msgid ""
 "Scaling well means for example that if you double the amount of servers "
 "you get about twice the performance.  Scaling bad means that if you add a"
@@ -159,7 +157,7 @@ msgid ""
 msgstr ""
 
 # b49d7b57dacb4957aa7e7b991e6df27b
-#: ../../becomingbig.rst:86
+#: ../../flask/docs/becomingbig.rst:86
 msgid ""
 "There is only one limiting factor regarding scaling in Flask which are "
 "the context local proxies.  They depend on context which in Flask is "
@@ -172,18 +170,52 @@ msgid ""
 msgstr ""
 
 # 86080614ca624c77a2d981e4dfa7b1fe
-#: ../../becomingbig.rst:96
+#: ../../flask/docs/becomingbig.rst:96
 msgid "Discuss with the community."
 msgstr ""
 
-# 2aab135e71a8460e83ed8af28b6c5301
-#: ../../becomingbig.rst:98
+#: ../../flask/docs/becomingbig.rst:98
 msgid ""
 "The Flask developers keep the framework accessible to users with "
 "codebases big and small. If you find an obstacle in your way, caused by "
 "Flask, don't hesitate to contact the developers on the mailing list or "
-"IRC channel.  The best way for the Flask and Flask extension developers "
-"to improve the tools for larger applications is getting feedback from "
-"users."
+"Discord server.  The best way for the Flask and Flask extension "
+"developers to improve the tools for larger applications is getting "
+"feedback from users."
 msgstr ""
+
+# 2e820bc9481f419c83afd6b294b56f77
+#~ msgid ""
+#~ "The :ref:`api` docs are full of "
+#~ "available overrides, hook points, and "
+#~ ":ref:`signals`. You can provide custom "
+#~ "classes for things like the request "
+#~ "and response objects.  Dig deeper on "
+#~ "the APIs you use, and look for "
+#~ "the customizations which are available "
+#~ "out of the box in a Flask "
+#~ "release.  Look for ways in which "
+#~ "your project can be refactored into "
+#~ "a collection of utilities and Flask "
+#~ "extensions.  Explore the many `extensions "
+#~ "<http://flask.pocoo.org/extensions/>`_ in the "
+#~ "community, and look for patterns to "
+#~ "build your own extensions if you "
+#~ "do not find the tools you need."
+#~ msgstr ""
+
+# 2aab135e71a8460e83ed8af28b6c5301
+#~ msgid ""
+#~ "The Flask developers keep the framework"
+#~ " accessible to users with codebases "
+#~ "big and small. If you find an "
+#~ "obstacle in your way, caused by "
+#~ "Flask, don't hesitate to contact the "
+#~ "developers on the mailing list or "
+#~ "IRC channel.  The best way for the"
+#~ " Flask and Flask extension developers "
+#~ "to improve the tools for larger "
+#~ "applications is getting feedback from "
+#~ "users."
+#~ msgstr ""
 
