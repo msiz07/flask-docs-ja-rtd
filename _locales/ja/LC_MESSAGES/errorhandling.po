@@ -375,7 +375,6 @@ msgstr ""
 
 # 6445bfe8aff34a4d82ddfa44fdbc4f5f
 #: ../../flask/docs/errorhandling.rst:210
-#, fuzzy
 msgid ""
 "If there is an error handler registered for ``InternalServerError``, this"
 " will be invoked. As of Flask 1.1.0, this error handler will always be "
@@ -387,7 +386,7 @@ msgstr ""
 "``InternalServerError``\\ に対してerror handlerが登録されていた場合、これが呼び起されます。Flask "
 "1.1.0以降、このerror handlerにはオリジナルの処理されなかったエラーではなく、常に\\ "
 "``InternalServerError``\\ のインスタンスが渡されます。オリジナルのエラーは\\ "
-"``e.original_error``\\ として利用可能です。Werkzeug "
+"``e.original_exception``\\ として利用可能です。Werkzeug "
 "1.0.0まででは、この属性は処理されなかったエラーの間でだけ存在しており、互換性のために\\ ``getattr``\\ "
 "を使ってアクセスしてください。"
 
