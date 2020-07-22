@@ -6,6 +6,8 @@ BASEDIR = os.path.dirname(os.path.abspath(__file__))
 execfile_(os.path.join(BASEDIR, 'flask', 'docs', 'conf.py'), globals())
 sys.path.append(BASEDIR)
 
+# intersphinx_mapping for markupsafe is missing in original conf.py
+intersphinx_mapping["markupsafe"] = ("https://markupsafe.palletsprojects.com/", None)
 
 # Translation (ja) -----------------------------------------------------
 locale_dirs = [os.path.join(BASEDIR, '_locales')]
