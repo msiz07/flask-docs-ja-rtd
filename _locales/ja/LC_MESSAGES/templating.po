@@ -24,7 +24,6 @@ msgstr "テンプレート"
 
 # d2aefb3be3a24b76be1d71f8c41c5b91
 #: ../../flask/docs/templating.rst:6
-#, fuzzy
 msgid ""
 "Flask leverages Jinja2 as its template engine.  You are obviously free to"
 " use a different template engine, but you still have to install Jinja2 to"
@@ -199,11 +198,10 @@ msgstr "標準のフィルタ（Standard Filters）"
 
 # 1c59d103b5cd465294707db65dc0c5d3
 #: ../../flask/docs/templating.rst:103
-#, fuzzy
 msgid ""
 "Flask provides the following Jinja2 filters in addition to the filters "
 "provided by Jinja2 itself:"
-msgstr "Jinja2自身によって提供されるフィルタに加えて、これらのフィルタがJinja2で利用可能です:"
+msgstr "Jinja2自身によって提供されるフィルタに加えて、Flaskは以下のJinja2フィルタを提供します:"
 
 # 21c4f409eb2c430983248af380ad77bc
 #: ../../flask/docs/templating.rst:109
