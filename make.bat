@@ -17,6 +17,7 @@ set LOCALEDIR=_locales
 if "%1" == "" goto help
 if "%1" == "gettext" goto gettext
 if "%1" == "locale" goto locale
+if "%1" == "trans_stat" goto trans_stat
 if "%1" == "html_ja" goto html_ja
 if "%1" == "rtd_ja" goto rtd_ja
 
@@ -38,6 +39,13 @@ goto end
 
 :help
 %SPHINXBUILD% -M help %SOURCEDIR% %BUILDDIR% %SPHINXOPTS%
+echo.
+echo This make.bat add the following targets
+echo   gettext     to generate pot files (run: sphinx-build -b gettext)
+echo   locale      to generate locale mo,po files (run: sphinx-intl update)
+echo   trans_stat  to output translation stat (run: sphinx-intl stat)
+echo   html_ja     to generate ja translated html files
+echo   rtd_ja      to generate ja translated html files with rtd extensions
 goto end
 
 :gettext
@@ -46,6 +54,10 @@ goto end
 
 :locale
 %SPHINXINTL% update -p %LOCALEDIR%\pot -d %LOCALEDIR% -l ja
+goto end
+
+:trans_stat
+%SPHINXINTL% stat -d %LOCALEDIR% -l ja
 goto end
 
 :html_ja
