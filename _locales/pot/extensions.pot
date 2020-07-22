@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 20:39+0900\n"
+"POT-Creation-Date: 2020-07-22 21:10+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,22 +29,22 @@ msgid "Finding Extensions"
 msgstr ""
 
 #: ../../flask/docs/extensions.rst:15
-msgid "Flask extensions are usually named \"Flask-Foo\" or \"Foo-Flask\". Many extensions are listed in the `Extension Registry`_, which can be updated by extension developers. You can also search PyPI for packages tagged with `Framework :: Flask <pypi_>`_."
+msgid "Flask extensions are usually named \"Flask-Foo\" or \"Foo-Flask\". You can search PyPI for packages tagged with `Framework :: Flask <pypi_>`_."
 msgstr ""
 
-#: ../../flask/docs/extensions.rst:22
+#: ../../flask/docs/extensions.rst:20
 msgid "Using Extensions"
 msgstr ""
 
-#: ../../flask/docs/extensions.rst:24
+#: ../../flask/docs/extensions.rst:22
 msgid "Consult each extension's documentation for installation, configuration, and usage instructions. Generally, extensions pull their own configuration from :attr:`app.config <flask.Flask.config>` and are passed an application instance during initialization. For example, an extension called \"Flask-Foo\" might be used like this::"
 msgstr ""
 
-#: ../../flask/docs/extensions.rst:44
+#: ../../flask/docs/extensions.rst:42
 msgid "Building Extensions"
 msgstr ""
 
-#: ../../flask/docs/extensions.rst:46
-msgid "While the `Extension Registry`_ contains many Flask extensions, you may not find an extension that fits your need. If this is the case, you can create your own. Read :ref:`extension-dev` to develop your own Flask extension."
+#: ../../flask/docs/extensions.rst:44
+msgid "While the `PyPI <pypi_>`_ contains many Flask extensions, you may not find an extension that fits your need. If this is the case, you can create your own. Read :doc:`/extensiondev` to develop your own Flask extension."
 msgstr ""
 

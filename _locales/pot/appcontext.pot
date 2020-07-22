@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 20:39+0900\n"
+"POT-Creation-Date: 2020-07-22 21:10+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -117,7 +117,7 @@ msgid "Accessing ``db`` will call ``get_db`` internally, in the same way that :d
 msgstr ""
 
 #: ../../flask/docs/appcontext.rst:143
-msgid "If you're writing an extension, :data:`g` should be reserved for user code. You may store internal data on the context itself, but be sure to use a sufficiently unique name. The current context is accessed with :data:`_app_ctx_stack.top <_app_ctx_stack>`. For more information see :doc:`extensiondev`."
+msgid "If you're writing an extension, :data:`g` should be reserved for user code. You may store internal data on the context itself, but be sure to use a sufficiently unique name. The current context is accessed with :data:`_app_ctx_stack.top <_app_ctx_stack>`. For more information see :doc:`/extensiondev`."
 msgstr ""
 
 #: ../../flask/docs/appcontext.rst:151

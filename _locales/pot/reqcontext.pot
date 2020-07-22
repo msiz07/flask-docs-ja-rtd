@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 20:39+0900\n"
+"POT-Creation-Date: 2020-07-22 21:10+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -93,7 +93,7 @@ msgid "Because the contexts are stacks, other contexts may be pushed to change t
 msgstr ""
 
 #: ../../flask/docs/reqcontext.rst:109
-msgid "After the request is dispatched and a response is generated and sent, the request context is popped, which then pops the application context. Immediately before they are popped, the :meth:`~Flask.teardown_request` and :meth:`~Flask.teardown_appcontext` functions are are executed. These execute even if an unhandled exception occurred during dispatch."
+msgid "After the request is dispatched and a response is generated and sent, the request context is popped, which then pops the application context. Immediately before they are popped, the :meth:`~Flask.teardown_request` and :meth:`~Flask.teardown_appcontext` functions are executed. These execute even if an unhandled exception occurred during dispatch."
 msgstr ""
 
 #: ../../flask/docs/reqcontext.rst:119
@@ -141,7 +141,7 @@ msgid "The teardown callbacks are independent of the request dispatch, and are i
 msgstr ""
 
 #: ../../flask/docs/reqcontext.rst:171
-msgid "During testing, it can be useful to defer popping the contexts after the request ends, so that their data can be accessed in the test function. Using the :meth:`~Flask.test_client` as a ``with`` block to preserve the contexts until the with block exits."
+msgid "During testing, it can be useful to defer popping the contexts after the request ends, so that their data can be accessed in the test function. Use the :meth:`~Flask.test_client` as a ``with`` block to preserve the contexts until the ``with`` block exits."
 msgstr ""
 
 #: ../../flask/docs/reqcontext.rst:205
@@ -197,7 +197,7 @@ msgid "Some of the objects provided by Flask are proxies to other objects. The p
 msgstr ""
 
 #: ../../flask/docs/reqcontext.rst:253
-msgid "Most of the time you don't have to care about that, but there are some exceptions where it is good to know that this object is an actual proxy:"
+msgid "Most of the time you don't have to care about that, but there are some exceptions where it is good to know that this object is actually a proxy:"
 msgstr ""
 
 #: ../../flask/docs/reqcontext.rst:256
@@ -205,10 +205,10 @@ msgid "The proxy objects cannot fake their type as the actual object types. If y
 msgstr ""
 
 #: ../../flask/docs/reqcontext.rst:259
-msgid "If the specific object reference is important, for example for sending :ref:`signals` or passing data to a background thread."
+msgid "The reference to the proxied object is needed in some situations, such as sending :ref:`signals` or passing data to a background thread."
 msgstr ""
 
-#: ../../flask/docs/reqcontext.rst:262
+#: ../../flask/docs/reqcontext.rst:263
 msgid "If you need to access the underlying object that is proxied, use the :meth:`~werkzeug.local.LocalProxy._get_current_object` method::"
 msgstr ""
 

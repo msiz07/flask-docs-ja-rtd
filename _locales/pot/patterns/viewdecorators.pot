@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 20:39+0900\n"
+"POT-Creation-Date: 2020-07-22 21:10+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -61,7 +61,7 @@ msgid "The decorated function will then work as follows"
 msgstr ""
 
 #: ../../flask/docs/patterns/viewdecorators.rst:73
-msgid "get the unique cache key for the current request base on the current path."
+msgid "get the unique cache key for the current request based on the current path."
 msgstr ""
 
 #: ../../flask/docs/patterns/viewdecorators.rst:75

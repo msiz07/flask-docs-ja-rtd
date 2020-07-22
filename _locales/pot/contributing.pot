@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 20:39+0900\n"
+"POT-Creation-Date: 2020-07-22 21:10+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -121,106 +121,106 @@ msgid "Install Flask in editable mode with development dependencies::"
 msgstr ""
 
 #: ../../flask/CONTRIBUTING.rst:82
-msgid "Install the pre-commit hooks:"
+msgid "Install the `pre-commit framework`_."
 msgstr ""
 
-#: ../../flask/CONTRIBUTING.rst:84
-msgid "pre-commit install --install-hooks"
-msgstr ""
-
-#: ../../flask/CONTRIBUTING.rst:94
-msgid "Start coding"
+#: ../../flask/CONTRIBUTING.rst:83
+msgid "Install the pre-commit hooks::"
 msgstr ""
 
 #: ../../flask/CONTRIBUTING.rst:96
+msgid "Start coding"
+msgstr ""
+
+#: ../../flask/CONTRIBUTING.rst:98
 msgid "Create a branch to identify the issue you would like to work on. If you're submitting a bug or documentation fix, branch off of the latest \".x\" branch::"
 msgstr ""
 
-#: ../../flask/CONTRIBUTING.rst:102
+#: ../../flask/CONTRIBUTING.rst:104
 msgid "If you're submitting a feature addition or change, branch off of the \"master\" branch::"
 msgstr ""
 
-#: ../../flask/CONTRIBUTING.rst:107
+#: ../../flask/CONTRIBUTING.rst:109
 msgid "Using your favorite editor, make your changes, `committing as you go`_."
 msgstr ""
 
-#: ../../flask/CONTRIBUTING.rst:108
+#: ../../flask/CONTRIBUTING.rst:110
 msgid "Include tests that cover any code changes you make. Make sure the test fails without your patch. `Run the tests. <contributing-testsuite_>`_."
 msgstr ""
 
-#: ../../flask/CONTRIBUTING.rst:110
+#: ../../flask/CONTRIBUTING.rst:112
 msgid "Push your commits to GitHub and `create a pull request`_ by using::"
 msgstr ""
 
-#: ../../flask/CONTRIBUTING.rst:114
+#: ../../flask/CONTRIBUTING.rst:116
 msgid "Celebrate 🎉"
 msgstr ""
 
-#: ../../flask/CONTRIBUTING.rst:125
+#: ../../flask/CONTRIBUTING.rst:127
 msgid "Running the tests"
 msgstr ""
 
-#: ../../flask/CONTRIBUTING.rst:127
+#: ../../flask/CONTRIBUTING.rst:129
 msgid "Run the basic test suite with::"
 msgstr ""
 
-#: ../../flask/CONTRIBUTING.rst:131
+#: ../../flask/CONTRIBUTING.rst:133
 msgid "This only runs the tests for the current environment. Whether this is relevant depends on which part of Flask you're working on. Travis-CI will run the full suite when you submit your pull request."
 msgstr ""
 
-#: ../../flask/CONTRIBUTING.rst:135
+#: ../../flask/CONTRIBUTING.rst:137
 msgid "The full test suite takes a long time to run because it tests multiple combinations of Python and dependencies. You need to have Python 2.7, 3.4, 3.5 3.6, and PyPy 2.7 installed to run all of the environments. Then run::"
 msgstr ""
 
-#: ../../flask/CONTRIBUTING.rst:142
+#: ../../flask/CONTRIBUTING.rst:144
 msgid "Running test coverage"
 msgstr ""
 
-#: ../../flask/CONTRIBUTING.rst:144
+#: ../../flask/CONTRIBUTING.rst:146
 msgid "Generating a report of lines that do not have test coverage can indicate where to start contributing. Run ``pytest`` using ``coverage`` and generate a report on the terminal and as an interactive HTML document::"
 msgstr ""
 
-#: ../../flask/CONTRIBUTING.rst:153
+#: ../../flask/CONTRIBUTING.rst:155
 msgid "Read more about `coverage <https://coverage.readthedocs.io>`_."
 msgstr ""
 
-#: ../../flask/CONTRIBUTING.rst:155
+#: ../../flask/CONTRIBUTING.rst:157
 msgid "Running the full test suite with ``tox`` will combine the coverage reports from all runs."
 msgstr ""
 
-#: ../../flask/CONTRIBUTING.rst:160
+#: ../../flask/CONTRIBUTING.rst:162
 msgid "Building the docs"
 msgstr ""
 
-#: ../../flask/CONTRIBUTING.rst:162
+#: ../../flask/CONTRIBUTING.rst:164
 msgid "Build the docs in the ``docs`` directory using Sphinx::"
 msgstr ""
 
-#: ../../flask/CONTRIBUTING.rst:167
+#: ../../flask/CONTRIBUTING.rst:170
 msgid "Open ``_build/html/index.html`` in your browser to view the docs."
 msgstr ""
 
-#: ../../flask/CONTRIBUTING.rst:169
+#: ../../flask/CONTRIBUTING.rst:172
 msgid "Read more about `Sphinx <https://www.sphinx-doc.org/en/master/>`_."
 msgstr ""
 
-#: ../../flask/CONTRIBUTING.rst:173
+#: ../../flask/CONTRIBUTING.rst:176
 msgid "Caution: zero-padded file modes"
 msgstr ""
 
-#: ../../flask/CONTRIBUTING.rst:175
+#: ../../flask/CONTRIBUTING.rst:178
 msgid "This repository contains several zero-padded file modes that may cause issues when pushing this repository to git hosts other than GitHub. Fixing this is destructive to the commit history, so we suggest ignoring these warnings. If it fails to push and you're using a self-hosted git service like GitLab, you can turn off repository checks in the admin panel."
 msgstr ""
 
-#: ../../flask/CONTRIBUTING.rst:181
+#: ../../flask/CONTRIBUTING.rst:184
 msgid "These files can also cause issues while cloning. If you have ::"
 msgstr ""
 
-#: ../../flask/CONTRIBUTING.rst:186
+#: ../../flask/CONTRIBUTING.rst:189
 msgid "or ::"
 msgstr ""
 
-#: ../../flask/CONTRIBUTING.rst:191
+#: ../../flask/CONTRIBUTING.rst:194
 msgid "set in your git configuration file, cloning this repository will fail. The only solution is to set both of the above settings to false while cloning, and then setting them back to true after the cloning is finished."
 msgstr ""
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 20:39+0900\n"
+"POT-Creation-Date: 2020-07-22 21:10+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,7 +21,7 @@ msgid "Templates"
 msgstr ""
 
 #: ../../flask/docs/templating.rst:6
-msgid "Flask leverages Jinja2 as template engine.  You are obviously free to use a different template engine, but you still have to install Jinja2 to run Flask itself.  This requirement is necessary to enable rich extensions. An extension can depend on Jinja2 being present."
+msgid "Flask leverages Jinja2 as its template engine.  You are obviously free to use a different template engine, but you still have to install Jinja2 to run Flask itself.  This requirement is necessary to enable rich extensions. An extension can depend on Jinja2 being present."
 msgstr ""
 
 #: ../../flask/docs/templating.rst:11
@@ -117,7 +117,7 @@ msgid "Standard Filters"
 msgstr ""
 
 #: ../../flask/docs/templating.rst:103
-msgid "These filters are available in Jinja2 additionally to the filters provided by Jinja2 itself:"
+msgid "Flask provides the following Jinja2 filters in addition to the filters provided by Jinja2 itself:"
 msgstr ""
 
 #: ../../flask/docs/templating.rst:109

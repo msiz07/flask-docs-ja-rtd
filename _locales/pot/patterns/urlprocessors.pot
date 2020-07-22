@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 20:39+0900\n"
+"POT-Creation-Date: 2020-07-22 21:10+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,7 +41,7 @@ msgid "This is an awful lot of repetition as you have to handle the language cod
 msgstr ""
 
 #: ../../flask/docs/patterns/urlprocessors.rst:41
-msgid "For the latter, this is where :func:`~flask.Flask.url_defaults` functions come in.  They can automatically inject values into a call for :func:`~flask.url_for` automatically.  The code below checks if the language code is not yet in the dictionary of URL values and if the endpoint wants a value named ``'lang_code'``::"
+msgid "For the latter, this is where :func:`~flask.Flask.url_defaults` functions come in.  They can automatically inject values into a call to :func:`~flask.url_for`.  The code below checks if the language code is not yet in the dictionary of URL values and if the endpoint wants a value named ``'lang_code'``::"
 msgstr ""
 
 #: ../../flask/docs/patterns/urlprocessors.rst:54

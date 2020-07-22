@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 20:39+0900\n"
+"POT-Creation-Date: 2020-07-22 21:10+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -37,7 +37,7 @@ msgid "`Deploying Flask on Heroku <https://devcenter.heroku.com/articles/getting
 msgstr ""
 
 #: ../../flask/docs/deploying/index.rst:20
-msgid "`Deploying Flask on Google App Engine <https://cloud.google.com/appengine/docs/standard/python/getting-started/python-standard-env>`_"
+msgid "`Deploying Flask on Google App Engine <https://cloud.google.com/appengine/docs/standard/python3/runtime>`_"
 msgstr ""
 
 #: ../../flask/docs/deploying/index.rst:21

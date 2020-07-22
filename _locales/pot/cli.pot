@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 20:39+0900\n"
+"POT-Creation-Date: 2020-07-22 21:10+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -333,7 +333,7 @@ msgid "PyCharm Integration"
 msgstr ""
 
 #: ../../flask/docs/cli.rst:494
-msgid "Prior to PyCharm 2018.1, the Flask CLI features weren't yet fully integrated into PyCharm. We have to do a few tweaks to get them working smoothly. These instructions should be similar for any other IDE you might want to use."
+msgid "PyCharm Professional provides a special Flask run configuration. For the Community Edition, we need to configure it to call the ``flask run`` CLI command with the correct environment variables. These instructions should be similar for any other IDE you might want to use."
 msgstr ""
 
 #: ../../flask/docs/cli.rst:499
@@ -345,7 +345,7 @@ msgid "There's quite a few options to change, but once we've done it for one com
 msgstr ""
 
 #: ../../flask/docs/cli.rst:513
-msgid "Click the + (*Add New Configuration*) button and select *Python*. Give the configuration a good descriptive name such as \"Run Flask Server\". For the ``flask run`` command, check \"Single instance only\" since you can't run the server more than once at the same time."
+msgid "Click the + (*Add New Configuration*) button and select *Python*. Give the configuration a name such as \"flask run\". For the ``flask run`` command, check \"Single instance only\" since you can't run the server more than once at the same time."
 msgstr ""
 
 #: ../../flask/docs/cli.rst:518
@@ -357,22 +357,22 @@ msgid "The *Parameters* field (**B**) is set to the CLI command to execute (with
 msgstr ""
 
 #: ../../flask/docs/cli.rst:524
-msgid "You can skip this next step if you're using :ref:`dotenv`. We need to add an environment variable (**C**) to identify our application. Click on the browse button and add an entry with ``FLASK_APP`` on the left and the Python import or file on the right (``hello`` for example)."
+msgid "You can skip this next step if you're using :ref:`dotenv`. We need to add an environment variable (**C**) to identify our application. Click on the browse button and add an entry with ``FLASK_APP`` on the left and the Python import or file on the right (``hello`` for example). Add an entry with ``FLASK_ENV`` and set it to ``development``."
 msgstr ""
 
-#: ../../flask/docs/cli.rst:529
+#: ../../flask/docs/cli.rst:530
 msgid "Next we need to set the working directory (**D**) to be the folder where our application resides."
 msgstr ""
 
-#: ../../flask/docs/cli.rst:532
+#: ../../flask/docs/cli.rst:533
 msgid "If you have installed your project as a package in your virtualenv, you may untick the *PYTHONPATH* options (**E**). This will more accurately match how you deploy the app later."
 msgstr ""
 
-#: ../../flask/docs/cli.rst:536
+#: ../../flask/docs/cli.rst:537
 msgid "Click *Apply* to save the configuration, or *OK* to save and close the window. Select the configuration in the main PyCharm window and click the play button next to it to run the server."
 msgstr ""
 
-#: ../../flask/docs/cli.rst:540
+#: ../../flask/docs/cli.rst:541
 msgid "Now that we have a configuration which runs ``flask run`` from within PyCharm, we can copy that configuration and alter the *Script* argument to run a different CLI command, e.g. ``flask shell``."
 msgstr ""
 
