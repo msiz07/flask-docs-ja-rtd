@@ -61,14 +61,12 @@ msgstr ""
 
 # 2a38354e726344289b424313eb5958be
 #: ../../flask/docs/deploying/index.rst:20
-#, fuzzy
 msgid ""
 "`Deploying Flask on Google App Engine "
 "<https://cloud.google.com/appengine/docs/standard/python3/runtime>`_"
 msgstr ""
 "`Google App Engine上へのFlaskのデプロイ "
-"<https://cloud.google.com/appengine/docs/standard/python/getting-started"
-"/python-standard-env>`_"
+"<https://cloud.google.com/appengine/docs/standard/python3/runtime>`_"
 
 # 0f296b5106234217ba0a7c2557d895fe
 #: ../../flask/docs/deploying/index.rst:21
