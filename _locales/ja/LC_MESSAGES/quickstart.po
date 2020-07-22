@@ -728,11 +728,12 @@ msgstr ""
 
 # a2f2b69650e4428d9a47f88f19150375
 #: ../../flask/docs/quickstart.rst:425
-#, fuzzy
 msgid ""
 "Here is a basic introduction to how the :class:`~markupsafe.Markup` class"
 " works::"
-msgstr ":class:`~jinja2.Markup`\\ クラスがどう働くかの基礎的なイントロダクションは以下のとおりです::"
+msgstr ""
+":class:`~markupsafe.Markup`\ がどう働くかの基礎的なイントロダクションは以下"
+"のとおりです::"
 
 # 6ae3854c4d104c078ec6cb013116c29c
 #: ../../flask/docs/quickstart.rst:437
@@ -1355,7 +1356,6 @@ msgstr "さらに、\\ :ref:`application-errors`\\ も読んでください。"
 
 # 21c1cff9a436456f9cf73d1fab6f45f0
 #: ../../flask/docs/quickstart.rst:875
-#, fuzzy
 msgid "Hooking in WSGI Middleware"
 msgstr "WSGIミドルウェア内でのフック"
 
@@ -1366,6 +1366,10 @@ msgid ""
 ":class:`~werkzeug.middlware.proxy_fix.ProxyFix` middleware for running "
 "behind Nginx:"
 msgstr ""
+"自分のFlaskアプリケーションにWSGIミドルウェアを追加するには、アプリ"
+"ケーションの\ ``wsgi_app``\ 属性を包み込みます（wrap）。例えば、"
+"Werkzeugの\ :class:`~werkzeug.middleware.proxy_fix.ProxyFix`\ ミドル"
+"ウェアをNginxの背後で実行するために適用するには以下のようにします:"
 
 #: ../../flask/docs/quickstart.rst:887
 msgid ""
@@ -1373,6 +1377,9 @@ msgid ""
 "points at your Flask application, not at the middleware, so you can "
 "continue to use and configure ``app`` directly."
 msgstr ""
+"``app``\ の代わりに\ ``app.wsgi_app``\ を包み込むことは、\ ``app``\ "
+"はミドルウェアではなく変わらず自分のFlaskアプリケーションを指し、引き"
+"続き直接\ ``app``\ を使用して設定できることを意味します。"
 
 # 0476910807c44e45a291d05ed57df5a0
 #: ../../flask/docs/quickstart.rst:892
