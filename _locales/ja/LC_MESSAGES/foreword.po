@@ -20,7 +20,7 @@ msgstr ""
 # 752859af6826476fb46a100738bcd54f
 #: ../../foreword.rst:2
 msgid "Foreword"
-msgstr ""
+msgstr "序文"
 
 # 91d414a7bf5548d0ba8211130b29d38e
 #: ../../foreword.rst:4
@@ -29,11 +29,14 @@ msgid ""
 " questions about the purpose and goals of the project, and when you "
 "should or should not be using it."
 msgstr ""
+"Flaskを始める前に以下を読んでください。うまくいけば、この序文はこの"
+"プロジェクトの目的とゴールに関するいくつかの質問や、Flaskを使うべき"
+"ときと使うべきではないときについて回答します。"
 
 # 66f97bd597f948c6a0c57efcccee317c
 #: ../../foreword.rst:9
 msgid "What does \"micro\" mean?"
-msgstr ""
+msgstr "「micro」の意味するところ"
 
 # b1cb15cd8f474d74a28b60939b26036a
 #: ../../foreword.rst:11
@@ -47,6 +50,16 @@ msgid ""
 "Everything else is up to you, so that Flask can be everything you need "
 "and nothing you don't."
 msgstr ""
+"「micro」は、webアプリケーション全体が単一のPythonファイルに収まることを"
+"必ずしも意味せず（しかしながらそれはある程度可能ですが）、Flaskの機能が"
+"不足していることも意味しません。microframeworkの「micro」は、Flaskが中核"
+"部分をシンプルでありつつ拡張可能なように保つことを目指していることを意味"
+"しています。Flaskは、例えばどのデータベースを使用するかといった、数多くの"
+"決定をあなたのためにしようとはしません。Flaskが決定したそれらの決定事項"
+"は、例えばどのテンプレート・エンジンを使うかといった決定は、容易に変更でき"
+"ます。（Flaskが決定していない）その他のすべてのことはあなた次第であり、"
+"従ってFlaskはあなたが必要とするもののすべてであって、必要としないものが"
+"何もないものになり得ます。"
 
 # 1c0e452d35bf475c8e3dd4a11963b7fe
 #: ../../foreword.rst:19
@@ -60,11 +73,18 @@ msgid ""
 "and more. Flask may be \"micro\", but it's ready for production use on a "
 "variety of needs."
 msgstr ""
+"標準設定では、Flaskはデータベースを抽象化する階層、フォーム検証、または"
+"既に存在する異なるライブラリが処理可能なあらゆるものを含んでいません。"
+"代わりに、あたかもFlask自身にそのような機能性が実装されているかのように"
+"自分のアプリケーションへ追加する拡張性を、Flaskは提供します。数多くの"
+"Flask拡張がデータベース統合、フォーム検証、アップロード処理、多様な"
+"オープンの認証技術、その他を提供します。Flaskは「micro」かもしれませんが、"
+"多様なニーズに対して本番環境で使用する準備ができています。"
 
 # 851fa6177f5b4f2c9170d9f0b5d02a62
 #: ../../foreword.rst:28
 msgid "Configuration and Conventions"
-msgstr ""
+msgstr "設定および規約（Configuration and Conventions）"
 
 # 0dd1aa427acd40bb9766bf6d4fd61f60
 #: ../../foreword.rst:30
@@ -76,11 +96,17 @@ msgid ""
 "While this can be changed, you usually don't have to, especially when "
 "getting started."
 msgstr ""
+"Flaskには、理にかなった規定値を伴った数多くの設定値があり、始めるときの"
+"いくつかの規約（convention）があります。規約によって、テンプレートと静的"
+"ファイルが、それぞれ \:file:`templates`\ と\ :file:`static`\ という名前"
+"で、アプリケーションのPythonソースツリーないのサブディレクトリに格納され"
+"ます。これらの名前は変更できますが、普通はその必要はなく、はじめるときは"
+"特にその必要はありません。"
 
 # cb9504b746ec4652b6683f43ed801253
 #: ../../foreword.rst:38
 msgid "Growing with Flask"
-msgstr ""
+msgstr "Flaskを使った拡大（Growing with Flask）"
 
 # 33e7578da13f493e9b1d2553aa0831ac
 #: ../../foreword.rst:40
@@ -90,6 +116,11 @@ msgid ""
 "Flask core team reviews extensions and ensures approved extensions do not"
 " break with future releases."
 msgstr ""
+"一度Flaskを起動しては知らせたら、コミュニティの中で取得可能であり、本番"
+"環境用に自分のプロジェクトへ統合できる様々なFlask拡張が見つかるでしょう。"
+"FlaskのコアチームはFlask拡張をレビューし、承認されたFlask拡張（approved "
+"extensions）は将来のリリースでも壊れないことを保証します。（訳注: approved "
+"extensionsのリストは、この翻訳の作成時点で保守されなくなっています）"
 
 # c3efb003cbea496c887bcf422c7ea1f8
 #: ../../foreword.rst:45
@@ -102,6 +133,13 @@ msgid ""
 "advantage of framework-agnostic tools built for WSGI, the Python web "
 "interface."
 msgstr ""
+"自分のコードベースが拡大するに応じて、自分のプロジェクトに適した設計上"
+"の決定を自由に下すことができます。FlaskはPythonが差し伸べる必要がある"
+"非常にシンプルな接合階層（glue layer）をできる限り提供し続けます。"
+"SQLAlchemyまたは他のデータベース用ツールで先進的なパターンを実装でき、"
+"リレーショナルでない永続データ（non-relational data persistence）を適宜"
+"導入でき、フレームワークと無関係にPythonのwebインタフェースであるWSGI用"
+"のツールを利用できます。"
 
 # 6a5401944b5047c4ac2a8da740e7b1b9
 #: ../../foreword.rst:52
@@ -112,6 +150,11 @@ msgid ""
 " curious about the Flask design principles, head over to the section "
 "about :ref:`design`."
 msgstr ""
+"Flaskは振る舞いをカスタマイズするための数多くのフックを導入しています。"
+"さらなるカスタマイズが必要な場合は、Flaskクラスはサブクラスを利用しやすい"
+"ように構築されています。もしそのことに関心がある場合は、\ "
+":ref:`becomingbig`\ 章を調べてください。もしFlaskの設計原則に関して気が"
+"ひかれる場合は、\ :ref:`design`\ セクションを見てください。"
 
 # 0719427517eb49f994e9580479fd7de2
 #: ../../foreword.rst:57
@@ -119,4 +162,6 @@ msgid ""
 "Continue to :ref:`installation`, the :ref:`quickstart`, or the "
 ":ref:`advanced_foreword`."
 msgstr ""
+":ref:`installation`\ 、\ :ref:`quickstart`\ 、または\ "
+":ref:`advanced_foreword`\ に続きます。"
 
