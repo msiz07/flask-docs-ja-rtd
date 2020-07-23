@@ -468,6 +468,12 @@ msgid ""
 " extensions maintained and developed today, as they help the Flask "
 "ecosystem remain consistent and compatible."
 msgstr ""
+"Flaskには以前approved extensionsという概念がありました。これらはサポート"
+"と互換性についてのいくつかの調査が伴っていました。approved extensionsの"
+"リストは時間とともに保守があまりにも難しくなっていきましたが、Flaskの"
+"エコシステムの一貫性と互換性を残す手助けになるため、approved extensions"
+"のガイドラインは今日でも保守および開発されているすべてのFlask拡張に今でも"
+"関係があります。"
 
 #: ../../flask/docs/extensiondev.rst:299
 msgid ""
@@ -477,6 +483,11 @@ msgid ""
 "documentation, PyPI, and any other services. If no maintainer is "
 "available, give access to the Pallets core team."
 msgstr ""
+"approved extensionにはメンテナーが必要です。Flask拡張の作者がプロジェクト"
+"の外へ移動するような出来事が起きたときは、プロジェクトは新しいメンテナー"
+"を見つけ、リポジトリ、ドキュメント、PyPI、その他のサービスへのアクセスを"
+"移管しなければなりません。もしメンテナーがいない場合は、Palletsのコア"
+"チームにアクセスを与えてください。"
 
 # 5d6a7813ec5247fd88197eabac557aa2
 #: ../../flask/docs/extensiondev.rst:304
@@ -485,15 +496,18 @@ msgid ""
 "must provide exactly one package or module named "
 "``flask_extension_name``."
 msgstr ""
-"名前の構成は\ *Flask-ExtensionName*\ または\ *ExtensionName-Flask*\ です。"
-"Flask拡張は\\ ``flask_extensionname``\\ "
-"という名前の、正確に１つのパッケージもしくはモジュールを提供する必要があります。"
+"名前の枠組み（naming scheme）は\ *Flask-ExtensionName*\ または\ "
+"*ExtensionName-Flask*\ です。Flask拡張は\\ ``flask_extensionname``\\ と"
+"いう名前の、正確に１つのパッケージもしくはモジュールを提供する必要があり"
+"ます。"
 
 #: ../../flask/docs/extensiondev.rst:307
 msgid ""
 "The extension must be BSD or MIT licensed. It must be open source and "
 "publicly available."
 msgstr ""
+"Flask拡張のライセンスはBSD/MIT/WTFPLである必要があります。それはオープン"
+"ソースであり、公開されている必要があります。"
 
 # 6dd6c3156ecb43a4ab79d55b6f06b0df
 #: ../../flask/docs/extensiondev.rst:309
@@ -506,6 +520,9 @@ msgid ""
 " Use ``current_app`` instead of ``self.app``, store configuration and "
 "state per application instance."
 msgstr ""
+"同じPythonプロセスの中で走っている複数のアプリケーションに対応している"
+"必要があります。\ ``self.app``\ の代わりに\ ``current_app``\ を使用し、"
+"アプリケーションのインスタンス毎に設定および状態を格納します。"
 
 # 51ca334b44014763b5a7c19738db27d1
 #: ../../flask/docs/extensiondev.rst:314
@@ -514,14 +531,15 @@ msgid ""
 " Use the ``ext.init_app()`` pattern."
 msgstr ""
 "アプリケーションを作成するためのfactoryパターンが使用可能である必要があり"
-"ます。"
-"\ ``ext.init_app()``\ パターンを使用してください。"
+"ます。\ ``ext.init_app()``\ パターンを使用してください。"
 
 #: ../../flask/docs/extensiondev.rst:317
 msgid ""
 "From a clone of the repository, an extension with its dependencies must "
 "be installable with ``pip install -e .``."
 msgstr ""
+"リポジトリのクローンから、Flask拡張はその依存対象も一緒に\ ``pip install "
+"-e .``\ でインストールできる必要があります。"
 
 #: ../../flask/docs/extensiondev.rst:319
 msgid ""
@@ -530,6 +548,11 @@ msgid ""
 "specified in a ``requirements.txt`` file. The tests must be part of the "
 "sdist distribution."
 msgstr ""
+"``tox -e py``\ または\ ``pytest``\ を使って起動できるテスト一式（testing "
+"suite）をリリース（ship）する必要があります。もし\ ``tox``\ を使わない"
+"場合、テストの依存対象は\ ``requirements.txt``\ ファイルの中で指定する"
+"べきです。テストはソース配布物（sdist distribution）の一部である必要が"
+"あります。"
 
 # aabcb7954a1b40689d66bb1c9033d34d
 #: ../../flask/docs/extensiondev.rst:323
@@ -549,6 +572,10 @@ msgid ""
 "``python_requires=\">= 3.6\"`` in ``setup.py`` to indicate supported "
 "versions."
 msgstr ""
+"互換性を最大化するために、Flask拡張はFlaskがサポートするものと同じ"
+"バージョンのPythonをサポートする必要があります。2020年時点では3.6以上が"
+"推奨されます。サポートされるバージョンを指示するために、\ ``setup.py``\ "
+"の中で\ ``python_requires=\">=3.6\"``\ を使用します。"
 
 # 8f78234d41494d478ae59a803030ea19
 #~ msgid ""
