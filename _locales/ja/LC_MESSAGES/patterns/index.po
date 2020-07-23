@@ -31,6 +31,11 @@ msgid ""
 "the logged in user. At the end of the request, the database connection is"
 " closed."
 msgstr ""
+"ある種の目玉機能およびやり取りは、ほとんどのwebアプリケーションで見つ"
+"けられるほど十分に一般的です。例えば、多くのアプリケーションではリレー"
+"ショナルデータベースとユーザー認証を使用します。それらはリクエストの"
+"最初にデータベース接続を開き、ログインされたユーザーの情報を取得しま"
+"す。リクエストの最後には、データベース接続が閉じられます。"
 
 #: ../../flask/docs/patterns/index.rst:13
 msgid ""
@@ -38,6 +43,9 @@ msgid ""
 "but Flask makes it easy to implement them. Some common patterns are "
 "collected in the following pages."
 msgstr ""
+"このような種類のパターンは多少Flask自身のスコープからは外側かもしれま"
+"せんが、Flaskでは容易にそれらを実装できます。共通パターンのいくらかは、"
+"以下のページに集められています。"
 
 # 066c255c84ff4d2ea0ea8ef82050074e
 #~ msgid ""
