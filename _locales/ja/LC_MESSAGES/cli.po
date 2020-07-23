@@ -675,7 +675,7 @@ msgstr "``flask``\\ コマンドは、あなたのコードとは分かれてい
 # 8059d94d0fbc4fe880b8b0b88ab81369
 #: ../../flask/docs/cli.rst:492
 msgid "PyCharm Integration"
-msgstr ""
+msgstr "PyCharmとの統合"
 
 #: ../../flask/docs/cli.rst:494
 msgid ""
@@ -684,6 +684,10 @@ msgid ""
 "command with the correct environment variables. These instructions should"
 " be similar for any other IDE you might want to use."
 msgstr ""
+"PyCharm Professional\ は特殊なFlask実行設定を提供します。"
+"Community Editionでは、適切な環境変数を使って\ ``flask run`` CLIコマンド"
+"を呼び出すための設定をする必要があります。これらの指定内容は、あなたが使"
+"いたい他のどんなIDEでも似たようなものでしょう。"
 
 # dcd520989c20434da7d0c0056fdb115e
 #: ../../flask/docs/cli.rst:499
@@ -692,6 +696,8 @@ msgid ""
 "go to *Edit Configurations*. You'll be greeted by a screen similar to "
 "this:"
 msgstr ""
+"PyCharmで、プロジェクトを開いて、メニューバーから\ *Run*\ をクリックして\ "
+"*Edit Configurations*\ へ移動します。以下のような画面に迎えられるでしょう:"
 
 # 26aa926f8c2d4ab5bb7e915bab4c6de6
 #: ../../flask/docs/cli.rst:508
@@ -701,6 +707,9 @@ msgid ""
 "tweak to give us access to other commands, including any custom ones you "
 "may implement yourself."
 msgstr ""
+"変更できる多くのオプションがありますが、１つのコマンドで設定を済ませば"
+"簡単に、設定全体をコピーして、他のコマンドへ、自分で実装したカスタム"
+"コマンドも含めて、アクセスするように別々の微調整ができます。"
 
 #: ../../flask/docs/cli.rst:513
 msgid ""
@@ -709,11 +718,17 @@ msgid ""
 "command, check \"Single instance only\" since you can't run the server "
 "more than once at the same time."
 msgstr ""
+"「+ (*Add New Configuration*)」ボタンをクリックし、\ *Python*\ "
+"を選択します。「flask run」のような名前を設定に与えます。\ ``flask "
+"run``\ コマンドに用に、同時に2つ以上はサーバーを実行できないため、"
+"「Single instance only」をチェックします。"
 
 # ed0704bbb414408b9a0f8b198c8a22da
 #: ../../flask/docs/cli.rst:518
 msgid "Select *Module name* from the dropdown (**A**) then input ``flask``."
 msgstr ""
+"*Module name*\ をドロップダウン（\ **A**\ ）から選択し、\ ``flask``\ "
+"と入力します。"
 
 # cce44b761aeb43568f5a2b1ff9225ade
 #: ../../flask/docs/cli.rst:520
@@ -722,6 +737,9 @@ msgid ""
 " any arguments). In this example we use ``run``, which will run the "
 "development server."
 msgstr ""
+"*Parameters*\ フィールド（\ **B**\ ）を（引数と一緒に）実行するCLIコマンド"
+"に設定します。以下の例では、開発用サーバーを実行する\ ``run``\ コマンドを"
+"使っています。"
 
 #: ../../flask/docs/cli.rst:524
 msgid ""
@@ -731,6 +749,13 @@ msgid ""
 " Python import or file on the right (``hello`` for example). Add an entry"
 " with ``FLASK_ENV`` and set it to ``development``."
 msgstr ""
+":ref:`dotenv`\ を使っている場合は、次のステップはスキップできます。（そう"
+"でない場合には）自分のアプリケーションを特定するために、環境変数（\ **C**"
+"\ ）を追加する必要があります。ブラウズボタン（訳注: 上の画像の「…」のよ"
+"うなボタン）をクリックし、左側は\ ``FLASK_APP``\ で右側はPythonのimport"
+"またはファイル（この例では\ ``hello``\ ）を使ったエントリーを追加します。"
+"\ ``FLASK_ENV``\ を使ってエントリーを追加し、それを\ ``development``\ に"
+"設定します。"
 
 # c181875cc0e14b91a143f6c26cb46e5b
 #: ../../flask/docs/cli.rst:530
@@ -738,6 +763,8 @@ msgid ""
 "Next we need to set the working directory (**D**) to be the folder where "
 "our application resides."
 msgstr ""
+"次に作業ディレクトリ（\ **D**\ ）を、アプリケーションがあるフォルダに設定"
+"する必要があります。"
 
 # f3ea66cc77c448a4b58e7aa954ef02f5
 #: ../../flask/docs/cli.rst:533
@@ -746,6 +773,9 @@ msgid ""
 "may untick the *PYTHONPATH* options (**E**). This will more accurately "
 "match how you deploy the app later."
 msgstr ""
+"もし自分のプロジェクトをパッケージとしてvirtualenvの中にインストールして"
+"いた場合、\ *PYTHONPATH*\ オプション（\ **E**\ ）のチェックを外します。"
+"後でアプリをデプロイするやり方に、これはより正確に合います。"
 
 # e0b66422d91141debf417cc2a6b9146e
 #: ../../flask/docs/cli.rst:537
@@ -754,6 +784,9 @@ msgid ""
 "window. Select the configuration in the main PyCharm window and click the"
 " play button next to it to run the server."
 msgstr ""
+"設定を保存するために\ *Apply*\ を、または保存してからウインドウを閉じる"
+"ために\ *OK*\ をクリックします。メインのPyCharmウインドウで設定を選択して"
+"から隣のplayボタンをクリックしてサーバーを実行します。"
 
 # aff7443523e840e08adb69478bdd7fda
 #: ../../flask/docs/cli.rst:541
@@ -762,6 +795,9 @@ msgid ""
 "PyCharm, we can copy that configuration and alter the *Script* argument "
 "to run a different CLI command, e.g. ``flask shell``."
 msgstr ""
+"この時点でPyCharmの中から\ ``flask run``\ を実行する設定を持っており、"
+"その設定をコピーしてから、例えば\ ``flask shell``\ のように異なるCLI"
+"コマンドを実行するために\ *Script*\ 引数を変更できます。"
 
 # 3043beb9953944a6ae4b9d11fc5e21a3
 #~ msgid ""
