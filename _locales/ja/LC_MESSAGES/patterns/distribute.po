@@ -20,7 +20,7 @@ msgstr ""
 # 1a85f8b3992d4bb4859c30b4d3d53de4
 #: ../../patterns/distribute.rst:4
 msgid "Deploying with Setuptools"
-msgstr ""
+msgstr "Setuptoolsを使った展開（Deploying with Setuptools）"
 
 # ab1a4e57b65b430099a756856ab979b7
 #: ../../patterns/distribute.rst:6
@@ -31,6 +31,11 @@ msgid ""
 "more complex constructs that make larger applications easier to "
 "distribute:"
 msgstr ""
+"`Setuptools`_\ は、Pythonのライブラリや拡張を配布するとき一般的に使わ"
+"れる拡張ライブラリです。Setuptoolsは、Pythonと一緒に出荷（ship）されて"
+"いてモジュールのインストールする仕組みの基本であるdistutilsを、大規模な"
+"アプリケーションをより容易に配布できるように、様々なより複雑な構成要素"
+"もサポートするよう拡張しています:"
 
 # 39da8ef53cd841fb814d47f716dd9cd4
 #: ../../patterns/distribute.rst:11
@@ -39,6 +44,8 @@ msgid ""
 " of other libraries it depends on which will be installed automatically "
 "for you."
 msgstr ""
+"**依存対象のサポート**: ライブラリまたはアプリケーションは、それが依存"
+"する他のライブラリを、自動的にインストールされるように宣言できます。"
 
 # 427afe2923534ce080feeec8073fa75b
 #: ../../patterns/distribute.rst:14
@@ -49,6 +56,11 @@ msgid ""
 "is the entry point support which allows one package to declare an \"entry"
 " point\" that another package can hook into to extend the other package."
 msgstr ""
+"**パッケージの登録**: setuptoolsはパッケージをインストールされたPythonに"
+"登録します。これはあるパッケージから提供される情報を他のパッケージから"
+"問い合わせることを可能にします。最もよく知られているこの仕組みの目玉機能"
+"は、あるパッケージが「entry point」を宣言し、他のパッケージが別のパッケージ"
+"を拡張するためにフックできるようにする仕組みのサポートです。"
 
 # 01aa3151de994ea9b452cda1ee312e2f
 #: ../../patterns/distribute.rst:20
@@ -56,6 +68,8 @@ msgid ""
 "**installation manager**: :command:`pip` can install other libraries for "
 "you."
 msgstr ""
+"**インストール管理ツール**: :command:`pip`\ で他のライブラリをインストール"
+"できます。"
 
 # e69008cd501a429dae033e3798faecd9
 #: ../../patterns/distribute.rst:22
@@ -64,6 +78,10 @@ msgid ""
 "python.org, you will already have pip and setuptools on your system.  "
 "Otherwise, you will need to install them yourself."
 msgstr ""
+"もしPython 2（>=2.7.9）またはPython 3（>=3.4）をpython.orgからインス"
+"トールしている場合、システムにはpipとsetuptoolsが既にインストールされて"
+"いるでしょう。そうでない場合、それらを自分でインストールする必要があり"
+"ます。"
 
 # 71d61870b878458bb1a8ecc384f68066
 #: ../../patterns/distribute.rst:26
@@ -71,6 +89,8 @@ msgid ""
 "Flask itself, and all the libraries you can find on PyPI are distributed "
 "with either setuptools or distutils."
 msgstr ""
+"Flask自身、そしてPyPIで見つけることができるすべてのライブラリはsetuptools"
+"またはdistutilsを使って配布されています。"
 
 # c6102d2a9c194372b0dd11069bc3fa0a
 #: ../../patterns/distribute.rst:29
@@ -81,6 +101,11 @@ msgid ""
 "application into a package, head over to the :ref:`larger-applications` "
 "pattern to see how this can be done."
 msgstr ""
+"この章の例では、自分のアプリケーションを\ :file:`yourapplication.py`\ と"
+"呼び、モジュールではなく\ :ref:`package <larger-applications>`\ を使って"
+"いると仮定します。もし自分のアプリケーションをパッケージへまだ変換して"
+"いない場合は、そのようにすればできるか見るために\ "
+":ref:`larger-applications`\ パターンを調べてください。"
 
 # d9f0880955694365afe0d2105df52e54
 #: ../../patterns/distribute.rst:35
@@ -89,11 +114,14 @@ msgid ""
 "and more automated deployment scenarios.  If you want to fully automate "
 "the process, also read the :ref:`fabric-deployment` chapter."
 msgstr ""
+"setuptoolsを使ったデプロイ作業は、より複雑でより自動化されたデプロイの"
+"シナリオへの最初のステップです。もしプロセスをすべて自動化したい場合、\ "
+":ref:`fabric-deployment`\ 章も読んでください。"
 
 # 0f9c4d1548a8471ba0fefd045b2e2447
 #: ../../patterns/distribute.rst:40
 msgid "Basic Setup Script"
-msgstr ""
+msgstr "基本になるSetupスクリプト"
 
 # e970cae3131646efa988c353d74a2026
 #: ../../patterns/distribute.rst:42
@@ -101,6 +129,8 @@ msgid ""
 "Because you have Flask installed, you have setuptools available on your "
 "system. Flask already depends upon setuptools."
 msgstr ""
+"Flaskを既にインストールしているので、setuptoolsはシステム上で利用可能"
+"です。Flaskがすでにsetuptoolsに依存しています。"
 
 # 7da2339735884fecaa3e86a7e64d48af
 #: ../../patterns/distribute.rst:45
@@ -108,6 +138,8 @@ msgid ""
 "Standard disclaimer applies: :ref:`you better use a virtualenv "
 "<virtualenv>`."
 msgstr ""
+"標準的な免責事項が適用されます: :ref:`virtualenvを使うべきです "
+"<virtualenv>`\ 。"
 
 # 58a1c13e239e42bc8baeaa5c03def949
 #: ../../patterns/distribute.rst:48
@@ -116,11 +148,16 @@ msgid ""
 "your application.  The name of the file is only convention, but because "
 "everybody will look for a file with that name, you better not change it."
 msgstr ""
+"setupのコードは常に自分のアプリケーションの側にある\ :file:`setup.py`\ と"
+"いう名前のファイルの中で進めます。ファイル名が唯一の規約ですが、誰もがその"
+"名前のファイルを探そうとするので、（場所などを）変更すべきではありません。"
 
 # 36475d42edeb48108cbf870e89d9b86e
 #: ../../patterns/distribute.rst:52
 msgid "A basic :file:`setup.py` file for a Flask application looks like this::"
 msgstr ""
+"Flaskアプリケーションの基本となる\ :file:`setup.py`\ ファイルは以下のよう"
+"になります::"
 
 # f851926f71d1449d9b36fda516fbdc5d
 #: ../../patterns/distribute.rst:66
@@ -129,6 +166,9 @@ msgid ""
 " want setuptools to lookup the packages for you automatically, you can "
 "use the ``find_packages`` function::"
 msgstr ""
+"サブパッケージを明示的にリストにする必要があることを覚えておいてください。"
+"もしsetuptoolsが自動的にパッケージを探し出すようにしたい場合、\ "
+"``find_packages``\ 関数を使用できます::"
 
 # 4eb6af965df24a1dafebb9afa389a1e5
 #: ../../patterns/distribute.rst:77
@@ -144,11 +184,22 @@ msgid ""
 " installed as zip files because some tools do not support them and they "
 "make debugging a lot harder."
 msgstr ""
+"``setup``\ 関数へのほとんどのパラメータは自己説明的なはずですが、\ "
+"``include_package_data``\ と\ ``zip_safe``\ はそうではない（何を意図する"
+"ものかわかりづらい）かもしれません。\ ``include_package_data``\ は、\ "
+":file:`MANIFEST.in`\ ファイルを探して、一致する全てエントリーをパッケージ"
+"のデータとしてインストールするよう、setuptoolsに伝えます。これは、"
+"Pythonモジュールと一緒に静的ファイルとテンプレートを配布するために使用"
+"します（\ :ref:`distributing-resources`\ を見てください）。\ ``zip_safe``\ "
+"フラグは、zipアーカイブの作成を強要もしくは回避するために使用できます。"
+"概して、zipファイルとしてインストールされるパッケージは、ツールの中には"
+"サポートしないものがあり、デバッグが大幅に難しくなるため、おそらく"
+"パッケージをzipファイルとしてインストールしたくはないでしょう。"
 
 # 0a83a2c853e24f47a5b7b86ec3088006
 #: ../../patterns/distribute.rst:89
 msgid "Tagging Builds"
-msgstr ""
+msgstr "ビルドのタグ付け"
 
 # 0042b17a7e5644078515a1168a491682
 #: ../../patterns/distribute.rst:91
@@ -156,6 +207,8 @@ msgid ""
 "It is useful to distinguish between release and development builds. Add a"
 " :file:`setup.cfg` file to configure these options. ::"
 msgstr ""
+"リリースと開発でビルドを区別すると便利です。それらのオプションを設定する"
+"ために、\ :file:`setup.cfg`\ ファイルを追加します。::"
 
 # e6ea70ee241a426b813adeb8ba7706e2
 #: ../../patterns/distribute.rst:101
@@ -166,11 +219,16 @@ msgid ""
 "sdist`` will create a release package with only the version: "
 "``flaskr-1.0.tar.gz``."
 msgstr ""
+"``python setup.py sdist``\ を実行すると「.dev」にそのときの日付を追加した"
+"タグを使って開発パッケージを作成します: "
+"``flaskr-.1.0.dev20160314.tar.gz``\ 。\ ``python setup.py release sdist``\ "
+"を実行するとバージョンだけを使ってリリースパッケージを作成します: "
+"``flaskr-1.0.tar.gz``\ 。"
 
 # 79538fd0fc1b485fb03331a5db6bd632
 #: ../../patterns/distribute.rst:110
 msgid "Distributing Resources"
-msgstr ""
+msgstr "リソースの配布"
 
 # 43950d17e01a4467b576bc5e3834d6fa
 #: ../../patterns/distribute.rst:112
@@ -182,6 +240,14 @@ msgid ""
 "file next to your :file:`setup.py` file.  This file lists all the files "
 "that should be added to your tarball::"
 msgstr ""
+"もしちょうど作成したパッケージをインストールしようとする場合、\ "
+":file:`static`\ や\ :file:`templates`\ のようなフォルダはインストールされ"
+"ないことに気づくでしょう。その理由は、setuptoolsはどのファイルを加えれば"
+"よいか知らないためです。このときするべきことは、\ :file:`MANIFEST.in`\ "
+"ファイルを\ :file:`setup.py`\ ファイルの側に作成することです。MANIFEST.in"
+"ファイルはあなたのtarball（訳注: 配布用のファイル一式をまとめたアーカイブ"
+"ファイル、よく使われるファイル形式の一つにtar形式があるため、tarballと"
+"呼ばれることがある）に加えるべきすべてのファイルをリストします::"
 
 # 1218a21494c740fe95f0c153a2f3855c
 #: ../../patterns/distribute.rst:122
@@ -190,11 +256,14 @@ msgid ""
 "file, they won't be installed for you unless you set the "
 "`include_package_data` parameter of the ``setup`` function to ``True``!"
 msgstr ""
+":file:`MANIFEST.in`\ ファイルにそれらを入れたとしても、\ ``setup``\ 関数"
+"の\ `include_package_data`\ パラメータを\ ``True``\ に設定しない限りは"
+"インストールされないことを忘れないでください。"
 
 # 384fb58a8483482d841294c3bf88800f
 #: ../../patterns/distribute.rst:128
 msgid "Declaring Dependencies"
-msgstr ""
+msgstr "依存対象の宣言"
 
 # 423ee4a1bd0149bf80d9ee6251e1f26e
 #: ../../patterns/distribute.rst:130
@@ -205,6 +274,10 @@ msgid ""
 " recent version, but you can also provide minimum and maximum version "
 "requirements.  Here some examples::"
 msgstr ""
+"依存対象は\ ``install_requires``\ パラメータの中でリストとして宣言され"
+"ます。リスト内の各項目は、インストール時にPyPIから引き出されるはずの"
+"パッケージの名前です。標準設定では常に最新バージョンを使用しますが、最小"
+"及び最大バージョンの要件を提供することもできます。以下はいくつかの例です::"
 
 # cae9e03eef844c86b671da8efd5e0e48
 #: ../../patterns/distribute.rst:142
@@ -215,6 +288,11 @@ msgid ""
 "Just do it as if there was a PyPI entry and provide a list of alternative"
 " locations where setuptools should look for tarballs::"
 msgstr ""
+"先に言及したように、依存対象はPyPIから引き出されます。もし誰とも共有したく"
+"ない内部用パッケージであるためにPyPIでは見つからず見つかるようにするつもり"
+"もないパッケージに依存させたい場合はどうするのでしょうか。あたかもPyPI"
+"エントリーがあるようにして、setuptoolsがtarballsを探すべき代わりの場所の"
+"リストを提供します::"
 
 # 41130a695586439884acd5b3fa5e2f02
 #: ../../patterns/distribute.rst:150
@@ -224,11 +302,15 @@ msgid ""
 "how setuptools will find the files.  If you have an internal company "
 "server that contains the packages, provide the URL to that server."
 msgstr ""
+"そのページはディレクトリ内のファイルのリストであり、setuptoolsが検索する"
+"ためのファイル名と同じような、適切なファイル名を使った実際のtarballsを"
+"ページ中のリンクが指すように、確実にしてください。もしパッケージを含んだ"
+"社内サーバを持っている場合、そのサーバのURLを提供します。"
 
 # cd936ae165fb4d03b849d0164aa42b41
 #: ../../patterns/distribute.rst:157
 msgid "Installing / Developing"
-msgstr ""
+msgstr "インストール／開発"
 
 # d527f3a822d24a41902a0d787d4d9413
 #: ../../patterns/distribute.rst:159
@@ -238,6 +320,11 @@ msgid ""
 "your application into the virtualenv's site-packages folder and also "
 "download and install all dependencies::"
 msgstr ""
+"自分のアプリケーションを（理想的にはvirtualenvの中へ）インストールする"
+"には、ただ\ :file:`setup.py`\ スクリプトを\ ``install``\ パラメータを"
+"使って実行します。そのコマンドはアプリケーションをvirtualenvのsite-packages"
+"フォルダ内へインストールし、すべての依存対象のダウンロードとインストールも"
+"行います::"
 
 # a7f82e4d8f164a2987c38f51de50af1e
 #: ../../patterns/distribute.rst:166
@@ -245,6 +332,8 @@ msgid ""
 "If you are developing on the package and also want the requirements to be"
 " installed, you can use the ``develop`` command instead::"
 msgstr ""
+"もしパッケージを開発していて要求されるものもインストールしたいときは、"
+"代わりに\ ``develop``\ コマンドを使用できます::"
 
 # 65685b1ffd924336a6fd8dcadc89c547
 #: ../../patterns/distribute.rst:171
@@ -253,4 +342,7 @@ msgid ""
 "folder instead of copying the data over.  You can then continue to work "
 "on the code without having to run ``install`` again after each change."
 msgstr ""
+"developコマンドはデータをコピーする代わりに、単にリンクをsite-packagesへ"
+"インストールするという利点があります。その後は、変更の後で\ ``install``\ "
+"を再び実行する必要なくコード上で作業を続けられます。"
 
