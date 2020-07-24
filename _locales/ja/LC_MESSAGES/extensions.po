@@ -47,9 +47,8 @@ msgid ""
 "can search PyPI for packages tagged with `Framework :: Flask <pypi_>`_."
 msgstr ""
 "Flask拡張は普通「Flask-Foo」または「Foo-Flask」と名付けられています。"
-"多くのFlask拡張は、開発者によって更新可能な \`Extension Registry`_\ で"
-"リスト化されています。PyPIで\ `Framework :: Flask <pypi_>`_\ とタグ付け"
-"されているパッケージを探すこともできます。"
+"PyPIで\ `Framework :: Flask <pypi_>`_\ とタグ付けされているパッケージを探す"
+"ことができます。"
 
 # 2070656598124bceb1474c8f1c31df0f
 #: ../../flask/docs/extensions.rst:20
@@ -83,9 +82,9 @@ msgid ""
 "create your own. Read :doc:`/extensiondev` to develop your own Flask "
 "extension."
 msgstr ""
-"`Extension Registry`_\ は多くのFlask拡張を含んでいますが、自分のニーズに"
+"`PyPI <pypi_>`_\ は多くのFlask拡張を含んでいますが、自分のニーズに"
 "合ったものが見つからないかもしれません。そのような場合には、自分独自のもの"
-"を作成できます。自分独自のFlask拡張を開発するには\ :ref:`extension-dev`\ "
+"を作成できます。自分独自のFlask拡張を開発するには\ :doc:`/extensiondev`\ "
 "を読んでください。"
 
 # c8aac38331fe4ab687912957b0fd2130
