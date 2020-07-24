@@ -20,7 +20,7 @@ msgstr ""
 # 8ed8e2a11759468e8512d6c5088f24a5
 #: ../../patterns/sqlite3.rst:4
 msgid "Using SQLite 3 with Flask"
-msgstr ""
+msgstr "FlaskでのSQLite 3の使用"
 
 # ee2fcd75c1034093a51432621639fd15
 #: ../../patterns/sqlite3.rst:6
@@ -29,11 +29,13 @@ msgid ""
 "demand and closing them when the context dies (usually at the end of the "
 "request)."
 msgstr ""
+"Flaskでは、必要に応じてデータベース接続を開き、コンテキストが無効になった"
+"とき（普通はリクエストの最後）閉じるように、容易に実装できます。"
 
 # 36428cfecfdf49068f06a1eb97e32a08
 #: ../../patterns/sqlite3.rst:10
 msgid "Here is a simple example of how you can use SQLite 3 with Flask::"
-msgstr ""
+msgstr "以下はFlaskでSQLite 3をどのように使用可能であるかのシンプルな例です::"
 
 # c62e3fc004914784a1647d1c60892def
 #: ../../patterns/sqlite3.rst:29
@@ -45,6 +47,12 @@ msgid ""
 "Whenever the context is destroyed the database connection will be "
 "terminated."
 msgstr ""
+"このとき、データベースを使うために、アプリケーションは有効なアプリケー"
+"ションのコンテキストを持つ（処理中のリクエストがある場合はこれは常にtrue"
+"です）か、アプリケーションのコンテキスト自信を作成する必要があります。"
+"この時点で\ ``get_db``\ 関数はその時のデータベース接続を取得するために"
+"使用できます。コンテキストが破壊されるときは常に、データベース接続は終了"
+"されます。"
 
 # 5becd3b168524f448faffe52684b6776
 #: ../../patterns/sqlite3.rst:35
@@ -53,11 +61,15 @@ msgid ""
 "``flask._app_ctx_stack.top`` instead of ``g`` as the :data:`flask.g` "
 "object was bound to the request and not application context."
 msgstr ""
+"もしFlask 0.9またはより古いものを使用している場合、\ :data:`flask.g`\ "
+"オブジェクトはアプリケーションのコンテキストではなくリクエストに結び"
+"ついていた（was bound to）ため、\ ``g``\ の代わりに\ "
+"``flask._app_ctx_stack.top``\ を使用する必要があります。"
 
 # 40a476d5afaf4353b4dbefd9604dd1c3
 #: ../../patterns/sqlite3.rst:39
 msgid "Example::"
-msgstr ""
+msgstr "例"
 
 # 1c552926be284c44a4a0db86a205ef50
 #: ../../patterns/sqlite3.rst:49
@@ -67,11 +79,15 @@ msgid ""
 " executed.  Because of this we have to make sure here that the database "
 "is there before we close it."
 msgstr ""
+"リクエスト前の処理器（handler）が失敗もしくは実行されない場合でさえも、"
+"リクエストおよびアプリケーションのコンテキストを取り壊す（teardown）関数"
+"は常に実行されます。このために、データベース（接続）を閉じる前に、データ"
+"ベース（接続）があるかを確認する必要があります。"
 
 # b6933ecb7a1b406981a7f3ae9776f70e
 #: ../../patterns/sqlite3.rst:55
 msgid "Connect on Demand"
-msgstr ""
+msgstr "必要に応じた接続（Connect on Demand）"
 
 # 2ccffe80d8954bacba20b7e3e35cbb53
 #: ../../patterns/sqlite3.rst:57
@@ -81,11 +97,15 @@ msgid ""
 "code outside a request context you can use it in a Python shell by "
 "opening the application context by hand::"
 msgstr ""
+"このアプローチの利点（初めて使用するときに接続）は、本当に必要な場合だけ"
+"接続を開くことです。以下のコードをリクエストのコンテキストの外側で使用"
+"したい場合、手動でアプリケーションのコンテキストを開くことで、Pythonシェル"
+"の中で使用できます。"
 
 # b3e2edffeb664bc0a8a7fdf9839073e3
 #: ../../patterns/sqlite3.rst:68
 msgid "Easy Querying"
-msgstr ""
+msgstr "簡易問合せ（Easy Querying）"
 
 # 607070d8884248e6a5c29fbd7dd77735
 #: ../../patterns/sqlite3.rst:70
@@ -97,6 +117,13 @@ msgid ""
 " to get dictionaries instead of tuples, this could be inserted into the "
 "``get_db`` function we created above::"
 msgstr ""
+"この時点で各リクエスト処理関数の中で、そのときの開かれたデータベース接続"
+"を取得するために\ `get_db()`\ にアクセスできます。SQLiteを使った作業を"
+"シンプルにするために、rowファクトリー関数が便利です。それはデータベース"
+"から返されるすべての結果に対して、それを変換する実行されます。例えば、"
+"tupleの代わりにdictionaryを取得するために（訳注: tupleもdictionaryも"
+"Pythonの組み込み型）、以下を先に作成した\ ``get_db``\ 関数に挿入すること"
+"ができます::"
 
 # 8a105841d73a48af8a7c597aad480f45
 #: ../../patterns/sqlite3.rst:83
@@ -105,6 +132,9 @@ msgid ""
 "connection, which are much nicer to deal with. Even more simply, we could"
 " place this in ``get_db`` instead::"
 msgstr ""
+"これは、より処理しやすいように、sqlite3モジュールがこのデータベース接続"
+"に対してはdictを返すようにします。より単純に、代わりに以下を\ ``get_db``\ "
+"の中に置けます::"
 
 # f77afd1be17b471eb5478ace1ba3ce64
 #: ../../patterns/sqlite3.rst:87
@@ -115,6 +145,11 @@ msgid ""
 "``r`` for the rows ``id``, ``FirstName``, ``LastName``, and "
 "``MiddleInitial``::"
 msgstr ""
+"これは問合せ（query）の結果としてdictよりもRowオブジェクトを使用します。"
+"これらは\ ``namedtuple``\ であるため、インデックスまたはキーのどちらでも"
+"アクセスできます。例えば、\ ``id``\ 、\ ``FirstName``\ 、\ ``LastName``\ 、"
+"\ ``MiddleInitial``\ がある行に対する、\ ``r``\ と呼ばれる\ "
+"``sqlite3.Row``\ （オブジェクト）があると仮定します::"
 
 # 067fd1f78a94430ca8fac72009e4960e
 #: ../../patterns/sqlite3.rst:103
@@ -122,6 +157,8 @@ msgid ""
 "Additionally, it is a good idea to provide a query function that combines"
 " getting the cursor, executing and fetching the results::"
 msgstr ""
+"さらに、カーソルの取得、（問合せを）実行、結果の取得をまとめた問合せ関数"
+"を提供するのはよい考えです::"
 
 # d31290b12ca34e66b9121f9e5fd88b2e
 #: ../../patterns/sqlite3.rst:112
@@ -130,16 +167,19 @@ msgid ""
 "working with the database much more pleasant than it is by just using the"
 " raw cursor and connection objects."
 msgstr ""
+"この便利な小さい関数は、rowファクトリーと合わせて、データベースを使った"
+"作業を、直接カーソルおよび接続オブジェクトを使うときと比べてさらにより"
+"楽しいものにします。"
 
 # e3c30141b2b14ddaad21797f3c3a8bf5
 #: ../../patterns/sqlite3.rst:116
 msgid "Here is how you can use it::"
-msgstr ""
+msgstr "どのように使用できるかは、以下のとおりです::"
 
 # 9bc93873a60741dba30fe2a1611923d5
 #: ../../patterns/sqlite3.rst:121
 msgid "Or if you just want a single result::"
-msgstr ""
+msgstr "もしくは、もし単一の結果が欲しい場合は::"
 
 # 6af71946bfe743e3b50fcf10fae6f958
 #: ../../patterns/sqlite3.rst:130
@@ -150,11 +190,16 @@ msgid ""
 "possible to attack the application using `SQL Injections "
 "<https://en.wikipedia.org/wiki/SQL_injection>`_."
 msgstr ""
+"変数部分をSQL文へ渡すために、クエスチョンマークを文中に使用し、引数を"
+"listとして渡します。文字列のformat機能では\ `SQLインジェクション "
+"<https://en.wikipedia.org/wiki/SQL_injection>`_\ を使ったアプリケーション"
+"への攻撃が可能になるため、決して文字列のformat機能で変数部分をSQL文に直接"
+"加えないでください。"
 
 # 91e9d8f7d2bf4362ba4a123825e4dce8
 #: ../../patterns/sqlite3.rst:137
 msgid "Initial Schemas"
-msgstr ""
+msgstr "初期スキーマ（Initial Schemas）"
 
 # b7d3e13b7fd54bd89a62fca28bc4b578
 #: ../../patterns/sqlite3.rst:139
@@ -164,9 +209,13 @@ msgid ""
 " a function that creates the database based on that schema.  This "
 "function can do that for you::"
 msgstr ""
+"リレーショナルデータベースはスキーマを必要とするため、アプリケーションは"
+"しばしばデータベースを作成する\ `schema.sql`\ ファイルを出荷します。"
+"そのスキーマに基づいてデータベースを作成する関数を提供するのは良い考え"
+"です。それは以下の関数で実行できます::"
 
 # fd64183ed2e847f3b2d9f178ee0c8557
 #: ../../patterns/sqlite3.rst:151
 msgid "You can then create such a database from the Python shell:"
-msgstr ""
+msgstr "それから、そのようなデータベースをPythonシェルから作成できます::"
 

@@ -20,7 +20,7 @@ msgstr ""
 # d796a9bec86e4224a3d9b8262481923d
 #: ../../patterns/sqlalchemy.rst:4
 msgid "SQLAlchemy in Flask"
-msgstr ""
+msgstr "Flask内でのSQLAlchemy（SQLAlchemy in Flask）"
 
 # 942e9cfd18d4474a98da4a9f4c98d884
 #: ../../patterns/sqlalchemy.rst:6
@@ -30,6 +30,11 @@ msgid ""
 "application and drop the models into a separate module (:ref:`larger-"
 "applications`). While that is not necessary, it makes a lot of sense."
 msgstr ""
+"多くの人がデータベースへのアクセスに\ `SQLAlchemy`_\ を好みます。"
+"以下の例ではflaskアプリケーションでモジュールの代わりにパッケージを使用"
+"し、（データベースの）モデルを別のモジュールに落とし込む（\ "
+":ref:`larger-applications`\ ）ことを推奨しています。それは必須ではありま"
+"せんが、とても理にかなっています。"
 
 # dc0d11386ecb437cac6b4e988b1e4463
 #: ../../patterns/sqlalchemy.rst:11
@@ -37,11 +42,13 @@ msgid ""
 "There are four very common ways to use SQLAlchemy.  I will outline each "
 "of them here:"
 msgstr ""
+"SQLAlchemyの使い方には4つのよくあるやり方があります。それぞれの概要を以下"
+"に示します:"
 
 # a079a7bdf33d493fa6dfcad97a49a3f6
 #: ../../patterns/sqlalchemy.rst:15
 msgid "Flask-SQLAlchemy Extension"
-msgstr ""
+msgstr "Flask-SQLAlchemy拡張"
 
 # 310f44dea6b142e9ad118d7fddbd599e
 #: ../../patterns/sqlalchemy.rst:17
@@ -51,6 +58,9 @@ msgid ""
 "there is a Flask extension that handles that for you.  This is "
 "recommended if you want to get started quickly."
 msgstr ""
+"SQLAlchemyは一般的なデータベース抽象化階層で要する手間が少しの設定の"
+"オブジェクト・リレーショナル・マッパーであるため、SQLAlchemyを扱うFlask"
+"拡張が存在します。手っ取り早く始めたいときはお勧めです。"
 
 # 8b73eb197ea242aeb9d901f35edf80ae
 #: ../../patterns/sqlalchemy.rst:22
@@ -58,11 +68,13 @@ msgid ""
 "You can download `Flask-SQLAlchemy`_ from `PyPI <https://pypi.org/project"
 "/Flask-SQLAlchemy/>`_."
 msgstr ""
+"`Flask-SQLAlchemy`_\ は\ `PyPI "
+"<https://pypi.org/project/Flask-SQLAlchemy/>`_\ からダウンロードできます。"
 
 # 2336f6a432634432a049138fe260e1b4
 #: ../../patterns/sqlalchemy.rst:29
 msgid "Declarative"
-msgstr ""
+msgstr "宣言的（Declarative）"
 
 # 4f4158e8663b446da567238fe216bc19
 #: ../../patterns/sqlalchemy.rst:31
@@ -72,11 +84,16 @@ msgid ""
 "similar to how Django works.  In addition to the following text I "
 "recommend the official documentation on the `declarative`_ extension."
 msgstr ""
+"SQLAlchemyの宣言的（な使用方法）の拡張はSQLAlchemyを使用するもっとも"
+"新しい手法です。それはDjangoのやり方と似たように、一緒にテーブルとモデル"
+"を定義できます。以下の文に加えて、\ `declarative`_\ 拡張についての公式の"
+"ドキュメントをお勧めします。"
 
 # fed1b2e3984d469683e4b8dc9261ad20
 #: ../../patterns/sqlalchemy.rst:36
 msgid "Here's the example :file:`database.py` module for your application::"
 msgstr ""
+"以下はアプリケーション用の\ :file:`database.py`\ モジュールの例です::"
 
 # 01d7963c70584936b520f2fe5bdd194a
 #: ../../patterns/sqlalchemy.rst:56
@@ -87,6 +104,11 @@ msgid ""
 ":data:`~flask.g` object): that's because SQLAlchemy does that for us "
 "already with the :class:`~sqlalchemy.orm.scoped_session`."
 msgstr ""
+"自分のモデルを定義するには、先のコードで作成された\ `Base`\ クラスをただ"
+"サブクラス化します。ここで（\ :data:`~flask.g`\ オブジェクトを使ったSQLite3"
+"の先の例ではしたような）スレッドへの注意を払わないことを不思議に思う場合: "
+"それはSQLAlchemyが\ :class:`~SQLAlchemy.orm.scoped_session`\ を使って既に"
+"対応してくれているためです。"
 
 # d44438c17690469ab11fda68f18ae7eb
 #: ../../patterns/sqlalchemy.rst:62
@@ -96,31 +118,36 @@ msgid ""
 "automatically remove database sessions at the end of the request or when "
 "the application shuts down::"
 msgstr ""
+"アプリケーションでSQLAlchemyを宣言的なやり方で使うには、以下のコードを自分"
+"のアプリケーションのモジュールに置く必要があるだけです。Flaskは、リクエスト"
+"の最後またはアプリケーションの終了時に、自動的にデータベースのセッションを"
+"取り除きます::"
 
 # d5f56d5d61c5429a82dd990dbcd1e7db
 #: ../../patterns/sqlalchemy.rst:73
 msgid "Here is an example model (put this into :file:`models.py`, e.g.)::"
 msgstr ""
+"以下はモデルの例です（例えばこれを\ :file:`models.py`\ 内に置きます）::"
 
 # 5cc42e46c36345d5ae8a3daa53b4b728
 #: ../../patterns/sqlalchemy.rst:91
 msgid "To create the database you can use the `init_db` function:"
-msgstr ""
+msgstr "データベースを作成するには\ `init_db`\ 関数を使用できます:"
 
 # d12c213dcef349cd9453bf7791c085ec
 #: ../../patterns/sqlalchemy.rst:96
 msgid "You can insert entries into the database like this:"
-msgstr ""
+msgstr "以下のようにしてデータベースへエントリーを挿入できます:"
 
 # 8161e586c0cf47ac9088a4ab5eb82157
 #: ../../patterns/sqlalchemy.rst:104
 msgid "Querying is simple as well:"
-msgstr ""
+msgstr "問合せ（query）も同様にシンプルです:"
 
 # 46b7855959594da99603e27c8a60f923
 #: ../../patterns/sqlalchemy.rst:116
 msgid "Manual Object Relational Mapping"
-msgstr ""
+msgstr "手作業でのオブジェクト・リレーショナル・マッピング"
 
 # e33baa3a77e149a19725d7abb54d8b0a
 #: ../../patterns/sqlalchemy.rst:118
@@ -132,11 +159,18 @@ msgid ""
 "declarative approach, so make sure to also split up your application into"
 " multiple modules in a package."
 msgstr ""
+"手作業でのオブジェクト・リレーショナル・マッピングは、上述の宣言的"
+"アプローチに対していくつかの利点と欠点があります。主な違いは、テーブルと"
+"クラスを分けて定義しそれらを対応付けることです。それはより柔軟ですが、少し"
+"タイプ量が多くなります。概して、宣言的アプローチと同じように働くため、"
+"アプリケーションをパッケージの中で複数のモジュールに分割することを確実に"
+"行ってください。"
 
 # db913028f15f4a5ba45a6d9c254c60e3
 #: ../../patterns/sqlalchemy.rst:125
 msgid "Here is an example :file:`database.py` module for your application::"
 msgstr ""
+"以下はアプリケーション用の\ :file:`database.py`\ モジュールの例です::"
 
 # 425b3e0211394d01b76b0f9313d1b755
 #: ../../patterns/sqlalchemy.rst:138
@@ -145,21 +179,26 @@ msgid ""
 "request or application context shutdown.  Put this into your application "
 "module::"
 msgstr ""
+"宣言的アプローチの中と同様、各リクエストまたはアプリケーションのコンテキスト"
+"の終了後はセッションを閉じる必要があります。以下を自分のアプリケーションの"
+"モジュールに置いてください::"
 
 # 8fd46facaca7422dba0ffeb8031f2cc5
 #: ../../patterns/sqlalchemy.rst:148
 msgid "Here is an example table and model (put this into :file:`models.py`)::"
 msgstr ""
+"以下はテーブルとモデルの例です（これを\ :file:`models.py`\ に置きます）::"
 
 # a5883cf89a1341a6b5edee64926e2d1a
 #: ../../patterns/sqlalchemy.rst:171
 msgid "Querying and inserting works exactly the same as in the example above."
 msgstr ""
+"問合せ（query）と挿入は先の例とまったく同様に働きます。"
 
 # 7c8f597d4d31466eb48ffcf398dfe802
 #: ../../patterns/sqlalchemy.rst:175
 msgid "SQL Abstraction Layer"
-msgstr ""
+msgstr "SQL抽象化階層"
 
 # d2114cc8a2464a67bf290541f7bb6fb7
 #: ../../patterns/sqlalchemy.rst:177
@@ -167,6 +206,8 @@ msgid ""
 "If you just want to use the database system (and SQL) abstraction layer "
 "you basically only need the engine::"
 msgstr ""
+"もしデータベースシステム（とSQL）の抽象化階層を使いたいだけの場合、必要な"
+"ものは基本的にエンジンだけです::"
 
 # e110224030ae4ab0b8ce34e1649033c3
 #: ../../patterns/sqlalchemy.rst:185
@@ -174,6 +215,8 @@ msgid ""
 "Then you can either declare the tables in your code like in the examples "
 "above, or automatically load them::"
 msgstr ""
+"それから先の例のように自分のコードの中でテーブルを宣言するか、または"
+"テーブルを自動的にロードできます::"
 
 # 556c92432fa94b599dabdf7573785d20
 #: ../../patterns/sqlalchemy.rst:192
@@ -181,21 +224,25 @@ msgid ""
 "To insert data you can use the `insert` method.  We have to get a "
 "connection first so that we can use a transaction:"
 msgstr ""
+"データを挿入するには\ `insert`\ メソッドを使用できます。トランザクション"
+"を使用できるようにするため、最初に接続（connection）を取得します:"
 
 # 563db03a7efa4e7e8936fad6faca0d4b
 #: ../../patterns/sqlalchemy.rst:198
 msgid "SQLAlchemy will automatically commit for us."
-msgstr ""
+msgstr "SQLAlchemyは自動的にコミットします。"
 
 # f014e2703b2b44db8ef14203550eb4b2
 #: ../../patterns/sqlalchemy.rst:200
 msgid "To query your database, you use the engine directly or use a connection:"
 msgstr ""
+"データベースに問合せ（query）するには、直接エンジンを使うかconnectionを"
+"使います:"
 
 # 712316fbfa78492988fa35c58959e3cf
 #: ../../patterns/sqlalchemy.rst:205
 msgid "These results are also dict-like tuples:"
-msgstr ""
+msgstr "これらの結果もdictのようなtupleになります:"
 
 # 9a804723e4074d5cb367af1bd996dbad
 #: ../../patterns/sqlalchemy.rst:211
@@ -203,6 +250,8 @@ msgid ""
 "You can also pass strings of SQL statements to the "
 ":meth:`~sqlalchemy.engine.base.Connection.execute` method:"
 msgstr ""
+":meth:`~sqlalchemy.engine.base.Connection.execute`\ メソッドへSQL文の"
+"文字列を渡すこともできます:"
 
 # 26f896153391468e810067116f622552
 #: ../../patterns/sqlalchemy.rst:217
@@ -210,4 +259,6 @@ msgid ""
 "For more information about SQLAlchemy, head over to the `website "
 "<https://www.sqlalchemy.org/>`_."
 msgstr ""
+"SQLAlchemyに関するさらなる情報は、\ `webサイト "
+"<https://www.sqlalchemy.org/>`_\ を調べてください。"
 

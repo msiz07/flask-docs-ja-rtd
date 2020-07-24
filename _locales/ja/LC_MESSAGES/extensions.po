@@ -20,7 +20,7 @@ msgstr ""
 # 5f8f7c3411a6459d842cd45e511cdfc7
 #: ../../flask/docs/extensions.rst:4
 msgid "Extensions"
-msgstr ""
+msgstr "Flask拡張（Extensions）"
 
 # 308d0bd9271843efa8112dba4fab1cbf
 #: ../../flask/docs/extensions.rst:6
@@ -30,22 +30,31 @@ msgid ""
 "email or connecting to a database. Some extensions add entire new "
 "frameworks to help build certain types of applications, like a REST API."
 msgstr ""
+"Flask拡張はFlaskアプリケーションに機能性を追加する追加パッケージです。"
+"例えば、Flask拡張は電子メールの送信やデータベースへの接続のサポートを"
+"追加するかもしれません。Flask拡張のなかには、REST APIのような、ある種の"
+"アプリケーションの構築を手助けする新しいフレームワーク全体を追加するもの"
+"があります。"
 
 # 9af0eb3ae1d04b9ca8641d5497efec2c
 #: ../../flask/docs/extensions.rst:13
 msgid "Finding Extensions"
-msgstr ""
+msgstr "Flask拡張の探し出し"
 
 #: ../../flask/docs/extensions.rst:15
 msgid ""
 "Flask extensions are usually named \"Flask-Foo\" or \"Foo-Flask\". You "
 "can search PyPI for packages tagged with `Framework :: Flask <pypi_>`_."
 msgstr ""
+"Flask拡張は普通「Flask-Foo」または「Foo-Flask」と名付けられています。"
+"多くのFlask拡張は、開発者によって更新可能な \`Extension Registry`_\ で"
+"リスト化されています。PyPIで\ `Framework :: Flask <pypi_>`_\ とタグ付け"
+"されているパッケージを探すこともできます。"
 
 # 2070656598124bceb1474c8f1c31df0f
 #: ../../flask/docs/extensions.rst:20
 msgid "Using Extensions"
-msgstr ""
+msgstr "Flask拡張の使用方法"
 
 # 02a6f89c545c42128a78b18aa0e9980e
 #: ../../flask/docs/extensions.rst:22
@@ -56,11 +65,16 @@ msgid ""
 " an application instance during initialization. For example, an extension"
 " called \"Flask-Foo\" might be used like this::"
 msgstr ""
+"インストール、設定、使用手順については各Flask拡張のドキュメントを調査して"
+"ください。概して、Flask拡張は自分の設定を\ :attr:`app.config "
+"<flask.Flask.config>`\ から引き出し、アプリケーションのインスタンスを初期化"
+"中に渡されます。例えば、「Flask-Foo」というFlask拡張は以下のようなものかも"
+"しれません::"
 
 # cf5d607e97da48c99b3c2f4193f268d7
 #: ../../flask/docs/extensions.rst:42
 msgid "Building Extensions"
-msgstr ""
+msgstr "Flask拡張の構築"
 
 #: ../../flask/docs/extensions.rst:44
 msgid ""
@@ -69,6 +83,10 @@ msgid ""
 "create your own. Read :doc:`/extensiondev` to develop your own Flask "
 "extension."
 msgstr ""
+"`Extension Registry`_\ は多くのFlask拡張を含んでいますが、自分のニーズに"
+"合ったものが見つからないかもしれません。そのような場合には、自分独自のもの"
+"を作成できます。自分独自のFlask拡張を開発するには\ :ref:`extension-dev`\ "
+"を読んでください。"
 
 # c8aac38331fe4ab687912957b0fd2130
 #~ msgid ""
