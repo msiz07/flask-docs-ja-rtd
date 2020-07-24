@@ -352,9 +352,8 @@ msgid ""
 "Use the :meth:`~Flask.test_client` as a ``with`` block to preserve the "
 "contexts until the ``with`` block exits."
 msgstr ""
-"テストの間は、テスト用の関数の中でcontextのデータにアクセス可能にするために、リクエストが終わった後でのcontextのpopを遅らせると便利な場合があります。\\"
-" :meth:`~Flask.test_client`\\ を\\ ``with``\\ "
-"ブロックとして使用すると、withブロックから抜けるまでの間はcontextを保持します。"
+"テストの間は、テスト用の関数の中でcontextのデータにアクセス可能にするために、リクエストが終わった後でのcontextのpopを遅らせると便利な場合があります。"
+"withブロックから抜けるまでの間はcontextを保持するには、\\ :meth:`~Flask.test_client`\\ を\\ ``with``\\ ブロックとして使用してください。"
 
 # c739acfe5d394792ae09520800fece81
 #: ../../flask/docs/reqcontext.rst:205

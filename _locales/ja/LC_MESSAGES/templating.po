@@ -29,7 +29,7 @@ msgid ""
 " use a different template engine, but you still have to install Jinja2 to"
 " run Flask itself.  This requirement is necessary to enable rich "
 "extensions. An extension can depend on Jinja2 being present."
-msgstr "Flaskはテンプレート・エンジンとしてJinja2を活用します。違うテンプレート・エンジンを使うことも当然自由ですが、それでもFlask自体を実行するためにJinja2をインストールする必要があります。この要件は、豊富なFlask拡張を有効にするために必要になります。Flask拡張は用意されているJinja2へ依存したものにできます。"
+msgstr "Flaskは自身のテンプレート・エンジンとしてJinja2を活用します。違うテンプレート・エンジンを使うことも当然自由ですが、それでもFlask自体を実行するためにJinja2をインストールする必要があります。この要件は、豊富なFlask拡張を有効にするために必要になります。Flask拡張は用意されているJinja2へ依存したものにできます。"
 
 # f284113dbca34ca0a054d94ed42c5386
 #: ../../flask/docs/templating.rst:11
