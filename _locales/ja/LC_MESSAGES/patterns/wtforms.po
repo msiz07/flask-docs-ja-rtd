@@ -64,7 +64,7 @@ msgid ""
 msgstr ""
 "`Flask-WTF`_\ 拡張はこのパターンを拡張して、フォームとFlaskを使った作業を"
 "もっと楽しくするヘルパーをいくつか追加します。Flask-WTFは\ "
-"`PyPI <https://pypi.org/project/Flask-WTF/>`\ から取得できます。"
+"`PyPI <https://pypi.org/project/Flask-WTF/>`_\ から取得できます。"
 
 # 84288bf7a2c24f99809baeed1f11bf6e
 #: ../../patterns/wtforms.rst:25
