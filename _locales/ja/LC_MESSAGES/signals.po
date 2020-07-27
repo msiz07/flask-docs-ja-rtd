@@ -20,7 +20,7 @@ msgstr ""
 # 60392632ba5441e387b600794855cd62
 #: ../../signals.rst:4
 msgid "Signals"
-msgstr ""
+msgstr "合図（Signals）"
 
 # 03f2f2ac0a3647e3a24471e07c242263
 #: ../../signals.rst:8
@@ -29,6 +29,9 @@ msgid ""
 "Flask.  This support is provided by the excellent `blinker`_ library and "
 "will gracefully fall back if it is not available."
 msgstr ""
+"Flask 0.6以降、Flask内にsignal処理のサポートが統合されました。"
+"このサポートは素晴らしい\ `blinker`_\ ライブラリによって提供され、もし"
+"blinkerが利用できないときは極端に悪化しないようにフォールバックします。"
 
 # 8764bb4b996b4d50b64016c9f3784917
 #: ../../signals.rst:12
@@ -38,6 +41,10 @@ msgid ""
 "another Flask extensions.  In short, signals allow certain senders to "
 "notify subscribers that something happened."
 msgstr ""
+"signalとは何でしょうか？signalは基本フレームワーク（core framework）や別の"
+"Flask拡張の中のどこかで処理が起きたとき通知を送ることで、アプリケーション"
+"間の癒着を弱める手助けをします。手短に言えば、signalは何か起きたときに、"
+"ある送信者が登録者へ通知を送れるようにします。"
 
 # dc2f2ab5fd624d5fbb8864260d0c9061
 #: ../../signals.rst:17
@@ -53,6 +60,18 @@ msgid ""
 "request early by returning a response.  In contrast all signal handlers "
 "are executed in undefined order and do not modify any data."
 msgstr ""
+"Flaskにはいくつかのsignalが付いてきており、さらに他のFlask拡張がもっと"
+"signalを提供するかもしれません。signalは登録者へ通知することが意図されて"
+"おり、登録者がデータに手を加えることは推奨されていないことも覚えておいて"
+"ください。signalには、組み込みのdecoratorのいくつかが行うことと同じことを"
+"しているようなものがあることに気づくでしょう（例: "
+":data:`~flask.request_started`\ は\ :meth:`~flask.Flask.before_request`\ "
+"ととても良く似ています）。しかしながら、どのように働くかについては（signal"
+"とdecoratorの間には）違いがあります。例えば、基本（core）decoratorのひとつ\ "
+":meth:`~flask.Flask.before_request`\ の処理器（handler）は、特定の順序で"
+"実施され、レスポンスを返すことでリクエストを早く中止させることができます。"
+"対照的にすべてのsignalの処理器（handler）は実施順序が定義されず、データの"
+"変更はしません。"
 
 # c4923c65e6fe43af8b5de8743a04149c
 #: ../../signals.rst:28
@@ -63,11 +82,15 @@ msgid ""
 "templates were rendered as part of a request: signals allow you to do "
 "exactly that."
 msgstr ""
+"handlerに対するsignalの大きな利点は、ほんの一瞬だけ安全にsignalへ登録"
+"できることです。それらの一時的な登録は、例えばユニットテストに役立ちます。"
+"リクエストの一部としてどのテンプレートが表示されたか知りたいとしましょう: "
+"signalはまさにそれをできるようにします。"
 
 # f3c68c3f3b924fec9bbeb6bda5edcb33
 #: ../../signals.rst:35
 msgid "Subscribing to Signals"
-msgstr ""
+msgstr "signalへの登録（Subscribing to Signals）"
 
 # eee8eeab109b445cb10519141a5c3cb0
 #: ../../signals.rst:37
@@ -79,6 +102,11 @@ msgid ""
 " from a signal, you can use the :meth:`~blinker.base.Signal.disconnect` "
 "method."
 msgstr ""
+"signalへ登録するには、signalの\ :meth:`~blinker.base.Signal.connect`\ "
+"メソッドが使えます。最初の引数は、signalが発行されたときに呼び出される"
+"関数であり、必須ではない2番目の引数は送信者を指定します。signalへの登録を"
+"中止するには、\ :meth:`~blinker.base.Signal.disconnect`\ メソッドを使用"
+"できます。"
 
 # 512efa0032874d479aefd90ba41c4f48
 #: ../../signals.rst:43
@@ -89,6 +117,11 @@ msgid ""
 "applications.  This is especially true if you are developing an "
 "extension."
 msgstr ""
+"Flaskの基本signal（core Flask signals）のすべてで、送信者はsignalを発行する"
+"アプリケーションになります。signalへ登録するときは、本当にすべてのアプリ"
+"ケーションからのsignalを待ち受けたい場合を除いて、確実に送信者も（signal"
+"登録時の引数で）提供するようにしてください。これは、Flask拡張を開発している"
+"場合は特に当てはまります。"
 
 # a3901dacf2e648079008e3aa02d2994d
 #: ../../signals.rst:48
@@ -97,11 +130,15 @@ msgid ""
 "test to determine which templates were rendered and what variables were "
 "passed to the template::"
 msgstr ""
+"例えば、ユニットテストの中で、どのテンプレートが表示されどの変数がテンプ"
+"レートに渡されたかを決定するために使用できるcontext manager（訳注: この"
+"contextはFlaskのrequest contextやapplication contextではなく、with文で使"
+"えるPythonの機能）のヘルパーは以下のようになります::"
 
 # fe5987b795f1462b8a49c52bd50c4a04
 #: ../../signals.rst:66
 msgid "This can now easily be paired with a test client::"
-msgstr ""
+msgstr "するとこれは容易にtest clientと組み合わせることができます::"
 
 # 7cbd0f5127cd4de5bba018a0203ff849
 #: ../../signals.rst:76
@@ -109,6 +146,9 @@ msgid ""
 "Make sure to subscribe with an extra ``**extra`` argument so that your "
 "calls don't fail if Flask introduces new arguments to the signals."
 msgstr ""
+"もしFlaskが新しい引数をsignalへ導入した場合にも（signal発行時に行われる）"
+"呼び出しが失敗しないよう、追加の\ ``**extra``\ 引数を伴って登録するように"
+"確実にしてください。"
 
 # 038406268f7a45408ea9bc0fcb830f25
 #: ../../signals.rst:79
@@ -118,6 +158,10 @@ msgid ""
 "variable.  Whenever a template is rendered, the template object as well "
 "as context are appended to it."
 msgstr ""
+"コードの中で表示用に変換され、\ ``with``\ ブロック本体中のアプリケーション"
+"\ `app`\ によって発行されるすべてのテンプレートは、こうすると\ `templates`\ "
+"変数の中に記録されるようになります。テンプレートが表示されるときはいつでも、"
+"contextと同様にテンプレートオブジェクトは（templates変数に）追加されます。"
 
 # a7276710634149228c24933c01f20fe5
 #: ../../signals.rst:84
@@ -128,16 +172,21 @@ msgid ""
 "its own.  Because the return value of the context manager cannot be "
 "specified that way, you have to pass the list in as an argument::"
 msgstr ""
+"さらに自分でcontext managerを使って関数をsignalへ一時的に登録できるように"
+"する便利な支援メソッド（\ :meth:`~blinker.base.Signal.connected_to`\ ）が"
+"あります。そのやり方ではcontext managerの戻り値は指定できない（訳注: with"
+"文のasで変数を指定できないことをいっていると思います）ため、引数として"
+"リスト（訳注: 以下の例の「recorded」引数）を渡す必要があります::"
 
 # 53e202c019374b3e8efbee90da4e6569
 #: ../../signals.rst:97
 msgid "The example above would then look like this::"
-msgstr ""
+msgstr "すると、先の例は以下のようになります::"
 
 # 1d85e94dbdcb42a7b1c8b3ca481e787a
 #: ../../signals.rst:104
 msgid "Blinker API Changes"
-msgstr ""
+msgstr "BlinkerのAPIの変化"
 
 # 4e708cd208b943f2a3607a869f0b807f
 #: ../../signals.rst:106
@@ -145,11 +194,13 @@ msgid ""
 "The :meth:`~blinker.base.Signal.connected_to` method arrived in Blinker "
 "with version 1.1."
 msgstr ""
+":meth:`~Blinker.ase.Signal.connected_to`\ メソッドは、バージョン1.1から"
+"Blinkerにやってきました。"
 
 # f2a8bff04c9b4e60a66cba8cc40be75f
 #: ../../signals.rst:110
 msgid "Creating Signals"
-msgstr ""
+msgstr "signalの作成"
 
 # bab6d6aec5d04fe294261c822c3888c0
 #: ../../signals.rst:112
@@ -159,11 +210,15 @@ msgid ""
 "a custom :class:`~blinker.base.Namespace`..  This is what is recommended "
 "most of the time::"
 msgstr ""
+"もし自分独自のアプリケーションでsignalを使いたい場合は、blinkerライブラリを"
+"直接使用できます。最もありがちな使用状況（use case）は、独自の\ "
+":class:`~blinker.base.Namespace`\ 中の名前付きsignalです。これはほとのどの"
+"ときに推奨されるものです::"
 
 # c74d14c54cd141c383538258097c18d7
 #: ../../signals.rst:120
 msgid "Now you can create new signals like this::"
-msgstr ""
+msgstr "すると、以下のように新しいsignalを作成できます::"
 
 # acc371a588f4413f8f9a826aa7deebba
 #: ../../signals.rst:124
@@ -172,11 +227,14 @@ msgid ""
 "debugging.  You can access the name of the signal with the "
 ":attr:`~blinker.base.NamedSignal.name` attribute."
 msgstr ""
+"ここでのsignalへの名前は、signalを一意なものにし、デバッグをシンプルにも"
+"します。\ :attr:`~blinker.base.NamedSignal.name`\ 属性を使ってsignal名に"
+"アクセスできます。"
 
 # 3b649f2d7cbe415b99aac9ed00dc2018
 #: ../../signals.rst:128
 msgid "For Extension Developers"
-msgstr ""
+msgstr "Flask拡張開発者向け情報（For Extension Developers）"
 
 # e8a36181f3874e5eaaaac34c0201ae49
 #: ../../signals.rst:130
@@ -185,11 +243,14 @@ msgid ""
 "for missing blinker installations, you can do so by using the "
 ":class:`flask.signals.Namespace` class."
 msgstr ""
+"もしFlask拡張を書いていてblinkerがインストールされていないときに機能低下"
+"（degrade）を小さくしたいときは、\ :class:`flask.signals.Namespace`\ クラス"
+"を使うことで可能です。"
 
 # 26743ec97b564e5d9dfb9ace224beb3c
 #: ../../signals.rst:137
 msgid "Sending Signals"
-msgstr ""
+msgstr "signalの送信"
 
 # d366b58d4af4417694ea7b06fad9ffab
 #: ../../signals.rst:139
@@ -199,6 +260,9 @@ msgid ""
 "argument and optionally some keyword arguments that are forwarded to the "
 "signal subscribers::"
 msgstr ""
+"もしsignalを発行したい場合、\ :meth:`~blinker.base.Signal.send`\ メソッドを"
+"呼び出すことで可能です。それは最初の引数として送信者を受け付け、オプション"
+"でsignal登録者へ転送されるいくらかのキーワード引数を受け付けます::"
 
 # 64aea941f23a43f6b64f8305924fc6e4
 #: ../../signals.rst:150
@@ -208,11 +272,15 @@ msgid ""
 "random function, you can pass ``current_app._get_current_object()`` as "
 "sender."
 msgstr ""
+"適切な送信者を常に取り上げるようにしてください。もしsignalを発行するクラス"
+"がある場合は、送信者として\ ``self``\ を渡してください。もし無規則に関数"
+"からsignalを発行している場合は、\ ``current_app._get_current_object()``\ "
+"を送信者として渡せます。"
 
 # 77fb3794131e40a48159b34098100637
 #: ../../signals.rst:154
 msgid "Passing Proxies as Senders"
-msgstr ""
+msgstr "送信者としてのproxyの引き渡し（Passing Proxies as Senders）"
 
 # 8bb69257bc204f988f7e3680fdc242f6
 #: ../../signals.rst:156
@@ -222,11 +290,15 @@ msgid ""
 "that :data:`~flask.current_app` is a proxy and not the real application "
 "object."
 msgstr ""
+"signaleへ送信者として\ :data:`~flask.current_app`\ は決して渡さないでくだ"
+"さい。\ ``current_app._get_current_object()``\ を代わりに使用してください。"
+"その理由は、\ :data:`~flask.current_app`\ はproxyであって本物のapplication"
+"オブジェクトではないためです。"
 
 # 6c3dec1f7a2c401d832180fd86a362c4
 #: ../../signals.rst:163
 msgid "Signals and Flask's Request Context"
-msgstr ""
+msgstr "signalとFlaskのrequest context"
 
 # 14d74a27364947ef9e60180f9e3a35b9
 #: ../../signals.rst:165
@@ -238,11 +310,17 @@ msgid ""
 "limitations described in :ref:`signals-sending` and the "
 ":data:`~flask.request_tearing_down` signal."
 msgstr ""
+"signalは\ :ref:`request-context`\ を、signalを受信するとき完全にサポート"
+"します。context-local変数は\ :data:`~flask.request_started`\ と\ "
+":data:`~flask.request_finished`\ の間は一貫して利用可能であるため、必要に"
+"応じて\ :class:`flask.g`\ などに頼ることができます。"
+"\ :ref:`signals-sending`\ の中の説明や\ :data:`~flask.request_tearing_down` "
+"のsignalの制限に注意してください。"
 
 # f2a13d71616f4e1da28af6fa574cbef3
 #: ../../signals.rst:173
 msgid "Decorator Based Signal Subscriptions"
-msgstr ""
+msgstr "decoratorに基づくsignal登録"
 
 # 20133439dc1c422388de47403884f22b
 #: ../../signals.rst:175
@@ -250,14 +328,18 @@ msgid ""
 "With Blinker 1.1 you can also easily subscribe to signals by using the "
 "new :meth:`~blinker.base.NamedSignal.connect_via` decorator::"
 msgstr ""
+"Blinker 1.1では新しい\ :meth:`~blinker.base.NamedSignal.connect_via` "
+"decoratorを使ってsignalへ容易に登録することもできます::"
 
 # b9adde4709304851a11719f8b1081a6f
 #: ../../signals.rst:185
 msgid "Core Signals"
-msgstr ""
+msgstr "基本signal（Core Signals）"
 
 # 8155eb933042407a8b81a50494874003
 #: ../../signals.rst:187
 msgid "Take a look at :ref:`core-signals-list` for a list of all builtin signals."
 msgstr ""
+"すべての組み込みsignalのリストについては、\ :ref:`core-signals-list`\ を"
+"見てください。"
 
