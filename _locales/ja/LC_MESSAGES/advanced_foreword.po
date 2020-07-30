@@ -20,12 +20,12 @@ msgstr ""
 # 186266dcf0364586a80a3c91a7f6cb3e
 #: ../../advanced_foreword.rst:4
 msgid "Foreword for Experienced Programmers"
-msgstr ""
+msgstr "経験のあるプログラマー向けの序文"
 
 # 812af8e81d3d450ba50b0ecb476f63c6
 #: ../../advanced_foreword.rst:7
 msgid "Thread-Locals in Flask"
-msgstr ""
+msgstr "Flaskでのスレッド局所的領域（Thread-Locals）"
 
 # 312d2ba853ba46e3b7b37d1fe33914aa
 #: ../../advanced_foreword.rst:9
@@ -42,16 +42,29 @@ msgid ""
 "does not hide them, and calls out in the code and documentation where "
 "they are used."
 msgstr ""
+"Flaskでの設計上の決定のひとつに、シンプルなタスクはシンプルであるべきだと"
+"いうものがあります; それは大量のコードを使わず、それでもあなたを制限しない"
+"ようにするべきです。この理由によって、ある人たちには驚くべきものまたは不自然"
+"なものだと見出されるかもしれない設計上の決定を、Flaskはいくつかしています。"
+"例えば、スレッドセーフであり続けるためにリクエスト処理中は関数の間でオブジェ"
+"クトをたらい回しにする必要がないよう、Flaskは内部的にスレッド局所領域"
+"（thread-local）オブジェクトを使用します。"
+"このアプローチは便利ですが、依存性注入（dependensy injection）やリクエストに"
+"釘付けされた値を使用するコードの再利用をするときには、適切なrequest contextを"
+"必要とします。Flaskプロジェクトはthread-localについて正直に、それを隠すこと"
+"はせず、それが使用されるところではコードやドキュメントの中で目立つようにして"
+"います。"
 
 # 90cc48292fe64e3994bacf2fa5056740
 #: ../../advanced_foreword.rst:22
 msgid "Develop for the Web with Caution"
-msgstr ""
+msgstr "Web向けの注意深い開発"
 
 # 913b78e988f441eb8351b526136d52dc
 #: ../../advanced_foreword.rst:24
 msgid "Always keep security in mind when building web applications."
 msgstr ""
+"webアプリケーションを構築するときは、常にセキュリティーに注意してください。"
 
 # 266f0aa2cc6a48f7847e0f1a77104491
 #: ../../advanced_foreword.rst:26
@@ -61,6 +74,10 @@ msgid ""
 "you with data. And even if you are the only user that might leave data in"
 " your application, you still want that data to be stored securely."
 msgstr ""
+"もしwebアプリケーションを書いた場合、ユーザーが自分のデータをサーバー上に"
+"登録し残していくことをおそらく許すでしょう。ユーザーはデータについてあなた"
+"を信頼します。もし自分だけがアプリケーションにデータを残す唯一のユーザーで"
+"ある場合でも、それでもそのデータが安全に格納されることを望むでしょう。"
 
 # 8f52c60bb6234b28bb729969a247f667
 #: ../../advanced_foreword.rst:31
@@ -72,6 +89,12 @@ msgid ""
 "underlying Jinja2 template engine have you covered.  But there are many "
 "more ways to cause security problems."
 msgstr ""
+"不幸にも、webアプリケーションの安全性を損なわせる方法が数多く存在します。"
+"Flaskは近年のwebアプリケーションで最もありがちなセキュリティ上の問題の一つ"
+"に対してあなたを守ります: クロスサイトスクリプティング（XSS）に対して。"
+"安全でないHTMを安全であると故意に印付け（mark）しない限り、Flaskとその土台"
+"にあるJinja2テンプレートエンジンがあなたを守ります。しかしながら、セキュリ"
+"ティ上の問題を引き起こすもっと多くの方法が存在します。"
 
 # 3c316d6e00ea4224808d63f35ba66ea8
 #: ../../advanced_foreword.rst:38
@@ -86,6 +109,13 @@ msgid ""
 "probing for ways to fill your database with spam, links to malicious "
 "software, and the like."
 msgstr ""
+"このドキュメントでは、セキュリティーに注意を払う必要のあるweb開発の側面に"
+"関して警告を示すようにしています。これらのセキュリティ上の注意事項は、人が"
+"考えるかもしれないことよりもはるかに複雑であり、私たちは皆ときどき脆弱性が"
+"悪用されるかもしれない可能性について、アプリケーションを悪用する方法を悪賢"
+"い攻撃者が見つけ出すまで、過小評価します。攻撃の種類によっては、データベース"
+"をspam、悪意のあるリンクなどで満たす方法で自動化botが証明する（自動化botに"
+"よって実際に攻撃される）恐れがあります。"
 
 # f792fc0ee68c47bb85026d0734fde6b6
 #: ../../advanced_foreword.rst:47
@@ -94,4 +124,7 @@ msgid ""
 "must build with caution, watching for exploits when building to your "
 "requirements."
 msgstr ""
+"Flaskは、開発者であるあなたが自分のやりたいことに対して構築するとき、得ら"
+"れるものを見守り（watching for exploits）つつ注意深く構築する必要があること"
+"について、ほかのあらゆるフレームワークと異なることはありません。"
 
