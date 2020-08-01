@@ -20,7 +20,7 @@ msgstr ""
 # 673fb7d43f984ee4b415298a0d4bf7e0
 #: ../../views.rst:4
 msgid "Pluggable Views"
-msgstr ""
+msgstr "差し込み可能なview（Pluggable Views）"
 
 # cada520f16ca44d49bde7c265f2c0799
 #: ../../views.rst:8
@@ -30,11 +30,15 @@ msgid ""
 "intention is that you can replace parts of the implementations and this "
 "way have customizable pluggable views."
 msgstr ""
+"Flask 0.7では、Django由来で、関数の代わりにクラスに基づいた汎用的なviewに"
+"発想を得た、差し込み可能なview（pluggable views）を導入しています。その第一"
+"の意図は、実装の一部が置き換え可能であり、その方法（実装の置き換え）で"
+"pluggable viewをカスタマイズできるようにすることです。"
 
 # dc66e643c8554dd0afa319a2e69ec84d
 #: ../../views.rst:14
 msgid "Basic Principle"
-msgstr ""
+msgstr "基本原理（Basic Principle）"
 
 # ca45e65998b24f408a5bcdca0a2d5652
 #: ../../views.rst:16
@@ -42,6 +46,8 @@ msgid ""
 "Consider you have a function that loads a list of objects from the "
 "database and renders into a template::"
 msgstr ""
+"データベースからオブジェクトのリストを読み込み、テンプレート内で表示する"
+"（以下のような）関数があるとします::"
 
 # 0658094f6c7d4cbe961342e83d5b1da3
 #: ../../views.rst:24
@@ -52,6 +58,11 @@ msgid ""
 "views come into place.  As the first step to convert this into a class "
 "based view you would do this::"
 msgstr ""
+"これはシンプルで柔軟性もありますが、もしもこのviewを他のモデルやテンプ"
+"レートへも適応できるような汎用的なやり方で提供したい場合、もっと柔軟性が"
+"欲しくなるかもしれません。これは、クラスに基づいた差し込み可能なview"
+"（pluggable class-based views）が出てくるところです。これをクラスに基づく"
+"viewへと変換する最初の一歩として、以下のようにできるでしょう::"
 
 # 1b8018575efd4e3cba392413af3616d3
 #: ../../views.rst:41
@@ -64,6 +75,13 @@ msgid ""
 "that function is the name of the endpoint that view will then have.  But "
 "this by itself is not helpful, so let's refactor the code a bit::"
 msgstr ""
+"見てわかるように、\ :class:`flask.views.View`\ のサブクラスを作成し、\ "
+":meth:`~flask.view.View.dispatch_request`\ を実装する必要があります。"
+"それから、クラスメソッドの\ :meth:`~flask.views.View.as_view`\ を使って、"
+"そのクラスを実際のview関数へ変換する必要があります。その関数（as_view関数）"
+"へ渡す文字列は、それ以降viewが持つエンドポイントの名前になります。"
+"しかしながら、これ（訳注: 上記のコード例のことだと思います）自体が役立つ"
+"わけではないので、少しコードをリファクタリングしましょう::"
 
 # d49206b229e84761a18a03360ce2f861
 #: ../../views.rst:72
@@ -78,16 +96,25 @@ msgid ""
 ":meth:`~flask.views.View.as_view` function. For instance you can write a "
 "class like this::"
 msgstr ""
+"これ（クラスに基づいたview）は、もちろんこのような小さな例ではそれほど"
+"役立つものではありませんが、基本原理を説明するには十分です。クラスに基づく"
+"viewを持つときは\ ``self``\ が何を指すかという質問が上がってきます。"
+"この（クラスに基づいたviewの）は、リクエストが割り振られると必ずクラスの"
+"新しいインスタンスが作成され、\ :meth:`~flask.views.View.dispatch_request`"
+"\ メソッドがURLルール由来のパラメーターを使って呼ばれるように働きます。"
+"クラス自体は\ :meth:`~flask.views.View.as_view`\ 関数に渡されたパラメーター"
+"を使ってインスタンス化されます。例えば、以下のようにクラスを書くことができ"
+"ます::"
 
 # 2fa2c518bb2e4877a163ca71af6444f6
 #: ../../views.rst:87
 msgid "And then you can register it like this::"
-msgstr ""
+msgstr "それから、以下のようにこのクラスを登録できます::"
 
 # 058097b6724444caaa5a9e517d7dcdc2
 #: ../../views.rst:93
 msgid "Method Hints"
-msgstr ""
+msgstr "メソッドの暗示（Method Hints）"
 
 # 7f2e22921ac1473aa2c06b0200e618c6
 #: ../../views.rst:95
@@ -100,11 +127,17 @@ msgid ""
 " can provide a :attr:`~flask.views.View.methods` attribute that has this "
 "information::"
 msgstr ""
+"pluggable viewは\ :func:`~flask.Flask.route`\ またはより好ましい\ "
+":meth:`flask.Flask.add_url_rule`\ のいずれかを使用して、普通の関数のように"
+"アプリケーションへ取り付けられます。しかしながら、これはviewを取り付ける"
+"ときは、viewがサポートするHTTPメソッド名を提供したくなるであろうことも意味"
+"します。サポートするメソッドの情報をクラスへ移動するためには、その情報を"
+"持った\ :attr:`~flask.views.View.methods`\ 属性を提供できます::"
 
 # cbb39e14d0bc46e8a5617e71d683560d
 #: ../../views.rst:114
 msgid "Method Based Dispatching"
-msgstr ""
+msgstr "メソッドに基づいた割り振り（Method Based Dispatching）"
 
 # a13c21e4d5c243fd815510d03858226c
 #: ../../views.rst:116
@@ -114,6 +147,9 @@ msgid ""
 "easily do that.  Each HTTP method maps to a function with the same name "
 "(just in lowercase)::"
 msgstr ""
+"RESTful APIではHTTPメソッドごとに異なる関数を実行すると特別に役立ちます。"
+"\ :class:`flask.views.MethodView`\ を使ってそれを容易に実行できます。"
+"各HTTPメソッドは同じ名前（小文字のみ）の関数に対応づきます::"
 
 # 95752d1bfeb741068305b23858e65b81
 #: ../../views.rst:135
@@ -122,11 +158,13 @@ msgid ""
 ":attr:`~flask.views.View.methods` attribute.  It's automatically set "
 "based on the methods defined in the class."
 msgstr ""
+"この方法では\ :attr:`~flask.views.View.methods`\ 属性を提供する必要もあり"
+"ません。それはクラス内で定義されたメソッドに基づいて自動的に設定されます。"
 
 # d43ad0ff4b754826aa6aec4ee9e49a60
 #: ../../views.rst:140
 msgid "Decorating Views"
-msgstr ""
+msgstr "viewの修飾（Decorating Views）"
 
 # f81ba77a778f45d39b5f9f5963245647
 #: ../../views.rst:142
@@ -136,6 +174,11 @@ msgid ""
 " Instead you either have to decorate the return value of "
 ":meth:`~flask.views.View.as_view` by hand::"
 msgstr ""
+"viewクラス自身は（Flaskの）ルーティングの仕組み（routing system）に追加"
+"されるview関数ではないため、クラス自体を修飾する（訳注: ここではPythonの"
+"decoratorを適用すること）ことにそれほど意味はありません。代わりに、\ "
+":meth:`~flask.views.View.as_view`\ の戻り値を手作業で修飾する必要があり"
+"ます::"
 
 # f60f61f0884949d78f11f7cb9f1bba40
 #: ../../views.rst:158
@@ -143,6 +186,8 @@ msgid ""
 "Starting with Flask 0.8 there is also an alternative way where you can "
 "specify a list of decorators to apply in the class declaration::"
 msgstr ""
+"Flask 0.8からは、クラス宣言の中で適用するデコレーターのリストを指定できる"
+"代替手段が存在します::"
 
 # 04bc1572d76043f5982468c10af2270c
 #: ../../views.rst:164
@@ -151,11 +196,14 @@ msgid ""
 "regular view decorators on the individual methods of the view however, "
 "keep this in mind."
 msgstr ""
+"しかしながらメソッド呼び出し側の視点からはselfが暗黙的であるため、各viewの"
+"メソッドへ普通のview用デコレーター（訳注: 関数の上に「@～」で適用するやり方"
+"を指していると思います）は使用できないので、忘れないでください。"
 
 # d862ed189425491ebe3a70d8940e2103
 #: ../../views.rst:169
 msgid "Method Views for APIs"
-msgstr ""
+msgstr "API用のメソッドのview"
 
 # 5ac1b1b8a4d948b293b13d6034c7bc25
 #: ../../views.rst:171
@@ -167,6 +215,13 @@ msgid ""
 " of the time.  For instance consider that you are exposing a user object "
 "on the web:"
 msgstr ""
+"Web APIはしばしばHTTPの動詞（訳注: ここでは「GET」「POST」などのメソッド名"
+"のこと）と密接しながら働くため、\ :class:`~flask.views.MethodView`\ に基づ"
+"いてそのようなAPIを実装することはとても理にかなっています。その際、殆どの"
+"ときに、同じメソッドのviewに対して異なるURLルールをAPIが要求する（訳注: "
+"例えば、HTTPのGETメソッド用の同じview関数に対して、異なるURLルールを適用"
+"するようなことをいっています）であろうことに気づくでしょう。例えば（以下の"
+"ように）web上でユーザーオブジェクトを公開することを考えてください:"
 
 # 6b7de1494c33459582731c3819736e65
 #: ../../views.rst:179
@@ -198,7 +253,7 @@ msgstr ""
 # 18c10cbeae4a415babb2828d0df3001d
 #: ../../views.rst:181
 msgid "Gives a list of all users"
-msgstr ""
+msgstr "すべてのユーザーのリストを与えます"
 
 # c3cb7c77e9ac449c9b84861c840efc95
 #: ../../views.rst:182
@@ -208,7 +263,7 @@ msgstr ""
 # 33628c47c6024517ba9a9d27d4957cd9
 #: ../../views.rst:182
 msgid "Creates a new user"
-msgstr ""
+msgstr "新規ユーザーを作成します"
 
 # cd18ec7270e34659b217438aab82fb06
 # 60d15b523ecc4ccfbea517bf5d34f7df
@@ -220,7 +275,7 @@ msgstr ""
 # 80d60beaba674391bd185616f9055c10
 #: ../../views.rst:183
 msgid "Shows a single user"
-msgstr ""
+msgstr "単一ユーザーを表示します"
 
 # 61e146485cdf42fb82d8387046b86f6b
 #: ../../views.rst:184
@@ -230,7 +285,7 @@ msgstr ""
 # 2653de67a74d4f11a5feda2103e6df17
 #: ../../views.rst:184
 msgid "Updates a single user"
-msgstr ""
+msgstr "単一ユーザーを更新します"
 
 # b02ff4ae79d04681bfd50ac54095a391
 #: ../../views.rst:185
@@ -240,7 +295,7 @@ msgstr ""
 # 37f799b073394857a4d542c04c7504c9
 #: ../../views.rst:185
 msgid "Deletes a single user"
-msgstr ""
+msgstr "単一ユーザーを削除します"
 
 # f3993f2c697241e2ab751c2be6e298e0
 #: ../../views.rst:188
@@ -249,11 +304,14 @@ msgid ""
 ":class:`~flask.views.MethodView`?  The trick is to take advantage of the "
 "fact that you can provide multiple rules to the same view."
 msgstr ""
+"それでは、\ :class:`~flask.views.MethodView`\ を使ってこれを行うにはどう"
+"するのでしょうか？その秘訣は、同じviewに対して複数のルールを提供できると"
+"いう事実を利用することです。"
 
 # ad179d38b9bc439fb7cd637c6d82c910
 #: ../../views.rst:192
 msgid "Let's assume for the moment the view would look like this::"
-msgstr ""
+msgstr "一瞬だけviewが以下のようなものであると仮定しましょう::"
 
 # 65993e75554843108103154fde2a4bc7
 #: ../../views.rst:216
@@ -261,6 +319,10 @@ msgid ""
 "So how do we hook this up with the routing system?  By adding two rules "
 "and explicitly mentioning the methods for each::"
 msgstr ""
+"それでは、（Flaskの）ルーティングの仕組みにどうやって（直前に例示している"
+"クラスに基づいたviewを）接続するのでしょうか？2つのルールを追加し、それぞれ"
+"に対して明示的にメソッドを示します（訳注: 以下の例で、第一引数が「/users/」"
+"である2つの「add_url_rule」の部分が該当します）::"
 
 # 6ba7c5871c4f4d44bef009a839c98c65
 #: ../../views.rst:226
@@ -268,4 +330,6 @@ msgid ""
 "If you have a lot of APIs that look similar you can refactor that "
 "registration code::"
 msgstr ""
+"もしも似たようなAPIがたくさんある場合、その登録用コードを（以下のように）"
+"リファクタリングできます::"
 
