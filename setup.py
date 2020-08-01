@@ -81,6 +81,9 @@ setup(
         ],
         "readthedocs": [
             "readthedocs-sphinx-ext",
+        ],
+        "invoke": [
+            "invoke"
         ]
     },
     entry_points={"console_scripts": ["flask = flask.cli:main"]},
