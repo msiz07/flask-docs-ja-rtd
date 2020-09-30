@@ -20,7 +20,7 @@ msgstr ""
 # c6367da4a6d0456692410f2bd1082a57
 #: ../../patterns/fileuploads.rst:4
 msgid "Uploading Files"
-msgstr ""
+msgstr "ファイルのアップロード"
 
 # 91d68555df274e9e9b7f9c3a446c7769
 #: ../../patterns/fileuploads.rst:6
@@ -28,6 +28,8 @@ msgid ""
 "Ah yes, the good old problem of file uploads.  The basic idea of file "
 "uploads is actually quite simple.  It basically works like this:"
 msgstr ""
+"確かに、ファイルのアップロードは昔ながらの問題です。ファイルのアップ"
+"ロードの基本的な考えは非常に単純です。基本的に以下のように働きます:"
 
 # ef606784419c4e16a5a86f3c2a4e2e28
 #: ../../patterns/fileuploads.rst:9
@@ -35,6 +37,8 @@ msgid ""
 "A ``<form>`` tag is marked with ``enctype=multipart/form-data`` and an "
 "``<input type=file>`` is placed in that form."
 msgstr ""
+"``<form>``\ タグは\ ``enctype=multipart/form-data``\ で印付けられ、その"
+"formの中に\ ``<input type=file>``\ が置かれます。"
 
 # 71168130a2e24fa2a4c0c061a9c22061
 #: ../../patterns/fileuploads.rst:11
@@ -42,6 +46,9 @@ msgid ""
 "The application accesses the file from the :attr:`~flask.request.files` "
 "dictionary on the request object."
 msgstr ""
+"アプリケーションは、リクエストのオブジェクトの\ "
+":attr:`~flask.request.files`\ にあるdictionaryからファイルにアクセス"
+"します。"
 
 # 4f72a3428c724370936bfab50f6e9cea
 #: ../../patterns/fileuploads.rst:13
@@ -49,11 +56,13 @@ msgid ""
 "use the :meth:`~werkzeug.datastructures.FileStorage.save` method of the "
 "file to save the file permanently somewhere on the filesystem."
 msgstr ""
+"ファイルの\ :meth:`~werkzeug.datastructures.filesystem.save`\ メソッドを"
+"使って、ファイルシステムのどこかへ永続的にファイルを保存します。"
 
 # fdc2bd0aa9254ce2ba50ef2d7e236dcd
 #: ../../patterns/fileuploads.rst:17
 msgid "A Gentle Introduction"
-msgstr ""
+msgstr "やさしいイントロダクション"
 
 # db960ad1599f4310aae00cb8cee48bba
 #: ../../patterns/fileuploads.rst:19
@@ -62,6 +71,9 @@ msgid ""
 "specific upload folder and displays a file to the user.  Let's look at "
 "the bootstrapping code for our application::"
 msgstr ""
+"特定のアップロード・フォルダへファイルをアップロードし、ユーザへ"
+"ファイルを表示する、非常に基本的なアプリケーションから始めましょう。"
+"アプリケーションの手始めのコードを見てみましょう::"
 
 # b6de704aedec4fb18602b619856c0430
 #: ../../patterns/fileuploads.rst:33
@@ -71,6 +83,10 @@ msgid ""
 "The ``UPLOAD_FOLDER`` is where we will store the uploaded files and the "
 "``ALLOWED_EXTENSIONS`` is the set of allowed file extensions."
 msgstr ""
+"最初にいくつかimportが必要です。ほとんどは直感的なはずですが、"
+"\ :func:`werkzeug.secure_filename`\ はもう少し後で説明します。"
+"\ ``UPLOAD_FOLDER``\ はアップロードされたファイルを格納する場所で、"
+"\ ``ALLOWED_EXTENSIONS``\ は許可されたファイル拡張子です。"
 
 # d653a2e4d18d435691b1d131a14e0cb2
 #: ../../patterns/fileuploads.rst:38
@@ -83,6 +99,13 @@ msgid ""
 "the server executes them, but who has PHP installed on their server, "
 "right?  :)"
 msgstr ""
+"なぜ許可される拡張子を制限するのでしょうか？恐らくあなたは、サーバが"
+"クライアントへ直接データを送信する場合、そのサーバへユーザがなんでも"
+"アップロードできるようにはしたくないでしょう。そうすれば、ユーザがXSSの"
+"問題（\ :ref:`XSS`\ を見てください）を起こしかねないHTMLファイルをアップ"
+"ロードできないことを確実にできます。もしサーバが\ ``.php``\ ファイルを"
+"実行する場合はそれも許さないことも確実にするでしょうが、誰が自分のサーバ"
+"にPHPをインストールするんでしょうか？ :)"
 
 # c09a8f425c55446f94edd7c6ebb33418
 #: ../../patterns/fileuploads.rst:45
@@ -90,6 +113,8 @@ msgid ""
 "Next the functions that check if an extension is valid and that uploads "
 "the file and redirects the user to the URL for the uploaded file::"
 msgstr ""
+"次は、拡張子が適切かチェックし、ファイルをアップロードし、ユーザをアップ"
+"ロードされたファイルのURLへリダイレクトする関数です::"
 
 # adbfc08b497c41fa9f244dd9c759db26
 #: ../../patterns/fileuploads.rst:80
@@ -101,11 +126,18 @@ msgid ""
 "be dangerous.  For the moment just remember: always use that function to "
 "secure a filename before storing it directly on the filesystem."
 msgstr ""
+"では\ :func:`~werkzeug.utils.secure_filename`\ 関数は何を実際にはする"
+"のでしょうか？この時の問題は「ユーザのインプットは決して信用するな」と"
+"いわれる原則があることです。これはアップロードされたファイルのファイル名"
+"についても当てはまります。提供されるformのデータはすべて偽造されている"
+"可能性があり、ファイル名が危険である可能性があります。今のところはただ"
+"覚えておくようにしてください: ファイルシステムへ直接格納する前に、常に"
+"ファイル名を安全にする関数を使用してください。"
 
 # 082b96016995426aa53d9f4ad1f43f44
 #: ../../patterns/fileuploads.rst:87
 msgid "Information for the Pros"
-msgstr ""
+msgstr "プロ向けの情報"
 
 # 1270b40d8881444197201c39557a680b
 #: ../../patterns/fileuploads.rst:89
@@ -115,6 +147,10 @@ msgid ""
 "imagine someone would send the following information as `filename` to "
 "your application::"
 msgstr ""
+"この\ :func:`~werkzeug.utils.secure_filename`\ 関数が何をして、それを"
+"使わない場合は何が問題なのか、興味を持ちましたね？では、誰かが以下の"
+"ような情報を\ `filename`\ として自分のアプリケーションへ送信することを、"
+"ただ想像してください::"
 
 # 387ae413a9ad431abdccb5fd21a10d7a
 #: ../../patterns/fileuploads.rst:96
@@ -125,11 +161,17 @@ msgid ""
 "some knowledge about how the application looks like, but trust me, "
 "hackers are patient :)"
 msgstr ""
+"``../``\ の数が適切であり、これを\ ``UPLOAD_FOLDER``\ と結合すると仮定"
+"したとき、ユーザはサーバのファイルシステムにある本来変更すべきでない"
+"ファイルを変更できる能力を持つかもしれません。これはアプリケーションが"
+"どのようなものかについての知識を要求しますが、信じてください、ハッカー"
+"は我慢強いのです :)"
 
 # 94905c62ce0949509d5e210061460245
 #: ../../patterns/fileuploads.rst:102
 msgid "Now let's look how that function works:"
 msgstr ""
+"それでは、この関数(secure_filename)がどのように働くかを見てみましょう:"
 
 # 2249e0cdc4264f10ba9451d7bb11a5e7
 #: ../../patterns/fileuploads.rst:107
@@ -140,6 +182,12 @@ msgid ""
 ":func:`uploaded_file` function to return the file of that name. As of "
 "Flask 0.5 we can use a function that does that for us::"
 msgstr ""
+"この時点で、最後のひとつが欠けています: アップロードされたファイルの提供"
+"です。その\ :func:`upload_file()`\ の中では、ユーザを"
+"\ ``url_for('uploaded_file', filename=filename)``\ へ、つまり、"
+"\ ``/uploads/filename``\ へリダイレクトします。それでは、その名前の"
+"ファイルを返すための\ :func:`uploaded_file`\ 関数を書きましょう。Flask "
+"0.5からは、それをしてくれる関数を使うことができます::"
 
 # 34cabd43baa248889a4b65079f39f906
 #: ../../patterns/fileuploads.rst:120
@@ -148,16 +196,23 @@ msgid ""
 "use the :class:`~werkzeug.wsgi.SharedDataMiddleware`.  This also works "
 "with older versions of Flask::"
 msgstr ""
+"別のやり方では\ `build_only`\ なルール（訳注: ``url_for``\ でのURLの作成"
+"だけは可能で、対応するviewは用意しないルールのようです。\ "
+":func:`~flask.Flask.add_url_rule`\ 関数と\ :class:`werkzeug.routing.Rule`\ "
+"クラス参照）として\ `uploaded_file`\ を登録し、"
+"\ :class:`~werkzeug.middleware.shared_data.SharedDataMiddleware`\ を使う"
+"ことができます。これは古いバージョンのFlaskでも機能します::"
 
 # 3c9cdf7469e84f878cf02c4f8a751627
 #: ../../patterns/fileuploads.rst:131
 msgid "If you now run the application everything should work as expected."
 msgstr ""
+"もし今アプリケーションを走らせれば、すべて期待通りに機能するはずです。"
 
 # 4d31aa74162f4535bd7ab94bb688f3bf
 #: ../../patterns/fileuploads.rst:135
 msgid "Improving Uploads"
-msgstr ""
+msgstr "アップロードの改善"
 
 # 615b890ffd414eb293e30e5129e27409
 #: ../../patterns/fileuploads.rst:139
@@ -170,6 +225,14 @@ msgid ""
 "of memory, but you can limit that by setting the ``MAX_CONTENT_LENGTH`` "
 "config key::"
 msgstr ""
+"それでは、正確にはFlaskはどのようにファイルのアップロードを処理するので"
+"しょうか？もしファイルが妥当な小ささであればウェブサーバのメモリ内に、"
+"そうでない場合は（\ :func:`tempfile.gettempdir`\ で返される）一時的な"
+"場所に、Flaskはファイルを格納します。しかし、それを超えたらアップロード"
+"が中止される、最大ファイルサイズはどのように指定するのでしょうか？"
+"既定の動作では、Flaskはファイルのアップロードをメモリ容量無制限に喜んで"
+"受け入れますが、\ ``MAX_CONTENT_LENGTH``\ の設定キーを設定することで制限"
+"することができます::"
 
 # c09bf33962084c8fad16ddb0217fa0e4
 #: ../../patterns/fileuploads.rst:152
@@ -178,11 +241,14 @@ msgid ""
 " a larger file is transmitted, Flask will raise a "
 ":exc:`~werkzeug.exceptions.RequestEntityTooLarge` exception."
 msgstr ""
+"上記のコードは許可される最大のペイロードを16メガバイトに制限します。もし"
+"もっと大きなファイルが伝送された場合、Flaskは\ "
+":exc:`~werkzeug.exceptions.RequestEntityTooLarge`\ 例外を発生させます。"
 
 # 2ca537dc4a8849579ad793a1a6574b51
 #: ../../patterns/fileuploads.rst:156
 msgid "Connection Reset Issue"
-msgstr ""
+msgstr "接続中止の問題"
 
 # a15ce6c90ab845bd80e36f3de1adcb4c
 #: ../../patterns/fileuploads.rst:158
@@ -191,6 +257,10 @@ msgid ""
 "error instead of a 413 response. You will get the correct status response"
 " when running the app with a production WSGI server."
 msgstr ""
+"ローカルの開発サーバを使用しているとき、（HTTPステータスコードが）413"
+"レスポンスの代わりに接続中止エラー（conneciton reset error）を得る場合が"
+"あります。アプリを製品版のWSGIサーバで走らせたときは、適切なステータスの"
+"レスポンスを得られるようになります。"
 
 # 359b1356243e441cb369dac64a1868b8
 #: ../../patterns/fileuploads.rst:162
@@ -199,11 +269,15 @@ msgid ""
 " as well by subclassing the request object.  For more information on that"
 " consult the Werkzeug documentation on file handling."
 msgstr ""
+"この目玉機能はFlask 0.6で追加されましたが、リクエストのオブジェクトを"
+"サブクラス化することで古いバージョンでも同様に達成可能です。このことに"
+"関してのさらなる情報は、ファイル処理についてのWerkzeugのドキュメントを"
+"調べてください。"
 
 # e6e3a1c4313d4da9bb21cfb16c33e15b
 #: ../../patterns/fileuploads.rst:168
 msgid "Upload Progress Bars"
-msgstr ""
+msgstr "アップロードのプログレスバー"
 
 # 4a016517dba343a5af4fa9296fcde4e8
 #: ../../patterns/fileuploads.rst:170
@@ -215,11 +289,17 @@ msgid ""
 "already.  Do you realize the irony?  The client is asking for something "
 "it should already know."
 msgstr ""
+"しばらく前には、アップロードの進み具合をクライアントからJavaScriptで"
+"ポーリングできるようにするために、多くの開発者は受信ファイルを小さな断片"
+"にして読み込み、アップロードの進み具合をデータベースに格納することを考えて"
+"いました。長い話を短くすると: クライアントは5秒ごとにサーバにどれくらい"
+"ファイルを伝送済みかを問い合わせるのです。皮肉なことだと分かりますか？"
+"クライアントは、すでに知っているべきことを問い合わせているのです。"
 
 # 5f0da9535a0f490ab83e6f2b1096f8a2
 #: ../../patterns/fileuploads.rst:178
 msgid "An Easier Solution"
-msgstr ""
+msgstr "より簡単な解決策"
 
 # d0fc55013ca24f6ba198fc450d2bb421
 #: ../../patterns/fileuploads.rst:180
@@ -228,6 +308,9 @@ msgid ""
 "There are JavaScript libraries like jQuery_ that have form plugins to "
 "ease the construction of progress bar."
 msgstr ""
+"今ではより高速に働いてより信頼性のある、より良い解決策があります。プログ"
+"レス・バーの構築を容易にするformのプラグインを持つ、\ jQuery_\ のような"
+"JavaScriptのライブラリがあります。"
 
 # 5a97b511b6e14219b51ea98ed858d07e
 #: ../../patterns/fileuploads.rst:184
@@ -237,4 +320,9 @@ msgid ""
 "called `Flask-Uploads`_ that implements a full fledged upload mechanism "
 "with white and blacklisting of extensions and more."
 msgstr ""
+"ファイルのアップロードについてのありがちなパターンはアップロードを扱う"
+"全てのアプリケーションで殆ど変わることなく存在するため、Flask拡張にも、"
+"拡張子のホワイトリストとブラックリストやその他の機能を持つ、十分に成熟"
+"したアップロードの仕組みを実装した\ `Flask-Uploads`_\ と呼ばれるものが"
+"あります。"
 

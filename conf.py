@@ -25,7 +25,7 @@ html_context['GOOGLE_SITE_VERIFICATION'] = os.environ.get('GOOGLE_SITE_VERIFICAT
 
 # support for tooltip showing original text ----------------------------
 extensions = vars().get("extensions", [])
-extensions.append("display_original")
+extensions.append("sphinxext.showorig")
 extensions.append("readthedocs_ext.readthedocs")
 
 setup_original = setup  # from 'flask/docs/conf.py'
