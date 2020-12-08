@@ -20,7 +20,7 @@ msgstr ""
 # 69e594f75cf443baaf5106e096b590b7
 #: ../../unicode.rst:2
 msgid "Unicode in Flask"
-msgstr ""
+msgstr "FlaskでのUnicode"
 
 # 5df1ecb9a02c4820b68debef729939c9
 #: ../../unicode.rst:4
@@ -36,11 +36,22 @@ msgid ""
 "to cover the very basics so that you have a pleasant experience with "
 "Unicode related things."
 msgstr ""
+"Jinja2やWerkzeugと同様に、Flaskはテキストについては完全にUnicodeをベース"
+"にしています。Jinja2やWerkzeugのライブラリだけでなく、テキストを処理する"
+"web関連のPythonライブラリの大部分でも同様です。今までUnicodeを知らなかった"
+"場合は、多分\ "
+"`The Absolute Minimum Every Software Developer Absolutely, Positively "
+"Must Know About Unicode and Character Sets "
+"<https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-"
+"software-developer-absolutely-positively-must-know-about-unicode-and-"
+"character-sets-no-excuses/>`_\ を読むべきでしょう。"
+"このドキュメントでは、Unicode関連のことに関する体験を喜ばしいものにする"
+"ために、本当に基本を扱うだけにします。"
 
 # 2371fa88446f456aa25a4ea74071a863
 #: ../../unicode.rst:14
 msgid "Automatic Conversion"
-msgstr ""
+msgstr "自動変換"
 
 # df2c4fd7986f4fbf9f37feaf173ef26a
 #: ../../unicode.rst:16
@@ -48,11 +59,14 @@ msgid ""
 "Flask has a few assumptions about your application (which you can change "
 "of course) that give you basic and painless Unicode support:"
 msgstr ""
+"Flaskはあなたのアプリケーションに関して（以下のような）いくつかの前提"
+"（もちろん変更することができます）を持っていて、それは基本的で苦痛のない"
+"Unicodeサポートを与えます:"
 
 # 081f90d4b1eb4c548a539dffbe8f94f5
 #: ../../unicode.rst:19
 msgid "the encoding for text on your website is UTF-8"
-msgstr ""
+msgstr "webサイトのテキスト用のエンコーディングはUTF-8"
 
 # ac4a2faeeb884c029b5456a1e8eda52e
 #: ../../unicode.rst:20
@@ -60,6 +74,10 @@ msgid ""
 "internally you will always use Unicode exclusively for text except for "
 "literal strings with only ASCII character points."
 msgstr ""
+"内部的には、ASCII文字ポイントだけ（訳注: ASCII文字だけと同じ意味合いで"
+"あり、Unicodeでは文字に対してコードポイントと呼んでいる番号を割り当てて"
+"いるため、「character point」という表現を使っていると思います）を使用する"
+"リテラル文字列以外のテキストは、全て常にUnicodeを使用"
 
 # eb1758d607b149cab080ed373970b849
 #: ../../unicode.rst:22
@@ -67,11 +85,13 @@ msgid ""
 "encoding and decoding happens whenever you are talking over a protocol "
 "that requires bytes to be transmitted."
 msgstr ""
+"バイトが通信されることを要求するプロトコルを通してやりとりするときは、"
+"常にエンコーディングとデコーディングが発生"
 
 # 84078fc0ba52451b8c4a36c944d387f2
 #: ../../unicode.rst:25
 msgid "So what does this mean to you?"
-msgstr ""
+msgstr "それでは、これは何を意味するのでしょうか？"
 
 # 51dc058505104e5590964bc817574fff
 #: ../../unicode.rst:27
@@ -84,6 +104,13 @@ msgid ""
 "sending Unicode out you want it to be UTF-8 encoded.  Flask will do the "
 "encoding and setting of the appropriate headers for you."
 msgstr ""
+"HTTPはバイトを土台にしています。プロトコルだけでなく、サーバ上のドキュ"
+"メントを扱うために使われる仕組み（URIまたはURLと呼ばれるもの）も同様です。"
+"しかしながら、普通はHTTP上で通信されるHTMLは、多様な文字セットに対応し、"
+"どの文字セットが使用されているかはHTTPヘッダで通信されます。これを複雑に"
+"しすぎないために、もしUnicodeを送出する場合はUTF-8にエンコードすることを"
+"望んでいるのだと、Flaskはただ仮定します。Flaskはエンコーディングと、適切な"
+"ヘッダーの設定をあなたのために行います。"
 
 # ecd734bc209548dab6829da55651a1f6
 #: ../../unicode.rst:35
@@ -93,11 +120,15 @@ msgid ""
 "already transmits Unicode and if they do not, SQLAlchemy or your other "
 "ORM should take care of that."
 msgstr ""
+"SQLAlchemyまたは似たようなORMの仕組みを利用してデータベースとやり取りする"
+"場合にも、同じことがあてはまります。ある種のデータベースは既にUnicodeを"
+"通信するプロトコルを持っており、もし持っていない場合は、SQLAlchemyまたは"
+"あなたの別のORMがUnicode処理の世話をする必要があります。"
 
 # 331726c5341d468a907c2f559e58d5fa
 #: ../../unicode.rst:41
 msgid "The Golden Rule"
-msgstr ""
+msgstr "黄金律（The Golden Rule）"
 
 # 213fc2d1a9f74ac5b9616de58691e69f
 #: ../../unicode.rst:43
@@ -105,6 +136,9 @@ msgid ""
 "So the rule of thumb: if you are not dealing with binary data, work with "
 "Unicode.  What does working with Unicode in Python 2.x mean?"
 msgstr ""
+"それでは大まかなルールです: もしもバイナリデータを扱っていない場合は、"
+"Unicodeを使います。Python 2.xでUnicodeを使った処理とはどのようなもので"
+"しょうか？"
 
 # 1394be55698e458792e5f813604b4fc4
 #: ../../unicode.rst:46
@@ -113,6 +147,9 @@ msgid ""
 "special characters of Latin letters without umlauts or anything fancy) "
 "you can use regular string literals (``'Hello World'``)."
 msgstr ""
+"ASCIIコードポイント（基本的な数字や、ラテン文字のいくつかの特殊文字のうち"
+"ウムラートおよび装飾的なものをなにも含まないもの）だけを使っている限り、"
+"通常の文字列リテラル（\ ``'Hello World'``\ ）を使用できます。"
 
 # 15a570a83d4e4e7e99df549100e18f45
 #: ../../unicode.rst:49
@@ -121,6 +158,9 @@ msgid ""
 "string as Unicode string by prefixing it with a lowercase `u`. (like "
 "``u'Hänsel und Gretel'``)"
 msgstr ""
+"もしも文字列の中で何であれASCII以外のものが必要な場合、（\ ``u'Hänsel "
+"und Gretel'``\ のように）先頭に小文字の\ `u`\ を使ってその文字列がUnicode"
+"文字列だと目印をつける必要があります。"
 
 # e1c0eebcd13c45f79fb09c2d8fa298a3
 #: ../../unicode.rst:52
@@ -131,6 +171,13 @@ msgid ""
 "-*- coding: utf-8 -*-`` into the first or second line of your Python "
 "source file."
 msgstr ""
+"もし自分のPythonファイルの中でUnicodeではない文字（訳注: ここでは「u'...'」"
+"のように最初に「u」がついてない文字のことだと思います）を使用している場合、"
+"そのファイルがどのエンコーディングを使っているかをPythonに教える必要があり"
+"ます。繰り返しますが、この目的（訳注: ファイルのエンコーディングのことだと"
+"思います）にはUTF-8を推奨します。インタプリタにエンコーディングを教えるには、"
+"Pythonのソースファイルの1行目もしくは2行目に\ ``# -*- coding: utf-8 -*-``\ "
+"を置くことができます。"
 
 # 81be3c6736f74aaab8b8b8c7f6689bf5
 #: ../../unicode.rst:57
@@ -138,11 +185,14 @@ msgid ""
 "Jinja is configured to decode the template files from UTF-8.  So make "
 "sure to tell your editor to save the file as UTF-8 there as well."
 msgstr ""
+"JinjaはテンプレートファイルをUTF-8からデコードするように構成されています。"
+"そのため、自分のエディタも確実にUTF-8でファイルを保存するようにしてくだ"
+"さい。"
 
 # 5c12711e6d9246b7b4dd26b532c4fc82
 #: ../../unicode.rst:61
 msgid "Encoding and Decoding Yourself"
-msgstr ""
+msgstr "自分で行うエンコーディングとデコーディング"
 
 # cf0ff6d4abcb4a179f6d78a366ab6b44
 #: ../../unicode.rst:63
@@ -155,6 +205,17 @@ msgid ""
 "text files do not specify their encoding comes into play.  So do yourself"
 " a favour and limit yourself to UTF-8 for text files as well."
 msgstr ""
+"もしもUnicodeを実際にはベースにしていないファイルシステムや何かしらとやり"
+"取りする場合、Unicodeのインタフェースを使って作業するときは確実に自分で"
+"適切なデコードをする必要があるでしょう。従って例えば、もしもファイルシス"
+"テム上のファイルを読み込みJinja2のテンプレートに埋め込みたい場合、その"
+"ファイルのエンコーディングからファイルをデコードする必要があるでしょう。"
+"ここで、テキストファイルは自分のエンコーディングを指定しない（訳注: テキ"
+"ストファイル自身は自分のエンコーディングが何かを定義するメタ情報を持たない"
+"ということ）という、古くからある問題が出てきます。ですから、自分のために"
+"なるように、テキストファイルもUTF-8だけを使うように自分で制限すると良い"
+"でしょう（訳注: ファイルによってエンコーディングが違うと不便なのでUTF-8に"
+"統一した方が良いということ）。"
 
 # 4d09e1c90dd844a3ab75918d08693141
 #: ../../unicode.rst:71
@@ -162,6 +223,8 @@ msgid ""
 "Anyways.  To load such a file with Unicode you can use the built-in "
 ":meth:`str.decode` method::"
 msgstr ""
+"いずれにしろ、Unicodeを使ってそのようなファイルを読み込むには、組み込み"
+"の\ :meth:`str.decode`\ メソッドを使用できます::"
 
 # b430cd3b0fe945d7be9c44c79621334d
 #: ../../unicode.rst:78
@@ -169,11 +232,13 @@ msgid ""
 "To go from Unicode into a specific charset such as UTF-8 you can use the "
 ":meth:`unicode.encode` method::"
 msgstr ""
+"UnicodeからUTF-8のような特定の文字セットにするには\ :meth:`unicode.encode`\ "
+"メソッドを使用できます::"
 
 # 1ba04705613c45b4b4869e9d2df049d5
 #: ../../unicode.rst:86
 msgid "Configuring Editors"
-msgstr ""
+msgstr "エディタの設定"
 
 # 0522c54800ba4c4bb040f1f9b2d1349b
 #: ../../unicode.rst:88
@@ -182,11 +247,15 @@ msgid ""
 " not configured to do this you have to change it.  Here some common ways "
 "to set your editor to store as UTF-8:"
 msgstr ""
+"殆どのエディタは最近では既定値としてUTF-8で保存しますが、自分のエディタが"
+"そうするように設定されていない場合、自分で変える必要があります。自分の"
+"エディタでUTF-8として保存するための、いくつかのありがちなやり方は以下の"
+"通りです:"
 
 # 6b5c6be2305d4fd582ac4be2ec9ec795
 #: ../../unicode.rst:92
 msgid "Vim: put ``set enc=utf-8`` to your ``.vimrc`` file."
-msgstr ""
+msgstr "Vim: ``set enc=utf-8``\ を自分の\ ``.vimrc``\ に置きます。"
 
 # 5fbb807ea8054bdba8ccb923f3c3ed01
 #: ../../unicode.rst:94
@@ -194,6 +263,8 @@ msgid ""
 "Emacs: either use an encoding cookie or put this into your ``.emacs`` "
 "file::"
 msgstr ""
+"Emacs: encoding cookieを使うか、自分の\ ``.emacs``\ ファイルに以下を置き"
+"ます::"
 
 # 0531495c24fe417cb512eeeea9df7cbc
 #: ../../unicode.rst:100
@@ -203,17 +274,17 @@ msgstr ""
 # 2c691e2c7cd043d6aa25145c9d2b8c4e
 #: ../../unicode.rst:102
 msgid "Go to *Settings -> Preferences ...*"
-msgstr ""
+msgstr "*Settings -> Preferences ...* に進みます"
 
 # cc879e8e1fcc45b5aae3db18d61f5c79
 #: ../../unicode.rst:103
 msgid "Select the \"New Document/Default Directory\" tab"
-msgstr ""
+msgstr "「New Document/Default Directory」タブを選びます"
 
 # 63cf37af2a3d4c6f93990866de3ffbc3
 #: ../../unicode.rst:104
 msgid "Select \"UTF-8 without BOM\" as encoding"
-msgstr ""
+msgstr "「UTF-8 without BOM」をエンコーディングに選びます"
 
 # f147f15e5dcb4d2ba7f34454dbf884c3
 #: ../../unicode.rst:106
@@ -221,4 +292,6 @@ msgid ""
 "It is also recommended to use the Unix newline format, you can select it "
 "in the same panel but this is not a requirement."
 msgstr ""
+"Unixの改行形式を使用することも推奨されていて、同じパネルから選択できます"
+"が、それは必須ではありません。"
 
