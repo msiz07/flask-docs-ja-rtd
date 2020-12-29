@@ -20,7 +20,7 @@ msgstr ""
 # bfbe27c3aa10488f941d66719e4a33ff
 #: ../../styleguide.rst:2
 msgid "Pocoo Styleguide"
-msgstr ""
+msgstr "Pocooのスタイルガイド"
 
 # c12b0d6efc584232a1a34da7f4a18c3f
 #: ../../styleguide.rst:4
@@ -29,6 +29,9 @@ msgid ""
 "Flask.  This styleguide is a requirement for Patches to Flask and a "
 "recommendation for Flask extensions."
 msgstr ""
+"Pocooのスタイルガイドは、Flaskを含む、Pocooのすべてのプロジェクト用の"
+"スタイルガイドです。このスタイルガイドはFlaskへのパッチに対しては要求"
+"事項であり、Flask拡張に対しては推奨事項です。"
 
 # c6276badf26944d09781274bddca2ad5
 #: ../../styleguide.rst:8
@@ -36,26 +39,28 @@ msgid ""
 "In general the Pocoo Styleguide closely follows :pep:`8` with some small "
 "differences and extensions."
 msgstr ""
+"全体的にPocoo Styleguideは\ :pep:`8`\ に密接に従いながら、いくつかの小さな"
+"違いや拡張を伴っています"
 
 # a664be93a30b42638965dab0507f044e
 #: ../../styleguide.rst:12
 msgid "General Layout"
-msgstr ""
+msgstr "レイアウトの原則"
 
 # 5112e4ab5f5b4db990a04c78c825f799
 #: ../../styleguide.rst:15
 msgid "Indentation:"
-msgstr ""
+msgstr "インデント"
 
 # bca924deae5c4db388e477823a490936
 #: ../../styleguide.rst:15
 msgid "4 real spaces.  No tabs, no exceptions."
-msgstr ""
+msgstr "実際のスペース4文字。タブは含めず、例外はありません。"
 
 # ac24ab6b7d0d401e8f92e661e6a58a74
 #: ../../styleguide.rst:20
 msgid "Maximum line length:"
-msgstr ""
+msgstr "行の最長文字数"
 
 # a277e280dc194a0992a15e2a206e6332
 #: ../../styleguide.rst:18
@@ -64,11 +69,14 @@ msgid ""
 "avoid too nested code by cleverly placing `break`, `continue` and "
 "`return` statements."
 msgstr ""
+"79文字で、もし絶対に必要な場合には84までという緩やかな制限を伴います。"
+"\ `break`, `continue`\ そして\ `return`\ 文を賢く使って、ネストしすぎた"
+"コードを避けるようにしてください。"
 
 # c8989cb9a80e4e8f91a050bfd2346acc
 #: ../../styleguide.rst:46
 msgid "Continuing long statements:"
-msgstr ""
+msgstr "長い行の継続:"
 
 # 402738939a97473dae369c8ae0c685e8
 #: ../../styleguide.rst:23
@@ -77,6 +85,8 @@ msgid ""
 "align the next line with the last dot or equal sign, or indent four "
 "spaces::"
 msgstr ""
+"文を続けるにはバックスラッシュを使用でき、その場合は最後のドットまたは"
+"等号記号で次の行をそろえるか、スペース4文字でインデントします::"
 
 # 14478c9e83bc43719151487d7aa89c36
 #: ../../styleguide.rst:34
@@ -84,6 +94,8 @@ msgid ""
 "If you break in a statement with parentheses or braces, align to the "
 "braces::"
 msgstr ""
+"もし丸カッコや大カッコを使って文の中で（行を）分ける場合、カッコに揃え"
+"ます::"
 
 # 211540c2ef1b49728cbc56a71febeffb
 #: ../../styleguide.rst:40
@@ -91,11 +103,13 @@ msgid ""
 "For lists or tuples with many items, break immediately after the opening "
 "brace::"
 msgstr ""
+"多くのアイテムがあるリストやタプルに対しては、開きカッコの直後で（行を）"
+"分けます::"
 
 # ad1b3d6438724ed79dd9ff0b11aafdcb
 #: ../../styleguide.rst:68
 msgid "Blank lines:"
-msgstr ""
+msgstr "空行"
 
 # fdd6a992e6154b249b3842a51e91f42b
 #: ../../styleguide.rst:49
@@ -104,16 +118,18 @@ msgid ""
 "else by one.  Do not use too many blank lines to separate logical "
 "segments in code.  Example::"
 msgstr ""
+"トップレベルの関数とクラスは2行で分け、その他は全て1行で分けます。コード"
+"の中で論理的な塊を分けるために空行を使い過ぎないようにします::"
 
 # 80d6b3f6d9e9405abb76e1f3e5e3fe54
 #: ../../styleguide.rst:71
 msgid "Expressions and Statements"
-msgstr ""
+msgstr "式と文"
 
 # 07ea9e8153ff4a8ba8900f3065f7c256
 #: ../../styleguide.rst:92
 msgid "General whitespace rules:"
-msgstr ""
+msgstr "原則となる空白文字のルール"
 
 # c5c1fa478fc64f2fad20323edebdbf7c
 #: ../../styleguide.rst:74
@@ -121,48 +137,57 @@ msgid ""
 "No whitespace for unary operators that are not words (e.g.: ``-``, ``~`` "
 "etc.) as well on the inner side of parentheses."
 msgstr ""
+"単語ではない単項演算子（例: ``-``, ``~``\ など）に対しては、カッコの内側と"
+"同様に空白文字を使いません。"
 
 # 8a45747d1b294a669c503056b44dc2e8
 #: ../../styleguide.rst:76
 msgid "Whitespace is placed between binary operators."
-msgstr ""
+msgstr "二項演算子の間には空白文字を置きます。"
 
 # 67a0a5839c3f4fb293b7697084136433
 # 4de5f9b50b1642db992ba93a7eb13880
 #: ../../styleguide.rst:78 ../../styleguide.rst:97
 msgid "Good::"
-msgstr ""
+msgstr "良い::"
 
 # 30fb0fcac44f40ca8033c1936f9e9f64
 # 93b16a944bef41be88fc6c1e41b9006a
 #: ../../styleguide.rst:85 ../../styleguide.rst:102
 msgid "Bad::"
-msgstr ""
+msgstr "悪い::"
 
 # b49af5fd95a6486da794459de417efe7
 #: ../../styleguide.rst:105
 msgid "Yoda statements are a no-go:"
 msgstr ""
+"ヨーダ文（訳注: 定数を左側に、変数を右側に配置する書き方のことだと思い"
+"ます）は使いません:"
 
 # 13fc67917549430f85ac776c32ec3d6f
 #: ../../styleguide.rst:95
 msgid "Never compare constant with variable, always variable with constant:"
 msgstr ""
+"定数に対して変数を使った比較は決してせず、常に変数に対して定数を使います:"
 
 # 0f6c7c3d894e49d095058e868017ae64
 #: ../../styleguide.rst:112
 msgid "Comparisons:"
-msgstr ""
+msgstr "比較"
 
 # b2a98e511e724f1b90aa4c9601177943
 #: ../../styleguide.rst:108
 msgid "against arbitrary types: ``==`` and ``!=``"
-msgstr ""
+msgstr "任意の型に対して: ``==``\ と\ ``!=``"
 
 # 0cbd1e53e7de46fb85a247d5607e2200
 #: ../../styleguide.rst:109
 msgid "against singletons with ``is`` and ``is not`` (eg: ``foo is not None``)"
 msgstr ""
+"シングルトン（訳注: デザインパターンのシングルトンのように、プログラム"
+"実行中はプログラム内で１つの実体だけ作成されて使い回しされるもの、例えば"
+"「None」のようなもののことだと思います）に対しては\ ``is``\ と\ ``is not``"
+"\ を使います（例: ``foo is not None``）"
 
 # fa2c09d510b04b789c14b86117fff9eb
 #: ../../styleguide.rst:111
@@ -170,21 +195,24 @@ msgid ""
 "never compare something with ``True`` or ``False`` (for example never do "
 "``foo == False``, do ``not foo`` instead)"
 msgstr ""
+"何かに対して\ ``True``\ または\ ``False``\ を使った比較は決してしないように"
+"します（例えば\ ``foo == False``\ は決して使わず、代わりに\ ``not foo``\ を"
+"使います）"
 
 # 231126d6627842bca07c6d8eec909af2
 #: ../../styleguide.rst:115
 msgid "Negated containment checks:"
-msgstr ""
+msgstr "帰属チェックの否定"
 
 # 3a4dda7f158c4f35abcd9f99d1dd2d49
 #: ../../styleguide.rst:115
 msgid "use ``foo not in bar`` instead of ``not foo in bar``"
-msgstr ""
+msgstr "``not foo in bar``\ の代わりに\ ``foo not in bar``\ を使います"
 
 # df18643f73124413ba2289d8a1582628
 #: ../../styleguide.rst:120
 msgid "Instance checks:"
-msgstr ""
+msgstr "インスタンスのチェック"
 
 # 739b825b0e734295a2f53bfcad1d5b32
 #: ../../styleguide.rst:118
@@ -192,11 +220,14 @@ msgid ""
 "``isinstance(a, C)`` instead of ``type(A) is C``, but try to avoid "
 "instance checks in general.  Check for features."
 msgstr ""
+"``type(A) is C``\ の代わりに\ ``isinstance(a, C)``\ を使いますが、一般的"
+"にはインスタンスチェックは避けるようにします。（Pythonなどの）機能を調べ"
+"ましょう（Check for features）。"
 
 # e32ec46dd1494edaa67d3028d78b6b69
 #: ../../styleguide.rst:123
 msgid "Naming Conventions"
-msgstr ""
+msgstr "命名規約"
 
 # 9ac650b318ab4e7fb0abbf30223bea54
 #: ../../styleguide.rst:125
@@ -204,26 +235,34 @@ msgid ""
 "Class names: ``CamelCase``, with acronyms kept uppercase (``HTTPWriter`` "
 "and not ``HttpWriter``)"
 msgstr ""
+"クラス名: ``CamelCase``\ で、省略語部分は大文字を保つようにします（\ "
+"``HttpWriter``\ ではなく\ ``HTTPWriter``\ ）"
 
 # 4ad4912d6e72484a9b0c26ce4d71ecd5
 #: ../../styleguide.rst:127
 msgid "Variable names: ``lowercase_with_underscores``"
 msgstr ""
+"変数名: ``lowercase_with_underscores``\ （アンダースコアを使った小文字）"
 
 # 5a957ea8a0f8421d98eff920588c7a9b
 #: ../../styleguide.rst:128
 msgid "Method and function names: ``lowercase_with_underscores``"
 msgstr ""
+"メソッドおよび関数名: ``lowercase_with_underscores``\ （アンダースコアを"
+"使った小文字）"
 
 # a905d56626bd41259b33a6d77387dc58
 #: ../../styleguide.rst:129
 msgid "Constants: ``UPPERCASE_WITH_UNDERSCORES``"
 msgstr ""
+"定数: ``UPPERCASE_WITH_UNDERSCORES``\ （アンダースコアを使った大文字）"
 
 # 93a56c35238b42b1bae31c936a1dc715
 #: ../../styleguide.rst:130
 msgid "precompiled regular expressions: ``name_re``"
 msgstr ""
+"コンパイル前の正規表現: ``name_re``\ （訳注: 正規表現を格納する変数名には"
+"最後の「_re」を付けるという意味合いだと思います）"
 
 # dcbac12b46e14e448e0c12be5e8e70f3
 #: ../../styleguide.rst:132
@@ -231,6 +270,9 @@ msgid ""
 "Protected members are prefixed with a single underscore.  Double "
 "underscores are reserved for mixin classes."
 msgstr ""
+"保護されるメンバー（訳注: 例えばクラスの内部でしか使わない変数や関数"
+"など、外部からのアクセスは避けるべきもの）はアンダースコア1文字を接頭辞"
+"にします。アンダースコア2文字（の接頭辞）はmixinクラス用に予約しておきます。"
 
 # 47ede4edae7948e798b90a2bf645f447
 #: ../../styleguide.rst:135
@@ -240,21 +282,27 @@ msgid ""
 "underline to the variable name.  If the function needs to access a "
 "shadowed builtin, rebind the builtin to a different name instead."
 msgstr ""
+"キーワードを使ったクラスでは最後にアンダースコアが追加されます。ビルトイン"
+"（訳注: Pythonを実行すると最初から存在するオブジェクトなど）との衝突は許さ"
+"れており、変数名の最後にアンダーラインを追加することで解決\ **させてはいけ"
+"ません**\ 。もし関数が（訳注: 後から作成したオブジェクトなどに名前を使わ"
+"れたことで）隠れてしまったビルトインへアクセスする必要がある場合、ビルト"
+"インを代わりに異なる名前で改めてバインドします。"
 
 # a3f142e1fcec4cb0b3b20554e0f2b275
 #: ../../styleguide.rst:146
 msgid "Function and method arguments:"
-msgstr ""
+msgstr "関数およびメソッドの引数:"
 
 # 8f00efdaaabf41748a3c812085627d84
 #: ../../styleguide.rst:141
 msgid "class methods: ``cls`` as first parameter"
-msgstr ""
+msgstr "クラスメソッド: 最初の引数として\ ``cls``"
 
 # 2d63bf9e055f4823b2dc9fdf59e1bc85
 #: ../../styleguide.rst:142
 msgid "instance methods: ``self`` as first parameter"
-msgstr ""
+msgstr "インスタンスメソッド: 最初の引数として\ ``self``"
 
 # 41bf4a5783a548efa9f911a7b9398294
 #: ../../styleguide.rst:143
@@ -262,6 +310,9 @@ msgid ""
 "lambdas for properties might have the first parameter replaced with ``x``"
 " like in ``display_name = property(lambda x: x.real_name or x.username)``"
 msgstr ""
+"プロパティーに対するlambdaは、\ ``display_name = property(lambda x: "
+"x.real_name or x.username``\ のように、最初の引数を\ ``x``\ で置き換えて"
+"いるかもしれません"
 
 # 73b8fdc7fb0d42d19f237d98268ccf93
 #: ../../styleguide.rst:149
@@ -271,7 +322,7 @@ msgstr ""
 # 06df079baafe4bfc957cf228ece6c71c
 #: ../../styleguide.rst:167
 msgid "Docstring conventions:"
-msgstr ""
+msgstr "Docstringの規約:"
 
 # 4bdd4b5708524b8cbef006910c1f1854
 #: ../../styleguide.rst:152
@@ -283,11 +334,16 @@ msgid ""
 "the opening quote and the triple quote that closes the string on its own "
 "line::"
 msgstr ""
+"すべてのdocstringはSphinxによって理解されるようにreStructuredTextを使って"
+"整形されます。docstringの行数によって、異なる形で置かれます。もし1行だけ"
+"ならば、閉じる引用符3文字は開くｍのと同じ行にし、それ以外ではテキストは開く"
+"引用符と同じ行で始め、文字列を閉じる引用符3文字はそれ自身の行を持つように"
+"します::"
 
 # bb5b753b3ed14563add1a21302a33859
 #: ../../styleguide.rst:187
 msgid "Module header:"
-msgstr ""
+msgstr "モジュールのヘッダー"
 
 # 1353fec78018480b96f82c47f87d9769
 #: ../../styleguide.rst:170
@@ -296,6 +352,9 @@ msgid ""
 "letters are used, but it is recommended all the time) and a standard "
 "docstring::"
 msgstr ""
+"モジュールのヘッダーはutf-8のエンコーディング宣言（ASCIIではない文字が"
+"使われる場合ですが、そうでない場合でも宣言することが推奨されます）と標準的"
+"なdocstringから構成します::"
 
 # ac06971f71fa43029b8a9b99d23aeeda
 #: ../../styleguide.rst:185
@@ -303,11 +362,13 @@ msgid ""
 "Please keep in mind that proper copyrights and license files are a "
 "requirement for approved Flask extensions."
 msgstr ""
+"適切なcopyrightsとlicenseのファイルがapproved Flask extensionsでは必要で"
+"あることを覚えておいてください。"
 
 # ec842b7f11e44837a7d802e34d4ecd1f
 #: ../../styleguide.rst:190
 msgid "Comments"
-msgstr ""
+msgstr "コメント"
 
 # 953df24ffbeb454b81e95c64166c5c05
 #: ../../styleguide.rst:192
@@ -316,4 +377,7 @@ msgid ""
 "reStructuredText.  If a comment is used to document an attribute, put a "
 "colon after the opening pound sign (``#``)::"
 msgstr ""
+"コメントに対するルールはdocstringと似ています。どちらもreStructuredTextを"
+"使って整形されます。もし属性を文書化するためにコメントが使われる場合、"
+"コメントを始めるパウンド記号（\ ``#``\ ）の後にコロンを置きます::"
 
