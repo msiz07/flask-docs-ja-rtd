@@ -261,8 +261,9 @@ msgstr ""
 #: ../../styleguide.rst:130
 msgid "precompiled regular expressions: ``name_re``"
 msgstr ""
-"コンパイル前の正規表現: ``name_re``\ （訳注: 正規表現を格納する変数名には"
-"最後の「_re」を付けるという意味合いだと思います）"
+"事前コンパイルされた正規表現: ``name_re``\ （訳注: ``re.compile``\ の"
+"ようにprecompileした正規表現を格納する変数名には最後に「_re」を付けると"
+"いう意味合いだと思います）"
 
 # dcbac12b46e14e448e0c12be5e8e70f3
 #: ../../styleguide.rst:132
