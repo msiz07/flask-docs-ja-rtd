@@ -20,7 +20,7 @@ msgstr ""
 # ec82beabc14649b092383e143b7b7bfe
 #: ../../patterns/flashing.rst:4
 msgid "Message Flashing"
-msgstr ""
+msgstr "メッセージのフラッシュ表示（Message Flashing）"
 
 # f4c3d6b7b36040ef82f19d8c744cc02d
 #: ../../patterns/flashing.rst:6
@@ -36,21 +36,33 @@ msgid ""
 "are too large for session cookies causes message flashing to fail "
 "silently."
 msgstr ""
+"良いアプリケーションおよびユーザインタフェースとは、すべてフィードバック"
+"次第です。もしユーザが十分なフィードバックを得られない場合、おそらくアプリ"
+"ケーションを嫌いになって終わりです。Flaskはフラッシュ表示の仕組み（flashing "
+"system）によって、ユーザへフィードバックを与える非常にシンプルな方法を提供"
+"します。フラッシュ表示の仕組みは、リクエストの最後にメッセージを記録し、次"
+"のそしてただ次だけのリクエストでアクセスできるようにします。これは、普通は"
+"これ（訳注: メッセージのフラッシュ表示）をするレイアウトのテンプレートと"
+"組み合わされます。ブラウザとときにはwebサーバがcookieのサイズに制限を課す"
+"ことに注意してください。これは、セッションのcookieに対して大き過ぎる"
+"フラッシュ表示用のメッセージでは、何も反応せずにメッセージのフラッシュ表示"
+"が失敗することを意味します。"
 
 # 6bff2e6865d542f2b381ca183fe0355a
 #: ../../patterns/flashing.rst:17
 msgid "Simple Flashing"
-msgstr ""
+msgstr "シンプルなフラッシュ表示"
 
 # 1300b8ca34d3499792038ecf9a89d765
 #: ../../patterns/flashing.rst:19
 msgid "So here is a full example::"
-msgstr ""
+msgstr "それでは、以下は一通りの例（full example）です::"
 
 # b1c43817ac9a406b9d6fd866cc37eba4
 #: ../../patterns/flashing.rst:43
 msgid "And here is the :file:`layout.html` template which does the magic:"
 msgstr ""
+"そして、以下は魔法をかける\ :file:`layout.html`\ テンプレートです:"
 
 # e253b08241134cf6a0623996deda7282
 #: ../../patterns/flashing.rst:60
@@ -58,6 +70,8 @@ msgid ""
 "Here is the :file:`index.html` template which inherits from "
 ":file:`layout.html`:"
 msgstr ""
+"以下は\ :file:`layout.html`\ を継承した\ :file:`index.html`\ テンプレート"
+"です:"
 
 # 4231067ea37945d5ad7a3127d536a177
 #: ../../patterns/flashing.rst:70
@@ -65,11 +79,13 @@ msgid ""
 "And here is the :file:`login.html` template which also inherits from "
 ":file:`layout.html`:"
 msgstr ""
+"そして、以下は\ :file:`layout.html`\ を継承した\ :file:`login.html`\ "
+"テンプレートです:"
 
 # f180b345e089486d86314163e565907a
 #: ../../patterns/flashing.rst:94
 msgid "Flashing With Categories"
-msgstr ""
+msgstr "カテゴリーを使ったフラッシュ表示"
 
 # dc99a56eed37485795d932f9b72a3b46
 #: ../../patterns/flashing.rst:98
@@ -79,6 +95,11 @@ msgid ""
 "categories can be used to give the user better feedback.  For example "
 "error messages could be displayed with a red background."
 msgstr ""
+"メッセージをフラッシュ表示するときにカテゴリーを提供することも可能です。"
+"（カテゴリーに）何も提供されなかった時の既定のカテゴリーは\ "
+"``'message'``\ です。ユーザーにより良いフィードバックを与えるために代わり"
+"のカテゴリーを使うことができます。例えば、エラーメッセージを赤い背景色を"
+"使って表示できます。"
 
 # 3f3486ff00264f6fb5655443fcdfba7d
 #: ../../patterns/flashing.rst:103
@@ -86,6 +107,8 @@ msgid ""
 "To flash a message with a different category, just use the second "
 "argument to the :func:`~flask.flash` function::"
 msgstr ""
+"異なるカテゴリーを使ってメッセージをフラッシュ表示するには、ただ2番目の"
+"引数を\ :func:`~flask.flash`\ 関数で使うだけです::"
 
 # e975e8692cc547b2b195a5c2695603f4
 #: ../../patterns/flashing.rst:108
@@ -94,6 +117,9 @@ msgid ""
 ":func:`~flask.get_flashed_messages` function to also return the "
 "categories.  The loop looks slightly different in that situation then:"
 msgstr ""
+"テンプレートの中でそのときは\ :func:`~flask.get_flashed_messages`\ 関数"
+"へカテゴリーも返すように伝える必要があります。そしてその状況ではループは"
+"少し違った見た目になります:"
 
 # f27dddb88df34427be089b32573cdcea
 #: ../../patterns/flashing.rst:124
@@ -102,11 +128,14 @@ msgid ""
 "might also use the category to add a prefix such as "
 "``<strong>Error:</strong>`` to the message."
 msgstr ""
+"これは、どのようにフラッシュ表示されるメッセージを表示させるかについての"
+"単なる一つの例です。ある人は\ ``<strong>Error:</strong>``\ のような接頭辞"
+"をメッセージに加えるためにもカテゴリーを使うかもしれません。"
 
 # c00b3bb8068a4f94a765d6cc1ba32460
 #: ../../patterns/flashing.rst:129
 msgid "Filtering Flash Messages"
-msgstr ""
+msgstr "フラッシュ表示するメッセージの選別（Filtering Flash Messages）"
 
 # 95b91386df914fd2bdc78e486e2473b1
 #: ../../patterns/flashing.rst:133
@@ -115,4 +144,7 @@ msgid ""
 " :func:`~flask.get_flashed_messages`.  This is useful if you wish to "
 "render each category in a separate block."
 msgstr ""
+"オプションで\ :func:`~flask.get_flashed_messages`\ の結果を選別（filter）"
+"するカテゴリーのリストを渡すことができます。これは各カテゴリーを分かれた"
+"ブロックで表示したいときに便利です。"
 
