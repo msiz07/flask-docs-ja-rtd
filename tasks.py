@@ -74,9 +74,14 @@ def update_git_submodule(ctx):
   with open("requirements.txt", "w") as f_out:
     f_out.write(flask_docs_req.read())
     f_out.write("# install current flask under 'flask' submodule\n")
-    f_out.write("./flask\n")
+    #f_out.write("./flask\n")
+    f_out.write("-e .\n")
+    f_out.write("sphinx-intl\n")
+    f_out.write("readthedocs-sphinx-ext\n")
+    f_out.write("invoke\n")
+    f_out.write("git+https://github.com/msiz07/sphinx-hoverorig.git@main\n")
 
 @task(update_git_submodule)
 def update_tools(ctx):
   """Update tools with requirements.txt content"""
-  run("pip install -U -e . -r requirements.txt --progress-bar=off")
+  run("pip install -U -r requirements.txt --progress-bar=off")
