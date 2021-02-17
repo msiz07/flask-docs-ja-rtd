@@ -69,25 +69,6 @@ setup(
             "sphinxcontrib-log-cabinet",
             "sphinx-issues",
         ],
-        "docs": [
-            "sphinx",
-            "pallets-sphinx-themes",
-            "sphinxcontrib-log-cabinet",
-            "sphinx-issues",
-        ],
-        "docs-ja": [
-            "sphinx",
-            "pallets-sphinx-themes",
-            "sphinxcontrib-log-cabinet",
-            "sphinx-issues",
-            "sphinx-intl",
-        ],
-        "readthedocs": [
-            "readthedocs-sphinx-ext",
-        ],
-        "invoke": [
-            "invoke"
-        ]
     },
     entry_points={"console_scripts": ["flask = flask.cli:main"]},
 )
