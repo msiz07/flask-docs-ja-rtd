@@ -1,7 +1,7 @@
-from invoke import task, run
-
 import os
 from pprint import pprint
+
+from invoke import run, task
 
 # You can edit these variables
 SETTINGS = dict(
