@@ -85,7 +85,7 @@ msgid ""
 "provides the ``flask`` command and allows adding custom management "
 "commands."
 msgstr ""
-"`Click`_\\ は、コマンドラインのアプリケーションを書くフレームワークです。\\ ``Flask``\\ "
+"`Click`_\\ は、コマンドラインのアプリケーションを書くフレームワークです。\\ ``flask``\\ "
 "コマンドを提供し、独自に作成した管理コマンドを追加できるようにします。"
 
 # 051c8a687e264005afa46defd256086b
@@ -98,7 +98,7 @@ msgstr "オプションの依存対象"
 msgid ""
 "These distributions will not be installed automatically. Flask will "
 "detect and use them if you install them."
-msgstr "以下の配布ツール（distributions）は、自動的にはインストールされません。もしインストールされていたとき、Flaskは自動的に見つけ出して使用します。"
+msgstr "以下の配布ツール（distributions）は、自動的にはインストールされません。もしインストールされていたときは、Flaskが見つけ出して使用します。"
 
 # 8dc9d625d840486593021cee4e4aa518
 #: ../../flask/docs/installation.rst:40
@@ -113,7 +113,7 @@ msgid ""
 "installed."
 msgstr ""
 "`SimpleJSON`_\\ は、Pythonの\\ ``json``\\ "
-"モジュールと互換性のある、高速なJSON実装です。インストールされている場合、JSON操作に対して好まれるものになります。"
+"モジュールと互換性のある、高速なJSON実装です。インストールされている場合、JSON操作において優先して使われます。"
 
 # d55383d9056646dab84fcf815b6d3e86
 #: ../../flask/docs/installation.rst:44
@@ -152,7 +152,7 @@ msgid ""
 "libraries for one project can break compatibility in another project."
 msgstr ""
 "virtual "
-"environmentはどんな問題を解決するのでしょうか？持っているPythonプロジェクトの数が増えるほど、違うバージョンのPythonライブラリ、もしくはPython自身を使って作業する必要性が増えていきがちです。あるプロジェクト用のより新しいバージョンのライブラリが、他のプロジェクトとの互換性を壊す可能性があります。"
+"environmentはどんな問題を解決するのでしょうか？自分のPythonプロジェクトの数が増えるほど、PythonライブラリもしくはPython自身の違うバージョンを使って作業する必要性が増えていきがちです。あるプロジェクト用のより新しいバージョンのライブラリが、他のプロジェクトでの互換性を壊す可能性があります。"
 
 # 09ccdd77eabf485cab8d042088563cb3
 #: ../../flask/docs/installation.rst:65
@@ -162,7 +162,7 @@ msgid ""
 "projects or the operating system's packages."
 msgstr ""
 "virtual "
-"environmentは、各プロジェクト用に1つ容易する、独立したPythonライブラリのグループです。ひとつのプロジェクト用にインストールされたパッケージは、他のプロジェクトやオペレーティングシステムのパッケージには影響を与えません。"
+"environmentは、プロジェクトごとに1つ用意する、独立したPythonライブラリのグループです。ひとつのプロジェクト用にインストールされたパッケージは、他のプロジェクトやオペレーティングシステムのパッケージには影響を与えません。"
 
 # 292c7344fc164103861e0d6ee6ee151f
 #: ../../flask/docs/installation.rst:69
