@@ -465,7 +465,7 @@ msgstr "``debug``              - デバッグモードを有効にして例外�
 # 626f1f104e3646db9d581b2e14abebea
 #: ../../flask/docs/errorhandling.rst:271
 msgid "``use_debugger`` - whether to use the internal Flask debugger"
-msgstr "``user_debugger``      - 内部のFlaskデバッガを使うかどうか"
+msgstr "``use_debugger`` - 内部のFlaskデバッガを使うかどうか"
 
 # 4b6d4a23856c4f979786a48c19f082ec
 #: ../../flask/docs/errorhandling.rst:272
@@ -473,7 +473,7 @@ msgid ""
 "``use_reloader`` - whether to reload and fork the process if modules were"
 " changed"
 msgstr ""
-"``user_reloader``      - "
+"``use_reloader`` - "
 "moduleが変更されたとき、再読み込みしてプロセスをforkするか（新しくプロセスを作成するか）どうか"
 
 # 45ddb3bd7924495585a27edfb77fabbe
