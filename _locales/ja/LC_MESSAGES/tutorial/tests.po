@@ -20,7 +20,7 @@ msgstr ""
 # 4c156b72299d4a57965dedfd80862ac0
 #: ../../tutorial/tests.rst:4
 msgid "Test Coverage"
-msgstr "テスト網羅性（Test Coverage）"
+msgstr "テストの網羅率（Test Coverage）"
 
 # 1b57a31e32f54dc4aa2c2e7321e8b084
 #: ../../tutorial/tests.rst:6
@@ -58,11 +58,11 @@ msgid ""
 "in the browser. Despite this, test coverage is an important tool to use "
 "during development."
 msgstr ""
-"網羅性が100%に近づくほど、変更したときに変更箇所以外の振る舞いへ予想外の"
+"網羅率が100%に近づくほど、変更したときに変更箇所以外の振る舞いへ予想外の"
 "変化を起こさないという安心感がより得られるようになります。しかしながら、"
-"100%の網羅性は、アプリケーションにはバグがないということを保証するわけでは"
+"100%の網羅率は、アプリケーションにはバグがないということを保証するわけでは"
 "ありません。特に、それは、ユーザがブラウザの中でアプリケーションとどの"
-"ようにやり取りするかについてはテストしません。とはいえ、テスト網羅性は"
+"ようにやり取りするかについてはテストしません。とはいえ、テストの網羅率は"
 "開発中に使用できる重要なツールです。"
 
 # 292f17dc647746eea790f33850f8ed9c
@@ -72,7 +72,7 @@ msgid ""
 "projects you should test as you develop."
 msgstr ""
 "このチュートリアルでは後の方で紹介されていますが、自分の将来の"
-"プロジェクトでは、開発するたびにテストするべきです。"
+"プロジェクトでは、開発しているときにテストするべきです。"
 
 # 2bfc688caccf47a0a925f22ad2be51b7
 #: ../../tutorial/tests.rst:26
@@ -80,7 +80,7 @@ msgid ""
 "You'll use `pytest`_ and `coverage`_ to test and measure your code. "
 "Install them both:"
 msgstr ""
-"コードのテストおよび（網羅性の）測定に、ここでは\ `pytest`_\ と\ "
+"コードのテストおよび（網羅率の）測定に、ここでは\ `pytest`_\ と\ "
 "`coverage`_\ を使用します。両方ともインストールしましょう:"
 
 # b593cdbe5ca1441d852bd5b4d9d86eb6
@@ -99,7 +99,7 @@ msgid ""
 "``test_``."
 msgstr ""
 "テスト用コードは\ ``tests``\ ディレクトリに置きます。このディレクトリは、\ "
-"``flaskr``\ パッケージの内側ではなく\ *隣に*\ です。以下の\ "
+"``flaskr``\ パッケージの内側ではなく\ *隣*\ です。以下の\ "
 "``tests/conftest.py``\ ファイルは、各テストで使用していく\ *据え付け品"
 "（fixtures）*\ と呼ばれる準備用（setup）関数を含んでいます。テストは\ "
 "``test_``\ で始まるPythonモジュールの中にあり、それらのモジュール内の"
@@ -291,7 +291,7 @@ msgstr ""
 "このテストはPytestのfixtureの\ ``monkeypatch``\ を使って、\ ``init_db``\ "
 "関数を、それが呼び出された時には記録を残す関数へ置き換えます。\ "
 "先ほど書いた\ ``runner``\ 関数のfixture（が返すオブジェクト）は、\ "
-"``init-db``\ コマンドを名前を使って呼び出すために使用されています。"
+"``init-db``\ コマンドをコマンド名を使って呼び出すために使用されています。"
 
 # 7348cc7a0145448d800143e2f1bd8265
 #: ../../tutorial/tests.rst:218
@@ -308,10 +308,10 @@ msgid ""
 "for each test."
 msgstr ""
 "大部分のviewでは、ユーザがログインしている必要があります。テストの中でこれを"
-"行う最も簡単なやり方は、クライアントを使って\ ``login``\ のviewへ\ ``POST``\ "
-"リクエストを作成することです。クライアント作成などを行う処理を毎回書くよりも、"
-"それを行うメソッドを持つクラスを書いて、各テストでそのクラスへクライアント"
-"を渡すfixtureを使用することができます。"
+"行う最も簡単なやり方は、clientを使って\ ``login``\ のviewへ\ ``POST``\ "
+"リクエストを作成することです。ログインなどを行う処理を毎回書くよりも、"
+"それを行うメソッドを持つクラスを書いて、そのクラスへclientを渡すfixtureを"
+"各テストで使用することができます。"
 
 # 7681b1926a97471bb2062e76a084948e
 #: ../../tutorial/tests.rst:247
@@ -320,9 +320,9 @@ msgid ""
 " in as the ``test`` user, which was inserted as part of the test data in "
 "the ``app`` fixture."
 msgstr ""
-"\ ``auth``\ 関数のfixtureと合わせると、テスト中に\ ``auth.login()``\ を"
-"呼び出し、\ ``app``\ 関数のfixtureの中でテスト用データの一部として挿入"
-"された\ ``test``\ ユーザとしてログインすることができます。"
+"\ ``auth``\ 関数のfixtureと合わせると、\ ``app``\ 関数のfixtureの中でテスト用"
+"データの一部として挿入された\ ``test``\ ユーザとしてログインすることが、テスト"
+"中に\ ``auth.login()``\ を呼び出せばできるようになります。"
 
 # dae2022dc8e84d579e29f6c5e8d0940b
 #: ../../tutorial/tests.rst:251
@@ -527,7 +527,7 @@ msgid ""
 "no longer exist in the database."
 msgstr ""
 "``delete``\ のviewはindexのURLへリダイレクトするはずであり、データベースに"
-"投稿記事はもはや存在しないはずです。"
+"投稿記事はもはや存在しなくなるはずです。"
 
 # c77a6516e1324918b1dcf40cef36e494
 #: ../../tutorial/tests.rst:491
@@ -542,9 +542,9 @@ msgid ""
 "file."
 msgstr ""
 "必要ではないですが、"
-"coverage（訳注: テストツールの名前）を使ったテストを実行するとき、（テスト"
-"メッセージの）出力が多過ぎないようにする、いくらかの追加設定をプロジェクト"
-"の\ ``setup.cfg``\ ファイルへ加えます。"
+"coverage（訳注: テストの網羅率を調べるテストツールの名前）を使ったテストを実行する"
+"とき、（テストメッセージの）出力が多過ぎないようにする、いくらかの追加設定を"
+"プロジェクトの\ ``setup.cfg``\ ファイルへ加えることができます。"
 
 # 56f0ff06e9da48d1ac5b190ff7452248
 #: ../../tutorial/tests.rst:497
@@ -576,13 +576,13 @@ msgid ""
 "To measure the code coverage of your tests, use the ``coverage`` command "
 "to run pytest instead of running it directly."
 msgstr ""
-"テストのコード網羅性を測定するには、pytestを直接実行する代わりに\ "
+"テストのコード網羅率を測定するには、pytestを直接実行する代わりに\ "
 "``coverage``\ コマンドを使用してpytestを実行します。"
 
 # adcc546f06f344f6b9889b928e61f5db
 #: ../../tutorial/tests.rst:537
 msgid "You can either view a simple coverage report in the terminal:"
-msgstr "簡潔な網羅性レポートを端末の中で見ることができます:"
+msgstr "簡潔な網羅率のレポートを端末の中で見ることができます:"
 
 # 4eee3830b860424d8010cb4814aeddec
 #: ../../tutorial/tests.rst:552

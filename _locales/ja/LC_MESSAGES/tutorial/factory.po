@@ -60,7 +60,7 @@ msgstr ""
 "作成するようにします。この関数は\ *アプリケーション製造工場（application "
 "factory）*\ として知られています。アプリケーションが必要とするあらゆる"
 "設定、登録、用意などは、この関数の内側で起こり、それからアプリケーションが"
-"（factory関数から）返されます。"
+"返されます（Flaskクラスのインスタンスがfactory関数から返されます）。"
 
 # 645f1b51129c44bda59a2be9c4300101
 #: ../../tutorial/factory.rst:24
@@ -146,10 +146,10 @@ msgid ""
 "It's set to ``'dev'`` to provide a convenient value during development, "
 "but it should be overridden with a random value when deploying."
 msgstr ""
-":data:`SECRET_KEY`\ は、データを安全に保つためにFlaskとその拡張によって"
+":data:`SECRET_KEY`\ は、データを安全に保つためにFlaskとFlask拡張によって"
 "使用されます。開発中には便利な値を提供するために、ここでは\ ``'dev'``\ に"
 "設定されていますが、デプロイ（訳注：本番環境などへの移行）をするときには"
-"乱数で上書きするべきです。"
+"無作為な値（random value）で上書きするべきです。"
 
 # b0c29ca6aaef4879ae08dcd540fb5419
 #: ../../tutorial/factory.rst:96
@@ -159,9 +159,9 @@ msgid ""
 "path that Flask has chosen for the instance folder. You'll learn more "
 "about the database in the next section."
 msgstr ""
-"``DATABASE``\ はSQLiteデータベースファイルが保存されるパスです。それは"
-"\ :attr:`app.instance_path <Flask.instance_path>`\ の下で、Flaskが"
-"インスタンスフォルダに選んだパスになります。次のセクションでデータベースに"
+"``DATABASE``\ はSQLiteデータベースファイルが保存されるパスです。それは、"
+"Flaskがインスタンスフォルダに選んだパスである、\ :attr:`app.instance_path "
+"<Flask.instance_path>`\ の下になります。次のセクションでデータベースに"
 "ついてさらに学習します。"
 
 # 738d9e16a0f1453b8b3a26a78095314b
@@ -200,7 +200,7 @@ msgstr ""
 ":func:`os.makedirs`\ は\ :attr:`app.instance_path <Flask.instance_path>`\ "
 "が確実に存在するようにします。Flaskはインスタンスフォルダを自動的には"
 "作成しませんが、このプロジェクトではそこにSQLiteデータベースファイルを"
-"作成するために必要になります。"
+"作成するためにインスタンスフォルダが作成されている必要があります。"
 
 # 396c0e535cb24dc1af83d701c49c7b0b
 #: ../../tutorial/factory.rst:118
