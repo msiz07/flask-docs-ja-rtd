@@ -35,8 +35,8 @@ msgstr ""
 "ファイルを作成でき、このプロジェクトの環境へFlaskをインストールしたときのよう"
 "に、その配布用ファイルを他の環境へインストールできることを意味します。"
 "これは、自分のプロジェクトのデプロイを、他のどのライブラリのインストール"
-"とも同じような扱いにし、従ってあなたは（このプロジェクトでは）何でも管理"
-"するときには全て標準的なPythonのツールを使っています。（訳注: パッケージ管理"
+"とも同じような扱いにし、従ってあなたは（このプロジェクトでは）何を管理"
+"するときにも全て標準的なPythonのツールを使っています。（訳注: パッケージ管理"
 "に関していくつかあるPythonでの標準的なツール・やり方を使って、インストールや"
 "アップグレードなどをしています）。"
 
@@ -69,7 +69,8 @@ msgid ""
 "so ``pip install yourproject.whl`` installs them."
 msgstr ""
 "プロジェクトの依存対象を、他のパッケージと同じようなやり方で管理可能になり、"
-"従って\ ``pip install yourproject.whl``\ でインストールできるようになります。"
+"従って\ ``pip install yourproject.whl``\ で依存対象をインストールできるように"
+"なります。"
 
 # 3eff4bc3b2384e7fb86684e9b6f79e7a
 #: ../../tutorial/install.rst:20
@@ -147,7 +148,7 @@ msgid ""
 "See the `official packaging guide`_ for another explanation of the files "
 "and options used."
 msgstr ""
-"ファイルと使用されているオプションの別の説明については、\ `official packaging "
+"使用されているファイルとオプションの別の説明については、\ `official packaging "
 "guide`_\ を見てください。"
 
 # 7d08ae7244704983998e7be1197c2678

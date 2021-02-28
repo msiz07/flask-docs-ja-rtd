@@ -20,7 +20,7 @@ msgstr ""
 # f81f667268cd41de8588f99003d1c7f5
 #: ../../tutorial/blog.rst:4
 msgid "Blog Blueprint"
-msgstr "ブログの青写真（Blueprint）"
+msgstr "ブログの青写真（Blog Blueprint）"
 
 # 4ba34772fda84b26ac101d9da3c1dbed
 #: ../../tutorial/blog.rst:6
@@ -32,7 +32,7 @@ msgid ""
 msgstr ""
 "ブログのblueprintを書くために、認証のblueprintを書いたときに学習した"
 "テクニックを同様に使用します。ブログは、すべての投稿記事を一覧にし、ログイン"
-"したユーザには投稿記事を作成できるようにし、そして投稿記事の作者はそれを"
+"しているユーザには投稿記事を作成できるようにし、そして投稿記事の作者はそれを"
 "編集または削除できるようにさせます。"
 
 # eb00e3c93bea4ee6884ab1abc7aad438
@@ -42,7 +42,7 @@ msgid ""
 "save your changes, try going to the URL in your browser and testing them "
 "out."
 msgstr ""
-"各viewを実装したように、開発サーバは実行したままにしてください。変更を"
+"各viewを実装したとき、開発サーバは実行したままにしてください。変更を"
 "保存するたびに、ブラウザでそのサーバのURLへ行き、それらの変更をテスト"
 "してください。"
 
@@ -109,8 +109,8 @@ msgid ""
 "generating the same ``/`` URL either way."
 msgstr ""
 "しかしながら、この後で定義する\ ``index``\ のviewに対するエンドポイントは\ "
-"``blog.index``\ になります。認証のviewのいくつかは、単なる\ ``index``\ "
-"のエンドポイントを参照します。\ ``url_for('index')``\ または\ "
+"``blog.index``\ になります。認証のviewのいくつかは、（blog.indexとは異なる）"
+"単なる\ ``index``\ のエンドポイントを参照します。\ ``url_for('index')``\ または\ "
 "``url_for('blog.index')``\ のどちらも機能し、いずれも同一の\ ``/``\ を"
 "URLとして生成するように、\ :meth:`app.add_url_rule()\ <Flask.add_url_rule>`\ "
 "はエンドポイント名\ ``'index'``\ をURLの\ ``/``\ と関連付けます。"
@@ -182,7 +182,7 @@ msgid ""
 msgstr ""
 "``create``\ のviewは、authの\ ``register``\ のviewと同じように機能します。"
 "formが表示されるか、postされたデータが検証されてから、データベースへその"
-"投稿記事の追加されるか、またはエラーが表示されます。"
+"投稿記事が追加されるか、またはエラーが表示されます。"
 
 # a369e99b60784d5bbaa714e72e058b29
 #: ../../tutorial/blog.rst:138
@@ -192,7 +192,7 @@ msgid ""
 " be redirected to the login page."
 msgstr ""
 "前の方で書いた\ ``login_required``\ デコレータは、blogのviewで使用します。"
-"これらのviewへ訪れるためにはユーザはログインする必要があり、そうでなければ"
+"これらのviewへ訪れるためにはユーザはログインしている必要があり、そうでなければ"
 "ログインページへとリダイレクトされます。"
 
 # 7aa3d90b2d344c82b846b955a188fddb
@@ -214,8 +214,8 @@ msgid ""
 "it from each view."
 msgstr ""
 "``update``\ と\ ``delete``\ のviewは両方とも、\ ``id``\ を使って\ ``post``\ "
-"（投稿記事）を取得し、ログインしたユーザと作者が一致しているかチェックする必要が"
-"あります。コードの重複を避けるために、\ ``post``\ を取得する関数を書いて"
+"（投稿記事）を取得し、ログインしているユーザと作者が一致しているかチェックする"
+"必要があります。コードの重複を避けるために、\ ``post``\ を取得する関数を書いて"
 "各viewから呼び出すことが可能です。"
 
 # ce6758054b274cd0bec79e051ad395bb
@@ -265,10 +265,9 @@ msgstr ""
 "それが\ :class:`int`\ であることを確認し、それを\ ``id``\ 引数として"
 "渡します。もし\ ``int:``\ を指定せず代わりに\ ``<id>``\ を使用した場合は、"
 "それは文字列になります。updateのページに対応するURLを生成するには、"
-"\ :func:`url_for`\ に\ ``id``\ を渡し、"
-"「\ ``url_for('blog.update', id=post['id'])``\ 」（のid部分）に何を"
-"埋めればよいか分かるようにする必要があります。これは前述の\ "
-"``index.html``\ ファイルでも同様です。"
+"\ :func:`url_for`\ に\ ``id``\ を渡し、（id部分に）何を埋めればよいか分かる"
+"ようにする必要があります: 「\ ``url_for('blog.update', id=post['id'])``\ 」。"
+"これは前述の\ ``index.html``\ ファイルでも同様です。"
 
 # cdb7cf073b364ff38c4e18951d958040
 #: ../../tutorial/blog.rst:268

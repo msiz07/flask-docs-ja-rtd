@@ -33,9 +33,9 @@ msgid ""
 msgstr ""
 "viewの関数は、アプリケーションへのリクエストに対して応答するために書くコード"
 "になります。Flaskは、受信する（incoming）リクエストのURLを、それを処理すべき"
-"viewへと照らし合わせるためにパターンを使用します。送信する（outgoing）"
-"レスポンスへとFlaskが変換するデータを、viewは返します。"
-"URLからview名とは別方向に、viewに対応するURLを（viewの）名前と引数に"
+"viewへと照合するためにパターンを使用します。送信用の（outgoing）"
+"responseへとFlaskが変換するデータを、viewは返します。"
+"URLからview名とは別の向きで、viewに対応するURLを（viewの）名前と引数に"
 "基づいて生成することも、Flaskでは可能です。"
 
 # 6889b05a6af14511a1ba49e7b9de80eb
@@ -53,10 +53,10 @@ msgid ""
 "function."
 msgstr ""
 ":class:`Blueprint`\ は、関連するviewおよびその他のコードをグループへと"
-"編成する方法です。viewおよびその他のコードを直接アプリケーションに"
-"登録するよりも、それらをblueprintに登録します。それから、factory関数の"
-"中でアプリケーションが利用可能になったときに、blueprintをアプリケーションに"
-"登録します。"
+"編成する方法です。viewおよびその他のコードを直接Flaskアプリケーションに"
+"登録するよりも、代わりにそれらをblueprintに登録します。それから、factory関数の"
+"中でFlaskアプリケーションが利用可能になったときに、blueprintをFlask"
+"アプリケーションに登録します。"
 
 # a95ba696c5dd40ae9c3b2b9b5c305c7f
 #: ../../tutorial/views.rst:22
@@ -92,7 +92,7 @@ msgid ""
 " all the URLs associated with the blueprint."
 msgstr ""
 "これは\ ``'auth'``\ と名付けられた\ :class:`Blueprint`\ を作成します。"
-"アプリケーションのオブジェクトと似たように、blueprintは自分がどこで定義"
+"Flaskアプリケーションのオブジェクトと似たように、blueprintは自分がどこで定義"
 "されているか知る必要があり、従って\ ``__name__``\ が2番目の引数として"
 "渡されています。\ ``url_prefix``\ は、blueprintと関連付けられる全てのURL"
 "の（パス部分の）先頭に付けられます。"
@@ -186,7 +186,7 @@ msgid ""
 msgstr ""
 ":attr:`request.form <Request.form>`\ は、提出されたformのキーと値とを"
 "対応付ける、\ :class:`dict`\ の特別なタイプです。ユーザは自分の\ "
-"``username``\ と\ ``password``\ を入力する予定です。"
+"``username``\ と\ ``password``\ を入力します。"
 
 # 211f41286c744615911e1fe358c275d9
 #: ../../tutorial/views.rst:126
@@ -251,8 +251,8 @@ msgid ""
 msgstr ""
 "ユーザ情報を格納した後、ログインページへリダイレクトさせます。\ "
 ":func:`url_for`\ は、ログインのviewの名前（関数の名前）から対応するURLを"
-"生成します。これはURLを後から変更しても、そこにリンクしている全てのコード"
-"を変更させずにすむことが可能になるため、URLを（コードの中に）直接書き込む"
+"生成します。これはURLを後から変更しても、そのURLにリンクしている全てのコード"
+"を変更させずにすますことが可能になるため、URLを（コードの中に）直接書き込む"
 "よりも好ましいやり方です。\ :func:`redirect`\ は、生成されたURLへ"
 "リダイレクトさせるレスポンスを生成します。"
 
@@ -291,7 +291,7 @@ msgstr "このviewは上記の\ ``register``\ のviewと同じパターンに従
 # 3c50deef7e3145548dc7b49d230dcb90
 #: ../../tutorial/views.rst:199
 msgid "There are a few differences from the ``register`` view:"
-msgstr "``register``\ のviewとは少し違うところがあります:"
+msgstr "``register``\ のviewとは違うところが少しあります:"
 
 # efe46c07de4145d4b66548fbd17edd25
 #: ../../tutorial/views.rst:201
@@ -335,7 +335,8 @@ msgid ""
 msgstr ""
 "この時点でユーザの\ ``id``\ は\ :data:`session`\ へ格納され、それは以降の"
 "リクエストで利用可能になります。各リクエストの開始時に、ユーザがログイン"
-"していた場合はユーザの情報が読み込まれて、他のviewからも利用可能になります。"
+"していた場合にはユーザの情報は読み込まれて、他のviewからも利用可能にされる"
+"べきです。"
 
 # 3fab576897e248f78abda0483daed639
 #: ../../tutorial/views.rst:232
@@ -383,7 +384,7 @@ msgid ""
 "logged in. A *decorator* can be used to check this for each view it's "
 "applied to."
 msgstr ""
-"ブログの投稿記事を作成、編集、削除するにはユーザがログインする必要があります。"
+"ブログの投稿記事を作成、編集、削除するにはユーザがログインしている必要があります。"
 "\ *デコレータ（decorator）*\ を使用すると、decoratorを適用した各viewで"
 "ログインをチェックできます。"
 
@@ -441,7 +442,7 @@ msgid ""
 "wrote above is ``'auth.login'`` because you added it to the ``'auth'`` "
 "blueprint."
 msgstr ""
-"blueprintを使用するときは、blueprintの名前は関数名の前に付けられ、"
+"blueprintを使用するときは、blueprintの名前が関数名の前に付けられ、"
 "従って先程書いた\ ``login``\ 関数のエンドポイントは、blueprintの\ "
 "``'auth'``\ にlogin関数を追加しているため\ ``'auth.login'``\ に"
 "なります。"

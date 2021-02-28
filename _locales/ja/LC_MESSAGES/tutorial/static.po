@@ -42,9 +42,9 @@ msgid ""
 "the ``flaskr/static`` directory and serves it. The ``base.html`` template"
 " already has a link to the ``style.css`` file:"
 msgstr ""
-"Flaskは\ ``flaskr/static``\ ディレクトリからの相対パスを取る\ ``static``\ の"
-"viewを自動的に追加して支給します。\ ``base.html``\ テンプレートは、既に\ "
-"``style.css``\ ファイルへのリンクを持っています:"
+"Flaskは\ ``flaskr/static``\ ディレクトリからの相対パスを取り（対応する"
+"ファイルを）支給する\ ``static``\ のviewを自動的に追加します。\ ``base.html``\ "
+"テンプレートは、既に\ ``style.css``\ ファイルへのリンクを持っています:"
 
 # 271ff208c5ec47e7a085da1a11e288e5
 #: ../../tutorial/static.rst:17

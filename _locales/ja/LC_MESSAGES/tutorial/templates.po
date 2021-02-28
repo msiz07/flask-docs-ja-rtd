@@ -136,7 +136,7 @@ msgid ""
 ":func:`flash` in the views to show error messages, and this is the code "
 "that will display them."
 msgstr ""
-"ページタイトルの後、そしてcontentの前に、このテンプレートは\ :func:"
+"ページのtitleの後、そしてcontentの前に、このテンプレートは\ :func:"
 "`get_flashed_messages`\ から返される各メッセージ上をループします。"
 "エラーを表示するためにviewの中で\ :func:`flash`\ を使用しており、"
 "それ（viewの中でflashを使ったエラーメッセージ）を表示するコードがこれ"
@@ -210,7 +210,7 @@ msgid ""
 msgstr ""
 "``{% extends 'base.html' %}``\ は、このテンプレートはベースのテンプレート"
 "からブロックを置き換えるものだということをJinjaへ伝えます。表示される"
-"全てのcontentは、ベースのテンプレートのブロックを上書きする\ ``{% block %}``\ "
+"全てのcontentは、ベースのテンプレートのブロックを上書きする、\ ``{% block %}``\ "
 "タグの内側で現れる必要があります。"
 
 # 2cb446d687694aa290ea8b6378a15391
@@ -243,7 +243,7 @@ msgstr ""
 "いる場合は、もしくは、リクエストの作成にブラウザ以外の何かをユーザが"
 "使用している場合は、まだFlaskのviewでデータを検証したいでしょう。サーバ側"
 "で常に網羅的に検証することは、クライアント側で何かしらの検証を同様に行うと"
-"しても、とても重要です。"
+"しても、重要です。"
 
 # 630b73e5bfdf43348bac9727f31cf958
 #: ../../tutorial/templates.rst:144
