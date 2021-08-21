@@ -1,5 +1,6 @@
 -e ./flask[docs]
 sphinx-intl
+sphinxcontrib-trimblank
 readthedocs-sphinx-ext
 invoke
 git+https://github.com/msiz07/sphinx-hoverorig.git@main
