@@ -22,7 +22,6 @@ python:
     #  extra_requirements:
     #    - docs
     - requirements: requirements.txt
-    - requirements: flask/docs/requirements.txt
 
 submodules:
   include: all

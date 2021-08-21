@@ -1,4 +1,5 @@
--e ./flask[docs]
+-e ./flask
+-r ./flask/requirements/docs.txt
 sphinx-intl
 sphinxcontrib-trimblank
 readthedocs-sphinx-ext
