@@ -20,7 +20,7 @@ msgstr ""
 # b8f922e026474febba06b021d7f0bcf1
 #: ../../patterns/templateinheritance.rst:4
 msgid "Template Inheritance"
-msgstr ""
+msgstr "テンプレートの継承"
 
 # 9bcd4bf770704969b5675806ab48d751
 #: ../../patterns/templateinheritance.rst:6
@@ -30,6 +30,10 @@ msgid ""
 "contains all the common elements of your site and defines **blocks** that"
 " child templates can override."
 msgstr ""
+"Jinjの最も強力な部分はテンプレート継承です。テンプレート継承は、自分の"
+"サイトで共通な要素をすべて含み、子テンプレートが上書きできる **blocks** "
+"を定義する、ベースの「骨組み（skelton）」テンプレートを構築できるように"
+"します"
 
 # 38ad3aba5f644011ab6a5cd224df44c9
 #: ../../patterns/templateinheritance.rst:10
@@ -37,11 +41,13 @@ msgid ""
 "Sounds complicated but is very basic. It's easiest to understand it by "
 "starting with an example."
 msgstr ""
+"複雑に聞こえますがとても基本的なものです。例を使って始めれば最も容易に"
+"理解できるでしょう。"
 
 # 6005f499132941ecb91da7c730237958
 #: ../../patterns/templateinheritance.rst:15
 msgid "Base Template"
-msgstr ""
+msgstr "ベースのテンプレート"
 
 # da22420925964bf3836edd70e10f1a13
 #: ../../patterns/templateinheritance.rst:17
@@ -51,6 +57,9 @@ msgid ""
 "It's the job of \"child\" templates to fill the empty blocks with "
 "content:"
 msgstr ""
+"このテンプレートは、 :file:`layout.html` と呼びますが、シンプルな２列の"
+"ページ用に使える、シンプルなHTMLの骨組みになるドキュメントを定義します。"
+"空のブロックをコンテンツで埋めるのは「子」テンプレートの仕事です："
 
 # be845eab787541729c74867d5d1f9219
 #: ../../patterns/templateinheritance.rst:41
@@ -59,16 +68,20 @@ msgid ""
 "templates can fill in. All the `block` tag does is tell the template "
 "engine that a child template may override those portions of the template."
 msgstr ""
+"この例では、 ``{% block %}`` タグは子テンプレートで埋めることが可能な４つの"
+"ブロックを定義します。すべての `block` タグが行うことは、子テンプレートが"
+"テンプレートのそれらの場所を上書きするかもしれないと、テンプレート・"
+"エンジンに伝えることです。"
 
 # 0a570db32d7c4bc99964ea384c15fc3b
 #: ../../patterns/templateinheritance.rst:46
 msgid "Child Template"
-msgstr ""
+msgstr "子テンプレート"
 
 # 2e53c6278010415eb6b4b9fbb5c28c33
 #: ../../patterns/templateinheritance.rst:48
 msgid "A child template might look like this:"
-msgstr ""
+msgstr "子テンプレートは以下のようになるでしょう："
 
 # 2bda7b8a34dd4250847b67ed16cde0b5
 #: ../../patterns/templateinheritance.rst:66
@@ -80,4 +93,10 @@ msgid ""
 " tag must be the first tag in the template.  To render the contents of a "
 "block defined in the parent template, use ``{{ super() }}``."
 msgstr ""
+"``{% extends %}`` タグがここでは鍵になります。それはテンプレート・"
+"エンジンに、このテンプレートは他のテンプレートを「拡張」することを伝えます。"
+"テンプレート・システムがこのテンプレートを評価するとき、最初に親の場所を"
+"見つけます。extendsタグはテンプレートの最初のタグである必要があります。"
+"親テンプレートの中で定義されたブロックの内容を表示（render）するには、"
+"``{{ super() }}`` を使います。"
 
