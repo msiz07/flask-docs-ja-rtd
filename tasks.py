@@ -95,17 +95,17 @@ def rtd_trans(ctx):
 def update_git_submodule(ctx):
     """Update git submodule then sync with its requirements.txt"""
     run("git submodule update")
-    flask_docs_req = open(os.path.join("flask", "docs", "requirements.txt"))
-    with open("requirements.txt", "w") as f_out:
-        f_out.write(flask_docs_req.read())
-        f_out.write(
-            "# install current flask under 'flask' submodule\n"
-            "-e .\n"
-            "sphinx-intl\n"
-            "readthedocs-sphinx-ext\n"
-            "invoke\n"
-            "git+https://github.com/msiz07/sphinx-hoverorig.git@main\n"
-        )
+    #flask_docs_req = open(os.path.join("flask", "docs", "requirements.txt"))
+    #with open("requirements.txt", "w") as f_out:
+    #    f_out.write(flask_docs_req.read())
+    #    f_out.write(
+    #        "# install current flask under 'flask' submodule\n"
+    #        "-e .\n"
+    #        "sphinx-intl\n"
+    #        "readthedocs-sphinx-ext\n"
+    #        "invoke\n"
+    #        "git+https://github.com/msiz07/sphinx-hoverorig.git@main\n"
+    #    )
 
 
 @task(update_git_submodule)
