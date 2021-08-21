@@ -34,8 +34,8 @@ extensions.append("sphinxcontrib.trimblank") # trim unnatural spaces in CJK
 # see, https://github.com/amedama41/sphinxcontrib-trimblank
 trimblank_enabled = True
 trimblank_keep_alnum_blank = False
-trimblank_keep_blank_before = r"[\s(]"
-trimblank_keep_blank_after = r"[\s),.:?]"
+trimblank_keep_blank_before = r"[\s(a-zA-Z]"
+trimblank_keep_blank_after = r"[\s),.:?a-zA-Z]"
 trimblank_debug = False
 
 setup_original = setup  # from 'flask/docs/conf.py'
