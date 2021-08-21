@@ -3,7 +3,8 @@ from sphinx.util.pycompat import execfile_
 
 BASEDIR = os.path.dirname(os.path.abspath(__file__))
 
-execfile_(os.path.join(BASEDIR, 'flask', 'docs', 'conf.py'), globals())
+orig_root = "flask"
+execfile_(os.path.join(BASEDIR, orig_root, 'docs', 'conf.py'), globals())
 sys.path.append(BASEDIR)
 
 # intersphinx_mapping for markupsafe is missing in original conf.py
@@ -24,7 +25,7 @@ html_context['GOOGLE_SITE_VERIFICATION'] = os.environ.get('GOOGLE_SITE_VERIFICAT
 
 
 # support for tooltip showing original text ----------------------------
-extensions = vars().get("extensions", [])
+extensions = globals().get("extensions", [])
 #extensions.append("sphinxext.showorig")
 extensions.append("sphinxext.hoverorig")
 extensions.append("readthedocs_ext.readthedocs")
@@ -37,7 +38,7 @@ def setup(app):
     #logger = logging.getLogger(__name__)
     #logger.info("setup in conf.py is called")
 
-    app.srcdir = os.path.join(BASEDIR, 'flask', 'docs')
+    app.srcdir = os.path.join(BASEDIR, orig_root, 'docs')
     app.confdir = app.srcdir
 
     setup_original(app)
