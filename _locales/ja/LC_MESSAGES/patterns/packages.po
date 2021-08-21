@@ -8,46 +8,42 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
+"Generated-By: Babel 2.9.1\n"
 
 # 5baa87b87f9444ddbd34b2534fc6298c
-#: ../../patterns/packages.rst:4
-msgid "Larger Applications"
+#: ../../flask/docs/patterns/packages.rst:2
+#, fuzzy
+msgid "Large Applications as Packages"
 msgstr "より大きなアプリケーション"
 
 # f8105b7d7e4442bc80e0369363585e7b
-#: ../../patterns/packages.rst:6
+#: ../../flask/docs/patterns/packages.rst:4
 msgid "Imagine a simple flask application structure that looks like this::"
 msgstr ""
 "以下のような、flaskアプリケーションのシンプルな構造を想像してください::"
 
-# dd8a8634308340ff89687122f39bf4db
-#: ../../patterns/packages.rst:18
+#: ../../flask/docs/patterns/packages.rst:16
 msgid ""
 "While this is fine for small applications, for larger applications it's a"
-" good idea to use a package instead of a module. The :ref:`tutorial "
-"<tutorial>` is structured to use the package pattern, see the "
+" good idea to use a package instead of a module. The "
+":doc:`/tutorial/index` is structured to use the package pattern, see the "
 ":gh:`example code <examples/tutorial>`."
 msgstr ""
-"これは小さなアプリケーションではよいですが、より大きなアプリケーションでは"
-"モジュールの代わりにパッケージを使うのがよい考えです。\ :ref:`チュートリアル "
-"<tutorial>`\ ではパッケージのパターンを使っていますので、\ :gh:`コード例 "
-"<examples/tutorial>`\ を確認してください。"
 
 # 8e8d0ca42b3b45e4a04fc7dfdd1ec9c1
-#: ../../patterns/packages.rst:24
+#: ../../flask/docs/patterns/packages.rst:22
 msgid "Simple Packages"
 msgstr "シンプルなパッケージ"
 
 # 851896b2bfbf4af4ad1fe11c9cc0e4cf
-#: ../../patterns/packages.rst:26
+#: ../../flask/docs/patterns/packages.rst:24
 msgid ""
 "To convert that into a larger one, just create a new folder "
 ":file:`yourapplication` inside the existing one and move everything below"
@@ -63,12 +59,13 @@ msgstr ""
 
 # 9e487de33094457b9aaf35b49f379b08
 # 0e15239ac6c44aaba552e70474825b97
-#: ../../patterns/packages.rst:31 ../../patterns/packages.rst:105
+#: ../../flask/docs/patterns/packages.rst:29
+#: ../../flask/docs/patterns/packages.rst:139
 msgid "You should then end up with something like that::"
 msgstr "そうすると、以下のようになるはずです::"
 
 # 177a41e1ab67443582b3c60c018e62c0
-#: ../../patterns/packages.rst:44
+#: ../../flask/docs/patterns/packages.rst:42
 msgid ""
 "But how do you run your application now?  The naive ``python "
 "yourapplication/__init__.py`` will not work.  Let's just say that Python "
@@ -85,27 +82,44 @@ msgstr ""
 "内容でただ追加だけしてください::"
 
 # 7f652089641e4186b7ff6409b48b64ce
-#: ../../patterns/packages.rst:61
+#: ../../flask/docs/patterns/packages.rst:59
+#, fuzzy
 msgid ""
 "In order to run the application you need to export an environment "
-"variable that tells Flask where to find the application instance::"
+"variable that tells Flask where to find the application instance:"
 msgstr ""
 "アプリケーションを実行するためには、アプリケーションのインスタンスを"
 "どこで見つけられるかFlaskへ伝える環境変数をexportする必要があります::"
 
+#: ../../flask/docs/patterns/packages.rst:64
+#: ../../flask/docs/patterns/packages.rst:88
+msgid "Bash"
+msgstr ""
+
+#: ../../flask/docs/patterns/packages.rst:70
+#: ../../flask/docs/patterns/packages.rst:94
+msgid "CMD"
+msgstr ""
+
+#: ../../flask/docs/patterns/packages.rst:76
+#: ../../flask/docs/patterns/packages.rst:100
+msgid "Powershell"
+msgstr ""
+
 # c37943e6bbed42f5a5cf03b43d962575
-#: ../../patterns/packages.rst:66
+#: ../../flask/docs/patterns/packages.rst:82
+#, fuzzy
 msgid ""
 "If you are outside of the project directory make sure to provide the "
 "exact path to your application directory. Similarly you can turn on the "
-"development features like this::"
+"development features like this:"
 msgstr ""
 "もしプロジェクトのディレクトリの外側に居る場合は、自分のプロジェクトの"
 "ディレクトリへのパスを正確に提供するよう確実にしてください。同様に、"
 "以下のようにして開発機能（development features）を有効にできます::"
 
 # c6fc6fc24dd743fa89077819bab15c17
-#: ../../patterns/packages.rst:72
+#: ../../flask/docs/patterns/packages.rst:106
 msgid ""
 "In order to install and run the application you need to issue the "
 "following commands::"
@@ -114,7 +128,7 @@ msgstr ""
 "発行する必要があります::"
 
 # c25964055e0d49c1a8895435c4fbf0ad
-#: ../../patterns/packages.rst:78
+#: ../../flask/docs/patterns/packages.rst:112
 msgid ""
 "What did we gain from this?  Now we can restructure the application a bit"
 " into multiple modules.  The only thing you have to remember is the "
@@ -125,7 +139,7 @@ msgstr ""
 "以下の手短なチェックリストです::"
 
 # ef83e901975742feb6eb53565e8a1edb
-#: ../../patterns/packages.rst:82
+#: ../../flask/docs/patterns/packages.rst:116
 msgid ""
 "the `Flask` application object creation has to be in the "
 ":file:`__init__.py` file.  That way each module can import it safely and "
@@ -137,7 +151,7 @@ msgstr ""
 "適切なパッケージが分かるようにできます。"
 
 # baa688e39581435f96f96dcd8ea9c035
-#: ../../patterns/packages.rst:85
+#: ../../flask/docs/patterns/packages.rst:119
 msgid ""
 "all the view functions (the ones with a :meth:`~flask.Flask.route` "
 "decorator on top) have to be imported in the :file:`__init__.py` file. "
@@ -152,22 +166,22 @@ msgstr ""
 "作成された後で**\ importします。"
 
 # 28d1167fa0dc42269a0e758a1637cc31
-#: ../../patterns/packages.rst:90
+#: ../../flask/docs/patterns/packages.rst:124
 msgid "Here's an example :file:`__init__.py`::"
 msgstr ":file:`__init__.py`\ の例がこちらです::"
 
 # b23ab12e89e942edbdd28f80001e9e3b
-#: ../../patterns/packages.rst:97
+#: ../../flask/docs/patterns/packages.rst:131
 msgid "And this is what :file:`views.py` would look like::"
 msgstr "そしてこれは、\ :file:`views.py`\ がどのようになるか示しています::"
 
 # f540b10c51f24d87a8646e3e17875f80
-#: ../../patterns/packages.rst:120
+#: ../../flask/docs/patterns/packages.rst:154
 msgid "Circular Imports"
 msgstr "循環import（Circular Imports）"
 
 # 18cb676b5d89483f9bd58377fdc156bc
-#: ../../patterns/packages.rst:122
+#: ../../flask/docs/patterns/packages.rst:156
 msgid ""
 "Every Python programmer hates them, and yet we just added some: circular "
 "imports (That's when two modules depend on each other.  In this case "
@@ -186,31 +200,48 @@ msgstr ""
 "ファイルの最後で行うようにしているためです。"
 
 # 66b8e9a3e5254ab2a45c6c469cc64ac5
-#: ../../patterns/packages.rst:130
+#: ../../flask/docs/patterns/packages.rst:164
+#, fuzzy
 msgid ""
 "There are still some problems with that approach but if you want to use "
-"decorators there is no way around that.  Check out the :ref:`becomingbig`"
-" section for some inspiration how to deal with that."
+"decorators there is no way around that.  Check out the "
+":doc:`/becomingbig` section for some inspiration how to deal with that."
 msgstr ""
 "まだいくつかの問題がこのアプローチでも残りますが、もしデコレータを使いたい"
 "場合は避けようがありません。この問題をどのように扱うかに関する、いくらかの"
 "ひらめきが欲しいときは、\ :ref:`becomingbig`\ をチェックしてください。"
 
 # cfd326979814485d90c468ab184d7393
-#: ../../patterns/packages.rst:138
+#: ../../flask/docs/patterns/packages.rst:170
 msgid "Working with Blueprints"
 msgstr "Blueprintsを使った対応"
 
 # 9fc2ac8bbcff44e584860d6b486fb231
-#: ../../patterns/packages.rst:140
+#: ../../flask/docs/patterns/packages.rst:172
+#, fuzzy
 msgid ""
 "If you have larger applications it's recommended to divide them into "
 "smaller groups where each group is implemented with the help of a "
 "blueprint.  For a gentle introduction into this topic refer to the "
-":ref:`blueprints` chapter of the documentation."
+":doc:`/blueprints` chapter of the documentation."
 msgstr ""
 "もしも大きなアプリケーションがあるときは、小さなグループへ分割し、"
 "blueprintの助けを使って各グループを実装することが推奨されます。この"
 "話題に対する穏やかな導入説明については\ :ref:`blueprints`\ の章の"
 "ドキュメントを参照してください。"
+
+# dd8a8634308340ff89687122f39bf4db
+#~ msgid ""
+#~ "While this is fine for small "
+#~ "applications, for larger applications it's "
+#~ "a good idea to use a package "
+#~ "instead of a module. The :ref:`tutorial"
+#~ " <tutorial>` is structured to use the"
+#~ " package pattern, see the :gh:`example "
+#~ "code <examples/tutorial>`."
+#~ msgstr ""
+#~ "これは小さなアプリケーションではよいですが、より大きなアプリケーションでは"
+#~ "モジュールの代わりにパッケージを使うのがよい考えです。\ :ref:`チュートリアル "
+#~ "<tutorial>`\ ではパッケージのパターンを使っていますので、\ :gh:`コード例 "
+#~ "<examples/tutorial>`\ を確認してください。"
 

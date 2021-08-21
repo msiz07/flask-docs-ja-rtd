@@ -8,22 +8,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 21:10+0900\n"
+"POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.8.0\n"
+"Generated-By: Babel 2.9.1\n"
 
 # 787cd2e2d0754a0590816a20c3fa8a55
-#: ../../flask/docs/becomingbig.rst:4
+#: ../../flask/docs/becomingbig.rst:2
 msgid "Becoming Big"
 msgstr "巨大化（Becoming Big）"
 
 # ae85c5eebf014f19ae00475816e66ca9
-#: ../../flask/docs/becomingbig.rst:6
+#: ../../flask/docs/becomingbig.rst:4
 msgid ""
 "Here are your options when growing your codebase or scaling your "
 "application."
@@ -32,12 +32,12 @@ msgstr ""
 "の規模を大きくしたいときの選択肢を説明します。"
 
 # d650dad6a3764fc89491f3c947aaf838
-#: ../../flask/docs/becomingbig.rst:9
+#: ../../flask/docs/becomingbig.rst:7
 msgid "Read the Source."
 msgstr "ソースの読み込み"
 
 # e71b539393d04e5a869f8e30e154e994
-#: ../../flask/docs/becomingbig.rst:11
+#: ../../flask/docs/becomingbig.rst:9
 msgid ""
 "Flask started in part to demonstrate how to build your own framework on "
 "top of existing well-used tools Werkzeug (WSGI) and Jinja (templating), "
@@ -59,14 +59,14 @@ msgstr ""
 "に、Flask内部のユーティリティは文書化しています。"
 
 # 4d0d795015f040a0a00e6b2316488b87
-#: ../../flask/docs/becomingbig.rst:21
+#: ../../flask/docs/becomingbig.rst:19
 msgid "Hook. Extend."
 msgstr "フック。Flask拡張。"
 
-#: ../../flask/docs/becomingbig.rst:23
+#: ../../flask/docs/becomingbig.rst:21
 msgid ""
-"The :ref:`api` docs are full of available overrides, hook points, and "
-":ref:`signals`. You can provide custom classes for things like the "
+"The :doc:`/api` docs are full of available overrides, hook points, and "
+":doc:`/signals`. You can provide custom classes for things like the "
 "request and response objects. Dig deeper on the APIs you use, and look "
 "for the customizations which are available out of the box in a Flask "
 "release. Look for ways in which your project can be refactored into a "
@@ -74,29 +74,22 @@ msgid ""
 ":doc:`/extensions` in the community, and look for patterns to build your "
 "own extensions if you do not find the tools you need."
 msgstr ""
-":ref:`api`\ 文書には、オーバーライド、フックできる点、そして\ "
-":ref:`signals`\ がたくさんあります。requestやresponseオブジェクトのような"
-"ものに対する独自のクラスは自分で提供可能です。自分が使うAPIを掘り下げて、"
-"Flaskのリリースの中で用意されている利用可能なカスタマイズ方法を探してくだ"
-"さい。Flask拡張やユーティリティの集合へと自分のプロジェクトを再構成できる"
-"やり方を探してください。コミュニティにある多くの\ :doc:`/extensions`\ "
-"を探索して、もし自分が必要とするツールを探し出せない場合は自分独自のFlask"
-"拡張を構築するパターンを探してください。"
 
 # 5ef745c4b6d441b29ced147490ff6908
-#: ../../flask/docs/becomingbig.rst:33
+#: ../../flask/docs/becomingbig.rst:31
 msgid "Subclass."
 msgstr "サブクラス"
 
 # 9ccb5f8cb09642bb98b05d5d95189d9d
-#: ../../flask/docs/becomingbig.rst:35
+#: ../../flask/docs/becomingbig.rst:33
+#, fuzzy
 msgid ""
 "The :class:`~flask.Flask` class has many methods designed for "
 "subclassing. You can quickly add or customize behavior by subclassing "
 ":class:`~flask.Flask` (see the linked method docs) and using that "
 "subclass wherever you instantiate an application class. This works well "
-"with :ref:`app-factories`. See :doc:`/patterns/subclassing` for an "
-"example."
+"with :doc:`/patterns/appfactories`. See :doc:`/patterns/subclassing` for "
+"an example."
 msgstr ""
 ":class:`~flask.Flask`\ クラスは、サブクラス用に設計された多くのメソッドを"
 "持ちます。\ :class:`~flask.Flask`\ をサブクラス化して振舞を素早く追加または"
@@ -106,18 +99,19 @@ msgstr ""
 "します。例は\ :doc:`/patterns/subclassing`\ を調べてください。"
 
 # 4dedd78154f7417c8dc59f7b2c42dd0b
-#: ../../flask/docs/becomingbig.rst:42
+#: ../../flask/docs/becomingbig.rst:40
 msgid "Wrap with middleware."
 msgstr "ミドルウェアを使った包み込み（Wrap with middleware）"
 
 # 3d58ea3ac639424e8c5793ede176e4e6
-#: ../../flask/docs/becomingbig.rst:44
+#: ../../flask/docs/becomingbig.rst:42
+#, fuzzy
 msgid ""
-"The :ref:`app-dispatch` chapter shows in detail how to apply middleware. "
-"You can introduce WSGI middleware to wrap your Flask instances and "
-"introduce fixes and changes at the layer between your Flask application "
-"and your HTTP server. Werkzeug includes several `middlewares "
-"<https://werkzeug.palletsprojects.com/middleware/>`_."
+"The :doc:`/patterns/appdispatch` pattern shows in detail how to apply "
+"middleware. You can introduce WSGI middleware to wrap your Flask "
+"instances and introduce fixes and changes at the layer between your Flask"
+" application and your HTTP server. Werkzeug includes several `middlewares"
+" <https://werkzeug.palletsprojects.com/middleware/>`_."
 msgstr ""
 ":ref:`app-dispatch`\ 章は、ミドルウェアをどのように適用するかの詳細を示し"
 "ます。自分のFlaskインスタンスを包み込むWSGIミドルウェアを導入して、自分の"
@@ -126,12 +120,12 @@ msgstr ""
 "<https://Werkzeug.palletsprojects.com/middleware/>`_\ を含んでいます。"
 
 # acc1b7b7b7f44e9190746c3e5acb016c
-#: ../../flask/docs/becomingbig.rst:51
+#: ../../flask/docs/becomingbig.rst:49
 msgid "Fork."
 msgstr "フォーク"
 
 # cb343207fcfa4e6d9294d1ab9255e21d
-#: ../../flask/docs/becomingbig.rst:53
+#: ../../flask/docs/becomingbig.rst:51
 msgid ""
 "If none of the above options work, fork Flask.  The majority of code of "
 "Flask is within Werkzeug and Jinja2.  These libraries do the majority of "
@@ -152,7 +146,7 @@ msgstr ""
 "これは自然なことです。"
 
 # 1504e4be90d040bbb94bf4250e426af2
-#: ../../flask/docs/becomingbig.rst:61
+#: ../../flask/docs/becomingbig.rst:59
 msgid ""
 "This is not unique to Flask.  Many people use patched and modified "
 "versions of their framework to counter shortcomings.  This idea is also "
@@ -165,7 +159,7 @@ msgstr ""
 "しても、どの変更もFlaskへ戻して貢献するように課せられることはありません。"
 
 # 07f5e968d6b9444c86e8c2ae22ea46cf
-#: ../../flask/docs/becomingbig.rst:66
+#: ../../flask/docs/becomingbig.rst:64
 msgid ""
 "The downside of forking is of course that Flask extensions will most "
 "likely break because the new framework has a different import name. "
@@ -179,12 +173,12 @@ msgstr ""
 "この理由から、フォークは最後の手段とするべきです。"
 
 # 1795018800bd4390911f58f907dad510
-#: ../../flask/docs/becomingbig.rst:73
+#: ../../flask/docs/becomingbig.rst:71
 msgid "Scale like a pro."
 msgstr "プロのような規模変更（Scale like a pro）"
 
 # 7b63cfdddd274c6082366d485eda181d
-#: ../../flask/docs/becomingbig.rst:75
+#: ../../flask/docs/becomingbig.rst:73
 msgid ""
 "For many web applications the complexity of the code is less an issue "
 "than the scaling for the number of users or data entries expected.  Flask"
@@ -198,7 +192,7 @@ msgstr ""
 "の実装およびその上で走らせるwebサーバによってのみ制限されます。"
 
 # c194a0f256fa46e1b9404246d11963e5
-#: ../../flask/docs/becomingbig.rst:81
+#: ../../flask/docs/becomingbig.rst:79
 msgid ""
 "Scaling well means for example that if you double the amount of servers "
 "you get about twice the performance.  Scaling bad means that if you add a"
@@ -211,7 +205,7 @@ msgstr ""
 "のサーバのサポート自体されないということです。"
 
 # b49d7b57dacb4957aa7e7b991e6df27b
-#: ../../flask/docs/becomingbig.rst:86
+#: ../../flask/docs/becomingbig.rst:84
 msgid ""
 "There is only one limiting factor regarding scaling in Flask which are "
 "the context local proxies.  They depend on context which in Flask is "
@@ -232,11 +226,11 @@ msgstr ""
 "下支えするWerkzeugライブラリでうまくサポートされています。"
 
 # 86080614ca624c77a2d981e4dfa7b1fe
-#: ../../flask/docs/becomingbig.rst:96
+#: ../../flask/docs/becomingbig.rst:94
 msgid "Discuss with the community."
 msgstr "コミュニティを使った議論"
 
-#: ../../flask/docs/becomingbig.rst:98
+#: ../../flask/docs/becomingbig.rst:96
 msgid ""
 "The Flask developers keep the framework accessible to users with "
 "codebases big and small. If you find an obstacle in your way, caused by "
@@ -285,4 +279,31 @@ msgstr ""
 #~ "applications is getting feedback from "
 #~ "users."
 #~ msgstr ""
+
+#~ msgid ""
+#~ "The :ref:`api` docs are full of "
+#~ "available overrides, hook points, and "
+#~ ":ref:`signals`. You can provide custom "
+#~ "classes for things like the request "
+#~ "and response objects. Dig deeper on "
+#~ "the APIs you use, and look for "
+#~ "the customizations which are available "
+#~ "out of the box in a Flask "
+#~ "release. Look for ways in which "
+#~ "your project can be refactored into "
+#~ "a collection of utilities and Flask "
+#~ "extensions. Explore the many "
+#~ ":doc:`/extensions` in the community, and "
+#~ "look for patterns to build your "
+#~ "own extensions if you do not find"
+#~ " the tools you need."
+#~ msgstr ""
+#~ ":ref:`api`\ 文書には、オーバーライド、フックできる点、そして\ "
+#~ ":ref:`signals`\ がたくさんあります。requestやresponseオブジェクトのような"
+#~ "ものに対する独自のクラスは自分で提供可能です。自分が使うAPIを掘り下げて、"
+#~ "Flaskのリリースの中で用意されている利用可能なカスタマイズ方法を探してくだ"
+#~ "さい。Flask拡張やユーティリティの集合へと自分のプロジェクトを再構成できる"
+#~ "やり方を探してください。コミュニティにある多くの\ :doc:`/extensions`\ "
+#~ "を探索して、もし自分が必要とするツールを探し出せない場合は自分独自のFlask"
+#~ "拡張を構築するパターンを探してください。"
 

@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 1.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 20:39+0900\n"
+"POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -88,6 +88,25 @@ msgstr ""
 msgid "|Y| [1]_"
 msgstr ""
 
+#: ../../flask/docs/htmlfaq.rst:111
+#: ../../flask/docs/htmlfaq.rst:111
+#: ../../flask/docs/htmlfaq.rst:111
+#: ../../flask/docs/htmlfaq.rst:111
+#: ../../flask/docs/htmlfaq.rst:111
+#: ../../flask/docs/htmlfaq.rst:111
+#: ../../flask/docs/htmlfaq.rst:111
+#: ../../flask/docs/htmlfaq.rst:111
+#: ../../flask/docs/htmlfaq.rst:111
+#: ../../flask/docs/htmlfaq.rst:111
+#: ../../flask/docs/htmlfaq.rst:111
+#: ../../flask/docs/htmlfaq.rst:111
+#: ../../flask/docs/htmlfaq.rst:111
+#: ../../flask/docs/htmlfaq.rst:111
+#: ../../flask/docs/htmlfaq.rst:111
+#: ../../flask/docs/htmlfaq.rst:111
+msgid "Yes"
+msgstr ""
+
 #: ../../flask/docs/htmlfaq.rst:80
 #: ../../flask/docs/htmlfaq.rst:80
 #: ../../flask/docs/htmlfaq.rst:82
@@ -106,6 +125,28 @@ msgstr ""
 #: ../../flask/docs/htmlfaq.rst:101
 #: ../../flask/docs/htmlfaq.rst:101
 msgid "|N|"
+msgstr ""
+
+#: ../../flask/docs/htmlfaq.rst:113
+#: ../../flask/docs/htmlfaq.rst:113
+#: ../../flask/docs/htmlfaq.rst:113
+#: ../../flask/docs/htmlfaq.rst:113
+#: ../../flask/docs/htmlfaq.rst:113
+#: ../../flask/docs/htmlfaq.rst:113
+#: ../../flask/docs/htmlfaq.rst:113
+#: ../../flask/docs/htmlfaq.rst:113
+#: ../../flask/docs/htmlfaq.rst:113
+#: ../../flask/docs/htmlfaq.rst:113
+#: ../../flask/docs/htmlfaq.rst:113
+#: ../../flask/docs/htmlfaq.rst:113
+#: ../../flask/docs/htmlfaq.rst:113
+#: ../../flask/docs/htmlfaq.rst:113
+#: ../../flask/docs/htmlfaq.rst:113
+#: ../../flask/docs/htmlfaq.rst:113
+#: ../../flask/docs/htmlfaq.rst:113
+#: ../../flask/docs/htmlfaq.rst:113
+#: ../../flask/docs/htmlfaq.rst:113
+msgid "No"
 msgstr ""
 
 #: ../../flask/docs/htmlfaq.rst:82
@@ -249,7 +290,7 @@ msgid "Advanced JavaScript APIs like Web Storage, Web Workers, Web Sockets, geol
 msgstr ""
 
 #: ../../flask/docs/htmlfaq.rst:185
-msgid "Many other features have been added, as well. A good guide to new features in HTML5 is Mark Pilgrim's soon-to-be-published book, `Dive Into HTML5`_. Not all of them are supported in browsers yet, however, so use caution."
+msgid "Many other features have been added, as well. A good guide to new features in HTML5 is Mark Pilgrim's book, `Dive Into HTML5`_. Not all of them are supported in browsers yet, however, so use caution."
 msgstr ""
 
 #: ../../flask/docs/htmlfaq.rst:192
@@ -261,26 +302,25 @@ msgid "Currently, the answer is HTML5.  There are very few reasons to use XHTML 
 msgstr ""
 
 #: ../../flask/docs/htmlfaq.rst:198
-msgid "Internet Explorer (which, sadly, currently leads in market share) has poor support for XHTML."
+msgid "Internet Explorer has poor support for XHTML."
 msgstr ""
 
-#: ../../flask/docs/htmlfaq.rst:200
+#: ../../flask/docs/htmlfaq.rst:199
 msgid "Many JavaScript libraries also do not support XHTML, due to the more complicated namespacing API it requires."
 msgstr ""
 
-#: ../../flask/docs/htmlfaq.rst:202
+#: ../../flask/docs/htmlfaq.rst:201
 msgid "HTML5 adds several new features, including semantic tags and the long-awaited ``<audio>`` and ``<video>`` tags."
 msgstr ""
 
-#: ../../flask/docs/htmlfaq.rst:204
+#: ../../flask/docs/htmlfaq.rst:203
 msgid "It has the support of most browser vendors behind it."
 msgstr ""
 
-#: ../../flask/docs/htmlfaq.rst:205
+#: ../../flask/docs/htmlfaq.rst:204
 msgid "It is much easier to write, and more compact."
 msgstr ""
 
-#: ../../flask/docs/htmlfaq.rst:207
+#: ../../flask/docs/htmlfaq.rst:206
 msgid "For most applications, it is undoubtedly better to use HTML5 than XHTML."
 msgstr ""
-

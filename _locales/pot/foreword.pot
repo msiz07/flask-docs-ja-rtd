@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 1.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 20:39+0900\n"
+"POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -49,18 +49,13 @@ msgid "Growing with Flask"
 msgstr ""
 
 #: ../../flask/docs/foreword.rst:40
-msgid "Once you have Flask up and running, you'll find a variety of extensions available in the community to integrate your project for production. The Flask core team reviews extensions and ensures approved extensions do not break with future releases."
+msgid "Once you have Flask up and running, you'll find a variety of extensions available in the community to integrate your project for production."
 msgstr ""
 
-#: ../../flask/docs/foreword.rst:45
+#: ../../flask/docs/foreword.rst:43
 msgid "As your codebase grows, you are free to make the design decisions appropriate for your project.  Flask will continue to provide a very simple glue layer to the best that Python has to offer.  You can implement advanced patterns in SQLAlchemy or another database tool, introduce non-relational data persistence as appropriate, and take advantage of framework-agnostic tools built for WSGI, the Python web interface."
 msgstr ""
 
-#: ../../flask/docs/foreword.rst:52
-msgid "Flask includes many hooks to customize its behavior. Should you need more customization, the Flask class is built for subclassing. If you are interested in that, check out the :ref:`becomingbig` chapter.  If you are curious about the Flask design principles, head over to the section about :ref:`design`."
+#: ../../flask/docs/foreword.rst:50
+msgid "Flask includes many hooks to customize its behavior. Should you need more customization, the Flask class is built for subclassing. If you are interested in that, check out the :doc:`becomingbig` chapter.  If you are curious about the Flask design principles, head over to the section about :doc:`design`."
 msgstr ""
-
-#: ../../flask/docs/foreword.rst:57
-msgid "Continue to :ref:`installation`, the :ref:`quickstart`, or the :ref:`advanced_foreword`."
-msgstr ""
-

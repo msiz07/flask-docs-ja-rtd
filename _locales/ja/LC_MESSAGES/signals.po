@@ -8,22 +8,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
+"Generated-By: Babel 2.9.1\n"
 
 # 60392632ba5441e387b600794855cd62
-#: ../../signals.rst:4
+#: ../../flask/docs/signals.rst:2
 msgid "Signals"
 msgstr "合図（Signals）"
 
 # 03f2f2ac0a3647e3a24471e07c242263
-#: ../../signals.rst:8
+#: ../../flask/docs/signals.rst:6
 msgid ""
 "Starting with Flask 0.6, there is integrated support for signalling in "
 "Flask.  This support is provided by the excellent `blinker`_ library and "
@@ -34,7 +34,7 @@ msgstr ""
 "blinkerが利用できないときは極端に悪化しないようにフォールバックします。"
 
 # 8764bb4b996b4d50b64016c9f3784917
-#: ../../signals.rst:12
+#: ../../flask/docs/signals.rst:10
 msgid ""
 "What are signals?  Signals help you decouple applications by sending "
 "notifications when actions occur elsewhere in the core framework or "
@@ -47,7 +47,7 @@ msgstr ""
 "ある送信者が登録者へ通知を送れるようにします。"
 
 # dc2f2ab5fd624d5fbb8864260d0c9061
-#: ../../signals.rst:17
+#: ../../flask/docs/signals.rst:15
 msgid ""
 "Flask comes with a couple of signals and other extensions might provide "
 "more.  Also keep in mind that signals are intended to notify subscribers "
@@ -74,7 +74,7 @@ msgstr ""
 "変更はしません。"
 
 # c4923c65e6fe43af8b5de8743a04149c
-#: ../../signals.rst:28
+#: ../../flask/docs/signals.rst:26
 msgid ""
 "The big advantage of signals over handlers is that you can safely "
 "subscribe to them for just a split second.  These temporary subscriptions"
@@ -88,12 +88,12 @@ msgstr ""
 "signalはまさにそれをできるようにします。"
 
 # f3c68c3f3b924fec9bbeb6bda5edcb33
-#: ../../signals.rst:35
+#: ../../flask/docs/signals.rst:33
 msgid "Subscribing to Signals"
 msgstr "signalへの登録（Subscribing to Signals）"
 
 # eee8eeab109b445cb10519141a5c3cb0
-#: ../../signals.rst:37
+#: ../../flask/docs/signals.rst:35
 msgid ""
 "To subscribe to a signal, you can use the "
 ":meth:`~blinker.base.Signal.connect` method of a signal.  The first "
@@ -109,7 +109,7 @@ msgstr ""
 "できます。"
 
 # 512efa0032874d479aefd90ba41c4f48
-#: ../../signals.rst:43
+#: ../../flask/docs/signals.rst:41
 msgid ""
 "For all core Flask signals, the sender is the application that issued the"
 " signal.  When you subscribe to a signal, be sure to also provide a "
@@ -124,7 +124,7 @@ msgstr ""
 "場合は特に当てはまります。"
 
 # a3901dacf2e648079008e3aa02d2994d
-#: ../../signals.rst:48
+#: ../../flask/docs/signals.rst:46
 msgid ""
 "For example, here is a helper context manager that can be used in a unit "
 "test to determine which templates were rendered and what variables were "
@@ -136,12 +136,12 @@ msgstr ""
 "えるPythonの機能）のヘルパーは以下のようになります::"
 
 # fe5987b795f1462b8a49c52bd50c4a04
-#: ../../signals.rst:66
+#: ../../flask/docs/signals.rst:64
 msgid "This can now easily be paired with a test client::"
 msgstr "するとこれは容易にtest clientと組み合わせることができます::"
 
 # 7cbd0f5127cd4de5bba018a0203ff849
-#: ../../signals.rst:76
+#: ../../flask/docs/signals.rst:74
 msgid ""
 "Make sure to subscribe with an extra ``**extra`` argument so that your "
 "calls don't fail if Flask introduces new arguments to the signals."
@@ -151,7 +151,7 @@ msgstr ""
 "確実にしてください。"
 
 # 038406268f7a45408ea9bc0fcb830f25
-#: ../../signals.rst:79
+#: ../../flask/docs/signals.rst:77
 msgid ""
 "All the template rendering in the code issued by the application `app` in"
 " the body of the ``with`` block will now be recorded in the `templates` "
@@ -164,7 +164,7 @@ msgstr ""
 "contextと同様にテンプレートオブジェクトは（templates変数に）追加されます。"
 
 # a7276710634149228c24933c01f20fe5
-#: ../../signals.rst:84
+#: ../../flask/docs/signals.rst:82
 msgid ""
 "Additionally there is a convenient helper method "
 "(:meth:`~blinker.base.Signal.connected_to`)  that allows you to "
@@ -179,17 +179,17 @@ msgstr ""
 "リスト（訳注: 以下の例の「recorded」引数）を渡す必要があります::"
 
 # 53e202c019374b3e8efbee90da4e6569
-#: ../../signals.rst:97
+#: ../../flask/docs/signals.rst:95
 msgid "The example above would then look like this::"
 msgstr "すると、先の例は以下のようになります::"
 
 # 1d85e94dbdcb42a7b1c8b3ca481e787a
-#: ../../signals.rst:104
+#: ../../flask/docs/signals.rst:102
 msgid "Blinker API Changes"
 msgstr "BlinkerのAPIの変化"
 
 # 4e708cd208b943f2a3607a869f0b807f
-#: ../../signals.rst:106
+#: ../../flask/docs/signals.rst:104
 msgid ""
 "The :meth:`~blinker.base.Signal.connected_to` method arrived in Blinker "
 "with version 1.1."
@@ -198,12 +198,12 @@ msgstr ""
 "Blinkerにやってきました。"
 
 # f2a8bff04c9b4e60a66cba8cc40be75f
-#: ../../signals.rst:110
+#: ../../flask/docs/signals.rst:108
 msgid "Creating Signals"
 msgstr "signalの作成"
 
 # bab6d6aec5d04fe294261c822c3888c0
-#: ../../signals.rst:112
+#: ../../flask/docs/signals.rst:110
 msgid ""
 "If you want to use signals in your own application, you can use the "
 "blinker library directly.  The most common use case are named signals in "
@@ -216,12 +216,12 @@ msgstr ""
 "ときに推奨されるものです::"
 
 # c74d14c54cd141c383538258097c18d7
-#: ../../signals.rst:120
+#: ../../flask/docs/signals.rst:118
 msgid "Now you can create new signals like this::"
 msgstr "すると、以下のように新しいsignalを作成できます::"
 
 # acc371a588f4413f8f9a826aa7deebba
-#: ../../signals.rst:124
+#: ../../flask/docs/signals.rst:122
 msgid ""
 "The name for the signal here makes it unique and also simplifies "
 "debugging.  You can access the name of the signal with the "
@@ -232,12 +232,12 @@ msgstr ""
 "アクセスできます。"
 
 # 3b649f2d7cbe415b99aac9ed00dc2018
-#: ../../signals.rst:128
+#: ../../flask/docs/signals.rst:126
 msgid "For Extension Developers"
 msgstr "Flask拡張開発者向け情報（For Extension Developers）"
 
 # e8a36181f3874e5eaaaac34c0201ae49
-#: ../../signals.rst:130
+#: ../../flask/docs/signals.rst:128
 msgid ""
 "If you are writing a Flask extension and you want to gracefully degrade "
 "for missing blinker installations, you can do so by using the "
@@ -248,12 +248,12 @@ msgstr ""
 "を使うことで可能です。"
 
 # 26743ec97b564e5d9dfb9ace224beb3c
-#: ../../signals.rst:137
+#: ../../flask/docs/signals.rst:135
 msgid "Sending Signals"
 msgstr "signalの送信"
 
 # d366b58d4af4417694ea7b06fad9ffab
-#: ../../signals.rst:139
+#: ../../flask/docs/signals.rst:137
 msgid ""
 "If you want to emit a signal, you can do so by calling the "
 ":meth:`~blinker.base.Signal.send` method.  It accepts a sender as first "
@@ -265,7 +265,7 @@ msgstr ""
 "でsignal登録者へ転送されるいくらかのキーワード引数を受け付けます::"
 
 # 64aea941f23a43f6b64f8305924fc6e4
-#: ../../signals.rst:150
+#: ../../flask/docs/signals.rst:148
 msgid ""
 "Try to always pick a good sender.  If you have a class that is emitting a"
 " signal, pass ``self`` as sender.  If you are emitting a signal from a "
@@ -278,12 +278,12 @@ msgstr ""
 "を送信者として渡せます。"
 
 # 77fb3794131e40a48159b34098100637
-#: ../../signals.rst:154
+#: ../../flask/docs/signals.rst:152
 msgid "Passing Proxies as Senders"
 msgstr "送信者としてのproxyの引き渡し（Passing Proxies as Senders）"
 
 # 8bb69257bc204f988f7e3680fdc242f6
-#: ../../signals.rst:156
+#: ../../flask/docs/signals.rst:154
 msgid ""
 "Never pass :data:`~flask.current_app` as sender to a signal.  Use "
 "``current_app._get_current_object()`` instead.  The reason for this is "
@@ -296,34 +296,27 @@ msgstr ""
 "オブジェクトではないためです。"
 
 # 6c3dec1f7a2c401d832180fd86a362c4
-#: ../../signals.rst:163
+#: ../../flask/docs/signals.rst:161
 msgid "Signals and Flask's Request Context"
 msgstr "signalとFlaskのrequest context"
 
-# 14d74a27364947ef9e60180f9e3a35b9
-#: ../../signals.rst:165
+#: ../../flask/docs/signals.rst:163
 msgid ""
-"Signals fully support :ref:`request-context` when receiving signals. "
-"Context-local variables are consistently available between "
+"Signals fully support :doc:`reqcontext` when receiving signals. Context-"
+"local variables are consistently available between "
 ":data:`~flask.request_started` and :data:`~flask.request_finished`, so "
 "you can rely on :class:`flask.g` and others as needed.  Note the "
 "limitations described in :ref:`signals-sending` and the "
 ":data:`~flask.request_tearing_down` signal."
 msgstr ""
-"signalは\ :ref:`request-context`\ を、signalを受信するとき完全にサポート"
-"します。context-local変数は\ :data:`~flask.request_started`\ と\ "
-":data:`~flask.request_finished`\ の間は一貫して利用可能であるため、必要に"
-"応じて\ :class:`flask.g`\ などに頼ることができます。"
-"\ :ref:`signals-sending`\ の中の説明や\ :data:`~flask.request_tearing_down` "
-"のsignalの制限に注意してください。"
 
 # f2a13d71616f4e1da28af6fa574cbef3
-#: ../../signals.rst:173
+#: ../../flask/docs/signals.rst:171
 msgid "Decorator Based Signal Subscriptions"
 msgstr "decoratorに基づくsignal登録"
 
 # 20133439dc1c422388de47403884f22b
-#: ../../signals.rst:175
+#: ../../flask/docs/signals.rst:173
 msgid ""
 "With Blinker 1.1 you can also easily subscribe to signals by using the "
 "new :meth:`~blinker.base.NamedSignal.connect_via` decorator::"
@@ -332,14 +325,33 @@ msgstr ""
 "decoratorを使ってsignalへ容易に登録することもできます::"
 
 # b9adde4709304851a11719f8b1081a6f
-#: ../../signals.rst:185
+#: ../../flask/docs/signals.rst:183
 msgid "Core Signals"
 msgstr "基本signal（Core Signals）"
 
 # 8155eb933042407a8b81a50494874003
-#: ../../signals.rst:187
+#: ../../flask/docs/signals.rst:185
 msgid "Take a look at :ref:`core-signals-list` for a list of all builtin signals."
 msgstr ""
 "すべての組み込みsignalのリストについては、\ :ref:`core-signals-list`\ を"
 "見てください。"
+
+# 14d74a27364947ef9e60180f9e3a35b9
+#~ msgid ""
+#~ "Signals fully support :ref:`request-context`"
+#~ " when receiving signals. Context-local "
+#~ "variables are consistently available between"
+#~ " :data:`~flask.request_started` and "
+#~ ":data:`~flask.request_finished`, so you can "
+#~ "rely on :class:`flask.g` and others as"
+#~ " needed.  Note the limitations described"
+#~ " in :ref:`signals-sending` and the "
+#~ ":data:`~flask.request_tearing_down` signal."
+#~ msgstr ""
+#~ "signalは\ :ref:`request-context`\ を、signalを受信するとき完全にサポート"
+#~ "します。context-local変数は\ :data:`~flask.request_started`\ と\ "
+#~ ":data:`~flask.request_finished`\ の間は一貫して利用可能であるため、必要に"
+#~ "応じて\ :class:`flask.g`\ などに頼ることができます。"
+#~ "\ :ref:`signals-sending`\ の中の説明や\ :data:`~flask.request_tearing_down` "
+#~ "のsignalの制限に注意してください。"
 

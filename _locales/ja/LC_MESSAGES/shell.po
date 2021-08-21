@@ -8,22 +8,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
+"Generated-By: Babel 2.9.1\n"
 
 # bd9fbb4a5618478e9ce79c9ad24fbf22
-#: ../../shell.rst:4
+#: ../../flask/docs/shell.rst:2
 msgid "Working with the Shell"
 msgstr "Shellを使った作業"
 
 # ffb69f018c0f41ac95b020993dc202ce
-#: ../../shell.rst:8
+#: ../../flask/docs/shell.rst:6
 msgid ""
 "One of the reasons everybody loves Python is the interactive shell.  It "
 "basically allows you to execute Python commands in real time and "
@@ -38,7 +38,7 @@ msgstr ""
 "アプリケーションをただimportして、遊んでみてください。"
 
 # e765791ac98448bdad01816c37e89086
-#: ../../shell.rst:14
+#: ../../flask/docs/shell.rst:12
 msgid ""
 "There are however some handy helpers to make playing around in the shell "
 "a more pleasant experience.  The main issue with interactive console "
@@ -55,7 +55,7 @@ msgstr ""
 "しれませんので、それではどうすればよいでしょうか？"
 
 # 970be3664041423393fb4bfc6ff85d5a
-#: ../../shell.rst:21
+#: ../../flask/docs/shell.rst:19
 msgid ""
 "This is where some helper functions come in handy.  Keep in mind however "
 "that these functions are not only there for interactive shell usage, but "
@@ -68,21 +68,22 @@ msgstr ""
 "いてください。"
 
 # 401dd83ddda449419e151c716f23f7c2
-#: ../../shell.rst:26
+#: ../../flask/docs/shell.rst:24
+#, fuzzy
 msgid ""
-"Generally it's recommended that you read the :ref:`request-context` "
-"chapter of the documentation first."
+"Generally it's recommended that you read the :doc:`reqcontext` chapter of"
+" the documentation first."
 msgstr ""
 "概して、まずはドキュメントの\ :ref:`request-context`\ の章を読んでおくことが"
 "推奨されます。"
 
 # c063ae40d0c24a5a821a1b11e792b762
-#: ../../shell.rst:30
+#: ../../flask/docs/shell.rst:28
 msgid "Command Line Interface"
 msgstr "コマンドライン・インタフェース"
 
 # 813d81cdf6434b999f4cbd8181ed8af8
-#: ../../shell.rst:32
+#: ../../flask/docs/shell.rst:30
 msgid ""
 "Starting with Flask 0.11 the recommended way to work with the shell is "
 "the ``flask shell`` command which does a lot of this automatically for "
@@ -95,17 +96,18 @@ msgstr ""
 "されます。"
 
 # 7ae2aed5b4a34a2294e8c0dc1d0d6345
-#: ../../shell.rst:37
-msgid "For more information see :ref:`cli`."
+#: ../../flask/docs/shell.rst:35
+#, fuzzy
+msgid "For more information see :doc:`/cli`."
 msgstr "さらなる情報は\ :ref:`cli`\ を確認してください。"
 
 # 31ca9f55fb5b4cdf9cf8300d4c07a9cc
-#: ../../shell.rst:40
+#: ../../flask/docs/shell.rst:38
 msgid "Creating a Request Context"
 msgstr "リクエストのコンテキストの作成（Creating a Request Context）"
 
 # 4102b21e26ce4bf0b0e5eb4717747379
-#: ../../shell.rst:42
+#: ../../flask/docs/shell.rst:40
 msgid ""
 "The easiest way to create a proper request context from the shell is by "
 "using the :attr:`~flask.Flask.test_request_context` method which creates "
@@ -116,7 +118,7 @@ msgstr ""
 "`~flask.Flask.test_request_context`\ メソッドを使用することです:"
 
 # af416ed640df43bdb6e439adcfc1cbb1
-#: ../../shell.rst:48
+#: ../../flask/docs/shell.rst:46
 msgid ""
 "Normally you would use the ``with`` statement to make this request object"
 " active, but in the shell it's easier to use the "
@@ -129,7 +131,7 @@ msgstr ""
 ":meth:`~flask.ctx.RequestContext.pop`\ メソッドを使用する方が容易です:"
 
 # da129c67afd24aeaae32783ab2f8760a
-#: ../../shell.rst:55
+#: ../../flask/docs/shell.rst:53
 msgid ""
 "From that point onwards you can work with the request object until you "
 "call `pop`:"
@@ -138,12 +140,12 @@ msgstr ""
 "リクエストのオブジェクトを使って作業できます。"
 
 # 3637ee07ea61486ca8b4e2a335886200
-#: ../../shell.rst:61
+#: ../../flask/docs/shell.rst:59
 msgid "Firing Before/After Request"
 msgstr "リクエスト前後の処理の起動（Firing Before/After Request）"
 
 # 5b2a9d0d3a0549dea9ac75e3edcbd0f8
-#: ../../shell.rst:63
+#: ../../flask/docs/shell.rst:61
 msgid ""
 "By just creating a request context, you still don't have run the code "
 "that is normally run before a request.  This might result in your "
@@ -159,7 +161,7 @@ msgstr ""
 "招くかもしれません。"
 
 # a2a107dd349643fba2fc8a2df7ef9a5e
-#: ../../shell.rst:69
+#: ../../flask/docs/shell.rst:67
 msgid ""
 "This however can easily be done yourself.  Just call "
 ":meth:`~flask.Flask.preprocess_request`:"
@@ -168,7 +170,7 @@ msgstr ""
 ":meth:`~flask.Flask.preprocess_request`\ を呼ぶだけです:"
 
 # 830d54719db44ec4b2ac56e15f9aff41
-#: ../../shell.rst:76
+#: ../../flask/docs/shell.rst:74
 msgid ""
 "Keep in mind that the :meth:`~flask.Flask.preprocess_request` function "
 "might return a response object, in that case just ignore it."
@@ -177,7 +179,7 @@ msgstr ""
 "返すかもしれず、その場合には単に無視することを覚えておいてください。"
 
 # 92e0cac282de48f9ae976161201569ab
-#: ../../shell.rst:79
+#: ../../flask/docs/shell.rst:77
 msgid ""
 "To shutdown a request, you need to trick a bit before the after request "
 "functions (triggered by :meth:`~flask.Flask.process_response`) operate on"
@@ -189,7 +191,7 @@ msgstr ""
 "必要です:"
 
 # 2dd820564c524f0e8cf6741ecefa9b91
-#: ../../shell.rst:87
+#: ../../flask/docs/shell.rst:85
 msgid ""
 "The functions registered as :meth:`~flask.Flask.teardown_request` are "
 "automatically called when the context is popped.  So this is the perfect "
@@ -202,12 +204,12 @@ msgstr ""
 "完璧な場所です。"
 
 # 05aaed478a304dc89ccb046f99b4e383
-#: ../../shell.rst:94
+#: ../../flask/docs/shell.rst:92
 msgid "Further Improving the Shell Experience"
 msgstr "Shellでの経験のさらなる改善"
 
 # 201ecbdd78354501b01048a64ca6644a
-#: ../../shell.rst:96
+#: ../../flask/docs/shell.rst:94
 msgid ""
 "If you like the idea of experimenting in a shell, create yourself a "
 "module with stuff you want to star import into your interactive session."
@@ -222,7 +224,7 @@ msgstr ""
 "定義もできます。"
 
 # 0927380e0ed24cceb6e54ca1620dc032
-#: ../../shell.rst:101
+#: ../../flask/docs/shell.rst:99
 msgid "Just put them into a module (like `shelltools`) and import from there:"
 msgstr ""
 "それらをただ（\ `shelltools`\ のような）モジュールの中へ押し入れ、そこから"

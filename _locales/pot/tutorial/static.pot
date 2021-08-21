@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 1.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 20:39+0900\n"
+"POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -48,6 +48,10 @@ msgstr ""
 msgid "Go to http://127.0.0.1:5000/auth/login and the page should look like the screenshot below."
 msgstr ""
 
+#: ../../flask/docs/tutorial/static.rst:None
+msgid "screenshot of login page"
+msgstr ""
+
 #: ../../flask/docs/tutorial/static.rst:66
 msgid "You can read more about CSS from `Mozilla's documentation <CSS_>`_. If you change a static file, refresh the browser page. If the change doesn't show up, try clearing your browser's cache."
 msgstr ""
@@ -55,4 +59,3 @@ msgstr ""
 #: ../../flask/docs/tutorial/static.rst:72
 msgid "Continue to :doc:`blog`."
 msgstr ""
-

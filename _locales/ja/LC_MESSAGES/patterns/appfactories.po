@@ -8,25 +8,26 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
+"Generated-By: Babel 2.9.1\n"
 
 # db0210e4bf5b4ce0b72fa26189acd456
-#: ../../patterns/appfactories.rst:4
+#: ../../flask/docs/patterns/appfactories.rst:2
 msgid "Application Factories"
 msgstr "アプリケーション製造工場（Application Factories）"
 
 # 43074d5043684e83b184d2d0f1c24041
-#: ../../patterns/appfactories.rst:6
+#: ../../flask/docs/patterns/appfactories.rst:4
+#, fuzzy
 msgid ""
 "If you are already using packages and blueprints for your application "
-"(:ref:`blueprints`) there are a couple of really nice ways to further "
+"(:doc:`/blueprints`) there are a couple of really nice ways to further "
 "improve the experience.  A common pattern is creating the application "
 "object when the blueprint is imported.  But if you move the creation of "
 "this object into a function, you can then create multiple instances of "
@@ -39,12 +40,12 @@ msgstr ""
 "移動させれば、あとでこのアプリのインスタンスを複数作成できるようになります。"
 
 # 7e14aaf62b1947159178e41321b228e4
-#: ../../patterns/appfactories.rst:12
+#: ../../flask/docs/patterns/appfactories.rst:10
 msgid "So why would you want to do this?"
 msgstr "では、なぜそれをしたいのでしょうか？"
 
 # 751afc2dc9a84aa79170957782ddf096
-#: ../../patterns/appfactories.rst:14
+#: ../../flask/docs/patterns/appfactories.rst:12
 msgid ""
 "Testing.  You can have instances of the application with different "
 "settings to test every case."
@@ -53,7 +54,7 @@ msgstr ""
 "持つことが可能です。"
 
 # 46c4347048ce45a5bc409e99430c49ea
-#: ../../patterns/appfactories.rst:16
+#: ../../flask/docs/patterns/appfactories.rst:14
 msgid ""
 "Multiple instances.  Imagine you want to run different versions of the "
 "same application.  Of course you could have multiple instances with "
@@ -68,24 +69,24 @@ msgstr ""
 "を持つことができ、便利です。"
 
 # 26c898a9b2814f43bb2e481875bdeb40
-#: ../../patterns/appfactories.rst:22
+#: ../../flask/docs/patterns/appfactories.rst:20
 msgid "So how would you then actually implement that?"
 msgstr "では、どうやって実際にそれを実装するのでしょうか？"
 
 # 1ce2f203b1e049c8a1dc0c412651a875
-#: ../../patterns/appfactories.rst:25
+#: ../../flask/docs/patterns/appfactories.rst:23
 msgid "Basic Factories"
 msgstr "基本的なFactory（Basic Factories）"
 
 # cf5eb756e2044688ba00c4fe9cef05b7
-#: ../../patterns/appfactories.rst:27
+#: ../../flask/docs/patterns/appfactories.rst:25
 msgid "The idea is to set up the application in a function.  Like this::"
 msgstr ""
 "関数の中でアプリケーションをセットアップするというアイデアです。"
 "このようになります::"
 
 # bd25dd3fb47c4fe9b51997496faafa3a
-#: ../../patterns/appfactories.rst:43
+#: ../../flask/docs/patterns/appfactories.rst:41
 msgid ""
 "The downside is that you cannot use the application object in the "
 "blueprints at import time.  You can however use it from within a request."
@@ -98,17 +99,17 @@ msgstr ""
 "しょうか？\ :data:`~flask.current_app`\ を使います::"
 
 # b78da6f25679490c85d472b9632153ab
-#: ../../patterns/appfactories.rst:55
+#: ../../flask/docs/patterns/appfactories.rst:53
 msgid "Here we look up the name of a template in the config."
 msgstr "上の例では、テンプレートの名前をconfigから探しています。"
 
 # f990e427b7014e94a0b571720dd068ea
-#: ../../patterns/appfactories.rst:58
+#: ../../flask/docs/patterns/appfactories.rst:56
 msgid "Factories & Extensions"
 msgstr "FactoryとFlask拡張（Factories & Extensions）"
 
 # 0f1edb16591c42ec8e00bec74e24e8de
-#: ../../patterns/appfactories.rst:60
+#: ../../flask/docs/patterns/appfactories.rst:58
 msgid ""
 "It's preferable to create your extensions and app factories so that the "
 "extension object does not initially get bound to the application."
@@ -118,7 +119,7 @@ msgstr ""
 "することです。"
 
 # 6276eb07ba3443c4afe712c27297aa27
-#: ../../patterns/appfactories.rst:63
+#: ../../flask/docs/patterns/appfactories.rst:61
 msgid ""
 "Using `Flask-SQLAlchemy <https://flask-"
 "sqlalchemy.palletsprojects.com/>`_, as an example, you should not do "
@@ -128,17 +129,17 @@ msgstr ""
 "を使うとき、以下のようなコードを使って何かをするべきではありません::"
 
 # b5839792395346df89167323d2ff37c0
-#: ../../patterns/appfactories.rst:72
+#: ../../flask/docs/patterns/appfactories.rst:70
 msgid "But, rather, in model.py (or equivalent)::"
 msgstr "しかし、むしろ、以下の内容はmodel.py（もしくは同等のもの）の中にし::"
 
 # 690ebf8292844bde8e3f6680d5894357
-#: ../../patterns/appfactories.rst:76
+#: ../../flask/docs/patterns/appfactories.rst:74
 msgid "and in your application.py (or equivalent)::"
 msgstr "そしてapplication.py（もしくは同等のもの）は以下のようにします::"
 
 # 91428f1a3e914f1db744fabd132432bf
-#: ../../patterns/appfactories.rst:85
+#: ../../flask/docs/patterns/appfactories.rst:83
 msgid ""
 "Using this design pattern, no application-specific state is stored on the"
 " extension object, so one extension object can be used for multiple apps."
@@ -150,30 +151,47 @@ msgstr ""
 "設計に関するさらなる情報は、\ :doc:`/extensiondev`\ を確認してください。"
 
 # 2810986151fe444a8143bac008cb85c9
-#: ../../patterns/appfactories.rst:90
+#: ../../flask/docs/patterns/appfactories.rst:88
 msgid "Using Applications"
 msgstr "アプリケーションの使用"
 
 # bce65ec6579c4689bc2efd90d7b19c72
-#: ../../patterns/appfactories.rst:92
-msgid "To run such an application, you can use the :command:`flask` command::"
+#: ../../flask/docs/patterns/appfactories.rst:90
+#, fuzzy
+msgid "To run such an application, you can use the :command:`flask` command:"
 msgstr ""
 "このようなアプリケーションを実行するために、\ :command:`flask`\ コマンドを"
 "使用できます。"
 
+#: ../../flask/docs/patterns/appfactories.rst:94
+#: ../../flask/docs/patterns/appfactories.rst:120
+msgid "Bash"
+msgstr ""
+
+#: ../../flask/docs/patterns/appfactories.rst:101
+#: ../../flask/docs/patterns/appfactories.rst:127
+msgid "CMD"
+msgstr ""
+
+#: ../../flask/docs/patterns/appfactories.rst:108
+#: ../../flask/docs/patterns/appfactories.rst:134
+msgid "Powershell"
+msgstr ""
+
 # 046a8950135c441786ebadc6cf0b87d8
-#: ../../patterns/appfactories.rst:97
+#: ../../flask/docs/patterns/appfactories.rst:115
+#, fuzzy
 msgid ""
 "Flask will automatically detect the factory (``create_app`` or "
 "``make_app``) in ``myapp``. You can also pass arguments to the factory "
-"like this::"
+"like this:"
 msgstr ""
 "Flaskは自動的にfactory（\ ``create_app``\ または ``make_app``\ )を\ "
 "``myapp``\ の中から見つけ出します。以下のように、factoryへ引数を渡すことも"
 "可能です::"
 
 # 9ef58389dbf240669819d7089fcf9205
-#: ../../patterns/appfactories.rst:103
+#: ../../flask/docs/patterns/appfactories.rst:141
 msgid ""
 "Then the ``create_app`` factory in ``myapp`` is called with the string "
 "``'dev'`` as the argument. See :doc:`/cli` for more detail."
@@ -183,12 +201,12 @@ msgstr ""
 "してください。"
 
 # f0794ca000be4135a5f336177744b8c6
-#: ../../patterns/appfactories.rst:107
+#: ../../flask/docs/patterns/appfactories.rst:145
 msgid "Factory Improvements"
 msgstr "Factoryの改善（Factory Improvements）"
 
 # a2d80e4636b14474afbea81bd3f1cd80
-#: ../../patterns/appfactories.rst:109
+#: ../../flask/docs/patterns/appfactories.rst:147
 msgid ""
 "The factory function above is not very clever, but you can improve it. "
 "The following changes are straightforward to implement:"
@@ -197,7 +215,7 @@ msgstr ""
 "実装しやすいものは以下の変更です:"
 
 # 9b620674a9eb444aba3daa058da50aba
-#: ../../patterns/appfactories.rst:112
+#: ../../flask/docs/patterns/appfactories.rst:150
 msgid ""
 "Make it possible to pass in configuration values for unit tests so that "
 "you don't have to create config files on the filesystem."
@@ -206,7 +224,7 @@ msgstr ""
 "テスト用の）設定ファイルを作成せずに済むようにします。"
 
 # bf3fd59eec8f45b0b153e21dfdf2ae13
-#: ../../patterns/appfactories.rst:114
+#: ../../flask/docs/patterns/appfactories.rst:152
 msgid ""
 "Call a function from a blueprint when the application is setting up so "
 "that you have a place to modify attributes of the application (like "
@@ -217,7 +235,7 @@ msgstr ""
 "関数を呼び出します。"
 
 # ffe55ae57dbc42eeb42959c79524373e
-#: ../../patterns/appfactories.rst:117
+#: ../../flask/docs/patterns/appfactories.rst:155
 msgid ""
 "Add in WSGI middlewares when the application is being created if "
 "necessary."

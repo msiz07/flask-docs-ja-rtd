@@ -8,41 +8,39 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
+"Generated-By: Babel 2.9.1\n"
 
 # 5c2db9124a404e3eaa153f409c1d7a44
-#: ../../license.rst:2
+#: ../../flask/docs/license.rst:2
 msgid "License"
 msgstr ""
 
-# 4cf4e9a9d80342239461a0df5688c5c9
-#: ../../license.rst:5
-msgid "Source License"
+#: ../../flask/docs/license.rst:5
+msgid "BSD-3-Clause Source License"
 msgstr ""
 
-# ef98646a0f144e0ca2ca2068e499fc61
-#: ../../license.rst:7
+#: ../../flask/docs/license.rst:7
 msgid ""
-"This license applies to all files in the Flask repository and source "
-"distribution. This includes Flask's source code, the examples, and tests,"
-" as well as the documentation."
+"The BSD-3-Clause license applies to all files in the Flask repository and"
+" source distribution. This includes Flask's source code, the examples, "
+"and tests, as well as the documentation."
 msgstr ""
 
 # 6a148334bfca4cab9d2049ebf60d25be
 # 11c63044199c41bd8456de68020b69dc
-#: ../../../LICENSE.rst:1 ../../../artwork/LICENSE.rst:1
+#: ../../flask/LICENSE.rst:1 ../../flask/artwork/LICENSE.rst:1
 msgid "Copyright 2010 Pallets"
 msgstr ""
 
 # b50766612b534a81b8bc917a3aa5cc2a
-#: ../../../LICENSE.rst:3
+#: ../../flask/LICENSE.rst:3
 msgid ""
 "Redistribution and use in source and binary forms, with or without "
 "modification, are permitted provided that the following conditions are "
@@ -50,14 +48,14 @@ msgid ""
 msgstr ""
 
 # 95f4230940ec401d99cc6a364fcf8042
-#: ../../../LICENSE.rst:7
+#: ../../flask/LICENSE.rst:7
 msgid ""
 "Redistributions of source code must retain the above copyright notice, "
 "this list of conditions and the following disclaimer."
 msgstr ""
 
 # d0959ef1c6b84109888471d84151aeda
-#: ../../../LICENSE.rst:10
+#: ../../flask/LICENSE.rst:10
 msgid ""
 "Redistributions in binary form must reproduce the above copyright notice,"
 " this list of conditions and the following disclaimer in the "
@@ -66,7 +64,7 @@ msgstr ""
 
 # f9b988d81bff4cb393646f5ee5c0c37e
 # 71969f3d12ae46aea2e6043d146fde39
-#: ../../../LICENSE.rst:14 ../../../artwork/LICENSE.rst:13
+#: ../../flask/LICENSE.rst:14 ../../flask/artwork/LICENSE.rst:13
 msgid ""
 "Neither the name of the copyright holder nor the names of its "
 "contributors may be used to endorse or promote products derived from this"
@@ -74,7 +72,7 @@ msgid ""
 msgstr ""
 
 # 704df8714f9b40139b37557ef1908e9b
-#: ../../../LICENSE.rst:18
+#: ../../flask/LICENSE.rst:18
 msgid ""
 "THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS "
 "IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED "
@@ -90,24 +88,24 @@ msgid ""
 msgstr ""
 
 # f64dd90134cc47cbbc0d588172f843ec
-#: ../../license.rst:15
+#: ../../flask/docs/license.rst:15
 msgid "Artwork License"
 msgstr ""
 
 # 4034c96388f8430a9aa048c044af08c5
-#: ../../license.rst:17
+#: ../../flask/docs/license.rst:17
 msgid "This license applies to Flask's logo."
 msgstr ""
 
 # c8c0bda6afd2425e961aa601ea8eaf51
-#: ../../../artwork/LICENSE.rst:3
+#: ../../flask/artwork/LICENSE.rst:3
 msgid ""
 "This logo or a modified version may be used by anyone to refer to the "
 "Flask project, but does not indicate endorsement by the project."
 msgstr ""
 
 # 28c1f48e8ae3458e9e43e3d2748449a7
-#: ../../../artwork/LICENSE.rst:6
+#: ../../flask/artwork/LICENSE.rst:6
 msgid ""
 "Redistribution and use in source (SVG) and binary (renders in PNG, etc.) "
 "forms, with or without modification, are permitted provided that the "
@@ -115,17 +113,30 @@ msgid ""
 msgstr ""
 
 # ae9ce22d788945519eca252b5e44ac3a
-#: ../../../artwork/LICENSE.rst:10
+#: ../../flask/artwork/LICENSE.rst:10
 msgid ""
 "Redistributions of source code must retain the above copyright notice and"
 " this list of conditions."
 msgstr ""
 
 # 4b9120c9bde8482f9a1a194e8a85ebbf
-#: ../../../artwork/LICENSE.rst:17
+#: ../../flask/artwork/LICENSE.rst:17
 msgid ""
 "We would appreciate that you make the image a link to "
 "https://palletsprojects.com/p/flask/ if you use it in a medium that "
 "supports links."
 msgstr ""
+
+# 4cf4e9a9d80342239461a0df5688c5c9
+#~ msgid "Source License"
+#~ msgstr ""
+
+# ef98646a0f144e0ca2ca2068e499fc61
+#~ msgid ""
+#~ "This license applies to all files "
+#~ "in the Flask repository and source "
+#~ "distribution. This includes Flask's source "
+#~ "code, the examples, and tests, as "
+#~ "well as the documentation."
+#~ msgstr ""
 

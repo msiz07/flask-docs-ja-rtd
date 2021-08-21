@@ -8,22 +8,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
+"Generated-By: Babel 2.9.1\n"
 
 # c6367da4a6d0456692410f2bd1082a57
-#: ../../patterns/fileuploads.rst:4
+#: ../../flask/docs/patterns/fileuploads.rst:2
 msgid "Uploading Files"
 msgstr "ファイルのアップロード"
 
 # 91d68555df274e9e9b7f9c3a446c7769
-#: ../../patterns/fileuploads.rst:6
+#: ../../flask/docs/patterns/fileuploads.rst:4
 msgid ""
 "Ah yes, the good old problem of file uploads.  The basic idea of file "
 "uploads is actually quite simple.  It basically works like this:"
@@ -32,7 +32,7 @@ msgstr ""
 "ロードの基本的な考えは非常に単純です。基本的に以下のように働きます:"
 
 # ef606784419c4e16a5a86f3c2a4e2e28
-#: ../../patterns/fileuploads.rst:9
+#: ../../flask/docs/patterns/fileuploads.rst:7
 msgid ""
 "A ``<form>`` tag is marked with ``enctype=multipart/form-data`` and an "
 "``<input type=file>`` is placed in that form."
@@ -41,7 +41,7 @@ msgstr ""
 "formの中に\ ``<input type=file>``\ が置かれます。"
 
 # 71168130a2e24fa2a4c0c061a9c22061
-#: ../../patterns/fileuploads.rst:11
+#: ../../flask/docs/patterns/fileuploads.rst:9
 msgid ""
 "The application accesses the file from the :attr:`~flask.request.files` "
 "dictionary on the request object."
@@ -51,7 +51,7 @@ msgstr ""
 "します。"
 
 # 4f72a3428c724370936bfab50f6e9cea
-#: ../../patterns/fileuploads.rst:13
+#: ../../flask/docs/patterns/fileuploads.rst:11
 msgid ""
 "use the :meth:`~werkzeug.datastructures.FileStorage.save` method of the "
 "file to save the file permanently somewhere on the filesystem."
@@ -60,12 +60,12 @@ msgstr ""
 "使って、ファイルシステムのどこかへ永続的にファイルを保存します。"
 
 # fdc2bd0aa9254ce2ba50ef2d7e236dcd
-#: ../../patterns/fileuploads.rst:17
+#: ../../flask/docs/patterns/fileuploads.rst:15
 msgid "A Gentle Introduction"
 msgstr "やさしいイントロダクション"
 
 # db960ad1599f4310aae00cb8cee48bba
-#: ../../patterns/fileuploads.rst:19
+#: ../../flask/docs/patterns/fileuploads.rst:17
 msgid ""
 "Let's start with a very basic application that uploads a file to a "
 "specific upload folder and displays a file to the user.  Let's look at "
@@ -76,7 +76,7 @@ msgstr ""
 "アプリケーションの手始めのコードを見てみましょう::"
 
 # b6de704aedec4fb18602b619856c0430
-#: ../../patterns/fileuploads.rst:33
+#: ../../flask/docs/patterns/fileuploads.rst:31
 msgid ""
 "So first we need a couple of imports.  Most should be straightforward, "
 "the :func:`werkzeug.secure_filename` is explained a little bit later.  "
@@ -89,15 +89,16 @@ msgstr ""
 "\ ``ALLOWED_EXTENSIONS``\ は許可されたファイル拡張子です。"
 
 # d653a2e4d18d435691b1d131a14e0cb2
-#: ../../patterns/fileuploads.rst:38
+#: ../../flask/docs/patterns/fileuploads.rst:36
+#, fuzzy
 msgid ""
 "Why do we limit the extensions that are allowed?  You probably don't want"
 " your users to be able to upload everything there if the server is "
 "directly sending out the data to the client.  That way you can make sure "
 "that users are not able to upload HTML files that would cause XSS "
-"problems (see :ref:`xss`).  Also make sure to disallow ``.php`` files if "
-"the server executes them, but who has PHP installed on their server, "
-"right?  :)"
+"problems (see :ref:`security-xss`).  Also make sure to disallow ``.php`` "
+"files if the server executes them, but who has PHP installed on their "
+"server, right?  :)"
 msgstr ""
 "なぜ許可される拡張子を制限するのでしょうか？恐らくあなたは、サーバが"
 "クライアントへ直接データを送信する場合、そのサーバへユーザがなんでも"
@@ -108,7 +109,7 @@ msgstr ""
 "にPHPをインストールするんでしょうか？ :)"
 
 # c09a8f425c55446f94edd7c6ebb33418
-#: ../../patterns/fileuploads.rst:45
+#: ../../flask/docs/patterns/fileuploads.rst:43
 msgid ""
 "Next the functions that check if an extension is valid and that uploads "
 "the file and redirects the user to the URL for the uploaded file::"
@@ -117,7 +118,7 @@ msgstr ""
 "ロードされたファイルのURLへリダイレクトする関数です::"
 
 # adbfc08b497c41fa9f244dd9c759db26
-#: ../../patterns/fileuploads.rst:80
+#: ../../flask/docs/patterns/fileuploads.rst:77
 msgid ""
 "So what does that :func:`~werkzeug.utils.secure_filename` function "
 "actually do? Now the problem is that there is that principle called "
@@ -135,12 +136,12 @@ msgstr ""
 "ファイル名を安全にする関数を使用してください。"
 
 # 082b96016995426aa53d9f4ad1f43f44
-#: ../../patterns/fileuploads.rst:87
+#: ../../flask/docs/patterns/fileuploads.rst:84
 msgid "Information for the Pros"
 msgstr "プロ向けの情報"
 
 # 1270b40d8881444197201c39557a680b
-#: ../../patterns/fileuploads.rst:89
+#: ../../flask/docs/patterns/fileuploads.rst:86
 msgid ""
 "So you're interested in what that :func:`~werkzeug.utils.secure_filename`"
 " function does and what the problem is if you're not using it?  So just "
@@ -153,7 +154,7 @@ msgstr ""
 "ただ想像してください::"
 
 # 387ae413a9ad431abdccb5fd21a10d7a
-#: ../../patterns/fileuploads.rst:96
+#: ../../flask/docs/patterns/fileuploads.rst:93
 msgid ""
 "Assuming the number of ``../`` is correct and you would join this with "
 "the ``UPLOAD_FOLDER`` the user might have the ability to modify a file on"
@@ -168,62 +169,42 @@ msgstr ""
 "は我慢強いのです :)"
 
 # 94905c62ce0949509d5e210061460245
-#: ../../patterns/fileuploads.rst:102
+#: ../../flask/docs/patterns/fileuploads.rst:99
 msgid "Now let's look how that function works:"
 msgstr ""
 "それでは、この関数(secure_filename)がどのように働くかを見てみましょう:"
 
-# 2249e0cdc4264f10ba9451d7bb11a5e7
-#: ../../patterns/fileuploads.rst:107
+#: ../../flask/docs/patterns/fileuploads.rst:104
 msgid ""
-"Now one last thing is missing: the serving of the uploaded files. In the "
-":func:`upload_file()` we redirect the user to ``url_for('uploaded_file', "
-"filename=filename)``, that is, ``/uploads/filename``. So we write the "
-":func:`uploaded_file` function to return the file of that name. As of "
-"Flask 0.5 we can use a function that does that for us::"
+"We want to be able to serve the uploaded files so they can be downloaded "
+"by users. We'll define a ``download_file`` view to serve files in the "
+"upload folder by name. ``url_for(\"download_file\", name=name)`` "
+"generates download URLs."
 msgstr ""
-"この時点で、最後のひとつが欠けています: アップロードされたファイルの提供"
-"です。その\ :func:`upload_file()`\ の中では、ユーザを"
-"\ ``url_for('uploaded_file', filename=filename)``\ へ、つまり、"
-"\ ``/uploads/filename``\ へリダイレクトします。それでは、その名前の"
-"ファイルを返すための\ :func:`uploaded_file`\ 関数を書きましょう。Flask "
-"0.5からは、それをしてくれる関数を使うことができます::"
 
-# 34cabd43baa248889a4b65079f39f906
-#: ../../patterns/fileuploads.rst:120
+#: ../../flask/docs/patterns/fileuploads.rst:117
 msgid ""
-"Alternatively you can register `uploaded_file` as `build_only` rule and "
-"use the :class:`~werkzeug.wsgi.SharedDataMiddleware`.  This also works "
-"with older versions of Flask::"
+"If you're using middleware or the HTTP server to serve files, you can "
+"register the ``download_file`` endpoint as ``build_only`` so ``url_for`` "
+"will work without a view function."
 msgstr ""
-"別のやり方では\ `build_only`\ なルール（訳注: ``url_for``\ でのURLの作成"
-"だけは可能で、対応するviewは用意しないルールのようです。\ "
-":func:`~flask.Flask.add_url_rule`\ 関数と\ :class:`werkzeug.routing.Rule`\ "
-"クラス参照）として\ `uploaded_file`\ を登録し、"
-"\ :class:`~werkzeug.middleware.shared_data.SharedDataMiddleware`\ を使う"
-"ことができます。これは古いバージョンのFlaskでも機能します::"
-
-# 3c9cdf7469e84f878cf02c4f8a751627
-#: ../../patterns/fileuploads.rst:131
-msgid "If you now run the application everything should work as expected."
-msgstr ""
-"もし今アプリケーションを走らせれば、すべて期待通りに機能するはずです。"
 
 # 4d31aa74162f4535bd7ab94bb688f3bf
-#: ../../patterns/fileuploads.rst:135
+#: ../../flask/docs/patterns/fileuploads.rst:129
 msgid "Improving Uploads"
 msgstr "アップロードの改善"
 
 # 615b890ffd414eb293e30e5129e27409
-#: ../../patterns/fileuploads.rst:139
+#: ../../flask/docs/patterns/fileuploads.rst:133
+#, fuzzy
 msgid ""
 "So how exactly does Flask handle uploads?  Well it will store them in the"
-" webserver's memory if the files are reasonable small otherwise in a "
+" webserver's memory if the files are reasonably small, otherwise in a "
 "temporary location (as returned by :func:`tempfile.gettempdir`).  But how"
 " do you specify the maximum file size after which an upload is aborted?  "
-"By default Flask will happily accept file uploads to an unlimited amount "
-"of memory, but you can limit that by setting the ``MAX_CONTENT_LENGTH`` "
-"config key::"
+"By default Flask will happily accept file uploads with an unlimited "
+"amount of memory, but you can limit that by setting the "
+"``MAX_CONTENT_LENGTH`` config key::"
 msgstr ""
 "それでは、正確にはFlaskはどのようにファイルのアップロードを処理するので"
 "しょうか？もしファイルが妥当な小ささであればウェブサーバのメモリ内に、"
@@ -235,7 +216,7 @@ msgstr ""
 "することができます::"
 
 # c09bf33962084c8fad16ddb0217fa0e4
-#: ../../patterns/fileuploads.rst:152
+#: ../../flask/docs/patterns/fileuploads.rst:146
 msgid ""
 "The code above will limit the maximum allowed payload to 16 megabytes. If"
 " a larger file is transmitted, Flask will raise a "
@@ -246,12 +227,12 @@ msgstr ""
 ":exc:`~werkzeug.exceptions.RequestEntityTooLarge`\ 例外を発生させます。"
 
 # 2ca537dc4a8849579ad793a1a6574b51
-#: ../../patterns/fileuploads.rst:156
+#: ../../flask/docs/patterns/fileuploads.rst:150
 msgid "Connection Reset Issue"
 msgstr "接続中止の問題"
 
 # a15ce6c90ab845bd80e36f3de1adcb4c
-#: ../../patterns/fileuploads.rst:158
+#: ../../flask/docs/patterns/fileuploads.rst:152
 msgid ""
 "When using the local development server, you may get a connection reset "
 "error instead of a 413 response. You will get the correct status response"
@@ -263,7 +244,7 @@ msgstr ""
 "レスポンスを得られるようになります。"
 
 # 359b1356243e441cb369dac64a1868b8
-#: ../../patterns/fileuploads.rst:162
+#: ../../flask/docs/patterns/fileuploads.rst:156
 msgid ""
 "This feature was added in Flask 0.6 but can be achieved in older versions"
 " as well by subclassing the request object.  For more information on that"
@@ -275,19 +256,19 @@ msgstr ""
 "調べてください。"
 
 # e6e3a1c4313d4da9bb21cfb16c33e15b
-#: ../../patterns/fileuploads.rst:168
+#: ../../flask/docs/patterns/fileuploads.rst:162
 msgid "Upload Progress Bars"
 msgstr "アップロードのプログレスバー"
 
 # 4a016517dba343a5af4fa9296fcde4e8
-#: ../../patterns/fileuploads.rst:170
+#: ../../flask/docs/patterns/fileuploads.rst:164
+#, fuzzy
 msgid ""
 "A while ago many developers had the idea to read the incoming file in "
 "small chunks and store the upload progress in the database to be able to "
-"poll the progress with JavaScript from the client.  Long story short: the"
-" client asks the server every 5 seconds how much it has transmitted "
-"already.  Do you realize the irony?  The client is asking for something "
-"it should already know."
+"poll the progress with JavaScript from the client. The client asks the "
+"server every 5 seconds how much it has transmitted, but this is something"
+" it should already know."
 msgstr ""
 "しばらく前には、アップロードの進み具合をクライアントからJavaScriptで"
 "ポーリングできるようにするために、多くの開発者は受信ファイルを小さな断片"
@@ -297,12 +278,12 @@ msgstr ""
 "クライアントは、すでに知っているべきことを問い合わせているのです。"
 
 # 5f0da9535a0f490ab83e6f2b1096f8a2
-#: ../../patterns/fileuploads.rst:178
+#: ../../flask/docs/patterns/fileuploads.rst:171
 msgid "An Easier Solution"
 msgstr "より簡単な解決策"
 
 # d0fc55013ca24f6ba198fc450d2bb421
-#: ../../patterns/fileuploads.rst:180
+#: ../../flask/docs/patterns/fileuploads.rst:173
 msgid ""
 "Now there are better solutions that work faster and are more reliable. "
 "There are JavaScript libraries like jQuery_ that have form plugins to "
@@ -313,16 +294,56 @@ msgstr ""
 "JavaScriptのライブラリがあります。"
 
 # 5a97b511b6e14219b51ea98ed858d07e
-#: ../../patterns/fileuploads.rst:184
+#: ../../flask/docs/patterns/fileuploads.rst:177
+#, fuzzy
 msgid ""
 "Because the common pattern for file uploads exists almost unchanged in "
 "all applications dealing with uploads, there is also a Flask extension "
 "called `Flask-Uploads`_ that implements a full fledged upload mechanism "
-"with white and blacklisting of extensions and more."
+"that allows controlling which file extensions are allowed to be uploaded."
 msgstr ""
 "ファイルのアップロードについてのありがちなパターンはアップロードを扱う"
 "全てのアプリケーションで殆ど変わることなく存在するため、Flask拡張にも、"
 "拡張子のホワイトリストとブラックリストやその他の機能を持つ、十分に成熟"
 "したアップロードの仕組みを実装した\ `Flask-Uploads`_\ と呼ばれるものが"
 "あります。"
+
+# 2249e0cdc4264f10ba9451d7bb11a5e7
+#~ msgid ""
+#~ "Now one last thing is missing: the"
+#~ " serving of the uploaded files. In"
+#~ " the :func:`upload_file()` we redirect the"
+#~ " user to ``url_for('uploaded_file', "
+#~ "filename=filename)``, that is, "
+#~ "``/uploads/filename``. So we write the "
+#~ ":func:`uploaded_file` function to return the"
+#~ " file of that name. As of Flask"
+#~ " 0.5 we can use a function that"
+#~ " does that for us::"
+#~ msgstr ""
+#~ "この時点で、最後のひとつが欠けています: アップロードされたファイルの提供"
+#~ "です。その\ :func:`upload_file()`\ の中では、ユーザを"
+#~ "\ ``url_for('uploaded_file', filename=filename)``\ へ、つまり、"
+#~ "\ ``/uploads/filename``\ へリダイレクトします。それでは、その名前の"
+#~ "ファイルを返すための\ :func:`uploaded_file`\ 関数を書きましょう。Flask "
+#~ "0.5からは、それをしてくれる関数を使うことができます::"
+
+# 34cabd43baa248889a4b65079f39f906
+#~ msgid ""
+#~ "Alternatively you can register `uploaded_file`"
+#~ " as `build_only` rule and use the "
+#~ ":class:`~werkzeug.wsgi.SharedDataMiddleware`.  This also"
+#~ " works with older versions of Flask::"
+#~ msgstr ""
+#~ "別のやり方では\ `build_only`\ なルール（訳注: ``url_for``\ でのURLの作成"
+#~ "だけは可能で、対応するviewは用意しないルールのようです。\ "
+#~ ":func:`~flask.Flask.add_url_rule`\ 関数と\ :class:`werkzeug.routing.Rule`\ "
+#~ "クラス参照）として\ `uploaded_file`\ を登録し、"
+#~ "\ :class:`~werkzeug.middleware.shared_data.SharedDataMiddleware`\ を使う"
+#~ "ことができます。これは古いバージョンのFlaskでも機能します::"
+
+# 3c9cdf7469e84f878cf02c4f8a751627
+#~ msgid "If you now run the application everything should work as expected."
+#~ msgstr ""
+#~ "もし今アプリケーションを走らせれば、すべて期待通りに機能するはずです。"
 

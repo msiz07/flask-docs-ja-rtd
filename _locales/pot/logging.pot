@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 1.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 20:39+0900\n"
+"POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,83 +24,86 @@ msgstr ""
 msgid "Flask uses standard Python :mod:`logging`. Messages about your Flask application are logged with :meth:`app.logger <flask.Flask.logger>`, which takes the same name as :attr:`app.name <flask.Flask.name>`. This logger can also be used to log your own messages."
 msgstr ""
 
-#: ../../flask/docs/logging.rst:25
+#: ../../flask/docs/logging.rst:23
+msgid "If you don't configure logging, Python's default log level is usually 'warning'. Nothing below the configured level will be visible."
+msgstr ""
+
+#: ../../flask/docs/logging.rst:28
 msgid "Basic Configuration"
 msgstr ""
 
-#: ../../flask/docs/logging.rst:27
+#: ../../flask/docs/logging.rst:30
 msgid "When you want to configure logging for your project, you should do it as soon as possible when the program starts. If :meth:`app.logger <flask.Flask.logger>` is accessed before logging is configured, it will add a default handler. If possible, configure logging before creating the application object."
 msgstr ""
 
-#: ../../flask/docs/logging.rst:32
+#: ../../flask/docs/logging.rst:35
 msgid "This example uses :func:`~logging.config.dictConfig` to create a logging configuration similar to Flask's default, except for all logs::"
 msgstr ""
 
-#: ../../flask/docs/logging.rst:57
+#: ../../flask/docs/logging.rst:60
 msgid "Default Configuration"
 msgstr ""
 
-#: ../../flask/docs/logging.rst:59
+#: ../../flask/docs/logging.rst:62
 msgid "If you do not configure logging yourself, Flask will add a :class:`~logging.StreamHandler` to :meth:`app.logger <flask.Flask.logger>` automatically. During requests, it will write to the stream specified by the WSGI server in ``environ['wsgi.errors']`` (which is usually :data:`sys.stderr`). Outside a request, it will log to :data:`sys.stderr`."
 msgstr ""
 
-#: ../../flask/docs/logging.rst:67
+#: ../../flask/docs/logging.rst:70
 msgid "Removing the Default Handler"
 msgstr ""
 
-#: ../../flask/docs/logging.rst:69
+#: ../../flask/docs/logging.rst:72
 msgid "If you configured logging after accessing :meth:`app.logger <flask.Flask.logger>`, and need to remove the default handler, you can import and remove it::"
 msgstr ""
 
-#: ../../flask/docs/logging.rst:79
+#: ../../flask/docs/logging.rst:82
 msgid "Email Errors to Admins"
 msgstr ""
 
-#: ../../flask/docs/logging.rst:81
+#: ../../flask/docs/logging.rst:84
 msgid "When running the application on a remote server for production, you probably won't be looking at the log messages very often. The WSGI server will probably send log messages to a file, and you'll only check that file if a user tells you something went wrong."
 msgstr ""
 
-#: ../../flask/docs/logging.rst:86
+#: ../../flask/docs/logging.rst:89
 msgid "To be proactive about discovering and fixing bugs, you can configure a :class:`logging.handlers.SMTPHandler` to send an email when errors and higher are logged. ::"
 msgstr ""
 
-#: ../../flask/docs/logging.rst:107
+#: ../../flask/docs/logging.rst:110
 msgid "This requires that you have an SMTP server set up on the same server. See the Python docs for more information about configuring the handler."
 msgstr ""
 
-#: ../../flask/docs/logging.rst:112
+#: ../../flask/docs/logging.rst:115
 msgid "Injecting Request Information"
 msgstr ""
 
-#: ../../flask/docs/logging.rst:114
+#: ../../flask/docs/logging.rst:117
 msgid "Seeing more information about the request, such as the IP address, may help debugging some errors. You can subclass :class:`logging.Formatter` to inject your own fields that can be used in messages. You can change the formatter for Flask's default handler, the mail handler defined above, or any other handler. ::"
 msgstr ""
 
-#: ../../flask/docs/logging.rst:143
+#: ../../flask/docs/logging.rst:146
 msgid "Other Libraries"
 msgstr ""
 
-#: ../../flask/docs/logging.rst:145
+#: ../../flask/docs/logging.rst:148
 msgid "Other libraries may use logging extensively, and you want to see relevant messages from those logs too. The simplest way to do this is to add handlers to the root logger instead of only the app logger. ::"
 msgstr ""
 
-#: ../../flask/docs/logging.rst:155
+#: ../../flask/docs/logging.rst:158
 msgid "Depending on your project, it may be more useful to configure each logger you care about separately, instead of configuring only the root logger. ::"
 msgstr ""
 
-#: ../../flask/docs/logging.rst:168
+#: ../../flask/docs/logging.rst:171
 msgid "Werkzeug"
 msgstr ""
 
-#: ../../flask/docs/logging.rst:170
+#: ../../flask/docs/logging.rst:173
 msgid "Werkzeug logs basic request/response information to the ``'werkzeug'`` logger. If the root logger has no handlers configured, Werkzeug adds a :class:`~logging.StreamHandler` to its logger."
 msgstr ""
 
-#: ../../flask/docs/logging.rst:176
+#: ../../flask/docs/logging.rst:179
 msgid "Flask Extensions"
 msgstr ""
 
-#: ../../flask/docs/logging.rst:178
+#: ../../flask/docs/logging.rst:181
 msgid "Depending on the situation, an extension may choose to log to :meth:`app.logger <flask.Flask.logger>` or its own named logger. Consult each extension's documentation for details."
 msgstr ""
-

@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 1.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 20:39+0900\n"
+"POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -36,31 +36,30 @@ msgstr ""
 msgid "This is a basic view function that generates a lot of CSV data on the fly. The trick is to have an inner function that uses a generator to generate data and to then invoke that function and pass it to a response object::"
 msgstr ""
 
-#: ../../flask/docs/patterns/streaming.rst:27
+#: ../../flask/docs/patterns/streaming.rst:25
 msgid "Each ``yield`` expression is directly sent to the browser.  Note though that some WSGI middlewares might break streaming, so be careful there in debug environments with profilers and other things you might have enabled."
 msgstr ""
 
-#: ../../flask/docs/patterns/streaming.rst:32
+#: ../../flask/docs/patterns/streaming.rst:30
 msgid "Streaming from Templates"
 msgstr ""
 
-#: ../../flask/docs/patterns/streaming.rst:34
+#: ../../flask/docs/patterns/streaming.rst:32
 msgid "The Jinja2 template engine also supports rendering templates piece by piece.  This functionality is not directly exposed by Flask because it is quite uncommon, but you can easily do it yourself::"
 msgstr ""
 
-#: ../../flask/docs/patterns/streaming.rst:52
+#: ../../flask/docs/patterns/streaming.rst:48
 msgid "The trick here is to get the template object from the Jinja2 environment on the application and to call :meth:`~jinja2.Template.stream` instead of :meth:`~jinja2.Template.render` which returns a stream object instead of a string.  Since we're bypassing the Flask template render functions and using the template object itself we have to make sure to update the render context ourselves by calling :meth:`~flask.Flask.update_template_context`. The template is then evaluated as the stream is iterated over.  Since each time you do a yield the server will flush the content to the client you might want to buffer up a few items in the template which you can do with ``rv.enable_buffering(size)``.  ``5`` is a sane default."
 msgstr ""
 
-#: ../../flask/docs/patterns/streaming.rst:64
+#: ../../flask/docs/patterns/streaming.rst:60
 msgid "Streaming with Context"
 msgstr ""
 
-#: ../../flask/docs/patterns/streaming.rst:68
+#: ../../flask/docs/patterns/streaming.rst:64
 msgid "Note that when you stream data, the request context is already gone the moment the function executes.  Flask 0.9 provides you with a helper that can keep the request context around during the execution of the generator::"
 msgstr ""
 
-#: ../../flask/docs/patterns/streaming.rst:83
+#: ../../flask/docs/patterns/streaming.rst:79
 msgid "Without the :func:`~flask.stream_with_context` function you would get a :class:`RuntimeError` at that point."
 msgstr ""
-

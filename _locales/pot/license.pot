@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 1.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 20:39+0900\n"
+"POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,11 +21,11 @@ msgid "License"
 msgstr ""
 
 #: ../../flask/docs/license.rst:5
-msgid "Source License"
+msgid "BSD-3-Clause Source License"
 msgstr ""
 
 #: ../../flask/docs/license.rst:7
-msgid "This license applies to all files in the Flask repository and source distribution. This includes Flask's source code, the examples, and tests, as well as the documentation."
+msgid "The BSD-3-Clause license applies to all files in the Flask repository and source distribution. This includes Flask's source code, the examples, and tests, as well as the documentation."
 msgstr ""
 
 #: ../../flask/LICENSE.rst:1
@@ -77,4 +77,3 @@ msgstr ""
 #: ../../flask/artwork/LICENSE.rst:17
 msgid "We would appreciate that you make the image a link to https://palletsprojects.com/p/flask/ if you use it in a medium that supports links."
 msgstr ""
-

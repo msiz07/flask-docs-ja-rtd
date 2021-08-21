@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 1.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 20:39+0900\n"
+"POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,7 +25,7 @@ msgid "When you have to work with form data submitted by a browser view, code qu
 msgstr ""
 
 #: ../../flask/docs/patterns/wtforms.rst:10
-msgid "When you are working with WTForms you have to define your forms as classes first.  I recommend breaking up the application into multiple modules (:ref:`larger-applications`) for that and adding a separate module for the forms."
+msgid "When you are working with WTForms you have to define your forms as classes first.  I recommend breaking up the application into multiple modules (:doc:`packages`) for that and adding a separate module for the forms."
 msgstr ""
 
 #: ../../flask/docs/patterns/wtforms.rst:15
@@ -53,7 +53,7 @@ msgid "In the view function, the usage of this form looks like this::"
 msgstr ""
 
 #: ../../flask/docs/patterns/wtforms.rst:57
-msgid "Notice we're implying that the view is using SQLAlchemy here (:ref:`sqlalchemy-pattern`), but that's not a requirement, of course.  Adapt the code as necessary."
+msgid "Notice we're implying that the view is using SQLAlchemy here (:doc:`sqlalchemy`), but that's not a requirement, of course.  Adapt the code as necessary."
 msgstr ""
 
 #: ../../flask/docs/patterns/wtforms.rst:61
@@ -85,7 +85,7 @@ msgid "Here's an example :file:`_formhelpers.html` template with such a macro:"
 msgstr ""
 
 #: ../../flask/docs/patterns/wtforms.rst:97
-msgid "This macro accepts a couple of keyword arguments that are forwarded to WTForm's field function, which renders the field for us.  The keyword arguments will be inserted as HTML attributes.  So, for example, you can call ``render_field(form.username, class='username')`` to add a class to the input element.  Note that WTForms returns standard Python unicode strings, so we have to tell Jinja2 that this data is already HTML-escaped with the ``|safe`` filter."
+msgid "This macro accepts a couple of keyword arguments that are forwarded to WTForm's field function, which renders the field for us.  The keyword arguments will be inserted as HTML attributes.  So, for example, you can call ``render_field(form.username, class='username')`` to add a class to the input element.  Note that WTForms returns standard Python strings, so we have to tell Jinja2 that this data is already HTML-escaped with the ``|safe`` filter."
 msgstr ""
 
 #: ../../flask/docs/patterns/wtforms.rst:105
@@ -95,4 +95,3 @@ msgstr ""
 #: ../../flask/docs/patterns/wtforms.rst:122
 msgid "For more information about WTForms, head over to the `WTForms website`_."
 msgstr ""
-

@@ -8,22 +8,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
+"Generated-By: Babel 2.9.1\n"
 
 # c02d9e638a5143e8a4b1afc0b7669739
-#: ../../blueprints.rst:4
+#: ../../flask/docs/blueprints.rst:2
 msgid "Modular Applications with Blueprints"
 msgstr "Blueprintを使ったアプリケーションのモジュール化"
 
 # eecf351890c94c81acf3d6a35d35be1e
-#: ../../blueprints.rst:10
+#: ../../flask/docs/blueprints.rst:8
 msgid ""
 "Flask uses a concept of *blueprints* for making application components "
 "and supporting common patterns within an application or across "
@@ -44,17 +44,17 @@ msgstr ""
 "するかの\ *blueprint（青写真）*\ です。"
 
 # bf52b9ba56754ff59c784c051b881571
-#: ../../blueprints.rst:19
+#: ../../flask/docs/blueprints.rst:17
 msgid "Why Blueprints?"
 msgstr "なぜBlueprintsか？"
 
 # 3cddc2e513394ce0b0c6189082feefcf
-#: ../../blueprints.rst:21
+#: ../../flask/docs/blueprints.rst:19
 msgid "Blueprints in Flask are intended for these cases:"
 msgstr "Flaskのblueprintは以下のような場面を意図しています:"
 
 # fdd7b6dd2d3649eb9b3a5bb52c1e3593
-#: ../../blueprints.rst:23
+#: ../../flask/docs/blueprints.rst:21
 msgid ""
 "Factor an application into a set of blueprints.  This is ideal for larger"
 " applications; a project could instantiate an application object, "
@@ -66,7 +66,7 @@ msgstr ""
 "そしてblueprintの集合を登録できます。"
 
 # 37abeede2d644ccf9838e3051325f931
-#: ../../blueprints.rst:26
+#: ../../flask/docs/blueprints.rst:24
 msgid ""
 "Register a blueprint on an application at a URL prefix and/or subdomain. "
 "Parameters in the URL prefix/subdomain become common view arguments (with"
@@ -79,7 +79,7 @@ msgstr ""
 "や「Blueprintの登録」の節の記載内容に対応した処理のことだと思います）。"
 
 # 051a0cc893024972a1c4b14243c0d0c1
-#: ../../blueprints.rst:29
+#: ../../flask/docs/blueprints.rst:27
 msgid ""
 "Register a blueprint multiple times on an application with different URL "
 "rules."
@@ -90,7 +90,7 @@ msgstr ""
 "は\ :class:`~werkzeug.routing.Rule`\ として処理されるものだと思います）。"
 
 # 83bdabb865b341b7afcda1b72c1f3fe5
-#: ../../blueprints.rst:31
+#: ../../flask/docs/blueprints.rst:29
 msgid ""
 "Provide template filters, static files, templates, and other utilities "
 "through blueprints.  A blueprint does not have to implement applications "
@@ -101,7 +101,7 @@ msgstr ""
 "提供。blueprintではアプリケーションやview関数の実装は必須ではありません。"
 
 # 3afb107944934a3dbc76ee361c410022
-#: ../../blueprints.rst:34
+#: ../../flask/docs/blueprints.rst:32
 msgid ""
 "Register a blueprint on an application for any of these cases when "
 "initializing a Flask extension."
@@ -110,12 +110,13 @@ msgstr ""
 "blueprintを登録。"
 
 # 97e0673d5c7c467d84a926ebcec38377
-#: ../../blueprints.rst:37
+#: ../../flask/docs/blueprints.rst:35
+#, fuzzy
 msgid ""
 "A blueprint in Flask is not a pluggable app because it is not actually an"
 " application -- it's a set of operations which can be registered on an "
 "application, even multiple times.  Why not have multiple application "
-"objects?  You can do that (see :ref:`app-dispatch`), but your "
+"objects?  You can do that (see :doc:`/patterns/appdispatch`), but your "
 "applications will have separate configs and will be managed at the WSGI "
 "layer."
 msgstr ""
@@ -128,7 +129,7 @@ msgstr ""
 "で管理されます。"
 
 # 9aef2a46cb7242e884530b59f5291cf9
-#: ../../blueprints.rst:43
+#: ../../flask/docs/blueprints.rst:42
 msgid ""
 "Blueprints instead provide separation at the Flask level, share "
 "application config, and can change an application object as necessary "
@@ -144,12 +145,12 @@ msgstr ""
 "です。"
 
 # 563b209c89c742c08d4aa004952a94ac
-#: ../../blueprints.rst:50
+#: ../../flask/docs/blueprints.rst:49
 msgid "The Concept of Blueprints"
 msgstr "Blueprintのコンセプト"
 
 # 9b1f6e7b5f2c4689ab7e626a410fe84c
-#: ../../blueprints.rst:52
+#: ../../flask/docs/blueprints.rst:51
 msgid ""
 "The basic concept of blueprints is that they record operations to execute"
 " when registered on an application.  Flask associates view functions with"
@@ -164,12 +165,12 @@ msgstr ""
 "URLs）に関する処理を指していると思います）。"
 
 # 0399b7b317454e7cb3dff793f577c4c4
-#: ../../blueprints.rst:58
+#: ../../flask/docs/blueprints.rst:57
 msgid "My First Blueprint"
 msgstr "最初のBlueprint"
 
 # 9a28a87831f04425acf0bd949e1e89e7
-#: ../../blueprints.rst:60
+#: ../../flask/docs/blueprints.rst:59
 msgid ""
 "This is what a very basic blueprint looks like.  In this case we want to "
 "implement a blueprint that does simple rendering of static templates::"
@@ -179,7 +180,7 @@ msgstr ""
 "としています::"
 
 # 61eb5afcfc9b4c3d94d3ae687e06a80c
-#: ../../blueprints.rst:77
+#: ../../flask/docs/blueprints.rst:76
 msgid ""
 "When you bind a function with the help of the ``@simple_page.route`` "
 "decorator, the blueprint will record the intention of registering the "
@@ -201,17 +202,17 @@ msgstr ""
 "付けが作成される、という意味合い）。"
 
 # ffc1e55678bd4814bd121548ffc00441
-#: ../../blueprints.rst:86
+#: ../../flask/docs/blueprints.rst:85
 msgid "Registering Blueprints"
 msgstr "Blueprintの登録"
 
 # 2ef94b5d3632478b9e798c6bafc5a97c
-#: ../../blueprints.rst:88
+#: ../../flask/docs/blueprints.rst:87
 msgid "So how do you register that blueprint?  Like this::"
 msgstr "ではどうやってblueprintを登録するのでしょうか？以下のようにします::"
 
 # ce5a51efa2f2431aaf4054a5f8bbb98f
-#: ../../blueprints.rst:96
+#: ../../flask/docs/blueprints.rst:95
 msgid ""
 "If you check the rules registered on the application, you will find "
 "these::"
@@ -221,7 +222,7 @@ msgstr ""
 "クラスのオブジェクト）をチェックすれば、以下の内容を見つけ出せるでしょう::"
 
 # f8378ba5bb8c44f193f321a962fbc387
-#: ../../blueprints.rst:104
+#: ../../flask/docs/blueprints.rst:103
 msgid ""
 "The first one is obviously from the application itself for the static "
 "files.  The other two are for the `show` function of the ``simple_page`` "
@@ -235,17 +236,17 @@ msgstr ""
 "show関数名とが）分けられています。"
 
 # 34b77ebad2f442b58da5e74fc810a5ff
-#: ../../blueprints.rst:109
+#: ../../flask/docs/blueprints.rst:108
 msgid "Blueprints however can also be mounted at different locations::"
 msgstr "しかしながら、blueprintは違う場所にも設置（mount）できます::"
 
 # 8a28d9c0f740424e9defd943eb9f7a7a
-#: ../../blueprints.rst:113
+#: ../../flask/docs/blueprints.rst:112
 msgid "And sure enough, these are the generated rules::"
 msgstr "そして思ったとおりに、生成されたルールは以下のようになります::"
 
 # addf4ebe2cc14bada4181edceb4a7e38
-#: ../../blueprints.rst:120
+#: ../../flask/docs/blueprints.rst:119
 msgid ""
 "On top of that you can register blueprints multiple times though not "
 "every blueprint might respond properly to that.  In fact it depends on "
@@ -255,13 +256,36 @@ msgstr ""
 "ものがあるかもしれません。事実、blueprintが2回以上設置（mount）できるかは、"
 "blueprintがどのように実装されているかに依存します。"
 
+# ffc1e55678bd4814bd121548ffc00441
+#: ../../flask/docs/blueprints.rst:124
+#, fuzzy
+msgid "Nesting Blueprints"
+msgstr "Blueprintの登録"
+
+#: ../../flask/docs/blueprints.rst:126
+msgid "It is possible to register a blueprint on another blueprint."
+msgstr ""
+
+#: ../../flask/docs/blueprints.rst:135
+msgid ""
+"The child blueprint will gain the parent's name as a prefix to its name, "
+"and child URLs will be prefixed with the parent's URL prefix."
+msgstr ""
+
+#: ../../flask/docs/blueprints.rst:143
+msgid ""
+"Blueprint-specific before request functions, etc. registered with the "
+"parent will trigger for the child. If a child does not have an error "
+"handler that can handle a given exception, the parent's will be tried."
+msgstr ""
+
 # 68dee2b6f73048e8a9356b1815cbd067
-#: ../../blueprints.rst:125
+#: ../../flask/docs/blueprints.rst:149
 msgid "Blueprint Resources"
 msgstr "Blueprintのリソース"
 
 # 7f88eb3d57df4e39a80d49a815ff7103
-#: ../../blueprints.rst:127
+#: ../../flask/docs/blueprints.rst:151
 msgid ""
 "Blueprints can provide resources as well.  Sometimes you might want to "
 "introduce a blueprint only for the resources it provides."
@@ -270,12 +294,12 @@ msgstr ""
 "リソースのためだけに、blueprintを導入したいときがあるかもしれません。"
 
 # 0ac1391c888240b4a63de573a6291712
-#: ../../blueprints.rst:131
+#: ../../flask/docs/blueprints.rst:155
 msgid "Blueprint Resource Folder"
 msgstr "Blueprintのリソースフォルダ"
 
 # 34a2fa6db3fa4618bd4c3c9df4f8deef
-#: ../../blueprints.rst:133
+#: ../../flask/docs/blueprints.rst:157
 msgid ""
 "Like for regular applications, blueprints are considered to be contained "
 "in a folder.  While multiple blueprints can originate from the same "
@@ -286,7 +310,7 @@ msgstr ""
 "ですが、そうする必要はなく、そしてそれは普通は推奨されません。"
 
 # 55d8c6d496f941b5a71d174a4a730353
-#: ../../blueprints.rst:137
+#: ../../flask/docs/blueprints.rst:161
 msgid ""
 "The folder is inferred from the second argument to :class:`Blueprint` "
 "which is usually `__name__`.  This argument specifies what logical Python"
@@ -308,7 +332,7 @@ msgstr ""
 "ます::"
 
 # cccaa78f5a3f4514af34c3618f8cd307
-#: ../../blueprints.rst:148
+#: ../../flask/docs/blueprints.rst:172
 msgid ""
 "To quickly open sources from this folder you can use the "
 ":meth:`~Blueprint.open_resource` function::"
@@ -317,12 +341,12 @@ msgstr ""
 "誤記）を開くには、\ :meth:`~Blueprint.open_resource`\ 関数を使えます::"
 
 # 15f0996f353649d29b53b2bdc0fe8135
-#: ../../blueprints.rst:155
+#: ../../flask/docs/blueprints.rst:179
 msgid "Static Files"
 msgstr "静的ファイル"
 
 # 7ba935a7cfb846d19a0a3e7fbd4bc811
-#: ../../blueprints.rst:157
+#: ../../flask/docs/blueprints.rst:181
 msgid ""
 "A blueprint can expose a folder with static files by providing the path "
 "to the folder on the filesystem with the ``static_folder`` argument. It "
@@ -333,7 +357,7 @@ msgstr ""
 "それは絶対パスか、blueprintの場所からの相対パスのどちらかです::"
 
 # b6896bcf7287455abe6b10bf0ad8390a
-#: ../../blueprints.rst:163
+#: ../../flask/docs/blueprints.rst:187
 msgid ""
 "By default the rightmost part of the path is where it is exposed on the "
 "web. This can be changed with the ``static_url_path`` argument. Because "
@@ -350,7 +374,7 @@ msgstr ""
 "になります。"
 
 # d0284cb25b7f479d9bece1233a629189
-#: ../../blueprints.rst:169
+#: ../../flask/docs/blueprints.rst:193
 msgid ""
 "The endpoint is named ``blueprint_name.static``. You can generate URLs to"
 " it with :func:`url_for` like you would with the static folder of the "
@@ -361,7 +385,7 @@ msgstr ""
 "生成可能です::"
 
 # 863cfc7ce48e4af68f6ad0ca9a1e4b66
-#: ../../blueprints.rst:175
+#: ../../flask/docs/blueprints.rst:199
 msgid ""
 "However, if the blueprint does not have a ``url_prefix``, it is not "
 "possible to access the blueprint's static folder. This is because the URL"
@@ -379,12 +403,12 @@ msgstr ""
 "使用されません。"
 
 # 1f36255873f9436d89129fb88da370a3
-#: ../../blueprints.rst:183
+#: ../../flask/docs/blueprints.rst:207
 msgid "Templates"
 msgstr "テンプレート"
 
 # c224ffb038204d9991ece0591bfbbd62
-#: ../../blueprints.rst:185
+#: ../../flask/docs/blueprints.rst:209
 msgid ""
 "If you want the blueprint to expose templates you can do that by "
 "providing the `template_folder` parameter to the :class:`Blueprint` "
@@ -394,7 +418,7 @@ msgstr ""
 "コンストラクタに\ `template_folder`\ 引数を提供すれば可能です::"
 
 # 48722da5f541493ca3e0caa8e0ee8b29
-#: ../../blueprints.rst:190
+#: ../../flask/docs/blueprints.rst:214
 msgid ""
 "For static files, the path can be absolute or relative to the blueprint "
 "resource folder."
@@ -404,7 +428,7 @@ msgstr ""
 "です。"
 
 # d1549439b9194376871fd5f5e46f4d2b
-#: ../../blueprints.rst:193
+#: ../../flask/docs/blueprints.rst:217
 msgid ""
 "The template folder is added to the search path of templates but with a "
 "lower priority than the actual application's template folder. That way "
@@ -425,7 +449,7 @@ msgstr ""
 "されたblueprintが他よりも優先されます。"
 
 # b279110735b14c9ebef69137af25758d
-#: ../../blueprints.rst:202
+#: ../../flask/docs/blueprints.rst:226
 msgid ""
 "So if you have a blueprint in the folder ``yourapplication/admin`` and "
 "you want to render the template ``'admin/index.html'`` and you have "
@@ -444,7 +468,7 @@ msgstr ""
 "``index.html``\ テンプレートによって上書きされることを防ぐためです。"
 
 # 81b51836a99e4abe8d9d1bf3ce10dba9
-#: ../../blueprints.rst:210
+#: ../../flask/docs/blueprints.rst:234
 msgid ""
 "To further reiterate this: if you have a blueprint named ``admin`` and "
 "you want to render a template called :file:`index.html` which is specific"
@@ -456,7 +480,7 @@ msgstr ""
 "良いアイデアは以下のようにテンプレートをレイアウトすることです::"
 
 # e248d5d0ef5d4e3d836a90955d6c18a6
-#: ../../blueprints.rst:222
+#: ../../flask/docs/blueprints.rst:246
 msgid ""
 "And then when you want to render the template, use "
 ":file:`admin/index.html` as the name to look up the template by.  If you "
@@ -473,12 +497,12 @@ msgstr ""
 "するよう、Flaskに指示してください。"
 
 # 7ee65d63e5ef4d54b0675ab31cdbb857
-#: ../../blueprints.rst:229
+#: ../../flask/docs/blueprints.rst:253
 msgid "Building URLs"
 msgstr "URLの構築"
 
 # 0f0627d4bc104d2aad8865c8d81d7b66
-#: ../../blueprints.rst:231
+#: ../../flask/docs/blueprints.rst:255
 msgid ""
 "If you want to link from one page to another you can use the "
 ":func:`url_for` function just like you normally would do just that you "
@@ -490,7 +514,7 @@ msgstr ""
 "をURLのエンドポイントの前に付けるだけです::"
 
 # 82c26e4cf64f47198ba2aacad0fe1695
-#: ../../blueprints.rst:237
+#: ../../flask/docs/blueprints.rst:261
 msgid ""
 "Additionally if you are in a view function of a blueprint or a rendered "
 "template and you want to link to another endpoint of the same blueprint, "
@@ -502,7 +526,7 @@ msgstr ""
 "エンドポイントの前につける相対リダイレクトを使えます::"
 
 # 8475c82c75a34d9bbf0a84e0f5432c96
-#: ../../blueprints.rst:243
+#: ../../flask/docs/blueprints.rst:267
 msgid ""
 "This will link to ``admin.index`` for instance in case the current "
 "request was dispatched to any other admin blueprint endpoint."
@@ -511,12 +535,13 @@ msgstr ""
 "振り分けられていたとき、\ ``admin.index``\ へリンクします。"
 
 # e4351a9cb35948c39997bc4758521911
-#: ../../blueprints.rst:247
-msgid "Error Handlers"
+#: ../../flask/docs/blueprints.rst:272
+#, fuzzy
+msgid "Blueprint Error Handlers"
 msgstr "エラー処理（Error Handlers）"
 
 # b033f1c827c84a59a99a0f2a4adb40af
-#: ../../blueprints.rst:249
+#: ../../flask/docs/blueprints.rst:274
 msgid ""
 "Blueprints support the ``errorhandler`` decorator just like the "
 ":class:`Flask` application object, so it is easy to make Blueprint-"
@@ -527,12 +552,12 @@ msgstr ""
 "エラーページを作成するのは簡単です。"
 
 # fd9c137a7757475aa5f49e1786be6ea2
-#: ../../blueprints.rst:253
+#: ../../flask/docs/blueprints.rst:278
 msgid "Here is an example for a \"404 Page Not Found\" exception::"
 msgstr "「404 Page Not Found」例外に対する例がこちらです::"
 
 # 32b09396d3d540a69a057ce091982b4d
-#: ../../blueprints.rst:259
+#: ../../flask/docs/blueprints.rst:284
 msgid ""
 "Most errorhandlers will simply work as expected; however, there is a "
 "caveat concerning handlers for 404 and 405 exceptions.  These "
@@ -561,9 +586,12 @@ msgstr ""
 "アプリケーションのレベルで\ ``request``\ の代理（proxy）のオブジェクトで"
 "定義させることができます::"
 
-# 7aa4a2886efb4e18a5de6d8d4a8be5e4
-#: ../../blueprints.rst:277
-msgid "More information on error handling see :ref:`errorpages`."
+#: ../../flask/docs/blueprints.rst:302
+msgid "See :doc:`/errorhandling`."
 msgstr ""
-"エラー処理に関するさらなる情報は\ :ref:`errorpages`\ を確認してください。"
+
+# 7aa4a2886efb4e18a5de6d8d4a8be5e4
+#~ msgid "More information on error handling see :ref:`errorpages`."
+#~ msgstr ""
+#~ "エラー処理に関するさらなる情報は\ :ref:`errorpages`\ を確認してください。"
 

@@ -8,22 +8,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
+"Generated-By: Babel 2.9.1\n"
 
 # 5b0af29515264c0cb306a397b5ad149a
-#: ../../patterns/wtforms.rst:2
+#: ../../flask/docs/patterns/wtforms.rst:2
 msgid "Form Validation with WTForms"
 msgstr "WTFormsを使ったフォーム検証"
 
 # 836445675b924dc58e048415f5438237
-#: ../../patterns/wtforms.rst:4
+#: ../../flask/docs/patterns/wtforms.rst:4
 msgid ""
 "When you have to work with form data submitted by a browser view, code "
 "quickly becomes very hard to read.  There are libraries out there "
@@ -38,12 +38,13 @@ msgstr ""
 "に自分がいることを見つけた場合、それを試してみたくなるでしょう。"
 
 # 54c7aa6ceb664bd49eaed4f4dab091db
-#: ../../patterns/wtforms.rst:10
+#: ../../flask/docs/patterns/wtforms.rst:10
+#, fuzzy
 msgid ""
 "When you are working with WTForms you have to define your forms as "
 "classes first.  I recommend breaking up the application into multiple "
-"modules (:ref:`larger-applications`) for that and adding a separate "
-"module for the forms."
+"modules (:doc:`packages`) for that and adding a separate module for the "
+"forms."
 msgstr ""
 "WTFormsを使って作業するとき、最初に、フォームをクラスとして定義する必要が"
 "あります。そのために、アプリケーションを複数のモジュールに分解し（\ "
@@ -51,12 +52,12 @@ msgstr ""
 "ことをお勧めします。"
 
 # 7dd7274d25c542268cdfa74296bc7a4b
-#: ../../patterns/wtforms.rst:15
+#: ../../flask/docs/patterns/wtforms.rst:15
 msgid "Getting the most out of WTForms with an Extension"
 msgstr "Flask拡張を使ったWTFormsの最大限の活用"
 
 # 3b11a0e903d348798fc0c0fc3056e45c
-#: ../../patterns/wtforms.rst:17
+#: ../../flask/docs/patterns/wtforms.rst:17
 msgid ""
 "The `Flask-WTF`_ extension expands on this pattern and adds a few little "
 "helpers that make working with forms and Flask more fun.  You can get it "
@@ -67,43 +68,44 @@ msgstr ""
 "`PyPI <https://pypi.org/project/Flask-WTF/>`_\ から取得できます。"
 
 # 84288bf7a2c24f99809baeed1f11bf6e
-#: ../../patterns/wtforms.rst:25
+#: ../../flask/docs/patterns/wtforms.rst:25
 msgid "The Forms"
 msgstr ""
 
 # d39d08fb068d47b1b5eb2b1d2ae95e19
-#: ../../patterns/wtforms.rst:27
+#: ../../flask/docs/patterns/wtforms.rst:27
 msgid "This is an example form for a typical registration page::"
 msgstr "以下は、典型的な登録ページ用のフォームの例です::"
 
 # 1d5d53bac89549909dc8940333e2ac9b
-#: ../../patterns/wtforms.rst:42
+#: ../../flask/docs/patterns/wtforms.rst:42
 msgid "In the View"
 msgstr "Viewの中"
 
 # a2038eb5a2494439b6e42950c1cdf398
-#: ../../patterns/wtforms.rst:44
+#: ../../flask/docs/patterns/wtforms.rst:44
 msgid "In the view function, the usage of this form looks like this::"
 msgstr "view関数の中では、このフォームの使い方は以下のようになります::"
 
 # b3ff962ebda84329a5ef48354013aa5f
-#: ../../patterns/wtforms.rst:57
+#: ../../flask/docs/patterns/wtforms.rst:57
+#, fuzzy
 msgid ""
-"Notice we're implying that the view is using SQLAlchemy here (:ref"
-":`sqlalchemy-pattern`), but that's not a requirement, of course.  Adapt "
-"the code as necessary."
+"Notice we're implying that the view is using SQLAlchemy here "
+"(:doc:`sqlalchemy`), but that's not a requirement, of course.  Adapt the "
+"code as necessary."
 msgstr ""
 "ここでは暗黙的にviewがsqlalchemy（\ :ref:`sqlalchemy-pattern`\ ）を使って"
 "いますが、それは（WTFormsの）要件ではないことに注意してください。必要に応"
 "じてコードを調整してください。"
 
 # e8b707d990174f7cb0885293904cd486
-#: ../../patterns/wtforms.rst:61
+#: ../../flask/docs/patterns/wtforms.rst:61
 msgid "Things to remember:"
 msgstr "覚えておくべきこと:"
 
 # 8761d80fb73347a093ab562eb83e11bd
-#: ../../patterns/wtforms.rst:63
+#: ../../flask/docs/patterns/wtforms.rst:63
 msgid ""
 "create the form from the request :attr:`~flask.request.form` value if the"
 " data is submitted via the HTTP ``POST`` method and "
@@ -115,7 +117,7 @@ msgstr ""
 ":attr:`~flask.request.args`\ 属性から、フォームを作成します。"
 
 # 53f4c7e7da0246339af050c4319da6a5
-#: ../../patterns/wtforms.rst:66
+#: ../../flask/docs/patterns/wtforms.rst:66
 msgid ""
 "to validate the data, call the :func:`~wtforms.form.Form.validate` "
 "method, which will return ``True`` if the data validates, ``False`` "
@@ -126,19 +128,19 @@ msgstr ""
 "を呼びます。"
 
 # abd7cdb3cd284170a7370f41c9862f0a
-#: ../../patterns/wtforms.rst:69
+#: ../../flask/docs/patterns/wtforms.rst:69
 msgid "to access individual values from the form, access `form.<NAME>.data`."
 msgstr ""
 "フォームから個々の値へアクセスするには、\ `form.<NAME>.data`\ へアクセス"
 "します。"
 
 # b0d64d4b97094355959f55471201bdc8
-#: ../../patterns/wtforms.rst:72
+#: ../../flask/docs/patterns/wtforms.rst:72
 msgid "Forms in Templates"
 msgstr "テンプレートの中のフォーム"
 
 # 685fe87cb95345d98f667743e2c57656
-#: ../../patterns/wtforms.rst:74
+#: ../../flask/docs/patterns/wtforms.rst:74
 msgid ""
 "Now to the template side.  When you pass the form to the templates, you "
 "can easily render them there.  Look at the following example template to "
@@ -154,22 +156,23 @@ msgstr ""
 "マクロを書くことができます。"
 
 # cb1fbc5ee6d1474ba1d17e81dff90d55
-#: ../../patterns/wtforms.rst:80
+#: ../../flask/docs/patterns/wtforms.rst:80
 msgid "Here's an example :file:`_formhelpers.html` template with such a macro:"
 msgstr ""
 "以下は、そのようなマクロを使う例である\ :file:`_formhelpers.html`\ テンプ"
 "レートです:"
 
 # 52e074beaa914f9c8b5894412bc03a98
-#: ../../patterns/wtforms.rst:97
+#: ../../flask/docs/patterns/wtforms.rst:97
+#, fuzzy
 msgid ""
 "This macro accepts a couple of keyword arguments that are forwarded to "
 "WTForm's field function, which renders the field for us.  The keyword "
 "arguments will be inserted as HTML attributes.  So, for example, you can "
 "call ``render_field(form.username, class='username')`` to add a class to "
-"the input element.  Note that WTForms returns standard Python unicode "
-"strings, so we have to tell Jinja2 that this data is already HTML-escaped"
-" with the ``|safe`` filter."
+"the input element.  Note that WTForms returns standard Python strings, so"
+" we have to tell Jinja2 that this data is already HTML-escaped with the "
+"``|safe`` filter."
 msgstr ""
 "このマクロはWTFormsの、我々のためにフィールドを表示する、field関数へ転送"
 "するための、2つ一組のキーワード引数（a couple of keyword arguments）を受け"
@@ -180,7 +183,7 @@ msgstr ""
 "フィルターを使ってJinja2に伝える必要があることに注意してください。"
 
 # 7767ab81bee441ecbaa9ab8f229a8569
-#: ../../patterns/wtforms.rst:105
+#: ../../flask/docs/patterns/wtforms.rst:105
 msgid ""
 "Here is the :file:`register.html` template for the function we used "
 "above, which takes advantage of the :file:`_formhelpers.html` template:"
@@ -190,7 +193,7 @@ msgstr ""
 "レートであり、\ :file:`_formhelpers.html`\ テンプレートを活用しています:"
 
 # 0b76868a16be4a11ad202d683eea936d
-#: ../../patterns/wtforms.rst:122
+#: ../../flask/docs/patterns/wtforms.rst:122
 msgid "For more information about WTForms, head over to the `WTForms website`_."
 msgstr ""
 "WTFormsに関するさらなる情報は、\ `WTForms website`_\ を調べてください。"

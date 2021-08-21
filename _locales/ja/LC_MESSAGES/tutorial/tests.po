@@ -8,22 +8,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
+"Generated-By: Babel 2.9.1\n"
 
 # 4c156b72299d4a57965dedfd80862ac0
-#: ../../tutorial/tests.rst:4
+#: ../../flask/docs/tutorial/tests.rst:4
 msgid "Test Coverage"
 msgstr "テストの網羅率（Test Coverage）"
 
 # 1b57a31e32f54dc4aa2c2e7321e8b084
-#: ../../tutorial/tests.rst:6
+#: ../../flask/docs/tutorial/tests.rst:6
 msgid ""
 "Writing unit tests for your application lets you check that the code you "
 "wrote works the way you expect. Flask provides a test client that "
@@ -35,7 +35,7 @@ msgstr ""
 "テスト用のクライアントを提供します。"
 
 # c276b117b8ad459a991769ef1c0691ad
-#: ../../tutorial/tests.rst:10
+#: ../../flask/docs/tutorial/tests.rst:10
 msgid ""
 "You should test as much of your code as possible. Code in functions only "
 "runs when the function is called, and code in branches, such as ``if`` "
@@ -48,7 +48,7 @@ msgstr ""
 "データでテストされていることを確認したくなるでしょう。"
 
 # 75b1dee9bbf447ccbb7a0baa94becc38
-#: ../../tutorial/tests.rst:15
+#: ../../flask/docs/tutorial/tests.rst:15
 #, python-format
 msgid ""
 "The closer you get to 100% coverage, the more comfortable you can be that"
@@ -66,7 +66,7 @@ msgstr ""
 "開発中に使用できる重要なツールです。"
 
 # 292f17dc647746eea790f33850f8ed9c
-#: ../../tutorial/tests.rst:23
+#: ../../flask/docs/tutorial/tests.rst:23
 msgid ""
 "This is being introduced late in the tutorial, but in your future "
 "projects you should test as you develop."
@@ -75,7 +75,7 @@ msgstr ""
 "プロジェクトでは、開発しているときにテストするべきです。"
 
 # 2bfc688caccf47a0a925f22ad2be51b7
-#: ../../tutorial/tests.rst:26
+#: ../../flask/docs/tutorial/tests.rst:26
 msgid ""
 "You'll use `pytest`_ and `coverage`_ to test and measure your code. "
 "Install them both:"
@@ -84,12 +84,12 @@ msgstr ""
 "`coverage`_\ を使用します。両方ともインストールしましょう:"
 
 # b593cdbe5ca1441d852bd5b4d9d86eb6
-#: ../../tutorial/tests.rst:38
+#: ../../flask/docs/tutorial/tests.rst:38
 msgid "Setup and Fixtures"
 msgstr "準備と据え付け品（Setup and Fixtures）"
 
 # d99e1004cca4431297f63e6631e64ed1
-#: ../../tutorial/tests.rst:40
+#: ../../flask/docs/tutorial/tests.rst:40
 msgid ""
 "The test code is located in the ``tests`` directory. This directory is "
 "*next to* the ``flaskr`` package, not inside it. The "
@@ -106,7 +106,7 @@ msgstr ""
 "各テスト関数も同様に\ ``test_``\ で始まります。"
 
 # b259a473fe9e4943a99d36df5249404a
-#: ../../tutorial/tests.rst:47
+#: ../../flask/docs/tutorial/tests.rst:47
 msgid ""
 "Each test will create a new temporary database file and populate some "
 "data that will be used in the tests. Write a SQL file to insert that "
@@ -117,12 +117,12 @@ msgstr ""
 "書きましょう。"
 
 # 0de6f610da674c21886961b58e2922a7
-#: ../../tutorial/tests.rst:51
+#: ../../flask/docs/tutorial/tests.rst:51
 msgid "``tests/data.sql``"
 msgstr ""
 
 # 37965572f5d04c7db8f1bb14a0dcb9b1
-#: ../../tutorial/tests.rst:63
+#: ../../flask/docs/tutorial/tests.rst:63
 msgid ""
 "The ``app`` fixture will call the factory and pass ``test_config`` to "
 "configure the application and database for testing instead of using your "
@@ -134,19 +134,21 @@ msgstr ""
 
 # 0f77dd1c31b94ad98575f27c921d1196
 # 74d49e228b1b4253b3d27567a694c0c7
-#: ../../tutorial/tests.rst:67 ../../tutorial/tests.rst:226
+#: ../../flask/docs/tutorial/tests.rst:67
+#: ../../flask/docs/tutorial/tests.rst:226
 msgid "``tests/conftest.py``"
 msgstr ""
 
 # f3ff3640b68749e4bb2f3b4b2541e24d
-#: ../../tutorial/tests.rst:109
+#: ../../flask/docs/tutorial/tests.rst:109
+#, fuzzy
 msgid ""
 ":func:`tempfile.mkstemp` creates and opens a temporary file, returning "
-"the file object and the path to it. The ``DATABASE`` path is overridden "
-"so it points to this temporary path instead of the instance folder. After"
-" setting the path, the database tables are created and the test data is "
-"inserted. After the test is over, the temporary file is closed and "
-"removed."
+"the file descriptor and the path to it. The ``DATABASE`` path is "
+"overridden so it points to this temporary path instead of the instance "
+"folder. After setting the path, the database tables are created and the "
+"test data is inserted. After the test is over, the temporary file is "
+"closed and removed."
 msgstr ""
 ":func:`tempfile.mkstemp`\ は一時ファイルを作成して開き、そのfileオブジェクト"
 "とパスを返します。\ ``DATABASE``\ のパスは上書きされて、インスタンスフォルダ"
@@ -155,7 +157,7 @@ msgstr ""
 "一時ファイルが閉じられ削除されます。"
 
 # ce0754f2a58c44fca1f53e3efeeabdb9
-#: ../../tutorial/tests.rst:116
+#: ../../flask/docs/tutorial/tests.rst:116
 msgid ""
 ":data:`TESTING` tells Flask that the app is in test mode. Flask changes "
 "some internal behavior so it's easier to test, and other extensions can "
@@ -167,7 +169,7 @@ msgstr ""
 "使用する可能性があります。"
 
 # 15ea38e4f9a14460b474ce5a390811b4
-#: ../../tutorial/tests.rst:120
+#: ../../flask/docs/tutorial/tests.rst:120
 msgid ""
 "The ``client`` fixture calls :meth:`app.test_client() "
 "<Flask.test_client>` with the application object created by the ``app`` "
@@ -180,7 +182,7 @@ msgstr ""
 "サーバを実行させずに、アプリケーションへのリクエストを作成します。"
 
 # ecca3ecb7ac64ee1ac4d61b5ee5d911d
-#: ../../tutorial/tests.rst:125
+#: ../../flask/docs/tutorial/tests.rst:125
 msgid ""
 "The ``runner`` fixture is similar to ``client``. "
 ":meth:`app.test_cli_runner() <Flask.test_cli_runner>` creates a runner "
@@ -191,7 +193,7 @@ msgstr ""
 "に登録されたClickのコマンドを呼び出し可能なrunner（実行者）を作成します。"
 
 # 9f8f772acf8b4b28a03bcae3d7815fa0
-#: ../../tutorial/tests.rst:129
+#: ../../flask/docs/tutorial/tests.rst:129
 msgid ""
 "Pytest uses fixtures by matching their function names with the names of "
 "arguments in the test functions. For example, the ``test_hello`` function"
@@ -206,12 +208,12 @@ msgstr ""
 "戻り値を渡します。"
 
 # 015ab0badd7d46daab6c2d589f206a5e
-#: ../../tutorial/tests.rst:137
+#: ../../flask/docs/tutorial/tests.rst:137
 msgid "Factory"
 msgstr "製造工場（Factory）"
 
 # 59e3074a49c54bf59c670c3dd9372a6c
-#: ../../tutorial/tests.rst:139
+#: ../../flask/docs/tutorial/tests.rst:139
 msgid ""
 "There's not much to test about the factory itself. Most of the code will "
 "be executed for each test already, so if something fails the other tests "
@@ -222,7 +224,7 @@ msgstr ""
 "でしょう。"
 
 # 8fd48d280f1945d8a4a477669c13b03f
-#: ../../tutorial/tests.rst:143
+#: ../../flask/docs/tutorial/tests.rst:143
 msgid ""
 "The only behavior that can change is passing test config. If config is "
 "not passed, there should be some default configuration, otherwise the "
@@ -233,12 +235,12 @@ msgstr ""
 "なければ設定は上書きされるはずです。"
 
 # 135ac0e577ba44f5b51d22494625f176
-#: ../../tutorial/tests.rst:147
+#: ../../flask/docs/tutorial/tests.rst:147
 msgid "``tests/test_factory.py``"
 msgstr ""
 
 # 3d381d9fa15f4910a00949e34e44820a
-#: ../../tutorial/tests.rst:162
+#: ../../flask/docs/tutorial/tests.rst:162
 msgid ""
 "You added the ``hello`` route as an example when writing the factory at "
 "the beginning of the tutorial. It returns \"Hello, World!\", so the test "
@@ -249,12 +251,12 @@ msgstr ""
 "レスポンスデータが合っているかをチェックします。"
 
 # 2e5e16898b3542209f92a34c089b381e
-#: ../../tutorial/tests.rst:168
+#: ../../flask/docs/tutorial/tests.rst:168
 msgid "Database"
 msgstr "データベース"
 
 # 5371db79fe40416abd7df8d238d6ef2d
-#: ../../tutorial/tests.rst:170
+#: ../../flask/docs/tutorial/tests.rst:170
 msgid ""
 "Within an application context, ``get_db`` should return the same "
 "connection each time it's called. After the context, the connection "
@@ -267,12 +269,13 @@ msgstr ""
 
 # 18c4a36b1ab84bf9af305bb665578ab7
 # 5c0831ee5e664fe0930f1fd24a3c7dba
-#: ../../tutorial/tests.rst:174 ../../tutorial/tests.rst:196
+#: ../../flask/docs/tutorial/tests.rst:174
+#: ../../flask/docs/tutorial/tests.rst:196
 msgid "``tests/test_db.py``"
 msgstr ""
 
 # cc509aa739c74488acc201a2b0d3ba3f
-#: ../../tutorial/tests.rst:193
+#: ../../flask/docs/tutorial/tests.rst:193
 msgid ""
 "The ``init-db`` command should call the ``init_db`` function and output a"
 " message."
@@ -281,7 +284,7 @@ msgstr ""
 "するはずです。"
 
 # 3824be01fbe24c10876c3027d1d4b94d
-#: ../../tutorial/tests.rst:211
+#: ../../flask/docs/tutorial/tests.rst:211
 msgid ""
 "This test uses Pytest's ``monkeypatch`` fixture to replace the "
 "``init_db`` function with one that records that it's been called. The "
@@ -294,12 +297,12 @@ msgstr ""
 "``init-db``\ コマンドをコマンド名を使って呼び出すために使用されています。"
 
 # 7348cc7a0145448d800143e2f1bd8265
-#: ../../tutorial/tests.rst:218
+#: ../../flask/docs/tutorial/tests.rst:218
 msgid "Authentication"
 msgstr "認証（Authentication）"
 
 # 359d7b76dd734fd28f74f8a9ca9e7245
-#: ../../tutorial/tests.rst:220
+#: ../../flask/docs/tutorial/tests.rst:220
 msgid ""
 "For most of the views, a user needs to be logged in. The easiest way to "
 "do this in tests is to make a ``POST`` request to the ``login`` view with"
@@ -314,7 +317,7 @@ msgstr ""
 "各テストで使用することができます。"
 
 # 7681b1926a97471bb2062e76a084948e
-#: ../../tutorial/tests.rst:247
+#: ../../flask/docs/tutorial/tests.rst:247
 msgid ""
 "With the ``auth`` fixture, you can call ``auth.login()`` in a test to log"
 " in as the ``test`` user, which was inserted as part of the test data in "
@@ -325,7 +328,7 @@ msgstr ""
 "中に\ ``auth.login()``\ を呼び出せばできるようになります。"
 
 # dae2022dc8e84d579e29f6c5e8d0940b
-#: ../../tutorial/tests.rst:251
+#: ../../flask/docs/tutorial/tests.rst:251
 msgid ""
 "The ``register`` view should render successfully on ``GET``. On ``POST`` "
 "with valid form data, it should redirect to the login URL and the user's "
@@ -340,13 +343,14 @@ msgstr ""
 # d3d15921054f46bfbca94f14902e204b
 # 5e78eb3fe85b4766b88f85128cee0dd6
 # 0b655a596df840e298bcea234a092740
-#: ../../tutorial/tests.rst:256 ../../tutorial/tests.rst:316
-#: ../../tutorial/tests.rst:345
+#: ../../flask/docs/tutorial/tests.rst:256
+#: ../../flask/docs/tutorial/tests.rst:316
+#: ../../flask/docs/tutorial/tests.rst:345
 msgid "``tests/test_auth.py``"
 msgstr ""
 
 # c21c99b9cf6948dd829e1563c7f89b5d
-#: ../../tutorial/tests.rst:289
+#: ../../flask/docs/tutorial/tests.rst:289
 msgid ""
 ":meth:`client.get() <werkzeug.test.Client.get>` makes a ``GET`` request "
 "and returns the :class:`Response` object returned by Flask. Similarly, "
@@ -360,7 +364,7 @@ msgstr ""
 "します。"
 
 # daf455127d1a4013875da96df87f5733
-#: ../../tutorial/tests.rst:294
+#: ../../flask/docs/tutorial/tests.rst:294
 msgid ""
 "To test that the page renders successfully, a simple request is made and "
 "checked for a ``200 OK`` :attr:`~Response.status_code`. If rendering "
@@ -372,7 +376,7 @@ msgstr ""
 "コード（status code）を返します。"
 
 # fdd6837eee1942db8e2188a30804c827
-#: ../../tutorial/tests.rst:299
+#: ../../flask/docs/tutorial/tests.rst:299
 msgid ""
 ":attr:`~Response.headers` will have a ``Location`` header with the login "
 "URL when the register view redirects to the login view."
@@ -381,13 +385,14 @@ msgstr ""
 "したとき、ログインのURLに設定された\ ``Location``\ ヘッダを持ちます。"
 
 # bc7820b0ae02483a992bc480387d20b8
-#: ../../tutorial/tests.rst:302
+#: ../../flask/docs/tutorial/tests.rst:302
+#, fuzzy
 msgid ""
 ":attr:`~Response.data` contains the body of the response as bytes. If you"
 " expect a certain value to render on the page, check that it's in "
-"``data``. Bytes must be compared to bytes. If you want to compare Unicode"
-" text, use :meth:`get_data(as_text=True) "
-"<werkzeug.wrappers.BaseResponse.get_data>` instead."
+"``data``. Bytes must be compared to bytes. If you want to compare text, "
+"use :meth:`get_data(as_text=True) <werkzeug.wrappers.Response.get_data>` "
+"instead."
 msgstr ""
 ":attr:`~Response.data`\ はレスポンスの本体（body）をバイト（bytes）として"
 "含んでいます。もしもある値をページ上に表示することを期待する場合、それが\ "
@@ -397,7 +402,7 @@ msgstr ""
 "を代わりに使用してください。"
 
 # 61a43c8db5af4ab5a2212222fb4a47c4
-#: ../../tutorial/tests.rst:308
+#: ../../flask/docs/tutorial/tests.rst:308
 msgid ""
 "``pytest.mark.parametrize`` tells Pytest to run the same test function "
 "with different arguments. You use it here to test different invalid input"
@@ -408,7 +413,7 @@ msgstr ""
 "コードを書くことなくテストするために使用しています。"
 
 # 56f69d12fabf43288f1659bcf725aa32
-#: ../../tutorial/tests.rst:312
+#: ../../flask/docs/tutorial/tests.rst:312
 msgid ""
 "The tests for the ``login`` view are very similar to those for "
 "``register``. Rather than testing the data in the database, "
@@ -420,7 +425,7 @@ msgstr ""
 "します。"
 
 # fb7b870eda8149d2ab107c681e2ead62
-#: ../../tutorial/tests.rst:338
+#: ../../flask/docs/tutorial/tests.rst:338
 msgid ""
 "Using ``client`` in a ``with`` block allows accessing context variables "
 "such as :data:`session` after the response is returned. Normally, "
@@ -433,7 +438,7 @@ msgstr ""
 "引き起こします。"
 
 # 7201174613474e21ad14b02b3a33e049
-#: ../../tutorial/tests.rst:342
+#: ../../flask/docs/tutorial/tests.rst:342
 msgid ""
 "Testing ``logout`` is the opposite of ``login``. :data:`session` should "
 "not contain ``user_id`` after logging out."
@@ -442,12 +447,12 @@ msgstr ""
 "はログアウトした後\ ``user_id``\ を含まないようにするはずです 。"
 
 # 3f07fd00ab7e440cba68d4f71bcd2148
-#: ../../tutorial/tests.rst:357
+#: ../../flask/docs/tutorial/tests.rst:357
 msgid "Blog"
 msgstr "ブログ"
 
 # 87800cc5db0341e3aebc7aebff6c5e48
-#: ../../tutorial/tests.rst:359
+#: ../../flask/docs/tutorial/tests.rst:359
 msgid ""
 "All the blog views use the ``auth`` fixture you wrote earlier. Call "
 "``auth.login()`` and subsequent requests from the client will be logged "
@@ -458,7 +463,7 @@ msgstr ""
 "は、\ ``test``\ ユーザとしてログインされたものになります。"
 
 # 61bd02173f3c425cbed28119b7680d45
-#: ../../tutorial/tests.rst:363
+#: ../../flask/docs/tutorial/tests.rst:363
 msgid ""
 "The ``index`` view should display information about the post that was "
 "added with the test data. When logged in as the author, there should be a"
@@ -469,7 +474,7 @@ msgstr ""
 "はずです。"
 
 # bd551aa6f1b645ef9650c2f8ef5de09c
-#: ../../tutorial/tests.rst:367
+#: ../../flask/docs/tutorial/tests.rst:367
 msgid ""
 "You can also test some more authentication behavior while testing the "
 "``index`` view. When not logged in, each page shows links to log in or "
@@ -484,13 +489,15 @@ msgstr ""
 # 46ff0c90dabb405f91c7667265c47ff2
 # a660f2b797b346a49ccf33ff9643145e
 # 3f1d37a3e8e04f778d847819ae17e291
-#: ../../tutorial/tests.rst:371 ../../tutorial/tests.rst:397
-#: ../../tutorial/tests.rst:439 ../../tutorial/tests.rst:476
+#: ../../flask/docs/tutorial/tests.rst:371
+#: ../../flask/docs/tutorial/tests.rst:397
+#: ../../flask/docs/tutorial/tests.rst:439
+#: ../../flask/docs/tutorial/tests.rst:476
 msgid "``tests/test_blog.py``"
 msgstr ""
 
 # 3f9c4dac514b4f50903eddaf8b86dd65
-#: ../../tutorial/tests.rst:391
+#: ../../flask/docs/tutorial/tests.rst:391
 msgid ""
 "A user must be logged in to access the ``create``, ``update``, and "
 "``delete`` views. The logged in user must be the author of the post to "
@@ -506,7 +513,7 @@ msgstr ""
 "``404 Not Found``\ を返すはずです。"
 
 # b1732f383ed44e58b45861690871f9f8
-#: ../../tutorial/tests.rst:433
+#: ../../flask/docs/tutorial/tests.rst:433
 msgid ""
 "The ``create`` and ``update`` views should render and return a ``200 OK``"
 " status for a ``GET`` request. When valid data is sent in a ``POST`` "
@@ -521,7 +528,7 @@ msgstr ""
 "が送られてきたときはエラーメッセージを表示するはずです。"
 
 # 152f03a1a0774dbb9cfa60e0bd8861c6
-#: ../../tutorial/tests.rst:473
+#: ../../flask/docs/tutorial/tests.rst:473
 msgid ""
 "The ``delete`` view should redirect to the index URL and the post should "
 "no longer exist in the database."
@@ -530,12 +537,12 @@ msgstr ""
 "投稿記事はもはや存在しなくなるはずです。"
 
 # c77a6516e1324918b1dcf40cef36e494
-#: ../../tutorial/tests.rst:491
+#: ../../flask/docs/tutorial/tests.rst:491
 msgid "Running the Tests"
 msgstr "テストの実行"
 
 # 528b912a114f42709a5cfca6aeab45b9
-#: ../../tutorial/tests.rst:493
+#: ../../flask/docs/tutorial/tests.rst:493
 msgid ""
 "Some extra configuration, which is not required but makes running tests "
 "with coverage less verbose, can be added to the project's ``setup.cfg`` "
@@ -547,12 +554,12 @@ msgstr ""
 "プロジェクトの\ ``setup.cfg``\ ファイルへ加えることができます。"
 
 # 56f0ff06e9da48d1ac5b190ff7452248
-#: ../../tutorial/tests.rst:497
+#: ../../flask/docs/tutorial/tests.rst:497
 msgid "``setup.cfg``"
 msgstr ""
 
 # 6309e197cf294ba0b380671eaf2bc340
-#: ../../tutorial/tests.rst:508
+#: ../../flask/docs/tutorial/tests.rst:508
 msgid ""
 "To run the tests, use the ``pytest`` command. It will find and run all "
 "the test functions you've written."
@@ -561,7 +568,7 @@ msgstr ""
 "まで書いたテスト関数をすべて見つけ出して実行します。"
 
 # 475c369ef42c42d990e7d3a0c02cebba
-#: ../../tutorial/tests.rst:527
+#: ../../flask/docs/tutorial/tests.rst:527
 msgid ""
 "If any tests fail, pytest will show the error that was raised. You can "
 "run ``pytest -v`` to get a list of each test function rather than dots."
@@ -571,7 +578,7 @@ msgstr ""
 "関数の一覧を取得できます。"
 
 # 2e5ed924ad3142628f764cbaee79faaa
-#: ../../tutorial/tests.rst:530
+#: ../../flask/docs/tutorial/tests.rst:530
 msgid ""
 "To measure the code coverage of your tests, use the ``coverage`` command "
 "to run pytest instead of running it directly."
@@ -580,19 +587,19 @@ msgstr ""
 "``coverage``\ コマンドを使用してpytestを実行します。"
 
 # adcc546f06f344f6b9889b928e61f5db
-#: ../../tutorial/tests.rst:537
+#: ../../flask/docs/tutorial/tests.rst:537
 msgid "You can either view a simple coverage report in the terminal:"
 msgstr "簡潔な網羅率のレポートを端末の中で見ることができます:"
 
 # 4eee3830b860424d8010cb4814aeddec
-#: ../../tutorial/tests.rst:552
+#: ../../flask/docs/tutorial/tests.rst:552
 msgid "An HTML report allows you to see which lines were covered in each file:"
 msgstr ""
 "HTMLレポートでは各ファイルのどの行がテストで網羅されているか見ることが"
 "できます:"
 
 # 3314bd1c2b39406ca6ff57b2af88be37
-#: ../../tutorial/tests.rst:558
+#: ../../flask/docs/tutorial/tests.rst:558
 msgid ""
 "This generates files in the ``htmlcov`` directory. Open "
 "``htmlcov/index.html`` in your browser to see the report."
@@ -601,7 +608,7 @@ msgstr ""
 "レポートを見るには\ ``htmlcov/index.html``\ をブラウザで開きます。"
 
 # fae859ab990f4382b8f56a877fb647a5
-#: ../../tutorial/tests.rst:561
+#: ../../flask/docs/tutorial/tests.rst:561
 msgid "Continue to :doc:`deploy`."
 msgstr ":doc:`deploy`\ へ続きます。"
 

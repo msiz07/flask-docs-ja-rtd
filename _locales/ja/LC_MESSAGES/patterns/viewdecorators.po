@@ -8,14 +8,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 21:10+0900\n"
+"POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.8.0\n"
+"Generated-By: Babel 2.9.1\n"
 
 # e685c4f7adc645c0b6e9369c7da872d6
 #: ../../flask/docs/patterns/viewdecorators.rst:2
@@ -83,14 +83,12 @@ msgstr ""
 msgid "Caching Decorator"
 msgstr ""
 
-# 3ab4c6f546034c7d826f323949f23d92
 #: ../../flask/docs/patterns/viewdecorators.rst:59
 msgid ""
 "Imagine you have a view function that does an expensive calculation and "
 "because of that you would like to cache the generated results for a "
 "certain amount of time.  A decorator would be nice for that.  We're "
-"assuming you have set up a cache like mentioned in :ref:`caching-"
-"pattern`."
+"assuming you have set up a cache like mentioned in :doc:`caching`."
 msgstr ""
 
 # 142ad08fd414447cb75a851fd1fc2606
@@ -134,11 +132,10 @@ msgstr ""
 msgid "Here the code::"
 msgstr ""
 
-# 649b1b9d00a04cf3aa69a7460fddc454
 #: ../../flask/docs/patterns/viewdecorators.rst:99
 msgid ""
-"Notice that this assumes an instantiated `cache` object is available, see"
-" :ref:`caching-pattern` for more information."
+"Notice that this assumes an instantiated ``cache`` object is available, "
+"see :doc:`caching`."
 msgstr ""
 
 # 302903da0a8647beb9bed0978067400c
@@ -175,12 +172,12 @@ msgid "Here is the code for that decorator::"
 msgstr ""
 
 # 083bceff2bb741bdb0e8771a416f1f2b
-#: ../../flask/docs/patterns/viewdecorators.rst:158
+#: ../../flask/docs/patterns/viewdecorators.rst:157
 msgid "Endpoint Decorator"
 msgstr ""
 
 # 8b2a187b9c454bd7b9eeb27223906306
-#: ../../flask/docs/patterns/viewdecorators.rst:160
+#: ../../flask/docs/patterns/viewdecorators.rst:159
 msgid ""
 "When you want to use the werkzeug routing system for more flexibility you"
 " need to map the endpoint as defined in the "
@@ -193,5 +190,25 @@ msgstr ""
 #~ "get the unique cache key for the"
 #~ " current request base on the current"
 #~ " path."
+#~ msgstr ""
+
+# 3ab4c6f546034c7d826f323949f23d92
+#~ msgid ""
+#~ "Imagine you have a view function "
+#~ "that does an expensive calculation and"
+#~ " because of that you would like "
+#~ "to cache the generated results for "
+#~ "a certain amount of time.  A "
+#~ "decorator would be nice for that.  "
+#~ "We're assuming you have set up a"
+#~ " cache like mentioned in :ref:`caching-"
+#~ "pattern`."
+#~ msgstr ""
+
+# 649b1b9d00a04cf3aa69a7460fddc454
+#~ msgid ""
+#~ "Notice that this assumes an instantiated"
+#~ " `cache` object is available, see "
+#~ ":ref:`caching-pattern` for more information."
 #~ msgstr ""
 

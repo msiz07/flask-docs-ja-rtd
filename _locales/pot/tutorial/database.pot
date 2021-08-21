@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 1.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 20:39+0900\n"
+"POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -91,7 +91,7 @@ msgid ":meth:`open_resource() <Flask.open_resource>` opens a file relative to th
 msgstr ""
 
 #: ../../flask/docs/tutorial/database.rst:143
-msgid ":func:`click.command` defines a command line command called ``init-db`` that calls the ``init_db`` function and shows a success message to the user. You can read :ref:`cli` to learn more about writing commands."
+msgid ":func:`click.command` defines a command line command called ``init-db`` that calls the ``init_db`` function and shows a success message to the user. You can read :doc:`/cli` to learn more about writing commands."
 msgstr ""
 
 #: ../../flask/docs/tutorial/database.rst:149
@@ -127,7 +127,7 @@ msgid "Now that ``init-db`` has been registered with the app, it can be called u
 msgstr ""
 
 #: ../../flask/docs/tutorial/database.rst:196
-msgid "If you're still running the server from the previous page, you can either stop the server, or run this command in a new terminal. If you use a new terminal, remember to change to your project directory and activate the env as described in :ref:`install-activate-env`. You'll also need to set ``FLASK_APP`` and ``FLASK_ENV`` as shown on the previous page."
+msgid "If you're still running the server from the previous page, you can either stop the server, or run this command in a new terminal. If you use a new terminal, remember to change to your project directory and activate the env as described in :doc:`/installation`. You'll also need to set ``FLASK_APP`` and ``FLASK_ENV`` as shown on the previous page."
 msgstr ""
 
 #: ../../flask/docs/tutorial/database.rst:203
@@ -141,4 +141,3 @@ msgstr ""
 #: ../../flask/docs/tutorial/database.rst:213
 msgid "Continue to :doc:`views`."
 msgstr ""
-

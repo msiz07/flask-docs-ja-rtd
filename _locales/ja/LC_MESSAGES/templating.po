@@ -8,22 +8,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 21:10+0900\n"
+"POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.8.0\n"
+"Generated-By: Babel 2.9.1\n"
 
 # e18b9baec7bb41c99f7416240297921e
-#: ../../flask/docs/templating.rst:4
+#: ../../flask/docs/templating.rst:2
 msgid "Templates"
 msgstr "テンプレート"
 
 # d2aefb3be3a24b76be1d71f8c41c5b91
-#: ../../flask/docs/templating.rst:6
+#: ../../flask/docs/templating.rst:4
 msgid ""
 "Flask leverages Jinja2 as its template engine.  You are obviously free to"
 " use a different template engine, but you still have to install Jinja2 to"
@@ -32,29 +32,30 @@ msgid ""
 msgstr "Flaskは自身のテンプレート・エンジンとしてJinja2を活用します。違うテンプレート・エンジンを使うことも当然自由ですが、それでもFlask自体を実行するためにJinja2をインストールする必要があります。この要件は、豊富なFlask拡張を有効にするために必要になります。Flask拡張は用意されているJinja2へ依存したものにできます。"
 
 # f284113dbca34ca0a054d94ed42c5386
-#: ../../flask/docs/templating.rst:11
+#: ../../flask/docs/templating.rst:9
+#, fuzzy
 msgid ""
 "This section only gives a very quick introduction into how Jinja2 is "
 "integrated into Flask.  If you want information on the template engine's "
 "syntax itself, head over to the official `Jinja2 Template Documentation "
-"<http://jinja.pocoo.org/docs/templates/>`_ for more information."
+"<https://jinja.palletsprojects.com/templates/>`_ for more information."
 msgstr ""
 "このセクションが与えるのは、どのようにJinja2がFlaskへ統合されているかについての手早いイントロダクションだけです。テンプレート・エンジンの文法自体の情報について知りたい場合は、さらなる情報を公式の\\"
 " `Jinja2テンプレートのドキュメント <http://jinja.pocoo.org/docs/templates/>`_\\ "
 "を確認してください。"
 
 # dc0ca8cf18a84f889beb058c34ccb22d
-#: ../../flask/docs/templating.rst:18
+#: ../../flask/docs/templating.rst:16
 msgid "Jinja Setup"
 msgstr "Jinjaの準備"
 
 # cb1ebf79457c47e98d87b2af83f26d78
-#: ../../flask/docs/templating.rst:20
+#: ../../flask/docs/templating.rst:18
 msgid "Unless customized, Jinja2 is configured by Flask as follows:"
 msgstr "カスタマイズされてない限り、Jinja2はFlaskによって以下のように設定されます:"
 
 # 5519c04ff5494b3393c463bf20a36e2e
-#: ../../flask/docs/templating.rst:22
+#: ../../flask/docs/templating.rst:20
 msgid ""
 "autoescaping is enabled for all templates ending in ``.html``, ``.htm``, "
 "``.xml`` as well as ``.xhtml`` when using "
@@ -65,7 +66,7 @@ msgstr ""
 "``.xml``\\ で終わる全てのテンプレートで有効になります。"
 
 # 496ac53e5c9c4570bc8c7cabd30ee782
-#: ../../flask/docs/templating.rst:25
+#: ../../flask/docs/templating.rst:23
 msgid ""
 "autoescaping is enabled for all strings when using "
 ":func:`~flask.templating.render_template_string`."
@@ -74,7 +75,7 @@ msgstr ""
 "を使うとき、autoescaping（自動エスケープ）はすべての文字列で有効になります。"
 
 # 0090946cd1a84a6f865b03df7001a526
-#: ../../flask/docs/templating.rst:27
+#: ../../flask/docs/templating.rst:25
 msgid ""
 "a template has the ability to opt in/out autoescaping with the ``{% "
 "autoescape %}`` tag."
@@ -83,7 +84,7 @@ msgstr ""
 "タグを使って、テンプレートはautoescaping（自動エスケープ）を有効にするかどうか意図的に切り替えられます。"
 
 # f67df55b592d433ea97d2f116c56d43c
-#: ../../flask/docs/templating.rst:29
+#: ../../flask/docs/templating.rst:27
 msgid ""
 "Flask inserts a couple of global functions and helpers into the Jinja2 "
 "context, additionally to the values that are present by default."
@@ -92,29 +93,29 @@ msgstr ""
 "テンプレートのどこからでも使用可能な）関数とヘルパーを挿入します。"
 
 # 6ec0d9c32a6746b090790936064cd199
-#: ../../flask/docs/templating.rst:34
+#: ../../flask/docs/templating.rst:32
 msgid "Standard Context"
 msgstr "標準のコンテキスト（Standard Context）"
 
 # 86f258e1f6d345f5bd18553f99e3eee8
-#: ../../flask/docs/templating.rst:36
+#: ../../flask/docs/templating.rst:34
 msgid ""
 "The following global variables are available within Jinja2 templates by "
 "default:"
 msgstr "以下のグローバル変数は標準設定で、Jinja2テンプレートの中で利用可能です:"
 
 # 536647c5de3c4eaa995d3af9c096c92b
-#: ../../flask/docs/templating.rst:42
+#: ../../flask/docs/templating.rst:40
 msgid "The current configuration object (:data:`flask.config`)"
 msgstr "その時点の設定オブジェクト（\\ :data:`flask.Flask.config`\\ ）"
 
 # f3143720eab54bb39bcff835fdc76780
-#: ../../flask/docs/templating.rst:46
+#: ../../flask/docs/templating.rst:44
 msgid "This is now always available, even in imported templates."
 msgstr "今ではこれは、たとえimportされたテンプレートの中でも使用可能です。"
 
 # 14e1d752b8c34583bea9d4f3c062d5e2
-#: ../../flask/docs/templating.rst:52
+#: ../../flask/docs/templating.rst:50
 msgid ""
 "The current request object (:class:`flask.request`).  This variable is "
 "unavailable if the template was rendered without an active request "
@@ -124,7 +125,7 @@ msgstr ""
 "）。テンプレートが活動中（active）のrequest contextの外側で変換（render）された場合、この変数は使用できません。"
 
 # 26659f49a9244a03b9655c19113dab69
-#: ../../flask/docs/templating.rst:59
+#: ../../flask/docs/templating.rst:57
 msgid ""
 "The current session object (:class:`flask.session`).  This variable is "
 "unavailable if the template was rendered without an active request "
@@ -134,7 +135,7 @@ msgstr ""
 "）。てんぷれーとが活動中（active）のrequest contextなしで変換（render）された場合、この変数は使用できません。"
 
 # 50a2bb85c94f4bda8e3fbad9cb09d267
-#: ../../flask/docs/templating.rst:66
+#: ../../flask/docs/templating.rst:64
 msgid ""
 "The request-bound object for global variables (:data:`flask.g`).  This "
 "variable is unavailable if the template was rendered without an active "
@@ -144,22 +145,22 @@ msgstr ""
 " contextなしで変換（render）された場合、この変数は使用できません。"
 
 # 48edd20e283749b19b9ab62c238bfe44
-#: ../../flask/docs/templating.rst:73
+#: ../../flask/docs/templating.rst:71
 msgid "The :func:`flask.url_for` function."
 msgstr ":func:`flask.url_for`\\ 関数。"
 
 # 51fa5ec1314e422d843017434b5153b3
-#: ../../flask/docs/templating.rst:78
+#: ../../flask/docs/templating.rst:76
 msgid "The :func:`flask.get_flashed_messages` function."
 msgstr ":func:`flask.get_flashed_messages`\\ 関数。"
 
 # ba5403b77ab849188ab2e137e03fab03
-#: ../../flask/docs/templating.rst:80
+#: ../../flask/docs/templating.rst:78
 msgid "The Jinja Context Behavior"
 msgstr "Jinjaコンテキストの振る舞い（The Jinja Context Behavior）"
 
 # 83555d8d4d3643099f79ba36eed9b119
-#: ../../flask/docs/templating.rst:82
+#: ../../flask/docs/templating.rst:80
 msgid ""
 "These variables are added to the context of variables, they are not "
 "global variables.  The difference is that by default these will not show "
@@ -168,72 +169,37 @@ msgid ""
 msgstr "これらの変数は、グローバル変数ではない変数のcontextへ追加されます。その違いは、標準設定ではこれらの変数はimportされたテンプレートのcontextの中では見えなくなることです。その理由の一部は性能面のためであり、一部は物事を明示的に保つためです。"
 
 # 0359a6366ab5498390be08ebea6db52a
-#: ../../flask/docs/templating.rst:87
+#: ../../flask/docs/templating.rst:85
 msgid ""
 "What does this mean for you?  If you have a macro you want to import, "
 "that needs to access the request object you have two possibilities:"
 msgstr "これはあなたにとってどのような意味があるのでしょうか？もしimportしたい、requestオブジェクトへのアクセスが必要なマクロがある場合、以下の2つの可能性があります:"
 
 # d8b52200763d4bb186310d779f09d62c
-#: ../../flask/docs/templating.rst:90
+#: ../../flask/docs/templating.rst:88
 msgid ""
 "you explicitly pass the request to the macro as parameter, or the "
 "attribute of the request object you are interested in."
 msgstr "明示的に、requestをマクロへパラメータとして渡すか、またはrequestの関心のある属性を渡します。"
 
 # 42e65db8e14e438c81916ecc332484ed
-#: ../../flask/docs/templating.rst:92
+#: ../../flask/docs/templating.rst:90
 msgid "you import the macro \"with context\"."
 msgstr "「with context」でマクロをimportします。"
 
 # f02ec316b2dc4450811be3a72cd9aff1
-#: ../../flask/docs/templating.rst:94
+#: ../../flask/docs/templating.rst:92
 msgid "Importing with context looks like this:"
 msgstr "contextを使ったimportは以下のようになります:"
 
-# f4889088a18c4df0968f863b1fe91668
-#: ../../flask/docs/templating.rst:101
-msgid "Standard Filters"
-msgstr "標準のフィルタ（Standard Filters）"
-
-# 1c59d103b5cd465294707db65dc0c5d3
-#: ../../flask/docs/templating.rst:103
-msgid ""
-"Flask provides the following Jinja2 filters in addition to the filters "
-"provided by Jinja2 itself:"
-msgstr "Jinja2自身によって提供されるフィルタに加えて、Flaskは以下のJinja2フィルタを提供します:"
-
-# 21c4f409eb2c430983248af380ad77bc
-#: ../../flask/docs/templating.rst:109
-msgid ""
-"This function converts the given object into JSON representation.  This "
-"is for example very helpful if you try to generate JavaScript on the fly."
-msgstr "この関数は与えられたオブジェクトをJSON表現へ変換します。これは、例えば、実行中にJavaScriptを生成しようと試みるときにとても役立ちます。"
-
-# 1b25ad5014b3450c964b7a42a7b9a20b
-#: ../../flask/docs/templating.rst:119
-msgid ""
-"It is also safe to use the output of `|tojson` in a *single-quoted* HTML "
-"attribute:"
-msgstr "`|tojson`\\ の出力は\\ *一重引用符で囲まれた*\\ HTML属性の中で使っても安全です:"
-
-# 71edfcef1fc544889fe0b4ee863afbfc
-#: ../../flask/docs/templating.rst:128
-msgid ""
-"Note that in versions of Flask prior to 0.10, if using the output of "
-"``|tojson`` inside ``script``, make sure to disable escaping with "
-"``|safe``. In Flask 0.10 and above, this happens automatically."
-msgstr ""
-"0.10.以前のFlaskのバージョンでは、\\ ``script``\\ の内側で\\ ``|tojson``\\ の出力を使用する場合、\\ "
-"``|safe``\\ を使ってエスケープを確実に無効にするよう注意してください。Flaskの0.10以上では、これは自動的に起こります。"
-
 # 6d9d7a844ae94733812b2bd0c06dd3bf
-#: ../../flask/docs/templating.rst:133
+#: ../../flask/docs/templating.rst:100
 msgid "Controlling Autoescaping"
 msgstr "自動エスケープの制御（Controlling Autoescaping）"
 
 # fdfa37455f85404f85f36e8842343896
-#: ../../flask/docs/templating.rst:135
+#: ../../flask/docs/templating.rst:102
+#, fuzzy
 msgid ""
 "Autoescaping is the concept of automatically escaping special characters "
 "for you.  Special characters in the sense of HTML (or XML, and thus "
@@ -242,7 +208,7 @@ msgid ""
 "replace them by so called \"entities\" if you want to use them for text."
 "  Not doing so would not only cause user frustration by the inability to "
 "use these characters in text, but can also lead to security problems.  "
-"(see :ref:`xss`)"
+"(see :ref:`security-xss`)"
 msgstr ""
 "自動エスケープは、特別な文字を自動的にエスケープするというコンセプトです。HTML（またはXML、さらにXHTML）の観点から、\\ "
 "``'``\\ だけでなく、\\ ``&``, ``>``, ``<``, ``\"``\\ "
@@ -250,7 +216,7 @@ msgstr ""
 " :ref:`xss`\\ を参照）"
 
 # 028b2211c0a94302b5f7d29ca618f008
-#: ../../flask/docs/templating.rst:144
+#: ../../flask/docs/templating.rst:111
 msgid ""
 "Sometimes however you will need to disable autoescaping in templates. "
 "This can be the case if you want to explicitly inject HTML into pages, "
@@ -259,12 +225,12 @@ msgid ""
 msgstr "しかしながら、ときどき、テンプレートの中で自動エスケープを無効にすることが必要になります。例えば、markdownからHTMLへのコンバータのような、安全なHTMLを生成するシステムからくるときに、HTMLをページの中へ明示的に挿入したい場合には、そのケースに該当する可能性があります。"
 
 # 3795301660f345e0a6cc6d6e59478bb7
-#: ../../flask/docs/templating.rst:149
+#: ../../flask/docs/templating.rst:116
 msgid "There are three ways to accomplish that:"
 msgstr "これを達成する3つのやり方があります:"
 
 # 5c2e5929b9ae40a7a1915b2f4f860a43
-#: ../../flask/docs/templating.rst:151
+#: ../../flask/docs/templating.rst:118
 msgid ""
 "In the Python code, wrap the HTML string in a :class:`~flask.Markup` "
 "object before passing it to the template.  This is in general the "
@@ -274,7 +240,7 @@ msgstr ""
 "オブジェクトの中で囲んでから、テンプレートへそれを渡します。これは概して推奨されるやり方です。"
 
 # b6d91e62daa3439faaa07690d3b29a62
-#: ../../flask/docs/templating.rst:154
+#: ../../flask/docs/templating.rst:121
 msgid ""
 "Inside the template, use the ``|safe`` filter to explicitly mark a string"
 " as safe HTML (``{{ myvariable|safe }}``)"
@@ -283,31 +249,31 @@ msgstr ""
 "myvariable|safe }}``\\ ）。"
 
 # be27060c9fd445e3b006d55dfa622b4f
-#: ../../flask/docs/templating.rst:156
+#: ../../flask/docs/templating.rst:123
 msgid "Temporarily disable the autoescape system altogether."
 msgstr "一時的に自動エスケープのシステムを完全に無効にします。"
 
 # 800f76dd7ea94b73b866e10e49ae8357
-#: ../../flask/docs/templating.rst:158
+#: ../../flask/docs/templating.rst:125
 msgid ""
 "To disable the autoescape system in templates, you can use the ``{% "
 "autoescape %}`` block:"
 msgstr "テンプレートの中で自動エスケープを無効にするには、\\ ``{% autoescape %}``\\ ブロックを使用できます:"
 
 # 2775e7a48507418083a74f29ee411885
-#: ../../flask/docs/templating.rst:168
+#: ../../flask/docs/templating.rst:135
 msgid ""
 "Whenever you do this, please be very cautious about the variables you are"
 " using in this block."
 msgstr "これを行うときはいつでも、このブロック内で使用する変数について十分に注意するようお願いします。"
 
 # b05f947e684146e8a63ba7cda5ecd466
-#: ../../flask/docs/templating.rst:174
+#: ../../flask/docs/templating.rst:141
 msgid "Registering Filters"
 msgstr "フィルタの登録"
 
 # 5cb809859bc2421d867302ffbecdacaf
-#: ../../flask/docs/templating.rst:176
+#: ../../flask/docs/templating.rst:143
 msgid ""
 "If you want to register your own filters in Jinja2 you have two ways to "
 "do that.  You can either put them by hand into the "
@@ -319,12 +285,12 @@ msgstr ""
 ":meth:`~flask.Flask.template_filter`\\ デコレータを使用します。"
 
 # 16d60db6cd624daf8cd0375335c7bee0
-#: ../../flask/docs/templating.rst:181
+#: ../../flask/docs/templating.rst:148
 msgid "The two following examples work the same and both reverse an object::"
 msgstr "以下の2つの例は同様に機能し、どちらもオブジェクトを逆順にします（訳注:\\ 文字列・配列・リストなどで順番を反対にします）::"
 
 # a3a6144cbeb84c6395e66165afb770cf
-#: ../../flask/docs/templating.rst:191
+#: ../../flask/docs/templating.rst:158
 msgid ""
 "In case of the decorator the argument is optional if you want to use the "
 "function name as name of the filter.  Once registered, you can use the "
@@ -335,12 +301,12 @@ msgstr ""
 " `mylist`\\ と呼ばれるPythonのlistがcontextにあるときは、以下のように使えます::"
 
 # 12f4144062de4269a57addb8f4eeef69
-#: ../../flask/docs/templating.rst:201
+#: ../../flask/docs/templating.rst:168
 msgid "Context Processors"
 msgstr "コンテキスト処理装置（Context Processors）"
 
 # a9add9948eed4bbba0ec3374ae671e60
-#: ../../flask/docs/templating.rst:203
+#: ../../flask/docs/templating.rst:170
 msgid ""
 "To inject new variables automatically into the context of a template, "
 "context processors exist in Flask.  Context processors run before the "
@@ -356,7 +322,7 @@ msgstr ""
 "processorはdictionaryを返す関数です。このdictionaryのキーと値は、app中のすべてのテンプレートで、テンプレートのcontextに併合（merge）されます::"
 
 # 5dd3bf0d93654497b8cb639981adc263
-#: ../../flask/docs/templating.rst:214
+#: ../../flask/docs/templating.rst:181
 msgid ""
 "The context processor above makes a variable called `user` available in "
 "the template with the value of `g.user`.  This example is not very "
@@ -368,7 +334,7 @@ msgstr ""
 "は利用可能であるためそれほど興味深いものではありませんが、どのように機能するかについてのアイデアは与えます。"
 
 # 21564bf46fe9434f9af42f6eeb3c043d
-#: ../../flask/docs/templating.rst:219
+#: ../../flask/docs/templating.rst:186
 msgid ""
 "Variables are not limited to values; a context processor can also make "
 "functions available to templates (since Python allows passing around "
@@ -378,14 +344,14 @@ msgstr ""
 "processorはテンプレートで関数も利用可能にします（Pythonでは関数の受け渡しができるため）::"
 
 # 64afe9f3106744d0a492bc5790faf029
-#: ../../flask/docs/templating.rst:229
+#: ../../flask/docs/templating.rst:196
 msgid ""
 "The context processor above makes the `format_price` function available "
 "to all templates::"
 msgstr "上述のcontext processorは\\ `format_price`\\ 関数をすべてのテンプレートで利用可能にします::"
 
 # 6450bfab866947828ea83a886e189b4d
-#: ../../flask/docs/templating.rst:234
+#: ../../flask/docs/templating.rst:201
 msgid ""
 "You could also build `format_price` as a template filter (see :ref"
 ":`registering-filters`), but this demonstrates how to pass functions in a"
@@ -393,4 +359,43 @@ msgid ""
 msgstr ""
 "`format_price`\\ をテンプレートのフィルタとして構築することも可能ですが（\\ :ref:`registering-"
 "filters`\\ を見てください）、これはcontext processor中の関数をどう渡すかを実演しています。"
+
+# f4889088a18c4df0968f863b1fe91668
+#~ msgid "Standard Filters"
+#~ msgstr "標準のフィルタ（Standard Filters）"
+
+# 1c59d103b5cd465294707db65dc0c5d3
+#~ msgid ""
+#~ "Flask provides the following Jinja2 "
+#~ "filters in addition to the filters "
+#~ "provided by Jinja2 itself:"
+#~ msgstr "Jinja2自身によって提供されるフィルタに加えて、Flaskは以下のJinja2フィルタを提供します:"
+
+# 21c4f409eb2c430983248af380ad77bc
+#~ msgid ""
+#~ "This function converts the given object"
+#~ " into JSON representation.  This is "
+#~ "for example very helpful if you "
+#~ "try to generate JavaScript on the "
+#~ "fly."
+#~ msgstr "この関数は与えられたオブジェクトをJSON表現へ変換します。これは、例えば、実行中にJavaScriptを生成しようと試みるときにとても役立ちます。"
+
+# 1b25ad5014b3450c964b7a42a7b9a20b
+#~ msgid ""
+#~ "It is also safe to use the "
+#~ "output of `|tojson` in a *single-"
+#~ "quoted* HTML attribute:"
+#~ msgstr "`|tojson`\\ の出力は\\ *一重引用符で囲まれた*\\ HTML属性の中で使っても安全です:"
+
+# 71edfcef1fc544889fe0b4ee863afbfc
+#~ msgid ""
+#~ "Note that in versions of Flask "
+#~ "prior to 0.10, if using the output"
+#~ " of ``|tojson`` inside ``script``, make "
+#~ "sure to disable escaping with ``|safe``."
+#~ " In Flask 0.10 and above, this "
+#~ "happens automatically."
+#~ msgstr ""
+#~ "0.10.以前のFlaskのバージョンでは、\\ ``script``\\ の内側で\\ ``|tojson``\\ の出力を使用する場合、\\ "
+#~ "``|safe``\\ を使ってエスケープを確実に無効にするよう注意してください。Flaskの0.10以上では、これは自動的に起こります。"
 

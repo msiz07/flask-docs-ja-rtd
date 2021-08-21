@@ -8,22 +8,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
+"Generated-By: Babel 2.9.1\n"
 
 # 9cd8d3337f6c4a718f12b26aa2fa67a5
-#: ../../logging.rst:2
+#: ../../flask/docs/logging.rst:2
 msgid "Logging"
 msgstr "ログ処理（Logging）"
 
 # 445fb48cfe0a466db5e657e82b655691
-#: ../../logging.rst:4
+#: ../../flask/docs/logging.rst:4
 msgid ""
 "Flask uses standard Python :mod:`logging`. Messages about your Flask "
 "application are logged with :meth:`app.logger <flask.Flask.logger>`, "
@@ -37,13 +37,19 @@ msgstr ""
 "Flask自体のログだけでなく、Flaskアプリ開発者がアプリのログを出力するため"
 "にも使用するという意味合いだと思います）。"
 
+#: ../../flask/docs/logging.rst:23
+msgid ""
+"If you don't configure logging, Python's default log level is usually "
+"'warning'. Nothing below the configured level will be visible."
+msgstr ""
+
 # 32060d07e20c4a6582224f8eabbaae2e
-#: ../../logging.rst:25
+#: ../../flask/docs/logging.rst:28
 msgid "Basic Configuration"
 msgstr "基本設定（Basic Configuration）"
 
 # 96f94e1b8ce646269c6333911c540ce1
-#: ../../logging.rst:27
+#: ../../flask/docs/logging.rst:30
 msgid ""
 "When you want to configure logging for your project, you should do it as "
 "soon as possible when the program starts. If :meth:`app.logger "
@@ -58,7 +64,7 @@ msgstr ""
 "処理を設定してください。"
 
 # f916edc1793249c6b081031b6614f976
-#: ../../logging.rst:32
+#: ../../flask/docs/logging.rst:35
 msgid ""
 "This example uses :func:`~logging.config.dictConfig` to create a logging "
 "configuration similar to Flask's default, except for all logs::"
@@ -68,12 +74,12 @@ msgstr ""
 "しています::"
 
 # 972dff3eddab44d5b5d0d2c50c45e691
-#: ../../logging.rst:57
+#: ../../flask/docs/logging.rst:60
 msgid "Default Configuration"
 msgstr ""
 
 # 15ff50ff2df140299051ebf68b5c4864
-#: ../../logging.rst:59
+#: ../../flask/docs/logging.rst:62
 msgid ""
 "If you do not configure logging yourself, Flask will add a "
 ":class:`~logging.StreamHandler` to :meth:`app.logger "
@@ -90,12 +96,12 @@ msgstr ""
 ":data:`sys.stderr`\ へログします。"
 
 # 18e58fd131224d9a9ee26fb99951d870
-#: ../../logging.rst:67
+#: ../../flask/docs/logging.rst:70
 msgid "Removing the Default Handler"
 msgstr "標準の処理器（Handler）の除去"
 
 # 42a9de7a9a484b15bbd26c03f94c84b9
-#: ../../logging.rst:69
+#: ../../flask/docs/logging.rst:72
 msgid ""
 "If you configured logging after accessing :meth:`app.logger "
 "<flask.Flask.logger>`, and need to remove the default handler, you can "
@@ -107,12 +113,12 @@ msgstr ""
 "できます）::"
 
 # f67b1bbcf2e2456eae82866aa7394883
-#: ../../logging.rst:79
+#: ../../flask/docs/logging.rst:82
 msgid "Email Errors to Admins"
 msgstr "管理者へのエラーのメール送信"
 
 # d81bcfed5c8e44b1a9e74e70990b8319
-#: ../../logging.rst:81
+#: ../../flask/docs/logging.rst:84
 msgid ""
 "When running the application on a remote server for production, you "
 "probably won't be looking at the log messages very often. The WSGI server"
@@ -125,7 +131,7 @@ msgstr ""
 "いってないと伝えたときだけ、ログをチェックするでしょう。"
 
 # a05a56b32aea41488c5094fdbbee2ca9
-#: ../../logging.rst:86
+#: ../../flask/docs/logging.rst:89
 msgid ""
 "To be proactive about discovering and fixing bugs, you can configure a "
 ":class:`logging.handlers.SMTPHandler` to send an email when errors and "
@@ -136,7 +142,7 @@ msgstr ""
 "`logging.handlers.SMTPHandler`\ を設定できます。::"
 
 # 66b51268c8054ee78f3f02aabab6610b
-#: ../../logging.rst:107
+#: ../../flask/docs/logging.rst:110
 msgid ""
 "This requires that you have an SMTP server set up on the same server. See"
 " the Python docs for more information about configuring the handler."
@@ -146,12 +152,12 @@ msgstr ""
 "ください。"
 
 # 566e82779eec46d0986d20bafdcf0464
-#: ../../logging.rst:112
+#: ../../flask/docs/logging.rst:115
 msgid "Injecting Request Information"
 msgstr "リクエストの情報の注入"
 
 # 55f7880c223a40c39c9acb18fc0c7171
-#: ../../logging.rst:114
+#: ../../flask/docs/logging.rst:117
 msgid ""
 "Seeing more information about the request, such as the IP address, may "
 "help debugging some errors. You can subclass :class:`logging.Formatter` "
@@ -166,12 +172,12 @@ msgstr ""
 "handler、およびあらゆるその他のhandlerに対してformatterを変更できます。::"
 
 # 9e7f426db8464fceaf0d5f5b298e1575
-#: ../../logging.rst:143
+#: ../../flask/docs/logging.rst:146
 msgid "Other Libraries"
 msgstr "他のライブラリ"
 
 # 85ec1a4ef8fc48cab04eb2d7e00c810c
-#: ../../logging.rst:145
+#: ../../flask/docs/logging.rst:148
 msgid ""
 "Other libraries may use logging extensively, and you want to see relevant"
 " messages from those logs too. The simplest way to do this is to add "
@@ -183,7 +189,7 @@ msgstr ""
 "loggerにhandlerを追加することです。::"
 
 # 294cecfcd0564731ba4704299d3ec30d
-#: ../../logging.rst:155
+#: ../../flask/docs/logging.rst:158
 msgid ""
 "Depending on your project, it may be more useful to configure each logger"
 " you care about separately, instead of configuring only the root logger. "
@@ -193,12 +199,12 @@ msgstr ""
 "loggerをそれぞれ別々に設定する方がより便利かもしれません。"
 
 # 41df0a5c72f34072a0ab9bc5e30d1d37
-#: ../../logging.rst:168
+#: ../../flask/docs/logging.rst:171
 msgid "Werkzeug"
 msgstr ""
 
 # 68c0d63d702747369bc00512037f1b4c
-#: ../../logging.rst:170
+#: ../../flask/docs/logging.rst:173
 msgid ""
 "Werkzeug logs basic request/response information to the ``'werkzeug'`` "
 "logger. If the root logger has no handlers configured, Werkzeug adds a "
@@ -209,12 +215,12 @@ msgstr ""
 "\ :class:`~logging.StreamHandler`\ をwerkzeugのloggerへ追加します。"
 
 # 1748e8b0ca2346679db2c8f09439ccce
-#: ../../logging.rst:176
+#: ../../flask/docs/logging.rst:179
 msgid "Flask Extensions"
 msgstr "Flask拡張"
 
 # a6e82f52b00040288b0f5ee3d9613a14
-#: ../../logging.rst:178
+#: ../../flask/docs/logging.rst:181
 msgid ""
 "Depending on the situation, an extension may choose to log to "
 ":meth:`app.logger <flask.Flask.logger>` or its own named logger. Consult "

@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 1.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 20:39+0900\n"
+"POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -100,27 +100,26 @@ msgstr ""
 msgid "Development mode shows an interactive debugger whenever a page raises an exception, and restarts the server whenever you make changes to the code. You can leave it running and just reload the browser page as you follow the tutorial."
 msgstr ""
 
-#: ../../flask/docs/tutorial/factory.rst:138
-msgid "For Linux and Mac:"
+#: ../../flask/docs/tutorial/factory.rst:140
+msgid "Bash"
 msgstr ""
 
-#: ../../flask/docs/tutorial/factory.rst:146
-msgid "For Windows cmd, use ``set`` instead of ``export``:"
+#: ../../flask/docs/tutorial/factory.rst:148
+msgid "CMD"
 msgstr ""
 
-#: ../../flask/docs/tutorial/factory.rst:154
-msgid "For Windows PowerShell, use ``$env:`` instead of ``export``:"
+#: ../../flask/docs/tutorial/factory.rst:156
+msgid "Powershell"
 msgstr ""
 
-#: ../../flask/docs/tutorial/factory.rst:162
+#: ../../flask/docs/tutorial/factory.rst:164
 msgid "You'll see output similar to this:"
 msgstr ""
 
-#: ../../flask/docs/tutorial/factory.rst:174
+#: ../../flask/docs/tutorial/factory.rst:176
 msgid "Visit http://127.0.0.1:5000/hello in a browser and you should see the \"Hello, World!\" message. Congratulations, you're now running your Flask web application!"
 msgstr ""
 
-#: ../../flask/docs/tutorial/factory.rst:178
+#: ../../flask/docs/tutorial/factory.rst:180
 msgid "Continue to :doc:`database`."
 msgstr ""
-

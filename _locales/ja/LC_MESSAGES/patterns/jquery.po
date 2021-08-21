@@ -8,22 +8,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
+"Generated-By: Babel 2.9.1\n"
 
 # e526b1e10ef444739061efc141497461
-#: ../../patterns/jquery.rst:2
+#: ../../flask/docs/patterns/jquery.rst:2
 msgid "AJAX with jQuery"
 msgstr ""
 
 # ef7d679b8b8548059e1e74937f2bbefe
-#: ../../patterns/jquery.rst:4
+#: ../../flask/docs/patterns/jquery.rst:4
 msgid ""
 "`jQuery`_ is a small JavaScript library commonly used to simplify working"
 " with the DOM and JavaScript in general.  It is the perfect tool to make "
@@ -32,7 +32,7 @@ msgid ""
 msgstr ""
 
 # c8a13ebd161744b1b5f45df893126ef4
-#: ../../patterns/jquery.rst:9
+#: ../../flask/docs/patterns/jquery.rst:9
 msgid ""
 "JSON itself is a very lightweight transport format, very similar to how "
 "Python primitives (numbers, strings, dicts and lists) look like which is "
@@ -41,12 +41,12 @@ msgid ""
 msgstr ""
 
 # a2617730038a4ee8a81dd2c222092bae
-#: ../../patterns/jquery.rst:17
+#: ../../flask/docs/patterns/jquery.rst:17
 msgid "Loading jQuery"
 msgstr ""
 
 # b9830d882b4644d49838b43c7ec0259e
-#: ../../patterns/jquery.rst:19
+#: ../../flask/docs/patterns/jquery.rst:19
 msgid ""
 "In order to use jQuery, you have to download it first and place it in the"
 " static folder of your application and then ensure it's loaded.  Ideally "
@@ -56,14 +56,14 @@ msgid ""
 msgstr ""
 
 # 087ef5cdaa5744f88f353d53e5ec4d8b
-#: ../../patterns/jquery.rst:29
+#: ../../flask/docs/patterns/jquery.rst:29
 msgid ""
 "Another method is using Google's `AJAX Libraries API "
 "<https://developers.google.com/speed/libraries/>`_ to load jQuery:"
 msgstr ""
 
 # 1343046bd99a4c8286d7ecee94b01c83
-#: ../../patterns/jquery.rst:38
+#: ../../flask/docs/patterns/jquery.rst:38
 msgid ""
 "In this case you have to put jQuery into your static folder as a "
 "fallback, but it will first try to load it directly from Google. This has"
@@ -73,12 +73,12 @@ msgid ""
 msgstr ""
 
 # be80d4925ac44a9b9166753badeb2f8e
-#: ../../patterns/jquery.rst:45
+#: ../../flask/docs/patterns/jquery.rst:45
 msgid "Where is My Site?"
 msgstr ""
 
 # cab7bf177b9c4c239b3225921858b5d1
-#: ../../patterns/jquery.rst:47
+#: ../../flask/docs/patterns/jquery.rst:47
 msgid ""
 "Do you know where your application is?  If you are developing the answer "
 "is quite simple: it's on localhost port something and directly on the "
@@ -92,53 +92,20 @@ msgid ""
 msgstr ""
 
 # 45abfe71786c4f71b2e8a724a4c86224
-#: ../../patterns/jquery.rst:56
+#: ../../flask/docs/patterns/jquery.rst:56
 msgid ""
 "A simple method would be to add a script tag to our page that sets a "
 "global variable to the prefix to the root of the application.  Something "
 "like this:"
 msgstr ""
 
-# 71107a778de3431baa06e30d51ca2493
-#: ../../patterns/jquery.rst:66
-msgid ""
-"The ``|safe`` is necessary in Flask before 0.10 so that Jinja does not "
-"escape the JSON encoded string with HTML rules.  Usually this would be "
-"necessary, but we are inside a ``script`` block here where different "
-"rules apply."
-msgstr ""
-
-# 29469a63fca44be380934a2143ea42ab
-#: ../../patterns/jquery.rst:71
-msgid "Information for Pros"
-msgstr ""
-
-# 2a9de8d37a474940b3a438f215bf239e
-#: ../../patterns/jquery.rst:73
-msgid ""
-"In HTML the ``script`` tag is declared ``CDATA`` which means that "
-"entities will not be parsed.  Everything until ``</script>`` is handled "
-"as script. This also means that there must never be any ``</`` between "
-"the script tags.  ``|tojson`` is kind enough to do the right thing here "
-"and escape slashes for you (``{{ \"</script>\"|tojson|safe }}`` is "
-"rendered as ``\"<\\/script>\"``)."
-msgstr ""
-
-# 694c571c343c46ee91963baaf73e8203
-#: ../../patterns/jquery.rst:80
-msgid ""
-"In Flask 0.10 it goes a step further and escapes all HTML tags with "
-"unicode escapes.  This makes it possible for Flask to automatically mark "
-"the result as HTML safe."
-msgstr ""
-
 # 425e570911d24ed084918781f40c3424
-#: ../../patterns/jquery.rst:86
+#: ../../flask/docs/patterns/jquery.rst:68
 msgid "JSON View Functions"
 msgstr ""
 
 # 4009e387e7744e85b56fc8793c32a4ab
-#: ../../patterns/jquery.rst:88
+#: ../../flask/docs/patterns/jquery.rst:70
 msgid ""
 "Now let's create a server side function that accepts two URL arguments of"
 " numbers which should be added together and then sent back to the "
@@ -148,7 +115,7 @@ msgid ""
 msgstr ""
 
 # 8bdee696e276427eac8f54d37fcc60ea
-#: ../../patterns/jquery.rst:107
+#: ../../flask/docs/patterns/jquery.rst:89
 msgid ""
 "As you can see I also added an `index` method here that renders a "
 "template.  This template will load jQuery as above and have a little form"
@@ -157,7 +124,7 @@ msgid ""
 msgstr ""
 
 # 4367c20bd64a4f729647eeb53668dea2
-#: ../../patterns/jquery.rst:112
+#: ../../flask/docs/patterns/jquery.rst:94
 msgid ""
 "Note that we are using the :meth:`~werkzeug.datastructures.MultiDict.get`"
 " method here which will never fail.  If the key is missing a default "
@@ -168,12 +135,12 @@ msgid ""
 msgstr ""
 
 # 5564db8fc44a499a98a13f62b19b7adf
-#: ../../patterns/jquery.rst:120
+#: ../../flask/docs/patterns/jquery.rst:102
 msgid "The HTML"
 msgstr ""
 
 # 7e83fcc0e30943f6a1f75f3999549468
-#: ../../patterns/jquery.rst:122
+#: ../../flask/docs/patterns/jquery.rst:104
 msgid ""
 "Your index.html template either has to extend a :file:`layout.html` "
 "template with jQuery loaded and the `$SCRIPT_ROOT` variable set, or do "
@@ -184,26 +151,26 @@ msgid ""
 msgstr ""
 
 # c4a4fd7bb01b453a80a829877448c8c2
-#: ../../patterns/jquery.rst:149
+#: ../../flask/docs/patterns/jquery.rst:131
 msgid ""
 "I won't go into detail here about how jQuery works, just a very quick "
 "explanation of the little bit of code above:"
 msgstr ""
 
 # 5b60423afbfa4083b8e4af95425f1e44
-#: ../../patterns/jquery.rst:152
+#: ../../flask/docs/patterns/jquery.rst:134
 msgid ""
 "``$(function() { ... })`` specifies code that should run once the browser"
 " is done loading the basic parts of the page."
 msgstr ""
 
 # d0956550fd514d34b31e789421abd1a8
-#: ../../patterns/jquery.rst:154
+#: ../../flask/docs/patterns/jquery.rst:136
 msgid "``$('selector')`` selects an element and lets you operate on it."
 msgstr ""
 
 # 98ab3cf37d9b41fabb3f493de0c26e6b
-#: ../../patterns/jquery.rst:155
+#: ../../flask/docs/patterns/jquery.rst:137
 msgid ""
 "``element.bind('event', func)`` specifies a function that should run when"
 " the user clicked on the element.  If that function returns `false`, the "
@@ -212,7 +179,7 @@ msgid ""
 msgstr ""
 
 # c58f3ac6f21e4d07abc7ef351aecbba9
-#: ../../patterns/jquery.rst:159
+#: ../../flask/docs/patterns/jquery.rst:141
 msgid ""
 "``$.getJSON(url, data, func)`` sends a ``GET`` request to `url` and will "
 "send the contents of the `data` object as query parameters.  Once the "
@@ -222,10 +189,49 @@ msgid ""
 msgstr ""
 
 # 3c2020f74a6f4488be0f687452153052
-#: ../../patterns/jquery.rst:165
+#: ../../flask/docs/patterns/jquery.rst:147
 msgid ""
 "Check out the :gh:`example source <examples/javascript>` for a full "
 "application demonstrating the code on this page, as well as the same "
 "thing using ``XMLHttpRequest`` and ``fetch``."
 msgstr ""
+
+# 71107a778de3431baa06e30d51ca2493
+#~ msgid ""
+#~ "The ``|safe`` is necessary in Flask "
+#~ "before 0.10 so that Jinja does not"
+#~ " escape the JSON encoded string with"
+#~ " HTML rules.  Usually this would be"
+#~ " necessary, but we are inside a "
+#~ "``script`` block here where different "
+#~ "rules apply."
+#~ msgstr ""
+
+# 29469a63fca44be380934a2143ea42ab
+#~ msgid "Information for Pros"
+#~ msgstr ""
+
+# 2a9de8d37a474940b3a438f215bf239e
+#~ msgid ""
+#~ "In HTML the ``script`` tag is "
+#~ "declared ``CDATA`` which means that "
+#~ "entities will not be parsed.  Everything"
+#~ " until ``</script>`` is handled as "
+#~ "script. This also means that there "
+#~ "must never be any ``</`` between "
+#~ "the script tags.  ``|tojson`` is kind"
+#~ " enough to do the right thing "
+#~ "here and escape slashes for you "
+#~ "(``{{ \"</script>\"|tojson|safe }}`` is "
+#~ "rendered as ``\"<\\/script>\"``)."
+#~ msgstr ""
+
+# 694c571c343c46ee91963baaf73e8203
+#~ msgid ""
+#~ "In Flask 0.10 it goes a step "
+#~ "further and escapes all HTML tags "
+#~ "with unicode escapes.  This makes it "
+#~ "possible for Flask to automatically mark"
+#~ " the result as HTML safe."
+#~ msgstr ""
 

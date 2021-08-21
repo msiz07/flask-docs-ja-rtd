@@ -8,22 +8,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
+"Generated-By: Babel 2.9.1\n"
 
 # 072c5c89b74748a281fbf43ba2e33fcf
-#: ../../security.rst:2
+#: ../../flask/docs/security.rst:2
 msgid "Security Considerations"
 msgstr "セキュリティの考慮点"
 
 # ecf50cc98cea4ba095e8d635bbadb687
-#: ../../security.rst:4
+#: ../../flask/docs/security.rst:4
 msgid ""
 "Web applications usually face all kinds of security problems and it's "
 "very hard to get everything right.  Flask tries to solve a few of these "
@@ -36,12 +36,12 @@ msgstr ""
 "ならないことが、まだまだあります。"
 
 # c7f6c505bb8949a6b2521217c0a48f62
-#: ../../security.rst:11
+#: ../../flask/docs/security.rst:11
 msgid "Cross-Site Scripting (XSS)"
 msgstr "クロスサイトスクリプティング（Cross-Site Scripting）（XSS）"
 
 # 5509886ebd5f404eaa30592b96c83c49
-#: ../../security.rst:13
+#: ../../flask/docs/security.rst:13
 msgid ""
 "Cross site scripting is the concept of injecting arbitrary HTML (and with"
 " it JavaScript) into the context of a website.  To remedy this, "
@@ -58,7 +58,7 @@ msgstr ""
 "/Cross-site_scripting>`_\ を確認してください。"
 
 # 2c06cfa627824db583772d48ce1dccc2
-#: ../../security.rst:20
+#: ../../flask/docs/security.rst:20
 msgid ""
 "Flask configures Jinja2 to automatically escape all values unless "
 "explicitly told otherwise.  This should rule out all XSS problems caused "
@@ -71,17 +71,17 @@ msgstr ""
 "ならない場所がいくらか残っています:"
 
 # 0c4cd7f31b9e49ffbb09f6ae94066ffb
-#: ../../security.rst:25
+#: ../../flask/docs/security.rst:25
 msgid "generating HTML without the help of Jinja2"
 msgstr "Jinja2を利用せずにHTMLを生成"
 
 # aca9b4452d234af89750bc4d90e01007
-#: ../../security.rst:26
+#: ../../flask/docs/security.rst:26
 msgid "calling :class:`~flask.Markup` on data submitted by users"
 msgstr "ユーザが提出したデータへ\ :class:`~flask.Markup`\ を呼び出し"
 
 # 8dbf99640bdf453aacaea80aa91f7d1e
-#: ../../security.rst:27
+#: ../../flask/docs/security.rst:27
 msgid ""
 "sending out HTML from uploaded files, never do that, use the ``Content-"
 "Disposition: attachment`` header to prevent that problem."
@@ -91,7 +91,7 @@ msgstr ""
 "してください。"
 
 # 898c5b8f9a1a40b0b6be576a3bd42b79
-#: ../../security.rst:29
+#: ../../flask/docs/security.rst:29
 msgid ""
 "sending out textfiles from uploaded files.  Some browsers are using "
 "content-type guessing based on the first few bytes so users could trick a"
@@ -103,7 +103,7 @@ msgstr ""
 "ます。"
 
 # 95b636717b424a5cac46fbe042791cb7
-#: ../../security.rst:33
+#: ../../flask/docs/security.rst:33
 msgid ""
 "Another thing that is very important are unquoted attributes.  While "
 "Jinja2 can protect you from XSS issues by escaping HTML, there is one "
@@ -119,7 +119,7 @@ msgstr ""
 "ようにします:"
 
 # 76cdf911eab84277abcbc0cecc260649
-#: ../../security.rst:43
+#: ../../flask/docs/security.rst:43
 msgid ""
 "Why is this necessary?  Because if you would not be doing that, an "
 "attacker could easily inject custom JavaScript handlers.  For example an "
@@ -130,7 +130,7 @@ msgstr ""
 "ここ（上記のinputタグ）へ以下のようなHTML+JavaScriptを挿入できます:"
 
 # 5eb4a1f0527549509d81a7548bd7ba1e
-#: ../../security.rst:51
+#: ../../flask/docs/security.rst:51
 msgid ""
 "When the user would then move with the mouse over the input, the cookie "
 "would be presented to the user in an alert window.  But instead of "
@@ -150,7 +150,7 @@ msgstr ""
 "してくるかもしれません。"
 
 # 07dc4861bcca452ba211aa061b99f583
-#: ../../security.rst:58
+#: ../../flask/docs/security.rst:58
 msgid ""
 "There is one class of XSS issues that Jinja's escaping does not protect "
 "against. The ``a`` tag's ``href`` attribute can contain a `javascript:` "
@@ -161,7 +161,7 @@ msgstr ""
 "守られていないブラウザはそれをクリックするとそのJavaScriptを実行します。"
 
 # c984497ae63544b5ac2f02ca74faeea8
-#: ../../security.rst:67
+#: ../../flask/docs/security.rst:67
 msgid ""
 "To prevent this, you'll need to set the :ref:`security-csp` response "
 "header."
@@ -170,12 +170,12 @@ msgstr ""
 "必要があるでしょう。"
 
 # 7dca7a139a0e47e1b21a2b727f20bc92
-#: ../../security.rst:70
+#: ../../flask/docs/security.rst:70
 msgid "Cross-Site Request Forgery (CSRF)"
 msgstr "クロスサイトリクエストフォージェリ（Cross-Site Request Forgery）（CSRF）"
 
 # bbbeea13374b471b9709aaacf94596b8
-#: ../../security.rst:72
+#: ../../flask/docs/security.rst:72
 msgid ""
 "Another big problem is CSRF.  This is a very complex topic and I won't "
 "outline it here in detail just mention what it is and how to "
@@ -185,7 +185,7 @@ msgstr ""
 "整理はせず、それが何であり理論上はどう防ぐのかに言及だけします。"
 
 # f8b41960b5434465a2e61ac24a037b27
-#: ../../security.rst:76
+#: ../../flask/docs/security.rst:76
 msgid ""
 "If your authentication information is stored in cookies, you have "
 "implicit state management.  The state of \"being logged in\" is "
@@ -204,7 +204,7 @@ msgstr ""
 "くるようなことを、誰かができるようになっているかもしれません。"
 
 # a6f40654a2354e0e87589346a7c95ee3
-#: ../../security.rst:84
+#: ../../flask/docs/security.rst:84
 msgid ""
 "Say you have a specific URL that, when you sent ``POST`` requests to will"
 " delete a user's profile (say ``http://example.com/user/delete``).  If an"
@@ -220,7 +220,7 @@ msgstr ""
 "される結果になります。"
 
 # a4d92a655846480883b9715cd4fba06d
-#: ../../security.rst:90
+#: ../../flask/docs/security.rst:90
 msgid ""
 "Imagine you were to run Facebook with millions of concurrent users and "
 "someone would send out links to images of little kittens.  When users "
@@ -233,7 +233,7 @@ msgstr ""
 "しれません。"
 
 # 6bddff338c064609aa4fecb82368c84f
-#: ../../security.rst:95
+#: ../../flask/docs/security.rst:95
 msgid ""
 "How can you prevent that?  Basically for each request that modifies "
 "content on the server you would have to either use a one-time token and "
@@ -251,7 +251,7 @@ msgstr ""
 "トークンを比較して、確実に同一であるかを確かめる必要があるでしょう。"
 
 # 11cedf4d53e244dabbdaf91a82a6ed78
-#: ../../security.rst:101
+#: ../../flask/docs/security.rst:101
 msgid ""
 "Why does Flask not do that for you?  The ideal place for this to happen "
 "is the form validation framework, which does not exist in Flask."
@@ -261,12 +261,12 @@ msgstr ""
 "Flaskの外側に位置するのです。"
 
 # d7cd87fff0504c64a634d4e064c79ed5
-#: ../../security.rst:107
+#: ../../flask/docs/security.rst:107
 msgid "JSON Security"
 msgstr "JSONのセキュリティ"
 
 # 6cc9067778e04f1c8b81e0e6db1a3d39
-#: ../../security.rst:109
+#: ../../flask/docs/security.rst:109
 msgid ""
 "In Flask 0.10 and lower, :func:`~flask.jsonify` did not serialize top-"
 "level arrays to JSON. This was because of a security vulnerability in "
@@ -279,7 +279,7 @@ msgstr ""
 ""
 
 # 46c3a54a16ea4de1868f05ecea910037
-#: ../../security.rst:112
+#: ../../flask/docs/security.rst:112
 msgid ""
 "ECMAScript 5 closed this vulnerability, so only extremely old browsers "
 "are still vulnerable. All of these browsers have `other more serious "
@@ -295,12 +295,12 @@ msgstr ""
 "配列のシリアライズをサポートしています。"
 
 # 40a06406cbca4cd2918f57306894c341
-#: ../../security.rst:120
+#: ../../flask/docs/security.rst:120
 msgid "Security Headers"
 msgstr "セキュリティに関するヘッダ"
 
 # 2be414f4eb6248d18a679b184f2e7234
-#: ../../security.rst:122
+#: ../../flask/docs/security.rst:122
 msgid ""
 "Browsers recognize various response headers in order to control security."
 " We recommend reviewing each of the headers below for use in your "
@@ -313,12 +313,12 @@ msgstr ""
 "HTTPSとセキュリティに関するヘッダを管理するために使用できます。"
 
 # 606dba6f02c74707aef49ef05c1e3229
-#: ../../security.rst:130
+#: ../../flask/docs/security.rst:130
 msgid "HTTP Strict Transport Security (HSTS)"
 msgstr "HTTPの厳格なトランスポートのセキュリティ（HSTS）（HTTP Strict Transport Security）"
 
 # 920d787ddc25400a8203740b1429b4b2
-#: ../../security.rst:132
+#: ../../flask/docs/security.rst:132
 msgid ""
 "Tells the browser to convert all HTTP requests to HTTPS, preventing man-"
 "in-the-middle (MITM) attacks. ::"
@@ -327,19 +327,19 @@ msgstr ""
 "（MITM）攻撃を防ぎます。::"
 
 # 9630e5ea3aab46088deb54b80974781a
-#: ../../security.rst:137
+#: ../../flask/docs/security.rst:137
 msgid ""
 "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-"
 "Transport-Security"
 msgstr ""
 
 # b39c5bfb98f44130bce144b7e0bc40ea
-#: ../../security.rst:142
+#: ../../flask/docs/security.rst:142
 msgid "Content Security Policy (CSP)"
 msgstr "コンテンツのセキュリティポリシー（CSP）（Content Security Policy）"
 
 # f5c3b798f46447b5b592e289d8e720d9
-#: ../../security.rst:144
+#: ../../flask/docs/security.rst:144
 msgid ""
 "Tell the browser where it can load various types of resource from. This "
 "header should be used whenever possible, but requires some work to define"
@@ -351,24 +351,24 @@ msgstr ""
 "以下のようになるでしょう::"
 
 # 1eb3b3525792433088138a2b28c4ba75
-#: ../../security.rst:150
+#: ../../flask/docs/security.rst:150
 msgid "https://csp.withgoogle.com/docs/index.html"
 msgstr ""
 
 # 2095607410924a2b9802a2a9fddb667e
-#: ../../security.rst:151
+#: ../../flask/docs/security.rst:151
 msgid ""
 "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-"
 "Security-Policy"
 msgstr ""
 
 # 22dbe869bfb9451d9dff967f57e06c7d
-#: ../../security.rst:154
+#: ../../flask/docs/security.rst:154
 msgid "X-Content-Type-Options"
 msgstr ""
 
 # 656e05ceca2b419f82d90fed8285da56
-#: ../../security.rst:156
+#: ../../flask/docs/security.rst:156
 msgid ""
 "Forces the browser to honor the response content type instead of trying "
 "to detect it, which can be abused to generate a cross-site scripting "
@@ -380,19 +380,19 @@ msgstr ""
 "します。::"
 
 # a03d0d99ec0843f982c330b7d8e20e65
-#: ../../security.rst:162
+#: ../../flask/docs/security.rst:162
 msgid ""
 "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-"
 "Options"
 msgstr ""
 
 # 1ddcec04e8cd4f549920bfc53f4c4e53
-#: ../../security.rst:165
+#: ../../flask/docs/security.rst:165
 msgid "X-Frame-Options"
 msgstr ""
 
 # 6917a62dbd16495fa55d786f862c52ee
-#: ../../security.rst:167
+#: ../../flask/docs/security.rst:167
 msgid ""
 "Prevents external sites from embedding your site in an ``iframe``. This "
 "prevents a class of attacks where clicks in the outer frame can be "
@@ -405,17 +405,17 @@ msgstr ""
 "「clickjacking」としても知られています。::"
 
 # 8003fdbac3ca44a0964297925e62ad0e
-#: ../../security.rst:174
+#: ../../flask/docs/security.rst:174
 msgid "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options"
 msgstr ""
 
 # d7315452e32f4b7d9b2d54ac80c0c46e
-#: ../../security.rst:177
+#: ../../flask/docs/security.rst:177
 msgid "X-XSS-Protection"
 msgstr ""
 
 # 7fdc2627489c48ad8146c81595831551
-#: ../../security.rst:179
+#: ../../flask/docs/security.rst:179
 msgid ""
 "The browser will try to prevent reflected XSS attacks by not loading the "
 "page if the request contains something that looks like JavaScript and the"
@@ -426,17 +426,17 @@ msgstr ""
 "reflected XSS攻撃を防ぐよう試みるようにします。"
 
 # 67127aa57511409da3682a0e8fe9482e
-#: ../../security.rst:185
+#: ../../flask/docs/security.rst:185
 msgid "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection"
 msgstr ""
 
 # 60b59e10d1c04f9a9bf036f2cd74192b
-#: ../../security.rst:191
+#: ../../flask/docs/security.rst:191
 msgid "Set-Cookie options"
 msgstr "Set-Cookieオプション"
 
 # 538c643b913c4a4bbc7479fa90750ca5
-#: ../../security.rst:193
+#: ../../flask/docs/security.rst:193
 msgid ""
 "These options can be added to a ``Set-Cookie`` header to improve their "
 "security. Flask has configuration options to set these on the session "
@@ -449,12 +449,12 @@ msgstr ""
 "オプションがあります。これらは、他のクッキーへも設定可能です。"
 
 # 64d690f0bf09477fbc111af3ff9f7b27
-#: ../../security.rst:197
+#: ../../flask/docs/security.rst:197
 msgid "``Secure`` limits cookies to HTTPS traffic only."
 msgstr "``secure``\ はクッキー（の送受信を）をHTTPS通信だけに限定します。"
 
 # b0c78ad3e35041549e487767985e2158
-#: ../../security.rst:198
+#: ../../flask/docs/security.rst:198
 msgid ""
 "``HttpOnly`` protects the contents of cookies from being read with "
 "JavaScript."
@@ -462,7 +462,7 @@ msgstr ""
 "``HttpOnly``\ は、クッキーの内容をJavaScriptで読み取られることを防ぎます。"
 
 # 2de2035c7a074d0a99260f2ce7c49208
-#: ../../security.rst:200
+#: ../../flask/docs/security.rst:200
 msgid ""
 "``SameSite`` restricts how cookies are sent with requests from external "
 "sites. Can be set to ``'Lax'`` (recommended) or ``'Strict'``. ``Lax`` "
@@ -478,7 +478,7 @@ msgstr ""
 "外部リクエストで一緒にクッキーを（ブラウザが）送信することを防ぎます。"
 
 # ab833b90a37e44fb93c28ea48149a50a
-#: ../../security.rst:216
+#: ../../flask/docs/security.rst:216
 msgid ""
 "Specifying ``Expires`` or ``Max-Age`` options, will remove the cookie "
 "after the given time, or the current time plus the age, respectively. If "
@@ -491,7 +491,7 @@ msgstr ""
 "ブラウザが閉じられたときにクッキーは削除されまれます。::"
 
 # 93584cb51b904be6aa7cbc9bf49a02e8
-#: ../../security.rst:223
+#: ../../flask/docs/security.rst:223
 msgid ""
 "For the session cookie, if :attr:`session.permanent "
 "<flask.session.permanent>` is set, then "
@@ -509,7 +509,7 @@ msgstr ""
 "でしょう。::"
 
 # 274b50d054a34df681c73c8bba3ccc81
-#: ../../security.rst:241
+#: ../../flask/docs/security.rst:241
 msgid ""
 "Use :class:`itsdangerous.TimedSerializer` to sign and validate other "
 "cookie values (or any values that need secure signatures)."
@@ -519,22 +519,22 @@ msgstr ""
 "ください。"
 
 # 20eed18e9d044ebc9d6cd599ef00cdcd
-#: ../../security.rst:244
+#: ../../flask/docs/security.rst:244
 msgid "https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies"
 msgstr ""
 
 # 537f02df35fc40b2965ad2b508a93836
-#: ../../security.rst:245
+#: ../../flask/docs/security.rst:245
 msgid "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie"
 msgstr ""
 
 # 84b7a24d81b44796ab2236d74b302097
-#: ../../security.rst:251
+#: ../../flask/docs/security.rst:251
 msgid "HTTP Public Key Pinning (HPKP)"
 msgstr "HTTP公開鍵ピン止め（HPKP）（HTTP Public Key Pinning）"
 
 # eba0c9e59dbf4f749baa52c376d076ea
-#: ../../security.rst:253
+#: ../../flask/docs/security.rst:253
 msgid ""
 "This tells the browser to authenticate with the server using only the "
 "specific certificate key to prevent MITM attacks."
@@ -543,7 +543,7 @@ msgstr ""
 "認証するよう、ブラウザに指示します。"
 
 # 3e85beadc553448d86d6f1f6984857e3
-#: ../../security.rst:257
+#: ../../flask/docs/security.rst:257
 msgid ""
 "Be careful when enabling this, as it is very difficult to undo if you set"
 " up or upgrade your key incorrectly."
@@ -552,7 +552,41 @@ msgstr ""
 "難しいため、これを有効にするときは注意してください。"
 
 # 3b624609acbe42998fdcb3a3df476525
-#: ../../security.rst:260
+#: ../../flask/docs/security.rst:260
 msgid "https://developer.mozilla.org/en-US/docs/Web/HTTP/Public_Key_Pinning"
+msgstr ""
+
+#: ../../flask/docs/security.rst:264
+msgid "Copy/Paste to Terminal"
+msgstr ""
+
+#: ../../flask/docs/security.rst:266
+msgid ""
+"Hidden characters such as the backspace character (``\\b``, ``^H``) can "
+"cause text to render differently in HTML than how it is interpreted if "
+"`pasted into a terminal <https://security.stackexchange.com/q/39118>`__."
+msgstr ""
+
+#: ../../flask/docs/security.rst:270
+msgid ""
+"For example, ``import y\\bose\\bm\\bi\\bt\\be\\b`` renders as ``import "
+"yosemite`` in HTML, but the backspaces are applied when pasted into a "
+"terminal, and it becomes ``import os``."
+msgstr ""
+
+#: ../../flask/docs/security.rst:274
+msgid ""
+"If you expect users to copy and paste untrusted code from your site, such"
+" as from comments posted by users on a technical blog, consider applying "
+"extra filtering, such as replacing all ``\\b`` characters."
+msgstr ""
+
+#: ../../flask/docs/security.rst:282
+msgid ""
+"Most modern terminals will warn about and remove hidden characters when "
+"pasting, so this isn't strictly necessary. It's also possible to craft "
+"dangerous commands in other ways that aren't possible to filter. "
+"Depending on your site's use case, it may be good to show a warning about"
+" copying code in general."
 msgstr ""
 

@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 1.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 20:39+0900\n"
+"POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,39 +16,38 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../flask/docs/patterns/templateinheritance.rst:4
+#: ../../flask/docs/patterns/templateinheritance.rst:2
 msgid "Template Inheritance"
 msgstr ""
 
-#: ../../flask/docs/patterns/templateinheritance.rst:6
+#: ../../flask/docs/patterns/templateinheritance.rst:4
 msgid "The most powerful part of Jinja is template inheritance. Template inheritance allows you to build a base \"skeleton\" template that contains all the common elements of your site and defines **blocks** that child templates can override."
 msgstr ""
 
-#: ../../flask/docs/patterns/templateinheritance.rst:10
+#: ../../flask/docs/patterns/templateinheritance.rst:8
 msgid "Sounds complicated but is very basic. It's easiest to understand it by starting with an example."
 msgstr ""
 
-#: ../../flask/docs/patterns/templateinheritance.rst:15
+#: ../../flask/docs/patterns/templateinheritance.rst:13
 msgid "Base Template"
 msgstr ""
 
-#: ../../flask/docs/patterns/templateinheritance.rst:17
+#: ../../flask/docs/patterns/templateinheritance.rst:15
 msgid "This template, which we'll call :file:`layout.html`, defines a simple HTML skeleton document that you might use for a simple two-column page. It's the job of \"child\" templates to fill the empty blocks with content:"
 msgstr ""
 
-#: ../../flask/docs/patterns/templateinheritance.rst:41
+#: ../../flask/docs/patterns/templateinheritance.rst:39
 msgid "In this example, the ``{% block %}`` tags define four blocks that child templates can fill in. All the `block` tag does is tell the template engine that a child template may override those portions of the template."
 msgstr ""
 
-#: ../../flask/docs/patterns/templateinheritance.rst:46
+#: ../../flask/docs/patterns/templateinheritance.rst:44
 msgid "Child Template"
 msgstr ""
 
-#: ../../flask/docs/patterns/templateinheritance.rst:48
+#: ../../flask/docs/patterns/templateinheritance.rst:46
 msgid "A child template might look like this:"
 msgstr ""
 
-#: ../../flask/docs/patterns/templateinheritance.rst:66
+#: ../../flask/docs/patterns/templateinheritance.rst:64
 msgid "The ``{% extends %}`` tag is the key here. It tells the template engine that this template \"extends\" another template.  When the template system evaluates this template, first it locates the parent.  The extends tag must be the first tag in the template.  To render the contents of a block defined in the parent template, use ``{{ super() }}``."
 msgstr ""
-

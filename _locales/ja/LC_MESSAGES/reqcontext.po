@@ -8,22 +8,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 21:10+0900\n"
+"POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.8.0\n"
+"Generated-By: Babel 2.9.1\n"
 
 # e647b85af6e74452b2ed126e4ed62bc2
-#: ../../flask/docs/reqcontext.rst:6
+#: ../../flask/docs/reqcontext.rst:4
 msgid "The Request Context"
 msgstr "リクエストのコンテキスト（The Request Context）"
 
 # 3426e2aa93544ff8bd7522fcbb62e23b
-#: ../../flask/docs/reqcontext.rst:8
+#: ../../flask/docs/reqcontext.rst:6
 msgid ""
 "The request context keeps track of the request-level data during a "
 "request. Rather than passing the request object to each function that "
@@ -36,7 +36,7 @@ msgstr ""
 "引数で受け取らなくてもリクエストのオブジェクトに関数内からアクセスできるように、flaskパッケージをimport後flask.requestやflask.sessionにアクセスすればそのとき処理中のリクエストやセッションのオブジェクトにアクセスできるようなことを指しています）。"
 
 # 8dc305841c6d43ad8ab81eaf5b7a54ad
-#: ../../flask/docs/reqcontext.rst:13
+#: ../../flask/docs/reqcontext.rst:11
 msgid ""
 "This is similar to the :doc:`/appcontext`, which keeps track of the "
 "application-level data independent of a request. A corresponding "
@@ -48,12 +48,12 @@ msgstr ""
 "contextはFlask内でスタックのデータ構造を使って管理されており、一般的にスタックへデータを追加することをpushといいます）。"
 
 # 903fdc7465bc4bdabaa6f1c0c6b7dcd4
-#: ../../flask/docs/reqcontext.rst:19
+#: ../../flask/docs/reqcontext.rst:17
 msgid "Purpose of the Context"
 msgstr "コンテキストの目的（Purpose of the Context）"
 
 # cb8eda6042a2448f80611f6d8b45ad28
-#: ../../flask/docs/reqcontext.rst:21
+#: ../../flask/docs/reqcontext.rst:19
 msgid ""
 "When the :class:`Flask` application handles a request, it creates a "
 ":class:`Request` object based on the environment it received from the "
@@ -69,7 +69,7 @@ msgstr ""
 " *context local*\\ という用語を使用します。"
 
 # 4e70852d4a8b4cfab995b24857e3669b
-#: ../../flask/docs/reqcontext.rst:28
+#: ../../flask/docs/reqcontext.rst:26
 msgid ""
 "Flask automatically *pushes* a request context when handling a request. "
 "View functions, error handlers, and other functions that run during a "
@@ -81,12 +81,12 @@ msgstr ""
 " :data:`request`\\ へアクセスします。"
 
 # bfea902e886047f38fd977bdbd3bfe1f
-#: ../../flask/docs/reqcontext.rst:35
+#: ../../flask/docs/reqcontext.rst:33
 msgid "Lifetime of the Context"
 msgstr "コンテキストの生存期間（Lifetime of the Context）"
 
 # f89dc62d00324247a04285a93bbfdbcb
-#: ../../flask/docs/reqcontext.rst:37
+#: ../../flask/docs/reqcontext.rst:35
 msgid ""
 "When a Flask application begins handling a request, it pushes a request "
 "context, which also pushes an :doc:`/appcontext`. When the request ends "
@@ -98,7 +98,7 @@ msgstr ""
 "contextをpopします。"
 
 # 04782aea67ce4e779ddf7dadd45b4acb
-#: ../../flask/docs/reqcontext.rst:41
+#: ../../flask/docs/reqcontext.rst:39
 msgid ""
 "The context is unique to each thread (or other worker type). "
 ":data:`request` cannot be passed to another thread, the other thread will"
@@ -110,7 +110,7 @@ msgstr ""
 " 親スレッドのrequestプロキシが指している実際のリクエストは、子スレッドのrequestプロキシが指すものとは異なるというような意味合い）。"
 
 # f6529b7623984530843fb126cfe6b7be
-#: ../../flask/docs/reqcontext.rst:46
+#: ../../flask/docs/reqcontext.rst:44
 msgid ""
 "Context locals are implemented in Werkzeug. See :doc:`werkzeug:local` for"
 " more information on how this works internally."
@@ -119,12 +119,12 @@ msgstr ""
 ":doc:`werkzeug:local`\\ を確認してください。"
 
 # 33da5b14f95b4c0fab47d4bf2cdc6bd3
-#: ../../flask/docs/reqcontext.rst:51
+#: ../../flask/docs/reqcontext.rst:49
 msgid "Manually Push a Context"
 msgstr "手作業でのコンテキストの登録（Manually Push a Context）"
 
 # df7a7eb0289446138e222ab4c349e9ab
-#: ../../flask/docs/reqcontext.rst:53
+#: ../../flask/docs/reqcontext.rst:51
 msgid ""
 "If you try to access :data:`request`, or anything that uses it, outside a"
 " request context, you'll get this error message:"
@@ -133,7 +133,7 @@ msgstr ""
 "contextの外側の場合（request contextがスタックへpushされた状態でない場合）、以下のようなエラーメッセージを得るでしょう:"
 
 # 21878edabd0846dbab93d909a8798f15
-#: ../../flask/docs/reqcontext.rst:64
+#: ../../flask/docs/reqcontext.rst:62
 msgid ""
 "This should typically only happen when testing code that expects an "
 "active request. One option is to use the :meth:`test client "
@@ -149,7 +149,7 @@ msgstr ""
 ":data:`request`\\ へアクセスできるようになります。 ::"
 
 # 06de63c875ce496fbba9e6131fd47a64
-#: ../../flask/docs/reqcontext.rst:79
+#: ../../flask/docs/reqcontext.rst:77
 msgid ""
 "If you see that error somewhere else in your code not related to testing,"
 " it most likely indicates that you should move that code into a view "
@@ -157,7 +157,7 @@ msgid ""
 msgstr "もしテストと関係のない、どこか別の場所のコードでこのエラーを見た場合は、そのコードをview関数の内側へ移動するべきだと示している可能性が最も高いです。"
 
 # 7eda2e4c485441e1b2150439af771adb
-#: ../../flask/docs/reqcontext.rst:83
+#: ../../flask/docs/reqcontext.rst:81
 msgid ""
 "For information on how to use the request context from the interactive "
 "Python shell, see :doc:`/shell`."
@@ -166,12 +166,12 @@ msgstr ""
 "を確認してください。"
 
 # 3c8a2f1323de4df78246236969fd3552
-#: ../../flask/docs/reqcontext.rst:88
+#: ../../flask/docs/reqcontext.rst:86
 msgid "How the Context Works"
 msgstr "コンテキストの働きかた（How the Context Works）"
 
 # 86d01f77da0c45739df0575ef9814249
-#: ../../flask/docs/reqcontext.rst:90
+#: ../../flask/docs/reqcontext.rst:88
 msgid ""
 "The :meth:`Flask.wsgi_app` method is called to handle each request. It "
 "manages the contexts during the request. Internally, the request and "
@@ -188,7 +188,7 @@ msgstr ""
 "flask.requestなどのこと）が利用可能になり、プロキシはスタックの一番上にあるcontextから得られる情報を指すようになります。"
 
 # d50c9f89e71e48339223a0222e509edf
-#: ../../flask/docs/reqcontext.rst:97
+#: ../../flask/docs/reqcontext.rst:95
 msgid ""
 "When the request starts, a :class:`~ctx.RequestContext` is created and "
 "pushed, which creates and pushes an :class:`~ctx.AppContext` first if a "
@@ -204,7 +204,7 @@ msgstr ""
 "が、そのリクエストを処理しているオリジナルのスレッドから利用できるようになります。"
 
 # 7279d57bdb7e4af7b83fb0a36f66fdd5
-#: ../../flask/docs/reqcontext.rst:104
+#: ../../flask/docs/reqcontext.rst:102
 msgid ""
 "Because the contexts are stacks, other contexts may be pushed to change "
 "the proxies during a request. While this is not a common pattern, it can "
@@ -213,7 +213,7 @@ msgid ""
 msgstr "contextはスタックなので、他のcontextがリクエストの期間中にプロキシを変更するためにpushされるかもしれません。これはよくあるパターンではないですが、高度なアプリケーションでは、例えば内部的にリダイレクトしたり、違うアプリケーションを一緒に連鎖したりするために、使用可能です。"
 
 # dd92f59997754f049d183d469af4d5c4
-#: ../../flask/docs/reqcontext.rst:109
+#: ../../flask/docs/reqcontext.rst:107
 msgid ""
 "After the request is dispatched and a response is generated and sent, the"
 " request context is popped, which then pops the application context. "
@@ -228,12 +228,12 @@ msgstr ""
 "関数が実行されます。これらはdispatch中に捕捉されない例外が発生した場合でも実行されます。"
 
 # b2dd628f81eb4cee945137550e0478c6
-#: ../../flask/docs/reqcontext.rst:119
+#: ../../flask/docs/reqcontext.rst:117
 msgid "Callbacks and Errors"
 msgstr "コールバックとエラー"
 
 # 1fda77859a184b13b83bd4694835d4c2
-#: ../../flask/docs/reqcontext.rst:121
+#: ../../flask/docs/reqcontext.rst:119
 msgid ""
 "Flask dispatches a request in multiple stages which can affect the "
 "request, response, and how errors are handled. The contexts are active "
@@ -241,7 +241,7 @@ msgid ""
 msgstr "Flaskはリクエストを複数の段階に分けながら割り振り（dispatch）、その段階によってリクエスト、レスポンス、そしてエラー処理のされ方は影響を受けることがあります。その全ての段階を通じて、contextは活動中な状態（active）です。"
 
 # 00b56b2a981646189cd66dc8f214e44d
-#: ../../flask/docs/reqcontext.rst:125
+#: ../../flask/docs/reqcontext.rst:123
 msgid ""
 "A :class:`Blueprint` can add handlers for these events that are specific "
 "to the blueprint. The handlers for a blueprint will run if the blueprint "
@@ -252,7 +252,7 @@ msgstr ""
 " 普通はそのURLに）対応する経路（route）を持っていたときに実行します。"
 
 # 82e7d3ee654942f9a93f750a09669adf
-#: ../../flask/docs/reqcontext.rst:129
+#: ../../flask/docs/reqcontext.rst:127
 msgid ""
 "Before each request, :meth:`~Flask.before_request` functions are called. "
 "If one of these functions return a value, the other functions are "
@@ -263,7 +263,7 @@ msgstr ""
 "で登録された関数が呼び出されます。もしその関数のうちひとつでも値を返せば、その他の関数はスキップされます。戻り値はレスポンスとして扱われ、view関数は実行されません。"
 
 # 4b8c9ea847b84582a1c7e610ede2e695
-#: ../../flask/docs/reqcontext.rst:134
+#: ../../flask/docs/reqcontext.rst:132
 msgid ""
 "If the :meth:`~Flask.before_request` functions did not return a response,"
 " the view function for the matched route is called and returns a "
@@ -273,7 +273,7 @@ msgstr ""
 "の関数がレスポンスを返さない場合は、経路（route）に対応するview関数が呼び出されてレスポンスを返します。"
 
 # 70d40a93962f48929395c26f4ffaffa7
-#: ../../flask/docs/reqcontext.rst:138
+#: ../../flask/docs/reqcontext.rst:136
 msgid ""
 "The return value of the view is converted into an actual response object "
 "and passed to the :meth:`~Flask.after_request` functions. Each function "
@@ -283,7 +283,7 @@ msgstr ""
 "関数へ渡されます。各関数は変更を加えたもしくは新しいレスポンスのオブジェクトを返します。"
 
 # fe7eabaa70e44a1dbae14ef5bc5fa881
-#: ../../flask/docs/reqcontext.rst:142
+#: ../../flask/docs/reqcontext.rst:140
 msgid ""
 "After the response is returned, the contexts are popped, which calls the "
 ":meth:`~Flask.teardown_request` and :meth:`~Flask.teardown_appcontext` "
@@ -296,7 +296,7 @@ msgstr ""
 "関数を呼び出します。これらの関数は、捕捉されない例外が上記のどの点で発生したとしても、呼び出されます。"
 
 # 265a8cc5459749b8aff3746298e45b18
-#: ../../flask/docs/reqcontext.rst:147
+#: ../../flask/docs/reqcontext.rst:145
 msgid ""
 "If an exception is raised before the teardown functions, Flask tries to "
 "match it with an :meth:`~Flask.errorhandler` function to handle the "
@@ -312,7 +312,7 @@ msgstr ""
 "レスポンスを返します。その場合でもteardown関数は呼び出され、その例外のオブジェクトが（引数としてteardown関数に）渡されます。"
 
 # da50f01cdbba478a83b28dff932a5b58
-#: ../../flask/docs/reqcontext.rst:154
+#: ../../flask/docs/reqcontext.rst:152
 msgid ""
 "If debug mode is enabled, unhandled exceptions are not converted to a "
 "``500`` response and instead are propagated to the WSGI server. This "
@@ -324,12 +324,12 @@ msgstr ""
 "例外に関する情報のひとつ）と一緒にインタラクティブなデバッガを提示できるようにします。"
 
 # 922e2a3c16d3429c882df203b2148d80
-#: ../../flask/docs/reqcontext.rst:161
+#: ../../flask/docs/reqcontext.rst:159
 msgid "Teardown Callbacks"
 msgstr "取り壊しのコールバック（Teardown Callbacks）"
 
 # 6a99574e2aa04874b8dbdf5ad39226e9
-#: ../../flask/docs/reqcontext.rst:163
+#: ../../flask/docs/reqcontext.rst:161
 msgid ""
 "The teardown callbacks are independent of the request dispatch, and are "
 "instead called by the contexts when they are popped. The functions are "
@@ -345,7 +345,7 @@ msgstr ""
 "callbackより先に実行している、という保証がどこにもないことを意味します。これらの関数は、他のコールバックに依存せず、他のコールバックへの依存のせいで失敗しないような書き方を、必ずしてください。"
 
 # b92e3c892d024cc1b424db9ed628f0c3
-#: ../../flask/docs/reqcontext.rst:171
+#: ../../flask/docs/reqcontext.rst:169
 msgid ""
 "During testing, it can be useful to defer popping the contexts after the "
 "request ends, so that their data can be accessed in the test function. "
@@ -356,19 +356,19 @@ msgstr ""
 "withブロックから抜けるまでの間はcontextを保持するには、\\ :meth:`~Flask.test_client`\\ を\\ ``with``\\ ブロックとして使用してください。"
 
 # c739acfe5d394792ae09520800fece81
-#: ../../flask/docs/reqcontext.rst:205
+#: ../../flask/docs/reqcontext.rst:203
 msgid "Signals"
 msgstr "合図（Signals）"
 
 # 29d7dbb6429a4562a1d9fb40d32ca72b
-#: ../../flask/docs/reqcontext.rst:207
+#: ../../flask/docs/reqcontext.rst:205
 msgid ""
 "If :data:`~signals.signals_available` is true, the following signals are "
 "sent:"
 msgstr "もし\\ :data:`~signals.signals_available`\\ がtrueの場合、以下のsignalが送られます:"
 
 # 12977c6c044f46928d0d0716b8ff3b9c
-#: ../../flask/docs/reqcontext.rst:210
+#: ../../flask/docs/reqcontext.rst:208
 msgid ""
 ":data:`request_started` is sent before the :meth:`~Flask.before_request` "
 "functions are called."
@@ -377,7 +377,7 @@ msgstr ""
 "関数が呼び出される前に送られます。"
 
 # 6b9caa0e13434f6f965f8a8d675b3d47
-#: ../../flask/docs/reqcontext.rst:213
+#: ../../flask/docs/reqcontext.rst:211
 msgid ""
 ":data:`request_finished` is sent after the :meth:`~Flask.after_request` "
 "functions are called."
@@ -386,7 +386,7 @@ msgstr ""
 "関数が呼び出された後に送られます。"
 
 # 38dc071a064d4b129c3f22b78e50b309
-#: ../../flask/docs/reqcontext.rst:216
+#: ../../flask/docs/reqcontext.rst:214
 msgid ""
 ":data:`got_request_exception` is sent when an exception begins to be "
 "handled, but before an :meth:`~Flask.errorhandler` is looked up or "
@@ -396,7 +396,7 @@ msgstr ""
 ":meth:`~Flask.errorhandler`\\ が見つかるか呼び出される前に、呼び出されます。"
 
 # bd7b307b22a44d54a8ababc5f9ff029c
-#: ../../flask/docs/reqcontext.rst:220
+#: ../../flask/docs/reqcontext.rst:218
 msgid ""
 ":data:`request_tearing_down` is sent after the "
 ":meth:`~Flask.teardown_request` functions are called."
@@ -405,12 +405,12 @@ msgstr ""
 "関数が呼び出された後で送られます。"
 
 # 2da084457a914b9f991f8eaec4276213
-#: ../../flask/docs/reqcontext.rst:225
+#: ../../flask/docs/reqcontext.rst:223
 msgid "Context Preservation on Error"
 msgstr "エラー時のcontextの保持（Context Preservation on Error）"
 
 # 020115e78ef64430aa5a7f37de58075a
-#: ../../flask/docs/reqcontext.rst:227
+#: ../../flask/docs/reqcontext.rst:225
 msgid ""
 "At the end of a request, the request context is popped and all data "
 "associated with it is destroyed. If an error occurs during development, "
@@ -420,7 +420,7 @@ msgstr ""
 "contextはpopされ、contextに関連付けられていたデータは全て破壊されます。もし開発中にエラーが発生したとき、デバッグ目的のためにデータの破壊を遅くすると役に立ちます。"
 
 # 667255dfea12482281fbd12c3dad78a1
-#: ../../flask/docs/reqcontext.rst:231
+#: ../../flask/docs/reqcontext.rst:229
 msgid ""
 "When the development server is running in development mode (the "
 "``FLASK_ENV`` environment variable is set to ``'development'``), the "
@@ -430,7 +430,7 @@ msgstr ""
 "``'development'``\\ に設定されている）とき、エラーとデータは保持されてインタラクティブなデバッガの中で表示されます。"
 
 # 2b01ad7262ea49b78707675a1b1722ff
-#: ../../flask/docs/reqcontext.rst:235
+#: ../../flask/docs/reqcontext.rst:233
 msgid ""
 "This behavior can be controlled with the "
 ":data:`PRESERVE_CONTEXT_ON_EXCEPTION` config. As described above, it "
@@ -440,7 +440,7 @@ msgstr ""
 "設定を使って制御可能です。上で説明したように、それは開発環境の標準設定では\\ ``True``\\ です。"
 
 # 6ff7cb6034e347fba55fcd703ca75ea1
-#: ../../flask/docs/reqcontext.rst:239
+#: ../../flask/docs/reqcontext.rst:237
 msgid ""
 "Do not enable :data:`PRESERVE_CONTEXT_ON_EXCEPTION` in production, as it "
 "will cause your application to leak memory on exceptions."
@@ -449,12 +449,12 @@ msgstr ""
 ":data:`PRESERVE_CONTEXT_ON_EXCEPTION`\\ は本番環境で有効にしないでください。"
 
 # a082f42c1f024e8c98d691af221d6584
-#: ../../flask/docs/reqcontext.rst:246
+#: ../../flask/docs/reqcontext.rst:244
 msgid "Notes On Proxies"
 msgstr "プロキシに関する注意事項（Notes On Proxies）"
 
 # 8c5b507bd4844eaa8142946111cc5290
-#: ../../flask/docs/reqcontext.rst:248
+#: ../../flask/docs/reqcontext.rst:246
 msgid ""
 "Some of the objects provided by Flask are proxies to other objects. The "
 "proxies are accessed in the same way for each worker thread, but point to"
@@ -463,14 +463,14 @@ msgid ""
 msgstr "Flaskによって提供されるオブジェクトのいくつかは、他のオブジェクトへのプロキシになります。それらのプロキシは各workerスレッドで同じやり方でアクセスされますが、このページで説明したように目に見えないところで、workerごとに固有のオブジェクトを指します。"
 
 # d8bc2fc8d8cb4b2dbe8684fcfb9488b4
-#: ../../flask/docs/reqcontext.rst:253
+#: ../../flask/docs/reqcontext.rst:251
 msgid ""
 "Most of the time you don't have to care about that, but there are some "
 "exceptions where it is good to know that this object is actually a proxy:"
 msgstr "殆どの場合、あなたがこのことを気に掛ける必要はありませんが、このオブジェクトが実際にはプロキシであると知っておくとよい、いくつかの例外があります:"
 
 # 9238548585b04ebaae78d27901729c80
-#: ../../flask/docs/reqcontext.rst:256
+#: ../../flask/docs/reqcontext.rst:254
 msgid ""
 "The proxy objects cannot fake their type as the actual object types. If "
 "you want to perform instance checks, you have to do that on the object "
@@ -478,17 +478,18 @@ msgid ""
 msgstr "このプロキシのオブジェクトは、実際のオブジェクトのtypeを偽装することはできません。もしインスタンス（のtype）のチェックをしたいときは、プロキシの背後にある（実際の）オブジェクトに対して行う必要があります。"
 
 # 307ef84da8a446c19465680ed13ad638
-#: ../../flask/docs/reqcontext.rst:259
+#: ../../flask/docs/reqcontext.rst:257
+#, fuzzy
 msgid ""
 "The reference to the proxied object is needed in some situations, such as"
-" sending :ref:`signals` or passing data to a background thread."
+" sending :doc:`signals` or passing data to a background thread."
 msgstr ""
 "例えば\\ :ref:`signals`\\ を送ったりバックグラウンドのスレッドにデータ"
 "渡したりするときなど、ある状況では、proxyされているオブジェクトへの"
 "参照（object reference）が必要になります。"
 
 # 447bd3d7cb7840e9864f1450d63fc687
-#: ../../flask/docs/reqcontext.rst:263
+#: ../../flask/docs/reqcontext.rst:261
 msgid ""
 "If you need to access the underlying object that is proxied, use the "
 ":meth:`~werkzeug.local.LocalProxy._get_current_object` method::"

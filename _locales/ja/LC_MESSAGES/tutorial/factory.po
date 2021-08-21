@@ -8,22 +8,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
+"Generated-By: Babel 2.9.1\n"
 
 # 1dae90216daa4358ab0187edd570d335
-#: ../../tutorial/factory.rst:4
+#: ../../flask/docs/tutorial/factory.rst:4
 msgid "Application Setup"
 msgstr "アプリケーションの用意（Application Setup）"
 
 # 8a24ec84dbb84f8e98a450907fa2b254
-#: ../../tutorial/factory.rst:6
+#: ../../flask/docs/tutorial/factory.rst:6
 msgid ""
 "A Flask application is an instance of the :class:`Flask` class. "
 "Everything about the application, such as configuration and URLs, will be"
@@ -34,7 +34,7 @@ msgstr ""
 "使って登録します。"
 
 # 34a8cfb415464f9281c140c7374cb352
-#: ../../tutorial/factory.rst:10
+#: ../../flask/docs/tutorial/factory.rst:10
 msgid ""
 "The most straightforward way to create a Flask application is to create a"
 " global :class:`Flask` instance directly at the top of your code, like "
@@ -51,7 +51,7 @@ msgstr ""
 "プロジェクトが成長すると何かしら扱いにくい問題を引き起こす可能性があります。"
 
 # 0a76c7e9ba3b46a899c6a4ad0181bce2
-#: ../../tutorial/factory.rst:16
+#: ../../flask/docs/tutorial/factory.rst:16
 msgid ""
 "Instead of creating a :class:`Flask` instance globally, you will create "
 "it inside a function. This function is known as the *application "
@@ -66,12 +66,12 @@ msgstr ""
 "返されます（Flaskクラスのインスタンスがfactory関数から返されます）。"
 
 # 645f1b51129c44bda59a2be9c4300101
-#: ../../tutorial/factory.rst:24
+#: ../../flask/docs/tutorial/factory.rst:24
 msgid "The Application Factory"
 msgstr "アプリケーション製造工場（The Application Factory）"
 
 # 5cca4091b1d4498ba8f5973491783da8
-#: ../../tutorial/factory.rst:26
+#: ../../flask/docs/tutorial/factory.rst:26
 msgid ""
 "It's time to start coding! Create the ``flaskr`` directory and add the "
 "``__init__.py`` file. The ``__init__.py`` serves double duty: it will "
@@ -84,12 +84,12 @@ msgstr ""
 "ディレクトリをpackageとして扱うように伝えることです。"
 
 # 647bab244910471eb49833a64c80bef4
-#: ../../tutorial/factory.rst:35
+#: ../../flask/docs/tutorial/factory.rst:35
 msgid "``flaskr/__init__.py``"
 msgstr ""
 
 # 5b75d5023dbb4481b41802232ff836a1
-#: ../../tutorial/factory.rst:71
+#: ../../flask/docs/tutorial/factory.rst:71
 msgid ""
 "``create_app`` is the application factory function. You'll add to it "
 "later in the tutorial, but it already does a lot."
@@ -99,7 +99,7 @@ msgstr ""
 "果しています。"
 
 # 8d73d94c30c54307ac3ec992efd5498f
-#: ../../tutorial/factory.rst:74
+#: ../../flask/docs/tutorial/factory.rst:74
 msgid ""
 "``app = Flask(__name__, instance_relative_config=True)`` creates the "
 ":class:`Flask` instance."
@@ -108,7 +108,7 @@ msgstr ""
 "インスタンスを作成します。"
 
 # 873cf3cab36d4edc818ff1ad57e39cce
-#: ../../tutorial/factory.rst:77
+#: ../../flask/docs/tutorial/factory.rst:77
 msgid ""
 "``__name__`` is the name of the current Python module. The app needs to "
 "know where it's located to set up some paths, and ``__name__`` is a "
@@ -119,7 +119,7 @@ msgstr ""
 "はそれを伝えるための便利なやり方です。"
 
 # ae57d7591db14cb4b3690303c4d64a37
-#: ../../tutorial/factory.rst:81
+#: ../../flask/docs/tutorial/factory.rst:81
 msgid ""
 "``instance_relative_config=True`` tells the app that configuration files "
 "are relative to the :ref:`instance folder <instance-folders>`. The "
@@ -134,7 +134,7 @@ msgstr ""
 "するべきではないローカルのデータを保持することができます。"
 
 # 73c81deabe8448e09a6c69c5601a673d
-#: ../../tutorial/factory.rst:88
+#: ../../flask/docs/tutorial/factory.rst:88
 msgid ""
 ":meth:`app.config.from_mapping() <Config.from_mapping>` sets some default"
 " configuration that the app will use:"
@@ -143,7 +143,7 @@ msgstr ""
 "標準設定をいくつか設定します:"
 
 # ba6c5cc75549470da78f42d9dc62ba5e
-#: ../../tutorial/factory.rst:91
+#: ../../flask/docs/tutorial/factory.rst:91
 msgid ""
 ":data:`SECRET_KEY` is used by Flask and extensions to keep data safe. "
 "It's set to ``'dev'`` to provide a convenient value during development, "
@@ -155,7 +155,7 @@ msgstr ""
 "無作為な値（random value）で上書きするべきです。"
 
 # b0c29ca6aaef4879ae08dcd540fb5419
-#: ../../tutorial/factory.rst:96
+#: ../../flask/docs/tutorial/factory.rst:96
 msgid ""
 "``DATABASE`` is the path where the SQLite database file will be saved. "
 "It's under :attr:`app.instance_path <Flask.instance_path>`, which is the "
@@ -168,7 +168,7 @@ msgstr ""
 "ついてさらに学習します。"
 
 # 738d9e16a0f1453b8b3a26a78095314b
-#: ../../tutorial/factory.rst:102
+#: ../../flask/docs/tutorial/factory.rst:102
 msgid ""
 ":meth:`app.config.from_pyfile() <Config.from_pyfile>` overrides the "
 "default configuration with values taken from the ``config.py`` file in "
@@ -181,7 +181,7 @@ msgstr ""
 "設定するために使用できます。"
 
 # 3c0eb85d97704baaac827853aab86a81
-#: ../../tutorial/factory.rst:107
+#: ../../flask/docs/tutorial/factory.rst:107
 msgid ""
 "``test_config`` can also be passed to the factory, and will be used "
 "instead of the instance configuration. This is so the tests you'll write "
@@ -193,7 +193,7 @@ msgstr ""
 "設定してきたあらゆる値から独立して設定できるようにするためです。"
 
 # 5e41f6754ce64bb684e988362f8aa07f
-#: ../../tutorial/factory.rst:112
+#: ../../flask/docs/tutorial/factory.rst:112
 msgid ""
 ":func:`os.makedirs` ensures that :attr:`app.instance_path "
 "<Flask.instance_path>` exists. Flask doesn't create the instance folder "
@@ -206,7 +206,7 @@ msgstr ""
 "作成するためにインスタンスフォルダが作成されている必要があります。"
 
 # 396c0e535cb24dc1af83d701c49c7b0b
-#: ../../tutorial/factory.rst:118
+#: ../../flask/docs/tutorial/factory.rst:118
 msgid ""
 ":meth:`@app.route() <Flask.route>` creates a simple route so you can see "
 "the application working before getting into the rest of the tutorial. It "
@@ -219,12 +219,12 @@ msgstr ""
 "World!'``\ というレスポンスを返す関数とを、結び付けます。"
 
 # 470dfecce5fb4dc689aafb0537106df3
-#: ../../tutorial/factory.rst:126
+#: ../../flask/docs/tutorial/factory.rst:126
 msgid "Run The Application"
 msgstr "アプリケーションの実行"
 
 # 74f2d923847f48f08514b61f5ced43e0
-#: ../../tutorial/factory.rst:128
+#: ../../flask/docs/tutorial/factory.rst:128
 msgid ""
 "Now you can run your application using the ``flask`` command. From the "
 "terminal, tell Flask where to find your application, then run it in "
@@ -238,7 +238,7 @@ msgstr ""
 "忘れないでください。"
 
 # 3a23a3beb1fd4515b8a922354f9b259d
-#: ../../tutorial/factory.rst:133
+#: ../../flask/docs/tutorial/factory.rst:133
 msgid ""
 "Development mode shows an interactive debugger whenever a page raises an "
 "exception, and restarts the server whenever you make changes to the code."
@@ -250,29 +250,25 @@ msgstr ""
 "続けるとき、Flaskを実行させたままにしながら、ブラウザのページを再読み込み"
 "するだけで済むようにします。"
 
-# e4998915bf9e474ebf04d0a687838060
-#: ../../tutorial/factory.rst:138
-msgid "For Linux and Mac:"
-msgstr "LinuxおよびMac向け:"
-
-# 2bae71d685ca4b578469c6407e0e9a86
-#: ../../tutorial/factory.rst:146
-msgid "For Windows cmd, use ``set`` instead of ``export``:"
-msgstr "Windowsのcmdでは、\ ``export``\ の代わりに\ ``set``\ を使用します:"
-
-# e7d1ea5205ac4f898009c1957aa1cd18
-#: ../../tutorial/factory.rst:154
-msgid "For Windows PowerShell, use ``$env:`` instead of ``export``:"
+#: ../../flask/docs/tutorial/factory.rst:140
+msgid "Bash"
 msgstr ""
-"WindowsのPowerShellでは、\ ``export``\ の代わりに\ ``$env:``\ を使用します:"
+
+#: ../../flask/docs/tutorial/factory.rst:148
+msgid "CMD"
+msgstr ""
+
+#: ../../flask/docs/tutorial/factory.rst:156
+msgid "Powershell"
+msgstr ""
 
 # e60642b58ee341cf88d1905251752196
-#: ../../tutorial/factory.rst:162
+#: ../../flask/docs/tutorial/factory.rst:164
 msgid "You'll see output similar to this:"
 msgstr "以下と似たような出力が見られるでしょう:"
 
 # 3ffbe1c5b2f14ea995ee1e0c71cd5835
-#: ../../tutorial/factory.rst:174
+#: ../../flask/docs/tutorial/factory.rst:176
 msgid ""
 "Visit http://127.0.0.1:5000/hello in a browser and you should see the "
 "\"Hello, World!\" message. Congratulations, you're now running your Flask"
@@ -283,7 +279,20 @@ msgstr ""
 "Flask webアプリケーションを実行中です！"
 
 # 6c057672de284ae5a719c4f0db3b95f5
-#: ../../tutorial/factory.rst:178
+#: ../../flask/docs/tutorial/factory.rst:180
 msgid "Continue to :doc:`database`."
 msgstr ":doc:`database`\ へ続きます。"
+
+# e4998915bf9e474ebf04d0a687838060
+#~ msgid "For Linux and Mac:"
+#~ msgstr "LinuxおよびMac向け:"
+
+# 2bae71d685ca4b578469c6407e0e9a86
+#~ msgid "For Windows cmd, use ``set`` instead of ``export``:"
+#~ msgstr "Windowsのcmdでは、\ ``export``\ の代わりに\ ``set``\ を使用します:"
+
+# e7d1ea5205ac4f898009c1957aa1cd18
+#~ msgid "For Windows PowerShell, use ``$env:`` instead of ``export``:"
+#~ msgstr ""
+#~ "WindowsのPowerShellでは、\ ``export``\ の代わりに\ ``$env:``\ を使用します:"
 

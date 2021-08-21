@@ -8,22 +8,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
+"Generated-By: Babel 2.9.1\n"
 
 # 1774de6c32a843828dce6466c3dd5a31
-#: ../../design.rst:4
+#: ../../flask/docs/design.rst:2
 msgid "Design Decisions in Flask"
 msgstr ""
 
 # feef067a95ac43eab2ad05730a2cd5c7
-#: ../../design.rst:6
+#: ../../flask/docs/design.rst:4
 msgid ""
 "If you are curious why Flask does certain things the way it does and not "
 "differently, this section is for you.  This should give you an idea about"
@@ -32,12 +32,12 @@ msgid ""
 msgstr ""
 
 # 19dde3f8eb67490588ed2e59941dc7d6
-#: ../../design.rst:13
+#: ../../flask/docs/design.rst:11
 msgid "The Explicit Application Object"
 msgstr ""
 
 # faa0dbbdeb99424591d708ae6d6c46a0
-#: ../../design.rst:15
+#: ../../flask/docs/design.rst:13
 msgid ""
 "A Python web application based on WSGI has to have one central callable "
 "object that implements the actual application.  In Flask this is an "
@@ -47,17 +47,17 @@ msgid ""
 msgstr ""
 
 # 4f702f99054741099bb56935e828b8d6
-#: ../../design.rst:21
+#: ../../flask/docs/design.rst:19
 msgid "Without such an explicit application object the following code::"
 msgstr ""
 
 # 4e71273a385a431b8a3eefe7501692e1
-#: ../../design.rst:30
+#: ../../flask/docs/design.rst:28
 msgid "Would look like this instead::"
 msgstr ""
 
 # defe668a3d734468a18803337694bf55
-#: ../../design.rst:38
+#: ../../flask/docs/design.rst:36
 msgid ""
 "There are three major reasons for this.  The most important one is that "
 "implicit application objects require that there may only be one instance "
@@ -72,7 +72,7 @@ msgid ""
 msgstr ""
 
 # 039dbf2140584355a89c0237119f6813
-#: ../../design.rst:49
+#: ../../flask/docs/design.rst:47
 msgid ""
 "Another thing that becomes possible when you have an explicit object "
 "lying around in your code is that you can subclass the base class "
@@ -82,7 +82,7 @@ msgid ""
 msgstr ""
 
 # 6d6c28129e34423a92fece6b9402e166
-#: ../../design.rst:55
+#: ../../flask/docs/design.rst:53
 msgid ""
 "But there is another very important reason why Flask depends on an "
 "explicit instantiation of that class: the package name.  Whenever you "
@@ -103,7 +103,7 @@ msgid ""
 msgstr ""
 
 # 5951ed8b023f40269f02c5451eaac523
-#: ../../design.rst:72
+#: ../../flask/docs/design.rst:70
 msgid ""
 "The third reason is \"explicit is better than implicit\".  That object is"
 " your WSGI application, you don't have to remember anything else.  If you"
@@ -112,21 +112,20 @@ msgid ""
 " the application object :meth:`~flask.Flask.wsgi_app`)."
 msgstr ""
 
-# a62a3348076b4182a69942e2f7f9a348
-#: ../../design.rst:78
+#: ../../flask/docs/design.rst:76
 msgid ""
 "Furthermore this design makes it possible to use a factory function to "
 "create the application which is very helpful for unit testing and similar"
-" things (:ref:`app-factories`)."
+" things (:doc:`/patterns/appfactories`)."
 msgstr ""
 
 # 2461307217234469ba77d4ecf41e8fd7
-#: ../../design.rst:83
+#: ../../flask/docs/design.rst:81
 msgid "The Routing System"
 msgstr ""
 
 # 031f32166004415192e2d73c9d998976
-#: ../../design.rst:85
+#: ../../flask/docs/design.rst:83
 msgid ""
 "Flask uses the Werkzeug routing system which was designed to "
 "automatically order routes by complexity.  This means that you can "
@@ -137,7 +136,7 @@ msgid ""
 msgstr ""
 
 # b19fe1487fbe43609f04ffbb07c13b39
-#: ../../design.rst:92
+#: ../../flask/docs/design.rst:90
 msgid ""
 "Another design decision with the Werkzeug routing system is that routes "
 "in Werkzeug try to ensure that URLs are unique.  Werkzeug will go quite "
@@ -146,12 +145,12 @@ msgid ""
 msgstr ""
 
 # 581b8c855a0e427e9aa39c44663208f9
-#: ../../design.rst:99
+#: ../../flask/docs/design.rst:97
 msgid "One Template Engine"
 msgstr ""
 
 # 58d3a151add54b62b18c43c8a4523e41
-#: ../../design.rst:101
+#: ../../flask/docs/design.rst:99
 msgid ""
 "Flask decides on one template engine: Jinja2.  Why doesn't Flask have a "
 "pluggable template engine interface?  You can obviously use a different "
@@ -161,7 +160,7 @@ msgid ""
 msgstr ""
 
 # 5b64731659734bb398d4e69dc67da23d
-#: ../../design.rst:107
+#: ../../flask/docs/design.rst:105
 msgid ""
 "Template engines are like programming languages and each of those engines"
 " has a certain understanding about how things work.  On the surface they "
@@ -169,21 +168,20 @@ msgid ""
 "of variables and take the return value as string."
 msgstr ""
 
-# c1ccf5ce0b264797a08157a75536a11f
-#: ../../design.rst:112
+#: ../../flask/docs/design.rst:110
 msgid ""
-"But that's about where similarities end.  Jinja2 for example has an "
+"But that's about where similarities end. Jinja2 for example has an "
 "extensive filter system, a certain way to do template inheritance, "
 "support for reusable blocks (macros) that can be used from inside "
-"templates and also from Python code, uses Unicode for all operations, "
-"supports iterative template rendering, configurable syntax and more.  On "
-"the other hand an engine like Genshi is based on XML stream evaluation, "
-"template inheritance by taking the availability of XPath into account and"
-" more. Mako on the other hand treats templates similar to Python modules."
+"templates and also from Python code, supports iterative template "
+"rendering, configurable syntax and more. On the other hand an engine like"
+" Genshi is based on XML stream evaluation, template inheritance by taking"
+" the availability of XPath into account and more. Mako on the other hand "
+"treats templates similar to Python modules."
 msgstr ""
 
 # fa8d2a17982d49c0b2ed0017299ede84
-#: ../../design.rst:121
+#: ../../flask/docs/design.rst:119
 msgid ""
 "When it comes to connecting a template engine with an application or "
 "framework there is more than just rendering templates.  For instance, "
@@ -192,7 +190,7 @@ msgid ""
 msgstr ""
 
 # 19b384243c7c4ca18bdc1977aed412fb
-#: ../../design.rst:126
+#: ../../flask/docs/design.rst:124
 msgid ""
 "A template abstraction layer that would not take the unique features of "
 "the template engines away is a science on its own and a too large "
@@ -200,7 +198,7 @@ msgid ""
 msgstr ""
 
 # cb8523ecb97d4143b49d62984c37f9bf
-#: ../../design.rst:130
+#: ../../flask/docs/design.rst:128
 msgid ""
 "Furthermore extensions can then easily depend on one template language "
 "being present.  You can easily use your own templating language, but an "
@@ -208,12 +206,12 @@ msgid ""
 msgstr ""
 
 # 8cdf909154ca4ad590c2519eb822e832
-#: ../../design.rst:136
+#: ../../flask/docs/design.rst:134
 msgid "Micro with Dependencies"
 msgstr ""
 
 # 4f663ef143034d45bdf48d803ce91d02
-#: ../../design.rst:138
+#: ../../flask/docs/design.rst:136
 msgid ""
 "Why does Flask call itself a microframework and yet it depends on two "
 "libraries (namely Werkzeug and Jinja2).  Why shouldn't it?  If we look "
@@ -230,7 +228,7 @@ msgid ""
 msgstr ""
 
 # 1ddab90abee242feb4c5e68a66edbded
-#: ../../design.rst:151
+#: ../../flask/docs/design.rst:149
 msgid ""
 "Flask is a framework that takes advantage of the work already done by "
 "Werkzeug to properly interface WSGI (which can be a complex task at "
@@ -241,12 +239,12 @@ msgid ""
 msgstr ""
 
 # 035255cb06f4433ba0f8798dd740e1fb
-#: ../../design.rst:159
+#: ../../flask/docs/design.rst:157
 msgid "Thread Locals"
 msgstr ""
 
 # 9fc8b2c230004983832e0fb93dfac856
-#: ../../design.rst:161
+#: ../../flask/docs/design.rst:159
 msgid ""
 "Flask uses thread local objects (context local objects in fact, they "
 "support greenlet contexts as well) for request, session and an extra "
@@ -255,7 +253,7 @@ msgid ""
 msgstr ""
 
 # 9ebcf06b344f478b9eb72c2f27a5255c
-#: ../../design.rst:166
+#: ../../flask/docs/design.rst:164
 msgid ""
 "Yes it is usually not such a bright idea to use thread locals.  They "
 "cause troubles for servers that are not based on the concept of threads "
@@ -264,20 +262,46 @@ msgid ""
 " to make it quick and easy to write a traditional web application."
 msgstr ""
 
-# cff6da80ff354071b9aed51381ffd12c
-#: ../../design.rst:172
+#: ../../flask/docs/design.rst:170
 msgid ""
-"Also see the :ref:`becomingbig` section of the documentation for some "
+"Also see the :doc:`/becomingbig` section of the documentation for some "
 "inspiration for larger applications based on Flask."
 msgstr ""
 
+#: ../../flask/docs/design.rst:175
+msgid "Async/await and ASGI support"
+msgstr ""
+
+#: ../../flask/docs/design.rst:177
+msgid ""
+"Flask supports ``async`` coroutines for view functions by executing the "
+"coroutine on a separate thread instead of using an event loop on the main"
+" thread as an async-first (ASGI) framework would. This is necessary for "
+"Flask to remain backwards compatible with extensions and code built "
+"before ``async`` was introduced into Python. This compromise introduces a"
+" performance cost compared with the ASGI frameworks, due to the overhead "
+"of the threads."
+msgstr ""
+
+#: ../../flask/docs/design.rst:185
+msgid ""
+"Due to how tied to WSGI Flask's code is, it's not clear if it's possible "
+"to make the ``Flask`` class support ASGI and WSGI at the same time. Work "
+"is currently being done in Werkzeug to work with ASGI, which may "
+"eventually enable support in Flask as well."
+msgstr ""
+
+#: ../../flask/docs/design.rst:190
+msgid "See :doc:`/async-await` for more discussion."
+msgstr ""
+
 # efd812eae4a4464eabff7a86fbd3ae6c
-#: ../../design.rst:177
+#: ../../flask/docs/design.rst:194
 msgid "What Flask is, What Flask is Not"
 msgstr ""
 
 # 59296cd681734a79afbb485621942e5c
-#: ../../design.rst:179
+#: ../../flask/docs/design.rst:196
 msgid ""
 "Flask will never have a database layer.  It will not have a form library "
 "or anything else in that direction.  Flask itself just bridges to "
@@ -287,7 +311,7 @@ msgid ""
 msgstr ""
 
 # 7c8240d7746846c6a96e84f73d8a455c
-#: ../../design.rst:185
+#: ../../flask/docs/design.rst:202
 msgid ""
 "Why is this the case?  Because people have different preferences and "
 "requirements and Flask could not meet those if it would force any of this"
@@ -296,9 +320,46 @@ msgid ""
 msgstr ""
 
 # e899dfddd57841dcb8c0ed004b7e6850
-#: ../../design.rst:190
+#: ../../flask/docs/design.rst:207
 msgid ""
 "The idea of Flask is to build a good foundation for all applications. "
 "Everything else is up to you or extensions."
 msgstr ""
+
+# a62a3348076b4182a69942e2f7f9a348
+#~ msgid ""
+#~ "Furthermore this design makes it "
+#~ "possible to use a factory function "
+#~ "to create the application which is "
+#~ "very helpful for unit testing and "
+#~ "similar things (:ref:`app-factories`)."
+#~ msgstr ""
+
+# c1ccf5ce0b264797a08157a75536a11f
+#~ msgid ""
+#~ "But that's about where similarities end."
+#~ "  Jinja2 for example has an extensive"
+#~ " filter system, a certain way to "
+#~ "do template inheritance, support for "
+#~ "reusable blocks (macros) that can be "
+#~ "used from inside templates and also "
+#~ "from Python code, uses Unicode for "
+#~ "all operations, supports iterative template"
+#~ " rendering, configurable syntax and more."
+#~ "  On the other hand an engine "
+#~ "like Genshi is based on XML stream"
+#~ " evaluation, template inheritance by taking"
+#~ " the availability of XPath into "
+#~ "account and more. Mako on the "
+#~ "other hand treats templates similar to"
+#~ " Python modules."
+#~ msgstr ""
+
+# cff6da80ff354071b9aed51381ffd12c
+#~ msgid ""
+#~ "Also see the :ref:`becomingbig` section "
+#~ "of the documentation for some "
+#~ "inspiration for larger applications based "
+#~ "on Flask."
+#~ msgstr ""
 

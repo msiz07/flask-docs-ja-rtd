@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 1.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 20:39+0900\n"
+"POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -240,3 +240,22 @@ msgstr ""
 msgid "https://developer.mozilla.org/en-US/docs/Web/HTTP/Public_Key_Pinning"
 msgstr ""
 
+#: ../../flask/docs/security.rst:264
+msgid "Copy/Paste to Terminal"
+msgstr ""
+
+#: ../../flask/docs/security.rst:266
+msgid "Hidden characters such as the backspace character (``\\b``, ``^H``) can cause text to render differently in HTML than how it is interpreted if `pasted into a terminal <https://security.stackexchange.com/q/39118>`__."
+msgstr ""
+
+#: ../../flask/docs/security.rst:270
+msgid "For example, ``import y\\bose\\bm\\bi\\bt\\be\\b`` renders as ``import yosemite`` in HTML, but the backspaces are applied when pasted into a terminal, and it becomes ``import os``."
+msgstr ""
+
+#: ../../flask/docs/security.rst:274
+msgid "If you expect users to copy and paste untrusted code from your site, such as from comments posted by users on a technical blog, consider applying extra filtering, such as replacing all ``\\b`` characters."
+msgstr ""
+
+#: ../../flask/docs/security.rst:282
+msgid "Most modern terminals will warn about and remove hidden characters when pasting, so this isn't strictly necessary. It's also possible to craft dangerous commands in other ways that aren't possible to filter. Depending on your site's use case, it may be good to show a warning about copying code in general."
+msgstr ""

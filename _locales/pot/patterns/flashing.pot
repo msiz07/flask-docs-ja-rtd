@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 1.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 20:39+0900\n"
+"POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,59 +16,58 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../flask/docs/patterns/flashing.rst:4
+#: ../../flask/docs/patterns/flashing.rst:2
 msgid "Message Flashing"
 msgstr ""
 
-#: ../../flask/docs/patterns/flashing.rst:6
+#: ../../flask/docs/patterns/flashing.rst:4
 msgid "Good applications and user interfaces are all about feedback.  If the user does not get enough feedback they will probably end up hating the application.  Flask provides a really simple way to give feedback to a user with the flashing system.  The flashing system basically makes it possible to record a message at the end of a request and access it next request and only next request.  This is usually combined with a layout template that does this. Note that browsers and sometimes web servers enforce a limit on cookie sizes. This means that flashing messages that are too large for session cookies causes message flashing to fail silently."
 msgstr ""
 
-#: ../../flask/docs/patterns/flashing.rst:17
+#: ../../flask/docs/patterns/flashing.rst:15
 msgid "Simple Flashing"
 msgstr ""
 
-#: ../../flask/docs/patterns/flashing.rst:19
+#: ../../flask/docs/patterns/flashing.rst:17
 msgid "So here is a full example::"
 msgstr ""
 
-#: ../../flask/docs/patterns/flashing.rst:43
+#: ../../flask/docs/patterns/flashing.rst:41
 msgid "And here is the :file:`layout.html` template which does the magic:"
 msgstr ""
 
-#: ../../flask/docs/patterns/flashing.rst:60
+#: ../../flask/docs/patterns/flashing.rst:58
 msgid "Here is the :file:`index.html` template which inherits from :file:`layout.html`:"
 msgstr ""
 
-#: ../../flask/docs/patterns/flashing.rst:70
+#: ../../flask/docs/patterns/flashing.rst:68
 msgid "And here is the :file:`login.html` template which also inherits from :file:`layout.html`:"
 msgstr ""
 
-#: ../../flask/docs/patterns/flashing.rst:94
+#: ../../flask/docs/patterns/flashing.rst:92
 msgid "Flashing With Categories"
 msgstr ""
 
-#: ../../flask/docs/patterns/flashing.rst:98
+#: ../../flask/docs/patterns/flashing.rst:96
 msgid "It is also possible to provide categories when flashing a message.  The default category if nothing is provided is ``'message'``.  Alternative categories can be used to give the user better feedback.  For example error messages could be displayed with a red background."
 msgstr ""
 
-#: ../../flask/docs/patterns/flashing.rst:103
+#: ../../flask/docs/patterns/flashing.rst:101
 msgid "To flash a message with a different category, just use the second argument to the :func:`~flask.flash` function::"
 msgstr ""
 
-#: ../../flask/docs/patterns/flashing.rst:108
+#: ../../flask/docs/patterns/flashing.rst:106
 msgid "Inside the template you then have to tell the :func:`~flask.get_flashed_messages` function to also return the categories.  The loop looks slightly different in that situation then:"
 msgstr ""
 
-#: ../../flask/docs/patterns/flashing.rst:124
+#: ../../flask/docs/patterns/flashing.rst:122
 msgid "This is just one example of how to render these flashed messages.  One might also use the category to add a prefix such as ``<strong>Error:</strong>`` to the message."
 msgstr ""
 
-#: ../../flask/docs/patterns/flashing.rst:129
+#: ../../flask/docs/patterns/flashing.rst:127
 msgid "Filtering Flash Messages"
 msgstr ""
 
-#: ../../flask/docs/patterns/flashing.rst:133
+#: ../../flask/docs/patterns/flashing.rst:131
 msgid "Optionally you can pass a list of categories which filters the results of :func:`~flask.get_flashed_messages`.  This is useful if you wish to render each category in a separate block."
 msgstr ""
-

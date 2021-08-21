@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 1.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 20:39+0900\n"
+"POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -66,7 +66,7 @@ msgid "``tests/conftest.py``"
 msgstr ""
 
 #: ../../flask/docs/tutorial/tests.rst:109
-msgid ":func:`tempfile.mkstemp` creates and opens a temporary file, returning the file object and the path to it. The ``DATABASE`` path is overridden so it points to this temporary path instead of the instance folder. After setting the path, the database tables are created and the test data is inserted. After the test is over, the temporary file is closed and removed."
+msgid ":func:`tempfile.mkstemp` creates and opens a temporary file, returning the file descriptor and the path to it. The ``DATABASE`` path is overridden so it points to this temporary path instead of the instance folder. After setting the path, the database tables are created and the test data is inserted. After the test is over, the temporary file is closed and removed."
 msgstr ""
 
 #: ../../flask/docs/tutorial/tests.rst:116
@@ -161,7 +161,7 @@ msgid ":attr:`~Response.headers` will have a ``Location`` header with the login 
 msgstr ""
 
 #: ../../flask/docs/tutorial/tests.rst:302
-msgid ":attr:`~Response.data` contains the body of the response as bytes. If you expect a certain value to render on the page, check that it's in ``data``. Bytes must be compared to bytes. If you want to compare Unicode text, use :meth:`get_data(as_text=True) <werkzeug.wrappers.BaseResponse.get_data>` instead."
+msgid ":attr:`~Response.data` contains the body of the response as bytes. If you expect a certain value to render on the page, check that it's in ``data``. Bytes must be compared to bytes. If you want to compare text, use :meth:`get_data(as_text=True) <werkzeug.wrappers.Response.get_data>` instead."
 msgstr ""
 
 #: ../../flask/docs/tutorial/tests.rst:308
@@ -254,4 +254,3 @@ msgstr ""
 #: ../../flask/docs/tutorial/tests.rst:561
 msgid "Continue to :doc:`deploy`."
 msgstr ""
-

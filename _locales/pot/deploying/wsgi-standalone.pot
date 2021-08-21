@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 1.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 20:39+0900\n"
+"POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,95 +16,94 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../flask/docs/deploying/wsgi-standalone.rst:4
+#: ../../flask/docs/deploying/wsgi-standalone.rst:2
 msgid "Standalone WSGI Containers"
 msgstr ""
 
-#: ../../flask/docs/deploying/wsgi-standalone.rst:6
+#: ../../flask/docs/deploying/wsgi-standalone.rst:4
 msgid "There are popular servers written in Python that contain WSGI applications and serve HTTP.  These servers stand alone when they run; you can proxy to them from your web server.  Note the section on :ref:`deploying-proxy-setups` if you run into issues."
 msgstr ""
 
-#: ../../flask/docs/deploying/wsgi-standalone.rst:12
+#: ../../flask/docs/deploying/wsgi-standalone.rst:10
 msgid "Gunicorn"
 msgstr ""
 
-#: ../../flask/docs/deploying/wsgi-standalone.rst:14
+#: ../../flask/docs/deploying/wsgi-standalone.rst:12
 msgid "`Gunicorn`_ 'Green Unicorn' is a WSGI HTTP Server for UNIX. It's a pre-fork worker model ported from Ruby's Unicorn project. It supports both `eventlet`_ and `greenlet`_. Running a Flask application on this server is quite simple::"
 msgstr ""
 
-#: ../../flask/docs/deploying/wsgi-standalone.rst:20
+#: ../../flask/docs/deploying/wsgi-standalone.rst:18
 msgid "`Gunicorn`_ provides many command-line options -- see ``gunicorn -h``. For example, to run a Flask application with 4 worker processes (``-w 4``) binding to localhost port 4000 (``-b 127.0.0.1:4000``)::"
 msgstr ""
 
-#: ../../flask/docs/deploying/wsgi-standalone.rst:26
+#: ../../flask/docs/deploying/wsgi-standalone.rst:24
 msgid "The ``gunicorn`` command expects the names of your application module or package and the application instance within the module. If you use the application factory pattern, you can pass a call to that::"
 msgstr ""
 
-#: ../../flask/docs/deploying/wsgi-standalone.rst:37
+#: ../../flask/docs/deploying/wsgi-standalone.rst:35
 msgid "uWSGI"
 msgstr ""
 
-#: ../../flask/docs/deploying/wsgi-standalone.rst:39
+#: ../../flask/docs/deploying/wsgi-standalone.rst:37
 msgid "`uWSGI`_ is a fast application server written in C. It is very configurable which makes it more complicated to setup than gunicorn."
 msgstr ""
 
-#: ../../flask/docs/deploying/wsgi-standalone.rst:42
+#: ../../flask/docs/deploying/wsgi-standalone.rst:40
 msgid "Running `uWSGI HTTP Router`_::"
 msgstr ""
 
-#: ../../flask/docs/deploying/wsgi-standalone.rst:46
+#: ../../flask/docs/deploying/wsgi-standalone.rst:44
 msgid "For a more optimized setup, see :doc:`configuring uWSGI and NGINX <uwsgi>`."
 msgstr ""
 
-#: ../../flask/docs/deploying/wsgi-standalone.rst:52
+#: ../../flask/docs/deploying/wsgi-standalone.rst:50
 msgid "Gevent"
 msgstr ""
 
-#: ../../flask/docs/deploying/wsgi-standalone.rst:54
+#: ../../flask/docs/deploying/wsgi-standalone.rst:52
 msgid "`Gevent`_ is a coroutine-based Python networking library that uses `greenlet`_ to provide a high-level synchronous API on top of `libev`_ event loop::"
 msgstr ""
 
-#: ../../flask/docs/deploying/wsgi-standalone.rst:69
+#: ../../flask/docs/deploying/wsgi-standalone.rst:67
 msgid "Twisted Web"
 msgstr ""
 
-#: ../../flask/docs/deploying/wsgi-standalone.rst:71
+#: ../../flask/docs/deploying/wsgi-standalone.rst:69
 msgid "`Twisted Web`_ is the web server shipped with `Twisted`_, a mature, non-blocking event-driven networking library. Twisted Web comes with a standard WSGI container which can be controlled from the command line using the ``twistd`` utility::"
 msgstr ""
 
-#: ../../flask/docs/deploying/wsgi-standalone.rst:78
+#: ../../flask/docs/deploying/wsgi-standalone.rst:76
 msgid "This example will run a Flask application called ``app`` from a module named ``myproject``."
 msgstr ""
 
-#: ../../flask/docs/deploying/wsgi-standalone.rst:81
+#: ../../flask/docs/deploying/wsgi-standalone.rst:79
 msgid "Twisted Web supports many flags and options, and the ``twistd`` utility does as well; see ``twistd -h`` and ``twistd web -h`` for more information. For example, to run a Twisted Web server in the foreground, on port 8080, with an application from ``myproject``::"
 msgstr ""
 
-#: ../../flask/docs/deploying/wsgi-standalone.rst:94
+#: ../../flask/docs/deploying/wsgi-standalone.rst:92
 msgid "Proxy Setups"
 msgstr ""
 
-#: ../../flask/docs/deploying/wsgi-standalone.rst:96
+#: ../../flask/docs/deploying/wsgi-standalone.rst:94
 msgid "If you deploy your application using one of these servers behind an HTTP proxy you will need to rewrite a few headers in order for the application to work. The two problematic values in the WSGI environment usually are ``REMOTE_ADDR`` and ``HTTP_HOST``.  You can configure your httpd to pass these headers, or you can fix them in middleware.  Werkzeug ships a fixer that will solve some common setups, but you might want to write your own WSGI middleware for specific setups."
 msgstr ""
 
-#: ../../flask/docs/deploying/wsgi-standalone.rst:104
+#: ../../flask/docs/deploying/wsgi-standalone.rst:102
 msgid "Here's a simple nginx configuration which proxies to an application served on localhost at port 8000, setting appropriate headers:"
 msgstr ""
 
-#: ../../flask/docs/deploying/wsgi-standalone.rst:128
+#: ../../flask/docs/deploying/wsgi-standalone.rst:126
 msgid "If your httpd is not providing these headers, the most common setup invokes the host being set from ``X-Forwarded-Host`` and the remote address from ``X-Forwarded-For``::"
 msgstr ""
 
-#: ../../flask/docs/deploying/wsgi-standalone.rst:135
+#: ../../flask/docs/deploying/wsgi-standalone.rst:133
 msgid "Trusting Headers"
 msgstr ""
 
-#: ../../flask/docs/deploying/wsgi-standalone.rst:137
+#: ../../flask/docs/deploying/wsgi-standalone.rst:135
 msgid "Please keep in mind that it is a security issue to use such a middleware in a non-proxy setup because it will blindly trust the incoming headers which might be forged by malicious clients."
 msgstr ""
 
-#: ../../flask/docs/deploying/wsgi-standalone.rst:141
+#: ../../flask/docs/deploying/wsgi-standalone.rst:139
 msgid "If you want to rewrite the headers from another header, you might want to use a fixer like this::"
 msgstr ""
-

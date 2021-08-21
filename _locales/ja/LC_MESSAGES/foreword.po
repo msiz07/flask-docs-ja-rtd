@@ -8,22 +8,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
+"Generated-By: Babel 2.9.1\n"
 
 # 752859af6826476fb46a100738bcd54f
-#: ../../foreword.rst:2
+#: ../../flask/docs/foreword.rst:2
 msgid "Foreword"
 msgstr "序文"
 
 # 91d414a7bf5548d0ba8211130b29d38e
-#: ../../foreword.rst:4
+#: ../../flask/docs/foreword.rst:4
 msgid ""
 "Read this before you get started with Flask.  This hopefully answers some"
 " questions about the purpose and goals of the project, and when you "
@@ -34,12 +34,12 @@ msgstr ""
 "ときと使うべきではないときについて回答します。"
 
 # 66f97bd597f948c6a0c57efcccee317c
-#: ../../foreword.rst:9
+#: ../../flask/docs/foreword.rst:9
 msgid "What does \"micro\" mean?"
 msgstr "「micro」の意味するところ"
 
 # b1cb15cd8f474d74a28b60939b26036a
-#: ../../foreword.rst:11
+#: ../../flask/docs/foreword.rst:11
 msgid ""
 "“Micro” does not mean that your whole web application has to fit into a "
 "single Python file (although it certainly can), nor does it mean that "
@@ -62,7 +62,7 @@ msgstr ""
 "ものになり得ます。"
 
 # 1c0e452d35bf475c8e3dd4a11963b7fe
-#: ../../foreword.rst:19
+#: ../../flask/docs/foreword.rst:19
 msgid ""
 "By default, Flask does not include a database abstraction layer, form "
 "validation or anything else where different libraries already exist that "
@@ -82,12 +82,12 @@ msgstr ""
 "多様なニーズに対して本番環境で使用する準備ができています。"
 
 # 851fa6177f5b4f2c9170d9f0b5d02a62
-#: ../../foreword.rst:28
+#: ../../flask/docs/foreword.rst:28
 msgid "Configuration and Conventions"
 msgstr "設定および規約（Configuration and Conventions）"
 
 # 0dd1aa427acd40bb9766bf6d4fd61f60
-#: ../../foreword.rst:30
+#: ../../flask/docs/foreword.rst:30
 msgid ""
 "Flask has many configuration values, with sensible defaults, and a few "
 "conventions when getting started.  By convention, templates and static "
@@ -104,17 +104,16 @@ msgstr ""
 "特にその必要はありません。"
 
 # cb9504b746ec4652b6683f43ed801253
-#: ../../foreword.rst:38
+#: ../../flask/docs/foreword.rst:38
 msgid "Growing with Flask"
 msgstr "Flaskを使った拡大（Growing with Flask）"
 
 # 33e7578da13f493e9b1d2553aa0831ac
-#: ../../foreword.rst:40
+#: ../../flask/docs/foreword.rst:40
+#, fuzzy
 msgid ""
 "Once you have Flask up and running, you'll find a variety of extensions "
-"available in the community to integrate your project for production. The "
-"Flask core team reviews extensions and ensures approved extensions do not"
-" break with future releases."
+"available in the community to integrate your project for production."
 msgstr ""
 "一度Flaskを起動して走らせたら、コミュニティの中で取得可能であり、本番"
 "環境用に自分のプロジェクトへ統合できる様々なFlask拡張が見つかるでしょう。"
@@ -123,7 +122,7 @@ msgstr ""
 "extensionsのリストは、この翻訳の作成時点で保守されなくなっています）"
 
 # c3efb003cbea496c887bcf422c7ea1f8
-#: ../../foreword.rst:45
+#: ../../flask/docs/foreword.rst:43
 msgid ""
 "As your codebase grows, you are free to make the design decisions "
 "appropriate for your project.  Flask will continue to provide a very "
@@ -142,13 +141,14 @@ msgstr ""
 "のツールを利用できます。"
 
 # 6a5401944b5047c4ac2a8da740e7b1b9
-#: ../../foreword.rst:52
+#: ../../flask/docs/foreword.rst:50
+#, fuzzy
 msgid ""
 "Flask includes many hooks to customize its behavior. Should you need more"
 " customization, the Flask class is built for subclassing. If you are "
-"interested in that, check out the :ref:`becomingbig` chapter.  If you are"
+"interested in that, check out the :doc:`becomingbig` chapter.  If you are"
 " curious about the Flask design principles, head over to the section "
-"about :ref:`design`."
+"about :doc:`design`."
 msgstr ""
 "Flaskは振る舞いをカスタマイズするための数多くのフックを導入しています。"
 "さらなるカスタマイズが必要な場合は、Flaskクラスはサブクラスを利用しやすい"
@@ -157,11 +157,10 @@ msgstr ""
 "をひかれる場合は、\ :ref:`design`\ セクションを見てください。"
 
 # 0719427517eb49f994e9580479fd7de2
-#: ../../foreword.rst:57
-msgid ""
-"Continue to :ref:`installation`, the :ref:`quickstart`, or the "
-":ref:`advanced_foreword`."
-msgstr ""
-":ref:`installation`\ 、\ :ref:`quickstart`\ 、または\ "
-":ref:`advanced_foreword`\ に続きます。"
+#~ msgid ""
+#~ "Continue to :ref:`installation`, the "
+#~ ":ref:`quickstart`, or the :ref:`advanced_foreword`."
+#~ msgstr ""
+#~ ":ref:`installation`\ 、\ :ref:`quickstart`\ 、または\ "
+#~ ":ref:`advanced_foreword`\ に続きます。"
 

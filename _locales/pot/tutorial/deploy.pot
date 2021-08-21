@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 1.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 20:39+0900\n"
+"POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -37,7 +37,7 @@ msgid "Running ``setup.py`` with Python gives you a command line tool to issue b
 msgstr ""
 
 #: ../../flask/docs/tutorial/deploy.rst:34
-msgid "You can find the file in ``dist/flaskr-1.0.0-py3-none-any.whl``. The file name is the name of the project, the version, and some tags about the file can install."
+msgid "You can find the file in ``dist/flaskr-1.0.0-py3-none-any.whl``. The file name is in the format of {project name}-{version}-{python tag} -{abi tag}-{platform tag}."
 msgstr ""
 
 #: ../../flask/docs/tutorial/deploy.rst:38
@@ -52,55 +52,66 @@ msgstr ""
 msgid "Since this is a different machine, you need to run ``init-db`` again to create the database in the instance folder."
 msgstr ""
 
-#: ../../flask/docs/tutorial/deploy.rst:56
+#: ../../flask/docs/tutorial/deploy.rst:53
+msgid "Bash"
+msgstr ""
+
+#: ../../flask/docs/tutorial/deploy.rst:60
+msgid "CMD"
+msgstr ""
+
+#: ../../flask/docs/tutorial/deploy.rst:67
+msgid "Powershell"
+msgstr ""
+
+#: ../../flask/docs/tutorial/deploy.rst:74
 msgid "When Flask detects that it's installed (not in editable mode), it uses a different directory for the instance folder. You can find it at ``venv/var/flaskr-instance`` instead."
 msgstr ""
 
-#: ../../flask/docs/tutorial/deploy.rst:62
+#: ../../flask/docs/tutorial/deploy.rst:80
 msgid "Configure the Secret Key"
 msgstr ""
 
-#: ../../flask/docs/tutorial/deploy.rst:64
+#: ../../flask/docs/tutorial/deploy.rst:82
 msgid "In the beginning of the tutorial that you gave a default value for :data:`SECRET_KEY`. This should be changed to some random bytes in production. Otherwise, attackers could use the public ``'dev'`` key to modify the session cookie, or anything else that uses the secret key."
 msgstr ""
 
-#: ../../flask/docs/tutorial/deploy.rst:69
+#: ../../flask/docs/tutorial/deploy.rst:87
 msgid "You can use the following command to output a random secret key:"
 msgstr ""
 
-#: ../../flask/docs/tutorial/deploy.rst:77
+#: ../../flask/docs/tutorial/deploy.rst:95
 msgid "Create the ``config.py`` file in the instance folder, which the factory will read from if it exists. Copy the generated value into it."
 msgstr ""
 
-#: ../../flask/docs/tutorial/deploy.rst:80
+#: ../../flask/docs/tutorial/deploy.rst:98
 msgid "``venv/var/flaskr-instance/config.py``"
 msgstr ""
 
-#: ../../flask/docs/tutorial/deploy.rst:85
+#: ../../flask/docs/tutorial/deploy.rst:103
 msgid "You can also set any other necessary configuration here, although ``SECRET_KEY`` is the only one needed for Flaskr."
 msgstr ""
 
-#: ../../flask/docs/tutorial/deploy.rst:90
+#: ../../flask/docs/tutorial/deploy.rst:108
 msgid "Run with a Production Server"
 msgstr ""
 
-#: ../../flask/docs/tutorial/deploy.rst:92
+#: ../../flask/docs/tutorial/deploy.rst:110
 msgid "When running publicly rather than in development, you should not use the built-in development server (``flask run``). The development server is provided by Werkzeug for convenience, but is not designed to be particularly efficient, stable, or secure."
 msgstr ""
 
-#: ../../flask/docs/tutorial/deploy.rst:97
+#: ../../flask/docs/tutorial/deploy.rst:115
 msgid "Instead, use a production WSGI server. For example, to use `Waitress`_, first install it in the virtual environment:"
 msgstr ""
 
-#: ../../flask/docs/tutorial/deploy.rst:104
+#: ../../flask/docs/tutorial/deploy.rst:122
 msgid "You need to tell Waitress about your application, but it doesn't use ``FLASK_APP`` like ``flask run`` does. You need to tell it to import and call the application factory to get an application object."
 msgstr ""
 
-#: ../../flask/docs/tutorial/deploy.rst:114
+#: ../../flask/docs/tutorial/deploy.rst:132
 msgid "See :doc:`/deploying/index` for a list of many different ways to host your application. Waitress is just an example, chosen for the tutorial because it supports both Windows and Linux. There are many more WSGI servers and deployment options that you may choose for your project."
 msgstr ""
 
-#: ../../flask/docs/tutorial/deploy.rst:121
+#: ../../flask/docs/tutorial/deploy.rst:139
 msgid "Continue to :doc:`next`."
 msgstr ""
-

@@ -8,22 +8,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
+"Generated-By: Babel 2.9.1\n"
 
 # 2ea2700375974295ab429c44093278ae
-#: ../../config.rst:4
+#: ../../flask/docs/config.rst:2
 msgid "Configuration Handling"
 msgstr "設定の処理の仕方（Configuration Handling）"
 
 # 5885056d476241118880490c67cf0e51
-#: ../../config.rst:6
+#: ../../flask/docs/config.rst:4
 msgid ""
 "Applications need some kind of configuration.  There are different "
 "settings you might want to change depending on the application "
@@ -35,7 +35,7 @@ msgstr ""
 "環境に依存して変更したいであろう異なる設定があるでしょう。"
 
 # d844bf7c1809493c9b6bd69566773c66
-#: ../../config.rst:11
+#: ../../flask/docs/config.rst:9
 msgid ""
 "The way Flask is designed usually requires the configuration to be "
 "available when the application starts up.  You can hard code the "
@@ -48,7 +48,7 @@ msgstr ""
 "ことではありませんが、もっと良いやり方もあります。"
 
 # 603f45a3ad544721a041bb7647bd25ff
-#: ../../config.rst:16
+#: ../../flask/docs/config.rst:14
 msgid ""
 "Independent of how you load your config, there is a config object "
 "available which holds the loaded configuration values: The "
@@ -64,12 +64,12 @@ msgstr ""
 "あなたが独自の設定を持てる場所でもあります。"
 
 # a164f84380914d6b85f4dde1520aefd9
-#: ../../config.rst:25
+#: ../../flask/docs/config.rst:23
 msgid "Configuration Basics"
 msgstr "設定の基本"
 
 # 1e468cedc8fb497b8ee0dfed9d0d97e7
-#: ../../config.rst:27
+#: ../../flask/docs/config.rst:25
 msgid ""
 "The :attr:`~flask.Flask.config` is actually a subclass of a dictionary "
 "and can be modified just like any dictionary::"
@@ -78,7 +78,7 @@ msgstr ""
 "dictionaryとも同じようなやり方で変更できます::"
 
 # a7f3382428b14be1ad941aba86238dfd
-#: ../../config.rst:33
+#: ../../flask/docs/config.rst:31
 msgid ""
 "Certain configuration values are also forwarded to the "
 ":attr:`~flask.Flask` object so you can read and write them from there::"
@@ -89,7 +89,7 @@ msgstr ""
 "属性\ ``app.testing``\ でもアクセスできるようになります）::"
 
 # 59a7b54aca19431091dafe1cac1aacd0
-#: ../../config.rst:38
+#: ../../flask/docs/config.rst:36
 msgid ""
 "To update multiple keys at once you can use the :meth:`dict.update` "
 "method::"
@@ -98,12 +98,12 @@ msgstr ""
 "使用できます::"
 
 # a816fac978de40b59c13ef6a1608c6a5
-#: ../../config.rst:48
+#: ../../flask/docs/config.rst:46
 msgid "Environment and Debug Features"
 msgstr "environmentとdebugの目玉機能（Environment and Debug Features）"
 
 # 4d165060d0d4439fb0028d5fbd7e5f68
-#: ../../config.rst:50
+#: ../../flask/docs/config.rst:48
 msgid ""
 "The :data:`ENV` and :data:`DEBUG` config values are special because they "
 "may behave inconsistently if changed after the app has begun setting up. "
@@ -117,7 +117,7 @@ msgstr ""
 "に、Flaskは環境変数を使用します。"
 
 # 3f957dd14b5a4a5e9b38697c64c51371
-#: ../../config.rst:55
+#: ../../flask/docs/config.rst:53
 msgid ""
 "The environment is used to indicate to Flask, extensions, and other "
 "programs, like Sentry, what context Flask is running in. It is controlled"
@@ -130,7 +130,7 @@ msgstr ""
 "です。"
 
 # 9feb71c7125949be918382f81ff63014
-#: ../../config.rst:60
+#: ../../flask/docs/config.rst:58
 msgid ""
 "Setting :envvar:`FLASK_ENV` to ``development`` will enable debug mode. "
 "``flask run`` will use the interactive debugger and reloader by default "
@@ -145,7 +145,7 @@ msgstr ""
 "を制御するには、\ :envvar:`FLASK_DEBUG`\ フラグを使います。"
 
 # 88b5327c4dc6438b935ef1b4d0f05cb6
-#: ../../config.rst:65
+#: ../../flask/docs/config.rst:63
 msgid ""
 "Added :envvar:`FLASK_ENV` to control the environment separately from "
 "debug mode. The development environment enables debug mode."
@@ -155,21 +155,32 @@ msgstr ""
 "します。"
 
 # 736cd2bedf1449f688985f02b74e2c1b
-#: ../../config.rst:69
+#: ../../flask/docs/config.rst:67
+#, fuzzy
 msgid ""
 "To switch Flask to the development environment and enable debug mode, set"
-" :envvar:`FLASK_ENV`::"
+" :envvar:`FLASK_ENV`:"
 msgstr ""
 "Flaskを開発（development）のenvironmentへ変更してデバッグモードを有効に"
 "するには、\ :envvar:`FLASK_ENV`\ を以下のように設定します::"
 
-# 44d1b8d293b740c4900e570f15b43c97
-#: ../../config.rst:75
-msgid "(On Windows, use ``set`` instead of ``export``.)"
-msgstr "（Windowsでは、\ ``export``\ の代わりに\ ``set``\ を使用します。）"
+#: ../../flask/docs/config.rst:72 ../../flask/docs/config.rst:440
+#: ../../flask/docs/config.rst:511
+msgid "Bash"
+msgstr ""
+
+#: ../../flask/docs/config.rst:79 ../../flask/docs/config.rst:448
+#: ../../flask/docs/config.rst:520
+msgid "CMD"
+msgstr ""
+
+#: ../../flask/docs/config.rst:86 ../../flask/docs/config.rst:456
+#: ../../flask/docs/config.rst:529
+msgid "Powershell"
+msgstr ""
 
 # 871b2cfb100e4467b0318c0d3e91e9c1
-#: ../../config.rst:77
+#: ../../flask/docs/config.rst:93
 msgid ""
 "Using the environment variables as described above is recommended. While "
 "it is possible to set :data:`ENV` and :data:`DEBUG` in your config or "
@@ -185,17 +196,17 @@ msgstr ""
 "済ませてしまっているかもしれません。"
 
 # a6c8e37e34a34d05ad1333f444da4594
-#: ../../config.rst:85
+#: ../../flask/docs/config.rst:101
 msgid "Builtin Configuration Values"
 msgstr "組込みの設定値"
 
 # f08f8002a5ac4bf99239f959080c13ab
-#: ../../config.rst:87
+#: ../../flask/docs/config.rst:103
 msgid "The following configuration values are used internally by Flask:"
 msgstr "以下の設定値はFlaskで内部的に使用されます:"
 
 # bc985e2103fb4257ae299d0eabddd097
-#: ../../config.rst:91
+#: ../../flask/docs/config.rst:107
 msgid ""
 "What environment the app is running in. Flask and extensions may enable "
 "behaviors based on the environment, such as enabling debug mode. The "
@@ -211,18 +222,18 @@ msgstr ""
 "の中で設定された場合には期待通りに振る舞わないかもしれません。"
 
 # 23bb350edcce4285aa31d99a1faa551c
-#: ../../config.rst:97
+#: ../../flask/docs/config.rst:113
 msgid "**Do not enable development when deploying in production.**"
 msgstr ""
 "**本番環境にデプロイするときは、development設定を有効にしないでください。**"
 
 # c72888176e18437b863eee6992e1ab63
-#: ../../config.rst:99
+#: ../../flask/docs/config.rst:115
 msgid "Default: ``'production'``"
 msgstr "標準設定: ``'production'``"
 
 # de1cf21d7fe04461b7b2d018d385d1bc
-#: ../../config.rst:105
+#: ../../flask/docs/config.rst:121
 msgid ""
 "Whether debug mode is enabled. When using ``flask run`` to start the "
 "development server, an interactive debugger will be shown for unhandled "
@@ -242,13 +253,13 @@ msgstr ""
 "場合には期待通りに振る舞わないかもしれません。"
 
 # 4be061ef82314161b04fd4bbd76f7992
-#: ../../config.rst:113
+#: ../../flask/docs/config.rst:129
 msgid "**Do not enable debug mode when deploying in production.**"
 msgstr ""
 "**本番環境にデプロイするときは、デバッグモードを有効にしないでください。**"
 
 # 55218389be79440b8ad2289e13ee1eaa
-#: ../../config.rst:115
+#: ../../flask/docs/config.rst:131
 msgid ""
 "Default: ``True`` if :data:`ENV` is ``'development'``, or ``False`` "
 "otherwise."
@@ -257,7 +268,7 @@ msgstr ""
 "そうでなければ\ ``False``\ 。"
 
 # 46c5f77df00c406794532a4c25166bca
-#: ../../config.rst:120
+#: ../../flask/docs/config.rst:136
 msgid ""
 "Enable testing mode. Exceptions are propagated rather than handled by the"
 " the app's error handlers. Extensions may also change their behavior to "
@@ -274,13 +285,14 @@ msgstr ""
 # fa4e7dfb913d44d597e50202694ff1bd
 # 155d769506724d7ba0b3ff13d3090525
 # a97ebee273fa417b918c8f305998a20a
-#: ../../config.rst:124 ../../config.rst:148 ../../config.rst:209
-#: ../../config.rst:247 ../../config.rst:326 ../../config.rst:347
+#: ../../flask/docs/config.rst:140 ../../flask/docs/config.rst:164
+#: ../../flask/docs/config.rst:225 ../../flask/docs/config.rst:263
+#: ../../flask/docs/config.rst:347 ../../flask/docs/config.rst:368
 msgid "Default: ``False``"
 msgstr "標準設定: ``False``"
 
 # e538981ac3a3407ba3614e510a21f1bc
-#: ../../config.rst:128
+#: ../../flask/docs/config.rst:144
 msgid ""
 "Exceptions are re-raised rather than being handled by the app's error "
 "handlers. If not set, this is implicitly true if ``TESTING`` or ``DEBUG``"
@@ -300,15 +312,17 @@ msgstr ""
 # 3f3baec90b3e40c6bebcdbcd6926199b
 # aa03ef387c524a0998f8bfa136fab466
 # 4d41cfa9ae904f8c805bc627041ba4c7
-#: ../../config.rst:132 ../../config.rst:140 ../../config.rst:158
-#: ../../config.rst:172 ../../config.rst:187 ../../config.rst:194
-#: ../../config.rst:217 ../../config.rst:274 ../../config.rst:301
-#: ../../config.rst:339
+#: ../../flask/docs/config.rst:148 ../../flask/docs/config.rst:156
+#: ../../flask/docs/config.rst:174 ../../flask/docs/config.rst:188
+#: ../../flask/docs/config.rst:203 ../../flask/docs/config.rst:210
+#: ../../flask/docs/config.rst:233 ../../flask/docs/config.rst:277
+#: ../../flask/docs/config.rst:295 ../../flask/docs/config.rst:322
+#: ../../flask/docs/config.rst:360
 msgid "Default: ``None``"
 msgstr "標準設定: ``None``"
 
 # 92cdaa88f84443c1b91e736a9b7bef68
-#: ../../config.rst:136
+#: ../../flask/docs/config.rst:152
 msgid ""
 "Don't pop the request context when an exception occurs. If not set, this "
 "is true if ``DEBUG`` is true. This allows debuggers to introspect the "
@@ -321,7 +335,7 @@ msgstr ""
 "データを調べることを可能にし、通常は直接設定する必要はありません。"
 
 # 19dfd03d9733473bb8f6d983c6527851
-#: ../../config.rst:144
+#: ../../flask/docs/config.rst:160
 msgid ""
 "If there is no handler for an ``HTTPException``-type exception, re-raise "
 "it to be handled by the interactive debugger instead of returning it as a"
@@ -332,7 +346,7 @@ msgstr ""
 "に、その例外を発生させ直します。"
 
 # a721c51ccd8144218e09f1d854641ac1
-#: ../../config.rst:152
+#: ../../flask/docs/config.rst:168
 msgid ""
 "Trying to access a key that doesn't exist from request dicts like "
 "``args`` and ``form`` will return a 400 Bad Request error page. Enable "
@@ -348,13 +362,13 @@ msgstr ""
 "場合、デバッグモードで有効になります。"
 
 # c899cc9e42ad42e88b82a416f7a6c6c2
-#: ../../config.rst:162
+#: ../../flask/docs/config.rst:178
+#, fuzzy
 msgid ""
 "A secret key that will be used for securely signing the session cookie "
 "and can be used for any other security related needs by extensions or "
-"your application. It should be a long random string of bytes, although "
-"unicode is accepted too. For example, copy the output of this to your "
-"config::"
+"your application. It should be a long random ``bytes`` or ``str``. For "
+"example, copy the output of this to your config::"
 msgstr ""
 "セッションのクッキーを安全に署名するために使用され、さらに自分のアプリ"
 "ケーションやFlask拡張が必要とする、その他のあらゆるセキュリティに関する"
@@ -363,7 +377,7 @@ msgstr ""
 "の出力結果を自分の設定にコピーします::"
 
 # 27f91b2adbc14a70af288b884b1d38b3
-#: ../../config.rst:170
+#: ../../flask/docs/config.rst:186
 msgid ""
 "**Do not reveal the secret key when posting questions or committing "
 "code.**"
@@ -372,7 +386,7 @@ msgstr ""
 "表に出さないようにしてください。**"
 
 # ed712a29ba8b40319a08eadb195b7e90
-#: ../../config.rst:176
+#: ../../flask/docs/config.rst:192
 msgid ""
 "The name of the session cookie. Can be changed in case you already have a"
 " cookie with the same name."
@@ -381,12 +395,12 @@ msgstr ""
 "場合には、変更が可能です。"
 
 # 2dfb81cec1b74d38afda48ef468e82c5
-#: ../../config.rst:179
+#: ../../flask/docs/config.rst:195
 msgid "Default: ``'session'``"
 msgstr "標準設定: ``'session'``"
 
 # c1d25563d0d848428ba9ca2933d308bd
-#: ../../config.rst:183
+#: ../../flask/docs/config.rst:199
 msgid ""
 "The domain match rule that the session cookie will be valid for. If not "
 "set, the cookie will be valid for all subdomains of :data:`SERVER_NAME`. "
@@ -398,7 +412,7 @@ msgstr ""
 "は設定されません。"
 
 # ef52b6ee78274ab2bfacc2c60a107b8a
-#: ../../config.rst:191
+#: ../../flask/docs/config.rst:207
 msgid ""
 "The path that the session cookie will be valid for. If not set, the "
 "cookie will be valid underneath ``APPLICATION_ROOT`` or ``/`` if that is "
@@ -409,7 +423,7 @@ msgstr ""
 "が設定されていない場合は\ ``/``\ の下で有効になります。"
 
 # e8042c80cf10405290368ade7da7260c
-#: ../../config.rst:198
+#: ../../flask/docs/config.rst:214
 msgid ""
 "Browsers will not allow JavaScript access to cookies marked as \"HTTP "
 "only\" for security."
@@ -423,13 +437,13 @@ msgstr ""
 # a3fd5f57b0ba488c82e879eaa2842ffd
 # 65de55937f0b43de86508a8c34f229a4
 # f71a5105f8574879a735a428697fab23
-#: ../../config.rst:201 ../../config.rst:239 ../../config.rst:310
-#: ../../config.rst:319
+#: ../../flask/docs/config.rst:217 ../../flask/docs/config.rst:255
+#: ../../flask/docs/config.rst:331 ../../flask/docs/config.rst:340
 msgid "Default: ``True``"
 msgstr "標準設定: ``True``"
 
 # 0a02c143f4584da5b21e76f7bebc8396
-#: ../../config.rst:205
+#: ../../flask/docs/config.rst:221
 msgid ""
 "Browsers will only send cookies with requests over HTTPS if the cookie is"
 " marked \"secure\". The application must be served over HTTPS for this to"
@@ -440,7 +454,7 @@ msgstr ""
 "アプリケーションはHTTPSを使用してサービスを提供している必要があります。"
 
 # 257bc2166b1c400589b78a59a5659b69
-#: ../../config.rst:213
+#: ../../flask/docs/config.rst:229
 msgid ""
 "Restrict how cookies are sent with requests from external sites. Can be "
 "set to ``'Lax'`` (recommended) or ``'Strict'``. See :ref:`security-"
@@ -451,7 +465,7 @@ msgstr ""
 "\ :ref:`security-cookie`\ を確認してください。"
 
 # 368bf983395642a59409be53490906dc
-#: ../../config.rst:223
+#: ../../flask/docs/config.rst:239
 msgid ""
 "If ``session.permanent`` is true, the cookie's expiration will be set "
 "this number of seconds in the future. Can either be a "
@@ -462,7 +476,7 @@ msgstr ""
 "``int``\ のいずれかが可能です。"
 
 # 5f5bb3bf9e35444e8740fedabc0f534a
-#: ../../config.rst:227
+#: ../../flask/docs/config.rst:243
 msgid ""
 "Flask's default cookie implementation validates that the cryptographic "
 "signature is not older than this value."
@@ -471,12 +485,12 @@ msgstr ""
 "検証します。"
 
 # 401cffbfb030423ebb1536b4c0423d4d
-#: ../../config.rst:230
+#: ../../flask/docs/config.rst:246
 msgid "Default: ``timedelta(days=31)`` (``2678400`` seconds)"
 msgstr "標準設定: ``timedelta(days=31)`` (``2678400`` 秒)"
 
 # 184d82de539646719a7f74d4dee98ba2
-#: ../../config.rst:234
+#: ../../flask/docs/config.rst:250
 msgid ""
 "Control whether the cookie is sent with every response when "
 "``session.permanent`` is true. Sending the cookie every time (the "
@@ -490,7 +504,7 @@ msgstr ""
 "セッションは影響を受けません。"
 
 # d223792fbe684f27ae205bb2cadbc967
-#: ../../config.rst:243
+#: ../../flask/docs/config.rst:259
 msgid ""
 "When serving files, set the ``X-Sendfile`` header instead of serving the "
 "data with Flask. Some web servers, such as Apache, recognize this and "
@@ -503,11 +517,12 @@ msgstr ""
 "だけこれは意味をなします。"
 
 # f048644e95e8484eaee03eccf85f8aa0
-#: ../../config.rst:251
+#: ../../flask/docs/config.rst:267
+#, fuzzy
 msgid ""
 "When serving files, set the cache control max age to this number of "
-"seconds.  Can either be a :class:`datetime.timedelta` or an ``int``. "
-"Override this value on a per-file basis using "
+"seconds. Can be a :class:`datetime.timedelta` or an ``int``. Override "
+"this value on a per-file basis using "
 ":meth:`~flask.Flask.get_send_file_max_age` on the application or "
 "blueprint."
 msgstr ""
@@ -517,13 +532,14 @@ msgstr ""
 "\ :meth:`~flask.Flask.get_send_file_max_age`\ を使用すると、ファイル"
 "ごとにこの値を上書きします。"
 
-# 67bfe8c7890f4815b125dc4b57a5b385
-#: ../../config.rst:256
-msgid "Default: ``timedelta(hours=12)`` (``43200`` seconds)"
-msgstr "標準設定: ``timedelta(hours=12)`` (``43200`` 秒)"
+#: ../../flask/docs/config.rst:273
+msgid ""
+"If ``None``, ``send_file`` tells the browser to use conditional requests "
+"will be used instead of a timed cache, which is usually preferable."
+msgstr ""
 
 # f7f87992e6a540a792c6de0552e204ec
-#: ../../config.rst:260
+#: ../../flask/docs/config.rst:281
 msgid ""
 "Inform the application what host and port it is bound to. Required for "
 "subdomain route matching support."
@@ -532,7 +548,7 @@ msgstr ""
 "ルートとのマッチングのサポートに必要になります。"
 
 # 6d0c8f137ddf42d3aff9556ebd6ab5ed
-#: ../../config.rst:263
+#: ../../flask/docs/config.rst:284
 msgid ""
 "If set, will be used for the session cookie domain if "
 ":data:`SESSION_COOKIE_DOMAIN` is not set. Modern web browsers will not "
@@ -547,7 +563,7 @@ msgstr ""
 "追加してください::"
 
 # 5bd129e1c694408a94a2ef598b0b1689
-#: ../../config.rst:271
+#: ../../flask/docs/config.rst:292
 msgid ""
 "If set, ``url_for`` can generate external URLs with only an application "
 "context instead of a request context."
@@ -557,13 +573,14 @@ msgstr ""
 "request contextの代わりに、application contextを使ってだけになります。"
 
 # e4aaa7f149804756857fb026e428e33e
-#: ../../config.rst:278
+#: ../../flask/docs/config.rst:299
+#, fuzzy
 msgid ""
 "Inform the application what path it is mounted under by the application /"
 " web server.  This is used for generating URLs outside the context of a "
 "request (inside a request, the dispatcher is responsible for setting "
-"``SCRIPT_NAME`` instead; see :ref:`Application Dispatching <app-"
-"dispatch>` for examples of dispatch configuration)."
+"``SCRIPT_NAME`` instead; see :doc:`/patterns/appdispatch` for examples of"
+" dispatch configuration)."
 msgstr ""
 "アプリケーションに、アプリケーションサーバ / webサーバによってどのパスに"
 "設置（mount）されているかを知らせます。これはリクエストのcontextの外側で"
@@ -576,7 +593,7 @@ msgstr ""
 "は、wsgiの仕様であるPEP3333の「`environ Variable <https://www.python.org/dev/peps/pep-3333/#environ-variables>`_」を参照）。"
 
 # c88ef0c816234a25989893c550413d10
-#: ../../config.rst:284
+#: ../../flask/docs/config.rst:305
 msgid ""
 "Will be used for the session cookie path if ``SESSION_COOKIE_PATH`` is "
 "not set."
@@ -585,12 +602,12 @@ msgstr ""
 "に使用されます。"
 
 # 444ad2f56b804f50aaec2913981d82dc
-#: ../../config.rst:287
+#: ../../flask/docs/config.rst:308
 msgid "Default: ``'/'``"
 msgstr "標準設定: ``'/'``"
 
 # 63f2b497555c471ab57d06b25b8d258a
-#: ../../config.rst:291
+#: ../../flask/docs/config.rst:312
 msgid ""
 "Use this scheme for generating external URLs when not in a request "
 "context."
@@ -601,12 +618,12 @@ msgstr ""
 "左側）部分）を使用します。"
 
 # 30e4c713ac9a461c86b7f5fb932bc0a8
-#: ../../config.rst:293
+#: ../../flask/docs/config.rst:314
 msgid "Default: ``'http'``"
 msgstr "標準設定: ``'http'``"
 
 # 8cd322c417dc4078b819b1c98b184191
-#: ../../config.rst:297
+#: ../../flask/docs/config.rst:318
 msgid ""
 "Don't read more than this many bytes from the incoming request data. If "
 "not set and the request does not specify a ``CONTENT_LENGTH``, no data "
@@ -616,22 +633,16 @@ msgstr ""
 "もし未設定であってリクエストが\ ``CONTENT_LENGTH``\ を指定していない場合、"
 "セキュリティのために全くデータを読み取りません。"
 
-# d7414a5346664e6a9cec906bcdc0b3b2
-#: ../../config.rst:305
+#: ../../flask/docs/config.rst:326
 msgid ""
 "Serialize objects to ASCII-encoded JSON. If this is disabled, the JSON "
-"will be returned as a Unicode string, or encoded as ``UTF-8`` by "
-"``jsonify``. This has security implications when rendering the JSON into "
-"JavaScript in templates, and should typically remain enabled."
+"returned from ``jsonify`` will contain Unicode characters. This has "
+"security implications when rendering the JSON into JavaScript in "
+"templates, and should typically remain enabled."
 msgstr ""
-"オブジェクトをASCIIにエンコードしたJSONへシリアライズします。もしこれが"
-"無効にされている場合、\ ``jsonify``\ によって、JSONはUnicode文字列、または\ "
-"``UTF-8``\ へエンコードされてから返されます。テンプレートの中でJSONを"
-"JavaScriptへ変換するとき、これはセキュリティ上の問題を生じる可能性があり、"
-"したがって典型的には有効のままにしておくべきです。"
 
 # 0193f5d49d904999b0d2811d9e5cd7aa
-#: ../../config.rst:314
+#: ../../flask/docs/config.rst:335
 msgid ""
 "Sort the keys of JSON objects alphabetically. This is useful for caching "
 "because it ensures the data is serialized the same way no matter what "
@@ -645,7 +656,7 @@ msgstr ""
 "キャッシュを犠牲にする代わりに性能が向上する可能性があります。"
 
 # a2af0419c97743209e892efa542e32b6
-#: ../../config.rst:323
+#: ../../flask/docs/config.rst:344
 msgid ""
 "``jsonify`` responses will be output with newlines, spaces, and "
 "indentation for easier reading by humans. Always enabled in debug mode."
@@ -654,17 +665,17 @@ msgstr ""
 "して出力するようにします。デバッグモードでは、常に有効にされます。"
 
 # 95ec27cb25d040cc9126bb7151ae1f0b
-#: ../../config.rst:330
+#: ../../flask/docs/config.rst:351
 msgid "The mimetype of ``jsonify`` responses."
 msgstr "``jsonify``\ レスポンスのmimetypeです。"
 
 # 67fcb2e122284c2595ac21b67441aef1
-#: ../../config.rst:332
+#: ../../flask/docs/config.rst:353
 msgid "Default: ``'application/json'``"
 msgstr "標準設定: ``'application/json'``"
 
 # 2669eb1f9a5c4e56a129f48cddaef173
-#: ../../config.rst:336
+#: ../../flask/docs/config.rst:357
 msgid ""
 "Reload templates when they are changed. If not set, it will be enabled in"
 " debug mode."
@@ -673,7 +684,7 @@ msgstr ""
 "モードでは有効になります。"
 
 # 2465d24ed8b1459a8a25bfb16bca2608
-#: ../../config.rst:343
+#: ../../flask/docs/config.rst:364
 msgid ""
 "Log debugging information tracing how a template file was loaded. This "
 "can be useful to figure out why a template was not loaded or the wrong "
@@ -684,7 +695,7 @@ msgstr ""
 "読み込まれて表示されたのが何故かを調べるときに役立つ場合があります。"
 
 # aeff790621904322959d38d881ed38fb
-#: ../../config.rst:351
+#: ../../flask/docs/config.rst:372
 msgid ""
 "Warn if cookie headers are larger than this many bytes. Defaults to "
 "``4093``. Larger cookies may be silently ignored by browsers. Set to "
@@ -695,7 +706,7 @@ msgstr ""
 "場合があります。この警告を無効にするには\ ``0``\ に設定します。"
 
 # b6cfb61d1cf647f49ed14494b13e71da
-#: ../../config.rst:383
+#: ../../flask/docs/config.rst:404
 msgid ""
 "``LOGGER_NAME`` and ``LOGGER_HANDLER_POLICY`` were removed. See "
 ":doc:`/logging` for information about configuration."
@@ -704,13 +715,13 @@ msgstr ""
 "（ログの）設定に関する情報は\ :doc:`/logging`\ を確認してください。"
 
 # 97b6f193b1ca44d0b19a6341ecec16d8
-#: ../../config.rst:387
+#: ../../flask/docs/config.rst:408
 msgid "Added :data:`ENV` to reflect the :envvar:`FLASK_ENV` environment variable."
 msgstr ""
 ":envvar:`FLASK_ENV`\ 環境変数を反映するため\ :data:`ENV`\ が追加されました。"
 
 # eb8a2b57adaf46eab06ffa2473d66cdb
-#: ../../config.rst:390
+#: ../../flask/docs/config.rst:411
 msgid ""
 "Added :data:`SESSION_COOKIE_SAMESITE` to control the session cookie's "
 "``SameSite`` option."
@@ -719,30 +730,30 @@ msgstr ""
 ":data:`SESSION_COOKIE_SAMESITE`\ が追加されました。"
 
 # 06ec17339766474681fcaaadfa5ebe7d
-#: ../../config.rst:393
+#: ../../flask/docs/config.rst:414
 msgid "Added :data:`MAX_COOKIE_SIZE` to control a warning from Werkzeug."
 msgstr ""
 "Werkzeugからの警告を制御するために\ :data:`MAX_COOKIE_SIZE`\ が追加されました。"
 
 # 7d1b664f411047ab8cd471c9ce7552a7
-#: ../../config.rst:379
+#: ../../flask/docs/config.rst:400
 msgid ""
 "``SESSION_REFRESH_EACH_REQUEST``, ``TEMPLATES_AUTO_RELOAD``, "
 "``LOGGER_HANDLER_POLICY``, ``EXPLAIN_TEMPLATE_LOADING``"
 msgstr ""
 
 # c6376a8e427146ada075aa8feac31f81
-#: ../../config.rst:376
+#: ../../flask/docs/config.rst:397
 msgid "``JSON_AS_ASCII``, ``JSON_SORT_KEYS``, ``JSONIFY_PRETTYPRINT_REGULAR``"
 msgstr ""
 
 # 01215966e12c47bba958f85e2278c4b5
-#: ../../config.rst:373
+#: ../../flask/docs/config.rst:394
 msgid "``PREFERRED_URL_SCHEME``"
 msgstr ""
 
 # 37434fbb8bbf4691a6157fd89ee0b4ac
-#: ../../config.rst:367
+#: ../../flask/docs/config.rst:388
 msgid ""
 "``TRAP_BAD_REQUEST_ERRORS``, ``TRAP_HTTP_EXCEPTIONS``, "
 "``APPLICATION_ROOT``, ``SESSION_COOKIE_DOMAIN``, ``SESSION_COOKIE_PATH``,"
@@ -750,37 +761,39 @@ msgid ""
 msgstr ""
 
 # 15a3f65c6ce446e5b866c91655f090d6
-#: ../../config.rst:364
+#: ../../flask/docs/config.rst:385
 msgid "``PROPAGATE_EXCEPTIONS``, ``PRESERVE_CONTEXT_ON_EXCEPTION``"
 msgstr ""
 
 # ba91ab7969dc46729c17da5086d07aed
-#: ../../config.rst:361
+#: ../../flask/docs/config.rst:382
 msgid "``MAX_CONTENT_LENGTH``"
 msgstr ""
 
 # 06430a8e200941ee8f700e90b8bfc283
-#: ../../config.rst:358
+#: ../../flask/docs/config.rst:379
 msgid "``SERVER_NAME``"
 msgstr ""
 
 # c4715f81989043b094dfa896b470a7c9
-#: ../../config.rst:355
+#: ../../flask/docs/config.rst:376
 msgid "``LOGGER_NAME``"
 msgstr ""
 
 # 0c66c64a85184544bb6e1628173d025b
-#: ../../config.rst:397
-msgid "Configuring from Files"
+#: ../../flask/docs/config.rst:418
+#, fuzzy
+msgid "Configuring from Python Files"
 msgstr "ファイルからの設定の読み取り（Configuring from Files）"
 
 # c808853796cf4a1282fec93b01a9c8c5
-#: ../../config.rst:399
+#: ../../flask/docs/config.rst:420
+#, fuzzy
 msgid ""
 "Configuration becomes more useful if you can store it in a separate file,"
 " ideally located outside the actual application package. This makes "
 "packaging and distributing your application possible via various package "
-"handling tools (:ref:`distribute-deployment`) and finally modifying the "
+"handling tools (:doc:`/patterns/distribute`) and finally modifying the "
 "configuration file afterwards."
 msgstr ""
 "ファイルを分けて、理想的には実際のアプリケーションのパッケージからは外側に"
@@ -790,32 +803,27 @@ msgstr ""
 "最終的に設定ファイルを後から変更できるようにします。"
 
 # 07057a6b0806498cb5373e672c8db0ea
-#: ../../config.rst:405
+#: ../../flask/docs/config.rst:426
 msgid "So a common pattern is this::"
 msgstr "したがって、よくあるパターンは以下のとおりです::"
 
 # 9960357878ce48e8aff80d97d04345e9
-#: ../../config.rst:411
+#: ../../flask/docs/config.rst:432
+#, fuzzy
 msgid ""
 "This first loads the configuration from the "
 "`yourapplication.default_settings` module and then overrides the values "
 "with the contents of the file the :envvar:`YOURAPPLICATION_SETTINGS` "
-"environment variable points to.  This environment variable can be set on "
-"Linux or OS X with the export command in the shell before starting the "
-"server::"
+"environment variable points to.  This environment variable can be set in "
+"the shell before starting the server:"
 msgstr ""
 "これは、最初に\ `yourapplication.default_settings`\ モジュールから設定を読み"
 "込み、それから\ :envvar:`YOURAPPLICATION_SETTINGS`\ 環境変数が指し示すファイル"
 "の内容を使って値を上書きします。この環境変数はLinuxまたはOS Xでは、サーバを"
 "開始する前にシェルの中でexportコマンドで設定できます::"
 
-# 3677c27aacac45ce82578770a0ec124f
-#: ../../config.rst:423
-msgid "On Windows systems use the `set` builtin instead::"
-msgstr "Windowsシステムでは代わりに組込みの\ `set`\ を使用します::"
-
 # 40d0a4083b6e42588805b0da3f765cee
-#: ../../config.rst:427
+#: ../../flask/docs/config.rst:464
 msgid ""
 "The configuration files themselves are actual Python files.  Only values "
 "in uppercase are actually stored in the config object later on.  So make "
@@ -827,12 +835,12 @@ msgstr ""
 "設定のキーでは、確実に大文字を使用するようにしてください。"
 
 # 419c23b3b79f4d889c203028e6f13b0e
-#: ../../config.rst:431
+#: ../../flask/docs/config.rst:468
 msgid "Here is an example of a configuration file::"
 msgstr "以下は設定ファイルの例です::"
 
 # 91050a38de414a699f64ea1c57ff843f
-#: ../../config.rst:437
+#: ../../flask/docs/config.rst:473
 msgid ""
 "Make sure to load the configuration very early on, so that extensions "
 "have the ability to access the configuration when starting up.  There are"
@@ -845,13 +853,30 @@ msgstr ""
 "（設定を）読み込む他の手段もあります。完全なリファレンスについては、\ "
 ":class:`~flask.Config`\ オブジェクトのドキュメントを読んでください。"
 
+# 0c66c64a85184544bb6e1628173d025b
+#: ../../flask/docs/config.rst:481
+#, fuzzy
+msgid "Configuring from Data Files"
+msgstr "ファイルからの設定の読み取り（Configuring from Files）"
+
+#: ../../flask/docs/config.rst:483
+msgid ""
+"It is also possible to load configuration from a file in a format of your"
+" choice using :meth:`~flask.Config.from_file`. For example to load from a"
+" TOML file:"
+msgstr ""
+
+#: ../../flask/docs/config.rst:492
+msgid "Or from a JSON file:"
+msgstr ""
+
 # 4bab57b47a22476c8440a390d01fb28d
-#: ../../config.rst:445
+#: ../../flask/docs/config.rst:501
 msgid "Configuring from Environment Variables"
 msgstr "環境変数からの設定の読み取り（Configuring from Environment Variables）"
 
 # 6cb98fa1318c49ff9eba483cdb0a25e4
-#: ../../config.rst:447
+#: ../../flask/docs/config.rst:503
 msgid ""
 "In addition to pointing to configuration files using environment "
 "variables, you may find it useful (or necessary) to control your "
@@ -862,21 +887,15 @@ msgstr ""
 "ません。"
 
 # e1d56fd244174ff79b7631320e34535c
-#: ../../config.rst:451
-msgid ""
-"Environment variables can be set on Linux or OS X with the export command"
-" in the shell before starting the server::"
+#: ../../flask/docs/config.rst:507
+#, fuzzy
+msgid "Environment variables can be set in the shell before starting the server:"
 msgstr ""
 "環境変数はLinuxまたはOS Xでは、サーバを開始する前にシェルの中でexport"
 "コマンドで設定できます::"
 
-# 1f44852646314bbdb716b576656e9ddd
-#: ../../config.rst:459
-msgid "On Windows systems use the ``set`` builtin instead::"
-msgstr "Windowsシステムでは代わりに組込みの\ `set`\ を使用します::"
-
 # fa87cc3074e94cd7a066b4e8494ca97c
-#: ../../config.rst:463
+#: ../../flask/docs/config.rst:538
 msgid ""
 "While this approach is straightforward to use, it is important to "
 "remember that environment variables are strings -- they are not "
@@ -887,7 +906,7 @@ msgstr ""
 "（deserialize）されません。"
 
 # ec2913f71be84181966809c55d5e1773
-#: ../../config.rst:467
+#: ../../flask/docs/config.rst:542
 msgid ""
 "Here is an example of a configuration file that uses environment "
 "variables::"
@@ -895,7 +914,7 @@ msgstr ""
 "以下は、環境変数を使用している設定ファイルの例です::"
 
 # 4a5e88a2fa914450aafb620bfca0fcbf
-#: ../../config.rst:480
+#: ../../flask/docs/config.rst:555
 msgid ""
 "Notice that any value besides an empty string will be interpreted as a "
 "boolean ``True`` value in Python, which requires care if an environment "
@@ -906,7 +925,7 @@ msgstr ""
 "値を設定するときには配慮が必要になることに注意してください。"
 
 # 0a0c6a1fbb504e648951815196f5d867
-#: ../../config.rst:484
+#: ../../flask/docs/config.rst:559
 msgid ""
 "Make sure to load the configuration very early on, so that extensions "
 "have the ability to access the configuration when starting up.  There are"
@@ -920,12 +939,12 @@ msgstr ""
 ":class:`~flask.Config`\ クラスのドキュメントを読んでください。"
 
 # 3bdf591eb6cc4be0ab25943e44b0ed50
-#: ../../config.rst:491
+#: ../../flask/docs/config.rst:566
 msgid "Configuration Best Practices"
 msgstr "設定のベストプラクティス"
 
 # 96ba8fb4980e485bafe81c75d8afecc6
-#: ../../config.rst:493
+#: ../../flask/docs/config.rst:568
 #, python-format
 msgid ""
 "The downside with the approach mentioned earlier is that it makes testing"
@@ -939,7 +958,7 @@ msgstr ""
 "ます:"
 
 # 5e357f95d94a4123adf14c70c65b3310
-#: ../../config.rst:498
+#: ../../flask/docs/config.rst:573
 msgid ""
 "Create your application in a function and register blueprints on it. That"
 " way you can create multiple instances of your application with different"
@@ -952,7 +971,7 @@ msgstr ""
 "必要に応じて設定を投入するために、このやり方を使用できます。"
 
 # c4d12427d1084f6ca86d3c7b404f52d6
-#: ../../config.rst:503
+#: ../../flask/docs/config.rst:578
 msgid ""
 "Do not write code that needs the configuration at import time.  If you "
 "limit yourself to request-only accesses to the configuration you can "
@@ -963,12 +982,12 @@ msgstr ""
 "オブジェクトの再設定が可能です。"
 
 # ceb7f7f64875496aabac2f0d2c48e134
-#: ../../config.rst:510
+#: ../../flask/docs/config.rst:585
 msgid "Development / Production"
 msgstr "開発環境 / 本番環境"
 
 # c5b164650ed04c54ae5d3c7fe9e33561
-#: ../../config.rst:512
+#: ../../flask/docs/config.rst:587
 msgid ""
 "Most applications need more than one configuration.  There should be at "
 "least separate configurations for the production server and the one used "
@@ -983,7 +1002,7 @@ msgstr ""
 "ように必要に応じて値を上書きする分かれた設定を使用することです。"
 
 # d860cba516644adebbb474a5e8379867
-#: ../../config.rst:523
+#: ../../flask/docs/config.rst:598
 msgid ""
 "Then you just have to add a separate :file:`config.py` file and export "
 "``YOURAPPLICATION_SETTINGS=/path/to/config.py`` and you are done.  "
@@ -996,7 +1015,7 @@ msgstr ""
 "importやサブクラス作成も使えます。"
 
 # 5baeeb1f916143d2a42b87a92adc4fab
-#: ../../config.rst:528
+#: ../../flask/docs/config.rst:603
 msgid ""
 "What is very popular in the Django world is to make the import explicit "
 "in the config file by adding ``from yourapplication.default_settings "
@@ -1013,7 +1032,7 @@ msgstr ""
 "ハードコードされたファイルをimportします。"
 
 # 64b4408faf2642f182fc390bc60d662e
-#: ../../config.rst:535
+#: ../../flask/docs/config.rst:610
 msgid ""
 "An interesting pattern is also to use classes and inheritance for "
 "configuration::"
@@ -1021,7 +1040,7 @@ msgstr ""
 "設定のためにクラスを使用し継承することも、興味深いパターンのひとつです::"
 
 # c35aa6885e464a11ada5896a199c8ea5
-#: ../../config.rst:552
+#: ../../flask/docs/config.rst:626
 msgid ""
 "To enable such a config you just have to call into "
 ":meth:`~flask.Config.from_object`::"
@@ -1030,7 +1049,7 @@ msgstr ""
 ":meth:`~flask.Config.from_object`\ を呼び出すだけです。"
 
 # 8d229d75b36849aa97e815363c88b717
-#: ../../config.rst:557
+#: ../../flask/docs/config.rst:631
 msgid ""
 "Note that :meth:`~flask.Config.from_object` does not instantiate the "
 "class object. If you need to instantiate the class, such as to access a "
@@ -1045,7 +1064,7 @@ msgstr ""
 "該当）::"
 
 # 2adb308eaa8d494d82be20ab879abb1f
-#: ../../config.rst:569
+#: ../../flask/docs/config.rst:643
 msgid ""
 "Instantiating the configuration object allows you to use ``@property`` in"
 " your configuration classes::"
@@ -1054,7 +1073,7 @@ msgstr ""
 "が使えるようになります::"
 
 # ea50a71e81d94327b9ba89c40048e2d5
-#: ../../config.rst:595
+#: ../../flask/docs/config.rst:666
 msgid ""
 "There are many different ways and it's up to you how you want to manage "
 "your configuration files.  However here a list of good recommendations:"
@@ -1063,7 +1082,7 @@ msgstr ""
 "あなたしだいです。ただし、良いと推奨されることのリストは以下のとおりです:"
 
 # 84f5cb5bc09c4506a2f5c105612935f7
-#: ../../config.rst:598
+#: ../../flask/docs/config.rst:669
 msgid ""
 "Keep a default configuration in version control.  Either populate the "
 "config with this default configuration or import it in your own "
@@ -1073,9 +1092,8 @@ msgstr ""
 "この標準設定の内容を（アプリケーションの）設定へ移すか、自分の設定ファイル"
 "へimportします。"
 
-
 # 13768e090b2d4edd8f4dee75a4789cea
-#: ../../config.rst:601
+#: ../../flask/docs/config.rst:672
 msgid ""
 "Use an environment variable to switch between the configurations. This "
 "can be done from outside the Python interpreter and makes development and"
@@ -1096,23 +1114,24 @@ msgstr ""
 "さえ作成できます。"
 
 # ad98eaa6ce944993aad0eba823276cdf
-#: ../../config.rst:608
+#: ../../flask/docs/config.rst:679
+#, fuzzy
 msgid ""
 "Use a tool like `fabric`_ in production to push code and configurations "
 "separately to the production server(s).  For some details about how to do"
-" that, head over to the :ref:`fabric-deployment` pattern."
+" that, head over to the :doc:`/patterns/fabric` pattern."
 msgstr ""
 "コードと設定を別々に本番環境のサーバへ押し入れる（push）ために、\ "
 "`fabric`_\ のようなツールを本番環境で使用します。どのように実施するかに"
 "ついての詳細は、\ :ref:`fabric-deployment`\ パターンを調べてください。"
 
 # 03ca02d2d8394da6bf2f0536404b1f67
-#: ../../config.rst:619
+#: ../../flask/docs/config.rst:690
 msgid "Instance Folders"
 msgstr "インスタンスフォルダ"
 
 # ce02897abdd9459786e373ce75a97b8c
-#: ../../config.rst:623
+#: ../../flask/docs/config.rst:694
 msgid ""
 "Flask 0.8 introduces instance folders.  Flask for a long time made it "
 "possible to refer to paths relative to the application's folder directly "
@@ -1130,7 +1149,7 @@ msgstr ""
 "働くものです。"
 
 # 7e9d64e926084703ae49766dea8cff34
-#: ../../config.rst:630
+#: ../../flask/docs/config.rst:701
 msgid ""
 "With Flask 0.8 a new attribute was introduced: "
 ":attr:`Flask.instance_path`.  It refers to a new concept called the "
@@ -1145,7 +1164,7 @@ msgstr ""
 "設定ファイルを入れておくには、完璧な場所です。"
 
 # 30ee0433db8f453aa364d9177623e3f1
-#: ../../config.rst:636
+#: ../../flask/docs/config.rst:707
 msgid ""
 "You can either explicitly provide the path of the instance folder when "
 "creating the Flask application or you can let Flask autodetect the "
@@ -1158,13 +1177,13 @@ msgstr ""
 "してください::"
 
 # 39d9675d46f34da3a979584b751e6d99
-#: ../../config.rst:643
+#: ../../flask/docs/config.rst:714
 msgid "Please keep in mind that this path *must* be absolute when provided."
 msgstr ""
 "パスを提供するときは絶対パスにする\ *必要がある*\ ことを覚えておいてください。"
 
 # 39f569c593ca4dc584dbf04747324d3d
-#: ../../config.rst:645
+#: ../../flask/docs/config.rst:716
 msgid ""
 "If the `instance_path` parameter is not provided the following default "
 "locations are used:"
@@ -1173,22 +1192,22 @@ msgstr ""
 "の場所が使用されます:"
 
 # dfe31c1c94c844fd985b1d829d288141
-#: ../../config.rst:648
+#: ../../flask/docs/config.rst:719
 msgid "Uninstalled module::"
 msgstr "インストールされていないmodule::"
 
 # 83f30792010c4f08b5b4b57ac2f82b3e
-#: ../../config.rst:653
+#: ../../flask/docs/config.rst:724
 msgid "Uninstalled package::"
 msgstr "インストールされていないpackage::"
 
 # 83d7b76a8fd34397ad66ccf015dccbc2
-#: ../../config.rst:659
+#: ../../flask/docs/config.rst:730
 msgid "Installed module or package::"
 msgstr "インストールされているmoduleまたはpackage::"
 
 # cdc5ad12afd74b7fb96b54d9c3edb358
-#: ../../config.rst:664
+#: ../../flask/docs/config.rst:735
 msgid ""
 "``$PREFIX`` is the prefix of your Python installation.  This can be "
 "``/usr`` or the path to your virtualenv.  You can print the value of "
@@ -1202,7 +1221,7 @@ msgstr ""
 "ために、\ ``sys.prefix``\ の値を表示することができます。"
 
 # cfac90b482cd46299b726b20bb1d491a
-#: ../../config.rst:668
+#: ../../flask/docs/config.rst:739
 msgid ""
 "Since the config object provided loading of configuration files from "
 "relative filenames we made it possible to change the loading via "
@@ -1219,7 +1238,7 @@ msgstr ""
 "のコンストラクタで\ `instance_relative_config`\ スイッチをとおして可能です。"
 
 # fb70a04d5762406880e7c560d612057a
-#: ../../config.rst:677
+#: ../../flask/docs/config.rst:748
 msgid ""
 "Here is a full example of how to configure Flask to preload the config "
 "from a module and then override the config from a file in the instance "
@@ -1230,7 +1249,7 @@ msgstr ""
 "するやり方の、一通りの（不足のない）例がこちらです::"
 
 # e34911ce6a084e8689600ddd326fd343
-#: ../../config.rst:685
+#: ../../flask/docs/config.rst:756
 msgid ""
 "The path to the instance folder can be found via the "
 ":attr:`Flask.instance_path`.  Flask also provides a shortcut to open a "
@@ -1242,7 +1261,40 @@ msgstr ""
 "よって提供します。"
 
 # 29429f5061b949aa9be6d7ced1bef153
-#: ../../config.rst:689
+#: ../../flask/docs/config.rst:760
 msgid "Example usage for both::"
 msgstr "両者の使用例::"
+
+# 44d1b8d293b740c4900e570f15b43c97
+#~ msgid "(On Windows, use ``set`` instead of ``export``.)"
+#~ msgstr "（Windowsでは、\ ``export``\ の代わりに\ ``set``\ を使用します。）"
+
+# 67bfe8c7890f4815b125dc4b57a5b385
+#~ msgid "Default: ``timedelta(hours=12)`` (``43200`` seconds)"
+#~ msgstr "標準設定: ``timedelta(hours=12)`` (``43200`` 秒)"
+
+# d7414a5346664e6a9cec906bcdc0b3b2
+#~ msgid ""
+#~ "Serialize objects to ASCII-encoded JSON."
+#~ " If this is disabled, the JSON "
+#~ "will be returned as a Unicode "
+#~ "string, or encoded as ``UTF-8`` by "
+#~ "``jsonify``. This has security implications"
+#~ " when rendering the JSON into "
+#~ "JavaScript in templates, and should "
+#~ "typically remain enabled."
+#~ msgstr ""
+#~ "オブジェクトをASCIIにエンコードしたJSONへシリアライズします。もしこれが"
+#~ "無効にされている場合、\ ``jsonify``\ によって、JSONはUnicode文字列、または\ "
+#~ "``UTF-8``\ へエンコードされてから返されます。テンプレートの中でJSONを"
+#~ "JavaScriptへ変換するとき、これはセキュリティ上の問題を生じる可能性があり、"
+#~ "したがって典型的には有効のままにしておくべきです。"
+
+# 3677c27aacac45ce82578770a0ec124f
+#~ msgid "On Windows systems use the `set` builtin instead::"
+#~ msgstr "Windowsシステムでは代わりに組込みの\ `set`\ を使用します::"
+
+# 1f44852646314bbdb716b576656e9ddd
+#~ msgid "On Windows systems use the ``set`` builtin instead::"
+#~ msgstr "Windowsシステムでは代わりに組込みの\ `set`\ を使用します::"
 

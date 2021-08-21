@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 1.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 20:39+0900\n"
+"POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,47 +16,50 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../flask/docs/index.rst:6
+#: ../../flask/docs/index.rst:4
 msgid "Welcome to Flask"
 msgstr ""
 
-#: ../../flask/docs/index.rst:13
-msgid "Welcome to Flask's documentation. Get started with :ref:`installation` and then get an overview with the :ref:`quickstart`. There is also a more detailed :ref:`tutorial` that shows how to create a small but complete application with Flask. Common patterns are described in the :ref:`patterns` section. The rest of the docs describe each component of Flask in detail, with a full reference in the :ref:`api` section."
+#: ../../flask/docs/index.rst:None
+msgid "Flask: web development, one drop at a time"
 msgstr ""
 
-#: ../../flask/docs/index.rst:20
+#: ../../flask/docs/index.rst:11
+msgid "Welcome to Flask's documentation. Get started with :doc:`installation` and then get an overview with the :doc:`quickstart`. There is also a more detailed :doc:`tutorial/index` that shows how to create a small but complete application with Flask. Common patterns are described in the :doc:`patterns/index` section. The rest of the docs describe each component of Flask in detail, with a full reference in the :doc:`api` section."
+msgstr ""
+
+#: ../../flask/docs/index.rst:19
 msgid "Flask depends on the `Jinja`_ template engine and the `Werkzeug`_ WSGI toolkit. The documentation for these libraries can be found at:"
 msgstr ""
 
-#: ../../flask/docs/index.rst:23
-msgid "`Jinja documentation <http://jinja.pocoo.org/docs>`_"
+#: ../../flask/docs/index.rst:22
+msgid "`Jinja documentation <https://jinja.palletsprojects.com/>`_"
 msgstr ""
 
-#: ../../flask/docs/index.rst:24
+#: ../../flask/docs/index.rst:23
 msgid "`Werkzeug documentation <https://werkzeug.palletsprojects.com/>`_"
 msgstr ""
 
-#: ../../flask/docs/index.rst:31
+#: ../../flask/docs/index.rst:30
 msgid "User's Guide"
 msgstr ""
 
-#: ../../flask/docs/index.rst:33
+#: ../../flask/docs/index.rst:32
 msgid "This part of the documentation, which is mostly prose, begins with some background information about Flask, then focuses on step-by-step instructions for web development with Flask."
 msgstr ""
 
-#: ../../flask/docs/index.rst:65
+#: ../../flask/docs/index.rst:66
 msgid "API Reference"
 msgstr ""
 
-#: ../../flask/docs/index.rst:67
+#: ../../flask/docs/index.rst:68
 msgid "If you are looking for information on a specific function, class or method, this part of the documentation is for you."
 msgstr ""
 
-#: ../../flask/docs/index.rst:77
+#: ../../flask/docs/index.rst:78
 msgid "Additional Notes"
 msgstr ""
 
-#: ../../flask/docs/index.rst:79
+#: ../../flask/docs/index.rst:80
 msgid "Design notes, legal information and changelog are here for the interested."
 msgstr ""
-

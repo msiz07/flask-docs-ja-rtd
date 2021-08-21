@@ -8,22 +8,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
+"Generated-By: Babel 2.9.1\n"
 
 # b5a06811ba1442cbaa47e78ac9f610b0
-#: ../../tutorial/static.rst:2
+#: ../../flask/docs/tutorial/static.rst:2
 msgid "Static Files"
 msgstr "静的ファイル"
 
 # 25f0b03a7fd0442c85891f62036d28cb
-#: ../../tutorial/static.rst:4
+#: ../../flask/docs/tutorial/static.rst:4
 msgid ""
 "The authentication views and templates work, but they look very plain "
 "right now. Some `CSS`_ can be added to add style to the HTML layout you "
@@ -36,7 +36,7 @@ msgstr ""
 "*静的（static）*\ ファイルになります。"
 
 # a0a4cc1a8f614a13b8d0c4ff4826a1cb
-#: ../../tutorial/static.rst:9
+#: ../../flask/docs/tutorial/static.rst:9
 msgid ""
 "Flask automatically adds a ``static`` view that takes a path relative to "
 "the ``flaskr/static`` directory and serves it. The ``base.html`` template"
@@ -47,7 +47,7 @@ msgstr ""
 "テンプレートは、既に\ ``style.css``\ ファイルへのリンクを持っています:"
 
 # 271ff208c5ec47e7a085da1a11e288e5
-#: ../../tutorial/static.rst:17
+#: ../../flask/docs/tutorial/static.rst:17
 msgid ""
 "Besides CSS, other types of static files might be files with JavaScript "
 "functions, or a logo image. They are all placed under the "
@@ -59,7 +59,7 @@ msgstr ""
 "下に置かれ、\ ``url_for('static, filename='...')``\ を使って参照されます。"
 
 # 4fe3ae2e836d4a3f83351e4488a8b243
-#: ../../tutorial/static.rst:22
+#: ../../flask/docs/tutorial/static.rst:22
 msgid ""
 "This tutorial isn't focused on how to write CSS, so you can just copy the"
 " following into the ``flaskr/static/style.css`` file:"
@@ -68,12 +68,12 @@ msgstr ""
 "``flaskr/static/style.css``\ ファイルにただコピーしてください:"
 
 # 96fb687c0bf448b7a5b6bd800d7db772
-#: ../../tutorial/static.rst:25
+#: ../../flask/docs/tutorial/static.rst:25
 msgid "``flaskr/static/style.css``"
 msgstr ""
 
 # 37eae0d4df40433caaa5db70f85dcc83
-#: ../../tutorial/static.rst:55
+#: ../../flask/docs/tutorial/static.rst:55
 msgid ""
 "You can find a less compact version of ``style.css`` in the :gh:`example "
 "code <examples/tutorial/flaskr/static/style.css>`."
@@ -82,7 +82,7 @@ msgstr ""
 "内容のある\ ``style.css``\ が見つかります。"
 
 # eaa4c58a4d274a38a3d2f95904a9d597
-#: ../../tutorial/static.rst:58
+#: ../../flask/docs/tutorial/static.rst:58
 msgid ""
 "Go to http://127.0.0.1:5000/auth/login and the page should look like the "
 "screenshot below."
@@ -90,8 +90,11 @@ msgstr ""
 "https://127.0.0.1:5000/auth/login\ へ行くと、以下のスクリーンショットの"
 "ようなページが見られるはずです。"
 
+msgid "screenshot of login page"
+msgstr ""
+
 # 6f62a788687e4a6795bf3e421944e851
-#: ../../tutorial/static.rst:66
+#: ../../flask/docs/tutorial/static.rst:66
 msgid ""
 "You can read more about CSS from `Mozilla's documentation <CSS_>`_. If "
 "you change a static file, refresh the browser page. If the change doesn't"
@@ -102,7 +105,7 @@ msgstr ""
 "変更が表示されない場合、ブラウザのキャッシュのクリアを試してください。"
 
 # 9da2bf151a724b248330eeb59dc332d3
-#: ../../tutorial/static.rst:72
+#: ../../flask/docs/tutorial/static.rst:72
 msgid "Continue to :doc:`blog`."
 msgstr ":doc:`blog`\ へ続きます。"
 

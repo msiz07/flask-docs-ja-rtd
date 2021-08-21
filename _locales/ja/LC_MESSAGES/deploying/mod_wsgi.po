@@ -8,34 +8,34 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
+"Generated-By: Babel 2.9.1\n"
 
 # 5a83eb11c0cb48a38a7d6a13719c5e82
-#: ../../deploying/mod_wsgi.rst:4
+#: ../../flask/docs/deploying/mod_wsgi.rst:2
 msgid "mod_wsgi (Apache)"
 msgstr ""
 
 # 79c514e33b5e4599ab3c809567ff4e92
-#: ../../deploying/mod_wsgi.rst:6
+#: ../../flask/docs/deploying/mod_wsgi.rst:4
 msgid "If you are using the `Apache`_ webserver, consider using `mod_wsgi`_."
 msgstr ""
 "もし\ `Apache`_\ ウェブサーバを使っているときは、\ `mod_wsgi`_\ を使うことを"
 "検討してください。"
 
 # e390923b0d33415a9c7336cb9e045c6e
-#: ../../deploying/mod_wsgi.rst:8
+#: ../../flask/docs/deploying/mod_wsgi.rst:6
 msgid "Watch Out"
 msgstr "注意"
 
 # cb8c815da58a4c8db8ea534a934c5f7e
-#: ../../deploying/mod_wsgi.rst:10
+#: ../../flask/docs/deploying/mod_wsgi.rst:8
 msgid ""
 "Please make sure in advance that any ``app.run()`` calls you might have "
 "in your application file are inside an ``if __name__ == '__main__':`` "
@@ -50,12 +50,12 @@ msgstr ""
 "app.run()が呼び出されないことを、まずは確認してください。"
 
 # 8861f3e7f5a14156bba73ecf020a62d1
-#: ../../deploying/mod_wsgi.rst:19
+#: ../../flask/docs/deploying/mod_wsgi.rst:17
 msgid "Installing `mod_wsgi`"
 msgstr "`mod_wsgi`\ のインストール"
 
 # ec8f509ea77a45028d25ef104229bf00
-#: ../../deploying/mod_wsgi.rst:21
+#: ../../flask/docs/deploying/mod_wsgi.rst:19
 msgid ""
 "If you don't have `mod_wsgi` installed yet you have to either install it "
 "using a package manager or compile it yourself.  The mod_wsgi "
@@ -66,7 +66,7 @@ msgstr ""
 "instructions`_\ はUNIXシステム上でのソースのインストールをカバーします。"
 
 # ff5bb394eff74d989d6a6a0ec2ef86ac
-#: ../../deploying/mod_wsgi.rst:25
+#: ../../flask/docs/deploying/mod_wsgi.rst:23
 msgid ""
 "If you are using Ubuntu/Debian you can apt-get it and activate it as "
 "follows:"
@@ -75,7 +75,7 @@ msgstr ""
 "して有効にできます:"
 
 # 72c5f1a6e94446eda7d03e0e705b162c
-#: ../../deploying/mod_wsgi.rst:32
+#: ../../flask/docs/deploying/mod_wsgi.rst:30
 msgid ""
 "If you are using a yum based distribution (Fedora, OpenSUSE, etc..) you "
 "can install it as follows:"
@@ -84,7 +84,7 @@ msgstr ""
 "場合、以下のようにインストール可能です:"
 
 # 335b0f2447cd465e9192cfa6a760e7ea
-#: ../../deploying/mod_wsgi.rst:39
+#: ../../flask/docs/deploying/mod_wsgi.rst:37
 msgid ""
 "On FreeBSD install `mod_wsgi` by compiling the `www/mod_wsgi` port or by "
 "using pkg_add:"
@@ -93,7 +93,7 @@ msgstr ""
 "するかpkg_addを使います:"
 
 # 596ed9be257449efa6da9d3c6bb3550f
-#: ../../deploying/mod_wsgi.rst:46
+#: ../../flask/docs/deploying/mod_wsgi.rst:44
 msgid ""
 "If you are using pkgsrc you can install `mod_wsgi` by compiling the "
 "`www/ap2-wsgi` package."
@@ -102,7 +102,7 @@ msgstr ""
 "パッケージをコンパイルします。"
 
 # 85731f4f9eca4132a466b2dbe12dc954
-#: ../../deploying/mod_wsgi.rst:49
+#: ../../flask/docs/deploying/mod_wsgi.rst:47
 msgid ""
 "If you encounter segfaulting child processes after the first apache "
 "reload you can safely ignore them.  Just restart the server."
@@ -111,12 +111,12 @@ msgstr ""
 "それらを安全に無視できます。ただサーバを再スタートしてください。"
 
 # 92873f9670f7478fbd7976209f3187f3
-#: ../../deploying/mod_wsgi.rst:53
+#: ../../flask/docs/deploying/mod_wsgi.rst:51
 msgid "Creating a `.wsgi` file"
 msgstr "`.wsgi`\ ファイルの作成"
 
 # f77f7c8475b24544afed68c5d1135d68
-#: ../../deploying/mod_wsgi.rst:55
+#: ../../flask/docs/deploying/mod_wsgi.rst:53
 msgid ""
 "To run your application you need a :file:`yourapplication.wsgi` file. "
 "This file contains the code `mod_wsgi` is executing on startup to get the"
@@ -129,12 +129,12 @@ msgstr ""
 "呼ばれるオブジェクトがアプリケーションとして使用されます。"
 
 # 20881425ddf944819aaeed6df89f7014
-#: ../../deploying/mod_wsgi.rst:60
+#: ../../flask/docs/deploying/mod_wsgi.rst:58
 msgid "For most applications the following file should be sufficient::"
 msgstr "殆どのアプリケーションでは以下のファイルで十分なはずです::"
 
 # a49aa39e78494ec1b76170d0e61d23bb
-#: ../../deploying/mod_wsgi.rst:64
+#: ../../flask/docs/deploying/mod_wsgi.rst:62
 msgid ""
 "If a factory function is used in a :file:`__init__.py` file, then the "
 "function should be imported::"
@@ -143,7 +143,7 @@ msgstr ""
 "関数がimportされるはずです::"
 
 # 8ae20e375f3b4a3abe803e05e5ea4776
-#: ../../deploying/mod_wsgi.rst:69
+#: ../../flask/docs/deploying/mod_wsgi.rst:67
 msgid ""
 "If you don't have a factory function for application creation but a "
 "singleton instance you can directly import that one as `application`."
@@ -152,7 +152,7 @@ msgstr ""
 "を使う場合、そのインスタンスを\ `application`\ として直接importできます。"
 
 # e814d2a5388d4422ad80e057dd74feab
-#: ../../deploying/mod_wsgi.rst:72
+#: ../../flask/docs/deploying/mod_wsgi.rst:70
 msgid ""
 "Store that file somewhere that you will find it again (e.g.: "
 ":file:`/var/www/yourapplication`) and make sure that `yourapplication` "
@@ -171,12 +171,12 @@ msgstr ""
 "``.wsgi``\ ファイル中のpathをpatchするだけという選択肢があります::"
 
 # 0cfca342a5cd4206bf21740133f33295
-#: ../../deploying/mod_wsgi.rst:84
+#: ../../flask/docs/deploying/mod_wsgi.rst:82
 msgid "Configuring Apache"
 msgstr "Apacheの設定"
 
 # 1ab510107c3944c3b29a3045ba4688bb
-#: ../../deploying/mod_wsgi.rst:86
+#: ../../flask/docs/deploying/mod_wsgi.rst:84
 msgid ""
 "The last thing you have to do is to create an Apache configuration file "
 "for your application.  In this example we are telling `mod_wsgi` to "
@@ -187,7 +187,7 @@ msgstr ""
 "理由から違うユーザとしてアプリケーションを実行するよう伝えています:"
 
 # f2597da070f541d69d507f407d83ea68
-#: ../../deploying/mod_wsgi.rst:106
+#: ../../flask/docs/deploying/mod_wsgi.rst:104
 msgid ""
 "Note: WSGIDaemonProcess isn't implemented in Windows and Apache will "
 "refuse to run with the above configuration. On a Windows system, "
@@ -197,7 +197,7 @@ msgstr ""
 "での実行を拒否します。Windowsシステム上では、それらの行を消去してください:"
 
 # 83e2b08d710548c0b3f93c885a23bfeb
-#: ../../deploying/mod_wsgi.rst:120
+#: ../../flask/docs/deploying/mod_wsgi.rst:118
 msgid ""
 "Note: There have been some changes in access control configuration for "
 "`Apache 2.4`_."
@@ -205,7 +205,7 @@ msgstr ""
 "注目: `Apache 2.4`_\ ではアクセス制御の設定にいくらか変更がありました。"
 
 # 9b7277157cf5420c9e58670253f8f57c
-#: ../../deploying/mod_wsgi.rst:125
+#: ../../flask/docs/deploying/mod_wsgi.rst:123
 msgid ""
 "Most notably, the syntax for directory permissions has changed from httpd"
 " 2.2"
@@ -213,35 +213,35 @@ msgstr ""
 "最も目立つのは、ディレクトリのアクセス権の文法の変更です。以下のhttpd 2.2用から"
 
 # eeaa0d4d5a434fb98625ec45ddd4a343
-#: ../../deploying/mod_wsgi.rst:132
+#: ../../flask/docs/deploying/mod_wsgi.rst:130
 msgid "to httpd 2.4 syntax"
 msgstr "こちらのhttpd 2.4文法になりました"
 
 # f501517512f74fb19ce13ea81e4603b7
-#: ../../deploying/mod_wsgi.rst:139
+#: ../../flask/docs/deploying/mod_wsgi.rst:137
 msgid "For more information consult the `mod_wsgi documentation`_."
 msgstr "さらなる情報は\ `mod_wsgi documentation`_\ を調べてください。"
 
 # 2ba41d66e15a44e697e9947290aac2aa
-#: ../../deploying/mod_wsgi.rst:147
+#: ../../flask/docs/deploying/mod_wsgi.rst:145
 msgid "Troubleshooting"
 msgstr ""
 
 # feeeacf082664e878c43de9525788570
-#: ../../deploying/mod_wsgi.rst:149
+#: ../../flask/docs/deploying/mod_wsgi.rst:147
 msgid "If your application does not run, follow this guide to troubleshoot:"
 msgstr ""
 "もし自分のアプリケーションが走らないとき、トラブル対応のために以下のガイドに"
 "従ってください:"
 
 # 92282cdaf8454a28a4c4d2f9b44c3062
-#: ../../deploying/mod_wsgi.rst:155
+#: ../../flask/docs/deploying/mod_wsgi.rst:153
 msgid "**Problem:** application does not run, errorlog shows SystemExit ignored"
 msgstr ""
 "**問題:** アプリケーションが走らず、エラーログは無視されたSystemExitを示しています"
 
 # bdad99a152d44b8eae001d65475826a4
-#: ../../deploying/mod_wsgi.rst:152
+#: ../../flask/docs/deploying/mod_wsgi.rst:150
 msgid ""
 "You have an ``app.run()`` call in your application file that is not "
 "guarded by an ``if __name__ == '__main__':`` condition.  Either remove "
@@ -253,12 +253,12 @@ msgstr ""
 "呼び出しをファイルから消去するか、示したようなifブロックの内側に押し入れます。"
 
 # 741cf920dc1d4273b153ad5388c4e057
-#: ../../deploying/mod_wsgi.rst:162
+#: ../../flask/docs/deploying/mod_wsgi.rst:160
 msgid "**Problem:** application gives permission errors"
 msgstr "**問題** アプリケーションがpermission errors（権限エラー）を出します"
 
 # c3532b13c7894b029d434d07ac6fd994
-#: ../../deploying/mod_wsgi.rst:158
+#: ../../flask/docs/deploying/mod_wsgi.rst:156
 msgid ""
 "Probably caused by your application running as the wrong user.  Make sure"
 " the folders the application needs access to have the proper privileges "
@@ -272,12 +272,12 @@ msgstr ""
 "ください。"
 
 # 24f934218ae34b9c9a74a845adf37112
-#: ../../deploying/mod_wsgi.rst:178
+#: ../../flask/docs/deploying/mod_wsgi.rst:176
 msgid "**Problem:** application dies with an error on print"
 msgstr "**問題** アプリケーションがエラーを表示して死にます"
 
 # 4d2baf2b51024ea295a706cb6438a3c1
-#: ../../deploying/mod_wsgi.rst:165
+#: ../../flask/docs/deploying/mod_wsgi.rst:163
 msgid ""
 "Keep in mind that mod_wsgi disallows doing anything with "
 ":data:`sys.stdout` and :data:`sys.stderr`.  You can disable this "
@@ -289,7 +289,7 @@ msgstr ""
 "を\ ``off``\ にすることで無効にできます:"
 
 # 9596c01ff5d04dea8d7f9324ae5a2e84
-#: ../../deploying/mod_wsgi.rst:174
+#: ../../flask/docs/deploying/mod_wsgi.rst:172
 msgid ""
 "Alternatively you can also replace the standard out in the .wsgi file "
 "with a different stream::"
@@ -298,12 +298,12 @@ msgstr ""
 "可能です::"
 
 # d8e0a4ab63a947b59fc7c4e23d6603c7
-#: ../../deploying/mod_wsgi.rst:188
+#: ../../flask/docs/deploying/mod_wsgi.rst:186
 msgid "**Problem:** accessing resources gives IO errors"
 msgstr "**問題** リソースへアクセスするとIOエラーを出します"
 
 # c505e5e2e3f04beea8034f476abb6889
-#: ../../deploying/mod_wsgi.rst:181
+#: ../../flask/docs/deploying/mod_wsgi.rst:179
 msgid ""
 "Your application probably is a single .py file you symlinked into the "
 "site-packages folder.  Please be aware that this does not work, instead "
@@ -316,7 +316,7 @@ msgstr ""
 "をパッケージへ変換してください。"
 
 # c8e981d7b31c47c19b27cfd594e81228
-#: ../../deploying/mod_wsgi.rst:186
+#: ../../flask/docs/deploying/mod_wsgi.rst:184
 msgid ""
 "The reason for this is that for non-installed packages, the module "
 "filename is used to locate the resources and for symlinks the wrong "
@@ -327,12 +327,12 @@ msgstr ""
 "しまうためです。"
 
 # 9b6ecabc2f8847a0b3ca744abc4ad495
-#: ../../deploying/mod_wsgi.rst:191
+#: ../../flask/docs/deploying/mod_wsgi.rst:189
 msgid "Support for Automatic Reloading"
 msgstr "自動リロードのサポート"
 
 # 78dbe9a2175545cbadd88e917766a30f
-#: ../../deploying/mod_wsgi.rst:193
+#: ../../flask/docs/deploying/mod_wsgi.rst:191
 msgid ""
 "To help deployment tools you can activate support for automatic "
 "reloading.  Whenever something changes the ``.wsgi`` file, `mod_wsgi` "
@@ -343,19 +343,19 @@ msgstr ""
 "すべてのデーモンプロセスを再読み込み（reload）します。"
 
 # abe4c91d0f384e5bb1edac7071a0f2bc
-#: ../../deploying/mod_wsgi.rst:197
+#: ../../flask/docs/deploying/mod_wsgi.rst:195
 msgid "For that, just add the following directive to your `Directory` section:"
 msgstr ""
 "そのためには、ただ以下のディレクティブを自分の\ `Directory` セクションへ追加"
 "します:"
 
 # 6fd4ed7e63134939bad8eaedff2356bd
-#: ../../deploying/mod_wsgi.rst:204
+#: ../../flask/docs/deploying/mod_wsgi.rst:202
 msgid "Working with Virtual Environments"
 msgstr "Virtual Environmentを使った作業"
 
 # 38fde1d5f82d4937a8cf9d2f02dbc7bb
-#: ../../deploying/mod_wsgi.rst:206
+#: ../../flask/docs/deploying/mod_wsgi.rst:204
 msgid ""
 "Virtual environments have the advantage that they never install the "
 "required dependencies system wide so you have a better control over what "
@@ -368,22 +368,24 @@ msgstr ""
 "少し変更する必要があります。"
 
 # 68cb3e525782496798da304e24972e4f
-#: ../../deploying/mod_wsgi.rst:211
+#: ../../flask/docs/deploying/mod_wsgi.rst:209
 msgid "Add the following lines to the top of your ``.wsgi`` file::"
 msgstr "``.wsgi``\ ファイルの最上部に以下の行を追加してください::"
 
-# 6abe8405e25e4d229320e53a42a34405
-#: ../../deploying/mod_wsgi.rst:216
-msgid "For Python 3 add the following lines to the top of your ``.wsgi`` file::"
-msgstr ""
-"Python3では、\ ``.wsgi``\ ファイルの最上部に以下の行を追加してください::"
-
 # 2e1cc2136af14e7e9d380000a6ca00b2
-#: ../../deploying/mod_wsgi.rst:222
+#: ../../flask/docs/deploying/mod_wsgi.rst:215
 msgid ""
 "This sets up the load paths according to the settings of the virtual "
 "environment.  Keep in mind that the path has to be absolute."
 msgstr ""
 "これはロード用のpathをvirtual environmentの設定に沿って設定します。pathは"
 "絶対パスにする必要があることを忘れないでください。"
+
+# 6abe8405e25e4d229320e53a42a34405
+#~ msgid ""
+#~ "For Python 3 add the following "
+#~ "lines to the top of your ``.wsgi``"
+#~ " file::"
+#~ msgstr ""
+#~ "Python3では、\ ``.wsgi``\ ファイルの最上部に以下の行を追加してください::"
 
