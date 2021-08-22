@@ -42,13 +42,13 @@ msgid ""
 " simple and useful in some cases, it can cause some tricky issues as the "
 "project grows."
 msgstr ""
-"最も直観的なFlaskアプリケーションの作成方法は、コードの最上部にグローバルな\ "
+"最も直観的なFlaskアプリケーションの作成方法は、コードの最上部にグローバルな"
 "（モジュールのトップレベルとほぼ同じ意味合いで、Pythonで変数などのスコープや"
 "名前解決でLEGBルール（Local, Enclosing, Global, Built-in）と呼ばれるものの"
-"Globalにあたるもの）"
-":class:`Flask`\ インスタンスを直接作成することで、前ページの例「Hello, "
-"World!」のようなやり方です。これは場合によってはシンプルで便利ですが、"
-"プロジェクトが成長すると何かしら扱いにくい問題を引き起こす可能性があります。"
+"Globalにあたるもの） :class:`Flask`\ インスタンスを直接作成することで、前"
+"ページの例「Hello, World!」のようなやり方です。これは場合によってはシンプル"
+"で便利ですが、プロジェクトが成長すると何かしら扱いにくい問題を引き起こす"
+"可能性があります。"
 
 # 0a76c7e9ba3b46a899c6a4ad0181bce2
 #: ../../flask/docs/tutorial/factory.rst:16
