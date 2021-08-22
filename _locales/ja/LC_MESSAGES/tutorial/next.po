@@ -39,7 +39,6 @@ msgstr ""
 
 # e2c03ca45e4546eaa3fd06cbeadd72e3
 #: ../../flask/docs/tutorial/next.rst:10
-#, fuzzy
 msgid ""
 "There's a lot more to Flask than what you've seen so far. Even so, you're"
 " now equipped to start developing your own web applications. Check out "
@@ -52,12 +51,12 @@ msgid ""
 msgstr ""
 "ここまで見てきたものよりも、さらに多くのものがFlaskにはあります。そうだと"
 "しても、今では、自分だけのwebアプリケーション開発を始められるだけのものを"
-"身に付けています。Flaskで何ができるかの概要のために\ :ref:`quickstart`\ を"
-"確認し、それから学習を続けるためにドキュメントを掘り下げてください。Flaskは\ "
-"`Jinja`_, `Click`_, `Werkzeug`_, そして\ `ItsDangerous`_\ を、見えない"
-"ところで使っており、そしてそれらも全て自身のドキュメントを持っています。"
+"身に付けています。Flaskで何ができるかの概要のために :doc:`/quickstart` を"
+"確認し、それから学習を続けるためにドキュメントを掘り下げてください。Flask"
+"は `Jinja`_、`Click`_、`Werkzeug`_、そして `ItsDangerous`_ を見えない"
+"ところで使っており、そしてそれらにも全て自身のドキュメントがあります。"
 "データベースを使った作業やformデータの検証のようなタスクをより容易かつ"
-"強力に行えるようになる\ :ref:`extensions`\ にも興味を持つことでしょう。"
+"強力に行えるようになる :doc:`/extensions` にも興味を持つことでしょう。"
 
 # 85a0ef8bfab1415388e842a14cba2c2b
 #: ../../flask/docs/tutorial/next.rst:19

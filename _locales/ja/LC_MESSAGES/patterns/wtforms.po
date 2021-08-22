@@ -39,7 +39,6 @@ msgstr ""
 
 # 54c7aa6ceb664bd49eaed4f4dab091db
 #: ../../flask/docs/patterns/wtforms.rst:10
-#, fuzzy
 msgid ""
 "When you are working with WTForms you have to define your forms as "
 "classes first.  I recommend breaking up the application into multiple "
@@ -47,9 +46,8 @@ msgid ""
 "forms."
 msgstr ""
 "WTFormsを使って作業するとき、最初に、フォームをクラスとして定義する必要が"
-"あります。そのために、アプリケーションを複数のモジュールに分解し（\ "
-":ref:`larger-applications`\ ）、フォーム用に区別されたモジュールを追加する"
-"ことをお勧めします。"
+"あります。そのために、アプリケーションを複数のモジュールに分解し（:doc:"
+"`packages`）、フォーム用に区別されたモジュールを追加することをお勧めします。"
 
 # 7dd7274d25c542268cdfa74296bc7a4b
 #: ../../flask/docs/patterns/wtforms.rst:15
@@ -89,14 +87,13 @@ msgstr "view関数の中では、このフォームの使い方は以下のよ�
 
 # b3ff962ebda84329a5ef48354013aa5f
 #: ../../flask/docs/patterns/wtforms.rst:57
-#, fuzzy
 msgid ""
 "Notice we're implying that the view is using SQLAlchemy here "
 "(:doc:`sqlalchemy`), but that's not a requirement, of course.  Adapt the "
 "code as necessary."
 msgstr ""
-"ここでは暗黙的にviewがsqlalchemy（\ :ref:`sqlalchemy-pattern`\ ）を使って"
-"いますが、それは（WTFormsの）要件ではないことに注意してください。必要に応"
+"ここでは暗黙的にviewがsqlalchemy（:doc:`sqlalchemy`）を使っていますが、"
+"もちろんそれは（WTFormsの）要件ではないことに注意してください。必要に応"
 "じてコードを調整してください。"
 
 # e8b707d990174f7cb0885293904cd486
@@ -164,7 +161,6 @@ msgstr ""
 
 # 52e074beaa914f9c8b5894412bc03a98
 #: ../../flask/docs/patterns/wtforms.rst:97
-#, fuzzy
 msgid ""
 "This macro accepts a couple of keyword arguments that are forwarded to "
 "WTForm's field function, which renders the field for us.  The keyword "
@@ -174,12 +170,12 @@ msgid ""
 " we have to tell Jinja2 that this data is already HTML-escaped with the "
 "``|safe`` filter."
 msgstr ""
-"このマクロはWTFormsの、我々のためにフィールドを表示する、field関数へ転送"
-"するための、2つ一組のキーワード引数（a couple of keyword arguments）を受け"
+"このマクロは、我々のためにフィールドを表示する、WTFormsのfield関数へ転送"
+"するための、2つ１組のキーワード引数（a couple of keyword arguments）を受け"
 "付けます。キーワード引数はHTML属性として挿入されます。そこで、例えば、"
-"input要素へクラスを追加するには\ ``render_field(form.username, "
-"class='username')``\ と呼び出せます。WTFormsは標準的なPythonのunicode文字列"
-"を返すため、このデータは既にHTML上エスケープされていることを、\ ``|safe``\ "
+"（HTMLの）input要素へクラスを追加するには ``render_field(form.username, "
+"class='username')`` と呼び出せます。WTFormsは標準的なPython文字列"
+"を返すため、このデータは既にHTML上エスケープされていることを、``|safe`` "
 "フィルターを使ってJinja2に伝える必要があることに注意してください。"
 
 # 7767ab81bee441ecbaa9ab8f229a8569

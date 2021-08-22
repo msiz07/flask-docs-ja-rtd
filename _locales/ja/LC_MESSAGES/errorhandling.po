@@ -19,20 +19,23 @@ msgstr ""
 
 # a875ccc78e6f4625a64ba8ebd52e5783
 #: ../../flask/docs/errorhandling.rst:2
-#, fuzzy
 msgid "Handling Application Errors"
-msgstr "アプリケーションのエラーのデバッグ"
+msgstr "アプリケーションのエラーの処理"
 
 # aaf066c9ee164e79a528c2c570527934
 #: ../../flask/docs/errorhandling.rst:4
-#, fuzzy, python-format
 msgid ""
 "Applications fail, servers fail. Sooner or later you will see an "
 "exception in production. Even if your code is 100% correct, you will "
 "still see exceptions from time to time. Why? Because everything else "
 "involved will fail. Here are some situations where perfectly fine code "
 "can lead to server errors:"
-msgstr "アプリケーションには障害が発生し、サーバにも障害が発生します。遅かれ早かれ、本番環境で例外（exception）が見つかるでしょう。もしコードが100%正しいとしても、時には例外が見つかります。なぜでしょうか？コード以外の関連する全てモノに障害が発生するためです。ここでは、完全によくできたコードがサーバのエラーに至る状況をいくつか示します:"
+msgstr ""
+"アプリケーションには障害が発生し、サーバにも障害が発生します。遅かれ"
+"早かれ、本番環境で例外（exception）が見つかるでしょう。もしコードが100%"
+"正しいとしても、時には例外が見つかります。なぜでしょうか？コード以外の"
+"関連する全てモノに障害が発生するためです。ここでは、完全によくできた"
+"コードがサーバのエラーに至る状況をいくつか示します:"
 
 # 285e029b8cc24fd0975e8249641d20c4
 #: ../../flask/docs/errorhandling.rst:10
@@ -73,7 +76,6 @@ msgstr "サーバから他のシステムへのネットワーク接続に障害
 
 # 10721206cc274416a14aff2e8c7bb2d9
 #: ../../flask/docs/errorhandling.rst:19
-#, fuzzy
 msgid ""
 "And that's just a small sample of issues you could be facing. So how do "
 "we deal with that sort of problem? By default if your application runs in"
@@ -81,16 +83,19 @@ msgid ""
 "simple page for you and log the exception to the "
 ":attr:`~flask.Flask.logger`."
 msgstr ""
-"そして、これは直面するであろう問題の小さなサンプルでしかありません。ではこのような問題にどう対処するのでしょうか？標準設定では、もしアプリケーションが本番環境（production）モードで走っている場合、Flaskはとてもシンプルなページを表示し、\\"
-" :attr:`~flask.Flask.logger`\\ へ例外をログします。"
+"そして、これは直面するであろう問題の小さなサンプルでしかありません。では"
+"このような問題にどう対処するのでしょうか？標準設定では、もしアプリケーション"
+"が本番環境（production）モードで走っていて、例外が生じた場合、Flaskはとても"
+"シンプルなページを表示し、 :attr:`~flask.Flask.logger` へ例外をログします。"
 
 # b2f377030ee849a2a434442d22f9b78b
 #: ../../flask/docs/errorhandling.rst:24
-#, fuzzy
 msgid ""
 "But there is more you can do, and we will cover some better setups to "
 "deal with errors including custom exceptions and 3rd party tools."
-msgstr "しかし、もっとできることがあり、エラーを処理するためのより良いいくつかの準備（setup）についてこの文書で扱います。"
+msgstr ""
+"しかし、もっとできることがあり、独自の例外と3rd partyツールを含む、エラーを"
+"処理するためのより良いいくつかの準備（setup）についてこの文書で扱います。"
 
 # 3891696d55c64d0bab22dc7ed0665265
 #: ../../flask/docs/errorhandling.rst:31
@@ -99,7 +104,6 @@ msgstr "エラーログ処理ツール"
 
 # 71b7f5f7a52f49e7beece378eae0f2a7
 #: ../../flask/docs/errorhandling.rst:33
-#, fuzzy
 msgid ""
 "Sending error mails, even if just for critical ones, can become "
 "overwhelming if enough users are hitting the error and log files are "
@@ -112,35 +116,39 @@ msgid ""
 "local variables for debugging, and sends you mails based on new errors or"
 " frequency thresholds."
 msgstr ""
-"エラーメールを送信していると、たとえ非常に重大なものだけにした場合でも、多くのユーザがエラーに当たると圧倒されるものになり、ログファイルは典型的には見られなくなります。これが、アプリケーションのエラー処理のための\\"
-" `Sentry <https://sentry.io/>`_\\ を勧める理由です。それはオープンソースのプロジェクトとして\\ "
-"`GitHub上 <https://github.com/getsentry/sentry>`_\\ で入手可能であり、無料で試すことのできる\\"
-" `ホストされたバージョン <https://sentry.io/signup/>`_\\ "
-"としても利用可能です。Sentryは重複するエラーを収集し、スタックトレース全体とローカル変数をデバッグのために捕捉し、そして新しいエラーであるか、もしくは閾値を超える頻度であることに基づいてメール送信します。"
+"エラーメールを送信していると、たとえ非常に重大なものだけにした場合でも、"
+"多くのユーザがエラーに当たると圧倒されるものになり、典型的にはログファイル"
+"は見られなくなります。これが、アプリケーションのエラー処理のために"
+" `Sentry <https://sentry.io/>`_ を勧める理由です。それは "
+"`GitHub上 <https://github.com/getsentry/sentry>`_ でソース入手可能な"
+"プロジェクトとして利用可能であり、無料で試すことのできる `ホストされた"
+"バージョン <https://sentry.io/signup/>`_ としても利用可能です。Sentryは"
+"重複するエラーを収集し、デバッグのためにスタックトレース全体とローカル"
+"変数を捕捉し、そして新しいエラーであるか、もしくは閾値を超える頻度である"
+"ことに基づいてメール送信します。"
 
 # 666480a5278c4cae84d1382de89619d3
 #: ../../flask/docs/errorhandling.rst:44
-#, fuzzy
 msgid ""
 "To use Sentry you need to install the ``sentry-sdk`` client with extra "
 "``flask`` dependencies."
 msgstr ""
-"Sentryを使うには、\\ `sentry-sdk`\\ クライアントを、追加分の\\ `flask`\\ "
-"依存対象と一緒にインストールする必要があります::"
+"Sentryを使うには、``sentry-sdk`` クライアントを、追加分の ``flask`` "
+"依存対象と一緒にインストールする必要があります。"
 
 # 1149606e1d854910ba3d28ad6a8c7ce4
 #: ../../flask/docs/errorhandling.rst:51
-#, fuzzy
 msgid "And then add this to your Flask app:"
-msgstr "そしてそれから、以下をFlaskのappに追加します::"
+msgstr "そしてそれから、以下をFlaskのappに追加します:"
 
 # a42b114764a6494899da531583ed6dd9
 #: ../../flask/docs/errorhandling.rst:60
-#, fuzzy
 msgid ""
 "The ``YOUR_DSN_HERE`` value needs to be replaced with the DSN value you "
 "get from your Sentry installation."
-msgstr "`YOUR_DSN_HERE`\\ の値は、インストールしたSentryから得たDSNの値に置き換える必要があります。"
+msgstr ""
+"``YOUR_DSN_HERE`` の値は、インストールしたSentryから得たDSNの値に置き"
+"換える必要があります。"
 
 # c2fa84fed3f94eaf904f690a5ab34057
 #: ../../flask/docs/errorhandling.rst:63
@@ -156,38 +164,37 @@ msgstr ""
 
 # 26275a08d2fa4d1e89a6f4d01d9124d9
 #: ../../flask/docs/errorhandling.rst:69
-#, fuzzy
 msgid ""
 "Sentry also supports catching errors from a worker queue (RQ, Celery, "
 "etc.) in a similar fashion. See the `Python SDK docs "
 "<https://docs.sentry.io/platforms/python/>`__ for more information."
 msgstr ""
-"Sentryは（RQ, Celery（訳注: "
-"RQ・Celeryともに、ジョブをキューに投入し、ワーカーでキューからジョブを取り出して実行させる、ジョブキューのPythonのライブラリ）のような）ワーカーのキューでのエラーを同じように捕捉することもサポートしています。さらなる情報は\\"
-" `Python SDKドキュメント <https://docs.sentry.io/platforms/python/>`_\\ "
-"を見てください。"
+"Sentryは（RQ, Celery（訳注: RQ・Celeryともに、ジョブをキューに投入し、"
+"ワーカーでキューからジョブを取り出して実行させる、ジョブキューのPythonの"
+"ライブラリ）のような）ワーカーのキューでのエラーを同じように捕捉することも"
+"サポートしています。さらなる情報は `Python SDKドキュメント "
+"<https://docs.sentry.io/platforms/python/>`__ を見てください。"
 
 # 0692bcc0c4894d97982510686ac348a1
 #: ../../flask/docs/errorhandling.rst:72
-#, fuzzy
 msgid ""
 "`Getting started with Sentry "
 "<https://docs.sentry.io/quickstart/?platform=python>`__"
-msgstr "`Sentry入門 <https://docs/sentry.io/quickstart/?platform=python>`_"
+msgstr "`Sentry入門 <https://docs.sentry.io/quickstart/?platform=python>`__"
 
 # a353059f243f436ba5e981610db276d6
 #: ../../flask/docs/errorhandling.rst:73
-#, fuzzy
 msgid ""
 "`Flask-specific documentation "
 "<https://docs.sentry.io/platforms/python/guides/flask/>`__"
-msgstr "`Flask-特化のドキュメント <https://docs.sentry.io/platforms/python/flask/>`_\\ 。"
+msgstr ""
+"`Flask固有のドキュメント "
+"<https://docs.sentry.io/platforms/python/guides/flask/>`__"
 
 # af36f041daa54811ba60901d73a453d2
 #: ../../flask/docs/errorhandling.rst:77
-#, fuzzy
 msgid "Error Handlers"
-msgstr "エラー処理器（Error handlers）"
+msgstr "エラー処理器（Error Handlers）"
 
 #: ../../flask/docs/errorhandling.rst:79
 msgid ""
@@ -228,18 +235,17 @@ msgstr "登録"
 
 # eb825af47ef543e7b15f2b2036306145
 #: ../../flask/docs/errorhandling.rst:101
-#, fuzzy
 msgid ""
 "Register handlers by decorating a function with "
 ":meth:`~flask.Flask.errorhandler`. Or use "
 ":meth:`~flask.Flask.register_error_handler` to register the function "
 "later. Remember to set the error code when returning the response."
 msgstr ""
-":meth:`~flask.Flask.errorhandler`\\ "
-"を使って関数を修飾（decorating）してhandlerを登録します（訳注: "
-"Pythonのdecorator機能を使って登録します）。または、\\ "
-":meth:`~flask.Flask.register_error_handler`\\ "
-"を使って、後から関数を登録します。レスポンスを返すときにはエラーコードを設定することを覚えておいてください。::"
+":meth:`~flask.Flask.errorhandler` を使って関数を修飾（decorating）して"
+"handlerを登録します（訳注: Pythonのdecorator機能を使って登録します）。"
+"または、:meth:`~flask.Flask.register_error_handler` を使って、後から"
+"関数を登録します。レスポンスを返すときにはエラーコードを設定することを"
+"覚えておいてください。"
 
 # 4b350a309a1546cf81da3e0ffd4ea616
 #: ../../flask/docs/errorhandling.rst:115
@@ -255,17 +261,17 @@ msgstr ""
 
 # 99e9c340e42e49d881204eaebeb2b663
 #: ../../flask/docs/errorhandling.rst:119
-#, fuzzy
 msgid ""
 "Non-standard HTTP codes cannot be registered by code because they are not"
 " known by Werkzeug. Instead, define a subclass of "
 ":class:`~werkzeug.exceptions.HTTPException` with the appropriate code and"
 " register and raise that exception class."
 msgstr ""
-"非標準のHTTPコード（訳注: "
-"HTTPプロトコルの仕様に定義されていないHTTPレスポンスコード）はWerkzeugで分からないため、コードによる登録ができません。代わりに、適切なコードを使って\\"
-" :class:`~werkzeug.exceptions.HTTPException`\\ "
-"のサブクラスを定義し、そのクラス（とhandler）を登録し、その例外クラス（の例外）を発生させます::"
+"非標準のHTTPコード（訳注: HTTPプロトコルの仕様に定義されていないHTTP"
+"レスポンスコード）はWerkzeugで分からないため、コードによる登録ができません。"
+"代わりに、適切なコードを使って :class:`~werkzeug.exceptions.HTTPException` "
+"のサブクラスを定義し、そのクラス（とhandler）を登録し、その例外クラス（の"
+"例外）を発生させます。"
 
 # 3cf5f0edc29141309f7c7b44424b0105
 #: ../../flask/docs/errorhandling.rst:134
@@ -308,7 +314,6 @@ msgstr ""
 
 # 63c65fab3338406389bf44fa76b051db
 #: ../../flask/docs/errorhandling.rst:159
-#, fuzzy
 msgid ""
 "When Flask catches an exception while handling a request, it is first "
 "looked up by code. If no handler is registered for the code, Flask looks "
@@ -317,12 +322,14 @@ msgid ""
 " subclasses show a generic message about their code, while other "
 "exceptions are converted to a generic \"500 Internal Server Error\"."
 msgstr ""
-"リクエストを処理しているときに例外がFlaskによって捕捉されたとき、handlerは最初にコード（訳注: "
-"HTTPコードのことだと思います）によって検索されます。もしコードに対するhandlerが登録されてない場合、handlerはクラス階層によって検索されます;"
-" 最も具体的な（訳注: クラス階層上で最もサブクラス化された）handlerが選ばれます。もしhandlerが登録されていない場合、\\ "
-":class:`~werkzeug.exceptions.HTTPException`\\ "
-"のサブクラスはそのコードに関する汎用的なメッセージを表示し、その他の例外は汎用的な500 Internal Server "
-"Errorへ変換されます。"
+"リクエストを処理しているときに例外がFlaskによって捕捉されたとき、handlerは"
+"最初にコード（訳注: HTTPコードのことだと思います）によって検索されます。"
+"もしコードに対するhandlerが登録されてない場合、Flaskはクラス階層によって"
+"エラーを検索します; 最も具体的な（訳注: クラス階層上で最もサブクラス化"
+"された）handlerが選ばれます。もしhandlerが登録されていない場合、"
+":class:`~werkzeug.exceptions.HTTPException` のサブクラスはそのコードに"
+"関する汎用的なメッセージを表示し、その他の例外は汎用的な「500 Internal "
+"Server Error」へ変換されます。"
 
 # 2a0ccea1479c43dc80915cc0298f2a46
 #: ../../flask/docs/errorhandling.rst:165
@@ -368,7 +375,6 @@ msgstr ""
 
 # 631a5bd940a840888bc8a28befc6baba
 #: ../../flask/docs/errorhandling.rst:184
-#, fuzzy
 msgid ""
 "For example, an error handler for ``HTTPException`` might be useful for "
 "turning the default HTML errors pages into JSON. However, this handler "
@@ -376,23 +382,25 @@ msgid ""
 "errors during routing. Be sure to craft your handler carefully so you "
 "don't lose information about the HTTP error."
 msgstr ""
-"``HTTPException``\\ に対するerror "
-"handlerは、例えば、標準のHTMLエラーページをJSONへ変換するには便利かもしれません。しかしながら、このhandlerは、例えば経路決定（routing）のときの404と405エラーのように、あなたが直接引き起こさないものに対しても発動するでしょう。HTTPエラーに関する情報を失わないように、自分のhandlerは必ず注意して作り上げるようにしてください。"
+"例えば、``HTTPException`` に対するerror handlerは、標準のHTMLエラーページを"
+"JSONへ変換するには便利かもしれません。しかしながら、このhandlerは、例えば"
+"経路決定（routing）のときの404と405エラーのように、あなたが直接引き起こさ"
+"ないものに対しても発動するでしょう。HTTPエラーに関する情報を失わないように、"
+"自分のhandlerは必ず注意して作り上げるようにしてください。"
 
 # ad3fc7887516438088ba57745906f141
 #: ../../flask/docs/errorhandling.rst:209
-#, fuzzy
 msgid ""
 "An error handler for ``Exception`` might seem useful for changing how all"
 " errors, even unhandled ones, are presented to the user. However, this is"
 " similar to doing ``except Exception:`` in Python, it will capture *all* "
 "otherwise unhandled errors, including all HTTP status codes."
 msgstr ""
-"``Exception``\\ に対するerror "
-"handlerは、全てのエラー、処理されてないものさえも、ユーザへどのように表示するかを変更するには便利にみえるかもしれません。しかしながら、これはPythonで\\"
-" ``except Exception:``\\ を行うことと似たものであり、それは、さもなければ処理されないエラーを\\ *全て*\\ "
-"、HTTPステータスコードを含めて、捕捉するでしょう。殆どの場合、より具体的な例外に対するhandlerを登録する方がより安全です。\\ "
-"``HTTPException``\\ のインスタンスは正当なWSGIレスポンスなので、それらを直接そのまま渡すことも可能です。"
+"``Exception`` に対するerror handlerは、全てのエラー、処理されてないもの"
+"さえも、ユーザへどのように表示するかを変更するには便利にみえるかもしれま"
+"せん。しかしながら、これはPythonで ``except Exception:`` を行うことと似た"
+"ものであり、それは、さもなければ処理されないエラーを *全て* 、HTTPステータス"
+"コードを含めて、捕捉するでしょう。"
 
 #: ../../flask/docs/errorhandling.rst:215
 msgid ""
@@ -400,6 +408,9 @@ msgid ""
 "exceptions. Since ``HTTPException`` instances are valid WSGI responses, "
 "you could also pass them through directly."
 msgstr ""
+"殆どの場合、より具体的な例外に対するhandlerを登録する方がより安全です。"
+"``HTTPException`` のインスタンスは正当なWSGIレスポンスなので、それらを直接"
+"そのまま渡すことも可能です。"
 
 # 9694712d77ff4d0a801665d2f80d46d3
 #: ../../flask/docs/errorhandling.rst:232
@@ -432,23 +443,21 @@ msgstr ""
 
 # 6445bfe8aff34a4d82ddfa44fdbc4f5f
 #: ../../flask/docs/errorhandling.rst:246
-#, fuzzy
 msgid ""
 "If there is an error handler registered for ``InternalServerError``, this"
 " will be invoked. As of Flask 1.1.0, this error handler will always be "
 "passed an instance of ``InternalServerError``, not the original unhandled"
 " error."
 msgstr ""
-"``InternalServerError``\\ に対してerror handlerが登録されていた場合、これが呼び起されます。Flask "
-"1.1.0以降、このerror handlerにはオリジナルの処理されなかったエラーではなく、常に\\ "
-"``InternalServerError``\\ のインスタンスが渡されます。オリジナルのエラーは\\ "
-"``e.original_exception``\\ として利用可能です。Werkzeug "
-"1.0.0まででは、この属性は処理されなかったエラーの間でだけ存在しており、互換性のために\\ ``getattr``\\ "
-"を使ってアクセスしてください。"
+"``InternalServerError`` に対してerror handlerが登録されていた場合、これが"
+"呼び起されます。Flask 1.1.0以降、このerror handlerにはオリジナルの処理され"
+"なかったエラーではなく、常に ``InternalServerError`` のインスタンスが渡され"
+"ます。"
 
 #: ../../flask/docs/errorhandling.rst:251
 msgid "The original error is available as ``e.original_exception``."
 msgstr ""
+"オリジナルのエラーは ``e.original_exception`` として利用可能です。"
 
 #: ../../flask/docs/errorhandling.rst:253
 msgid ""
@@ -523,9 +532,8 @@ msgstr ""
 
 # af36f041daa54811ba60901d73a453d2
 #: ../../flask/docs/errorhandling.rst:393
-#, fuzzy
 msgid "Blueprint Error Handlers"
-msgstr "エラー処理器（Error handlers）"
+msgstr "ブループリントのエラー処理器（Blueprint Error Handlers）"
 
 #: ../../flask/docs/errorhandling.rst:395
 msgid ""
@@ -592,17 +600,17 @@ msgstr "ログ処理（Logging）"
 
 # 9a220a932e2342798f69f538693563a7
 #: ../../flask/docs/errorhandling.rst:516
-#, fuzzy
 msgid ""
 "See :doc:`/logging` for information about how to log exceptions, such as "
 "by emailing them to admins."
-msgstr "どのように例外をログするか、例えば管理者へメールするなど、についての情報は\\ :doc:`logging`\\ を見てください。"
+msgstr ""
+"どのように例外をログするか、例えば管理者へメールするなど、についての"
+"情報は :doc:`/logging` を見てください。"
 
 # 95b922e803d34a46855e9ce92c73848e
 #: ../../flask/docs/errorhandling.rst:521
-#, fuzzy
 msgid "Debugging"
-msgstr "ログ処理（Logging）"
+msgstr "デバッグ処理（Debugging）"
 
 #: ../../flask/docs/errorhandling.rst:523
 msgid ""

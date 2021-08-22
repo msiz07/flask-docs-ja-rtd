@@ -24,18 +24,17 @@ msgstr "Flask内でのSQLAlchemy（SQLAlchemy in Flask）"
 
 # 942e9cfd18d4474a98da4a9f4c98d884
 #: ../../flask/docs/patterns/sqlalchemy.rst:4
-#, fuzzy
 msgid ""
 "Many people prefer `SQLAlchemy`_ for database access.  In this case it's "
 "encouraged to use a package instead of a module for your flask "
 "application and drop the models into a separate module (:doc:`packages`)."
 " While that is not necessary, it makes a lot of sense."
 msgstr ""
-"多くの人がデータベースへのアクセスに\ `SQLAlchemy`_\ を好みます。"
-"以下の例ではflaskアプリケーションでモジュールの代わりにパッケージを使用"
-"し、（データベースの）モデルを別のモジュールに落とし込む（\ "
-":ref:`larger-applications`\ ）ことを推奨しています。それは必須ではありま"
-"せんが、とても理にかなっています。"
+"多くの人がデータベースへのアクセスに `SQLAlchemy`_ を好みます。以下の例"
+"ではflaskアプリケーションでモジュールの代わりにパッケージを使用し、"
+"（データベースの）モデルを（アプリケーションとは）別のモジュールに落とし"
+"込む（:doc:`packages`）ことを推奨しています。それは必須ではありませんが、"
+"とても理にかなっています。"
 
 # dc0d11386ecb437cac6b4e988b1e4463
 #: ../../flask/docs/patterns/sqlalchemy.rst:9

@@ -141,7 +141,6 @@ msgstr ""
 
 # f3ff3640b68749e4bb2f3b4b2541e24d
 #: ../../flask/docs/tutorial/tests.rst:109
-#, fuzzy
 msgid ""
 ":func:`tempfile.mkstemp` creates and opens a temporary file, returning "
 "the file descriptor and the path to it. The ``DATABASE`` path is "
@@ -150,11 +149,11 @@ msgid ""
 "test data is inserted. After the test is over, the temporary file is "
 "closed and removed."
 msgstr ""
-":func:`tempfile.mkstemp`\ は一時ファイルを作成して開き、そのfileオブジェクト"
-"とパスを返します。\ ``DATABASE``\ のパスは上書きされて、インスタンスフォルダ"
-"の代わりに、作成した一時ファイルのパスを指すようになります。パスを設定した後、"
-"データベースの表が作成されテストデータが挿入されます。テストが終了した後は、"
-"一時ファイルが閉じられ削除されます。"
+":func:`tempfile.mkstemp` は一時ファイルを作成して開き、そのfileデスクリプタ"
+"とパスを返します。``DATABASE`` のパスは上書きされて、インスタンスフォルダ"
+"の代わりに、作成した一時ファイルのパスを指すようになります。パスを設定した"
+"後、データベースの表が作成されテストデータが挿入されます。テストが終了した"
+"後は、一時ファイルが閉じられ削除されます。"
 
 # ce0754f2a58c44fca1f53e3efeeabdb9
 #: ../../flask/docs/tutorial/tests.rst:116
@@ -386,7 +385,6 @@ msgstr ""
 
 # bc7820b0ae02483a992bc480387d20b8
 #: ../../flask/docs/tutorial/tests.rst:302
-#, fuzzy
 msgid ""
 ":attr:`~Response.data` contains the body of the response as bytes. If you"
 " expect a certain value to render on the page, check that it's in "
@@ -394,11 +392,11 @@ msgid ""
 "use :meth:`get_data(as_text=True) <werkzeug.wrappers.Response.get_data>` "
 "instead."
 msgstr ""
-":attr:`~Response.data`\ はレスポンスの本体（body）をバイト（bytes）として"
-"含んでいます。もしもある値をページ上に表示することを期待する場合、それが\ "
-"``data``\ の中にあるかチェックします。bytes（型）はbytes（型）と比較しな"
-"ければなりません。もしUnicodeのテキストを比較したいときは、\ "
-":meth:`get_data(as_text=True) <werkzeug.wrappers.BaseResponse.get_data>`\ "
+":attr:`~Response.data` はレスポンスの本体（body）をバイト（bytes）として"
+"含んでいます。もしもある値をページ上に表示することを期待する場合、それが "
+"``data`` の中にあるかチェックします。bytes（型）はbytes（型）と比較しな"
+"ければなりません。もしテキストを比較したいときは、"
+":meth:`get_data(as_text=True) <werkzeug.wrappers.Response.get_data>` "
 "を代わりに使用してください。"
 
 # 61a43c8db5af4ab5a2212222fb4a47c4

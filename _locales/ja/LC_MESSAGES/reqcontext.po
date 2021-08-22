@@ -479,12 +479,11 @@ msgstr "このプロキシのオブジェクトは、実際のオブジェクト
 
 # 307ef84da8a446c19465680ed13ad638
 #: ../../flask/docs/reqcontext.rst:257
-#, fuzzy
 msgid ""
 "The reference to the proxied object is needed in some situations, such as"
 " sending :doc:`signals` or passing data to a background thread."
 msgstr ""
-"例えば\\ :ref:`signals`\\ を送ったりバックグラウンドのスレッドにデータ"
+"例えば :doc:`signals` を送ったりバックグラウンドのスレッドにデータを"
 "渡したりするときなど、ある状況では、proxyされているオブジェクトへの"
 "参照（object reference）が必要になります。"
 

@@ -214,15 +214,14 @@ msgstr ""
 
 # a5c54751d2444cc8a7d30aedf21566e9
 #: ../../flask/docs/tutorial/database.rst:143
-#, fuzzy
 msgid ""
 ":func:`click.command` defines a command line command called ``init-db`` "
 "that calls the ``init_db`` function and shows a success message to the "
 "user. You can read :doc:`/cli` to learn more about writing commands."
 msgstr ""
-":func:`click.command`\ は、\ ``init_db``\ 関数を呼び出して成功時の"
-"メッセージを表示する、\ ``init-db``\ と呼ばれる、コマンドラインから"
-"使用できるコマンドを定義します。\ :ref:`call`\ を読むと、command作成に"
+":func:`click.command` は、``init_db`` 関数を呼び出して成功時の"
+"メッセージを表示する、``init-db`` と呼ばれる、コマンドラインから"
+"使用できるコマンドを定義します。:doc:`/cli` を読むと、command作成に"
 "関してさらに学習できます。"
 
 # 87fbdc1f6a1d4465ab8aeb48871ea63f
@@ -301,7 +300,6 @@ msgstr ""
 
 # 155dfb1c52b44a29adbb3d2d733601f4
 #: ../../flask/docs/tutorial/database.rst:196
-#, fuzzy
 msgid ""
 "If you're still running the server from the previous page, you can either"
 " stop the server, or run this command in a new terminal. If you use a new"
@@ -311,10 +309,10 @@ msgid ""
 msgstr ""
 "もし前のページのサーバをまだ実行中である場合は、サーバを停止することも、"
 "このコマンドを新しい端末で実行することもできます。もし新しい端末を使用する"
-"場合は、プロジェクトのディレクトリへ移動して、\ :ref:`install-activate-env`\ "
-"で説明したように（仮想）環境を有効にする（activate）ことを覚えておいてください。"
-"さらに、前のページで示したように、\ ``FLASK_APP``\ と\ ``FLASK_ENV``\ の"
-"設定も必要です。"
+"場合は、プロジェクトのディレクトリへ移動して、:doc:`/installation` で説明"
+"したように（仮想）環境を有効にする（activate）ことを覚えておいてください。"
+"さらに、前のページで示したように、``FLASK_APP`` と ``FLASK_ENV`` の設定も"
+"必要です。"
 
 # 09fe258caa404de785869585c42cec8b
 #: ../../flask/docs/tutorial/database.rst:203

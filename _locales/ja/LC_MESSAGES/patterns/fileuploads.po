@@ -90,7 +90,6 @@ msgstr ""
 
 # d653a2e4d18d435691b1d131a14e0cb2
 #: ../../flask/docs/patterns/fileuploads.rst:36
-#, fuzzy
 msgid ""
 "Why do we limit the extensions that are allowed?  You probably don't want"
 " your users to be able to upload everything there if the server is "
@@ -103,10 +102,10 @@ msgstr ""
 "なぜ許可される拡張子を制限するのでしょうか？恐らくあなたは、サーバが"
 "クライアントへ直接データを送信する場合、そのサーバへユーザがなんでも"
 "アップロードできるようにはしたくないでしょう。そうすれば、ユーザがXSSの"
-"問題（\ :ref:`XSS`\ を見てください）を起こしかねないHTMLファイルをアップ"
-"ロードできないことを確実にできます。もしサーバが\ ``.php``\ ファイルを"
-"実行する場合はそれも許さないことも確実にするでしょうが、誰が自分のサーバ"
-"にPHPをインストールするんでしょうか？ :)"
+"問題（:ref:`security-xss` を見てください）を起こしかねないHTMLファイルを"
+"アップロードできないことを確実にできます。もしサーバが ``.php`` ファイル"
+"を実行する場合はphpファイルのアップロードを許さないことも確実にする"
+"でしょうが、誰が自分のサーバにPHPをインストールするんでしょうか？ :)"
 
 # c09a8f425c55446f94edd7c6ebb33418
 #: ../../flask/docs/patterns/fileuploads.rst:43
@@ -196,7 +195,6 @@ msgstr "アップロードの改善"
 
 # 615b890ffd414eb293e30e5129e27409
 #: ../../flask/docs/patterns/fileuploads.rst:133
-#, fuzzy
 msgid ""
 "So how exactly does Flask handle uploads?  Well it will store them in the"
 " webserver's memory if the files are reasonably small, otherwise in a "
@@ -208,12 +206,12 @@ msgid ""
 msgstr ""
 "それでは、正確にはFlaskはどのようにファイルのアップロードを処理するので"
 "しょうか？もしファイルが妥当な小ささであればウェブサーバのメモリ内に、"
-"そうでない場合は（\ :func:`tempfile.gettempdir`\ で返される）一時的な"
-"場所に、Flaskはファイルを格納します。しかし、それを超えたらアップロード"
-"が中止される、最大ファイルサイズはどのように指定するのでしょうか？"
-"既定の動作では、Flaskはファイルのアップロードをメモリ容量無制限に喜んで"
-"受け入れますが、\ ``MAX_CONTENT_LENGTH``\ の設定キーを設定することで制限"
-"することができます::"
+"そうでない場合は（:func:`tempfile.gettempdir` で返される）一時的な場所に、"
+"Flaskはファイルを格納します。しかし、それを超えたらアップロードが中止"
+"される、最大ファイルサイズはどのように指定するのでしょうか？既定の動作"
+"では、Flaskはファイルのアップロードをメモリ容量無制限に喜んで受け入れます"
+"が、``MAX_CONTENT_LENGTH`` の設定キーを設定することで制限することができ"
+"ます::"
 
 # c09bf33962084c8fad16ddb0217fa0e4
 #: ../../flask/docs/patterns/fileuploads.rst:146
@@ -262,7 +260,6 @@ msgstr "アップロードのプログレスバー"
 
 # 4a016517dba343a5af4fa9296fcde4e8
 #: ../../flask/docs/patterns/fileuploads.rst:164
-#, fuzzy
 msgid ""
 "A while ago many developers had the idea to read the incoming file in "
 "small chunks and store the upload progress in the database to be able to "
@@ -273,9 +270,8 @@ msgstr ""
 "しばらく前には、アップロードの進み具合をクライアントからJavaScriptで"
 "ポーリングできるようにするために、多くの開発者は受信ファイルを小さな断片"
 "にして読み込み、アップロードの進み具合をデータベースに格納することを考えて"
-"いました。長い話を短くすると: クライアントは5秒ごとにサーバにどれくらい"
-"ファイルを伝送済みかを問い合わせるのです。皮肉なことだと分かりますか？"
-"クライアントは、すでに知っているべきことを問い合わせているのです。"
+"いました。クライアントは5秒ごとにサーバにどれくらいファイルを伝送済みかを"
+"問い合わせるのですが、それはクライアントが既に知っているべきことです。"
 
 # 5f0da9535a0f490ab83e6f2b1096f8a2
 #: ../../flask/docs/patterns/fileuploads.rst:171
@@ -295,7 +291,6 @@ msgstr ""
 
 # 5a97b511b6e14219b51ea98ed858d07e
 #: ../../flask/docs/patterns/fileuploads.rst:177
-#, fuzzy
 msgid ""
 "Because the common pattern for file uploads exists almost unchanged in "
 "all applications dealing with uploads, there is also a Flask extension "
@@ -304,9 +299,8 @@ msgid ""
 msgstr ""
 "ファイルのアップロードについてのありがちなパターンはアップロードを扱う"
 "全てのアプリケーションで殆ど変わることなく存在するため、Flask拡張にも、"
-"拡張子のホワイトリストとブラックリストやその他の機能を持つ、十分に成熟"
-"したアップロードの仕組みを実装した\ `Flask-Uploads`_\ と呼ばれるものが"
-"あります。"
+"どのファイル拡張子はアップロードを許可するか制御できる、十分に成熟した"
+"アップロードの仕組みを実装した `Flask-Uploads`_ と呼ばれるものがあります。"
 
 # 2249e0cdc4264f10ba9451d7bb11a5e7
 #~ msgid ""

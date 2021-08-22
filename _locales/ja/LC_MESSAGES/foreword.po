@@ -110,16 +110,12 @@ msgstr "Flaskを使った拡大（Growing with Flask）"
 
 # 33e7578da13f493e9b1d2553aa0831ac
 #: ../../flask/docs/foreword.rst:40
-#, fuzzy
 msgid ""
 "Once you have Flask up and running, you'll find a variety of extensions "
 "available in the community to integrate your project for production."
 msgstr ""
 "一度Flaskを起動して走らせたら、コミュニティの中で取得可能であり、本番"
 "環境用に自分のプロジェクトへ統合できる様々なFlask拡張が見つかるでしょう。"
-"FlaskのコアチームはFlask拡張をレビューし、承認されたFlask拡張（approved "
-"extensions）は将来のリリースでも壊れないことを保証します。（訳注: approved "
-"extensionsのリストは、この翻訳の作成時点で保守されなくなっています）"
 
 # c3efb003cbea496c887bcf422c7ea1f8
 #: ../../flask/docs/foreword.rst:43
@@ -142,7 +138,6 @@ msgstr ""
 
 # 6a5401944b5047c4ac2a8da740e7b1b9
 #: ../../flask/docs/foreword.rst:50
-#, fuzzy
 msgid ""
 "Flask includes many hooks to customize its behavior. Should you need more"
 " customization, the Flask class is built for subclassing. If you are "
@@ -152,9 +147,9 @@ msgid ""
 msgstr ""
 "Flaskは振る舞いをカスタマイズするための数多くのフックを導入しています。"
 "さらなるカスタマイズが必要な場合は、Flaskクラスはサブクラスを利用しやすい"
-"ように構築されています。もしそのことに関心がある場合は、\ "
-":ref:`becomingbig`\ 章を調べてください。もしFlaskの設計原則に関して興味"
-"をひかれる場合は、\ :ref:`design`\ セクションを見てください。"
+"ように構築されています。もしそのことに関心がある場合は、:doc:`becomingbig` "
+"章を調べてください。もしFlaskの設計原則に関して興味をひかれる場合は、 "
+":doc:`design` セクションを見てください。"
 
 # 0719427517eb49f994e9580479fd7de2
 #~ msgid ""

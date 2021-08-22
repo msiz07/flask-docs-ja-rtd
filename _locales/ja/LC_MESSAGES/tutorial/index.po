@@ -54,7 +54,6 @@ msgstr ""
 
 # ded8179b398f41d0871ba3289701954d
 #: ../../flask/docs/tutorial/index.rst:35
-#, fuzzy
 msgid ""
 "While it's designed to give a good starting point, the tutorial doesn't "
 "cover all of Flask's features. Check out the :doc:`/quickstart` for an "
@@ -65,10 +64,10 @@ msgid ""
 msgstr ""
 "このチュートリアルは良い開始場所になるよう意図されたものですが、Flaskの"
 "目玉機能（feature）をすべて網羅しているわけではありません。Flaskで何が"
-"できるかの概要を \ :ref:`quickstart`\ で調べて、それから、より多くを知る"
+"できるかの概要を  :doc:`/quickstart` で調べて、それから、より多くを知る"
 "ためにドキュメントを掘り下げてください。このチュートリアルはFlaskとPythonが"
 "提供しているものだけを使用します。他のプロジェクトでは、いくつかのタスクを"
-"よりシンプルにするために\ :ref:`extensions`\ やその他のライブラリを使用する"
+"よりシンプルにするために :doc:`/extensions` やその他のライブラリを使用する"
 "決定をくだすかもしれません。"
 
 msgid "screenshot of login page"

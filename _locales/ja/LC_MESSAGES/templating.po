@@ -33,15 +33,16 @@ msgstr "Flaskは自身のテンプレート・エンジンとしてJinja2を活�
 
 # f284113dbca34ca0a054d94ed42c5386
 #: ../../flask/docs/templating.rst:9
-#, fuzzy
 msgid ""
 "This section only gives a very quick introduction into how Jinja2 is "
 "integrated into Flask.  If you want information on the template engine's "
 "syntax itself, head over to the official `Jinja2 Template Documentation "
 "<https://jinja.palletsprojects.com/templates/>`_ for more information."
 msgstr ""
-"このセクションが与えるのは、どのようにJinja2がFlaskへ統合されているかについての手早いイントロダクションだけです。テンプレート・エンジンの文法自体の情報について知りたい場合は、さらなる情報を公式の\\"
-" `Jinja2テンプレートのドキュメント <http://jinja.pocoo.org/docs/templates/>`_\\ "
+"このセクションが与えるのは、どのようにJinja2がFlaskへ統合されているかに"
+"ついての非常に手早いイントロダクションだけです。テンプレート・エンジンの"
+"文法自体の情報について知りたい場合は、さらなる情報を公式の `Jinja2テンプ"
+"レートのドキュメント <https://jinja.palletsprojects.com/templates/>`_ "
 "を確認してください。"
 
 # dc0ca8cf18a84f889beb058c34ccb22d
@@ -199,7 +200,6 @@ msgstr "自動エスケープの制御（Controlling Autoescaping）"
 
 # fdfa37455f85404f85f36e8842343896
 #: ../../flask/docs/templating.rst:102
-#, fuzzy
 msgid ""
 "Autoescaping is the concept of automatically escaping special characters "
 "for you.  Special characters in the sense of HTML (or XML, and thus "
@@ -210,10 +210,13 @@ msgid ""
 "use these characters in text, but can also lead to security problems.  "
 "(see :ref:`security-xss`)"
 msgstr ""
-"自動エスケープは、特別な文字を自動的にエスケープするというコンセプトです。HTML（またはXML、さらにXHTML）の観点から、\\ "
-"``'``\\ だけでなく、\\ ``&``, ``>``, ``<``, ``\"``\\ "
-"も特別な文字になります。これらの文字はドキュメントの中で独自の特別な意味を持つため、テキストとして使用したい場合は「entities」と呼ばれるものでそれらを置き換える必要があります。そうしないと、それらの文字をテキストで使えないためにユーザをいらだたせるだけでなく、セキュリティ上の問題にまで至る可能性もあります。（\\"
-" :ref:`xss`\\ を参照）"
+"自動エスケープは、特別な文字を自動的にエスケープするというコンセプトです。"
+"HTML（またはXML、さらにXHTML）の観点から、``'`` だけでなく、``&``、``>``、"
+"``<``、``\"`` も特別な文字になります。これらの文字はそれ自身がドキュメント"
+"の中で独自の特別な意味を持つため、テキストとして使用したい場合は「entities」"
+"と呼ばれるものでそれらを置き換える必要があります。そうしないと、それらの"
+"文字をテキストで使えないためにユーザをいらだたせるだけでなく、セキュリティ"
+"上の問題にまで至る可能性もあります。（:ref:`security-xss` を参照）"
 
 # 028b2211c0a94302b5f7d29ca618f008
 #: ../../flask/docs/templating.rst:111

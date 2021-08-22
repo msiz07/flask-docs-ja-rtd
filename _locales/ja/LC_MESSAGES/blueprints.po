@@ -111,7 +111,6 @@ msgstr ""
 
 # 97e0673d5c7c467d84a926ebcec38377
 #: ../../flask/docs/blueprints.rst:35
-#, fuzzy
 msgid ""
 "A blueprint in Flask is not a pluggable app because it is not actually an"
 " application -- it's a set of operations which can be registered on an "
@@ -124,7 +123,7 @@ msgstr ""
 "（pluggable）なappではありません -- それは、アプリケーションに登録可能な"
 "操作（operation）であり、複数回登録することすら可能です。なぜ（わざわざ"
 "blueprintを使わず）複数のアプリケーションのオブジェクトを持たないので"
-"しょうか？それをすることも可能です（\ :ref:`app-dispatch`\ を見てくだ"
+"しょうか？それをすることも可能です（:doc:`/patterns/appdispatch` を見てくだ"
 "さい）が、（そのときは）アプリケーションは分かれた設定を持ち、WSGIの階層"
 "で管理されます。"
 
@@ -258,9 +257,8 @@ msgstr ""
 
 # ffc1e55678bd4814bd121548ffc00441
 #: ../../flask/docs/blueprints.rst:124
-#, fuzzy
 msgid "Nesting Blueprints"
-msgstr "Blueprintの登録"
+msgstr "入れ子にしたBlueprint（Nesting Blueprints）"
 
 #: ../../flask/docs/blueprints.rst:126
 msgid "It is possible to register a blueprint on another blueprint."
@@ -536,9 +534,8 @@ msgstr ""
 
 # e4351a9cb35948c39997bc4758521911
 #: ../../flask/docs/blueprints.rst:272
-#, fuzzy
 msgid "Blueprint Error Handlers"
-msgstr "エラー処理（Error Handlers）"
+msgstr "ブループリントのエラー処理（Blueprint Error Handlers）"
 
 # b033f1c827c84a59a99a0f2a4adb40af
 #: ../../flask/docs/blueprints.rst:274

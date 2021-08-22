@@ -69,12 +69,11 @@ msgstr ""
 
 # 401dd83ddda449419e151c716f23f7c2
 #: ../../flask/docs/shell.rst:24
-#, fuzzy
 msgid ""
 "Generally it's recommended that you read the :doc:`reqcontext` chapter of"
 " the documentation first."
 msgstr ""
-"概して、まずはドキュメントの\ :ref:`request-context`\ の章を読んでおくことが"
+"概して、まずはドキュメントの :doc:`reqcontext` の章を読んでおくことが"
 "推奨されます。"
 
 # c063ae40d0c24a5a821a1b11e792b762
@@ -97,9 +96,8 @@ msgstr ""
 
 # 7ae2aed5b4a34a2294e8c0dc1d0d6345
 #: ../../flask/docs/shell.rst:35
-#, fuzzy
 msgid "For more information see :doc:`/cli`."
-msgstr "さらなる情報は\ :ref:`cli`\ を確認してください。"
+msgstr "さらなる情報は :doc:`/cli` を確認してください。"
 
 # 31ca9f55fb5b4cdf9cf8300d4c07a9cc
 #: ../../flask/docs/shell.rst:38

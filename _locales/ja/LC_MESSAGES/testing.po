@@ -72,16 +72,15 @@ msgstr "アプリケーション"
 
 # 59e998245baf42fb99967815c0dbf3e0
 #: ../../flask/docs/testing.rst:26
-#, fuzzy
 msgid ""
 "First, we need an application to test; we will use the application from "
 "the :doc:`tutorial/index`. If you don't have that application yet, get "
 "the source code from :gh:`the examples <examples/tutorial>`."
 msgstr ""
-"第一に、アプリケーションをテストする必要があります; この文書では、\ :ref:"
-"`tutorial`\ のアプリケーションを使用していきます。もしもそのアプリケーション"
-"をまだ持っていない場合、\ :gh:`チュートリアルの例 <examples/tutorial>`\ から"
-"ソースコードを取得できます。"
+"第一に、アプリケーションをテストする必要があります; この文書では、:doc:"
+"`tutorial/index` のアプリケーションを使用していきます。もしもそのアプリ"
+"ケーションをまだ持っていない場合、:gh:`チュートリアルの例 "
+"<examples/tutorial>` からソースコードを取得してください。"
 
 #: ../../flask/docs/testing.rst:30
 msgid ""
@@ -223,7 +222,6 @@ msgstr ""
 
 # 46a4bba534e54dbe883c414b81ff97f8
 #: ../../flask/docs/testing.rst:119
-#, fuzzy
 msgid ""
 "By using ``client.get`` we can send an HTTP ``GET`` request to the "
 "application with the given path.  The return value will be a "
@@ -232,13 +230,12 @@ msgid ""
 "value (as string) from the application. In this case, we ensure that "
 "``'No entries here so far'`` is part of the output."
 msgstr ""
-"``client.get``\ を使用することで、（引数で）与えられたパスを伴った"
-"HTTPの\ ``GET``\ リクエストをアプリケーションに送ることができます。"
-"その戻り値は\ :class:`~flask.Flask.response_class`\ オブジェクトに"
-"なります。それから、\ :attr:`~werkzeug.wrappers.BaseResponse.data`\ "
-"属性を使ってアプリケーションからの戻り値を（文字列として）使うことが"
-"できます。このケースでは、\ ``「No entries here so far」``\ が出力の"
-"一部であることを確認します。"
+"``client.get`` を使用することで、（引数で）与えられたパスを伴ったHTTPの "
+"``GET`` リクエストをアプリケーションに送ることができます。その戻り値は "
+":class:`~flask.Flask.response_class` オブジェクトになります。それから、"
+":attr:`~werkzeug.wrappers.Response.data` 属性を使ってアプリケーションから"
+"の戻り値を（文字列として）調べることができます。このケースでは、``「No "
+"entries here so far」`` が出力の一部であることを確認します。"
 
 # 7087afbc31364cf9b5d99a16bdc75af9
 #: ../../flask/docs/testing.rst:127
@@ -345,15 +342,15 @@ msgstr ""
 
 # 75d81349995141fdaa4d2bb617ebb9a7
 #: ../../flask/docs/testing.rst:238
-#, fuzzy
 msgid ""
 "If you want to test your application with different configurations and "
 "there does not seem to be a good way to do that, consider switching to "
 "application factories (see :doc:`patterns/appfactories`)."
 msgstr ""
-"もしも自分のアプリケーションを異んある設定でテストしたいにもかかわらず、"
-"相応しいやり方が見つからない場合、application factory（\ :ref:"
-"`app-factories`\ を確認してください）へ切り替えることを検討してください。"
+"もしも自分のアプリケーションを異なる設定でテストしたいにもかかわらず、"
+"相応しいやり方が見つからない場合、application factory（:doc:"
+"`patterns/appfactories` を確認してください）へ切り替えることを検討して"
+"ください。"
 
 # 63fb622b61014997b15ad0c98c395bb6
 #: ../../flask/docs/testing.rst:242

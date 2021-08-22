@@ -90,15 +90,14 @@ msgstr ""
 
 # d9f0880955694365afe0d2105df52e54
 #: ../../flask/docs/patterns/distribute.rst:28
-#, fuzzy
 msgid ""
 "A working deployment with setuptools is the first step into more complex "
 "and more automated deployment scenarios.  If you want to fully automate "
 "the process, also read the :doc:`fabric` chapter."
 msgstr ""
-"setuptoolsを使ったデプロイ作業は、より複雑でより自動化されたデプロイの"
-"シナリオへの最初のステップです。もしプロセスをすべて自動化したい場合、\ "
-":ref:`fabric-deployment`\ 章も読んでください。"
+"setuptoolsを使って機能するデプロイは、より複雑でより自動化されたデプロイの"
+"シナリオへの最初のステップです。もしプロセスをすべて自動化したい場合、"
+":doc:`fabric` 章も読んでください。"
 
 # 0f9c4d1548a8471ba0fefd045b2e2447
 #: ../../flask/docs/patterns/distribute.rst:33
@@ -116,11 +115,10 @@ msgstr ""
 
 # 7da2339735884fecaa3e86a7e64d48af
 #: ../../flask/docs/patterns/distribute.rst:38
-#, fuzzy
 msgid "Standard disclaimer applies: :ref:`use a virtualenv <install-create-env>`."
 msgstr ""
-"標準的な免責事項が適用されます: :ref:`virtualenvを使うべきです "
-"<virtualenv>`\ 。"
+"標準的な免責事項が適用されます: :ref:`virtualenvを使ってください "
+"<install-create-env>`。"
 
 # 58a1c13e239e42bc8baeaa5c03def949
 #: ../../flask/docs/patterns/distribute.rst:41

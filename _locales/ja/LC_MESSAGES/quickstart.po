@@ -35,9 +35,8 @@ msgstr "最少のアプリケーション"
 
 # e1570c67382e40759aa8873fcdcf2773
 #: ../../flask/docs/quickstart.rst:11
-#, fuzzy
 msgid "A minimal Flask application looks something like this:"
-msgstr "最少のFlaskアプリケーションは以下のようなものになります::"
+msgstr "最少のFlaskアプリケーションは以下のようなものになります:"
 
 # 063c3db15dc547168de47abc07bdd7ea
 #: ../../flask/docs/quickstart.rst:23
@@ -46,13 +45,13 @@ msgstr "では、そのコードは何をしているのでしょうか？"
 
 # 87b5d69f87054beab760456d7a60d633
 #: ../../flask/docs/quickstart.rst:25
-#, fuzzy
 msgid ""
 "First we imported the :class:`~flask.Flask` class. An instance of this "
 "class will be our WSGI application."
 msgstr ""
-"最初に、\\ :class:`~flask.Flask`\\ クラスをimportしています。このクラスのインスタンスはWSGI（訳注: "
-"Pythonで標準化されている、WebアプリとWebサーバ間のインタフェース）アプリケーションになります。"
+"最初に、:class:`~flask.Flask` クラスをimportしています。このクラスの"
+"インスタンスはWSGI（訳注: Pythonで標準化されている、WebアプリとWebサーバ"
+"間のインタフェース）アプリケーションになります。"
 
 #: ../../flask/docs/quickstart.rst:27
 msgid ""
@@ -81,15 +80,14 @@ msgstr ""
 
 # c157b28898f44db8aba4c31269fb5ce2
 #: ../../flask/docs/quickstart.rst:38
-#, fuzzy
 msgid ""
 "Save it as :file:`hello.py` or something similar. Make sure to not call "
 "your application :file:`flask.py` because this would conflict with Flask "
 "itself."
 msgstr ""
-"これを\\ :file:`hello.py`\\ "
-"もしくは似たような名前で保存するだけです。Flask自身と衝突しないようにするため、自分のアプリケーションは\\ :file:`flask.py`\\ "
-"と名付けないように必ずしてください。"
+"これを :file:`hello.py` もしくは似たようなものに保存します。"
+":file:`flask.py` はFlask自身と衝突するため、自分のアプリケーションには"
+"名付けないように必ずしてください。"
 
 #: ../../flask/docs/quickstart.rst:42
 msgid ""
@@ -124,14 +122,15 @@ msgstr ""
 
 # ebc0751096214ee6a5131cf3d9693430
 #: ../../flask/docs/quickstart.rst:79
-#, fuzzy
 msgid ""
 "This launches a very simple builtin server, which is good enough for "
 "testing but probably not what you want to use in production. For "
 "deployment options see :doc:`deploying/index`."
 msgstr ""
-"これはとてもシンプルな内蔵サーバを起動し、それはテスト用には十分ですが、おそらく本番環境では使用したくはならないでしょう。デプロイ（訳注: "
-"実行環境への移行のような意味合い）のオプションについては、\\ :ref:`deployment`\\ を参照してください。"
+"これはとてもシンプルな内蔵サーバを起動し、それはテスト用には十分ですが、"
+"おそらく本番環境では使用したくはならないでしょう。デプロイ（訳注: 実行"
+"環境への移行のような意味合い）のオプションについては、 "
+":doc:`deployment/index` を参照してください。"
 
 # 3d41fb22c4a145018ed6b41a66972e41
 #: ../../flask/docs/quickstart.rst:83
@@ -191,7 +190,6 @@ msgstr "古いバージョンのFlask"
 
 # ef8f8c640c3c4d0093a009182d87ea03
 #: ../../flask/docs/quickstart.rst:114
-#, fuzzy
 msgid ""
 "Versions of Flask older than 0.11 used to have different ways to start "
 "the application.  In short, the :command:`flask` command did not exist, "
@@ -199,10 +197,11 @@ msgid ""
 "options: either upgrade to newer Flask versions or have a look at "
 ":doc:`/server` to see the alternative method for running a server."
 msgstr ""
-"バージョン0.11より前のFlaskはアプリケーションを開始するときに別のやり方を使用していました。手短に言えば、\\ "
-":command:`flask`\\ コマンドは存在せず、\\ :command:`python -m flask`\\ "
-"も使いませんでした。この場合には、2つの選択肢があります: Flaskを新しいバージョンへアップグレードするか、\\ "
-":ref:`server`\\ のドキュメントを調べて、サーバを実行する代わりのやり方を見つけてください。"
+"バージョン0.11より前のFlaskはアプリケーションを開始するときに別のやり方を"
+"使用していました。手短に言えば、:command:`flask` コマンドは存在せず、"
+":command:`python -m flask` もありませんでした。この場合には、2つの選択肢が"
+"あります: Flaskを新しいバージョンへアップグレードするか、:doc:`server` の"
+"ドキュメントを調べて、サーバを実行する代わりのやり方を見つけてください。"
 
 # cdf5f01e94f04119945160db81168d0a
 #: ../../flask/docs/quickstart.rst:121
@@ -243,9 +242,8 @@ msgid ""
 msgstr ""
 
 # 3e61206cfbc642e3926319f45c0771a6
-#, fuzzy
 msgid "The interactive debugger in action."
-msgstr "実行中のデバッガのスクリーンショット:"
+msgstr "実行中のインタラクティブ・デバッガ。"
 
 #: ../../flask/docs/quickstart.rst:147
 msgid ""
@@ -256,13 +254,12 @@ msgstr ""
 
 # f9428ba54a004a179667264525d12114
 #: ../../flask/docs/quickstart.rst:152
-#, fuzzy
 msgid ""
 "To enable all development features, set the ``FLASK_ENV`` environment "
 "variable to ``development`` before calling ``flask run``."
 msgstr ""
-"すべての（デバッグモードも含めた）開発機能を有効にするために、サーバの実行前に環境変数\\ ``FLASK_ENV``\\ を\\ "
-"``development``\\ に設定してエクスポートできます::"
+"すべての（デバッグモードも含めた）開発機能を有効にするには、``flask run`` "
+"を呼ぶ前に環境変数 ``FLASK_ENV`` を ``development`` に設定します。"
 
 #: ../../flask/docs/quickstart.rst:178
 msgid "See also:"
@@ -433,19 +430,28 @@ msgstr ""
 
 # dd62f17ef3b4414a9dd88d32e3d40c9d
 #: ../../flask/docs/quickstart.rst:285
-#, fuzzy
 msgid ""
 "The canonical URL for the ``projects`` endpoint has a trailing slash. "
 "It's similar to a folder in a file system. If you access the URL without "
 "a trailing slash (``/projects``), Flask redirects you to the canonical "
 "URL with the trailing slash (``/projects/``)."
 msgstr ""
-"``projects``\\ エンドポイント（訳注: エンドポイントはview用の関数などを特定するもので、Flask実装上はdictionaryである :attr:`~flask.Flask.view_functions`\ 属性のキーになります。Flask実装では、アプリが使用するview用の関数などは全てview_functions属性に、エンドポイントをキーに関数本体を値にして登録されます。たいていは関数名とエンドポイントは同じですが異なる値がエンドポイントになる場合もあります。Flaskでは\ :func:`~flask.Flask.route`\ デコレータ使うと内部的にWerkzeugの\ :class:`~werkzeug.routing.Rule`\ インスタンスを作成してURLのパターンとエンドポイントを対応付けます）の正規化（訳注: "
-"記法の揺らぎを統一するような意味合い）されたURLでは、最後にスラッシュがあります。これはファイルシステムでのフォルダに似ています。もし最後のスラッシュなしでURLへアクセスした場合、Flaskは最後にスラッシュのある正規化されたURLへ転送（redirect）します。"
+"``projects`` エンドポイント（訳注: エンドポイントはview用の関数などを特定"
+"するもので、Flask実装上はdictionaryである :attr:"
+"`~flask.Flask.view_functions` 属性のキーになります。Flask実装では、アプリが"
+"使用するview用の関数などは全てview_functions属性に、エンドポイントをキーに"
+"関数本体を値にして登録されます。たいていは関数名とエンドポイントは同じです"
+"が異なる値がエンドポイントになる場合もあります。Flaskでは :func:"
+"`~flask.Flask.route` デコレータ使うと内部的にWerkzeugの :class:"
+"`~werkzeug.routing.Rule` インスタンスを作成してURLのパターンとエンドポイント"
+"を対応付けます）の正規化（訳注: 記法の揺らぎを統一するような意味合い）"
+"されたURLでは、最後にスラッシュがあります。これはファイルシステムでの"
+"フォルダに似ています。もし最後のスラッシュなし（``/projects``）でURLへ"
+"アクセスした場合、Flaskは最後にスラッシュのある正規化されたURL"
+"（``/projects/``）へ転送（redirect）します。"
 
 # d376ab8a788845839ab977183b9dac3a
 #: ../../flask/docs/quickstart.rst:290
-#, fuzzy
 msgid ""
 "The canonical URL for the ``about`` endpoint does not have a trailing "
 "slash. It's similar to the pathname of a file. Accessing the URL with a "
@@ -453,10 +459,12 @@ msgid ""
 "helps keep URLs unique for these resources, which helps search engines "
 "avoid indexing the same page twice."
 msgstr ""
-"``about``\\ "
-"エンドポイントの正規化されたURLでは、最後にスラッシュがありません。これはファイルシステムでのファイルのパス名に似ています。もし最後にスラッシュを付けたURLへアクセスしたときは404の「Not"
-" "
-"Found」エラーが発生します。こうすると、これらのリソースに対するURLを唯ひとつに保てるため、検索エンジンが同じページを重複して登録することを防ぐ手助けになります。"
+"``about`` エンドポイントの正規化されたURLでは、最後にスラッシュがあり"
+"ません。これはファイルシステムでのファイルのパス名に似ています。もし最後に"
+"スラッシュを付けたURL（``/about/``）へアクセスしたときは404の「Not Found」"
+"エラーが発生します。こうすると、これらのリソースに対するURLを唯ひとつに"
+"保てるため、検索エンジンが同じページを重ねて登録することを防ぐ手助けに"
+"なります。"
 
 # 9371ea3d1eee41fcb5f5a0623de28d87
 #: ../../flask/docs/quickstart.rst:300
@@ -500,9 +508,8 @@ msgstr "（URLを変更するとき）ハードコーディングされた（複
 
 # b44ae5f4fc404bfcb7456c79960dff79
 #: ../../flask/docs/quickstart.rst:313
-#, fuzzy
 msgid "URL building handles escaping of special characters transparently."
-msgstr "URLを構築する処理では、特殊文字とユニコードのデータのエスケープ処理を透過的に扱います。"
+msgstr "URLを構築する処理では、特殊文字のエスケープ処理を透過的に扱います。"
 
 # 1ae4c4dde68f441496688f758f02719f
 #: ../../flask/docs/quickstart.rst:314
@@ -604,7 +611,6 @@ msgstr "テンプレートの変換（Rendering）"
 
 # c411aeba47bc4143893d5b498c8d7f26
 #: ../../flask/docs/quickstart.rst:397
-#, fuzzy
 msgid ""
 "Generating HTML from within Python is not fun, and actually pretty "
 "cumbersome because you have to do the HTML escaping on your own to keep "
@@ -612,8 +618,11 @@ msgid ""
 "<https://palletsprojects.com/p/jinja/>`_ template engine for you "
 "automatically."
 msgstr ""
-"Pythonの中でHTMLを生成するのは楽しい作業ではなく、アプリケーションをセキュアに保つためにHTMLエスケープ処理を自分で行う必要があるために、実際にとても煩わしいものです。そのような理由から、Flaskは\\"
-" `Jinja2 <http://jinja.pocoo.org/>`_\\ テンプレートエンジンを自動的に組み込んでいます。"
+"Pythonの中でHTMLを生成するのは楽しい作業ではなく、アプリケーションを"
+"セキュアに保つためにHTMLエスケープ処理を自分で行う必要があるために、"
+"実際にとても煩わしいものです。そのような理由から、Flaskは `Jinja2 "
+"<https://palletsprojects.com/p/jinja/>`_ テンプレートエンジンを自動的に"
+"設定します。"
 
 # 50d34f17a8c34cbdb08df7e3a55250b4
 #: ../../flask/docs/quickstart.rst:402
@@ -648,14 +657,14 @@ msgstr "**ケース 2**: パッケージ::"
 
 # 6da51e4b81ea47a3b1f481dc87e32150
 #: ../../flask/docs/quickstart.rst:431
-#, fuzzy
 msgid ""
 "For templates you can use the full power of Jinja2 templates.  Head over "
 "to the official `Jinja2 Template Documentation "
 "<https://jinja.palletsprojects.com/templates/>`_ for more information."
 msgstr ""
-"テンプレートではJinja2テンプレートの力を全て使うことができます。より詳細な情報は公式の\\ `Jinja2テンプレートドキュメント "
-"<http://jinja.pocoo.org/docs/templates/>`_\\ を確認してください。"
+"テンプレートではJinja2テンプレートの力を全て使うことができます。より詳細な"
+"情報は公式の `Jinja2テンプレートのドキュメント "
+"<https://jinja.palletsprojects.com/templates/>`_ を確認してください。"
 
 # 7b05342370b34cfaae4e4f5ad894a431
 #: ../../flask/docs/quickstart.rst:435
@@ -675,20 +684,19 @@ msgstr ""
 
 # addddccdc296443d88da6f33e885ca3b
 #: ../../flask/docs/quickstart.rst:451
-#, fuzzy
 msgid ""
 "Templates are especially useful if inheritance is used.  If you want to "
 "know how that works, see :doc:`patterns/templateinheritance`. Basically "
 "template inheritance makes it possible to keep certain elements on each "
 "page (like header, navigation and footer)."
 msgstr ""
-"継承を使うとテンプレートは非常に便利です。テンプレートがどのように働くか知りたいときは\\ :ref:`template-"
-"inheritance`\\ "
-"のパターンのドキュメントを確認してください。基本的にテンプレートの継承は（ヘッダ、ナビゲーション、フッタのように）ある種の要素を各ページで保持できるようにします。"
+"継承を使うとテンプレートは非常に便利です。テンプレートがどのように働くか"
+"知りたいときは :doc:`patterns/templateinheritance` を確認してください。"
+"基本的にテンプレートの継承は（ヘッダ、ナビゲーション、フッタのように）"
+"ある種の要素を各ページで保持できるようにします。"
 
 # f02d8ac777084080ae360f01507b5a31
 #: ../../flask/docs/quickstart.rst:456
-#, fuzzy
 msgid ""
 "Automatic escaping is enabled, so if ``name`` contains HTML it will be "
 "escaped automatically.  If you can trust a variable and you know that it "
@@ -697,10 +705,13 @@ msgid ""
 ":class:`~markupsafe.Markup` class or by using the ``|safe`` filter in the"
 " template.  Head over to the Jinja 2 documentation for more examples."
 msgstr ""
-"自動エスケープが有効なので、もし\\ ``name``\\ "
-"がHTMLを含んでいた場合は、自動的にエスケープされます。もし変数を信頼できて、それが安全なHTMLであると分かっている（例えばwikiのマークアップをHTMLへ変換するモジュールから来ているなど）場合は、\\"
-" :class:`~jinja2.Markup`\\ クラスを使うか、\\ ``|safe``\\ フィルタ（訳注: "
-"ここでのフィルタはjinja2テンプレートエンジンの機能のひとつ）をテンプレートの中で使って、安全だと印を付けることができます。さらなる例はJinja2ドキュメントを確認してください。"
+"自動エスケープが有効なので、もし ``name`` がHTMLを含んでいた場合は、"
+"自動的にエスケープされます。もし変数を信頼できて、それが安全なHTMLであると"
+"分かっている（例えばwikiのマークアップをHTMLへ変換するモジュールから来て"
+"いるなど）場合は、:class:`~markupsafe.Markup` クラスを使うか、``|safe`` "
+"フィルタ（訳注: ここでのフィルタはjinja2テンプレートエンジンの機能のひとつ）"
+"をテンプレートの中で使って、安全だと印を付けることができます。さらなる例は"
+"Jinja2のドキュメントを確認してください。"
 
 # a2f2b69650e4428d9a47f88f19150375
 #: ../../flask/docs/quickstart.rst:463
@@ -725,15 +736,14 @@ msgstr ""
 
 # fa932796c4c14cbebc704b43ab91cc99
 #: ../../flask/docs/quickstart.rst:480
-#, fuzzy
 msgid ""
 "Unsure what that :class:`~flask.g` object is? It's something in which you"
 " can store information for your own needs. See the documentation for "
 ":class:`flask.g` and :doc:`patterns/sqlite3`."
 msgstr ""
-":class:`~flask.g`\\ "
-"オブジェクトが何なのか不確かですか？それは、独自のニーズのための情報を格納できるものであり、より詳細な情報はそのオブジェクト（\\ "
-":class:`~flask.g`\\ ）と\\ :ref:`sqlite3`\\ のドキュメントをチェックしてください。"
+":class:`~flask.g` オブジェクトが何なのか不確かですか？それは、独自のニーズ"
+"のための情報を格納できるものであり、より詳細な情報は :class:`~flask.g` と "
+":doc:`patterns/sqlite3` のドキュメントを見てください。"
 
 # 6a9fedfc38dd4c21832ce9c2cd09fc1d
 #: ../../flask/docs/quickstart.rst:486
@@ -945,9 +955,10 @@ msgstr ""
 
 # d45eda89843e481399ee33b2f916daeb
 #: ../../flask/docs/quickstart.rst:632
-#, fuzzy
 msgid "For some better examples, see :doc:`patterns/fileuploads`."
-msgstr "もっと良い例については、\\ :ref:`uploading-files`\\ のパターンを調べてください。"
+msgstr ""
+"もっと良い例については、:doc:`patterns/fileuploads` のパターンを調べて"
+"ください。"
 
 # 73f29221aadb4a45b12a2c88687e5096
 #: ../../flask/docs/quickstart.rst:635
@@ -996,14 +1007,14 @@ msgstr ""
 
 # 2f753c8988f94090978aa8a5d53924b5
 #: ../../flask/docs/quickstart.rst:670
-#, fuzzy
 msgid ""
 "Sometimes you might want to set a cookie at a point where the response "
 "object does not exist yet.  This is possible by utilizing the "
 ":doc:`patterns/deferredcallbacks` pattern."
 msgstr ""
-"ときには、responseオブジェクトがまだ存在しない時点でクッキーを設定したいこともあるでしょう。これは\\ :ref:`deferred-"
-"callbacks`\\ のパターンを活用すれば可能です。"
+"ときには、responseオブジェクトがまだ存在しない時点でクッキーを設定したい"
+"こともあるでしょう。これは :doc:`patterns/deferredcallbacks` のパターンを"
+"活用すれば可能です。"
 
 # adf8de47d31d49b0aa22d6fffd0e6cf2
 #: ../../flask/docs/quickstart.rst:674
@@ -1058,9 +1069,8 @@ msgstr ""
 
 # d84acb7e46d14c48ab21311ee3af5591
 #: ../../flask/docs/quickstart.rst:712
-#, fuzzy
 msgid "See :doc:`errorhandling` for more details."
-msgstr "より詳細は\\ :ref:`error-handlers`\\ を確認してください。"
+msgstr "より詳細は :doc:`errorhandling` を確認してください。"
 
 # 2040c935795c487791ca2f6455412292
 #: ../../flask/docs/quickstart.rst:717
@@ -1263,17 +1273,16 @@ msgstr ""
 
 # ebdc10aa73354b478c9ccb445c8cfb41
 #: ../../flask/docs/quickstart.rst:874
-#, fuzzy
 msgid ""
 "To flash a message use the :func:`~flask.flash` method, to get hold of "
 "the messages you can use :func:`~flask.get_flashed_messages` which is "
 "also available in the templates. See :doc:`patterns/flashing` for a full "
 "example."
 msgstr ""
-"メッセージをフラッシュ表示させるには\\ :func:`~flask.flash`\\ "
-"メソッドを使用し、メッセージを捉えるには、テンプレートでも利用可能な\\ "
-":func:`~flask.get_flashed_messages`\\ が使用できます。不足のない（どちらの用法も示した）例については\\ "
-":ref:`message-flashing-pattern`\\ を調べてください。"
+"メッセージをフラッシュ表示させるには :func:`~flask.flash` メソッドを"
+"使用し、メッセージを捉えるには、テンプレート中でも利用可能な :func:"
+"`~flask.get_flashed_messages` が使用できます。不足のない（どちらの"
+"用法も示した）例については :doc:`patterns/flashing` を調べてください。"
 
 # 7521c668f6414c36987312e5267db5a8
 #: ../../flask/docs/quickstart.rst:880
@@ -1331,7 +1340,6 @@ msgid "Hooking in WSGI Middleware"
 msgstr "WSGIミドルウェア内でのフック"
 
 #: ../../flask/docs/quickstart.rst:912
-#, fuzzy
 msgid ""
 "To add WSGI middleware to your Flask application, wrap the application's "
 "``wsgi_app`` attribute. For example, to apply Werkzeug's "
@@ -1339,10 +1347,9 @@ msgid ""
 "behind Nginx:"
 msgstr ""
 "自分のFlaskアプリケーションにWSGIミドルウェアを追加するには、アプリ"
-"ケーションの\ ``wsgi_app``\ 属性を包み込みます（wrap）。例えば、"
-"Nginxの背後で実行するためにWerkzeugの\ "
-":class:`~werkzeug.middleware.proxy_fix.ProxyFix`\ ミドルウェアを適用する"
-"には以下のようにします:"
+"ケーションの ``wsgi_app`` 属性を包み込みます（wrap）。例えば、Nginxの背後で"
+"走らせるためにWerkzeugの :class:`~werkzeug.middleware.proxy_fix.ProxyFix` "
+"ミドルウェアを適用するには以下のようにします:"
 
 #: ../../flask/docs/quickstart.rst:922
 msgid ""
@@ -1371,9 +1378,8 @@ msgstr ""
 
 # e41d486b941e48e385847ce3b902e50e
 #: ../../flask/docs/quickstart.rst:933
-#, fuzzy
 msgid "For more on Flask extensions, see :doc:`extensions`."
-msgstr "Flask拡張についてさらには、\\ :ref:`extensions`\\ を調べてください。"
+msgstr "Flask拡張についてさらには、:doc:`extensions` を調べてください。"
 
 # 09f396485bfb49639fd4ad512116d750
 #: ../../flask/docs/quickstart.rst:936
@@ -1382,9 +1388,10 @@ msgstr "webサーバへのデプロイ"
 
 # 97c96b4cd53247b7919f931b1ead81b9
 #: ../../flask/docs/quickstart.rst:938
-#, fuzzy
 msgid "Ready to deploy your new Flask app? See :doc:`deploying/index`."
-msgstr "新しいFlaskアプリをデプロイする準備ができましたか？\\ :ref:`deployment`\\ へ進んでください。"
+msgstr ""
+"新しいFlaskアプリをデプロイする準備ができましたか？:doc:`deploying/index` "
+"へ進んでください。"
 
 # 745b4cdd410b494c9fc3be5f2002b985
 #~ msgid ""

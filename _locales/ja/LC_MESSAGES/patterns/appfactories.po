@@ -24,7 +24,6 @@ msgstr "アプリケーション製造工場（Application Factories）"
 
 # 43074d5043684e83b184d2d0f1c24041
 #: ../../flask/docs/patterns/appfactories.rst:4
-#, fuzzy
 msgid ""
 "If you are already using packages and blueprints for your application "
 "(:doc:`/blueprints`) there are a couple of really nice ways to further "
@@ -33,11 +32,12 @@ msgid ""
 "this object into a function, you can then create multiple instances of "
 "this app later."
 msgstr ""
-"もしパッケージとblueprintをアプリケーションで既に使っている場合（\ "
-":ref:`blueprints`\ 参照）、さらによい経験へ改善させるとてもよい方法がいくつか"
-"あります。よくあるパターンでは、blueprintがimportされたときにアプリケーション"
-"のオブジェクトを作成します。しかし、もしこのオブジェクト作成を関数の内側に"
-"移動させれば、あとでこのアプリのインスタンスを複数作成できるようになります。"
+"もしパッケージとblueprintをアプリケーションで既に使っている場合（:doc:"
+"`/blueprints` 参照）、さらによい体験へ改善させるとてもよい方法がいくつか"
+"あります。よくあるパターンでは、blueprintがimportされたときにアプリケー"
+"ションのオブジェクトを作成します。しかし、もしこのオブジェクト作成を関数の"
+"内側に移動させれば、後でこのアプリのインスタンスを複数作成できるように"
+"なります。"
 
 # 7e14aaf62b1947159178e41321b228e4
 #: ../../flask/docs/patterns/appfactories.rst:10
@@ -157,11 +157,10 @@ msgstr "アプリケーションの使用"
 
 # bce65ec6579c4689bc2efd90d7b19c72
 #: ../../flask/docs/patterns/appfactories.rst:90
-#, fuzzy
 msgid "To run such an application, you can use the :command:`flask` command:"
 msgstr ""
-"このようなアプリケーションを実行するために、\ :command:`flask`\ コマンドを"
-"使用できます。"
+"このようなアプリケーションを実行するために、:command:`flask` コマンドを"
+"使用できます:"
 
 #: ../../flask/docs/patterns/appfactories.rst:94
 #: ../../flask/docs/patterns/appfactories.rst:120
@@ -180,15 +179,13 @@ msgstr ""
 
 # 046a8950135c441786ebadc6cf0b87d8
 #: ../../flask/docs/patterns/appfactories.rst:115
-#, fuzzy
 msgid ""
 "Flask will automatically detect the factory (``create_app`` or "
 "``make_app``) in ``myapp``. You can also pass arguments to the factory "
 "like this:"
 msgstr ""
-"Flaskは自動的にfactory（\ ``create_app``\ または ``make_app``\ )を\ "
-"``myapp``\ の中から見つけ出します。以下のように、factoryへ引数を渡すことも"
-"可能です::"
+"Flaskは自動的にfactory（``create_app`` または ``make_app``)を ``myapp`` の"
+"中から見つけ出します。以下のように、factoryへ引数を渡すことも可能です:"
 
 # 9ef58389dbf240669819d7089fcf9205
 #: ../../flask/docs/patterns/appfactories.rst:141

@@ -87,14 +87,14 @@ msgstr "（何もなし）"
 
 # 606883e7901a4c94942a03ab28fdbc58
 #: ../../flask/docs/cli.rst:48
-#, fuzzy
 msgid ""
 "The name \"app\" or \"wsgi\" is imported (as a \".py\" file, or package),"
 " automatically detecting an app (``app`` or ``application``) or factory "
 "(``create_app`` or ``make_app``)."
 msgstr ""
-"指定した名前（訳注: 上の例では「hello」にあたる部分）がimportされ、自動的にアプリ（\\ ``app``\\ "
-"）またはfactory（\\ ``create_app``\\ ）が見つけ出されます。"
+"「app」または「wsgi」という名前が（「.py」ファイル、もしくはパッケージと"
+"して）importされ、自動的にアプリ（``app`` もしくは ``application``）または"
+"factory（``create_app`` もしくは ``make_app``）が見つけ出されます。"
 
 # b24a3d97c94b4978b95bf671db938923
 #: ../../flask/docs/cli.rst:54
@@ -103,13 +103,13 @@ msgstr ""
 
 # 606883e7901a4c94942a03ab28fdbc58
 #: ../../flask/docs/cli.rst:53
-#, fuzzy
 msgid ""
 "The given name is imported, automatically detecting an app (``app`` or "
 "``application``) or factory (``create_app`` or ``make_app``)."
 msgstr ""
-"指定した名前（訳注: 上の例では「hello」にあたる部分）がimportされ、自動的にアプリ（\\ ``app``\\ "
-"）またはfactory（\\ ``create_app``\\ ）が見つけ出されます。"
+"指定した名前（訳注: 上の例では「hello」にあたる部分）がimportされ、自動的に"
+"アプリ（``app`` もしくは ``application``）またはfactory（``create_app`` "
+"もしくは ``make_app``）が見つけ出されます。"
 
 # 96704387cfaf44db91a7b2d7c403a7ac
 #: ../../flask/docs/cli.rst:58
@@ -215,7 +215,6 @@ msgstr ""
 
 # d798a03a8a1747dfa7034427771be904
 #: ../../flask/docs/cli.rst:101
-#, fuzzy
 msgid ""
 "Do not use this command to run your application in production. Only use "
 "the development server during development. The development server is "
@@ -223,8 +222,11 @@ msgid ""
 "stable, or efficient. See :doc:`/deploying/index` for how to run in "
 "production."
 msgstr ""
-"本番環境ではアプリケーションを走らせるためにこのコマンドを使わないでください。開発中だけ開発用サーバを使用してください。開発用サーバは便宜のために提供されていますが、安全、安定、効率的であるようには特に設計されていません。本番環境でどうやって実行するかについては\\"
-" :ref:`deployment`\\ を確認してください。"
+"本番環境ではアプリケーションを走らせるためにこのコマンドを使わないでくだ"
+"さい。開発中だけ開発用サーバを使用してください。開発用サーバは便宜のために"
+"提供されていますが、安全、安定、効率的であるようには特に設計されていません。"
+"本番環境でどうやって実行するかについては :doc:`/deploying/index` を確認"
+"してください。"
 
 # f7b1eea9531d4ade9fb40776480a5171
 #: ../../flask/docs/cli.rst:108
@@ -464,9 +466,10 @@ msgstr "WindowsのCMDでは、\\ :file:`venv\\\\Scripts\\\\activate.bat`\\ に�
 
 # 50b12c41708b4f87a9d01fb1aa24dfee
 #: ../../flask/docs/cli.rst:371
-#, fuzzy
 msgid "Windows Powershell, :file:`venv\\\\Scripts\\\\activate.ps1`::"
-msgstr "WindowsのCMDでは、\\ :file:`venv\\\\Scripts\\\\activate.bat`\\ に追加します::"
+msgstr ""
+"WindowsのPowershellでは、 :file:`venv\\\\Scripts\\\\activate.ps1` に追加"
+"します::"
 
 # 991481a4ab61465cad59109c3e25b886
 #: ../../flask/docs/cli.rst:375

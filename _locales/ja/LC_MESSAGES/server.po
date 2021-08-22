@@ -67,7 +67,6 @@ msgstr ""
 
 # a6a4003694b3454db1e0c02fb2e76d45
 #: ../../flask/docs/server.rst:52
-#, fuzzy
 msgid ""
 "This enables the development environment, including the interactive "
 "debugger and reloader, and then starts the server on "
@@ -76,21 +75,22 @@ msgid ""
 " using the CLI."
 msgstr ""
 "この例ではインタラクティブなデバッガと再読み込み機能（reloader）を含む、"
-"開発環境を有効にし、それから\ *http://localhost:5000*\ でサーバを開始"
-"します。"
+"開発環境を有効にし、それから *http://localhost:5000* でサーバを開始"
+"します。利用可能なオプションを見るには ``flask run --help`` を使用し、"
+"CLIの仕様や設定についての指示（instructions）の詳細は :doc:`/cli` を"
+"使用してください。"
 
 # 6e247eb51ccf41dc8cd7a0284db05f65
 #: ../../flask/docs/server.rst:60
-#, fuzzy
 msgid ""
 "Prior to Flask 1.0 the ``FLASK_ENV`` environment variable was not "
 "supported and you needed to enable debug mode by exporting "
 "``FLASK_DEBUG=1``. This can still be used to control debug mode, but you "
 "should prefer setting the development environment as shown above."
 msgstr ""
-"Flask 1.0より前は、\ :envvar:`FLASK_ENV`\ 環境変数はサポートされておらず、"
-"デバッグモードを有効にするには\ ``FLASK_DEBUG=1``\ をexportする必要があり"
-"ました。これは今でもデバッグモードの制御に使用可能ですが、上述した開発環境の"
+"Flask 1.0より前は、``FLASK_ENV`` 環境変数はサポートされておらず、デバッグ"
+"モードを有効にするには ``FLASK_DEBUG=1`` をexportする必要がありました。"
+"これは今でもデバッグモードの制御に使用可能ですが、上述した開発環境の"
 "設定の方が好ましいものです。"
 
 #: ../../flask/docs/server.rst:68

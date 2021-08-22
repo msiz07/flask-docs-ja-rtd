@@ -27,7 +27,6 @@ msgstr ""
 
 # f66ac57a3fb84c069819e6c7876baf4c
 #: ../../flask/docs/index.rst:11
-#, fuzzy
 msgid ""
 "Welcome to Flask's documentation. Get started with :doc:`installation` "
 "and then get an overview with the :doc:`quickstart`. There is also a more"
@@ -37,12 +36,13 @@ msgid ""
 "component of Flask in detail, with a full reference in the :doc:`api` "
 "section."
 msgstr ""
-"Flaskのドキュメントへようこそ。\ :ref:`installation`\ から始めて、"
-"それから\ :ref:`quickstart`\ で概要をつかみましょう 。より詳細な\ :ref:`tutorial`\ "
-"では、小さいけれども完成しているFlaskアプリケーションをどのように作成するか示しています。"
-"\ :ref:`patterns`\ セクションでは一般的なパターンを記述しています。この文書のその他の"
-"部分ではFlaskの各コンポーネントについて詳細を記述しており、その完全なリファレンスは"
-"\ :ref:`api`\ セクションにあります。"
+"Flaskのドキュメントへようこそ。:doc:`installation` から始めて、"
+"それから :doc:`quickstart` で概要をつかみましょう 。より詳細な "
+":doc:`tutorial/index` では、小さいけれども完成しているFlaskアプリケーション"
+"をどのように作成するか示しています。:doc:`patterns/index` セクションでは"
+"一般的なパターンを記述しています。この文書のその他の部分ではFlaskの各"
+"コンポーネントについて詳細を記述しており、その完全なリファレンスは"
+" :doc:`api` セクションにあります。"
 
 # 337be1ceb40d45a98a218c0e9213fecd
 #: ../../flask/docs/index.rst:19
@@ -55,9 +55,8 @@ msgstr ""
 
 # 259ce2847d904befafceaa4a99142e72
 #: ../../flask/docs/index.rst:22
-#, fuzzy
 msgid "`Jinja documentation <https://jinja.palletsprojects.com/>`_"
-msgstr "`Werkzeugドキュメント <https://werkzeug.palletsprojects.com/>`_"
+msgstr "`Jinjaドキュメント <https://jinja.palletsprojects.com/>`_"
 
 # 259ce2847d904befafceaa4a99142e72
 #: ../../flask/docs/index.rst:23

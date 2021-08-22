@@ -82,7 +82,6 @@ msgstr "サブクラス"
 
 # 9ccb5f8cb09642bb98b05d5d95189d9d
 #: ../../flask/docs/becomingbig.rst:33
-#, fuzzy
 msgid ""
 "The :class:`~flask.Flask` class has many methods designed for "
 "subclassing. You can quickly add or customize behavior by subclassing "
@@ -91,12 +90,12 @@ msgid ""
 "with :doc:`/patterns/appfactories`. See :doc:`/patterns/subclassing` for "
 "an example."
 msgstr ""
-":class:`~flask.Flask`\ クラスは、サブクラス用に設計された多くのメソッドを"
-"持ちます。\ :class:`~flask.Flask`\ をサブクラス化して振舞を素早く追加または"
+":class:`~flask.Flask` クラスは、サブクラス用に設計された多くのメソッドを"
+"持ちます。 :class:`~flask.Flask` をサブクラス化して振舞を素早く追加または"
 "カスタマイズでき（リンク先のメソッドのドキュメントを調べてください）、"
 "アプリケーションのクラスをインスタンス化するところではどこでもそのサブ"
-"クラスを使用できます。これは\ :ref:`app-factories` を使っても問題なく機能"
-"します。例は\ :doc:`/patterns/subclassing`\ を調べてください。"
+"クラスを使用できます。これは :doc:`/patterns/appfactories` を使っても問題"
+"なく機能します。例は :doc:`/patterns/subclassing` を調べてください。"
 
 # 4dedd78154f7417c8dc59f7b2c42dd0b
 #: ../../flask/docs/becomingbig.rst:40
@@ -105,7 +104,6 @@ msgstr "ミドルウェアを使った包み込み（Wrap with middleware）"
 
 # 3d58ea3ac639424e8c5793ede176e4e6
 #: ../../flask/docs/becomingbig.rst:42
-#, fuzzy
 msgid ""
 "The :doc:`/patterns/appdispatch` pattern shows in detail how to apply "
 "middleware. You can introduce WSGI middleware to wrap your Flask "
@@ -113,11 +111,11 @@ msgid ""
 " application and your HTTP server. Werkzeug includes several `middlewares"
 " <https://werkzeug.palletsprojects.com/middleware/>`_."
 msgstr ""
-":ref:`app-dispatch`\ 章は、ミドルウェアをどのように適用するかの詳細を示し"
-"ます。自分のFlaskインスタンスを包み込むWSGIミドルウェアを導入して、自分の"
-"アプリケーションとHTTPサーバの間の階層で修正や変更を導入することが可能です。"
-"Werkzeugはいくつかの\ `ミドルウェア "
-"<https://Werkzeug.palletsprojects.com/middleware/>`_\ を含んでいます。"
+":doc:`/patterns/appdispatch` 章は、ミドルウェアをどのように適用するかの詳細"
+"を示します。自分のFlaskインスタンスを包み込むWSGIミドルウェアを導入して、"
+"自分のアプリケーションとHTTPサーバの間の階層で修正や変更を導入することが可能"
+"です。Werkzeugはいくつかの `ミドルウェア "
+"<https://werkzeug.palletsprojects.com/middleware/>`_ を含んでいます。"
 
 # acc1b7b7b7f44e9190746c3e5acb016c
 #: ../../flask/docs/becomingbig.rst:49

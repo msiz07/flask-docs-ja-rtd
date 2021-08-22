@@ -156,13 +156,12 @@ msgstr ""
 
 # 736cd2bedf1449f688985f02b74e2c1b
 #: ../../flask/docs/config.rst:67
-#, fuzzy
 msgid ""
 "To switch Flask to the development environment and enable debug mode, set"
 " :envvar:`FLASK_ENV`:"
 msgstr ""
 "Flaskを開発（development）のenvironmentへ変更してデバッグモードを有効に"
-"するには、\ :envvar:`FLASK_ENV`\ を以下のように設定します::"
+"するには、 :envvar:`FLASK_ENV` を以下のように設定します:"
 
 #: ../../flask/docs/config.rst:72 ../../flask/docs/config.rst:440
 #: ../../flask/docs/config.rst:511
@@ -363,7 +362,6 @@ msgstr ""
 
 # c899cc9e42ad42e88b82a416f7a6c6c2
 #: ../../flask/docs/config.rst:178
-#, fuzzy
 msgid ""
 "A secret key that will be used for securely signing the session cookie "
 "and can be used for any other security related needs by extensions or "
@@ -372,9 +370,9 @@ msgid ""
 msgstr ""
 "セッションのクッキーを安全に署名するために使用され、さらに自分のアプリ"
 "ケーションやFlask拡張が必要とする、その他のあらゆるセキュリティに関する"
-"用途で使用されるsecret keyです。これはでたらめな（random）長い文字列の"
-"バイトにするべきであり、unicodeも許容されています。例えば、以下のコマンド"
-"の出力結果を自分の設定にコピーします::"
+"用途で使用されるsecret keyです。これはでたらめな（random）長い ``bytes`` "
+"または ``str`` にするべきです。例えば、以下のコマンドの出力結果を自分の"
+"設定にコピーします::"
 
 # 27f91b2adbc14a70af288b884b1d38b3
 #: ../../flask/docs/config.rst:186
@@ -518,7 +516,6 @@ msgstr ""
 
 # f048644e95e8484eaee03eccf85f8aa0
 #: ../../flask/docs/config.rst:267
-#, fuzzy
 msgid ""
 "When serving files, set the cache control max age to this number of "
 "seconds. Can be a :class:`datetime.timedelta` or an ``int``. Override "
@@ -527,9 +524,9 @@ msgid ""
 "blueprint."
 msgstr ""
 "ファイルを供給するとき、この値の秒数にキャッシュ制御最大年齢（cache "
-"control max age）を設定します。\ :class:`datetime.timedelta`\ または\ "
-"``int``\ のいずれかに設定可能です。アプリケーションまたはblueprint上で"
-"\ :meth:`~flask.Flask.get_send_file_max_age`\ を使用すると、ファイル"
+"control max age）を設定します。 :class:`datetime.timedelta` または "
+"``int`` のいずれかに設定可能です。アプリケーションまたはblueprint上で"
+" :meth:`~flask.Flask.get_send_file_max_age` を使用すると、ファイル"
 "ごとにこの値を上書きします。"
 
 #: ../../flask/docs/config.rst:273
@@ -574,7 +571,6 @@ msgstr ""
 
 # e4aaa7f149804756857fb026e428e33e
 #: ../../flask/docs/config.rst:299
-#, fuzzy
 msgid ""
 "Inform the application what path it is mounted under by the application /"
 " web server.  This is used for generating URLs outside the context of a "
@@ -584,13 +580,14 @@ msgid ""
 msgstr ""
 "アプリケーションに、アプリケーションサーバ / webサーバによってどのパスに"
 "設置（mount）されているかを知らせます。これはリクエストのcontextの外側で"
-"（訳注： request contextが登録できてない状態という意味合い、\ "
-":doc:`reqcontext`\ 参照）URLを生成するために使用されます（リクエストの内側"
-"では、振り分け機能（dispatcher）が代わりに\ ``SCRIPT_NAME``\ （訳注: アプリ"
+"（訳注： request contextが登録できてない状態という意味合い、 "
+":doc:`reqcontext` 参照）URLを生成するために使用されます（リクエストの内側"
+"では、振り分け機能（dispatcher）が代わりに ``SCRIPT_NAME`` （訳注: アプリ"
 "ケーションのエンドポイントのURLでのパス部分とほぼ同じ意味合い）を設定する責任"
-"を担います; 振り分け（dispatch）設定の例は\ :ref:`Application Dispatching "
-"<app-dispatch>`\ を確認してください）（訳注： ``SCRIPT_NAME``\ などについて"
-"は、wsgiの仕様であるPEP3333の「`environ Variable <https://www.python.org/dev/peps/pep-3333/#environ-variables>`_」を参照）。"
+"を担います; 振り分け（dispatch）設定の例は :doc:`/patterns/appdispatch` "
+"を確認してください）（訳注： ``SCRIPT_NAME``\ などについては、wsgiの仕様で"
+"あるPEP3333の「`environ Variable "
+"<https://www.python.org/dev/peps/pep-3333/#environ-variables>`_」を参照）。"
 
 # c88ef0c816234a25989893c550413d10
 #: ../../flask/docs/config.rst:305
@@ -782,13 +779,11 @@ msgstr ""
 
 # 0c66c64a85184544bb6e1628173d025b
 #: ../../flask/docs/config.rst:418
-#, fuzzy
 msgid "Configuring from Python Files"
-msgstr "ファイルからの設定の読み取り（Configuring from Files）"
+msgstr "Pythonファイルからの設定の読み取り（Configuring from Python Files）"
 
 # c808853796cf4a1282fec93b01a9c8c5
 #: ../../flask/docs/config.rst:420
-#, fuzzy
 msgid ""
 "Configuration becomes more useful if you can store it in a separate file,"
 " ideally located outside the actual application package. This makes "
@@ -798,7 +793,7 @@ msgid ""
 msgstr ""
 "ファイルを分けて、理想的には実際のアプリケーションのパッケージからは外側に"
 "あるファイルで、そのファイルの中に設定を格納できる場合、設定をより便利に行え"
-"ます。これは、様々なパッケージ処理ツール（\ :ref:`distribute-deployment`\ ）"
+"ます。これは、様々なパッケージ処理ツール（:doc:`/patterns/distribute`）"
 "を通して自分のアプリケーションをパッケージ化および配布できるようにし、そして"
 "最終的に設定ファイルを後から変更できるようにします。"
 
@@ -809,7 +804,6 @@ msgstr "したがって、よくあるパターンは以下のとおりです::"
 
 # 9960357878ce48e8aff80d97d04345e9
 #: ../../flask/docs/config.rst:432
-#, fuzzy
 msgid ""
 "This first loads the configuration from the "
 "`yourapplication.default_settings` module and then overrides the values "
@@ -817,10 +811,10 @@ msgid ""
 "environment variable points to.  This environment variable can be set in "
 "the shell before starting the server:"
 msgstr ""
-"これは、最初に\ `yourapplication.default_settings`\ モジュールから設定を読み"
-"込み、それから\ :envvar:`YOURAPPLICATION_SETTINGS`\ 環境変数が指し示すファイル"
-"の内容を使って値を上書きします。この環境変数はLinuxまたはOS Xでは、サーバを"
-"開始する前にシェルの中でexportコマンドで設定できます::"
+"これは、最初に `yourapplication.default_settings` モジュールから設定を読み"
+"込み、それから :envvar:`YOURAPPLICATION_SETTINGS` 環境変数が指し示すファイル"
+"の内容を使って値を上書きします。この環境変数は、サーバを開始する前にシェルの"
+"中で設定できます:"
 
 # 40d0a4083b6e42588805b0da3f765cee
 #: ../../flask/docs/config.rst:464
@@ -855,9 +849,8 @@ msgstr ""
 
 # 0c66c64a85184544bb6e1628173d025b
 #: ../../flask/docs/config.rst:481
-#, fuzzy
 msgid "Configuring from Data Files"
-msgstr "ファイルからの設定の読み取り（Configuring from Files）"
+msgstr "データファイルからの設定の読み取り（Configuring from Data Files）"
 
 #: ../../flask/docs/config.rst:483
 msgid ""
@@ -888,11 +881,9 @@ msgstr ""
 
 # e1d56fd244174ff79b7631320e34535c
 #: ../../flask/docs/config.rst:507
-#, fuzzy
 msgid "Environment variables can be set in the shell before starting the server:"
 msgstr ""
-"環境変数はLinuxまたはOS Xでは、サーバを開始する前にシェルの中でexport"
-"コマンドで設定できます::"
+"環境変数は、サーバを開始する前にシェルの中で設定できます:"
 
 # fa87cc3074e94cd7a066b4e8494ca97c
 #: ../../flask/docs/config.rst:538
@@ -1115,15 +1106,14 @@ msgstr ""
 
 # ad98eaa6ce944993aad0eba823276cdf
 #: ../../flask/docs/config.rst:679
-#, fuzzy
 msgid ""
 "Use a tool like `fabric`_ in production to push code and configurations "
 "separately to the production server(s).  For some details about how to do"
 " that, head over to the :doc:`/patterns/fabric` pattern."
 msgstr ""
-"コードと設定を別々に本番環境のサーバへ押し入れる（push）ために、\ "
-"`fabric`_\ のようなツールを本番環境で使用します。どのように実施するかに"
-"ついての詳細は、\ :ref:`fabric-deployment`\ パターンを調べてください。"
+"コードと設定を別々に本番環境のサーバへ押し入れる（push）ために、"
+"`fabric`_ のようなツールを本番環境で使用します。どのように実施するかに"
+"ついての詳細は、 :doc:`/patterns/fabric` パターンを調べてください。"
 
 # 03ca02d2d8394da6bf2f0536404b1f67
 #: ../../flask/docs/config.rst:690

@@ -19,9 +19,8 @@ msgstr ""
 
 # 5baa87b87f9444ddbd34b2534fc6298c
 #: ../../flask/docs/patterns/packages.rst:2
-#, fuzzy
 msgid "Large Applications as Packages"
-msgstr "より大きなアプリケーション"
+msgstr "パッケージにした大きなアプリケーション（Large Applications as Packages）"
 
 # f8105b7d7e4442bc80e0369363585e7b
 #: ../../flask/docs/patterns/packages.rst:4
@@ -83,13 +82,12 @@ msgstr ""
 
 # 7f652089641e4186b7ff6409b48b64ce
 #: ../../flask/docs/patterns/packages.rst:59
-#, fuzzy
 msgid ""
 "In order to run the application you need to export an environment "
 "variable that tells Flask where to find the application instance:"
 msgstr ""
 "アプリケーションを実行するためには、アプリケーションのインスタンスを"
-"どこで見つけられるかFlaskへ伝える環境変数をexportする必要があります::"
+"どこで見つけられるかFlaskへ伝える環境変数をexportする必要があります:"
 
 #: ../../flask/docs/patterns/packages.rst:64
 #: ../../flask/docs/patterns/packages.rst:88
@@ -108,7 +106,6 @@ msgstr ""
 
 # c37943e6bbed42f5a5cf03b43d962575
 #: ../../flask/docs/patterns/packages.rst:82
-#, fuzzy
 msgid ""
 "If you are outside of the project directory make sure to provide the "
 "exact path to your application directory. Similarly you can turn on the "
@@ -116,7 +113,7 @@ msgid ""
 msgstr ""
 "もしプロジェクトのディレクトリの外側に居る場合は、自分のプロジェクトの"
 "ディレクトリへのパスを正確に提供するよう確実にしてください。同様に、"
-"以下のようにして開発機能（development features）を有効にできます::"
+"以下のようにして開発機能（development features）を有効にできます:"
 
 # c6fc6fc24dd743fa89077819bab15c17
 #: ../../flask/docs/patterns/packages.rst:106
@@ -201,7 +198,6 @@ msgstr ""
 
 # 66b8e9a3e5254ab2a45c6c469cc64ac5
 #: ../../flask/docs/patterns/packages.rst:164
-#, fuzzy
 msgid ""
 "There are still some problems with that approach but if you want to use "
 "decorators there is no way around that.  Check out the "
@@ -209,7 +205,7 @@ msgid ""
 msgstr ""
 "まだいくつかの問題がこのアプローチでも残りますが、もしデコレータを使いたい"
 "場合は避けようがありません。この問題をどのように扱うかに関する、いくらかの"
-"ひらめきが欲しいときは、\ :ref:`becomingbig`\ をチェックしてください。"
+"ひらめきが欲しいときは、:doc:`/becomingbig` をチェックしてください。"
 
 # cfd326979814485d90c468ab184d7393
 #: ../../flask/docs/patterns/packages.rst:170
@@ -218,7 +214,6 @@ msgstr "Blueprintsを使った対応"
 
 # 9fc2ac8bbcff44e584860d6b486fb231
 #: ../../flask/docs/patterns/packages.rst:172
-#, fuzzy
 msgid ""
 "If you have larger applications it's recommended to divide them into "
 "smaller groups where each group is implemented with the help of a "
@@ -227,7 +222,7 @@ msgid ""
 msgstr ""
 "もしも大きなアプリケーションがあるときは、小さなグループへ分割し、"
 "blueprintの助けを使って各グループを実装することが推奨されます。この"
-"話題に対する穏やかな導入説明については\ :ref:`blueprints`\ の章の"
+"話題に対するやさしい導入説明については :doc:`/blueprints` の章の"
 "ドキュメントを参照してください。"
 
 # dd8a8634308340ff89687122f39bf4db

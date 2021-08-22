@@ -74,7 +74,6 @@ msgstr ""
 
 # d2ab1b859b4343db815ac52a8c60bdea
 #: ../../flask/docs/extensiondev.rst:27
-#, fuzzy
 msgid ""
 "But what do extensions look like themselves?  An extension has to ensure "
 "that it works with multiple Flask application instances at once.  This is"
@@ -84,9 +83,12 @@ msgid ""
 "of that it is crucial that your application supports that kind of "
 "behavior."
 msgstr ""
-"しかし、Flask拡張自身はどのようなものなのでしょうか？Flask拡張は、同時に複数のFlaskアプリケーションのインスタンスで機能することを保証する必要があります。これは、ユニットテストを助け複数の設定を持つことをサポートするために、多くの人が\\"
-" :ref:`app-factories`\\ "
-"のようなパターンを使って必要に応じてアプリケーションを作成することから、要求されます。そのため、自分のアプリケーションがその種の動作に対応することは、決定的に重要です。"
+"しかし、Flask拡張自身はどのようなものなのでしょうか？Flask拡張は、同時に"
+"複数のFlaskアプリケーションのインスタンスで機能することを保証する必要が"
+"あります。これは、ユニットテストを助け複数の設定を持つことをサポートする"
+"ために、多くの人が :doc:`/patterns/appfactories` のようなパターンを使って"
+"必要に応じてアプリケーションを作成することから、要求されます。そのため、"
+"自分のアプリケーションがその種の動作に対応することは、決定的に重要です。"
 
 # 96c4f40bc1274b5abaef24bdbdf358e3
 #: ../../flask/docs/extensiondev.rst:35
@@ -177,16 +179,17 @@ msgstr "Flask拡張の初期処理（Initializing Extensions）"
 
 # 692bc0e2f61347708d1c5af24d3629c1
 #: ../../flask/docs/extensiondev.rst:119
-#, fuzzy
 msgid ""
 "Many extensions will need some kind of initialization step.  For example,"
 " consider an application that's currently connecting to SQLite like the "
 "documentation suggests (:doc:`/patterns/sqlite3`). So how does the "
 "extension know the name of the application object?"
 msgstr ""
-"多くのFlask拡張はある種の初期化のステップを必要とするでしょう。例えば、ドキュメントが提案する（\\ :ref:`sqlite3`\\ "
-"）ようにその時点でSQLiteへ接続しているアプリケーションを考えてください。それでは、アプリケーションのオブジェクトの名前（訳注: "
-"アプリケーションのオブジェクトを格納している変数名のような意味合い）を、Flask拡張はどうやって知ることができるでしょうか？"
+"多くのFlask拡張はある種の初期化のステップを必要とするでしょう。例えば、"
+"ドキュメントが提案する（:doc:`/patterns/sqlite3`）ようにその時点でSQLiteへ"
+"接続しているアプリケーションを考えてください。それでは、アプリケーションの"
+"オブジェクトの名前（訳注: アプリケーションのオブジェクトを格納している変数"
+"名のような意味合い）を、Flask拡張はどうやって知ることができるでしょうか？"
 
 # 0b6f5979b0254be4895cd565f701094c
 #: ../../flask/docs/extensiondev.rst:124

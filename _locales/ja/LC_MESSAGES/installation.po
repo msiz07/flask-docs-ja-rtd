@@ -29,11 +29,12 @@ msgstr "Pythonのバージョン"
 
 # 4d56e43578524f3ba7a8b83fc9b09ac5
 #: ../../flask/docs/installation.rst:8
-#, fuzzy
 msgid ""
 "We recommend using the latest version of Python. Flask supports Python "
 "3.6 and newer."
-msgstr "Python 3の最新バージョンを使うことを推奨します。FlaskはPython 3.5以降、Python 2.7、そしてPyPyをサポートします。"
+msgstr ""
+"Pythonの最新バージョンを使うことを推奨します。FlaskはPython 3.6以降を"
+"サポートします。"
 
 # 8eeec08d592b4542a5b95959ae657c49
 #: ../../flask/docs/installation.rst:13
@@ -103,9 +104,8 @@ msgstr "以下の配布ツール（distributions）は、自動的にはイン�
 
 # 8dc9d625d840486593021cee4e4aa518
 #: ../../flask/docs/installation.rst:41
-#, fuzzy
 msgid "`Blinker`_ provides support for :doc:`signals`."
-msgstr "`Blinker`_\\ は、\\ :ref:`signals`\\ のサポートを提供します。"
+msgstr "`Blinker`_ は、:doc:`signals` のサポートを提供します。"
 
 # d55383d9056646dab84fcf815b6d3e86
 #: ../../flask/docs/installation.rst:42
@@ -158,13 +158,12 @@ msgstr ""
 
 # 292c7344fc164103861e0d6ee6ee151f
 #: ../../flask/docs/installation.rst:67
-#, fuzzy
 msgid ""
 "Python comes bundled with the :mod:`venv` module to create virtual "
 "environments."
 msgstr ""
-"Python 3ではvirtual environmentを作成する\\ :mod:`venv`\\ "
-"モジュールも合わせて提供されています。もし最近のバージョンのPythonを使っている場合、次のセクションで続けてください。"
+"Pythonではvirtual environmentを作成する :mod:`venv` モジュールも合わせて"
+"提供されています。"
 
 # 0e7f95f687b14254a38de43d3597a849
 #: ../../flask/docs/installation.rst:74
@@ -184,9 +183,8 @@ msgstr ""
 # 6745d1dfe14c442ab033b7aa157ea5c8
 # 0ae70b05b7f24fc8b3a2e103d1a67dd8
 #: ../../flask/docs/installation.rst:88 ../../flask/docs/installation.rst:112
-#, fuzzy
 msgid "Windows"
-msgstr "Windowsでは:"
+msgstr ""
 
 # ce63e938272446ac94b98b8662a3d529
 #: ../../flask/docs/installation.rst:100

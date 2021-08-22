@@ -74,15 +74,14 @@ msgstr ""
 
 # 64e0688815ae424d81e5e7dddecb024d
 #: ../../flask/docs/tutorial/deploy.rst:34
-#, fuzzy
 msgid ""
 "You can find the file in ``dist/flaskr-1.0.0-py3-none-any.whl``. The file"
 " name is in the format of {project name}-{version}-{python tag} -{abi "
 "tag}-{platform tag}."
 msgstr ""
-"その（ビルドした）ファイルは\ ``dist/flaskr-1.0.0-py3-none-any.whl``\ で"
-"見つけられます。ファイル名はプロジェクト名、バージョン、それとファイルが"
-"インストール可能であるかに関する、いくらかのタグになります。"
+"その（ビルドした）ファイルは ``dist/flaskr-1.0.0-py3-none-any.whl`` で"
+"見つけられます。ファイル名は{project name}-{version}-{python tag}-"
+"{abi tag}-{platform tag}という形式になります。"
 
 # b4387cab120b4423b8aa9ec7c8318382
 #: ../../flask/docs/tutorial/deploy.rst:38
