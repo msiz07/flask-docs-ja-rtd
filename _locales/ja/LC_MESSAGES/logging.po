@@ -42,6 +42,8 @@ msgid ""
 "If you don't configure logging, Python's default log level is usually "
 "'warning'. Nothing below the configured level will be visible."
 msgstr ""
+"もしもloggingの設定をしない場合、Pythonの標準のログレベルは普通は「warning」"
+"です。設定されたレベルより下のレベルのログは見えなくなります。"
 
 # 32060d07e20c4a6582224f8eabbaae2e
 #: ../../flask/docs/logging.rst:28
@@ -76,7 +78,7 @@ msgstr ""
 # 972dff3eddab44d5b5d0d2c50c45e691
 #: ../../flask/docs/logging.rst:60
 msgid "Default Configuration"
-msgstr ""
+msgstr "標準の設定（Default Configuration）"
 
 # 15ff50ff2df140299051ebf68b5c4864
 #: ../../flask/docs/logging.rst:62
@@ -196,7 +198,7 @@ msgid ""
 "::"
 msgstr ""
 "自分のプロジェクト次第で、rootのloggerだけを設定する代わりに、扱っている"
-"loggerをそれぞれ別々に設定する方がより便利かもしれません。"
+"loggerをそれぞれ別々に設定する方がより便利かもしれません。::"
 
 # 41df0a5c72f34072a0ab9bc5e30d1d37
 #: ../../flask/docs/logging.rst:171
