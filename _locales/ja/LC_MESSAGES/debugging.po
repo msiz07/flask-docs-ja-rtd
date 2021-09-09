@@ -19,11 +19,11 @@ msgstr ""
 
 #: ../../flask/docs/debugging.rst:2
 msgid "Debugging Application Errors"
-msgstr ""
+msgstr "アプリケーション・エラーのデバッグ"
 
 #: ../../flask/docs/debugging.rst:6
 msgid "In Production"
-msgstr ""
+msgstr "本番環境上"
 
 #: ../../flask/docs/debugging.rst:8
 msgid ""
@@ -32,6 +32,10 @@ msgid ""
 "Python code from the browser. It's protected by a pin, but that should "
 "not be relied on for security."
 msgstr ""
+"**本番環境では、開発サーバやデバッガを走らせないように、または組み込みの"
+"デバッガを有効にしないようにしてください**。デバッガはブラウザから任意の"
+"Pythonコードを実行できるようにします。それはpinによって保護されていますが、"
+"それはセキュリティに対して信頼できるものではありません。"
 
 #: ../../flask/docs/debugging.rst:13
 msgid ""
@@ -39,6 +43,9 @@ msgid ""
 "logging-tools`, or enable logging and notifications as described in "
 ":doc:`/logging`."
 msgstr ""
+"例えば :ref:`error-logging-tools` で説明されているSentryのような、エラー・"
+"ログ用のツールを使用するか、もしくは :doc:`/logging` で説明されているよう"
+"なログ処理および通知を有効にしてください。"
 
 #: ../../flask/docs/debugging.rst:17
 msgid ""
@@ -47,10 +54,15 @@ msgid ""
 "debuggers also have a remote mode so breakpoints on the server can be "
 "interacted with locally. Only enable a debugger temporarily."
 msgstr ""
+"もしもサーバへアクセスできる場合は、``request.remote_addr`` が自分のIPに"
+"合致したときに外部デバッガを開始するためのいくらかのコードを追加できるかも"
+"しれません。ある種のIDEのデバッガにもリモート・モードがあり、サーバ上の"
+"ブレークポイントでローカルとやり取りできます。デバッガを有効にするのは一時"
+"的だけにしてください。"
 
 #: ../../flask/docs/debugging.rst:24
 msgid "The Built-In Debugger"
-msgstr ""
+msgstr "組み込みのデバッガ"
 
 #: ../../flask/docs/debugging.rst:26
 msgid ""
@@ -58,9 +70,12 @@ msgid ""
 "an interactive traceback in the browser when an unhandled error occurs "
 "during a request. This debugger should only be used during development."
 msgstr ""
+"Flaskに組み込まれているWerkzeugの開発サーバは、リクエストの処理中に処理"
+"されないエラーが起きたとき、ブラウザの中でやり取りできるtracebackを表示"
+"するデバッガを提供します。このデバッガは開発中だけ使用されるべきです。"
 
 msgid "screenshot of debugger in action"
-msgstr ""
+msgstr "実行中のデバッガのスクリーンショット"
 
 #: ../../flask/docs/debugging.rst:37
 msgid ""
@@ -68,6 +83,9 @@ msgid ""
 "is protected by a pin, but still represents a major security risk. Do not"
 " run the development server or debugger in a production environment."
 msgstr ""
+"デバッガはブラウザから任意のPythonコードを実行できるようにします。それは"
+"pinによって保護されていますが、それでも重要なセキュリティリスクを意味し"
+"ます。本番環境では開発サーバやデバッガを走らせないようにしてください。"
 
 #: ../../flask/docs/debugging.rst:42
 msgid ""
@@ -76,6 +94,10 @@ msgid ""
 "mode, which changes how it handles some errors, and enables the debugger "
 "and reloader."
 msgstr ""
+"デバッガを有効にするには、``FLASK_ENV`` 環境変数を ``development`` に設定"
+"した開発サーバを走らせてください。これはFlaskをデバッグ・モードにし、その"
+"モードではある種のエラーの処理方法を変更し、デバッガと再読み込み機能"
+"（reloader）を有効にします。"
 
 #: ../../flask/docs/debugging.rst:49 ../../flask/docs/debugging.rst:102
 msgid "Bash"
@@ -96,6 +118,11 @@ msgid ""
 "mostly equivalent. Debug mode can be controled separately from "
 "``FLASK_ENV`` with the ``FLASK_DEBUG`` environment variable as well."
 msgstr ""
+"``FLASK_ENV`` は環境変数としてのみ設定できます。Pythonコードから開発サーバ"
+"を走らせるときは、``debug=True`` を引数に渡すとデバッグ・モードを有効に"
+"し、（FLASK_ENVにdevelopmentを設定した場合と）ほぼ同等になります。デバッグ・"
+"モードは ``FLASK_ENV`` とは別に ``FLASK_DEBUG`` 環境変数を使っても同じよう"
+"に制御できます。"
 
 #: ../../flask/docs/debugging.rst:79
 msgid ""
@@ -104,10 +131,14 @@ msgid ""
 "debugger can be found in the `Werkzeug documentation "
 "<https://werkzeug.palletsprojects.com/debug/>`__."
 msgstr ""
+"デバッガの実行、デバッグ・モード、開発モード（development mode）に関する"
+"さらなる情報は、:doc:`/server` と :doc:`/cli` にあります。デバッガに関する"
+"さらなる情報は `werkzeugのドキュメント "
+"<https://werkzeug.palletsprojects.com/debug/>`__ で見つかります。"
 
 #: ../../flask/docs/debugging.rst:86
 msgid "External Debuggers"
-msgstr ""
+msgstr "外部デバッガ"
 
 #: ../../flask/docs/debugging.rst:88
 msgid ""
@@ -117,6 +148,11 @@ msgid ""
 "or if no error is raised. Some even have a remote mode so you can debug "
 "code running on another machine."
 msgstr ""
+"IDEで提供されるような外部デバッガは、組み込みのデバッガよりも強力なデバッグ"
+"体験を提供できます。それらのデバッガはリクエスト処理中にエラーが起きる前に"
+"も、もしくはエラーが起きない場合にも、コード上のステップ実行ができます。"
+"ある種のデバッガはリモート・モードさえ持っていて、他のマシンで走っている"
+"コードをデバッグできます。"
 
 #: ../../flask/docs/debugging.rst:94
 msgid ""
@@ -124,14 +160,17 @@ msgid ""
 "but it can be useful to disable the built-in debugger and reloader, which"
 " can interfere."
 msgstr ""
+"外部デバッガを使用するときは、Flaskアプリはデバッグ・モードのままにして"
+"おくべきですが、外部デバッガを邪魔する可能性がある組み込みのデバッガと"
+"再読み込み機能（reloader）は無効にすると便利な場合があります。"
 
 #: ../../flask/docs/debugging.rst:98
 msgid "When running from the command line:"
-msgstr ""
+msgstr "コマンドラインから走らせるとき:"
 
 #: ../../flask/docs/debugging.rst:123
 msgid "When running from Python:"
-msgstr ""
+msgstr "Pythonから走らせるとき:"
 
 #: ../../flask/docs/debugging.rst:129
 msgid ""
@@ -141,4 +180,9 @@ msgid ""
 " can. If the reloader is not disabled, it could cause an unexpected "
 "reload if code changes during debugging."
 msgstr ""
+"これらの無効化は必須ではなく、外部デバッガは以下の注意を伴いながら働き"
+"続けるでしょう。もしも組み込みのデバッガが無効化されていない場合、それは"
+"外部デバッグが捕捉する前に処理されてない例外を捕捉するでしょう。もしも"
+"reloaderが無効化されていない場合、デバッグ中にコードが変化した場合にそれは"
+"予期しない再読み込みを引き起こすかもしれません。"
 
