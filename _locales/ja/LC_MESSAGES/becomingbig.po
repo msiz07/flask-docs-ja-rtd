@@ -74,6 +74,14 @@ msgid ""
 ":doc:`/extensions` in the community, and look for patterns to build your "
 "own extensions if you do not find the tools you need."
 msgstr ""
+":doc:`/api` ドキュメントには、使用できる上書き箇所、フック箇所、:doc:"
+"`signals` があふれています。requestやresponseオブジェクトのようなものに"
+"対して特別に仕立てたクラスを提供することができます。使っているAPIをより"
+"深く掘り下げて、Flaskリリースに含まれ手を加えずに利用可能なカスタマイズ"
+"方法を探してください。自分のプロジェクトをユーティリティとFlask拡張の"
+"集合へ再構成できるようなやり方を探してください。コミュニティにあるたく"
+"さんの :doc:`/extensions` を探索し、もしも自分が必要とするツールが見つ"
+"からなければ自分独自のFlask拡張を構築するパターンを探してください。"
 
 # 5ef745c4b6d441b29ced147490ff6908
 #: ../../flask/docs/becomingbig.rst:31
