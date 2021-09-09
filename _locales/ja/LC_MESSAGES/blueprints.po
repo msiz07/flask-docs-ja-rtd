@@ -262,13 +262,15 @@ msgstr "入れ子にしたBlueprint（Nesting Blueprints）"
 
 #: ../../flask/docs/blueprints.rst:126
 msgid "It is possible to register a blueprint on another blueprint."
-msgstr ""
+msgstr "あるblueprintを別のblueprintに登録できます。"
 
 #: ../../flask/docs/blueprints.rst:135
 msgid ""
 "The child blueprint will gain the parent's name as a prefix to its name, "
 "and child URLs will be prefixed with the parent's URL prefix."
 msgstr ""
+"子供のblueprintは自分の名前の接頭辞（prefix）として親の名前を獲得し、子供"
+"のURLの先頭には親のURLの接頭辞が付けられます。"
 
 #: ../../flask/docs/blueprints.rst:143
 msgid ""
@@ -276,6 +278,9 @@ msgid ""
 "parent will trigger for the child. If a child does not have an error "
 "handler that can handle a given exception, the parent's will be tried."
 msgstr ""
+"親に登録されたblueprint固有のbefore request関数などは、子供用の引き金"
+"（trigger）になります。もし子供が与えられたエラーを処理できるerror "
+"handlerを持たない場合は、親のerror handlerが試されます。"
 
 # 68dee2b6f73048e8a9356b1815cbd067
 #: ../../flask/docs/blueprints.rst:149
@@ -585,7 +590,7 @@ msgstr ""
 
 #: ../../flask/docs/blueprints.rst:302
 msgid "See :doc:`/errorhandling`."
-msgstr ""
+msgstr ":doc:`/errorhandling` を確認してください。"
 
 # 7aa4a2886efb4e18a5de6d8d4a8be5e4
 #~ msgid "More information on error handling see :ref:`errorpages`."
