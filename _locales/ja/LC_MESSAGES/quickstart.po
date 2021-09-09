@@ -27,6 +27,9 @@ msgid ""
 "Eager to get started? This page gives a good introduction to Flask. "
 "Follow :doc:`installation` to set up a project and install Flask first."
 msgstr ""
+"すぐ始めたいですか？このページはFlaskのイントロダクションに良いでしょう。"
+"最初にプロジェクトを準備しFlaskをインストールするために、:doc:`installation` "
+"に従ってください。"
 
 # 00595259ecee47dd8bd759592d905a53
 #: ../../flask/docs/quickstart.rst:9
@@ -61,6 +64,12 @@ msgid ""
 "that Flask knows where to look for resources such as templates and static"
 " files."
 msgstr ""
+"次に、Flaskクラスのインスタンスを作成します。最初の引数はアプリケーション"
+"のモジュール（訳注: 簡単に言うと拡張子pyのPythonファイル）またはパッケージ"
+"（訳注: 簡単に言うとモジュールをまとめて格納したディレクトリ）の名前です。"
+"``__name__`` はモジュールまたはパッケージの名前用に殆どの場合で適切な便利"
+"なショートカットです。これはテンプレート、静的ファイルなどを探す場所を"
+"Flaskが知るために必要になります。"
 
 # a6f42a311f6843ccacc8e3660800438a
 #: ../../flask/docs/quickstart.rst:32
@@ -77,6 +86,9 @@ msgid ""
 "browser. The default content type is HTML, so HTML in the string will be "
 "rendered by the browser."
 msgstr ""
+"その関数はユーザのブラウザで表示したいメッセージを返します。標準の"
+"コンテント・タイプはHTMLなので、HTML文字列はブラウザによって変換表示"
+"されます。"
 
 # c157b28898f44db8aba4c31269fb5ce2
 #: ../../flask/docs/quickstart.rst:38
@@ -96,6 +108,12 @@ msgid ""
 "terminal the application to work with by exporting the ``FLASK_APP`` "
 "environment variable:"
 msgstr ""
+"アプリケーションを実行するには、:command:`flask` コマンドまたは "
+":command:`python -m flask` を使用します。実行できるようにする前に、"
+"``FLASK_APP`` 環境変数をexportして、実行するアプリケーションを端末（訳注: "
+"Windowsでのコマンドプロンプト、Linuxでの端末、SSHログインしているときの"
+"PuTTYやTera Termなど、コマンドラインで操作している環境を指します）へ伝える"
+"必要があります::"
 
 #: ../../flask/docs/quickstart.rst:49 ../../flask/docs/quickstart.rst:157
 msgid "Bash"
@@ -112,6 +130,7 @@ msgstr ""
 #: ../../flask/docs/quickstart.rst:73
 msgid "Application Discovery Behavior"
 msgstr ""
+"アプリケーションを見つけるときの振る舞い（Application Discovery Behavior）"
 
 #: ../../flask/docs/quickstart.rst:75
 msgid ""
@@ -119,6 +138,9 @@ msgid ""
 "have to set the ``FLASK_APP`` environment variable. See :doc:`/cli` for "
 "more details."
 msgstr ""
+"手短にいうと、もし ``app.py`` または ``wsgi.py`` という名前のファイルで"
+"あれば、``FLASK_APP`` 環境変数を設定する必要はありません。さらなる詳細は "
+":doc:`/cli` を見てください。"
 
 # ebc0751096214ee6a5131cf3d9693430
 #: ../../flask/docs/quickstart.rst:79
@@ -130,7 +152,7 @@ msgstr ""
 "これはとてもシンプルな内蔵サーバを起動し、それはテスト用には十分ですが、"
 "おそらく本番環境では使用したくはならないでしょう。デプロイ（訳注: 実行"
 "環境への移行のような意味合い）のオプションについては、 "
-":doc:`deployment/index` を参照してください。"
+":doc:`deployment/index` を調べてください。"
 
 # 3d41fb22c4a145018ed6b41a66972e41
 #: ../../flask/docs/quickstart.rst:83
@@ -240,6 +262,10 @@ msgid ""
 "code changes, and will show an interactive debugger in the browser if an "
 "error occurs during a request."
 msgstr ""
+"``flask run`` コマンドはただ開発用サーバを開始する以上のことができます。"
+"デバッグモードを有効にすると、コードが変更されたらサーバが自動的に再読み"
+"込みし、リクエスト処理中にエラーが起きたらブラウザの中にインタラクティブ"
+"なデバッガを表示するようになります。"
 
 # 3e61206cfbc642e3926319f45c0771a6
 msgid "The interactive debugger in action."
@@ -251,6 +277,9 @@ msgid ""
 "is protected by a pin, but still represents a major security risk. Do not"
 " run the development server or debugger in a production environment."
 msgstr ""
+"デバッガはブラウザから任意のPythonコードを実行できるようにします。それは"
+"pinによって保護されていますが、それでも重要なセキュリティリスクを意味し"
+"ます。本番環境では開発サーバやデバッガを走らせないようにしてください。"
 
 # f9428ba54a004a179667264525d12114
 #: ../../flask/docs/quickstart.rst:152
@@ -263,29 +292,34 @@ msgstr ""
 
 #: ../../flask/docs/quickstart.rst:178
 msgid "See also:"
-msgstr ""
+msgstr "以下も参照してください:"
 
 #: ../../flask/docs/quickstart.rst:180
 msgid ""
 ":doc:`/server` and :doc:`/cli` for information about running in "
 "development mode."
 msgstr ""
+"開発モードで走らせることに関する情報について、:doc:`/server` と :doc:`/cli`。"
 
 #: ../../flask/docs/quickstart.rst:182
 msgid ""
 ":doc:`/debugging` for information about using the built-in debugger and "
 "other debuggers."
 msgstr ""
+"組み込みのデバッガおよびその他のデバッガを使うことに関する情報について、"
+":doc:`/debugging`。"
 
 #: ../../flask/docs/quickstart.rst:184
 msgid ""
 ":doc:`/logging` and :doc:`/errorhandling` to log errors and display nice "
 "error pages."
 msgstr ""
+"エラーのログおよび良いエラーページの表示について、:doc:`/logging` と "
+":doc:`/errorhandling`。"
 
 #: ../../flask/docs/quickstart.rst:189
 msgid "HTML Escaping"
-msgstr ""
+msgstr "HTMLのエスケープ処理"
 
 #: ../../flask/docs/quickstart.rst:191
 msgid ""
@@ -294,6 +328,10 @@ msgid ""
 "injection attacks. HTML templates rendered with Jinja, introduced later, "
 "will do this automatically."
 msgstr ""
+"HTML（Flaskでの標準のレスポンスのタイプ）を返すとき、変換表示される出力の"
+"中にある、ユーザが提供するあらゆる値はインジェクション攻撃から保護する"
+"ためにエスケープされる必要があります。後で紹介されるJinjaを使って変換表示"
+"されるHTMLテンプレートでは、これを自動的に行います。"
 
 #: ../../flask/docs/quickstart.rst:196
 msgid ""
@@ -301,6 +339,9 @@ msgid ""
 "omitted in most examples for brevity, but you should always be aware of "
 "how you're using untrusted data."
 msgstr ""
+"以下のコード例にある :func:`~markupsafe.escape` は手動で使うことができ"
+"ます。それは殆どの例の中では簡潔さのために省略されますが、信用できない"
+"データをどのように使うかは常に把握しておくべきです。"
 
 #: ../../flask/docs/quickstart.rst:208
 msgid ""
@@ -308,12 +349,17 @@ msgid ""
 " escaping causes it to be rendered as text, rather than running the "
 "script in the user's browser."
 msgstr ""
+"もしもあるユーザがnameとして ``<script>alert(\"bad\")</script>`` を提出"
+"できた場合、エスケープ処理によってそれは、ユーザのブラウザの中でスクリプト"
+"として走るのではなく、テキストとして変換表示されます。"
 
 #: ../../flask/docs/quickstart.rst:212
 msgid ""
 "``<name>`` in the route captures a value from the URL and passes it to "
 "the view function. These variable rules are explained below."
 msgstr ""
+"routeの（引数の）中にある ``<name>`` はURLから値を捉えてview関数へその値を"
+"渡します。それらの変数ルールは以下で説明されます。"
 
 # 3302a6e53ed84fc68cb87592716f8590
 #: ../../flask/docs/quickstart.rst:217
@@ -1332,7 +1378,7 @@ msgstr ""
 
 #: ../../flask/docs/quickstart.rst:906
 msgid "See :doc:`errorhandling`."
-msgstr ""
+msgstr ":doc:`errorhandling` を調べてださい。"
 
 # 21c1cff9a436456f9cf73d1fab6f45f0
 #: ../../flask/docs/quickstart.rst:910
