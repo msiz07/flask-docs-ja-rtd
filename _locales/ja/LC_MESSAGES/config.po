@@ -534,6 +534,16 @@ msgid ""
 "If ``None``, ``send_file`` tells the browser to use conditional requests "
 "will be used instead of a timed cache, which is usually preferable."
 msgstr ""
+"もし ``None`` であれば、``send_file`` はブラウザに、普通であれば好ま"
+"しい、conditional requestをtimed cacheの代わりに使うよう伝えます（訳注: "
+"HTTPレスポンスのヘッダで「Cache-Control」を「no-cache」にして、conditional "
+"cachingを優先する指示をするようです。`MDNのCache-Control > Requiring "
+"revalidation "
+"<https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control#requiring_revalidation>`_ "
+"参照）（訳注: 原文では「``send_file`` tells the browser to use conditional "
+"requests will be used instead of a timed cache ...」とあるが、"
+"「:attr:`flask.Flask.send_file_max_age_default`」の説明を見ると、おそらく"
+"「will be used」が余分）。"
 
 # f7f87992e6a540a792c6de0552e204ec
 #: ../../flask/docs/config.rst:281
@@ -637,6 +647,10 @@ msgid ""
 "security implications when rendering the JSON into JavaScript in "
 "templates, and should typically remain enabled."
 msgstr ""
+"オブジェクトをASCIIでエンコードされたJSONにシリアライズします。もしも無効"
+"にされていると、``jsonify`` から返されたJSONはUnicode文字を含むでしょう。"
+"これはテンプレートの中でJSONをJavaScriptへ変換するときにセキュリティに影響"
+"するので、典型的には有効にするべきです。"
 
 # 0193f5d49d904999b0d2811d9e5cd7aa
 #: ../../flask/docs/config.rst:335
@@ -858,10 +872,13 @@ msgid ""
 " choice using :meth:`~flask.Config.from_file`. For example to load from a"
 " TOML file:"
 msgstr ""
+":meth:`~flask.Config.from_file` を使って自分で選んだ形式のファイルから"
+"設定を読み込むこともできます。例えばTOMLファイルから読み取るには以下の"
+"ようにします:"
 
 #: ../../flask/docs/config.rst:492
 msgid "Or from a JSON file:"
-msgstr ""
+msgstr "またはJSONファイルからは以下のようにします:"
 
 # 4bab57b47a22476c8440a390d01fb28d
 #: ../../flask/docs/config.rst:501
