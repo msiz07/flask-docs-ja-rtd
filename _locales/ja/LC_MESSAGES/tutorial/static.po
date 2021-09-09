@@ -91,7 +91,7 @@ msgstr ""
 "ようなページが見られるはずです。"
 
 msgid "screenshot of login page"
-msgstr ""
+msgstr "loginページのスクリーンショット"
 
 # 6f62a788687e4a6795bf3e421944e851
 #: ../../flask/docs/tutorial/static.rst:66

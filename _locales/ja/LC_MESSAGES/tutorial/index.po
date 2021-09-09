@@ -20,7 +20,7 @@ msgstr ""
 # c7a6c40d719143ceb9d1b9f9b241c033
 #: ../../flask/docs/tutorial/index.rst:4
 msgid "Contents:"
-msgstr ""
+msgstr "目次"
 
 # dd688d659f294404bb25176aa7041cfb
 #: ../../flask/docs/tutorial/index.rst:2
@@ -41,7 +41,7 @@ msgstr ""
 "別のコンピュータへのインストールもできるようになります。"
 
 msgid "screenshot of index page"
-msgstr ""
+msgstr "indexページのスクリーンショット"
 
 # 57e992b0360b4fa8ba51a4ee570a40b6
 #: ../../flask/docs/tutorial/index.rst:30
@@ -71,7 +71,7 @@ msgstr ""
 "決定をくだすかもしれません。"
 
 msgid "screenshot of login page"
-msgstr ""
+msgstr "loginページのスクリーンショット"
 
 # 68387bb0bea745198673fa762d68d07d
 #: ../../flask/docs/tutorial/index.rst:47
