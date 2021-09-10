@@ -156,11 +156,13 @@ msgid ""
 "After installation, failures leading to an Internal Server Error are "
 "automatically reported to Sentry and from there you can receive error "
 "notifications."
-msgstr "インストールの後、Internal Server Errorに至る障害は自動的にSentryへ報告され、そこからエラー通知を受け取ることができます。"
+msgstr ""
+"インストールの後、Internal Server Errorに至る障害は自動的にSentryへ報告"
+"され、そこからエラー通知を受け取ることができます。"
 
 #: ../../flask/docs/errorhandling.rst:67
 msgid "See also:"
-msgstr ""
+msgstr "以下も見てください:"
 
 # 26275a08d2fa4d1e89a6f4d01d9124d9
 #: ../../flask/docs/errorhandling.rst:69
@@ -204,6 +206,11 @@ msgid ""
 "about the data requested. 500-599 indicate errors with the server or "
 "application itself."
 msgstr ""
+"Flaskの中でエラーが起きたとき、適切な `HTTPステータスコード "
+"<https://developer.mozilla.org/en-US/docs/Web/HTTP/Status>`__ が返され"
+"ます。400-499はクライアントのリクエストのデータに、もしくは要求された"
+"データに関してエラーがあることを示します。500-599はサーバもしくはアプリ"
+"ケーション自身にエラーがあることを示します。"
 
 # 05ca80a2003346b5bc99adb44dab84a2
 #: ../../flask/docs/errorhandling.rst:85
@@ -220,6 +227,10 @@ msgid ""
 "error being handled, which is most likely a "
 ":exc:`~werkzeug.exceptions.HTTPException`."
 msgstr ""
+"error handlerは、viewがリクエストのURLに合致したときレスポンスを返す関数で"
+"あることに似たように、ある種類のエラーが起きたときにレスポンスを返す関数"
+"です。error handlerには、:exc:`~werkzeug.exceptions.HTTPException` である"
+"可能性が最も高い、処理中のエラーのインスタンスが渡されます。"
 
 #: ../../flask/docs/errorhandling.rst:93
 msgid ""
@@ -227,6 +238,9 @@ msgid ""
 "Make sure to provide the appropriate HTTP status code when returning a "
 "response from a handler."
 msgstr ""
+"レスポンスのステータスコードはerror handlerのコードには設定されません。"
+"error handlerからレスポンスを返すときは、適切なHTTPステータスコードを確実"
+"に提供するようにしてください。"
 
 # e853d3e4feee488e83cf92cd75e25d6b
 #: ../../flask/docs/errorhandling.rst:99
@@ -303,6 +317,17 @@ msgid ""
 "all subclasses of :class:`~werkzeug.exceptions.HTTPException` and are "
 "provided by default in Flask."
 msgstr ""
+"アプリケーションを構築していると、例外に出くわす *でしょう*。もしも"
+"リクエストの処理中に自分のコードの一部が壊れた（そしてerror handlerが登録"
+"されていなかった）場合、「500 Internal Server Error」"
+"（:exc:`~werkzeug.exceptions.InternalServerError`）が標準では返されます。"
+"同様に、登録されていない経路（route）にリクエストが送られた場合は「404 "
+"Not Found」（:exc:`~werkzeug.exceptions.NotFound`）エラーが起きます。もしも"
+"ある経路（route）で許可されていないリクエストのメソッド（訳注: HTTPメソッド"
+"のこと）を受け取ったときは、「405 Method Not Allowed」"
+"（:exc:`~werkzeug.exceptions.MethodNotAllowed`）が起きます。これらは全て "
+":class:`~werkzeug.exceptions.HTTPException` のサブクラスであり、Flaskでは"
+"標準で提供されます。"
 
 #: ../../flask/docs/errorhandling.rst:154
 msgid ""
@@ -311,6 +336,10 @@ msgid ""
 "pages. You might want to show custom error pages to the user when an "
 "error occurs. This can be done by registering error handlers."
 msgstr ""
+"FlaskはWerkzeugによって登録されているあらゆるHTTP例外を発生させる能力を"
+"提供します。しかしながら、標準のHTTP例外はシンプルな例外ページを返します。"
+"エラーが起きたとき、独自のエラーページを見せたいかもしれません。これは、"
+"error handlerを登録することで可能です。"
 
 # 63c65fab3338406389bf44fa76b051db
 #: ../../flask/docs/errorhandling.rst:159
@@ -466,10 +495,14 @@ msgid ""
 "handler for \"500 Internal Server Error\" will not be used. Instead, the "
 "interactive debugger will be shown."
 msgstr ""
+"「500 Internal Server Error」用のerror handlerには明示的な500エラーに"
+"加えて、捕捉されていない例外も渡されます。デバッグモードの中では、「500 "
+"Internal Server Error」用のerror handlerは使われません。代わりに、インタ"
+"ラクティブなデバッガが表示されます。"
 
 #: ../../flask/docs/errorhandling.rst:260
 msgid "Custom Error Pages"
-msgstr ""
+msgstr "カスタマイズしたエラーページ"
 
 #: ../../flask/docs/errorhandling.rst:262
 msgid ""
@@ -480,12 +513,21 @@ msgid ""
 "error from werkzeug as desired. It will also provide a plain black and "
 "white error page for you with a basic description, but nothing fancy."
 msgstr ""
+"Flaskアプリケーションを構築しているときに時々、リクエストが何かしらおか"
+"しいことをユーザへ伝える信号を送るために "
+":exc:`~werkzeug.exceptions.HTTPException` を起こしたくなるかもしれません。"
+"幸いにも、werkzeugからHTTPエラーを使って望むままにリクエストを中止させる、"
+"便利な :func:`~flask.abort` 関数がFlaskにはついて来ています。それは基本的"
+"な説明を伴った素っ気ない白黒のエラーページを提供しますが、意匠をこらした"
+"ものではありません。"
 
 #: ../../flask/docs/errorhandling.rst:269
 msgid ""
 "Depending on the error code it is less or more likely for the user to "
 "actually see such an error."
 msgstr ""
+"エラーコードに応じてそのようなエラーをユーザが実際に見ることは多少なり"
+"ともありそうなことです。"
 
 #: ../../flask/docs/errorhandling.rst:272
 msgid ""
@@ -494,41 +536,51 @@ msgid ""
 "user passes a username and we can't find it, we raise a \"404 Not "
 "Found\"."
 msgstr ""
+"以下のコードを考えたとき、おそらくシステムはユーザのプロフィール用の"
+"経路（route）を持ち、もしもユーザがusernameを渡せなかった場合は「400 "
+"Bad Request」を起こすことができます。もしもユーザがusernameを渡して"
+"システムがそのユーザを見つけられない場合、「404 Not Found」を起こすこと"
+"ができます。"
 
 #: ../../flask/docs/errorhandling.rst:296
 msgid ""
 "Here is another example implementation for a \"404 Page Not Found\" "
 "exception:"
 msgstr ""
+"以下は「404 Page Not Found」用の別の実装例です:"
 
 #: ../../flask/docs/errorhandling.rst:307
 #: ../../flask/docs/errorhandling.rst:361
 msgid "When using :doc:`/patterns/appfactories`:"
-msgstr ""
+msgstr "以下は :doc:`/patterns/appfactories` 使用時の例です:"
 
 #: ../../flask/docs/errorhandling.rst:321
 msgid "An example template might be this:"
-msgstr ""
+msgstr "テンプレート例は以下のようになるでしょう:"
 
 #: ../../flask/docs/errorhandling.rst:335
 msgid "Further Examples"
-msgstr ""
+msgstr "さらなる例（Further Examples）"
 
 #: ../../flask/docs/errorhandling.rst:337
 msgid ""
 "The above examples wouldn't actually be an improvement on the default "
 "exception pages. We can create a custom 500.html template like this:"
 msgstr ""
+"上記の例は標準の例外ページに対する改善に実際にはなっていないでしょう。"
+"以下のようにカスタマイズした500.htmlテンプレートを作ることができます:"
 
 #: ../../flask/docs/errorhandling.rst:350
 msgid ""
 "It can be implemented by rendering the template on \"500 Internal Server "
 "Error\":"
 msgstr ""
+"これは「500 Internal Server Error」のテンプレートを変換表示することで実装"
+"出来ます:"
 
 #: ../../flask/docs/errorhandling.rst:375
 msgid "When using :doc:`/blueprints`:"
-msgstr ""
+msgstr "以下は :doc:`/blueprints` 使用時の例です:"
 
 # af36f041daa54811ba60901d73a453d2
 #: ../../flask/docs/errorhandling.rst:393
@@ -543,6 +595,15 @@ msgid ""
 "``raise`` statement or a call to ``abort`` in another of the blueprint's "
 "view functions; they are not invoked by, e.g., an invalid URL access."
 msgstr ""
+":doc:`/blueprints` の中で、殆どのerrorhandlerは、予想したとおりに動き"
+"ます; しかし、404と405のerror handlerに関して注意点があります（訳注: "
+"HTTPレスポンスのステータスコードを指していて、404は「\ `Not Found "
+"<https://developer.mozilla.org/ja/docs/Web/HTTP/Status/404>`_\ 」、405は"
+"「\ `Method Not Allowed "
+"<https://developer.mozilla.org/ja/docs/Web/HTTP/Status/405>`_\ 」になり"
+"ます）。これらのerror handlerが起動されるのは、適切な\ ``raise``\ 文または"
+"blueprint内の他のview関数の中で\ ``abort``\ を呼んだときだけです; それら"
+"は、例えば不正なURLへのアクセスからは起動されません。"
 
 #: ../../flask/docs/errorhandling.rst:401
 msgid ""
@@ -553,10 +614,19 @@ msgid ""
 "prefixes, they may be defined at the application level using the "
 "``request`` proxy object."
 msgstr ""
+"これは、blueprintはあるURL空間を「所有」しておらず、従ってアプリケーションの"
+"インスタンスは不正なURLを渡されたとしても、どのblueprintのerror handlerを"
+"実行すればよいかを知るすべがないためです。もしURLプレフィックスに基づいて、"
+"これらのエラーに対して異なる処理戦略を実行したいときは、それらは"
+"アプリケーションのレベルで\ ``request``\ の代理（proxy）のオブジェクト"
+"（訳注: 実際にリクエストを扱うwerkzeugのリクエスト用オブジェクトの、実際の"
+"インスタンスへグローバルなスコープでアクセスするためのproxyになっている"
+"オブジェクトで、普通は :class:`flask.request` オブジェクトのことだと思い"
+"ます）で定義させることができます。"
 
 #: ../../flask/docs/errorhandling.rst:436
 msgid "Returning API Errors as JSON"
-msgstr ""
+msgstr "JSONでのAPIエラーの応答（Returning API Errors as JSON）"
 
 #: ../../flask/docs/errorhandling.rst:438
 msgid ""
@@ -565,6 +635,10 @@ msgid ""
 "of :mimetype:`text/html` they are emitting is not very useful for API "
 "consumers."
 msgstr ""
+"FlaskでAPIを構築するとき、開発者の中には、組み込みの例外ではAPIにとって"
+"十分に表現しきれず、組み込みの例外が発行する :mimetype:`text/html` "
+"コンテント・タイプではAPI使用者にとってあまり便利ではないことを実感する"
+"でしょう。"
 
 #: ../../flask/docs/errorhandling.rst:442
 msgid ""
@@ -573,6 +647,10 @@ msgid ""
 "with a ``description`` parameter. The error handler will use that as the "
 "JSON error message, and set the status code to 404."
 msgstr ""
+"上記と同じ技法と :func:`~flask.json.jsonify` を使い、APIのエラーに対して"
+"JSONを返すことができます。:func:`~flask.abort` は ``description`` パラ"
+"メータと一緒に呼び出されます。error handlerがそれをJSONのエラーメッセージ"
+"として使用し、ステータスコードを404に設定します。"
 
 #: ../../flask/docs/errorhandling.rst:464
 msgid ""
@@ -581,10 +659,14 @@ msgid ""
 "readable message, a status code for the error and some optional payload "
 "to give more context for the error."
 msgstr ""
+"カスタマイズした例外クラスを作成することもできます。例えば、人が読める"
+"適当なメッセージ、エラー用のステータスコード、そして必要に応じてエラーの"
+"より多くの状況を与えるペイロードを持つカスタマイズした新しい例外をAPI用に"
+"導入できます。"
 
 #: ../../flask/docs/errorhandling.rst:469
 msgid "This is a simple example:"
-msgstr ""
+msgstr "以下はシンプルな例です:"
 
 #: ../../flask/docs/errorhandling.rst:508
 msgid ""
@@ -592,6 +674,9 @@ msgid ""
 "some extra payload can be provided as a dictionary through the `payload` "
 "parameter."
 msgstr ""
+"こうすると、viewはエラーメッセージと一緒にその例外を起こすことができます。"
+"さらに、いくらかの追加のペイロードは `payload` パラメータを通してdictionary"
+"として提供できるようになります。"
 
 # 95b922e803d34a46855e9ce92c73848e
 #: ../../flask/docs/errorhandling.rst:514
@@ -617,6 +702,8 @@ msgid ""
 "See :doc:`/debugging` for information about how to debug errors in "
 "development and production."
 msgstr ""
+"開発中および本番環境中でどのようにエラーをデバッグするかに関する情報に"
+"ついては :doc:`/debugging` を確認してください。"
 
 # 3e190b72b8a84bca9376b6306cbc7f92
 #~ msgid "Application Errors"
