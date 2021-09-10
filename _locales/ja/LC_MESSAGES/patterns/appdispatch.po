@@ -66,7 +66,7 @@ msgid ""
 msgstr ""
 "以下に示す技法と例は、それぞれどんなWSGIサーバでも走らせることが可能な "
 "``application`` オブジェクトをもたらします。本番環境用には、:doc:"
-"`deploying/index` を確認してください。開発用には、Werkzeugは :func:"
+"`/deploying/index` を確認してください。開発用には、Werkzeugは :func:"
 "`werkzeug.serving.run_simple` で利用可能な開発用の組込みサーバを提供して"
 "います::"
 
