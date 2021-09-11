@@ -1,7 +1,31 @@
 {%- extends "!layout.html" %}
 {%- block extrahead %}
-  {{ super() }}
-  {% if IS_READTHEDOCS %}
+  {{- super() }}
+  {%- if IS_READTHEDOCS %}
     <meta name="google-site-verification" content="{{ GOOGLE_SITE_VERIFICATION }}" />
   {% endif %}
+  {%- if language == "ja" and pagename == "index" %}
+    <style type="text/css">
+      .translation-ja-notice {
+        border-radius: 20px;
+        border: solid lightgrey 3px;
+        padding: 0.5em;
+        margin: 0.5em;
+        /*
+        margin-top: 1em;
+        margin-bottom: 2em;
+        */
+      }
+    </style>
+  {% endif %}
+{% endblock %}
+
+{%- block document %}
+  {%- if language == "ja" and pagename == "index" %}
+  <div class="translation-ja-notice">
+    <p>この文書は「Flask Documentation」の日本語訳です。日本語訳は参考情報であって、公式な文書ではありません。</p>
+    <p>「Flask Documentation」の最新情報は <a href="https://flask.palletsprojects.com/">https://flask.palletsprojects.com/</a> を参照してください。</p>
+  </div>
+  {% endif %}
+  {{- super() }}
 {% endblock %}
