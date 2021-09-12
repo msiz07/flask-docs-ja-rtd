@@ -1,8 +1,11 @@
-Flask - docs-ja repository
-==========================
+Flask docs unofficial Japnaese translation
+==============================================
 
-This repository is forked from original one in order to set up the work
+This repository is mirrored from original one in order to set up the work
 environment for privatelly translating the docs into Japanese.
+
+For more information about Japanese translation, see README-ja.rst (which
+is written in Japanese).
 
 The following content is the original README.rst file.
 
