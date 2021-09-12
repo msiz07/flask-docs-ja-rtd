@@ -55,9 +55,9 @@ venvを使って仮想環境を作成してビルドする手順を以下に示�
   $ invoke html-trans
   $ ls _build/html
 
-  ※「``_build/html``」にビルド後のファイル一式が存在すればビルド成功
-  ※「``_build/html/index.html``」をブラウザで表示すると、ビルドした日本語
-    ドキュメントのトップページを表示できます。
+「``_build/html``」にビルド後のファイル一式が存在すればビルド成功です。
+「``_build/html/index.html``」をブラウザで表示すると、ビルドした日本語
+ドキュメントのトップページを表示できます。
 
 
 その他の注意事項
@@ -77,16 +77,14 @@ venvを使って仮想環境を作成してビルドする手順を以下に示�
 ドキュメントの原文は「`Flaskのライセンス`_」（BSD-3-Clause Source License）の
 とおりライセンスされています。
 
-.. Note::
+ライセンスの中で以下の記述がある通り、ドキュメントや配布物中にあるFlaskの
+copyright保持者やcontributorの名前は、（原文から派生したproductである）この
+日本語訳の宣伝または販売促進（endorse or promote）に使用しているものではあり
+ません。
 
-  ライセンスの中で以下の記述がある通り、ドキュメントや配布物中にあるFlaskの
-  copyright保持者やcontributorの名前は、（原文から派生したproductである）この
-  日本語訳の宣伝または販売促進（endorse or promote）に使用しているものではあり
-  ません。
-
-  Neither the name of the copyright holder nor the names of its contributors
-  may be used to endorse or promote products derived from this software
-  without specific prior written permission.
+  Neither the name of the copyright holder nor the names of its
+  contributors may be used to endorse or promote products derived from
+  this software without specific prior written permission.
 
 .. _Flaskのライセンス: https://flask.palletsprojects.com/en/2.0.x/license/
 
@@ -100,12 +98,12 @@ venvを使って仮想環境を作成してビルドする手順を以下に示�
 しています。このアクセス情報は匿名で収集されており、個人を特定するものではあり
 ません。
 
-Googleアナリティクスの利用規約に関して確認したい場合は、「`Googleアナリティクス
-利用規約 <analytics-terms>`_」をご確認ください。
+Googleアナリティクスの利用規約に関して確認したい場合は、
+「`Googleアナリティクス利用規約`_」をご確認ください。
 
-また、「ユーザーが Google パートナーのサイトやアプリを使用する際の Google
-によるデータ使用」に関して確認したい場合は、「`Google ポリシーと規約：広告
-<google-policy-partner-site>`_」をご確認ください。
+また、「ユーザーが Google パートナーのサイトやアプリを使用する際の Googleに
+よるデータ使用」に関して確認したい場合は、「`Google ポリシーと規約：広告`_」
+をご確認ください。
 
-.. _analytics-terms: https://www.google.com/analytics/terms/jp.html
-.. _google-policy-partner-site: https://policies.google.com/technologies/partner-sites?hl=ja
+.. _Googleアナリティクス利用規約: https://www.google.com/analytics/terms/jp.html
+.. _Google ポリシーと規約：広告: https://policies.google.com/technologies/partner-sites?hl=ja
