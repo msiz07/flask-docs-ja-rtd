@@ -9,6 +9,7 @@ sys.path.append(BASEDIR)
 
 # intersphinx_mapping for markupsafe is missing in original conf.py
 intersphinx_mapping["markupsafe"] = ("https://markupsafe.palletsprojects.com/", None)
+intersphinx_mapping["blinker"] = ("https://blinker.readthedocs.io/", None)
 
 # Translation (ja) -----------------------------------------------------
 locale_dirs = [os.path.join(BASEDIR, '_locales')]
