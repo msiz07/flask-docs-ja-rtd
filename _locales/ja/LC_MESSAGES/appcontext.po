@@ -39,7 +39,6 @@ msgstr ""
 
 # 8fe988affa494220ac88df8d322728de
 #: ../../flask/docs/appcontext.rst:11
-#, fuzzy
 #| msgid "" "This is similar to the :doc:`/reqcontext`, which keeps track of
 #| request-" "level data during a request. A corresponding application context
 #| is " "pushed when a request context is pushed."
@@ -48,10 +47,11 @@ msgid ""
 " data during a request. A corresponding application context is pushed "
 "when a request context is pushed."
 msgstr ""
-"これは、リクエストの期間中はリクエストのレベルのデータを把握する\\ :doc:`/reqcontext`\\ と似ています。request "
-"contextがpushされたとき、対応するapplication contextもpushされます（訳注：application "
-"contextとrequest "
-"contextはFlask内でスタックのデータ構造を使って管理されており、一般的にスタックへデータを追加することをpushといいます）。"
+"これは、リクエストに対応中はリクエストのレベルのデータを保持する "
+":doc:`/reqcontext` と似ています。request contextがpushされたとき、対応する"
+"application contextもpushされます（訳注: application contextとrequest "
+"contextで保持するデータはFlask内でスタックのデータ構造を使って管理されて"
+"おり、一般的にスタックへデータを追加することをpushといいます）。"
 
 # a9f2c2afc6044e11bffe2f7578143469
 #: ../../flask/docs/appcontext.rst:16
