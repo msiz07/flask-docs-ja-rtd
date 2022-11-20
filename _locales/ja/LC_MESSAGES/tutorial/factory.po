@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-21 20:07+0900\n"
+"POT-Creation-Date: 2022-11-20 18:38+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,17 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
+
+#: ../../flask/docs/tutorial/factory.rst:148
+msgid "Fish"
+msgstr ""
+
+#: ../../flask/docs/tutorial/factory.rst:188
+msgid ""
+"If another program is already using port 5000, you'll see ``OSError: "
+"[Errno 98]`` or ``OSError: [WinError 10013]`` when the server tries to "
+"start. See :ref:`address-already-in-use` for how to handle that."
+msgstr ""
 
 # 1dae90216daa4358ab0187edd570d335
 #: ../../flask/docs/tutorial/factory.rst:4
@@ -254,21 +265,21 @@ msgstr ""
 msgid "Bash"
 msgstr ""
 
-#: ../../flask/docs/tutorial/factory.rst:148
+#: ../../flask/docs/tutorial/factory.rst:156
 msgid "CMD"
 msgstr ""
 
-#: ../../flask/docs/tutorial/factory.rst:156
+#: ../../flask/docs/tutorial/factory.rst:164
 msgid "Powershell"
 msgstr ""
 
 # e60642b58ee341cf88d1905251752196
-#: ../../flask/docs/tutorial/factory.rst:164
+#: ../../flask/docs/tutorial/factory.rst:172
 msgid "You'll see output similar to this:"
 msgstr "以下と似たような出力が見られるでしょう:"
 
 # 3ffbe1c5b2f14ea995ee1e0c71cd5835
-#: ../../flask/docs/tutorial/factory.rst:176
+#: ../../flask/docs/tutorial/factory.rst:184
 msgid ""
 "Visit http://127.0.0.1:5000/hello in a browser and you should see the "
 "\"Hello, World!\" message. Congratulations, you're now running your Flask"
@@ -279,7 +290,7 @@ msgstr ""
 "Flask webアプリケーションを実行中です！"
 
 # 6c057672de284ae5a719c4f0db3b95f5
-#: ../../flask/docs/tutorial/factory.rst:180
+#: ../../flask/docs/tutorial/factory.rst:193
 msgid "Continue to :doc:`database`."
 msgstr ":doc:`database`\ へ続きます。"
 
@@ -289,10 +300,9 @@ msgstr ":doc:`database`\ へ続きます。"
 
 # 2bae71d685ca4b578469c6407e0e9a86
 #~ msgid "For Windows cmd, use ``set`` instead of ``export``:"
-#~ msgstr "Windowsのcmdでは、\ ``export``\ の代わりに\ ``set``\ を使用します:"
+#~ msgstr "Windowsのcmdでは、\\ ``export``\\ の代わりに\\ ``set``\\ を使用します:"
 
 # e7d1ea5205ac4f898009c1957aa1cd18
 #~ msgid "For Windows PowerShell, use ``$env:`` instead of ``export``:"
-#~ msgstr ""
-#~ "WindowsのPowerShellでは、\ ``export``\ の代わりに\ ``$env:``\ を使用します:"
+#~ msgstr "WindowsのPowerShellでは、\\ ``export``\\ の代わりに\\ ``$env:``\\ を使用します:"
 

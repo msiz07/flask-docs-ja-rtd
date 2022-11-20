@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-21 20:07+0900\n"
+"POT-Creation-Date: 2022-11-20 18:38+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -191,7 +191,6 @@ msgstr ""
 #: ../../flask/src/flask/wrappers.py:docstring of werkzeug.wrappers.response.Response.call_on_close:0
 #: ../../flask/src/flask/wrappers.py:docstring of werkzeug.sansio.response.Response.delete_cookie:0
 #: ../../flask/src/flask/wrappers.py:docstring of werkzeug.wrappers.response.Response.force_type:0
-#: ../../flask/src/flask/wrappers.py:docstring of werkzeug.wrappers.response.Response.freeze:0
 #: ../../flask/src/flask/wrappers.py:docstring of werkzeug.wrappers.response.Response.from_app:0
 #: ../../flask/src/flask/wrappers.py:docstring of werkzeug.wrappers.response.Response.get_app_iter:0
 #: ../../flask/src/flask/wrappers.py:docstring of werkzeug.wrappers.response.Response.get_data:0
@@ -220,6 +219,11 @@ msgstr ""
 #: ../../flask/src/flask/sessions.py:docstring of flask.sessions.SecureCookieSession.get:0
 #: ../../flask/src/flask/sessions.py:docstring of flask.sessions.SecureCookieSession.setdefault:0
 #: ../../flask/src/flask/sessions.py:docstring of flask.sessions.NullSession:0
+#: ../../flask/src/flask/sessions.py:docstring of flask.sessions.NullSession._fail:0
+#: ../../flask/src/flask/sessions.py:docstring of flask.sessions.NullSession._fail:0
+#: ../../flask/src/flask/sessions.py:docstring of flask.sessions.NullSession._fail:0
+#: ../../flask/src/flask/sessions.py:docstring of flask.sessions.NullSession._fail:0
+#: ../../flask/src/flask/sessions.py:docstring of flask.sessions.NullSession._fail:0
 #: ../../flask/src/flask/testing.py:docstring of flask.testing.FlaskClient:0
 #: ../../flask/src/flask/testing.py:docstring of flask.testing.FlaskClient.open:0
 #: ../../flask/src/flask/testing.py:docstring of flask.testing.FlaskClient.session_transaction:0
@@ -230,16 +234,16 @@ msgstr ""
 #: ../../flask/src/flask/ctx.py:docstring of flask.ctx._AppCtxGlobals.setdefault:0
 #: ../../flask/src/flask/ctx.py:docstring of flask.ctx.copy_current_request_context:0
 #: ../../flask/src/flask/helpers.py:docstring of flask.helpers.url_for:0
-#: ../../../sandbox/lib/site-packages/werkzeug/exceptions.py:docstring of werkzeug.exceptions.abort:0
-#: ../../../sandbox/lib/site-packages/werkzeug/utils.py:docstring of werkzeug.utils.redirect:0
+#: ../../_venv/lib/site-packages/werkzeug/exceptions.py:docstring of werkzeug.exceptions.abort:0
+#: ../../_venv/lib/site-packages/werkzeug/utils.py:docstring of werkzeug.utils.redirect:0
 #: ../../flask/src/flask/helpers.py:docstring of flask.helpers.make_response:0
 #: ../../flask/src/flask/ctx.py:docstring of flask.ctx.after_this_request:0
 #: ../../flask/src/flask/helpers.py:docstring of flask.helpers.send_file:0
 #: ../../flask/src/flask/helpers.py:docstring of flask.helpers.send_from_directory:0
 #: ../../flask/src/flask/helpers.py:docstring of flask.helpers.safe_join:0
 #: ../../docstring of markupsafe._speedups.escape:0
-#: ../../../sandbox/lib/site-packages/markupsafe/__init__.py:docstring of markupsafe.Markup:0
-#: ../../../sandbox/lib/site-packages/markupsafe/__init__.py:docstring of markupsafe.Markup.escape:0
+#: ../../_venv/lib/site-packages/markupsafe/__init__.py:docstring of markupsafe.Markup:0
+#: ../../_venv/lib/site-packages/markupsafe/__init__.py:docstring of markupsafe.Markup.escape:0
 #: ../../flask/src/flask/helpers.py:docstring of flask.helpers.flash:0
 #: ../../flask/src/flask/helpers.py:docstring of flask.helpers.get_flashed_messages:0
 #: ../../flask/src/flask/json/__init__.py:docstring of flask.json.jsonify:0
@@ -494,6 +498,11 @@ msgstr ""
 #: ../../flask/src/flask/sessions.py:docstring of flask.sessions.SecureCookieSession.get:0
 #: ../../flask/src/flask/sessions.py:docstring of flask.sessions.SecureCookieSession.setdefault:0
 #: ../../flask/src/flask/sessions.py:docstring of flask.sessions.NullSession:0
+#: ../../flask/src/flask/sessions.py:docstring of flask.sessions.NullSession._fail:0
+#: ../../flask/src/flask/sessions.py:docstring of flask.sessions.NullSession._fail:0
+#: ../../flask/src/flask/sessions.py:docstring of flask.sessions.NullSession._fail:0
+#: ../../flask/src/flask/sessions.py:docstring of flask.sessions.NullSession._fail:0
+#: ../../flask/src/flask/sessions.py:docstring of flask.sessions.NullSession._fail:0
 #: ../../flask/src/flask/testing.py:docstring of flask.testing.FlaskClient:0
 #: ../../flask/src/flask/testing.py:docstring of flask.testing.FlaskClient.open:0
 #: ../../flask/src/flask/testing.py:docstring of flask.testing.FlaskClient.session_transaction:0
@@ -506,16 +515,16 @@ msgstr ""
 #: ../../flask/src/flask/ctx.py:docstring of flask.ctx.copy_current_request_context:0
 #: ../../flask/src/flask/ctx.py:docstring of flask.ctx.has_app_context:0
 #: ../../flask/src/flask/helpers.py:docstring of flask.helpers.url_for:0
-#: ../../../sandbox/lib/site-packages/werkzeug/exceptions.py:docstring of werkzeug.exceptions.abort:0
-#: ../../../sandbox/lib/site-packages/werkzeug/utils.py:docstring of werkzeug.utils.redirect:0
+#: ../../_venv/lib/site-packages/werkzeug/exceptions.py:docstring of werkzeug.exceptions.abort:0
+#: ../../_venv/lib/site-packages/werkzeug/utils.py:docstring of werkzeug.utils.redirect:0
 #: ../../flask/src/flask/helpers.py:docstring of flask.helpers.make_response:0
 #: ../../flask/src/flask/ctx.py:docstring of flask.ctx.after_this_request:0
 #: ../../flask/src/flask/helpers.py:docstring of flask.helpers.send_from_directory:0
 #: ../../flask/src/flask/helpers.py:docstring of flask.helpers.safe_join:0
-#: ../../../sandbox/lib/site-packages/markupsafe/__init__.py:docstring of markupsafe.Markup:0
-#: ../../../sandbox/lib/site-packages/markupsafe/__init__.py:docstring of markupsafe.Markup.escape:0
-#: ../../../sandbox/lib/site-packages/markupsafe/__init__.py:docstring of markupsafe.Markup.striptags:0
-#: ../../../sandbox/lib/site-packages/markupsafe/__init__.py:docstring of markupsafe.Markup.unescape:0
+#: ../../_venv/lib/site-packages/markupsafe/__init__.py:docstring of markupsafe.Markup:0
+#: ../../_venv/lib/site-packages/markupsafe/__init__.py:docstring of markupsafe.Markup.escape:0
+#: ../../_venv/lib/site-packages/markupsafe/__init__.py:docstring of markupsafe.Markup.striptags:0
+#: ../../_venv/lib/site-packages/markupsafe/__init__.py:docstring of markupsafe.Markup.unescape:0
 #: ../../flask/src/flask/helpers.py:docstring of flask.helpers.flash:0
 #: ../../flask/src/flask/helpers.py:docstring of flask.helpers.get_flashed_messages:0
 #: ../../flask/src/flask/json/__init__.py:docstring of flask.json.jsonify:0
@@ -1006,7 +1015,7 @@ msgid "``RoutingException``, used internally for actions such as  slash redirect
 msgstr ""
 
 #: ../../flask/src/flask/app.py:docstring of flask.app.Flask.handle_http_exception:10
-msgid "Exceptions are looked up by code *and* by MRO, so ``HTTPExcpetion`` subclasses can be handled with a catch-all handler for the base ``HTTPException``."
+msgid "Exceptions are looked up by code *and* by MRO, so ``HTTPException`` subclasses can be handled with a catch-all handler for the base ``HTTPException``."
 msgstr ""
 
 #: ../../flask/src/flask/app.py:docstring of flask.app.Flask.handle_url_build_error:1
@@ -1262,6 +1271,9 @@ msgstr ""
 #: ../../flask/src/flask/helpers.py:docstring of flask.helpers.safe_join:0
 #: ../../docstring of markupsafe._speedups.escape:0
 #: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_envvar:0
+#: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_file:0
+#: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_json:0
+#: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_pyfile:0
 #: ../../flask/src/flask/cli.py:docstring of flask.cli.load_dotenv:0
 msgid "Returns"
 msgstr ""
@@ -1651,7 +1663,7 @@ msgid "added support for ``with`` block usage for the client."
 msgstr ""
 
 #: ../../docstring of flask.Flask.test_client_class:1
-msgid "the test client that is used with when `test_client` is used."
+msgid "The :meth:`test_client` method creates an instance of this test client class. Defaults to :class:`~flask.testing.FlaskClient`."
 msgstr ""
 
 #: ../../flask/src/flask/app.py:docstring of flask.app.Flask.test_request_context:1
@@ -2229,26 +2241,25 @@ msgid "Parse :attr:`data` as JSON."
 msgstr ""
 
 #: ../../flask/src/flask/wrappers.py:docstring of werkzeug.wrappers.request.Request.get_json:3
-#: ../../flask/src/flask/wrappers.py:docstring of werkzeug.wrappers.response.Response.get_json:3
-msgid "If the mimetype does not indicate JSON (:mimetype:`application/json`, see :meth:`is_json`), this returns ``None``."
+msgid "If the mimetype does not indicate JSON (:mimetype:`application/json`, see :attr:`is_json`), or parsing fails, :meth:`on_json_loading_failed` is called and its return value is used as the return value. By default this raises a 400 Bad Request error."
 msgstr ""
 
-#: ../../flask/src/flask/wrappers.py:docstring of werkzeug.wrappers.request.Request.get_json:7
-msgid "If parsing fails, :meth:`on_json_loading_failed` is called and its return value is used as the return value."
-msgstr ""
-
-#: ../../flask/src/flask/wrappers.py:docstring of werkzeug.wrappers.request.Request.get_json:10
+#: ../../flask/src/flask/wrappers.py:docstring of werkzeug.wrappers.request.Request.get_json:9
 #: ../../flask/src/flask/wrappers.py:docstring of werkzeug.wrappers.response.Response.get_json:9
 msgid "Ignore the mimetype and always try to parse JSON."
 msgstr ""
 
-#: ../../flask/src/flask/wrappers.py:docstring of werkzeug.wrappers.request.Request.get_json:11
-#: ../../flask/src/flask/wrappers.py:docstring of werkzeug.wrappers.response.Response.get_json:10
-msgid "Silence parsing errors and return ``None`` instead."
+#: ../../flask/src/flask/wrappers.py:docstring of werkzeug.wrappers.request.Request.get_json:10
+msgid "Silence mimetype and parsing errors, and return ``None`` instead."
 msgstr ""
 
-#: ../../flask/src/flask/wrappers.py:docstring of werkzeug.wrappers.request.Request.get_json:13
+#: ../../flask/src/flask/wrappers.py:docstring of werkzeug.wrappers.request.Request.get_json:12
 msgid "Store the parsed JSON to return for subsequent calls."
+msgstr ""
+
+#: ../../flask/src/flask/wrappers.py:docstring of werkzeug.wrappers.request.Request.get_json:15
+#: ../../flask/src/flask/wrappers.py:docstring of flask.Request.json:9
+msgid "Raise a 400 error if the content type is incorrect."
 msgstr ""
 
 #: ../../docstring of flask.Request.headers:1
@@ -2323,12 +2334,16 @@ msgstr ""
 
 #: ../../flask/src/flask/wrappers.py:docstring of flask.Request.json:1
 #: ../../flask/src/flask/wrappers.py:docstring of flask.Response.json:1
-msgid "The parsed JSON data if :attr:`mimetype` indicates JSON (:mimetype:`application/json`, see :meth:`is_json`)."
+msgid "The parsed JSON data if :attr:`mimetype` indicates JSON (:mimetype:`application/json`, see :attr:`is_json`)."
 msgstr ""
 
 #: ../../flask/src/flask/wrappers.py:docstring of flask.Request.json:4
 #: ../../flask/src/flask/wrappers.py:docstring of flask.Response.json:4
 msgid "Calls :meth:`get_json` with default arguments."
+msgstr ""
+
+#: ../../flask/src/flask/wrappers.py:docstring of flask.Request.json:6
+msgid "If the request content type is not ``application/json``, this will raise a 400 Bad Request error."
 msgstr ""
 
 #: ../../flask/src/flask/wrappers.py:docstring of werkzeug.wrappers.request.Request.make_form_data_parser:1
@@ -2356,7 +2371,15 @@ msgid "The mimetype parameters as dict.  For example if the content type is ``te
 msgstr ""
 
 #: ../../flask/src/flask/wrappers.py:docstring of flask.wrappers.Request.on_json_loading_failed:1
-msgid "Called if :meth:`get_json` parsing fails and isn't silenced. If this method returns a value, it is used as the return value for :meth:`get_json`. The default implementation raises :exc:`~werkzeug.exceptions.BadRequest`."
+msgid "Called if :meth:`get_json` fails and isn't silenced."
+msgstr ""
+
+#: ../../flask/src/flask/wrappers.py:docstring of flask.wrappers.Request.on_json_loading_failed:3
+msgid "If this method returns a value, it is used as the return value for :meth:`get_json`. The default implementation raises :exc:`~werkzeug.exceptions.BadRequest`."
+msgstr ""
+
+#: ../../flask/src/flask/wrappers.py:docstring of flask.wrappers.Request.on_json_loading_failed:7
+msgid "If parsing failed, this is the exception. It will be ``None`` if the content type wasn't ``application/json``."
 msgstr ""
 
 #: ../../docstring of flask.Request.origin:1
@@ -2597,11 +2620,19 @@ msgstr ""
 msgid "The ``Content-Range`` header as a :class:`~werkzeug.datastructures.ContentRange` object. Available even if the header is not set."
 msgstr ""
 
-#: ../../docstring of flask.Response.content_security_policy:1
+#: ../../flask/src/flask/wrappers.py:docstring of flask.Response.content_security_policy:1
+msgid "The ``Content-Security-Policy`` header as a :class:`~werkzeug.datastructures.ContentSecurityPolicy` object. Available even if the header is not set."
+msgstr ""
+
+#: ../../flask/src/flask/wrappers.py:docstring of flask.Response.content_security_policy:5
 msgid "The Content-Security-Policy header adds an additional layer of security to help detect and mitigate certain types of attacks."
 msgstr ""
 
-#: ../../docstring of flask.Response.content_security_policy_report_only:1
+#: ../../flask/src/flask/wrappers.py:docstring of flask.Response.content_security_policy_report_only:1
+msgid "The ``Content-Security-policy-report-only`` header as a :class:`~werkzeug.datastructures.ContentSecurityPolicy` object. Available even if the header is not set."
+msgstr ""
+
+#: ../../flask/src/flask/wrappers.py:docstring of flask.Response.content_security_policy_report_only:5
 msgid "The Content-Security-Policy-Report-Only header adds a csp policy that is not enforced but is reported thereby helping detect certain types of attacks."
 msgstr ""
 
@@ -2702,10 +2733,14 @@ msgid "Generate an ``ETag`` header if one is not already set."
 msgstr ""
 
 #: ../../flask/src/flask/wrappers.py:docstring of werkzeug.wrappers.response.Response.freeze:10
+msgid "Removed the ``no_etag`` parameter."
+msgstr ""
+
+#: ../../flask/src/flask/wrappers.py:docstring of werkzeug.wrappers.response.Response.freeze:13
 msgid "An ``ETag`` header is added, the ``no_etag`` parameter is deprecated and will be removed in Werkzeug 2.1."
 msgstr ""
 
-#: ../../flask/src/flask/wrappers.py:docstring of werkzeug.wrappers.response.Response.freeze:14
+#: ../../flask/src/flask/wrappers.py:docstring of werkzeug.wrappers.response.Response.freeze:17
 msgid "The ``Content-Length`` header is set."
 msgstr ""
 
@@ -2759,8 +2794,16 @@ msgstr ""
 msgid "Parse :attr:`data` as JSON. Useful during testing."
 msgstr ""
 
+#: ../../flask/src/flask/wrappers.py:docstring of werkzeug.wrappers.response.Response.get_json:3
+msgid "If the mimetype does not indicate JSON (:mimetype:`application/json`, see :attr:`is_json`), this returns ``None``."
+msgstr ""
+
 #: ../../flask/src/flask/wrappers.py:docstring of werkzeug.wrappers.response.Response.get_json:7
 msgid "Unlike :meth:`Request.get_json`, the result is not cached."
+msgstr ""
+
+#: ../../flask/src/flask/wrappers.py:docstring of werkzeug.wrappers.response.Response.get_json:10
+msgid "Silence parsing errors and return ``None`` instead."
 msgstr ""
 
 #: ../../flask/src/flask/wrappers.py:docstring of werkzeug.wrappers.response.Response.get_wsgi_headers:1
@@ -3003,6 +3046,10 @@ msgstr ""
 msgid "To replace the session interface on an application all you have to do is to assign :attr:`flask.Flask.session_interface`::"
 msgstr ""
 
+#: ../../flask/src/flask/sessions.py:docstring of flask.sessions.SessionInterface:27
+msgid "Multiple requests with the same session may be sent and handled concurrently. When implementing a new session interface, consider whether reads or writes to the backing store must be synchronized. There is no guarantee on the order in which the session for each request is opened or saved, it will occur in the order that requests begin and end processing."
+msgstr ""
+
 #: ../../flask/src/flask/sessions.py:docstring of flask.sessions.SessionInterface.get_cookie_domain:1
 msgid "Returns the domain that should be set for the session cookie."
 msgstr ""
@@ -3065,7 +3112,17 @@ msgstr ""
 
 #: ../../flask/src/flask/sessions.py:docstring of flask.sessions.SessionInterface.open_session:1
 #: ../../flask/src/flask/sessions.py:docstring of flask.sessions.SecureCookieSessionInterface.open_session:1
-msgid "This method has to be implemented and must either return ``None`` in case the loading failed because of a configuration error or an instance of a session object which implements a dictionary like interface + the methods and attributes on :class:`SessionMixin`."
+msgid "This is called at the beginning of each request, after pushing the request context, before matching the URL."
+msgstr ""
+
+#: ../../flask/src/flask/sessions.py:docstring of flask.sessions.SessionInterface.open_session:4
+#: ../../flask/src/flask/sessions.py:docstring of flask.sessions.SecureCookieSessionInterface.open_session:4
+msgid "This must return an object which implements a dictionary-like interface as well as the :class:`SessionMixin` interface."
+msgstr ""
+
+#: ../../flask/src/flask/sessions.py:docstring of flask.sessions.SessionInterface.open_session:7
+#: ../../flask/src/flask/sessions.py:docstring of flask.sessions.SecureCookieSessionInterface.open_session:7
+msgid "This will return ``None`` to indicate that loading failed in some way that is not immediately an error. The request context will fall back to using :meth:`make_null_session` in this case."
 msgstr ""
 
 #: ../../docstring of flask.sessions.SessionInterface.pickle_based:1
@@ -3074,7 +3131,7 @@ msgstr ""
 
 #: ../../flask/src/flask/sessions.py:docstring of flask.sessions.SessionInterface.save_session:1
 #: ../../flask/src/flask/sessions.py:docstring of flask.sessions.SecureCookieSessionInterface.save_session:1
-msgid "This is called for actual sessions returned by :meth:`open_session` at the end of the request.  This is still called during a request context so if you absolutely need access to the request you can do that."
+msgid "This is called at the end of each request, after generating a response, before removing the request context. It is skipped if :meth:`is_null_session` returns ``True``."
 msgstr ""
 
 #: ../../flask/src/flask/sessions.py:docstring of flask.sessions.SessionInterface.should_set_cookie:1
@@ -3119,6 +3176,7 @@ msgstr ""
 
 #: ../../flask/src/flask/sessions.py:docstring of flask.sessions.SecureCookieSession.get:1
 #: ../../flask/src/flask/sessions.py:docstring of flask.sessions.SecureCookieSession.setdefault:3
+#: ../../flask/src/flask/sessions.py:docstring of flask.sessions.NullSession._fail:3
 msgid "Return the value for key if key is in the dictionary, else default."
 msgstr ""
 
@@ -3127,11 +3185,28 @@ msgid "When data is changed, this is set to ``True``. Only the session dictionar
 msgstr ""
 
 #: ../../flask/src/flask/sessions.py:docstring of flask.sessions.SecureCookieSession.setdefault:1
+#: ../../flask/src/flask/sessions.py:docstring of flask.sessions.NullSession._fail:1
 msgid "Insert key with a value of default if key is not in the dictionary."
 msgstr ""
 
 #: ../../flask/src/flask/sessions.py:docstring of flask.sessions.NullSession:1
 msgid "Class used to generate nicer error messages if sessions are not available.  Will still allow read-only access to the empty session but fail on setting."
+msgstr ""
+
+#: ../../flask/src/flask/sessions.py:docstring of flask.sessions.NullSession._fail:1
+msgid "If key is not found, default is returned if given, otherwise KeyError is raised"
+msgstr ""
+
+#: ../../flask/src/flask/sessions.py:docstring of flask.sessions.NullSession._fail:1
+msgid "Remove and return a (key, value) pair as a 2-tuple."
+msgstr ""
+
+#: ../../flask/src/flask/sessions.py:docstring of flask.sessions.NullSession._fail:3
+msgid "Pairs are returned in LIFO (last-in, first-out) order. Raises KeyError if the dict is empty."
+msgstr ""
+
+#: ../../flask/src/flask/sessions.py:docstring of flask.sessions.NullSession._fail:1
+msgid "If E is present and has a .keys() method, then does:  for k in E: D[k] = E[k] If E is present and lacks a .keys() method, then does:  for k, v in E: D[k] = v In either case, this is followed by: for k in F:  D[k] = F[k]"
 msgstr ""
 
 #: ../../flask/src/flask/sessions.py:docstring of flask.sessions.SessionMixin:1
@@ -3191,18 +3266,22 @@ msgid "Make additional requests to follow HTTP redirects until a non-redirect st
 msgstr ""
 
 #: ../../flask/src/flask/testing.py:docstring of flask.testing.FlaskClient.open:15
+msgid "Removed the ``as_tuple`` parameter."
+msgstr ""
+
+#: ../../flask/src/flask/testing.py:docstring of flask.testing.FlaskClient.open:18
 msgid "``as_tuple`` is deprecated and will be removed in Werkzeug 2.1. Use :attr:`TestResponse.request` and ``request.environ`` instead."
 msgstr ""
 
-#: ../../flask/src/flask/testing.py:docstring of flask.testing.FlaskClient.open:20
+#: ../../flask/src/flask/testing.py:docstring of flask.testing.FlaskClient.open:23
 msgid "The request input stream is closed when calling ``response.close()``. Input streams for redirects are automatically closed."
 msgstr ""
 
-#: ../../flask/src/flask/testing.py:docstring of flask.testing.FlaskClient.open:25
+#: ../../flask/src/flask/testing.py:docstring of flask.testing.FlaskClient.open:28
 msgid "If a dict is provided as file in the dict for the ``data`` parameter the content type has to be called ``content_type`` instead of ``mimetype``. This change was made for consistency with :class:`werkzeug.FileWrapper`."
 msgstr ""
 
-#: ../../flask/src/flask/testing.py:docstring of flask.testing.FlaskClient.open:31
+#: ../../flask/src/flask/testing.py:docstring of flask.testing.FlaskClient.open:34
 msgid "Added the ``follow_redirects`` parameter."
 msgstr ""
 
@@ -3255,7 +3334,7 @@ msgid "A namespace object that can store data during an :doc:`application contex
 msgstr ""
 
 #: ../../flask/docs/api.rst:171
-msgid "This is a good place to store resources during a request. During testing, you can use the :ref:`faking-resources` pattern to pre-configure such resources."
+msgid "This is a good place to store resources during a request. For example, a ``before_request`` function could load a user object from a session id, then set ``g.user`` to be used in the view function."
 msgstr ""
 
 #: ../../flask/docs/api.rst:175
@@ -3408,35 +3487,35 @@ msgstr ""
 msgid "if provided this explicitly specifies an HTTP method."
 msgstr ""
 
-#: ../../../sandbox/lib/site-packages/werkzeug/exceptions.py:docstring of werkzeug.exceptions.abort:1
+#: ../../_venv/lib/site-packages/werkzeug/exceptions.py:docstring of werkzeug.exceptions.abort:1
 msgid "Raises an :py:exc:`HTTPException` for the given status code or WSGI application."
 msgstr ""
 
-#: ../../../sandbox/lib/site-packages/werkzeug/exceptions.py:docstring of werkzeug.exceptions.abort:4
+#: ../../_venv/lib/site-packages/werkzeug/exceptions.py:docstring of werkzeug.exceptions.abort:4
 msgid "If a status code is given, it will be looked up in the list of exceptions and will raise that exception.  If passed a WSGI application, it will wrap it in a proxy WSGI exception and raise that::"
 msgstr ""
 
-#: ../../../sandbox/lib/site-packages/werkzeug/utils.py:docstring of werkzeug.utils.redirect:1
+#: ../../_venv/lib/site-packages/werkzeug/utils.py:docstring of werkzeug.utils.redirect:1
 msgid "Returns a response object (a WSGI application) that, if called, redirects the client to the target location. Supported codes are 301, 302, 303, 305, 307, and 308. 300 is not supported because it's not a real redirect and 304 because it's the answer for a request with a request with defined If-Modified-Since headers."
 msgstr ""
 
-#: ../../../sandbox/lib/site-packages/werkzeug/utils.py:docstring of werkzeug.utils.redirect:11
+#: ../../_venv/lib/site-packages/werkzeug/utils.py:docstring of werkzeug.utils.redirect:11
 msgid "The class used for the Response object can now be passed in."
 msgstr ""
 
-#: ../../../sandbox/lib/site-packages/werkzeug/utils.py:docstring of werkzeug.utils.redirect:7
+#: ../../_venv/lib/site-packages/werkzeug/utils.py:docstring of werkzeug.utils.redirect:7
 msgid "The location can now be a unicode string that is encoded using the :func:`iri_to_uri` function."
 msgstr ""
 
-#: ../../../sandbox/lib/site-packages/werkzeug/utils.py:docstring of werkzeug.utils.redirect:14
+#: ../../_venv/lib/site-packages/werkzeug/utils.py:docstring of werkzeug.utils.redirect:14
 msgid "the location the response should redirect to."
 msgstr ""
 
-#: ../../../sandbox/lib/site-packages/werkzeug/utils.py:docstring of werkzeug.utils.redirect:15
+#: ../../_venv/lib/site-packages/werkzeug/utils.py:docstring of werkzeug.utils.redirect:15
 msgid "the redirect status code. defaults to 302."
 msgstr ""
 
-#: ../../../sandbox/lib/site-packages/werkzeug/utils.py:docstring of werkzeug.utils.redirect:16
+#: ../../_venv/lib/site-packages/werkzeug/utils.py:docstring of werkzeug.utils.redirect:16
 msgid "a Response class to use when instantiating a response. The default is :class:`werkzeug.wrappers.Response` if unspecified."
 msgstr ""
 
@@ -3649,31 +3728,31 @@ msgstr ""
 msgid "A :class:`Markup` string with the escaped text."
 msgstr ""
 
-#: ../../../sandbox/lib/site-packages/markupsafe/__init__.py:docstring of markupsafe.Markup:1
+#: ../../_venv/lib/site-packages/markupsafe/__init__.py:docstring of markupsafe.Markup:1
 msgid "A string that is ready to be safely inserted into an HTML or XML document, either because it was escaped or because it was marked safe."
 msgstr ""
 
-#: ../../../sandbox/lib/site-packages/markupsafe/__init__.py:docstring of markupsafe.Markup:5
+#: ../../_venv/lib/site-packages/markupsafe/__init__.py:docstring of markupsafe.Markup:5
 msgid "Passing an object to the constructor converts it to text and wraps it to mark it safe without escaping. To escape the text, use the :meth:`escape` class method instead."
 msgstr ""
 
-#: ../../../sandbox/lib/site-packages/markupsafe/__init__.py:docstring of markupsafe.Markup:16
+#: ../../_venv/lib/site-packages/markupsafe/__init__.py:docstring of markupsafe.Markup:16
 msgid "This implements the ``__html__()`` interface that some frameworks use. Passing an object that implements ``__html__()`` will wrap the output of that method, marking it safe."
 msgstr ""
 
-#: ../../../sandbox/lib/site-packages/markupsafe/__init__.py:docstring of markupsafe.Markup:27
+#: ../../_venv/lib/site-packages/markupsafe/__init__.py:docstring of markupsafe.Markup:27
 msgid "This is a subclass of :class:`str`. It has the same methods, but escapes their arguments and returns a ``Markup`` instance."
 msgstr ""
 
-#: ../../../sandbox/lib/site-packages/markupsafe/__init__.py:docstring of markupsafe.Markup.escape:1
+#: ../../_venv/lib/site-packages/markupsafe/__init__.py:docstring of markupsafe.Markup.escape:1
 msgid "Escape a string. Calls :func:`escape` and ensures that for subclasses the correct type is returned."
 msgstr ""
 
-#: ../../../sandbox/lib/site-packages/markupsafe/__init__.py:docstring of markupsafe.Markup.striptags:1
+#: ../../_venv/lib/site-packages/markupsafe/__init__.py:docstring of markupsafe.Markup.striptags:1
 msgid ":meth:`unescape` the markup, remove tags, and normalize whitespace to single spaces."
 msgstr ""
 
-#: ../../../sandbox/lib/site-packages/markupsafe/__init__.py:docstring of markupsafe.Markup.unescape:1
+#: ../../_venv/lib/site-packages/markupsafe/__init__.py:docstring of markupsafe.Markup.unescape:1
 msgid "Convert escaped markup back into a text string. This replaces HTML entities with the characters they represent."
 msgstr ""
 
@@ -3798,6 +3877,11 @@ msgid "The default output omits indents and spaces after separators. In debug mo
 msgstr ""
 
 #: ../../flask/src/flask/json/__init__.py:docstring of flask.json.jsonify:43
+#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.dumps:11
+msgid ":class:`decimal.Decimal` is supported by converting to a string."
+msgstr ""
+
+#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.jsonify:46
 msgid "Added support for serializing top-level arrays. This introduces a security risk in ancient browsers. See :ref:`security-json`."
 msgstr ""
 
@@ -3825,11 +3909,11 @@ msgstr ""
 msgid "Extra arguments passed to :func:`json.dumps`."
 msgstr ""
 
-#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.dumps:11
+#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.dumps:14
 msgid "``encoding`` is deprecated and will be removed in Flask 2.1."
 msgstr ""
 
-#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.dumps:14
+#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.dumps:17
 #: ../../flask/src/flask/json/__init__.py:docstring of flask.json.loads:15
 msgid "``app`` can be passed directly, rather than requiring an app context for configuration."
 msgstr ""
@@ -4125,7 +4209,10 @@ msgid "set to ``True`` if you want silent failure for missing files."
 msgstr ""
 
 #: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_envvar:10
-msgid "bool. ``True`` if able to load config, ``False`` otherwise."
+#: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_file:17
+#: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_json:7
+#: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_pyfile:10
+msgid "``True`` if the file was loaded successfully."
 msgstr ""
 
 #: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_file:1
@@ -4153,12 +4240,12 @@ msgstr ""
 msgid "The path to the JSON file. This can be an absolute path or relative to the config root path."
 msgstr ""
 
-#: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_json:8
+#: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_json:9
 msgid "Will be removed in Flask 2.1. Use :meth:`from_file` instead. This was removed early in 2.0.0, was added back in 2.0.1."
 msgstr ""
 
 #: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_mapping:1
-msgid "Updates the config like :meth:`update` ignoring items with non-upper keys."
+msgid "Updates the config like :meth:`update` ignoring items with non-upper keys. :return: Always returns ``True``."
 msgstr ""
 
 #: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_object:1
@@ -4205,7 +4292,7 @@ msgstr ""
 msgid "the filename of the config.  This can either be an absolute filename or a filename relative to the root path."
 msgstr ""
 
-#: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_pyfile:11
+#: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_pyfile:12
 msgid "`silent` parameter."
 msgstr ""
 

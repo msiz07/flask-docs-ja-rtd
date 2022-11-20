@@ -8,22 +8,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 21:10+0900\n"
+"POT-Creation-Date: 2022-11-20 18:38+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.8.0\n"
+"Generated-By: Babel 2.9.1\n"
 
 # 5161a70b989c44e5a327e1a9b6cd0b98
-#: ../../flask/docs/appcontext.rst:6
+#: ../../flask/docs/appcontext.rst:4
 msgid "The Application Context"
 msgstr "アプリケーションのコンテキスト（The Application Context）"
 
 # a508c0b3d9e24ed48b9af1223ca61cc4
-#: ../../flask/docs/appcontext.rst:8
+#: ../../flask/docs/appcontext.rst:6
 msgid ""
 "The application context keeps track of the application-level data during "
 "a request, CLI command, or other activity. Rather than passing the "
@@ -38,11 +38,15 @@ msgstr ""
 "引数で受け取らなくてもFlaskアプリのインスタンスに関数内からアクセスできるように、flaskパッケージをimport後はflask.current_appやflask.gにアクセスすればそのとき実行中のFlaskアプリ固有のオブジェクトにアクセスできるようなことを指しています）。"
 
 # 8fe988affa494220ac88df8d322728de
-#: ../../flask/docs/appcontext.rst:13
+#: ../../flask/docs/appcontext.rst:11
+#, fuzzy
+#| msgid "" "This is similar to the :doc:`/reqcontext`, which keeps track of
+#| request-" "level data during a request. A corresponding application context
+#| is " "pushed when a request context is pushed."
 msgid ""
-"This is similar to the :doc:`/reqcontext`, which keeps track of request-"
-"level data during a request. A corresponding application context is "
-"pushed when a request context is pushed."
+"This is similar to :doc:`/reqcontext`, which keeps track of request-level"
+" data during a request. A corresponding application context is pushed "
+"when a request context is pushed."
 msgstr ""
 "これは、リクエストの期間中はリクエストのレベルのデータを把握する\\ :doc:`/reqcontext`\\ と似ています。request "
 "contextがpushされたとき、対応するapplication contextもpushされます（訳注：application "
@@ -50,12 +54,12 @@ msgstr ""
 "contextはFlask内でスタックのデータ構造を使って管理されており、一般的にスタックへデータを追加することをpushといいます）。"
 
 # a9f2c2afc6044e11bffe2f7578143469
-#: ../../flask/docs/appcontext.rst:18
+#: ../../flask/docs/appcontext.rst:16
 msgid "Purpose of the Context"
 msgstr "コンテキストの目的（Purpose of the Context）"
 
 # ade29131b7e74c169a66df9c580ad3be
-#: ../../flask/docs/appcontext.rst:20
+#: ../../flask/docs/appcontext.rst:18
 msgid ""
 "The :class:`Flask` application object has attributes, such as "
 ":attr:`~Flask.config`, that are useful to access within views and "
@@ -76,7 +80,7 @@ msgstr ""
 "factoryパターンのFlaskアプリのコードでは、importされただけではFlaskアプリのインスタンスを作成・提供せず、モジュールやパッケージ内で用意したfactory関数が呼び出されたときに初めてFlaskアプリのインスタンスを作成して返します。factory関数以外のコードでは、モジュールまたはパッケージをimportするだけでは（factory関数を呼び出さない限り）Flaskアプリのインスタンスを取得できなくなります。またblueprintやFlask拡張では、Flaskアプリのインスタンスを自分で作成はせず、既に作成済みのFlaskアプリのインスタンスに対して追加機能などを作成するため、基本的にblueprintやFlask拡張自身のコードではFlaskアプリのインスタンスを作成しません）。"
 
 # c25f76ea224949a19dedede3430302a1
-#: ../../flask/docs/appcontext.rst:29
+#: ../../flask/docs/appcontext.rst:27
 msgid ""
 "Flask solves this issue with the *application context*. Rather than "
 "referring to an ``app`` directly, you use the :data:`current_app` proxy, "
@@ -87,7 +91,7 @@ msgstr ""
 ":data:`current_app`\\ を使用できます。"
 
 # 1af9cd18f3ee45e4bbdae05d57748b98
-#: ../../flask/docs/appcontext.rst:33
+#: ../../flask/docs/appcontext.rst:31
 msgid ""
 "Flask automatically *pushes* an application context when handling a "
 "request. View functions, error handlers, and other functions that run "
@@ -97,7 +101,7 @@ msgstr ""
 "。リクエストの期間中に実行するview関数、エラー処理、およびその他の関数が、\\ :data:`current_app`\\ へアクセスします。"
 
 # 4fbb8eba355343cca77c03756f998e03
-#: ../../flask/docs/appcontext.rst:37
+#: ../../flask/docs/appcontext.rst:35
 msgid ""
 "Flask will also automatically push an app context when running CLI "
 "commands registered with :attr:`Flask.cli` using ``@app.cli.command()``."
@@ -106,12 +110,12 @@ msgstr ""
 "に登録されたCLIコマンドを実行するとき、自動的にapp contextをpushします。"
 
 # ec95ddb554e54c188a94d7deb0e3479d
-#: ../../flask/docs/appcontext.rst:42
+#: ../../flask/docs/appcontext.rst:40
 msgid "Lifetime of the Context"
 msgstr "コンテキストの生存期間（Lifetime of the Context）"
 
 # 5a01b9349cf647a7bbb6fa110a1ac41e
-#: ../../flask/docs/appcontext.rst:44
+#: ../../flask/docs/appcontext.rst:42
 msgid ""
 "The application context is created and destroyed as necessary. When a "
 "Flask application begins handling a request, it pushes an application "
@@ -127,7 +131,7 @@ msgstr ""
 "contextをpopします。典型的には、application contextはリクエストと同じ生存期間を持ちます。"
 
 # 0c0730da1eb141b1b15ace2aae548017
-#: ../../flask/docs/appcontext.rst:51
+#: ../../flask/docs/appcontext.rst:49
 msgid ""
 "See :doc:`/reqcontext` for more information about how the contexts work "
 "and the full life cycle of a request."
@@ -136,12 +140,12 @@ msgstr ""
 ":doc:`/reqcontext`\\ を確認してください。"
 
 # 34e257fef1cf482f9d2ad91e40406817
-#: ../../flask/docs/appcontext.rst:56
+#: ../../flask/docs/appcontext.rst:54
 msgid "Manually Push a Context"
 msgstr "手作業でのコンテキストの登録（Manually Push a Context）"
 
 # 221d720d4d914a2c81a7c60443d27f18
-#: ../../flask/docs/appcontext.rst:58
+#: ../../flask/docs/appcontext.rst:56
 msgid ""
 "If you try to access :data:`current_app`, or anything that uses it, "
 "outside an application context, you'll get this error message:"
@@ -151,7 +155,7 @@ msgstr ""
 "contextがスタックへpushされた状態でない場合）、以下のようなエラーメッセージを得るでしょう:"
 
 # e980b73360734a9b97da924fd8bd8ddf
-#: ../../flask/docs/appcontext.rst:69
+#: ../../flask/docs/appcontext.rst:67
 msgid ""
 "If you see that error while configuring your application, such as when "
 "initializing an extension, you can push a context manually since you have"
@@ -166,7 +170,7 @@ msgstr ""
 "を使用すると、ブロックの内側で実行しているものは全て\\ :data:`current_app`\\ へアクセスできるようになります。 ::"
 
 # 68e8e28d51134ed98203f3b40225cebb
-#: ../../flask/docs/appcontext.rst:83
+#: ../../flask/docs/appcontext.rst:81
 msgid ""
 "If you see that error somewhere else in your code not related to "
 "configuring the application, it most likely indicates that you should "
@@ -174,12 +178,12 @@ msgid ""
 msgstr "もしアプリケーションの設定処理と関係のない、どこか別の場所のコードでこのエラーを見た場合は、そのコードをview関数またはCLIコマンドへ移動するべきだと示している可能性が最も高いです。"
 
 # 9d80dfc00eb5412790052ea5f818ddee
-#: ../../flask/docs/appcontext.rst:89
+#: ../../flask/docs/appcontext.rst:87
 msgid "Storing Data"
 msgstr "データの格納"
 
 # 8ce65e815bf94a8bb070243209f4f785
-#: ../../flask/docs/appcontext.rst:91
+#: ../../flask/docs/appcontext.rst:89
 msgid ""
 "The application context is a good place to store common data during a "
 "request or CLI command. Flask provides the :data:`g object <g>` for this "
@@ -192,7 +196,7 @@ msgstr ""
 "contextと同じ生存期間を持ちます。"
 
 # c20b4e70beee47178b3c114cdfaea1a2
-#: ../../flask/docs/appcontext.rst:97
+#: ../../flask/docs/appcontext.rst:95
 msgid ""
 "The ``g`` name stands for \"global\", but that is referring to the data "
 "being global *within a context*. The data on ``g`` is lost after the "
@@ -206,19 +210,19 @@ msgstr ""
 " :data:`session`\\ またはデータベースを使用してください。"
 
 # a4451d9a87da46d29276443680f13374
-#: ../../flask/docs/appcontext.rst:103
+#: ../../flask/docs/appcontext.rst:101
 msgid "A common use for :data:`g` is to manage resources during a request."
 msgstr ":data:`g`\\ のよくある利用方法はリクエストの期間中リソースを管理することです。"
 
 # d0b7f1998ff541099541084aad8a797f
-#: ../../flask/docs/appcontext.rst:105
+#: ../../flask/docs/appcontext.rst:103
 msgid ""
 "``get_X()`` creates resource ``X`` if it does not exist, caching it as "
 "``g.X``."
 msgstr "``get_X()``\\ で、リソース\\ ``X``\\ が存在しない場合にはそれを作成し、\\ ``g.X``\\ としてキャッシュします。"
 
 # 7b4c850355474ab89e6e8dbf141ac0e6
-#: ../../flask/docs/appcontext.rst:107
+#: ../../flask/docs/appcontext.rst:105
 msgid ""
 "``teardown_X()`` closes or otherwise deallocates the resource if it "
 "exists. It is registered as a :meth:`~Flask.teardown_appcontext` handler."
@@ -228,12 +232,12 @@ msgstr ""
 ":meth:`~Flask.teardown_appcontext`\\ ハンドラとして（appに）登録されます。"
 
 # f071b56992174291aec8194e3fdbc5bd
-#: ../../flask/docs/appcontext.rst:111
+#: ../../flask/docs/appcontext.rst:109
 msgid "For example, you can manage a database connection using this pattern::"
 msgstr "例えば、データベースの接続（connection）を以下のようなパターンを使って管理できます::"
 
 # ef536e7e2d43426d83628220f11bea32
-#: ../../flask/docs/appcontext.rst:128
+#: ../../flask/docs/appcontext.rst:126
 msgid ""
 "During a request, every call to ``get_db()`` will return the same "
 "connection, and it will be closed automatically at the end of the "
@@ -243,7 +247,7 @@ msgstr ""
 "への全ての呼び出しは同じconnectionを返すようになり、リクエストが終わるときには、そのconnectionは自動的に閉じられるようになります。"
 
 # 2b73fef501f3419eade84cb6d344e0ce
-#: ../../flask/docs/appcontext.rst:132
+#: ../../flask/docs/appcontext.rst:130
 msgid ""
 "You can use :class:`~werkzeug.local.LocalProxy` to make a new context "
 "local from ``get_db()``::"
@@ -254,7 +258,7 @@ msgstr ""
 " ::"
 
 # 5a8f7022d94b45778f0dfa23ad7a4bf3
-#: ../../flask/docs/appcontext.rst:138
+#: ../../flask/docs/appcontext.rst:136
 msgid ""
 "Accessing ``db`` will call ``get_db`` internally, in the same way that "
 ":data:`current_app` works."
@@ -263,7 +267,7 @@ msgstr ""
 " を呼び出すようになります。"
 
 # 53ec2063b0f64f12ba3618df677c84d1
-#: ../../flask/docs/appcontext.rst:143
+#: ../../flask/docs/appcontext.rst:141
 msgid ""
 "If you're writing an extension, :data:`g` should be reserved for user "
 "code. You may store internal data on the context itself, but be sure to "
@@ -277,12 +281,12 @@ msgstr ""
 ":doc:`/extensiondev`\\ を確認してください。"
 
 # fda42d7a7ce14e41a9c351a06f88d227
-#: ../../flask/docs/appcontext.rst:151
+#: ../../flask/docs/appcontext.rst:149
 msgid "Events and Signals"
 msgstr "出来事と合図（Events and Signals）"
 
 # eb16cb72ad8e4adbb889926f86cb9a10
-#: ../../flask/docs/appcontext.rst:153
+#: ../../flask/docs/appcontext.rst:151
 msgid ""
 "The application will call functions registered with "
 ":meth:`~Flask.teardown_appcontext` when the application context is "
@@ -292,7 +296,7 @@ msgstr ""
 ":meth:`~Flask.teardown_appcontext`\\ に登録された関数を呼び出します。"
 
 # 2f0ad15b326a481b9c46a3cfdad86404
-#: ../../flask/docs/appcontext.rst:157
+#: ../../flask/docs/appcontext.rst:155
 msgid ""
 "If :data:`~signals.signals_available` is true, the following signals are "
 "sent: :data:`appcontext_pushed`, :data:`appcontext_tearing_down`, and "
@@ -301,4 +305,3 @@ msgstr ""
 "もし\\ :data:`~signals.signals_available`\\ がtrueのときは、次のsignalが送られます: "
 ":data:`appcontext_pushed`, :data:`appcontext_tearing_down`, そして\\ "
 ":data:`appcontext_popped` です。"
-

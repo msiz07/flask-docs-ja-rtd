@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-21 20:07+0900\n"
+"POT-Creation-Date: 2022-11-20 18:38+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,12 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
+
+#: ../../flask/docs/installation.rst:11
+msgid ""
+"``async`` support in Flask requires Python 3.7+ for "
+"``contextvars.ContextVar``."
+msgstr ""
 
 # e157c3941a4b4e09a16cb970ac6aec2a
 #: ../../flask/docs/installation.rst:2
@@ -37,17 +43,17 @@ msgstr ""
 "サポートします。"
 
 # 8eeec08d592b4542a5b95959ae657c49
-#: ../../flask/docs/installation.rst:13
+#: ../../flask/docs/installation.rst:15
 msgid "Dependencies"
 msgstr "依存対象"
 
 # 9d39bac996fd424f93809aae5a49ac9b
-#: ../../flask/docs/installation.rst:15
+#: ../../flask/docs/installation.rst:17
 msgid "These distributions will be installed automatically when installing Flask."
 msgstr "以下の配付ツール（distributions）はFlaskをインストールするとき、自動的にインストールされます。"
 
 # b48059ca4b23420daa23931d664e5e95
-#: ../../flask/docs/installation.rst:17
+#: ../../flask/docs/installation.rst:19
 msgid ""
 "`Werkzeug`_ implements WSGI, the standard Python interface between "
 "applications and servers."
@@ -56,14 +62,14 @@ msgstr ""
 "は、アプリケーションとサーバの間のインタフェースにおけるPythonでのインタフェースの標準である、WSGIを実装しています。"
 
 # ae816060c4484a6c9cac1acac840794c
-#: ../../flask/docs/installation.rst:19
+#: ../../flask/docs/installation.rst:21
 msgid ""
 "`Jinja`_ is a template language that renders the pages your application "
 "serves."
 msgstr "`Jinja`_\\ は、アプリケーションが提供するページの表示（render）をする、テンプレート言語です。"
 
 # 17c77296e00a463f84c61107f753fddd
-#: ../../flask/docs/installation.rst:21
+#: ../../flask/docs/installation.rst:23
 msgid ""
 "`MarkupSafe`_ comes with Jinja. It escapes untrusted input when rendering"
 " templates to avoid injection attacks."
@@ -72,7 +78,7 @@ msgstr ""
 "は、Jinjaと一緒にインストールされます。MarkupSafeはテンプレートを表示（render）するときに挿入（injection）攻撃を回避するために、信用できない入力をエスケープします。"
 
 # cfe57330d5c7415e987f584dd4d8cd24
-#: ../../flask/docs/installation.rst:23
+#: ../../flask/docs/installation.rst:25
 msgid ""
 "`ItsDangerous`_ securely signs data to ensure its integrity. This is used"
 " to protect Flask's session cookie."
@@ -81,7 +87,7 @@ msgstr ""
 "は、インテグリティを確保するために安全にデータへ署名を施します。これはFlaskのセッションのクッキーを保護するために使用されます。"
 
 # c25c36dc154244f9a0c3d35b4976b5d3
-#: ../../flask/docs/installation.rst:25
+#: ../../flask/docs/installation.rst:27
 msgid ""
 "`Click`_ is a framework for writing command line applications. It "
 "provides the ``flask`` command and allows adding custom management "
@@ -91,24 +97,24 @@ msgstr ""
 "コマンドを提供し、独自に作成した管理コマンドを追加できるようにします。"
 
 # 051c8a687e264005afa46defd256086b
-#: ../../flask/docs/installation.rst:36
+#: ../../flask/docs/installation.rst:38
 msgid "Optional dependencies"
 msgstr "オプションの依存対象"
 
 # 95bc8b64afa74782aed01f408ab6adf2
-#: ../../flask/docs/installation.rst:38
+#: ../../flask/docs/installation.rst:40
 msgid ""
 "These distributions will not be installed automatically. Flask will "
 "detect and use them if you install them."
 msgstr "以下の配布ツール（distributions）は、自動的にはインストールされません。もしインストールされていたときは、Flaskが見つけ出して使用します。"
 
 # 8dc9d625d840486593021cee4e4aa518
-#: ../../flask/docs/installation.rst:41
+#: ../../flask/docs/installation.rst:43
 msgid "`Blinker`_ provides support for :doc:`signals`."
 msgstr "`Blinker`_ は、:doc:`signals` のサポートを提供します。"
 
 # d55383d9056646dab84fcf815b6d3e86
-#: ../../flask/docs/installation.rst:42
+#: ../../flask/docs/installation.rst:44
 msgid ""
 "`python-dotenv`_ enables support for :ref:`dotenv` when running ``flask``"
 " commands."
@@ -117,26 +123,26 @@ msgstr ""
 "サポートを有効にします。"
 
 # 11289bb8e1584c3d99b1439aaa08a416
-#: ../../flask/docs/installation.rst:44
+#: ../../flask/docs/installation.rst:46
 msgid ""
 "`Watchdog`_ provides a faster, more efficient reloader for the "
 "development server."
 msgstr "`Watchdog`_\\ は、より高速な、より効率的な再読み込み機能（reloader）を開発サーバへ提供します。"
 
 # 154bca3616c54f9ab99cd7d8121c7c8e
-#: ../../flask/docs/installation.rst:53
+#: ../../flask/docs/installation.rst:55
 msgid "Virtual environments"
 msgstr "仮想環境（Virtual environments）"
 
 # bec2422cce4047ed8515d2ac31b3b73f
-#: ../../flask/docs/installation.rst:55
+#: ../../flask/docs/installation.rst:57
 msgid ""
 "Use a virtual environment to manage the dependencies for your project, "
 "both in development and in production."
 msgstr "開発環境と本番環境のどちらでも、自分のプロジェクトの依存対象を管理するためにvirtual environmentを使用します。"
 
 # 449c3cf910494e0fa4e95067b0645a1b
-#: ../../flask/docs/installation.rst:58
+#: ../../flask/docs/installation.rst:60
 msgid ""
 "What problem does a virtual environment solve? The more Python projects "
 "you have, the more likely it is that you need to work with different "
@@ -147,7 +153,7 @@ msgstr ""
 "environmentはどんな問題を解決するのでしょうか？自分のPythonプロジェクトの数が増えるほど、PythonライブラリもしくはPython自身の違うバージョンを使って作業する必要性が増えていきがちです。あるプロジェクト用のより新しいバージョンのライブラリが、他のプロジェクトでの互換性を壊す可能性があります。"
 
 # 09ccdd77eabf485cab8d042088563cb3
-#: ../../flask/docs/installation.rst:63
+#: ../../flask/docs/installation.rst:65
 msgid ""
 "Virtual environments are independent groups of Python libraries, one for "
 "each project. Packages installed for one project will not affect other "
@@ -157,7 +163,7 @@ msgstr ""
 "environmentは、プロジェクトごとに1つ用意する、独立したPythonライブラリのグループです。ひとつのプロジェクト用にインストールされたパッケージは、他のプロジェクトやオペレーティングシステムのパッケージには影響を与えません。"
 
 # 292c7344fc164103861e0d6ee6ee151f
-#: ../../flask/docs/installation.rst:67
+#: ../../flask/docs/installation.rst:69
 msgid ""
 "Python comes bundled with the :mod:`venv` module to create virtual "
 "environments."
@@ -166,57 +172,57 @@ msgstr ""
 "提供されています。"
 
 # 0e7f95f687b14254a38de43d3597a849
-#: ../../flask/docs/installation.rst:74
+#: ../../flask/docs/installation.rst:76
 msgid "Create an environment"
 msgstr "環境の作成"
 
 # ee239683c3304cd6ad01d61ea6e346c0
-#: ../../flask/docs/installation.rst:76
+#: ../../flask/docs/installation.rst:78
 msgid "Create a project folder and a :file:`venv` folder within:"
 msgstr "プロジェクトのフォルダと、その中の\\ :file:`venv`\\ フォルダを作成します。"
 
-#: ../../flask/docs/installation.rst:80 ../../flask/docs/installation.rst:106
+#: ../../flask/docs/installation.rst:82 ../../flask/docs/installation.rst:108
 msgid "macOS/Linux"
 msgstr ""
 
 # 863123a4fe9c4baf9bd727ea0a37502d
 # 6745d1dfe14c442ab033b7aa157ea5c8
 # 0ae70b05b7f24fc8b3a2e103d1a67dd8
-#: ../../flask/docs/installation.rst:88 ../../flask/docs/installation.rst:112
+#: ../../flask/docs/installation.rst:90 ../../flask/docs/installation.rst:114
 msgid "Windows"
 msgstr ""
 
 # ce63e938272446ac94b98b8662a3d529
-#: ../../flask/docs/installation.rst:100
+#: ../../flask/docs/installation.rst:102
 msgid "Activate the environment"
 msgstr "環境を有効化（Activate the environment）"
 
 # 860a08f601df4f378706dd4a3a880be6
-#: ../../flask/docs/installation.rst:102
+#: ../../flask/docs/installation.rst:104
 msgid "Before you work on your project, activate the corresponding environment:"
 msgstr "プロジェクトで作業する前に、対応する環境を有効化（activate）します:"
 
 # 16426b3193204430901979c5edadc436
-#: ../../flask/docs/installation.rst:118
+#: ../../flask/docs/installation.rst:120
 msgid ""
 "Your shell prompt will change to show the name of the activated "
 "environment."
 msgstr "（virtual environmentを有効化すると）有効化された環境の名前を表示するように、プロンプトが変化します。"
 
 # 250e7c8fbcb14e7aa56d7ca105bb3e70
-#: ../../flask/docs/installation.rst:123
+#: ../../flask/docs/installation.rst:125
 msgid "Install Flask"
 msgstr "Flaskのインストール"
 
 # 69d26899c0a5459d9da9f722058cd5aa
-#: ../../flask/docs/installation.rst:125
+#: ../../flask/docs/installation.rst:127
 msgid ""
 "Within the activated environment, use the following command to install "
 "Flask:"
 msgstr "有効化した（仮想）環境の中で、以下のコマンドを使ってFlaskをインストールします:"
 
 # 382bd278f4564330b6dabb344d20ea79
-#: ../../flask/docs/installation.rst:132
+#: ../../flask/docs/installation.rst:134
 msgid ""
 "Flask is now installed. Check out the :doc:`/quickstart` or go to the "
 ":doc:`Documentation Overview </index>`."
@@ -267,7 +273,9 @@ msgstr ""
 #~ "If you are using Python 2, the "
 #~ "venv module is not available. Instead,"
 #~ " install `virtualenv`_."
-#~ msgstr "もしPython 2を使っている場合、venvモジュールが利用できません。代わりに、\\ `virtualenv`_\\ をインストールします。"
+#~ msgstr ""
+#~ "もしPython 2を使っている場合、venvモジュールが利用できません。代わりに、\\ "
+#~ "`virtualenv`_\\ をインストールします。"
 
 # 6ce85be2269a4e67bf5852b9e88c75ea
 #~ msgid "On Linux, virtualenv is provided by your package manager:"

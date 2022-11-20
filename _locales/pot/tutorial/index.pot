@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-21 20:07+0900\n"
+"POT-Creation-Date: 2022-11-20 18:38+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -42,12 +42,15 @@ msgid "While it's designed to give a good starting point, the tutorial doesn't c
 msgstr ""
 
 #: ../../flask/docs/tutorial/index.rst:None
-#: ../../flask/docs/tutorial/index.rst:None
 msgid "screenshot of login page"
 msgstr ""
 
 #: ../../flask/docs/tutorial/index.rst:47
 msgid "Flask is flexible. It doesn't require you to use any particular project or code layout. However, when first starting, it's helpful to use a more structured approach. This means that the tutorial will require a bit of boilerplate up front, but it's done to avoid many common pitfalls that new developers encounter, and it creates a project that's easy to expand on. Once you become more comfortable with Flask, you can step out of this structure and take full advantage of Flask's flexibility."
+msgstr ""
+
+#: ../../flask/docs/tutorial/index.rst:None
+msgid "screenshot of edit page"
 msgstr ""
 
 #: ../../flask/docs/tutorial/index.rst:60

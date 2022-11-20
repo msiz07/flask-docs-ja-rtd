@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-21 20:07+0900\n"
+"POT-Creation-Date: 2022-11-20 18:38+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,595 +17,842 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 
+#: ../../flask/docs/testing.rst:4
+msgid ""
+"Flask provides utilities for testing an application. This documentation "
+"goes over techniques for working with different parts of the application "
+"in tests."
+msgstr ""
+
+#: ../../flask/docs/testing.rst:8
+msgid "We will use the `pytest`_ framework to set up and run our tests."
+msgstr ""
+
+#: ../../flask/docs/testing.rst:16
+#, python-format
+msgid ""
+"The :doc:`tutorial </tutorial/index>` goes over how to write tests for "
+"100% coverage of the sample Flaskr blog application. See :doc:`the "
+"tutorial on tests </tutorial/tests>` for a detailed explanation of "
+"specific tests for an application."
+msgstr ""
+
+#: ../../flask/docs/testing.rst:23
+msgid "Identifying Tests"
+msgstr ""
+
+#: ../../flask/docs/testing.rst:25
+msgid ""
+"Tests are typically located in the ``tests`` folder. Tests are functions "
+"that start with ``test_``, in Python modules that start with ``test_``. "
+"Tests can also be further grouped in classes that start with ``Test``."
+msgstr ""
+
+#: ../../flask/docs/testing.rst:29
+msgid ""
+"It can be difficult to know what to test. Generally, try to test the code"
+" that you write, not the code of libraries that you use, since they are "
+"already tested. Try to extract complex behaviors as separate functions to"
+" test individually."
+msgstr ""
+
+#: ../../flask/docs/testing.rst:36
+msgid "Fixtures"
+msgstr ""
+
+#: ../../flask/docs/testing.rst:38
+msgid ""
+"Pytest *fixtures* allow writing pieces of code that are reusable across "
+"tests. A simple fixture returns a value, but a fixture can also do setup,"
+" yield a value, then do teardown. Fixtures for the application, test "
+"client, and CLI runner are shown below, they can be placed in "
+"``tests/conftest.py``."
+msgstr ""
+
+#: ../../flask/docs/testing.rst:44
+msgid ""
+"If you're using an :doc:`application factory </patterns/appfactories>`, "
+"define an ``app`` fixture to create and configure an app instance. You "
+"can add code before and after the ``yield`` to set up and tear down other"
+" resources, such as creating and clearing a database."
+msgstr ""
+
+#: ../../flask/docs/testing.rst:50
+msgid ""
+"If you're not using a factory, you already have an app object you can "
+"import and configure directly. You can still use an ``app`` fixture to "
+"set up and tear down resources."
+msgstr ""
+
+#: ../../flask/docs/testing.rst:84
+msgid "Sending Requests with the Test Client"
+msgstr ""
+
+#: ../../flask/docs/testing.rst:86
+msgid ""
+"The test client makes requests to the application without running a live "
+"server. Flask's client extends :doc:`Werkzeug's client <werkzeug:test>`, "
+"see those docs for additional information."
+msgstr ""
+
+#: ../../flask/docs/testing.rst:91
+msgid ""
+"The ``client`` has methods that match the common HTTP request methods, "
+"such as ``client.get()`` and ``client.post()``. They take many arguments "
+"for building the request; you can find the full documentation in "
+":class:`~werkzeug.test.EnvironBuilder`. Typically you'll use ``path``, "
+"``query``, ``headers``, and ``data`` or ``json``."
+msgstr ""
+
+#: ../../flask/docs/testing.rst:97
+msgid ""
+"To make a request, call the method the request should use with the path "
+"to the route to test. A :class:`~werkzeug.test.TestResponse` is returned "
+"to examine the response data. It has all the usual properties of a "
+"response object. You'll usually look at ``response.data``, which is the "
+"bytes returned by the view. If you want to use text, Werkzeug 2.1 "
+"provides ``response.text``, or use ``response.get_data(as_text=True)``."
+msgstr ""
+
+#: ../../flask/docs/testing.rst:111
+msgid ""
+"Pass a dict ``query={\"key\": \"value\", ...}`` to set arguments in the "
+"query string (after the ``?`` in the URL). Pass a dict ``headers={}`` to "
+"set request headers."
+msgstr ""
+
+#: ../../flask/docs/testing.rst:115
+msgid ""
+"To send a request body in a POST or PUT request, pass a value to "
+"``data``. If raw bytes are passed, that exact body is used. Usually, "
+"you'll pass a dict to set form data."
+msgstr ""
+
+#: ../../flask/docs/testing.rst:121
+msgid "Form Data"
+msgstr ""
+
+#: ../../flask/docs/testing.rst:123
+msgid ""
+"To send form data, pass a dict to ``data``. The ``Content-Type`` header "
+"will be set to ``multipart/form-data`` or ``application/x-www-form-"
+"urlencoded`` automatically."
+msgstr ""
+
+#: ../../flask/docs/testing.rst:127
+msgid ""
+"If a value is a file object opened for reading bytes (``\"rb\"`` mode), "
+"it will be treated as an uploaded file. To change the detected filename "
+"and content type, pass a ``(file, filename, content_type)`` tuple. File "
+"objects will be closed after making the request, so they do not need to "
+"use the usual ``with open() as f:`` pattern."
+msgstr ""
+
+#: ../../flask/docs/testing.rst:133
+msgid ""
+"It can be useful to store files in a ``tests/resources`` folder, then use"
+" ``pathlib.Path`` to get files relative to the current test file."
+msgstr ""
+
+#: ../../flask/docs/testing.rst:153
+msgid "JSON Data"
+msgstr ""
+
+#: ../../flask/docs/testing.rst:155
+msgid ""
+"To send JSON data, pass an object to ``json``. The ``Content-Type`` "
+"header will be set to ``application/json`` automatically."
+msgstr ""
+
+#: ../../flask/docs/testing.rst:158
+msgid ""
+"Similarly, if the response contains JSON data, the ``response.json`` "
+"attribute will contain the deserialized object."
+msgstr ""
+
+#: ../../flask/docs/testing.rst:180
+msgid "Following Redirects"
+msgstr ""
+
+#: ../../flask/docs/testing.rst:182
+msgid ""
+"By default, the client does not make additional requests if the response "
+"is a redirect. By passing ``follow_redirects=True`` to a request method, "
+"the client will continue to make requests until a non-redirect response "
+"is returned."
+msgstr ""
+
+#: ../../flask/docs/testing.rst:187
+msgid ""
+":attr:`TestResponse.history <werkzeug.test.TestResponse.history>` is a "
+"tuple of the responses that led up to the final response. Each response "
+"has a :attr:`~werkzeug.test.TestResponse.request` attribute which records"
+" the request that produced that response."
+msgstr ""
+
+#: ../../flask/docs/testing.rst:205
+msgid ""
+"To access Flask's context variables, mainly :data:`~flask.session`, use "
+"the client in a ``with`` statement. The app and request context will "
+"remain active *after* making a request, until the ``with`` block ends."
+msgstr ""
+
+#: ../../flask/docs/testing.rst:222
+msgid ""
+"If you want to access or set a value in the session *before* making a "
+"request, use the client's "
+":meth:`~flask.testing.FlaskClient.session_transaction` method in a "
+"``with`` statement. It returns a session object, and will save the "
+"session once the block ends."
+msgstr ""
+
+#: ../../flask/docs/testing.rst:246
+msgid "Running Commands with the CLI Runner"
+msgstr ""
+
+#: ../../flask/docs/testing.rst:248
+msgid ""
+"Flask provides :meth:`~flask.Flask.test_cli_runner` to create a "
+":class:`~flask.testing.FlaskCliRunner`, which runs CLI commands in "
+"isolation and captures the output in a :class:`~click.testing.Result` "
+"object. Flask's runner extends :doc:`Click's runner <click:testing>`, see"
+" those docs for additional information."
+msgstr ""
+
+#: ../../flask/docs/testing.rst:254
+msgid ""
+"Use the runner's :meth:`~flask.testing.FlaskCliRunner.invoke` method to "
+"call commands in the same way they would be called with the ``flask`` "
+"command from the command line."
+msgstr ""
+
+#: ../../flask/docs/testing.rst:276
+msgid "Tests that depend on an Active Context"
+msgstr ""
+
+#: ../../flask/docs/testing.rst:278
+msgid ""
+"You may have functions that are called from views or commands, that "
+"expect an active :doc:`application context </appcontext>` or "
+":doc:`request context  </reqcontext>` because they access ``request``, "
+"``session``, or ``current_app``. Rather than testing them by making a "
+"request or invoking the command, you can create and activate a context "
+"directly."
+msgstr ""
+
+#: ../../flask/docs/testing.rst:285
+msgid ""
+"Use ``with app.app_context()`` to push an application context. For "
+"example, database extensions usually require an active app context to "
+"make queries."
+msgstr ""
+
+#: ../../flask/docs/testing.rst:295
+msgid ""
+"Use ``with app.test_request_context()`` to push a request context. It "
+"takes the same arguments as the test client's request methods."
+msgstr ""
+
+#: ../../flask/docs/testing.rst:309
+msgid ""
+"Creating a test request context doesn't run any of the Flask dispatching "
+"code, so ``before_request`` functions are not called. If you need to call"
+" these, usually it's better to make a full request instead. However, it's"
+" possible to call them manually."
+msgstr ""
+
 # c3aaedfb657f4184886111da24a85674
 #: ../../flask/docs/testing.rst:2
 msgid "Testing Flask Applications"
 msgstr "Flaskアプリケーションのテスト"
 
-# 8e55faec19cc40c98568e6e0d4cb51cd
-#: ../../flask/docs/testing.rst:4
-msgid "**Something that is untested is broken.**"
-msgstr "**テストされていないものは壊れる**"
-
-# ed7211219f1849c3a07f657229456efb
-#: ../../flask/docs/testing.rst:6
-msgid ""
-"The origin of this quote is unknown and while it is not entirely correct,"
-" it is also not far from the truth.  Untested applications make it hard "
-"to improve existing code and developers of untested applications tend to "
-"become pretty paranoid.  If an application has automated tests, you can "
-"safely make changes and instantly know if anything breaks."
-msgstr ""
-"この言葉の源は不明であり、そして完全に正しいわけではないですが、それでも"
-"真実からかけ離れているわけではありません。テストされていないアプリケーション"
-"は、存在するコードを改善することが難しく、テストされていないアプリケーション"
-"の開発者は極端な偏執症になりがちです（訳注: 変更を極端に避けようとする姿勢を"
-"指していると思います）。もしアプリケーションの自動テストがあれば、安全に変更"
-"することができ、もしも何かしら壊れた場合には即座に分かるようになります。"
-
-# 0b3f3f01f63e453c8e960997934c0f2d
-#: ../../flask/docs/testing.rst:12
-msgid ""
-"Flask provides a way to test your application by exposing the Werkzeug "
-"test :class:`~werkzeug.test.Client` and handling the context locals for "
-"you. You can then use that with your favourite testing solution."
-msgstr ""
-"Flaskは、Werkzeugのテスト用\ :class:`~werkzeug.test.Client`\ を使えるように"
-"することによって、さらにcontext localsを操作することによって、自分のアプリ"
-"ケーションをテストする方法を提供します。そして、あなたはそれらを自分の好きな"
-"テスト用のソリューションと一緒に使うことができます。"
-
-# 0821ca25bc9549b7ad200a60e64732a6
-#: ../../flask/docs/testing.rst:16
-msgid ""
-"In this documentation we will use the `pytest`_ package as the base "
-"framework for our tests. You can install it with ``pip``, like so::"
-msgstr ""
-"このドキュメントでは、テスト用の基盤となるフレームワークとして\ `pytest`_\ "
-"パッケージを使用していきます。以下のように、\ ``pip``\ を使ってそれを"
-"インストールできます::"
-
-# 988d9dd986804160883bfdf5bc27d428
-#: ../../flask/docs/testing.rst:24
-msgid "The Application"
-msgstr "アプリケーション"
-
-# 59e998245baf42fb99967815c0dbf3e0
-#: ../../flask/docs/testing.rst:26
-msgid ""
-"First, we need an application to test; we will use the application from "
-"the :doc:`tutorial/index`. If you don't have that application yet, get "
-"the source code from :gh:`the examples <examples/tutorial>`."
-msgstr ""
-"第一に、アプリケーションをテストする必要があります; この文書では、:doc:"
-"`tutorial/index` のアプリケーションを使用していきます。もしもそのアプリ"
-"ケーションをまだ持っていない場合、:gh:`チュートリアルの例 "
-"<examples/tutorial>` からソースコードを取得してください。"
-
-#: ../../flask/docs/testing.rst:30
-msgid ""
-"So that we can import the module ``flaskr`` correctly, we need to run "
-"``pip install -e .`` in the folder ``tutorial``."
-msgstr ""
-
-# 8c3be563660b4374bc8952b5cf42b6cf
-#: ../../flask/docs/testing.rst:34
-msgid "The Testing Skeleton"
-msgstr "テストの骨組（The Testing Skeleton）"
-
-# d96bbd0aff7948d28f03e523e6cce329
-#: ../../flask/docs/testing.rst:36
-msgid ""
-"We begin by adding a tests directory under the application root.  Then "
-"create a Python file to store our tests (:file:`test_flaskr.py`). When we"
-" format the filename like ``test_*.py``, it will be auto-discoverable by "
-"pytest."
-msgstr ""
-"ここでは、アプリケーションのルートの下にtestsディレクトリを加えることから"
-"始めます。それから、テストを格納するPythonファイル（\ :file:`test_flaskr.py`\ ）"
-"を作成します。ファイル名を\ ``test_*.py``\ のような形式にしたときは、その"
-"ファイルはpytestによって自動的に見つけ出されます。"
-
-# fcae897741d846988bb6847f2369f063
-#: ../../flask/docs/testing.rst:41
-msgid ""
-"Next, we create a `pytest fixture`_ called :func:`client` that configures"
-" the application for testing and initializes a new database::"
-msgstr ""
-"次に、テスト用にアプリケーションを設定し、新しいデータベースを初期化する、"
-"\ :func:`client`\ と呼ばれる（訳注: 以下の例で「client」という名前で定義"
-"されていることを指しています）\ `pytestのfixture`_\ を作成します::"
-"
-"
-
-# cd7d1f75c08c477a8cc88dd56cc0c756
-#: ../../flask/docs/testing.rst:66
-msgid ""
-"This client fixture will be called by each individual test.  It gives us "
-"a simple interface to the application, where we can trigger test requests"
-" to the application.  The client will also keep track of cookies for us."
-msgstr ""
-"このclientのfixtureは、個別のテストそれぞれから呼び出されます。そのfixture"
-"は、アプリケーションへのテスト用のリクエストを引き起こせるようにする、"
-"アプリケーションへのシンプルなインタフェースを供給します。そのclientは、"
-"cookieの経過も追跡します。"
-
-# a2446a7a42e24406968189aaf6284585
-#: ../../flask/docs/testing.rst:70
-msgid ""
-"During setup, the ``TESTING`` config flag is activated.  What this does "
-"is disable error catching during request handling, so that you get better"
-" error reports when performing test requests against the application."
-msgstr ""
-"setupの間、\ ``TESTING``\ 設定フラグ（訳注: flask.Configオブジェクトで"
-"TESTINGキーで設定される情報で、直前のコード例でapp.config['TESTING']と"
-"して操作している箇所）が有効化されます。これは、リクエストの処理中に"
-"エラーを捕捉しないようにすることで、アプリケーションに対するテスト用の"
-"リクエストを実施するときに、より良いエラーのレポートを得られるように"
-"します。"
-
-# d2ed250cb0ae42e29028abd91d628be6
-#: ../../flask/docs/testing.rst:75
-msgid ""
-"Because SQLite3 is filesystem-based, we can easily use the "
-":mod:`tempfile` module to create a temporary database and initialize it. "
-"The :func:`~tempfile.mkstemp` function does two things for us: it returns"
-" a low-level file handle and a random file name, the latter we use as "
-"database name.  We just have to keep the `db_fd` around so that we can "
-"use the :func:`os.close` function to close the file."
-msgstr ""
-"SQLite3はファイルシステムをベースにしているため（訳注: データをローカルの"
-"ファイルとして保存し、データベースへのアクセスにネットワーク越しのサーバ"
-"へのアクセスなどを必要としないことが、ここではポイントになります）、\ "
-":mod:`tempfile`\ モジュールを使用して、容易に一時的なデータベースを作成して"
-"初期化できます。\ :func:`~tempfile.mkstemp`\ 関数は2つのことを行います: "
-"低レベルでのファイル処理用ハンドルと、後でデータベース名として使用できる"
-"ランダムなファイル名を返します。\ `db_fd`\ （訳注: 直前のコード例にあるdb_fd"
-"変数のことで、mkstempで作成したファイル処理用ハンドルを格納します）だけ保持"
-"していれば、\ :func:`os.close`\ 関数を使ってそのファイルを閉じることが可能"
-"です。"
-
-# 34638897cfae4ff7ab9d4842326b8e90
-#: ../../flask/docs/testing.rst:82
-msgid ""
-"To delete the database after the test, the fixture closes the file and "
-"removes it from the filesystem."
-msgstr ""
-"テストの後にテスト用のデータベースを消去するために、fixtureはそのファイルを"
-"閉じて、ファイルシステムからそのファイルを削除します。"
-
-# c66e4e79eda14bd1a2d94b1b21acd1f2
-#: ../../flask/docs/testing.rst:85
-msgid "If we now run the test suite, we should see the following output::"
-msgstr ""
-"この時点でテスト一式を実行した場合、以下のような出力を確認できるはずです::"
-
-# 32e2002380c8407fb2f75abe6def9bdb
-#: ../../flask/docs/testing.rst:95
-msgid ""
-"Even though it did not run any actual tests, we already know that our "
-"``flaskr`` application is syntactically valid, otherwise the import would"
-" have died with an exception."
-msgstr ""
-"たとえ実際のテストは何も実行していないとしても、この時点で\ ``flaskr``\ "
-"アプリケーションは文法的に正当であることが分かり、そうでなければ（pytestの"
-"実行のとき）importが例外により異常終了します。"
-
-# c6df2e68bcd045b2a6c2251704a87906
-#: ../../flask/docs/testing.rst:103
-msgid "The First Test"
-msgstr "最初のテスト"
-
-# c742b5cd7dcc461ca5bffa4892af242a
-#: ../../flask/docs/testing.rst:105
-msgid ""
-"Now it's time to start testing the functionality of the application. "
-"Let's check that the application shows \"No entries here so far\" if we "
-"access the root of the application (``/``).  To do this, we add a new "
-"test function to :file:`test_flaskr.py`, like this::"
-msgstr ""
-"ここまできたら、アプリケーションの機能のテストを始めるときです。もしも"
-"アプリケーションのルート（\ ``/``\ ）へアクセスした場合に「No entries "
-"here so far」をアプリケーションが表示するかチェックしましょう。これを"
-"行うために、以下のように、\ :file:`test_flaskr.py`\ へ新しいテスト関数"
-"を追加します::"
-
-# f258bc2b61814f04a64cc82fc9be7a45
-#: ../../flask/docs/testing.rst:116
-msgid ""
-"Notice that our test functions begin with the word `test`; this allows "
-"`pytest`_ to automatically identify the function as a test to run."
-msgstr ""
-"テスト関数は\ `test`\ 文字列から始めることに注意してください; これは、\ "
-"`pytest`_\ がその関数を実行すべきテストだと自動的に特定できるように"
-"します。"
-
-# 46a4bba534e54dbe883c414b81ff97f8
-#: ../../flask/docs/testing.rst:119
-msgid ""
-"By using ``client.get`` we can send an HTTP ``GET`` request to the "
-"application with the given path.  The return value will be a "
-":class:`~flask.Flask.response_class` object. We can now use the "
-":attr:`~werkzeug.wrappers.Response.data` attribute to inspect the return "
-"value (as string) from the application. In this case, we ensure that "
-"``'No entries here so far'`` is part of the output."
-msgstr ""
-"``client.get`` を使用することで、（引数で）与えられたパスを伴ったHTTPの "
-"``GET`` リクエストをアプリケーションに送ることができます。その戻り値は "
-":class:`~flask.Flask.response_class` オブジェクトになります。それから、"
-":attr:`~werkzeug.wrappers.Response.data` 属性を使ってアプリケーションから"
-"の戻り値を（文字列として）調べることができます。このケースでは、``「No "
-"entries here so far」`` が出力の一部であることを確認します。"
-
-# 7087afbc31364cf9b5d99a16bdc75af9
-#: ../../flask/docs/testing.rst:127
-msgid "Run it again and you should see one passing test::"
-msgstr ""
-"（pytestを）再実行すると、1つテストをパスしたことを確認できるはずです::"
-
-# 35b4dcf1850147849e77c61b425f9138
-#: ../../flask/docs/testing.rst:140
-msgid "Logging In and Out"
-msgstr "ログインとログアウト"
-
-# c5086af938a24dd0a749fb59b8c3fc30
-#: ../../flask/docs/testing.rst:142
-msgid ""
-"The majority of the functionality of our application is only available "
-"for the administrative user, so we need a way to log our test client in "
-"and out of the application.  To do this, we fire some requests to the "
-"login and logout pages with the required form data (username and "
-"password).  And because the login and logout pages redirect, we tell the "
-"client to `follow_redirects`."
-msgstr ""
-"今回のアプリケーションでの主要な機能は、管理者ユーザだけが利用可能になって"
-"いるため、テスト用のclientがアプリケーションに対してログインおよびログアウト"
-"する方法が必要になります。これを行うために、必要なformデータ（ユーザ名と"
-"パスワード）を使ってログインおよびログアウトのページへのリクエストを起こし"
-"ます。さらにログインおよびログアウトのページは転送（redirect）されるもの"
-"なので、clientに対して\ `follow_redirects`\ を指示します（訳注: 以下のコード"
-"例のように、client.postおよびclient.getにfollow_redirectsのキーワード引数を"
-"渡すことを指しています）。"
-
-# 22fd3bc6c5134d4f824feabffa57287a
-#: ../../flask/docs/testing.rst:148
-msgid "Add the following two functions to your :file:`test_flaskr.py` file::"
-msgstr "以下の2つの関数を\ :file:`test_flaskr.py`\ ファイルへ追加します::"
-
-# ec1d1a72300248bd81793c2c4af485f9
-#: ../../flask/docs/testing.rst:160
-msgid ""
-"Now we can easily test that logging in and out works and that it fails "
-"with invalid credentials.  Add this new test function::"
-msgstr ""
-"この時点で、ログインとログアウトが機能し、不正な認証情報（credentials）"
-"では（ログインに）失敗することを容易にテストできます。以下の新しい関数を"
-"（test_flaskr.pyに）追加します::"
-
-# 3766274a5fb048c383e74fc0a49aad01
-#: ../../flask/docs/testing.rst:182
-msgid "Test Adding Messages"
-msgstr "メッセージ追加のテスト"
-
-# 919d5db046de4fef8278c80b7064e177
-#: ../../flask/docs/testing.rst:184
-msgid ""
-"We should also test that adding messages works.  Add a new test function "
-"like this::"
-msgstr ""
-"メッセージ追加が機能することもテストするべきです。以下のように新しい関数を"
-"追加します::"
-
-# 0352f8d0d0994621bfa2684ed91c3f90
-#: ../../flask/docs/testing.rst:199
-msgid ""
-"Here we check that HTML is allowed in the text but not in the title, "
-"which is the intended behavior."
-msgstr ""
-"ここでは、HTMLがテキストでは許されていながら、タイトルでは許されていない"
-"という、意図している振舞をチェックします。"
-
-# adbf2e3b914a433fb7cefd727dbd9971
-#: ../../flask/docs/testing.rst:202
-msgid "Running that should now give us three passing tests::"
-msgstr ""
-"これを（pytestで）実行すると、3つのテストがパスすることを示すはずです::"
-
-# 7d299dfaae634433ad28048050e7a410
-#: ../../flask/docs/testing.rst:218
-msgid "Other Testing Tricks"
-msgstr "その他のテスト用のしかけ（Other Tesing Tricks）"
-
-# 7799974b122e4888aca7fbbf0b126654
-#: ../../flask/docs/testing.rst:220
-msgid ""
-"Besides using the test client as shown above, there is also the "
-":meth:`~flask.Flask.test_request_context` method that can be used in "
-"combination with the ``with`` statement to activate a request context "
-"temporarily.  With this you can access the :class:`~flask.request`, "
-":class:`~flask.g` and :class:`~flask.session` objects like in view "
-"functions.  Here is a full example that demonstrates this approach::"
-msgstr ""
-"ここまでに示したテスト用clientを使う他に、request contextを一時的に"
-"有効にするには、with文と組み合わせて使用できる\ :meth:"
-"`~flask.Flask.test_request_context`\ メソッドもあります。これを使うと"
-"\ :class:`~flask.request`, :class:`~flask.g`, :class:`~flask.session`\ "
-"オブジェクトへview関数のようにアクセスできるようになります。以下は、この"
-"アプローチを実演（demonstrates）する一通り不足のない例になります::"
-
-# baacac7b7b824efd9d3ae4448182b970
-#: ../../flask/docs/testing.rst:235
-msgid "All the other objects that are context bound can be used in the same way."
-msgstr ""
-"contextに結び付けられた（bound）その他の全てのオブジェクトを同じやり方で"
-"使用できます。"
-
-# 75d81349995141fdaa4d2bb617ebb9a7
-#: ../../flask/docs/testing.rst:238
-msgid ""
-"If you want to test your application with different configurations and "
-"there does not seem to be a good way to do that, consider switching to "
-"application factories (see :doc:`patterns/appfactories`)."
-msgstr ""
-"もしも自分のアプリケーションを異なる設定でテストしたいにもかかわらず、"
-"相応しいやり方が見つからない場合、application factory（:doc:"
-"`patterns/appfactories` を確認してください）へ切り替えることを検討して"
-"ください。"
-
-# 63fb622b61014997b15ad0c98c395bb6
-#: ../../flask/docs/testing.rst:242
-msgid ""
-"Note however that if you are using a test request context, the "
-":meth:`~flask.Flask.before_request` and "
-":meth:`~flask.Flask.after_request` functions are not called "
-"automatically.  However :meth:`~flask.Flask.teardown_request` functions "
-"are indeed executed when the test request context leaves the ``with`` "
-"block.  If you do want the :meth:`~flask.Flask.before_request` functions "
-"to be called as well, you need to call "
-":meth:`~flask.Flask.preprocess_request` yourself::"
-msgstr ""
-"しかしながら、もしもテスト用のrequest contextを使用している場合は、\ "
-":meth:`~flask.Flask.before_request`\ と\ :meth:`~flask.Flask.after_request`\ "
-"関数が自動的には呼び出されないことに注意してください。しかしながら、"
-"テスト用のrequest contextが\ ``with``\ ブロックを去るときに、\ :meth:"
-"`~flask.Flask.teardown_request`\ 関数は実際には実行されます。もしも\ "
-":meth:`~flask.Flask.before_request`\ 関数も同様に呼び出されるようにしたい"
-"場合は、自分で\ :meth:`~flask.Flask.preprocess_request`\ を呼び出す必要が"
-"あります::"
-
-# 03109b4a3e974e32bef7b7c9619d3783
-#: ../../flask/docs/testing.rst:256
-msgid ""
-"This can be necessary to open database connections or something similar "
-"depending on how your application was designed."
-msgstr ""
-"これは、自分のアプリケーションの設計によっては、データベース接続または"
-"似たような何かを開くために必要になる可能性があります。"
-
-# 91b43cd5c0a74bcfbc9a0565fb2e6277
-#: ../../flask/docs/testing.rst:259
-msgid ""
-"If you want to call the :meth:`~flask.Flask.after_request` functions you "
-"need to call into :meth:`~flask.Flask.process_response` which however "
-"requires that you pass it a response object::"
-msgstr ""
-"もしも\ :meth:`~flask.Flask.after_request`\ 関数を呼び出したい場合は、"
-"呼び出すときにresponseオブジェクトを渡す必要がある\ :meth:"
-"`~flask.Flask.process_response`\ を経由する必要があります::"
-
-# f074ae1fa0b947d8ba0c8e1b85c45fe5
-#: ../../flask/docs/testing.rst:270
-msgid ""
-"This in general is less useful because at that point you can directly "
-"start using the test client."
-msgstr ""
-"その時点ではテスト用clientを使用して直接開始できるため、これは概してあまり"
-"便利ではありません。"
-
-# 69673f08ac7143368eb3a8ae7155fd81
-#: ../../flask/docs/testing.rst:276
-msgid "Faking Resources and Context"
-msgstr "リソースおよびコンテキストの模倣（Faking Resources and Context）"
-
-# 246cbb9c797142bf8e9825903bebda89
-#: ../../flask/docs/testing.rst:280
-msgid ""
-"A very common pattern is to store user authorization information and "
-"database connections on the application context or the :attr:`flask.g` "
-"object.  The general pattern for this is to put the object on there on "
-"first usage and then to remove it on a teardown.  Imagine for instance "
-"this code to get the current user::"
-msgstr ""
-"ユーザ認証情報とデータベース接続（database connections）をapplication "
-"contextまたは\ :attr:`flask.g`\ オブジェクトへ格納することは、よくある"
-"パターンになります。これに対する一般的なパターンは、オブジェクトを最初に"
-"使用するときにそれ（application contextまたはflask.gオブジェクト）に"
-"置き、（リクエストやapplication contextなどを）取り壊すときにそれ（認証"
-"情報など）を削除することです。例えば、そのときのユーザを取得するための"
-"以下のコードを想像してください::"
-
-# cebcba7c50dc49fcba3af6c22151bd1f
-#: ../../flask/docs/testing.rst:293
-msgid ""
-"For a test it would be nice to override this user from the outside "
-"without having to change some code.  This can be accomplished with "
-"hooking the :data:`flask.appcontext_pushed` signal::"
-msgstr ""
-"テストのためには、コードを変更することなくこのユーザを外側から上書き"
-"できるとうれしいでしょう。これは、\ :data:`flask.appcontext_pushed`\ "
-"シグナルをフックすることで達成可能です::"
-
-# d75cb0a5e3364108adb964b11479948b
-#: ../../flask/docs/testing.rst:307
-msgid "And then to use it::"
-msgstr ""
-"それから、（以下のように）それ（appcontext_pushedをフックする処理）を"
-"使用します::"
-
-# 9ebd5477775040ba826060299d66ddaa
-#: ../../flask/docs/testing.rst:323
-msgid "Keeping the Context Around"
-msgstr "コンテキストの保持（Keeping the Context Around）"
-
-# 41074ce7c7b946988a9b377838322240
-#: ../../flask/docs/testing.rst:327
-msgid ""
-"Sometimes it is helpful to trigger a regular request but still keep the "
-"context around for a little longer so that additional introspection can "
-"happen.  With Flask 0.4 this is possible by using the "
-":meth:`~flask.Flask.test_client` with a ``with`` block::"
-msgstr ""
-"ときには通常のリクエストを引き起こしながら、より多く調査できるように"
-"するため（so that additional introspection can happen）に、少し長い間"
-"コンテキストを保持できると役立ちます。Flask 0.4では、\ ``with``\ "
-"ブロックと一緒に\ :meth:`~flask.Flask.test_client`\ を使うことで可能"
-"です::"
-
-# de9c6557b579456a80ae06b7609d66bc
-#: ../../flask/docs/testing.rst:338
-msgid ""
-"If you were to use just the :meth:`~flask.Flask.test_client` without the "
-"``with`` block, the ``assert`` would fail with an error because `request`"
-" is no longer available (because you are trying to use it outside of the "
-"actual request)."
-msgstr ""
-"もしも\ ``with``\ ブロックを伴わずに\ :meth:`~flask.Flask.test_client`\ "
-"だけを使用した場合、（実際のリクエストの外側で使用しようとしているため）"
-"もはや\ `request`\ が利用できないために\ ``assert``\ がエラーを伴って"
-"失敗するでしょう。"
-
 # 262bfb979b194173810f94038be60a33
-#: ../../flask/docs/testing.rst:345
-msgid "Accessing and Modifying Sessions"
+#: ../../flask/docs/testing.rst:203
+#, fuzzy
+#| msgid "Accessing and Modifying Sessions"
+msgid "Accessing and Modifying the Session"
 msgstr "セッションに対するアクセスと変更"
 
+# 8e55faec19cc40c98568e6e0d4cb51cd
+#~ msgid "**Something that is untested is broken.**"
+#~ msgstr "**テストされていないものは壊れる**"
+
+# ed7211219f1849c3a07f657229456efb
+#~ msgid ""
+#~ "The origin of this quote is "
+#~ "unknown and while it is not "
+#~ "entirely correct, it is also not "
+#~ "far from the truth.  Untested "
+#~ "applications make it hard to improve "
+#~ "existing code and developers of untested"
+#~ " applications tend to become pretty "
+#~ "paranoid.  If an application has "
+#~ "automated tests, you can safely make "
+#~ "changes and instantly know if anything"
+#~ " breaks."
+#~ msgstr ""
+#~ "この言葉の源は不明であり、そして完全に正しいわけではないですが、それでも真実からかけ離れているわけではありません。テストされていないアプリケーションは、存在するコードを改善することが難しく、テストされていないアプリケーションの開発者は極端な偏執症になりがちです（訳注:"
+#~ " "
+#~ "変更を極端に避けようとする姿勢を指していると思います）。もしアプリケーションの自動テストがあれば、安全に変更することができ、もしも何かしら壊れた場合には即座に分かるようになります。"
+
+# 0b3f3f01f63e453c8e960997934c0f2d
+#~ msgid ""
+#~ "Flask provides a way to test your"
+#~ " application by exposing the Werkzeug "
+#~ "test :class:`~werkzeug.test.Client` and handling "
+#~ "the context locals for you. You "
+#~ "can then use that with your "
+#~ "favourite testing solution."
+#~ msgstr ""
+#~ "Flaskは、Werkzeugのテスト用\\ :class:`~werkzeug.test.Client`\\ "
+#~ "を使えるようにすることによって、さらにcontext "
+#~ "localsを操作することによって、自分のアプリケーションをテストする方法を提供します。そして、あなたはそれらを自分の好きなテスト用のソリューションと一緒に使うことができます。"
+
+# 0821ca25bc9549b7ad200a60e64732a6
+#~ msgid ""
+#~ "In this documentation we will use "
+#~ "the `pytest`_ package as the base "
+#~ "framework for our tests. You can "
+#~ "install it with ``pip``, like so::"
+#~ msgstr ""
+#~ "このドキュメントでは、テスト用の基盤となるフレームワークとして\\ `pytest`_\\ "
+#~ "パッケージを使用していきます。以下のように、\\ ``pip``\\ を使ってそれをインストールできます::"
+
+# 988d9dd986804160883bfdf5bc27d428
+#~ msgid "The Application"
+#~ msgstr "アプリケーション"
+
+# 59e998245baf42fb99967815c0dbf3e0
+#~ msgid ""
+#~ "First, we need an application to "
+#~ "test; we will use the application "
+#~ "from the :doc:`tutorial/index`. If you "
+#~ "don't have that application yet, get "
+#~ "the source code from :gh:`the examples"
+#~ " <examples/tutorial>`."
+#~ msgstr ""
+#~ "第一に、アプリケーションをテストする必要があります; この文書では、:doc:`tutorial/index` "
+#~ "のアプリケーションを使用していきます。もしもそのアプリケーションをまだ持っていない場合、:gh:`チュートリアルの例 "
+#~ "<examples/tutorial>` からソースコードを取得してください。"
+
+#~ msgid ""
+#~ "So that we can import the module"
+#~ " ``flaskr`` correctly, we need to run"
+#~ " ``pip install -e .`` in the "
+#~ "folder ``tutorial``."
+#~ msgstr ""
+
+# 8c3be563660b4374bc8952b5cf42b6cf
+#~ msgid "The Testing Skeleton"
+#~ msgstr "テストの骨組（The Testing Skeleton）"
+
+# d96bbd0aff7948d28f03e523e6cce329
+#~ msgid ""
+#~ "We begin by adding a tests "
+#~ "directory under the application root.  "
+#~ "Then create a Python file to store"
+#~ " our tests (:file:`test_flaskr.py`). When "
+#~ "we format the filename like "
+#~ "``test_*.py``, it will be auto-"
+#~ "discoverable by pytest."
+#~ msgstr ""
+#~ "ここでは、アプリケーションのルートの下にtestsディレクトリを加えることから始めます。それから、テストを格納するPythonファイル（\\"
+#~ " :file:`test_flaskr.py`\\ ）を作成します。ファイル名を\\ "
+#~ "``test_*.py``\\ のような形式にしたときは、そのファイルはpytestによって自動的に見つけ出されます。"
+
+# fcae897741d846988bb6847f2369f063
+#~ msgid ""
+#~ "Next, we create a `pytest fixture`_ "
+#~ "called :func:`client` that configures the "
+#~ "application for testing and initializes "
+#~ "a new database::"
+#~ msgstr ""
+#~ "次に、テスト用にアプリケーションを設定し、新しいデータベースを初期化する、\\ :func:`client`\\ "
+#~ "と呼ばれる（訳注: 以下の例で「client」という名前で定義されていることを指しています）\\ "
+#~ "`pytestのfixture`_\\ を作成します::"
+
+# cd7d1f75c08c477a8cc88dd56cc0c756
+#~ msgid ""
+#~ "This client fixture will be called "
+#~ "by each individual test.  It gives "
+#~ "us a simple interface to the "
+#~ "application, where we can trigger test"
+#~ " requests to the application.  The "
+#~ "client will also keep track of "
+#~ "cookies for us."
+#~ msgstr "このclientのfixtureは、個別のテストそれぞれから呼び出されます。そのfixtureは、アプリケーションへのテスト用のリクエストを引き起こせるようにする、アプリケーションへのシンプルなインタフェースを供給します。そのclientは、cookieの経過も追跡します。"
+
+# a2446a7a42e24406968189aaf6284585
+#~ msgid ""
+#~ "During setup, the ``TESTING`` config "
+#~ "flag is activated.  What this does "
+#~ "is disable error catching during request"
+#~ " handling, so that you get better "
+#~ "error reports when performing test "
+#~ "requests against the application."
+#~ msgstr ""
+#~ "setupの間、\\ ``TESTING``\\ 設定フラグ（訳注: "
+#~ "flask.ConfigオブジェクトでTESTINGキーで設定される情報で、直前のコード例でapp.config['TESTING']として操作している箇所）が有効化されます。これは、リクエストの処理中にエラーを捕捉しないようにすることで、アプリケーションに対するテスト用のリクエストを実施するときに、より良いエラーのレポートを得られるようにします。"
+
+# d2ed250cb0ae42e29028abd91d628be6
+#~ msgid ""
+#~ "Because SQLite3 is filesystem-based, we"
+#~ " can easily use the :mod:`tempfile` "
+#~ "module to create a temporary database"
+#~ " and initialize it. The "
+#~ ":func:`~tempfile.mkstemp` function does two "
+#~ "things for us: it returns a "
+#~ "low-level file handle and a random"
+#~ " file name, the latter we use "
+#~ "as database name.  We just have to"
+#~ " keep the `db_fd` around so that "
+#~ "we can use the :func:`os.close` function"
+#~ " to close the file."
+#~ msgstr ""
+#~ "SQLite3はファイルシステムをベースにしているため（訳注: "
+#~ "データをローカルのファイルとして保存し、データベースへのアクセスにネットワーク越しのサーバへのアクセスなどを必要としないことが、ここではポイントになります）、\\"
+#~ " :mod:`tempfile`\\ モジュールを使用して、容易に一時的なデータベースを作成して初期化できます。\\"
+#~ " :func:`~tempfile.mkstemp`\\ 関数は2つのことを行います: "
+#~ "低レベルでのファイル処理用ハンドルと、後でデータベース名として使用できるランダムなファイル名を返します。\\ `db_fd`\\"
+#~ " （訳注: "
+#~ "直前のコード例にあるdb_fd変数のことで、mkstempで作成したファイル処理用ハンドルを格納します）だけ保持していれば、\\ "
+#~ ":func:`os.close`\\ 関数を使ってそのファイルを閉じることが可能です。"
+
+# 34638897cfae4ff7ab9d4842326b8e90
+#~ msgid ""
+#~ "To delete the database after the "
+#~ "test, the fixture closes the file "
+#~ "and removes it from the filesystem."
+#~ msgstr "テストの後にテスト用のデータベースを消去するために、fixtureはそのファイルを閉じて、ファイルシステムからそのファイルを削除します。"
+
+# c66e4e79eda14bd1a2d94b1b21acd1f2
+#~ msgid "If we now run the test suite, we should see the following output::"
+#~ msgstr "この時点でテスト一式を実行した場合、以下のような出力を確認できるはずです::"
+
+# 32e2002380c8407fb2f75abe6def9bdb
+#~ msgid ""
+#~ "Even though it did not run any "
+#~ "actual tests, we already know that "
+#~ "our ``flaskr`` application is syntactically"
+#~ " valid, otherwise the import would "
+#~ "have died with an exception."
+#~ msgstr ""
+#~ "たとえ実際のテストは何も実行していないとしても、この時点で\\ ``flaskr``\\ "
+#~ "アプリケーションは文法的に正当であることが分かり、そうでなければ（pytestの実行のとき）importが例外により異常終了します。"
+
+# c6df2e68bcd045b2a6c2251704a87906
+#~ msgid "The First Test"
+#~ msgstr "最初のテスト"
+
+# c742b5cd7dcc461ca5bffa4892af242a
+#~ msgid ""
+#~ "Now it's time to start testing the"
+#~ " functionality of the application. Let's"
+#~ " check that the application shows "
+#~ "\"No entries here so far\" if we"
+#~ " access the root of the application"
+#~ " (``/``).  To do this, we add a"
+#~ " new test function to "
+#~ ":file:`test_flaskr.py`, like this::"
+#~ msgstr ""
+#~ "ここまできたら、アプリケーションの機能のテストを始めるときです。もしもアプリケーションのルート（\\ ``/``\\ "
+#~ "）へアクセスした場合に「No entries here so "
+#~ "far」をアプリケーションが表示するかチェックしましょう。これを行うために、以下のように、\\ "
+#~ ":file:`test_flaskr.py`\\ へ新しいテスト関数を追加します::"
+
+# f258bc2b61814f04a64cc82fc9be7a45
+#~ msgid ""
+#~ "Notice that our test functions begin "
+#~ "with the word `test`; this allows "
+#~ "`pytest`_ to automatically identify the "
+#~ "function as a test to run."
+#~ msgstr ""
+#~ "テスト関数は\\ `test`\\ 文字列から始めることに注意してください; これは、\\ "
+#~ "`pytest`_\\ がその関数を実行すべきテストだと自動的に特定できるようにします。"
+
+# 46a4bba534e54dbe883c414b81ff97f8
+#~ msgid ""
+#~ "By using ``client.get`` we can send "
+#~ "an HTTP ``GET`` request to the "
+#~ "application with the given path.  The"
+#~ " return value will be a "
+#~ ":class:`~flask.Flask.response_class` object. We can"
+#~ " now use the "
+#~ ":attr:`~werkzeug.wrappers.Response.data` attribute to "
+#~ "inspect the return value (as string) "
+#~ "from the application. In this case, "
+#~ "we ensure that ``'No entries here "
+#~ "so far'`` is part of the output."
+#~ msgstr ""
+#~ "``client.get`` を使用することで、（引数で）与えられたパスを伴ったHTTPの ``GET`` "
+#~ "リクエストをアプリケーションに送ることができます。その戻り値は "
+#~ ":class:`~flask.Flask.response_class` "
+#~ "オブジェクトになります。それから、:attr:`~werkzeug.wrappers.Response.data` "
+#~ "属性を使ってアプリケーションからの戻り値を（文字列として）調べることができます。このケースでは、``「No entries"
+#~ " here so far」`` が出力の一部であることを確認します。"
+
+# 7087afbc31364cf9b5d99a16bdc75af9
+#~ msgid "Run it again and you should see one passing test::"
+#~ msgstr "（pytestを）再実行すると、1つテストをパスしたことを確認できるはずです::"
+
+# 35b4dcf1850147849e77c61b425f9138
+#~ msgid "Logging In and Out"
+#~ msgstr "ログインとログアウト"
+
+# c5086af938a24dd0a749fb59b8c3fc30
+#~ msgid ""
+#~ "The majority of the functionality of "
+#~ "our application is only available for"
+#~ " the administrative user, so we need"
+#~ " a way to log our test client"
+#~ " in and out of the application.  "
+#~ "To do this, we fire some requests"
+#~ " to the login and logout pages "
+#~ "with the required form data (username"
+#~ " and password).  And because the "
+#~ "login and logout pages redirect, we "
+#~ "tell the client to `follow_redirects`."
+#~ msgstr ""
+#~ "今回のアプリケーションでの主要な機能は、管理者ユーザだけが利用可能になっているため、テスト用のclientがアプリケーションに対してログインおよびログアウトする方法が必要になります。これを行うために、必要なformデータ（ユーザ名とパスワード）を使ってログインおよびログアウトのページへのリクエストを起こします。さらにログインおよびログアウトのページは転送（redirect）されるものなので、clientに対して\\"
+#~ " `follow_redirects`\\ を指示します（訳注: "
+#~ "以下のコード例のように、client.postおよびclient.getにfollow_redirectsのキーワード引数を渡すことを指しています）。"
+
+# 22fd3bc6c5134d4f824feabffa57287a
+#~ msgid "Add the following two functions to your :file:`test_flaskr.py` file::"
+#~ msgstr "以下の2つの関数を\\ :file:`test_flaskr.py`\\ ファイルへ追加します::"
+
+# ec1d1a72300248bd81793c2c4af485f9
+#~ msgid ""
+#~ "Now we can easily test that "
+#~ "logging in and out works and that"
+#~ " it fails with invalid credentials.  "
+#~ "Add this new test function::"
+#~ msgstr "この時点で、ログインとログアウトが機能し、不正な認証情報（credentials）では（ログインに）失敗することを容易にテストできます。以下の新しい関数を（test_flaskr.pyに）追加します::"
+
+# 3766274a5fb048c383e74fc0a49aad01
+#~ msgid "Test Adding Messages"
+#~ msgstr "メッセージ追加のテスト"
+
+# 919d5db046de4fef8278c80b7064e177
+#~ msgid ""
+#~ "We should also test that adding "
+#~ "messages works.  Add a new test "
+#~ "function like this::"
+#~ msgstr "メッセージ追加が機能することもテストするべきです。以下のように新しい関数を追加します::"
+
+# 0352f8d0d0994621bfa2684ed91c3f90
+#~ msgid ""
+#~ "Here we check that HTML is allowed"
+#~ " in the text but not in the "
+#~ "title, which is the intended behavior."
+#~ msgstr "ここでは、HTMLがテキストでは許されていながら、タイトルでは許されていないという、意図している振舞をチェックします。"
+
+# adbf2e3b914a433fb7cefd727dbd9971
+#~ msgid "Running that should now give us three passing tests::"
+#~ msgstr "これを（pytestで）実行すると、3つのテストがパスすることを示すはずです::"
+
+# 7d299dfaae634433ad28048050e7a410
+#~ msgid "Other Testing Tricks"
+#~ msgstr "その他のテスト用のしかけ（Other Tesing Tricks）"
+
+# 7799974b122e4888aca7fbbf0b126654
+#~ msgid ""
+#~ "Besides using the test client as "
+#~ "shown above, there is also the "
+#~ ":meth:`~flask.Flask.test_request_context` method that "
+#~ "can be used in combination with "
+#~ "the ``with`` statement to activate a "
+#~ "request context temporarily.  With this "
+#~ "you can access the :class:`~flask.request`,"
+#~ " :class:`~flask.g` and :class:`~flask.session` "
+#~ "objects like in view functions.  Here"
+#~ " is a full example that demonstrates"
+#~ " this approach::"
+#~ msgstr ""
+#~ "ここまでに示したテスト用clientを使う他に、request "
+#~ "contextを一時的に有効にするには、with文と組み合わせて使用できる\\ "
+#~ ":meth:`~flask.Flask.test_request_context`\\ メソッドもあります。これを使うと\\"
+#~ " :class:`~flask.request`, :class:`~flask.g`, "
+#~ ":class:`~flask.session`\\ "
+#~ "オブジェクトへview関数のようにアクセスできるようになります。以下は、このアプローチを実演（demonstrates）する一通り不足のない例になります::"
+
+# baacac7b7b824efd9d3ae4448182b970
+#~ msgid ""
+#~ "All the other objects that are "
+#~ "context bound can be used in the"
+#~ " same way."
+#~ msgstr "contextに結び付けられた（bound）その他の全てのオブジェクトを同じやり方で使用できます。"
+
+# 75d81349995141fdaa4d2bb617ebb9a7
+#~ msgid ""
+#~ "If you want to test your "
+#~ "application with different configurations and"
+#~ " there does not seem to be a"
+#~ " good way to do that, consider "
+#~ "switching to application factories (see "
+#~ ":doc:`patterns/appfactories`)."
+#~ msgstr ""
+#~ "もしも自分のアプリケーションを異なる設定でテストしたいにもかかわらず、相応しいやり方が見つからない場合、application "
+#~ "factory（:doc:`patterns/appfactories` "
+#~ "を確認してください）へ切り替えることを検討してください。"
+
+# 63fb622b61014997b15ad0c98c395bb6
+#~ msgid ""
+#~ "Note however that if you are using"
+#~ " a test request context, the "
+#~ ":meth:`~flask.Flask.before_request` and "
+#~ ":meth:`~flask.Flask.after_request` functions are not"
+#~ " called automatically.  However "
+#~ ":meth:`~flask.Flask.teardown_request` functions are "
+#~ "indeed executed when the test request"
+#~ " context leaves the ``with`` block.  "
+#~ "If you do want the "
+#~ ":meth:`~flask.Flask.before_request` functions to be"
+#~ " called as well, you need to "
+#~ "call :meth:`~flask.Flask.preprocess_request` yourself::"
+#~ msgstr ""
+#~ "しかしながら、もしもテスト用のrequest contextを使用している場合は、\\ "
+#~ ":meth:`~flask.Flask.before_request`\\ と\\ "
+#~ ":meth:`~flask.Flask.after_request`\\ "
+#~ "関数が自動的には呼び出されないことに注意してください。しかしながら、テスト用のrequest contextが\\ "
+#~ "``with``\\ ブロックを去るときに、\\ "
+#~ ":meth:`~flask.Flask.teardown_request`\\ 関数は実際には実行されます。もしも\\ "
+#~ ":meth:`~flask.Flask.before_request`\\ "
+#~ "関数も同様に呼び出されるようにしたい場合は、自分で\\ "
+#~ ":meth:`~flask.Flask.preprocess_request`\\ を呼び出す必要があります::"
+
+# 03109b4a3e974e32bef7b7c9619d3783
+#~ msgid ""
+#~ "This can be necessary to open "
+#~ "database connections or something similar "
+#~ "depending on how your application was"
+#~ " designed."
+#~ msgstr "これは、自分のアプリケーションの設計によっては、データベース接続または似たような何かを開くために必要になる可能性があります。"
+
+# 91b43cd5c0a74bcfbc9a0565fb2e6277
+#~ msgid ""
+#~ "If you want to call the "
+#~ ":meth:`~flask.Flask.after_request` functions you "
+#~ "need to call into "
+#~ ":meth:`~flask.Flask.process_response` which however "
+#~ "requires that you pass it a "
+#~ "response object::"
+#~ msgstr ""
+#~ "もしも\\ :meth:`~flask.Flask.after_request`\\ "
+#~ "関数を呼び出したい場合は、呼び出すときにresponseオブジェクトを渡す必要がある\\ "
+#~ ":meth:`~flask.Flask.process_response`\\ を経由する必要があります::"
+
+# f074ae1fa0b947d8ba0c8e1b85c45fe5
+#~ msgid ""
+#~ "This in general is less useful "
+#~ "because at that point you can "
+#~ "directly start using the test client."
+#~ msgstr "その時点ではテスト用clientを使用して直接開始できるため、これは概してあまり便利ではありません。"
+
+# 69673f08ac7143368eb3a8ae7155fd81
+#~ msgid "Faking Resources and Context"
+#~ msgstr "リソースおよびコンテキストの模倣（Faking Resources and Context）"
+
+# 246cbb9c797142bf8e9825903bebda89
+#~ msgid ""
+#~ "A very common pattern is to store"
+#~ " user authorization information and "
+#~ "database connections on the application "
+#~ "context or the :attr:`flask.g` object.  "
+#~ "The general pattern for this is to"
+#~ " put the object on there on "
+#~ "first usage and then to remove it"
+#~ " on a teardown.  Imagine for instance"
+#~ " this code to get the current "
+#~ "user::"
+#~ msgstr ""
+#~ "ユーザ認証情報とデータベース接続（database connections）をapplication "
+#~ "contextまたは\\ :attr:`flask.g`\\ "
+#~ "オブジェクトへ格納することは、よくあるパターンになります。これに対する一般的なパターンは、オブジェクトを最初に使用するときにそれ（application"
+#~ " contextまたはflask.gオブジェクト）に置き、（リクエストやapplication "
+#~ "contextなどを）取り壊すときにそれ（認証情報など）を削除することです。例えば、そのときのユーザを取得するための以下のコードを想像してください::"
+
+# cebcba7c50dc49fcba3af6c22151bd1f
+#~ msgid ""
+#~ "For a test it would be nice "
+#~ "to override this user from the "
+#~ "outside without having to change some"
+#~ " code.  This can be accomplished with"
+#~ " hooking the :data:`flask.appcontext_pushed` "
+#~ "signal::"
+#~ msgstr ""
+#~ "テストのためには、コードを変更することなくこのユーザを外側から上書きできるとうれしいでしょう。これは、\\ "
+#~ ":data:`flask.appcontext_pushed`\\ シグナルをフックすることで達成可能です::"
+
+# d75cb0a5e3364108adb964b11479948b
+#~ msgid "And then to use it::"
+#~ msgstr "それから、（以下のように）それ（appcontext_pushedをフックする処理）を使用します::"
+
+# 9ebd5477775040ba826060299d66ddaa
+#~ msgid "Keeping the Context Around"
+#~ msgstr "コンテキストの保持（Keeping the Context Around）"
+
+# 41074ce7c7b946988a9b377838322240
+#~ msgid ""
+#~ "Sometimes it is helpful to trigger "
+#~ "a regular request but still keep "
+#~ "the context around for a little "
+#~ "longer so that additional introspection "
+#~ "can happen.  With Flask 0.4 this "
+#~ "is possible by using the "
+#~ ":meth:`~flask.Flask.test_client` with a ``with`` "
+#~ "block::"
+#~ msgstr ""
+#~ "ときには通常のリクエストを引き起こしながら、より多く調査できるようにするため（so that additional"
+#~ " introspection can "
+#~ "happen）に、少し長い間コンテキストを保持できると役立ちます。Flask 0.4では、\\ ``with``\\"
+#~ " ブロックと一緒に\\ :meth:`~flask.Flask.test_client`\\ "
+#~ "を使うことで可能です::"
+
+# de9c6557b579456a80ae06b7609d66bc
+#~ msgid ""
+#~ "If you were to use just the "
+#~ ":meth:`~flask.Flask.test_client` without the "
+#~ "``with`` block, the ``assert`` would "
+#~ "fail with an error because `request` "
+#~ "is no longer available (because you "
+#~ "are trying to use it outside of"
+#~ " the actual request)."
+#~ msgstr ""
+#~ "もしも\\ ``with``\\ ブロックを伴わずに\\ "
+#~ ":meth:`~flask.Flask.test_client`\\ "
+#~ "だけを使用した場合、（実際のリクエストの外側で使用しようとしているため）もはや\\ `request`\\ "
+#~ "が利用できないために\\ ``assert``\\ がエラーを伴って失敗するでしょう。"
+
 # 598747a2251e4467a7729656e77beb94
-#: ../../flask/docs/testing.rst:349
-msgid ""
-"Sometimes it can be very helpful to access or modify the sessions from "
-"the test client.  Generally there are two ways for this.  If you just "
-"want to ensure that a session has certain keys set to certain values you "
-"can just keep the context around and access :data:`flask.session`::"
-msgstr ""
-"ときには、テスト用clientからセッションに対してアクセスまたは変更すると"
-"非常に役立つことがあります。これについては、概して2つのやり方があります。"
-"もしもある値が設定たあるキーをセッションが持っているか確認したいだけで"
-"ある場合は、コンテキストを保持して\ :data:`flask.session`\ にアクセス"
-"するだけで可能です::"
+#~ msgid ""
+#~ "Sometimes it can be very helpful "
+#~ "to access or modify the sessions "
+#~ "from the test client.  Generally there"
+#~ " are two ways for this.  If you"
+#~ " just want to ensure that a "
+#~ "session has certain keys set to "
+#~ "certain values you can just keep "
+#~ "the context around and access "
+#~ ":data:`flask.session`::"
+#~ msgstr ""
+#~ "ときには、テスト用clientからセッションに対してアクセスまたは変更すると非常に役立つことがあります。これについては、概して2つのやり方があります。もしもある値が設定たあるキーをセッションが持っているか確認したいだけである場合は、コンテキストを保持して\\"
+#~ " :data:`flask.session`\\ にアクセスするだけで可能です::"
 
 # c7f9f53e93204e24a4128c282f5d6e9d
-#: ../../flask/docs/testing.rst:358
-msgid ""
-"This however does not make it possible to also modify the session or to "
-"access the session before a request was fired.  Starting with Flask 0.8 "
-"we provide a so called “session transaction” which simulates the "
-"appropriate calls to open a session in the context of the test client and"
-" to modify it. At the end of the transaction the session is stored and "
-"ready to be used by the test client. This works independently of the "
-"session backend used::"
-msgstr ""
-"これは、しかしながら、セッションの変更やリクエストが引き起こされる前の"
-"セッションへのアクセスもできるようにはしません。Flask 0.8からは、テスト"
-"用clientのコンテキストの中でセッションを開き、そしてそのセッションを"
-"変更する、適切な呼び出しを模倣する「セッショントランザクション（session "
-"transaction）」と呼ばれるものを提供しています。これは使用されている"
-"セッションの背後の仕組み（session backend）に関係なく機能します::"
+#~ msgid ""
+#~ "This however does not make it "
+#~ "possible to also modify the session "
+#~ "or to access the session before a"
+#~ " request was fired.  Starting with "
+#~ "Flask 0.8 we provide a so called"
+#~ " “session transaction” which simulates the"
+#~ " appropriate calls to open a session"
+#~ " in the context of the test "
+#~ "client and to modify it. At the"
+#~ " end of the transaction the session"
+#~ " is stored and ready to be used"
+#~ " by the test client. This works "
+#~ "independently of the session backend "
+#~ "used::"
+#~ msgstr ""
+#~ "これは、しかしながら、セッションの変更やリクエストが引き起こされる前のセッションへのアクセスもできるようにはしません。Flask "
+#~ "0.8からは、テスト用clientのコンテキストの中でセッションを開き、そしてそのセッションを変更する、適切な呼び出しを模倣する「セッショントランザクション（session"
+#~ " transaction）」と呼ばれるものを提供しています。これは使用されているセッションの背後の仕組み（session "
+#~ "backend）に関係なく機能します::"
 
 # 668dbb2405f54b9cb2a32b182c2e36ec
-#: ../../flask/docs/testing.rst:372
-msgid ""
-"Note that in this case you have to use the ``sess`` object instead of the"
-" :data:`flask.session` proxy.  The object however itself will provide the"
-" same interface."
-msgstr ""
-"このケース（直前のコード例）では、\ :data:`flask.session`\ プロキシの"
-"代わりに\ ``sess``\ オブジェクトを使う必要があることに注意してください。"
-"しかしながら、sessオブジェクト自体はflask.sessionと同じインタフェースを"
-"提供します。"
+#~ msgid ""
+#~ "Note that in this case you have"
+#~ " to use the ``sess`` object instead"
+#~ " of the :data:`flask.session` proxy.  The"
+#~ " object however itself will provide "
+#~ "the same interface."
+#~ msgstr ""
+#~ "このケース（直前のコード例）では、\\ :data:`flask.session`\\ プロキシの代わりに\\"
+#~ " ``sess``\\ "
+#~ "オブジェクトを使う必要があることに注意してください。しかしながら、sessオブジェクト自体はflask.sessionと同じインタフェースを提供します。"
 
 # 5db1b5ca8cf747a7a618815160ed9392
-#: ../../flask/docs/testing.rst:378
-msgid "Testing JSON APIs"
-msgstr "JSON APIのテスト（Testing JSON APIs）"
+#~ msgid "Testing JSON APIs"
+#~ msgstr "JSON APIのテスト（Testing JSON APIs）"
 
 # 8567e8b70a584a439edef4d75d1d23c4
-#: ../../flask/docs/testing.rst:382
-msgid ""
-"Flask has great support for JSON, and is a popular choice for building "
-"JSON APIs. Making requests with JSON data and examining JSON data in "
-"responses is very convenient::"
-msgstr ""
-"FlaskにはJSONへの素晴しいサポートがあり、JSONのAPIを構築するための"
-"選択肢として人気があります。JSONデータを使ったリクエストを作成して、"
-"レスポンスの中でJSONデータを調べるには非常に好都合です::"
+#~ msgid ""
+#~ "Flask has great support for JSON, "
+#~ "and is a popular choice for "
+#~ "building JSON APIs. Making requests with"
+#~ " JSON data and examining JSON data"
+#~ " in responses is very convenient::"
+#~ msgstr "FlaskにはJSONへの素晴しいサポートがあり、JSONのAPIを構築するための選択肢として人気があります。JSONデータを使ったリクエストを作成して、レスポンスの中でJSONデータを調べるには非常に好都合です::"
 
 # 2600047646df40bdb464632512a916a1
-#: ../../flask/docs/testing.rst:402
-msgid ""
-"Passing the ``json`` argument in the test client methods sets the request"
-" data to the JSON-serialized object and sets the content type to "
-"``application/json``. You can get the JSON data from the request or "
-"response with ``get_json``."
-msgstr ""
-"``json``\ 引数をテスト用clientのメソッドで渡すと、リクエストのデータを"
-"JSONでシリアライズされたオブジェクト（JSON-serialized object）に設定し、"
-"（リクエストの）content typeを\ ``application/json``\ に設定します。\ "
-"``get_json``\ を使って、リクエストまたはレスポンスからJSONのデータを"
-"取得できます。"
+#~ msgid ""
+#~ "Passing the ``json`` argument in the "
+#~ "test client methods sets the request "
+#~ "data to the JSON-serialized object "
+#~ "and sets the content type to "
+#~ "``application/json``. You can get the "
+#~ "JSON data from the request or "
+#~ "response with ``get_json``."
+#~ msgstr ""
+#~ "``json``\\ 引数をテスト用clientのメソッドで渡すと、リクエストのデータをJSONでシリアライズされたオブジェクト"
+#~ "（JSON-serialized object）に設定し、（リクエストの）content typeを\\"
+#~ " ``application/json``\\ に設定します。\\ ``get_json``\\ "
+#~ "を使って、リクエストまたはレスポンスからJSONのデータを取得できます。"
 
 # 93f743ced9e446f5a4a69efc0f85697a
-#: ../../flask/docs/testing.rst:411
-msgid "Testing CLI Commands"
-msgstr "CLIコマンドのテスト（Testing CLI Commands）"
+#~ msgid "Testing CLI Commands"
+#~ msgstr "CLIコマンドのテスト（Testing CLI Commands）"
 
 # 7e9ee36087cc4e1abe35b9a43e76b621
-#: ../../flask/docs/testing.rst:413
-msgid ""
-"Click comes with `utilities for testing`_ your CLI commands. A "
-":class:`~click.testing.CliRunner` runs commands in isolation and captures"
-" the output in a :class:`~click.testing.Result` object."
-msgstr ""
-"Click（訳注: Flaskインストール時に自動的にインストールされるCLI用の"
-"ツール）は自分のCLIコマンドを\ `テストするためのユーティリティ`_\ が"
-"一緒になっています。\ :class:`~click.testing.CliRunner`\ はコマンドを"
-"別々に分けながら実行して出力を\ :class:`~click.testing.Result`\ "
-"オブジェクトの中に捉えます。"
-"
-"
+#~ msgid ""
+#~ "Click comes with `utilities for "
+#~ "testing`_ your CLI commands. A "
+#~ ":class:`~click.testing.CliRunner` runs commands in"
+#~ " isolation and captures the output in"
+#~ " a :class:`~click.testing.Result` object."
+#~ msgstr ""
+#~ "Click（訳注: Flaskインストール時に自動的にインストールされるCLI用のツール）は自分のCLIコマンドを\\ "
+#~ "`テストするためのユーティリティ`_\\ が一緒になっています。\\ "
+#~ ":class:`~click.testing.CliRunner`\\ はコマンドを別々に分けながら実行して出力を\\ "
+#~ ":class:`~click.testing.Result`\\ オブジェクトの中に捉えます。"
 
 # d7973504f2b0433e87032a1d4b9137e1
-#: ../../flask/docs/testing.rst:417
-msgid ""
-"Flask provides :meth:`~flask.Flask.test_cli_runner` to create a "
-":class:`~flask.testing.FlaskCliRunner` that passes the Flask app to the "
-"CLI automatically. Use its :meth:`~flask.testing.FlaskCliRunner.invoke` "
-"method to call commands in the same way they would be called from the "
-"command line. ::"
-msgstr ""
-"Flaskは、FlaskのappをCLIへ自動的に渡す\ :class:"
-"`~flask.testing.FlaskCliRunner`\ を作成するために\ :meth:"
-"`~flask.Flask.test_cli_runner`\ を提供しています。コマンドラインから"
-"呼ばれたときと同じようにコマンドを呼び出すために、\ :meth:"
-"`~flask.testing.FlaskCliRunner.invoke`\ メソッドを使用します。::"
+#~ msgid ""
+#~ "Flask provides :meth:`~flask.Flask.test_cli_runner` "
+#~ "to create a :class:`~flask.testing.FlaskCliRunner`"
+#~ " that passes the Flask app to "
+#~ "the CLI automatically. Use its "
+#~ ":meth:`~flask.testing.FlaskCliRunner.invoke` method to "
+#~ "call commands in the same way they"
+#~ " would be called from the command "
+#~ "line. ::"
+#~ msgstr ""
+#~ "Flaskは、FlaskのappをCLIへ自動的に渡す\\ "
+#~ ":class:`~flask.testing.FlaskCliRunner`\\ を作成するために\\ "
+#~ ":meth:`~flask.Flask.test_cli_runner`\\ "
+#~ "を提供しています。コマンドラインから呼ばれたときと同じようにコマンドを呼び出すために、\\ "
+#~ ":meth:`~flask.testing.FlaskCliRunner.invoke`\\ メソッドを使用します。::"
 
 # 8a0956cf8f77412b9ae658d5d339dd70
-#: ../../flask/docs/testing.rst:441
-msgid ""
-"In the example above, invoking the command by name is useful because it "
-"verifies that the command was correctly registered with the app."
-msgstr ""
-"上の例では、コマンドがappに適切に登録されたことを検証するため、名前に"
-"よってコマンドを起動するのが便利です。"
+#~ msgid ""
+#~ "In the example above, invoking the "
+#~ "command by name is useful because "
+#~ "it verifies that the command was "
+#~ "correctly registered with the app."
+#~ msgstr "上の例では、コマンドがappに適切に登録されたことを検証するため、名前によってコマンドを起動するのが便利です。"
 
 # 7ee7dae2b86045c3b4779fd3a8840e74
-#: ../../flask/docs/testing.rst:444
-msgid ""
-"If you want to test how your command parses parameters, without running "
-"the command, use its :meth:`~click.BaseCommand.make_context` method. This"
-" is useful for testing complex validation rules and custom types. ::"
-msgstr ""
-"もしも自分のコマンドがどのようにパラメータを解析するか、コマンドを実行"
-"せずにテストしたい場合は、\ :meth:`~click.BaseCommand.make_context`\ "
-"メソッドを使用します。これは複雑な検証ルールや独自タイプ（のパラメータ）"
-"をテストするために役立ちます。::"
+#~ msgid ""
+#~ "If you want to test how your "
+#~ "command parses parameters, without running "
+#~ "the command, use its "
+#~ ":meth:`~click.BaseCommand.make_context` method. This "
+#~ "is useful for testing complex validation"
+#~ " rules and custom types. ::"
+#~ msgstr ""
+#~ "もしも自分のコマンドがどのようにパラメータを解析するか、コマンドを実行せずにテストしたい場合は、\\ "
+#~ ":meth:`~click.BaseCommand.make_context`\\ "
+#~ "メソッドを使用します。これは複雑な検証ルールや独自タイプ（のパラメータ）をテストするために役立ちます。::"
 

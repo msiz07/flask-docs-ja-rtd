@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-21 20:07+0900\n"
+"POT-Creation-Date: 2022-11-20 18:38+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,9 +21,9 @@ msgid "ASGI"
 msgstr ""
 
 #: ../../flask/docs/deploying/asgi.rst:6
-msgid "If you'd like to use an ASGI server you will need to utilise WSGI to ASGI middleware. The asgiref [WsgiToAsgi](https://github.com/django/asgiref#wsgi-to-asgi-adapter) adapter is recommended as it integrates with the event loop used for Flask's :ref:`async_await` support. You can use the adapter by wrapping the Flask app,"
+msgid "If you'd like to use an ASGI server you will need to utilise WSGI to ASGI middleware. The asgiref `WsgiToAsgi <https://github.com/django/asgiref#wsgi-to-asgi-adapter>`_ adapter is recommended as it integrates with the event loop used for Flask's :ref:`async_await` support. You can use the adapter by wrapping the Flask app,"
 msgstr ""
 
 #: ../../flask/docs/deploying/asgi.rst:24
-msgid "and then serving the ``asgi_app`` with the asgi server, e.g. using `Hypercorn <https://gitlab.com/pgjones/hypercorn>`_,"
+msgid "and then serving the ``asgi_app`` with the ASGI server, e.g. using `Hypercorn <https://gitlab.com/pgjones/hypercorn>`_,"
 msgstr ""

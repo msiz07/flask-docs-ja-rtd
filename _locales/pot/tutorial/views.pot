@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-21 20:07+0900\n"
+"POT-Creation-Date: 2022-11-20 18:38+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,10 +38,10 @@ msgstr ""
 
 #: ../../flask/docs/tutorial/views.rst:27
 #: ../../flask/docs/tutorial/views.rst:79
-#: ../../flask/docs/tutorial/views.rst:171
-#: ../../flask/docs/tutorial/views.rst:218
-#: ../../flask/docs/tutorial/views.rst:247
-#: ../../flask/docs/tutorial/views.rst:263
+#: ../../flask/docs/tutorial/views.rst:170
+#: ../../flask/docs/tutorial/views.rst:222
+#: ../../flask/docs/tutorial/views.rst:251
+#: ../../flask/docs/tutorial/views.rst:267
 msgid "``flaskr/auth.py``"
 msgstr ""
 
@@ -94,97 +94,105 @@ msgid "Validate that ``username`` and ``password`` are not empty."
 msgstr ""
 
 #: ../../flask/docs/tutorial/views.rst:128
-msgid "Validate that ``username`` is not already registered by querying the database and checking if a result is returned. :meth:`db.execute <sqlite3.Connection.execute>` takes a SQL query with ``?`` placeholders for any user input, and a tuple of values to replace the placeholders with. The database library will take care of escaping the values so you are not vulnerable to a *SQL injection attack*."
+msgid "If validation succeeds, insert the new user data into the database."
+msgstr ""
+
+#: ../../flask/docs/tutorial/views.rst:130
+msgid ":meth:`db.execute <sqlite3.Connection.execute>` takes a SQL query with ``?`` placeholders for any user input, and a tuple of values to replace the placeholders with. The database library will take care of escaping the values so you are not vulnerable to a *SQL injection attack*."
 msgstr ""
 
 #: ../../flask/docs/tutorial/views.rst:136
-msgid ":meth:`~sqlite3.Cursor.fetchone` returns one row from the query. If the query returned no results, it returns ``None``. Later, :meth:`~sqlite3.Cursor.fetchall` is used, which returns a list of all results."
+msgid "For security, passwords should never be stored in the database directly. Instead, :func:`~werkzeug.security.generate_password_hash` is used to securely hash the password, and that hash is stored. Since this query modifies data, :meth:`db.commit() <sqlite3.Connection.commit>` needs to be called afterwards to save the changes."
 msgstr ""
 
-#: ../../flask/docs/tutorial/views.rst:141
-msgid "If validation succeeds, insert the new user data into the database. For security, passwords should never be stored in the database directly. Instead, :func:`~werkzeug.security.generate_password_hash` is used to securely hash the password, and that hash is stored. Since this query modifies data, :meth:`db.commit() <sqlite3.Connection.commit>` needs to be called afterwards to save the changes."
+#: ../../flask/docs/tutorial/views.rst:144
+msgid "An :exc:`sqlite3.IntegrityError` will occur if the username already exists, which should be shown to the user as another validation error."
 msgstr ""
 
-#: ../../flask/docs/tutorial/views.rst:149
+#: ../../flask/docs/tutorial/views.rst:148
 msgid "After storing the user, they are redirected to the login page. :func:`url_for` generates the URL for the login view based on its name. This is preferable to writing the URL directly as it allows you to change the URL later without changing all code that links to it. :func:`redirect` generates a redirect response to the generated URL."
 msgstr ""
 
-#: ../../flask/docs/tutorial/views.rst:156
+#: ../../flask/docs/tutorial/views.rst:155
 msgid "If validation fails, the error is shown to the user. :func:`flash` stores messages that can be retrieved when rendering the template."
 msgstr ""
 
-#: ../../flask/docs/tutorial/views.rst:159
+#: ../../flask/docs/tutorial/views.rst:158
 msgid "When the user initially navigates to ``auth/register``, or there was a validation error, an HTML page with the registration form should be shown. :func:`render_template` will render a template containing the HTML, which you'll write in the next step of the tutorial."
 msgstr ""
 
-#: ../../flask/docs/tutorial/views.rst:167
+#: ../../flask/docs/tutorial/views.rst:166
 msgid "Login"
 msgstr ""
 
-#: ../../flask/docs/tutorial/views.rst:169
+#: ../../flask/docs/tutorial/views.rst:168
 msgid "This view follows the same pattern as the ``register`` view above."
 msgstr ""
 
-#: ../../flask/docs/tutorial/views.rst:199
+#: ../../flask/docs/tutorial/views.rst:198
 msgid "There are a few differences from the ``register`` view:"
 msgstr ""
 
-#: ../../flask/docs/tutorial/views.rst:201
+#: ../../flask/docs/tutorial/views.rst:200
 msgid "The user is queried first and stored in a variable for later use."
 msgstr ""
 
-#: ../../flask/docs/tutorial/views.rst:203
-msgid ":func:`~werkzeug.security.check_password_hash` hashes the submitted password in the same way as the stored hash and securely compares them. If they match, the password is valid."
+#: ../../flask/docs/tutorial/views.rst:202
+msgid ":meth:`~sqlite3.Cursor.fetchone` returns one row from the query. If the query returned no results, it returns ``None``. Later, :meth:`~sqlite3.Cursor.fetchall` will be used, which returns a list of all results."
 msgstr ""
 
 #: ../../flask/docs/tutorial/views.rst:207
+msgid ":func:`~werkzeug.security.check_password_hash` hashes the submitted password in the same way as the stored hash and securely compares them. If they match, the password is valid."
+msgstr ""
+
+#: ../../flask/docs/tutorial/views.rst:211
 msgid ":data:`session` is a :class:`dict` that stores data across requests. When validation succeeds, the user's ``id`` is stored in a new session. The data is stored in a *cookie* that is sent to the browser, and the browser then sends it back with subsequent requests. Flask securely *signs* the data so that it can't be tampered with."
 msgstr ""
 
-#: ../../flask/docs/tutorial/views.rst:213
+#: ../../flask/docs/tutorial/views.rst:217
 msgid "Now that the user's ``id`` is stored in the :data:`session`, it will be available on subsequent requests. At the beginning of each request, if a user is logged in their information should be loaded and made available to other views."
 msgstr ""
 
-#: ../../flask/docs/tutorial/views.rst:232
+#: ../../flask/docs/tutorial/views.rst:236
 msgid ":meth:`bp.before_app_request() <Blueprint.before_app_request>` registers a function that runs before the view function, no matter what URL is requested. ``load_logged_in_user`` checks if a user id is stored in the :data:`session` and gets that user's data from the database, storing it on :data:`g.user <g>`, which lasts for the length of the request. If there is no user id, or if the id doesn't exist, ``g.user`` will be ``None``."
 msgstr ""
 
-#: ../../flask/docs/tutorial/views.rst:242
+#: ../../flask/docs/tutorial/views.rst:246
 msgid "Logout"
 msgstr ""
 
-#: ../../flask/docs/tutorial/views.rst:244
+#: ../../flask/docs/tutorial/views.rst:248
 msgid "To log out, you need to remove the user id from the :data:`session`. Then ``load_logged_in_user`` won't load a user on subsequent requests."
 msgstr ""
 
-#: ../../flask/docs/tutorial/views.rst:257
+#: ../../flask/docs/tutorial/views.rst:261
 msgid "Require Authentication in Other Views"
 msgstr ""
 
-#: ../../flask/docs/tutorial/views.rst:259
+#: ../../flask/docs/tutorial/views.rst:263
 msgid "Creating, editing, and deleting blog posts will require a user to be logged in. A *decorator* can be used to check this for each view it's applied to."
 msgstr ""
 
-#: ../../flask/docs/tutorial/views.rst:276
+#: ../../flask/docs/tutorial/views.rst:280
 msgid "This decorator returns a new view function that wraps the original view it's applied to. The new function checks if a user is loaded and redirects to the login page otherwise. If a user is loaded the original view is called and continues normally. You'll use this decorator when writing the blog views."
 msgstr ""
 
-#: ../../flask/docs/tutorial/views.rst:283
+#: ../../flask/docs/tutorial/views.rst:287
 msgid "Endpoints and URLs"
 msgstr ""
 
-#: ../../flask/docs/tutorial/views.rst:285
+#: ../../flask/docs/tutorial/views.rst:289
 msgid "The :func:`url_for` function generates the URL to a view based on a name and arguments. The name associated with a view is also called the *endpoint*, and by default it's the same as the name of the view function."
 msgstr ""
 
-#: ../../flask/docs/tutorial/views.rst:290
+#: ../../flask/docs/tutorial/views.rst:294
 msgid "For example, the ``hello()`` view that was added to the app factory earlier in the tutorial has the name ``'hello'`` and can be linked to with ``url_for('hello')``. If it took an argument, which you'll see later, it would be linked to using ``url_for('hello', who='World')``."
 msgstr ""
 
-#: ../../flask/docs/tutorial/views.rst:296
+#: ../../flask/docs/tutorial/views.rst:300
 msgid "When using a blueprint, the name of the blueprint is prepended to the name of the function, so the endpoint for the ``login`` function you wrote above is ``'auth.login'`` because you added it to the ``'auth'`` blueprint."
 msgstr ""
 
-#: ../../flask/docs/tutorial/views.rst:301
+#: ../../flask/docs/tutorial/views.rst:305
 msgid "Continue to :doc:`templates`."
 msgstr ""

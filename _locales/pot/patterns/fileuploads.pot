@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-21 20:07+0900\n"
+"POT-Creation-Date: 2022-11-20 18:38+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -125,5 +125,5 @@ msgid "Now there are better solutions that work faster and are more reliable. Th
 msgstr ""
 
 #: ../../flask/docs/patterns/fileuploads.rst:177
-msgid "Because the common pattern for file uploads exists almost unchanged in all applications dealing with uploads, there is also a Flask extension called `Flask-Uploads`_ that implements a full fledged upload mechanism that allows controlling which file extensions are allowed to be uploaded."
+msgid "Because the common pattern for file uploads exists almost unchanged in all applications dealing with uploads, there are also some Flask extensions that implement a full fledged upload mechanism that allows controlling which file extensions are allowed to be uploaded."
 msgstr ""

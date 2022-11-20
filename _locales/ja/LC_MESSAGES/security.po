@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-21 20:07+0900\n"
+"POT-Creation-Date: 2022-11-20 18:38+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -409,34 +409,13 @@ msgstr ""
 msgid "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options"
 msgstr ""
 
-# d7315452e32f4b7d9b2d54ac80c0c46e
-#: ../../flask/docs/security.rst:177
-msgid "X-XSS-Protection"
-msgstr ""
-
-# 7fdc2627489c48ad8146c81595831551
-#: ../../flask/docs/security.rst:179
-msgid ""
-"The browser will try to prevent reflected XSS attacks by not loading the "
-"page if the request contains something that looks like JavaScript and the"
-" response contains the same data. ::"
-msgstr ""
-"もしもリクエストがなにかJavaScriptのようなものを含み、レスポンスも同じ"
-"データを含んでいる場合に、ページを読み込まないようにすることで、ブラウザが"
-"reflected XSS攻撃を防ぐよう試みるようにします。"
-
-# 67127aa57511409da3682a0e8fe9482e
-#: ../../flask/docs/security.rst:185
-msgid "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection"
-msgstr ""
-
 # 60b59e10d1c04f9a9bf036f2cd74192b
-#: ../../flask/docs/security.rst:191
+#: ../../flask/docs/security.rst:179
 msgid "Set-Cookie options"
 msgstr "Set-Cookieオプション"
 
 # 538c643b913c4a4bbc7479fa90750ca5
-#: ../../flask/docs/security.rst:193
+#: ../../flask/docs/security.rst:181
 msgid ""
 "These options can be added to a ``Set-Cookie`` header to improve their "
 "security. Flask has configuration options to set these on the session "
@@ -449,12 +428,12 @@ msgstr ""
 "オプションがあります。これらは、他のクッキーへも設定可能です。"
 
 # 64d690f0bf09477fbc111af3ff9f7b27
-#: ../../flask/docs/security.rst:197
+#: ../../flask/docs/security.rst:185
 msgid "``Secure`` limits cookies to HTTPS traffic only."
 msgstr "``secure``\ はクッキー（の送受信を）をHTTPS通信だけに限定します。"
 
 # b0c78ad3e35041549e487767985e2158
-#: ../../flask/docs/security.rst:198
+#: ../../flask/docs/security.rst:186
 msgid ""
 "``HttpOnly`` protects the contents of cookies from being read with "
 "JavaScript."
@@ -462,7 +441,7 @@ msgstr ""
 "``HttpOnly``\ は、クッキーの内容をJavaScriptで読み取られることを防ぎます。"
 
 # 2de2035c7a074d0a99260f2ce7c49208
-#: ../../flask/docs/security.rst:200
+#: ../../flask/docs/security.rst:188
 msgid ""
 "``SameSite`` restricts how cookies are sent with requests from external "
 "sites. Can be set to ``'Lax'`` (recommended) or ``'Strict'``. ``Lax`` "
@@ -478,7 +457,7 @@ msgstr ""
 "外部リクエストで一緒にクッキーを（ブラウザが）送信することを防ぎます。"
 
 # ab833b90a37e44fb93c28ea48149a50a
-#: ../../flask/docs/security.rst:216
+#: ../../flask/docs/security.rst:204
 msgid ""
 "Specifying ``Expires`` or ``Max-Age`` options, will remove the cookie "
 "after the given time, or the current time plus the age, respectively. If "
@@ -491,7 +470,7 @@ msgstr ""
 "ブラウザが閉じられたときにクッキーは削除されまれます。::"
 
 # 93584cb51b904be6aa7cbc9bf49a02e8
-#: ../../flask/docs/security.rst:223
+#: ../../flask/docs/security.rst:211
 msgid ""
 "For the session cookie, if :attr:`session.permanent "
 "<flask.session.permanent>` is set, then "
@@ -509,7 +488,7 @@ msgstr ""
 "でしょう。::"
 
 # 274b50d054a34df681c73c8bba3ccc81
-#: ../../flask/docs/security.rst:241
+#: ../../flask/docs/security.rst:229
 msgid ""
 "Use :class:`itsdangerous.TimedSerializer` to sign and validate other "
 "cookie values (or any values that need secure signatures)."
@@ -519,22 +498,22 @@ msgstr ""
 "ください。"
 
 # 20eed18e9d044ebc9d6cd599ef00cdcd
-#: ../../flask/docs/security.rst:244
+#: ../../flask/docs/security.rst:232
 msgid "https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies"
 msgstr ""
 
 # 537f02df35fc40b2965ad2b508a93836
-#: ../../flask/docs/security.rst:245
+#: ../../flask/docs/security.rst:233
 msgid "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie"
 msgstr ""
 
 # 84b7a24d81b44796ab2236d74b302097
-#: ../../flask/docs/security.rst:251
+#: ../../flask/docs/security.rst:239
 msgid "HTTP Public Key Pinning (HPKP)"
 msgstr "HTTP公開鍵ピン止め（HPKP）（HTTP Public Key Pinning）"
 
 # eba0c9e59dbf4f749baa52c376d076ea
-#: ../../flask/docs/security.rst:253
+#: ../../flask/docs/security.rst:241
 msgid ""
 "This tells the browser to authenticate with the server using only the "
 "specific certificate key to prevent MITM attacks."
@@ -543,7 +522,7 @@ msgstr ""
 "認証するよう、ブラウザに指示します。"
 
 # 3e85beadc553448d86d6f1f6984857e3
-#: ../../flask/docs/security.rst:257
+#: ../../flask/docs/security.rst:245
 msgid ""
 "Be careful when enabling this, as it is very difficult to undo if you set"
 " up or upgrade your key incorrectly."
@@ -552,36 +531,36 @@ msgstr ""
 "難しいため、これを有効にするときは注意してください。"
 
 # 3b624609acbe42998fdcb3a3df476525
-#: ../../flask/docs/security.rst:260
+#: ../../flask/docs/security.rst:248
 msgid "https://developer.mozilla.org/en-US/docs/Web/HTTP/Public_Key_Pinning"
 msgstr ""
 
-#: ../../flask/docs/security.rst:264
+#: ../../flask/docs/security.rst:252
 msgid "Copy/Paste to Terminal"
 msgstr ""
 
-#: ../../flask/docs/security.rst:266
+#: ../../flask/docs/security.rst:254
 msgid ""
 "Hidden characters such as the backspace character (``\\b``, ``^H``) can "
 "cause text to render differently in HTML than how it is interpreted if "
 "`pasted into a terminal <https://security.stackexchange.com/q/39118>`__."
 msgstr ""
 
-#: ../../flask/docs/security.rst:270
+#: ../../flask/docs/security.rst:258
 msgid ""
 "For example, ``import y\\bose\\bm\\bi\\bt\\be\\b`` renders as ``import "
 "yosemite`` in HTML, but the backspaces are applied when pasted into a "
 "terminal, and it becomes ``import os``."
 msgstr ""
 
-#: ../../flask/docs/security.rst:274
+#: ../../flask/docs/security.rst:262
 msgid ""
 "If you expect users to copy and paste untrusted code from your site, such"
 " as from comments posted by users on a technical blog, consider applying "
 "extra filtering, such as replacing all ``\\b`` characters."
 msgstr ""
 
-#: ../../flask/docs/security.rst:282
+#: ../../flask/docs/security.rst:270
 msgid ""
 "Most modern terminals will warn about and remove hidden characters when "
 "pasting, so this isn't strictly necessary. It's also possible to craft "
@@ -589,4 +568,26 @@ msgid ""
 "Depending on your site's use case, it may be good to show a warning about"
 " copying code in general."
 msgstr ""
+
+# d7315452e32f4b7d9b2d54ac80c0c46e
+#~ msgid "X-XSS-Protection"
+#~ msgstr ""
+
+# 7fdc2627489c48ad8146c81595831551
+#~ msgid ""
+#~ "The browser will try to prevent "
+#~ "reflected XSS attacks by not loading "
+#~ "the page if the request contains "
+#~ "something that looks like JavaScript and"
+#~ " the response contains the same data."
+#~ " ::"
+#~ msgstr ""
+#~ "もしもリクエストがなにかJavaScriptのようなものを含み、レスポンスも同じデータを含んでいる場合に、ページを読み込まないようにすることで、ブラウザがreflected"
+#~ " XSS攻撃を防ぐよう試みるようにします。"
+
+# 67127aa57511409da3682a0e8fe9482e
+#~ msgid ""
+#~ "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X"
+#~ "-XSS-Protection"
+#~ msgstr ""
 

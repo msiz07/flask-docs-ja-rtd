@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-21 20:07+0900\n"
+"POT-Creation-Date: 2022-11-20 18:38+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,63 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
+
+#: ../../flask/docs/server.rst:36
+msgid "Fish"
+msgstr ""
+
+#: ../../flask/docs/server.rst:78
+msgid "Address already in use"
+msgstr ""
+
+#: ../../flask/docs/server.rst:80
+msgid ""
+"If another program is already using port 5000, you'll see an ``OSError`` "
+"when the server tries to start. It may have one of the following "
+"messages:"
+msgstr ""
+
+#: ../../flask/docs/server.rst:84
+msgid "``OSError: [Errno 98] Address already in use``"
+msgstr ""
+
+#: ../../flask/docs/server.rst:85
+msgid ""
+"``OSError: [WinError 10013] An attempt was made to access a socket in a "
+"way forbidden by its access permissions``"
+msgstr ""
+
+#: ../../flask/docs/server.rst:88
+msgid ""
+"Either identify and stop the other program, or use ``flask run --port "
+"5001`` to pick a different port."
+msgstr ""
+
+#: ../../flask/docs/server.rst:91
+msgid ""
+"You can use ``netstat`` or ``lsof`` to identify what process id is using "
+"a port, then use other operating system tools stop that process. The "
+"following example shows that process id 6847 is using port 5000."
+msgstr ""
+
+#: ../../flask/docs/server.rst:97
+msgid "``netstat`` (Linux)"
+msgstr ""
+
+#: ../../flask/docs/server.rst:104
+msgid "``lsof`` (macOS / Linux)"
+msgstr ""
+
+#: ../../flask/docs/server.rst:111
+msgid "``netstat`` (Windows)"
+msgstr ""
+
+#: ../../flask/docs/server.rst:118
+msgid ""
+"macOS Monterey and later automatically starts a service that uses port "
+"5000. To disable the service, go to System Preferences, Sharing, and "
+"disable \"AirPlay Receiver\"."
+msgstr ""
 
 # d29f4d0ccb9347f488719169fe4f2e78
 #: ../../flask/docs/server.rst:4
@@ -57,16 +114,16 @@ msgstr ""
 msgid "Bash"
 msgstr ""
 
-#: ../../flask/docs/server.rst:36
+#: ../../flask/docs/server.rst:44
 msgid "CMD"
 msgstr ""
 
-#: ../../flask/docs/server.rst:44
+#: ../../flask/docs/server.rst:52
 msgid "Powershell"
 msgstr ""
 
 # a6a4003694b3454db1e0c02fb2e76d45
-#: ../../flask/docs/server.rst:52
+#: ../../flask/docs/server.rst:60
 msgid ""
 "This enables the development environment, including the interactive "
 "debugger and reloader, and then starts the server on "
@@ -81,7 +138,7 @@ msgstr ""
 "使用してください。"
 
 # 6e247eb51ccf41dc8cd7a0284db05f65
-#: ../../flask/docs/server.rst:60
+#: ../../flask/docs/server.rst:68
 msgid ""
 "Prior to Flask 1.0 the ``FLASK_ENV`` environment variable was not "
 "supported and you needed to enable debug mode by exporting "
@@ -93,11 +150,11 @@ msgstr ""
 "これは今でもデバッグモードの制御に使用可能ですが、上述した開発環境の"
 "設定の方が好ましいものです。"
 
-#: ../../flask/docs/server.rst:68
+#: ../../flask/docs/server.rst:124
 msgid "Lazy or Eager Loading"
 msgstr ""
 
-#: ../../flask/docs/server.rst:70
+#: ../../flask/docs/server.rst:126
 msgid ""
 "When using the ``flask run`` command with the reloader, the server will "
 "continue to run even if you introduce syntax errors or other "
@@ -106,7 +163,7 @@ msgid ""
 " feature is called \"lazy loading\"."
 msgstr ""
 
-#: ../../flask/docs/server.rst:76
+#: ../../flask/docs/server.rst:132
 msgid ""
 "If a syntax error is already present when calling ``flask run``, it will "
 "fail immediately and show the traceback rather than waiting until the "
@@ -114,7 +171,7 @@ msgid ""
 "while still allowing the server to handle errors on reload."
 msgstr ""
 
-#: ../../flask/docs/server.rst:81
+#: ../../flask/docs/server.rst:137
 msgid ""
 "To override this behavior and always fail immediately, even on reload, "
 "pass the ``--eager-loading`` option. To always keep the server running, "
@@ -122,11 +179,11 @@ msgid ""
 msgstr ""
 
 # ffae13bdd6ac455981d2d89f6ba76bd3
-#: ../../flask/docs/server.rst:87
+#: ../../flask/docs/server.rst:143
 msgid "In Code"
 msgstr "コードの中"
 
-#: ../../flask/docs/server.rst:89
+#: ../../flask/docs/server.rst:145
 msgid ""
 "As an alternative to the ``flask run`` command, the development server "
 "can also be started from Python with the :meth:`Flask.run` method. This "
@@ -135,14 +192,14 @@ msgid ""
 " there are errors when reloading."
 msgstr ""
 
-#: ../../flask/docs/server.rst:95
+#: ../../flask/docs/server.rst:151
 msgid ""
 "``debug=True`` can be passed to enable the debugger and reloader, but the"
 " ``FLASK_ENV=development`` environment variable is still required to "
 "fully enable development mode."
 msgstr ""
 
-#: ../../flask/docs/server.rst:99
+#: ../../flask/docs/server.rst:155
 msgid ""
 "Place the call in a main block, otherwise it will interfere when trying "
 "to import and run the application with a production server later."
@@ -157,10 +214,10 @@ msgstr ""
 #~ " but you can also continue using "
 #~ "the :meth:`Flask.run` method."
 #~ msgstr ""
-#~ "Flask 0.11から、開発サーバを実行する複数の組み込まれた（最初からFlaskで"
-#~ "用意している）やり方があります。最も良いやり方のひとつは\ :command:`flask`\ "
-#~ "コマンドラインユーティリティですが、\ :meth:`Flask.run`\ メソッドを使い"
-#~ "続けることもできます。"
+#~ "Flask "
+#~ "0.11から、開発サーバを実行する複数の組み込まれた（最初からFlaskで用意している）やり方があります。最も良いやり方のひとつは\\"
+#~ " :command:`flask`\\ コマンドラインユーティリティですが、\\ "
+#~ ":meth:`Flask.run`\\ メソッドを使い続けることもできます。"
 
 # 7897f9c6c6be489cb1502189dcfc0e08
 #~ msgid ""
@@ -171,10 +228,8 @@ msgstr ""
 #~ " it loads the application.  The basic"
 #~ " usage is like this::"
 #~ msgstr ""
-#~ ":command:`flask`\ コマンドラインスクリプト（\ :ref:`cli`\ ）は、"
-#~ "アプリケーションの読み込み（load）のやり方によって、読み込みに関して"
-#~ "より優れた経験を提供してくれるため、強く推奨されています。基本的な"
-#~ "使い方は以下のようになります::"
+#~ ":command:`flask`\\ コマンドラインスクリプト（\\ :ref:`cli`\\ "
+#~ "）は、アプリケーションの読み込み（load）のやり方によって、読み込みに関してより優れた経験を提供してくれるため、強く推奨されています。基本的な使い方は以下のようになります::"
 
 # a7cff2c9bac1485fa49e4d91e452f8b7
 #~ msgid ""
@@ -184,9 +239,8 @@ msgstr ""
 #~ " instance the reloader can be "
 #~ "disabled::"
 #~ msgstr ""
-#~ "サーバの個々の目玉機能（feature）は、\ ``run``\ のオプションをより多く"
-#~ "与えることで制御可能です。例えば、（以下のようにして）再読み込み機能を"
-#~ "無効にできます::"
+#~ "サーバの個々の目玉機能（feature）は、\\ ``run``\\ "
+#~ "のオプションをより多く与えることで制御可能です。例えば、（以下のようにして）再読み込み機能を無効にできます::"
 
 # 0a513a4182f6481fb600a6a8b8e353c1
 #~ msgid ""
@@ -196,9 +250,9 @@ msgstr ""
 #~ "a local server exactly the same "
 #~ "way the :command:`flask` script does."
 #~ msgstr ""
-#~ "アプリケーションを開始する別のやり方は、\ :meth:`Flask.run`\ メソッドを"
-#~ "とおすものです。これは\ :command:`flask`\ スクリプトが行うのと全く同じ"
-#~ "ようにローカルサーバを即座に起動します。"
+#~ "アプリケーションを開始する別のやり方は、\\ :meth:`Flask.run`\\ "
+#~ "メソッドをとおすものです。これは\\ :command:`flask`\\ "
+#~ "スクリプトが行うのと全く同じようにローカルサーバを即座に起動します。"
 
 # ab1195ecd7114358b8d5aaee6013e788
 #~ msgid "Example::"
@@ -218,19 +272,15 @@ msgstr ""
 #~ "crashing without message or dying when"
 #~ " a syntax or import error happens)."
 #~ msgstr ""
-#~ "これは普通のケースでは上手く機能しますが、開発向けには上手く機能せず、"
-#~ "それがFlask 0.11以後は\ :command:`flask`\ が推奨される理由になっています。"
-#~ "この理由は、再読み込みの機構を機能させるための仕組みによって、奇怪な副作用が"
-#~ "生じるためです（あるコードを2回実行したり、ときにはメッセージなしでクラッシュ"
-#~ "したり、またはsyntax errorおよびimport errorが発生したとき死んでしまったり"
-#~ "するようなことがあります）。"
+#~ "これは普通のケースでは上手く機能しますが、開発向けには上手く機能せず、それがFlask 0.11以後は\\ "
+#~ ":command:`flask`\\ "
+#~ "が推奨される理由になっています。この理由は、再読み込みの機構を機能させるための仕組みによって、奇怪な副作用が生じるためです（あるコードを2回実行したり、ときにはメッセージなしでクラッシュしたり、またはsyntax"
+#~ " errorおよびimport errorが発生したとき死んでしまったりするようなことがあります）。"
 
 # 2e46731dc2d546bb953536cdfcb2f849
 #~ msgid ""
 #~ "It is however still a perfectly "
 #~ "valid method for invoking a non "
 #~ "automatic reloading application."
-#~ msgstr ""
-#~ "しかしながら、それでも自動再読み込みをしないアプリケーションを起動する"
-#~ "ときには、（Flask.run()で）コードの中で起動することは完全に適切な手法です。"
+#~ msgstr "しかしながら、それでも自動再読み込みをしないアプリケーションを起動するときには、（Flask.run()で）コードの中で起動することは完全に適切な手法です。"
 

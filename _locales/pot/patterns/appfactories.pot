@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-21 20:07+0900\n"
+"POT-Creation-Date: 2022-11-20 18:38+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -89,44 +89,49 @@ msgid "To run such an application, you can use the :command:`flask` command:"
 msgstr ""
 
 #: ../../flask/docs/patterns/appfactories.rst:94
-#: ../../flask/docs/patterns/appfactories.rst:120
+#: ../../flask/docs/patterns/appfactories.rst:127
 msgid "Bash"
 msgstr ""
 
 #: ../../flask/docs/patterns/appfactories.rst:101
-#: ../../flask/docs/patterns/appfactories.rst:127
-msgid "CMD"
+#: ../../flask/docs/patterns/appfactories.rst:134
+msgid "Fish"
 msgstr ""
 
 #: ../../flask/docs/patterns/appfactories.rst:108
-#: ../../flask/docs/patterns/appfactories.rst:134
-msgid "Powershell"
+#: ../../flask/docs/patterns/appfactories.rst:141
+msgid "CMD"
 msgstr ""
 
 #: ../../flask/docs/patterns/appfactories.rst:115
+#: ../../flask/docs/patterns/appfactories.rst:148
+msgid "Powershell"
+msgstr ""
+
+#: ../../flask/docs/patterns/appfactories.rst:122
 msgid "Flask will automatically detect the factory (``create_app`` or ``make_app``) in ``myapp``. You can also pass arguments to the factory like this:"
 msgstr ""
 
-#: ../../flask/docs/patterns/appfactories.rst:141
+#: ../../flask/docs/patterns/appfactories.rst:155
 msgid "Then the ``create_app`` factory in ``myapp`` is called with the string ``'dev'`` as the argument. See :doc:`/cli` for more detail."
 msgstr ""
 
-#: ../../flask/docs/patterns/appfactories.rst:145
+#: ../../flask/docs/patterns/appfactories.rst:159
 msgid "Factory Improvements"
 msgstr ""
 
-#: ../../flask/docs/patterns/appfactories.rst:147
+#: ../../flask/docs/patterns/appfactories.rst:161
 msgid "The factory function above is not very clever, but you can improve it. The following changes are straightforward to implement:"
 msgstr ""
 
-#: ../../flask/docs/patterns/appfactories.rst:150
+#: ../../flask/docs/patterns/appfactories.rst:164
 msgid "Make it possible to pass in configuration values for unit tests so that you don't have to create config files on the filesystem."
 msgstr ""
 
-#: ../../flask/docs/patterns/appfactories.rst:152
+#: ../../flask/docs/patterns/appfactories.rst:166
 msgid "Call a function from a blueprint when the application is setting up so that you have a place to modify attributes of the application (like hooking in before/after request handlers etc.)"
 msgstr ""
 
-#: ../../flask/docs/patterns/appfactories.rst:155
+#: ../../flask/docs/patterns/appfactories.rst:169
 msgid "Add in WSGI middlewares when the application is being created if necessary."
 msgstr ""

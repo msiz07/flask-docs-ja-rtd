@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-21 20:07+0900\n"
+"POT-Creation-Date: 2022-11-20 18:38+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -172,90 +172,78 @@ msgstr ""
 msgid "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options"
 msgstr ""
 
-#: ../../flask/docs/security.rst:177
-msgid "X-XSS-Protection"
-msgstr ""
-
 #: ../../flask/docs/security.rst:179
-msgid "The browser will try to prevent reflected XSS attacks by not loading the page if the request contains something that looks like JavaScript and the response contains the same data. ::"
-msgstr ""
-
-#: ../../flask/docs/security.rst:185
-msgid "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection"
-msgstr ""
-
-#: ../../flask/docs/security.rst:191
 msgid "Set-Cookie options"
 msgstr ""
 
-#: ../../flask/docs/security.rst:193
+#: ../../flask/docs/security.rst:181
 msgid "These options can be added to a ``Set-Cookie`` header to improve their security. Flask has configuration options to set these on the session cookie. They can be set on other cookies too."
 msgstr ""
 
-#: ../../flask/docs/security.rst:197
+#: ../../flask/docs/security.rst:185
 msgid "``Secure`` limits cookies to HTTPS traffic only."
 msgstr ""
 
-#: ../../flask/docs/security.rst:198
+#: ../../flask/docs/security.rst:186
 msgid "``HttpOnly`` protects the contents of cookies from being read with JavaScript."
 msgstr ""
 
-#: ../../flask/docs/security.rst:200
+#: ../../flask/docs/security.rst:188
 msgid "``SameSite`` restricts how cookies are sent with requests from external sites. Can be set to ``'Lax'`` (recommended) or ``'Strict'``. ``Lax`` prevents sending cookies with CSRF-prone requests from external sites, such as submitting a form. ``Strict`` prevents sending cookies with all external requests, including following regular links."
 msgstr ""
 
-#: ../../flask/docs/security.rst:216
+#: ../../flask/docs/security.rst:204
 msgid "Specifying ``Expires`` or ``Max-Age`` options, will remove the cookie after the given time, or the current time plus the age, respectively. If neither option is set, the cookie will be removed when the browser is closed. ::"
 msgstr ""
 
-#: ../../flask/docs/security.rst:223
+#: ../../flask/docs/security.rst:211
 msgid "For the session cookie, if :attr:`session.permanent <flask.session.permanent>` is set, then :data:`PERMANENT_SESSION_LIFETIME` is used to set the expiration. Flask's default cookie implementation validates that the cryptographic signature is not older than this value. Lowering this value may help mitigate replay attacks, where intercepted cookies can be sent at a later time. ::"
 msgstr ""
 
-#: ../../flask/docs/security.rst:241
+#: ../../flask/docs/security.rst:229
 msgid "Use :class:`itsdangerous.TimedSerializer` to sign and validate other cookie values (or any values that need secure signatures)."
 msgstr ""
 
-#: ../../flask/docs/security.rst:244
+#: ../../flask/docs/security.rst:232
 msgid "https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies"
 msgstr ""
 
-#: ../../flask/docs/security.rst:245
+#: ../../flask/docs/security.rst:233
 msgid "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie"
 msgstr ""
 
-#: ../../flask/docs/security.rst:251
+#: ../../flask/docs/security.rst:239
 msgid "HTTP Public Key Pinning (HPKP)"
 msgstr ""
 
-#: ../../flask/docs/security.rst:253
+#: ../../flask/docs/security.rst:241
 msgid "This tells the browser to authenticate with the server using only the specific certificate key to prevent MITM attacks."
 msgstr ""
 
-#: ../../flask/docs/security.rst:257
+#: ../../flask/docs/security.rst:245
 msgid "Be careful when enabling this, as it is very difficult to undo if you set up or upgrade your key incorrectly."
 msgstr ""
 
-#: ../../flask/docs/security.rst:260
+#: ../../flask/docs/security.rst:248
 msgid "https://developer.mozilla.org/en-US/docs/Web/HTTP/Public_Key_Pinning"
 msgstr ""
 
-#: ../../flask/docs/security.rst:264
+#: ../../flask/docs/security.rst:252
 msgid "Copy/Paste to Terminal"
 msgstr ""
 
-#: ../../flask/docs/security.rst:266
+#: ../../flask/docs/security.rst:254
 msgid "Hidden characters such as the backspace character (``\\b``, ``^H``) can cause text to render differently in HTML than how it is interpreted if `pasted into a terminal <https://security.stackexchange.com/q/39118>`__."
 msgstr ""
 
-#: ../../flask/docs/security.rst:270
+#: ../../flask/docs/security.rst:258
 msgid "For example, ``import y\\bose\\bm\\bi\\bt\\be\\b`` renders as ``import yosemite`` in HTML, but the backspaces are applied when pasted into a terminal, and it becomes ``import os``."
 msgstr ""
 
-#: ../../flask/docs/security.rst:274
+#: ../../flask/docs/security.rst:262
 msgid "If you expect users to copy and paste untrusted code from your site, such as from comments posted by users on a technical blog, consider applying extra filtering, such as replacing all ``\\b`` characters."
 msgstr ""
 
-#: ../../flask/docs/security.rst:282
+#: ../../flask/docs/security.rst:270
 msgid "Most modern terminals will warn about and remove hidden characters when pasting, so this isn't strictly necessary. It's also possible to craft dangerous commands in other ways that aren't possible to filter. Depending on your site's use case, it may be good to show a warning about copying code in general."
 msgstr ""

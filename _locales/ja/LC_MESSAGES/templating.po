@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 1.1.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-21 20:07+0900\n"
+"POT-Creation-Date: 2022-11-20 18:38+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -107,7 +107,9 @@ msgstr "以下のグローバル変数は標準設定で、Jinja2テンプレー
 
 # 536647c5de3c4eaa995d3af9c096c92b
 #: ../../flask/docs/templating.rst:40
-msgid "The current configuration object (:data:`flask.config`)"
+#, fuzzy
+#| msgid "The current configuration object (:data:`flask.config`)"
+msgid "The current configuration object (:data:`flask.Flask.config`)"
 msgstr "その時点の設定オブジェクト（\\ :data:`flask.Flask.config`\\ ）"
 
 # f3143720eab54bb39bcff835fdc76780
@@ -399,6 +401,7 @@ msgstr ""
 #~ " In Flask 0.10 and above, this "
 #~ "happens automatically."
 #~ msgstr ""
-#~ "0.10.以前のFlaskのバージョンでは、\\ ``script``\\ の内側で\\ ``|tojson``\\ の出力を使用する場合、\\ "
-#~ "``|safe``\\ を使ってエスケープを確実に無効にするよう注意してください。Flaskの0.10以上では、これは自動的に起こります。"
+#~ "0.10.以前のFlaskのバージョンでは、\\ ``script``\\ の内側で\\ "
+#~ "``|tojson``\\ の出力を使用する場合、\\ ``|safe``\\ "
+#~ "を使ってエスケープを確実に無効にするよう注意してください。Flaskの0.10以上では、これは自動的に起こります。"
 

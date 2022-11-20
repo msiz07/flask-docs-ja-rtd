@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-21 20:07+0900\n"
+"POT-Creation-Date: 2022-11-20 18:38+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -61,7 +61,7 @@ msgid "Method Based Dispatching"
 msgstr ""
 
 #: ../../flask/docs/views.rst:114
-msgid "For RESTful APIs it's especially helpful to execute a different function for each HTTP method.  With the :class:`flask.views.MethodView` you can easily do that.  Each HTTP method maps to a function with the same name (just in lowercase)::"
+msgid "For RESTful APIs it's especially helpful to execute a different function for each HTTP method.  With the :class:`flask.views.MethodView` you can easily do that.  Each HTTP method maps to a method of the class with the same name (just in lowercase)::"
 msgstr ""
 
 #: ../../flask/docs/views.rst:133
