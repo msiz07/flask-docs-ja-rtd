@@ -17,19 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 
-#: ../../flask/docs/cli.rst:30 ../../flask/docs/cli.rst:167
-#: ../../flask/docs/cli.rst:232 ../../flask/docs/cli.rst:323
-#: ../../flask/docs/cli.rst:378 ../../flask/docs/cli.rst:415
-msgid "Fish"
-msgstr ""
-
-#: ../../flask/docs/cli.rst:113
-msgid ""
-"If another program is already using port 5000, you'll see ``OSError: "
-"[Errno 98]`` or ``OSError: [WinError 10013]`` when the server tries to "
-"start. See :ref:`address-already-in-use` for how to handle that."
-msgstr ""
-
 # 986abb94af9c4a1c9333477e27d591f2
 #: ../../flask/docs/cli.rst:4
 msgid "Command Line Interface"
@@ -71,6 +58,12 @@ msgstr ""
 msgid "Bash"
 msgstr ""
 
+#: ../../flask/docs/cli.rst:30 ../../flask/docs/cli.rst:167
+#: ../../flask/docs/cli.rst:232 ../../flask/docs/cli.rst:323
+#: ../../flask/docs/cli.rst:378 ../../flask/docs/cli.rst:415
+msgid "Fish"
+msgstr ""
+
 #: ../../flask/docs/cli.rst:37 ../../flask/docs/cli.rst:181
 #: ../../flask/docs/cli.rst:243 ../../flask/docs/cli.rst:331
 #: ../../flask/docs/cli.rst:385 ../../flask/docs/cli.rst:421
@@ -93,11 +86,6 @@ msgstr ""
 "``FLASK_APP``\\ "
 "はアプリケーションを指定するための様々なオプションをサポートしていますが、殆どの使用状況はシンプルなものでしょう。典型的な環境変数の値は以下のとおりです::"
 
-# 9c27340fdde54da8917b0da66bfb04cd
-#: ../../flask/docs/cli.rst:57
-msgid "(nothing)"
-msgstr "（何もなし）"
-
 # 606883e7901a4c94942a03ab28fdbc58
 #: ../../flask/docs/cli.rst:55
 msgid ""
@@ -109,10 +97,10 @@ msgstr ""
 "して）importされ、自動的にアプリ（``app`` もしくは ``application``）または"
 "factory（``create_app`` もしくは ``make_app``）が見つけ出されます。"
 
-# b24a3d97c94b4978b95bf671db938923
-#: ../../flask/docs/cli.rst:61
-msgid "``FLASK_APP=hello``"
-msgstr ""
+# 9c27340fdde54da8917b0da66bfb04cd
+#: ../../flask/docs/cli.rst:57
+msgid "(nothing)"
+msgstr "（何もなし）"
 
 # 606883e7901a4c94942a03ab28fdbc58
 #: ../../flask/docs/cli.rst:60
@@ -123,6 +111,11 @@ msgstr ""
 "指定した名前（訳注: 上の例では「hello」にあたる部分）がimportされ、自動的に"
 "アプリ（``app`` もしくは ``application``）またはfactory（``create_app`` "
 "もしくは ``make_app``）が見つけ出されます。"
+
+# b24a3d97c94b4978b95bf671db938923
+#: ../../flask/docs/cli.rst:61
+msgid "``FLASK_APP=hello``"
+msgstr ""
 
 # 96704387cfaf44db91a7b2d7c403a7ac
 #: ../../flask/docs/cli.rst:65
@@ -169,11 +162,6 @@ msgstr ""
 msgid "Uses the ``app2`` Flask instance in ``hello``."
 msgstr "``hello``\\ の中のFlaskインスタンス\\ ``app2``\\ を使用します。"
 
-# 3a4aac51b58d4781aa989a0d676b111a
-#: ../../flask/docs/cli.rst:82
-msgid "``FLASK_APP=\"hello:create_app('dev')\"``"
-msgstr ""
-
 # b12fd0cf91c948bf9bd88313905d96b7
 #: ../../flask/docs/cli.rst:81
 msgid ""
@@ -182,6 +170,11 @@ msgid ""
 msgstr ""
 "``hello``\\ の中にあるfactoryの\\ ``create_app``\\ を、文字列\\ ``'dev'``\\ "
 "を引数に使って呼び出します。"
+
+# 3a4aac51b58d4781aa989a0d676b111a
+#: ../../flask/docs/cli.rst:82
+msgid "``FLASK_APP=\"hello:create_app('dev')\"``"
+msgstr ""
 
 # bd645fb19c924fe881406d3b164480e3
 #: ../../flask/docs/cli.rst:84
@@ -240,6 +233,14 @@ msgstr ""
 "提供されていますが、安全、安定、効率的であるようには特に設計されていません。"
 "本番環境でどうやって実行するかについては :doc:`/deploying/index` を確認"
 "してください。"
+
+#: ../../flask/docs/cli.rst:113
+msgid ""
+"If another program is already using port 5000, you'll see ``OSError: "
+"[Errno 98]`` or ``OSError: [WinError 10013]`` when the server tries to "
+"start. See :ref:`address-already-in-use` for how to handle that."
+msgstr ""
+""
 
 # f7b1eea9531d4ade9fb40776480a5171
 #: ../../flask/docs/cli.rst:120
