@@ -475,10 +475,9 @@ msgstr "UnixのBashでは、\\ :file:`venv/bin/activate`\\ に追加します::"
 
 # 87b45bbdb76342f5a622e166491c5c4e
 #: ../../flask/docs/cli.rst:417
-#, fuzzy
 #| msgid "Unix Bash, :file:`venv/bin/activate`::"
 msgid "Fish, :file:`venv/bin/activate.fish`::"
-msgstr "UnixのBashでは、\\ :file:`venv/bin/activate`\\ に追加します::"
+msgstr "Fishでは、:file:`venv/bin/activate.fish` に追加します::"
 
 # 50b12c41708b4f87a9d01fb1aa24dfee
 #: ../../flask/docs/cli.rst:423
