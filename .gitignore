@@ -15,6 +15,9 @@ _mailinglist
 .pytest_cache/
 .idea/
 docs/_build/
+_build
+
+_venv
 
 # Coverage reports
 htmlcov/
@@ -29,6 +32,7 @@ htmlcov/
 *.mo
 
 # vim temporary files
-.*.sw[a-p]
+.sw[a-p]
+*.sw[a-p]
 *.un~
 *~
