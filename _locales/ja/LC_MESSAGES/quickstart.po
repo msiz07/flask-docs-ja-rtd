@@ -730,7 +730,6 @@ msgstr "これはテンプレートの例です:"
 
 # a901005c7f51415199732d64ca34776e
 #: ../../flask/docs/quickstart.rst:467
-#, fuzzy
 #| msgid "" "Inside templates you also have access to the
 #| :class:`~flask.request`, " ":class:`~flask.session` and :class:`~flask.g`
 #| [#]_ objects as well as the" " :func:`~flask.get_flashed_messages`
@@ -741,9 +740,11 @@ msgid ""
 "[#]_ objects as well as the :func:`~flask.url_for` and "
 ":func:`~flask.get_flashed_messages` functions."
 msgstr ""
-"テンプレートの中では、\\ :func:`~flask.get_flashed_messages`\\ 関数と同様に、\\ "
-":class:`~flask.request`\\ , :class:`~flask.session`, :class:`~flask.g` "
-"[#]_\\ オブジェクトにもアクセスできます。"
+"テンプレートの中では、:func:`~flask.url_for` および "
+":func:`~flask.get_flashed_messages` 関数と同様に、"
+":data:`~flask.Flask.config`、:class:`~flask.request`、"
+":class:`~flask.session`、そして :class:`~flask.g` [#]_ オブジェクトにも"
+"アクセスできます。"
 
 # addddccdc296443d88da6f33e885ca3b
 #: ../../flask/docs/quickstart.rst:471
