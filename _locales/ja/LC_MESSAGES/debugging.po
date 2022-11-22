@@ -17,10 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 
-#: ../../flask/docs/debugging.rst:56 ../../flask/docs/debugging.rst:116
-msgid "Fish"
-msgstr ""
-
 #: ../../flask/docs/debugging.rst:2
 msgid "Debugging Application Errors"
 msgstr "アプリケーション・エラーのデバッグ"
@@ -87,8 +83,8 @@ msgid ""
 "is protected by a pin, but still represents a major security risk. Do not"
 " run the development server or debugger in a production environment."
 msgstr ""
-"デバッガはブラウザから任意のPythonコードを実行できるようにします。それは"
-"pinによって保護されていますが、それでも重要なセキュリティリスクを意味し"
+"このデバッガはブラウザから任意のPythonコードを実行できるようにします。それ"
+"はpinによって保護されていますが、それでも重要なセキュリティリスクを意味し"
 "ます。本番環境では開発サーバやデバッガを走らせないようにしてください。"
 
 #: ../../flask/docs/debugging.rst:42
@@ -99,12 +95,16 @@ msgid ""
 "and reloader."
 msgstr ""
 "デバッガを有効にするには、``FLASK_ENV`` 環境変数を ``development`` に設定"
-"した開発サーバを走らせてください。これはFlaskをデバッグ・モードにし、その"
+"して開発サーバを走らせてください。これはFlaskをデバッグ・モードにし、その"
 "モードではある種のエラーの処理方法を変更し、デバッガと再読み込み機能"
 "（reloader）を有効にします。"
 
 #: ../../flask/docs/debugging.rst:49 ../../flask/docs/debugging.rst:109
 msgid "Bash"
+msgstr ""
+
+#: ../../flask/docs/debugging.rst:56 ../../flask/docs/debugging.rst:116
+msgid "Fish"
 msgstr ""
 
 #: ../../flask/docs/debugging.rst:63 ../../flask/docs/debugging.rst:123
