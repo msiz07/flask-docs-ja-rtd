@@ -87,7 +87,6 @@ msgstr ""
 
 # 829006e4922644c999b73f98132a6d55
 #: ../../flask/docs/deploying/uwsgi.rst:32
-#, fuzzy
 #| msgid "" "The ``--manage-script-name`` will move the handling of
 #| ``SCRIPT_NAME`` to" " uwsgi, since it is smarter about that. It is used
 #| together with the " "``--mount`` directive which will make requests to
@@ -108,14 +107,14 @@ msgid ""
 "callable inside of your application (usually the line reads ``app = "
 "Flask(__name__)``)."
 msgstr ""
-"``--manage-script-name``\ は\ ``SCRIPT_NAME``\ の処理を、より賢く行うuwsgi"
-"へと移動します。それは、\ ``/yourapplication``\ へのリクエストを\ ``myapp:app``\ "
-"へ向かわせる\ ``--mount``\ 指示と一緒に使用されます。もし自分のアプリケーション"
-"がルートのレベルでアクセス可能な場合、\ ``/application``\ の代わりに単なる\ "
-"``/``\ を使用可能です。\ ``myapp``\ はflaskアプリケーションのファイル名（拡張子"
-"を除く）または\ ``app``\ を提供するモジュール名を参照します。\ ``app``\ は"
-"アプリケーションの中で呼び出し可能なもの（callable）（普通は\ ``app = "
-"Flask(__name__)``\ という行）です。"
+"``--manage-script-name`` は ``SCRIPT_NAME`` の処理を、より賢く行うuwsgi"
+"へと移動します。それは、（この例では）``/yourapplication`` へのリクエスト"
+"を ``myapp:app`` へ向かわせる ``--mount`` 指示と一緒に使用されます。もし自分"
+"のアプリケーションがルートのレベルでアクセス可能な場合、``/yourapplication`` "
+"の代わりに単なる ``/`` を使用可能です。``myapp`` はflaskアプリケーションの"
+"ファイル名（拡張子を除く）または ``app`` を提供するモジュール名を参照します。"
+"``app`` はアプリケーションの中で呼び出し可能なもの（callable）（普通は ``app "
+"= Flask(__name__)`` という行）です。"
 
 # 3b8dd81ac5364e9383a922185e79ef63
 #: ../../flask/docs/deploying/uwsgi.rst:42
