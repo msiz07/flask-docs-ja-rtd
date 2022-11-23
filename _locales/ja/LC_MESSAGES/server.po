@@ -28,6 +28,9 @@ msgid ""
 "development server. In development mode, this server provides an "
 "interactive debugger and will reload when code is changed."
 msgstr ""
+"Flaskはアプリケーションを開発サーバを使って走らせる ``run`` コマンドを提供"
+"します。developmentモードでは、このサーバはインタラクティブなデバッガを提供"
+"し、コードが変更されたときは再読み込み（reload）します。"
 
 #: ../../flask/docs/server.rst:12
 msgid ""
@@ -35,10 +38,14 @@ msgid ""
 "intended for use only during local development. It is not designed to be "
 "particularly efficient, stable, or secure."
 msgstr ""
+"本番環境へ展開（deploy）するときは、開発サーバは使わないでください。それは"
+"ローカルでの開発の間だけ使うために意図されたものです。それは効率性、安定性、"
+"セキュリティを特別意識して設計されてはいません。"
 
 #: ../../flask/docs/server.rst:16
 msgid "See :doc:`/deploying/index` for deployment options."
 msgstr ""
+"展開（deploy）のオプションについては :doc:`/deploying/index` を見てください。"
 
 # dbf0ffda21af45388668505442d91cb1
 #: ../../flask/docs/server.rst:19
@@ -52,6 +59,10 @@ msgid ""
 "variable to point to your application, and ``FLASK_ENV=development`` to "
 "fully enable development mode."
 msgstr ""
+"コマンドラインのスクリプトである ``flask run`` は、開発サーバを走らせる推奨"
+"される方法です。flask runが全ての開発モードを有効にするには、``FLASK_APP`` "
+"環境変数は自分のアプリケーションを指し、``FLASK_ENV=development`` と環境変数"
+"が設定されることが必要です。"
 
 #: ../../flask/docs/server.rst:28
 msgid "Bash"
@@ -81,8 +92,8 @@ msgstr ""
 "この例ではインタラクティブなデバッガと再読み込み機能（reloader）を含む、"
 "開発環境を有効にし、それから *http://localhost:5000* でサーバを開始"
 "します。利用可能なオプションを見るには ``flask run --help`` を使用し、"
-"CLIの仕様や設定についての指示（instructions）の詳細は :doc:`/cli` を"
-"使用してください。"
+"CLIの使用や設定についての指示（instructions）の詳細は :doc:`/cli` を"
+"見てください。"
 
 # 6e247eb51ccf41dc8cd7a0284db05f65
 #: ../../flask/docs/server.rst:68
@@ -107,6 +118,9 @@ msgid ""
 "when the server tries to start. It may have one of the following "
 "messages:"
 msgstr ""
+"もし他のプログラムが既に5000番ポートを使用中であるときは、サーバを開始し"
+"ようと試みたときに ``OSError`` を見ることになるでしょう。それは以下の"
+"メッセージの中の1つでしょう。"
 
 #: ../../flask/docs/server.rst:84
 msgid "``OSError: [Errno 98] Address already in use``"
@@ -123,6 +137,8 @@ msgid ""
 "Either identify and stop the other program, or use ``flask run --port "
 "5001`` to pick a different port."
 msgstr ""
+"他のプログラムを特定して停止するか、``flask run --port 5001`` を使って"
+"違うポートを選んでください。"
 
 #: ../../flask/docs/server.rst:91
 msgid ""
@@ -130,6 +146,10 @@ msgid ""
 "a port, then use other operating system tools stop that process. The "
 "following example shows that process id 6847 is using port 5000."
 msgstr ""
+"ポートを使っているのがどのプロセスIDなのか特定するために ``netstat`` "
+"または ``lsof`` を使うことができ、それからOSの他のツールを使ってその"
+"プロセスを止めてください。以下の例は、プロセスIDが6847のプロセスが5000番"
+"ポートを使っていることを示しています。"
 
 #: ../../flask/docs/server.rst:97
 msgid "``netstat`` (Linux)"
@@ -149,10 +169,13 @@ msgid ""
 "5000. To disable the service, go to System Preferences, Sharing, and "
 "disable \"AirPlay Receiver\"."
 msgstr ""
+"macOS Monterey以降は、自動的に5000番ポートを使うサービスを開始します。"
+"そのサービスを無効にするには、System Preferences、Sharingへ行き、"
+"「AirPlay Receiver」を無効にします。"
 
 #: ../../flask/docs/server.rst:124
 msgid "Lazy or Eager Loading"
-msgstr ""
+msgstr "遅延または先読みローディング（Lazy or Eager Loading）"
 
 #: ../../flask/docs/server.rst:126
 msgid ""
@@ -162,6 +185,11 @@ msgid ""
 "interactive debugger for the error, rather than crashing the server. This"
 " feature is called \"lazy loading\"."
 msgstr ""
+"再読み込み機能（reloader）と一緒に ``flask run`` コマンドを使うとき、もし"
+"文法エラーまたはその他の初期化エラーをコードに導入してしまった場合でも、"
+"そのサーバーは走り続けようとします。サイトへアクセスすると、サーバが"
+"クラッシュするのではなく、エラーに対するインタラクティブなデバッガを見ら"
+"れるでしょう。この機能は「遅延読み込み（lazy loading）」と呼ばれています。"
 
 #: ../../flask/docs/server.rst:132
 msgid ""
@@ -170,6 +198,10 @@ msgid ""
 "site is accessed. This is intended to make errors more visible initially "
 "while still allowing the server to handle errors on reload."
 msgstr ""
+"もし ``flask run`` を呼んだとき文法エラーが既に存在している場合、サイトに"
+"アクセスされるまで待つのではなく、flask runコマンドは即座に失敗してトレース"
+"バックを表示します。サーバーがreload時はエラーを処理できるようにしながら、"
+"最初はエラーをより可視化させるために、これは意図されたものです。"
 
 #: ../../flask/docs/server.rst:137
 msgid ""
@@ -177,6 +209,10 @@ msgid ""
 "pass the ``--eager-loading`` option. To always keep the server running, "
 "even on the initial call, pass ``--lazy-loading``."
 msgstr ""
+"この振る舞いを上書きして、reload時であっても、（エラーがあったときは）常に"
+"即座に失敗させるには、``--eager-loading`` オプションを渡します。最初に呼ば"
+"れたときであっても、常にサーバが走り続けるようにするには、``--lazy-loading`` "
+"を渡します。"
 
 # ffae13bdd6ac455981d2d89f6ba76bd3
 #: ../../flask/docs/server.rst:143
@@ -191,6 +227,10 @@ msgid ""
 "The main difference from the CLI command is that the server will crash if"
 " there are errors when reloading."
 msgstr ""
+"``flask run`` コマンドの代替手段として、開発サーバはPythonから :meth:"
+"`Flask.run` を使っても開始できます。このメソッドはサーバーを制御するために"
+"CLIのオプションと似た引数を取ります。CLIコマンドからの主な違いは、reload時"
+"にエラーがあればクラッシュすることです。"
 
 #: ../../flask/docs/server.rst:151
 msgid ""
@@ -198,12 +238,18 @@ msgid ""
 " ``FLASK_ENV=development`` environment variable is still required to "
 "fully enable development mode."
 msgstr ""
+"デバッガとreloaderを有効にするために（Flask.runに） ``debug=True`` を渡す"
+"ことができますが、まだ ``FLASK_ENV=development`` 環境変数は全ての開発モード"
+"を有効にするために必要です。"
 
 #: ../../flask/docs/server.rst:155
 msgid ""
 "Place the call in a main block, otherwise it will interfere when trying "
 "to import and run the application with a production server later."
 msgstr ""
+"mainのブロック内にFlask.runの呼び出しを置いてください。そうしないと、後で"
+"本番環境のサーバー内でアプリケーションをimportして走らせようとするときに、"
+"その呼び出しが邪魔をするでしょう。"
 
 # 5daf83a5c4a04d47aa5c853419bccb46
 #~ msgid ""
