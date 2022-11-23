@@ -69,13 +69,11 @@ msgstr ""
 
 # 401dd83ddda449419e151c716f23f7c2
 #: ../../flask/docs/shell.rst:24
-#, fuzzy
 #| msgid "" "Generally it's recommended that you read the :doc:`reqcontext`
 #| chapter of" " the documentation first."
 msgid "Generally it's recommended that you read :doc:`reqcontext` first."
 msgstr ""
-"概して、まずはドキュメントの :doc:`reqcontext` の章を読んでおくことが"
-"推奨されます。"
+"概して、まずは :doc:`reqcontext` を読んでおくことが推奨されます。"
 
 # c063ae40d0c24a5a821a1b11e792b762
 #: ../../flask/docs/shell.rst:27
