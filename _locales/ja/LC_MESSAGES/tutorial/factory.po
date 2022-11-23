@@ -17,17 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 
-#: ../../flask/docs/tutorial/factory.rst:148
-msgid "Fish"
-msgstr ""
-
-#: ../../flask/docs/tutorial/factory.rst:188
-msgid ""
-"If another program is already using port 5000, you'll see ``OSError: "
-"[Errno 98]`` or ``OSError: [WinError 10013]`` when the server tries to "
-"start. See :ref:`address-already-in-use` for how to handle that."
-msgstr ""
-
 # 1dae90216daa4358ab0187edd570d335
 #: ../../flask/docs/tutorial/factory.rst:4
 msgid "Application Setup"
@@ -265,6 +254,10 @@ msgstr ""
 msgid "Bash"
 msgstr ""
 
+#: ../../flask/docs/tutorial/factory.rst:148
+msgid "Fish"
+msgstr ""
+
 #: ../../flask/docs/tutorial/factory.rst:156
 msgid "CMD"
 msgstr ""
@@ -288,6 +281,17 @@ msgstr ""
 "http://127.0.0.1:5000/hello\ をブラウザで訪れると「Hello, World!」"
 "メッセージを見られるはずです。おめでとうございます、この時点で自分の"
 "Flask webアプリケーションを実行中です！"
+
+#: ../../flask/docs/tutorial/factory.rst:188
+msgid ""
+"If another program is already using port 5000, you'll see ``OSError: "
+"[Errno 98]`` or ``OSError: [WinError 10013]`` when the server tries to "
+"start. See :ref:`address-already-in-use` for how to handle that."
+msgstr ""
+"もし他のプログラムが既に5000番ポートを使用中であるときは、サーバを開始し"
+"ようと試みたときに ``OSError: [Errno 98]`` または ``OSError: [WinError "
+"10013]`` を見ることになるでしょう。それらにどのように対処するかについて"
+"は、:ref:`address-already-in-use` を見てください。"
 
 # 6c057672de284ae5a719c4f0db3b95f5
 #: ../../flask/docs/tutorial/factory.rst:193
