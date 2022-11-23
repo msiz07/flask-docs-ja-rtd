@@ -208,7 +208,6 @@ msgstr "``username``\ と\ ``password``\ が空でないか検証します。"
 
 # bcfac4cfbdbc42f7b7d2b9115c9efbd2
 #: ../../flask/docs/tutorial/views.rst:130
-#, fuzzy
 #| msgid "" "Validate that ``username`` is not already registered by querying
 #| the " "database and checking if a result is returned. :meth:`db.execute "
 #| "<sqlite3.Connection.execute>` takes a SQL query with ``?`` placeholders "
@@ -221,16 +220,13 @@ msgid ""
 "the placeholders with. The database library will take care of escaping "
 "the values so you are not vulnerable to a *SQL injection attack*."
 msgstr ""
-"``username``\ が登録済でないことを、データベースに問合せして結果が返るか"
-"調べることで検証します。\ :meth:`db.execute <sqlite3.Connection.execute>`\ "
-"は、ユーザのどの入力にも対応するプレースホルダ\ ``?``\ を持つSQLのqueryと、"
-"プレースホルダを置き換える値のtupleを受け取ります。データベースライブラリは"
-"\ *SQLインジェクション攻撃*\ に対して脆弱にならないように、値のエスケープを"
-"取り計らいます。"
+":meth:`db.execute <sqlite3.Connection.execute>` は、ユーザのどの入力にも対応"
+"するプレースホルダ ``?`` を持つSQLのqueryと、プレースホルダを置き換える値の"
+"tupleを受け取ります。データベースライブラリは *SQLインジェクション攻撃* に"
+"対して脆弱にならないように、値のエスケープを取り計らいます。"
 
 # a11409be0edf48a8b97855ae3bef0d01
 #: ../../flask/docs/tutorial/views.rst:136
-#, fuzzy
 #| msgid "" "If validation succeeds, insert the new user data into the
 #| database. For " "security, passwords should never be stored in the database
 #| directly. " "Instead, :func:`~werkzeug.security.generate_password_hash` is
@@ -244,13 +240,11 @@ msgid ""
 "modifies data, :meth:`db.commit() <sqlite3.Connection.commit>` needs to "
 "be called afterwards to save the changes."
 msgstr ""
-"もし検証が成功した場合は、新しいユーザのデータをデータベースへinsert"
-"します。セキュリティのために、パスワードは決してデータベースへ直接格納"
-"しないようにするべきです。代わりに、\ :func:"
-"`~werkzeug.security.generate_password_hash`\ を使用してパスワードを安全に"
-"ハッシュし、そのハッシュを格納します。このqueryはデータを変更するため、"
-"変更を保存した後に\ :meth:`db.commit() <sqlite3.Connection.commit>`\ を"
-"呼び出す必要があります。"
+"セキュリティのために、パスワードは決してデータベースへ直接格納しないように"
+"するべきです。代わりに、:func:`~werkzeug.security.generate_password_hash` を"
+"使用してパスワードを安全にハッシュし、そのハッシュを格納します。このqueryは"
+"データを変更するため、変更を保存するために :meth:`db.commit() "
+"<sqlite3.Connection.commit>` を後で呼び出す必要があります。"
 
 # bf107b82dc6a487fa2fc34b23bb59ffe
 #: ../../flask/docs/tutorial/views.rst:148
@@ -313,7 +307,6 @@ msgstr ""
 
 # 9bbd7158ac03480da40853d0e59e419c
 #: ../../flask/docs/tutorial/views.rst:202
-#, fuzzy
 #| msgid "" ":meth:`~sqlite3.Cursor.fetchone` returns one row from the query.
 #| If the " "query returned no results, it returns ``None``. Later, "
 #| ":meth:`~sqlite3.Cursor.fetchall` is used, which returns a list of all "
@@ -324,9 +317,9 @@ msgid ""
 ":meth:`~sqlite3.Cursor.fetchall` will be used, which returns a list of "
 "all results."
 msgstr ""
-":meth:`~sqlite3.Cursor.fetchone`\ はquery（の結果）から1行を返します。"
-"もしqueryが何も結果を返さない場合は、\ ``None``\ を返します。後程、すべての"
-"結果のリストを返す\ :meth:`~sqlite3.Cursor.fetchall`\ が使用されます。"
+":meth:`~sqlite3.Cursor.fetchone` はquery（の結果）から1行を返します。"
+"もしqueryが何も結果を返さない場合は、``None`` を返します。後程、すべての"
+"結果のリストを返す :meth:`~sqlite3.Cursor.fetchall` が使用されます。"
 
 # 2382cf33e47e40f398092936357ea6d0
 #: ../../flask/docs/tutorial/views.rst:207
