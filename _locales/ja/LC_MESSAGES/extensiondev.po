@@ -29,8 +29,9 @@ msgid ""
 "get a third party library working. Many such extensions are already "
 "available on `PyPI`_."
 msgstr ""
-"Flaskは、小さなフレームワークなので、サードパーティのライブラリを機能させるために、しばしば反復的なステップを要求します。そのようなFlask拡張の多くは\\"
-" `PyPI`_\\ で入手可能です。"
+"Flaskは、小さなフレームワークなので、サードパーティのライブラリを機能"
+"させるために、しばしば反復的なステップを要求します。そのようなFlask拡張"
+"の多くは `PyPI`_ で入手可能です。"
 
 # 67d2ec6fde344ea79695b8c8a950410b
 #: ../../flask/docs/extensiondev.rst:8
@@ -39,7 +40,11 @@ msgid ""
 "not exist yet, this guide to extension development will help you get your"
 " extension running in no time and to feel like users would expect your "
 "extension to behave."
-msgstr "まだ存在しない何かしら用にもし自分独自のFlask拡張を作りたい場合は、時間をかけずに自分のFlask拡張を走らせ、あなたのFlask拡張は動くとユーザが予想するようになるだろうと感じるために、Flask拡張開発のためのこのガイドが手助けになるでしょう。"
+msgstr ""
+"まだ存在しない何かしら用にもし自分独自のFlask拡張を作りたい場合は、時間"
+"をかけずに自分のFlask拡張を走らせ、あなたのFlask拡張は動くとユーザが予想"
+"するようになるだろうと感じるために、Flask拡張開発のためのこのガイドが手助"
+"けになるでしょう。"
 
 # 82efb51cfa934a3590dc5f518494da7d
 #: ../../flask/docs/extensiondev.rst:14
@@ -54,10 +59,11 @@ msgid ""
 "example if you plan to add support for a library named `simplexml` to "
 "Flask, you would name your extension's package ``flask_simplexml``."
 msgstr ""
-"Flask拡張はすべて、「something」部分は橋渡ししたいライブラリの名前とした、\\ ``flask_something``\\ "
-"と呼ばれるパッケージの中に置きます。例えば、もし\\ `simplexml`\\ "
-"という名前のライブラリへのサポートをFlaskへ追加することを計画している場合、そのFlask拡張のパッケージは\\ "
-"``flask_simplexml``\\ と名付けるでしょう。"
+"Flask拡張はすべて、「something」部分は橋渡ししたいライブラリの名前と"
+"した、``flask_something`` と呼ばれるパッケージの中に置きます。例えば、"
+"もし `simplexml` という名前のライブラリへのサポートをFlaskへ追加すること"
+"を計画している場合、そのFlask拡張のパッケージは ``flask_simplexml`` と"
+"名付けるでしょう。"
 
 # a9373f58b34441cba54d7eed86047b71
 #: ../../flask/docs/extensiondev.rst:21
@@ -68,9 +74,12 @@ msgid ""
 "This is how users can then register dependencies to your extension in "
 "their :file:`setup.py` files."
 msgstr ""
-"しかしながら、実際のFlask拡張の名前（（コンピュータ処理用ではなく）人が読める名前）は「Flask-"
-"SimpleXML」のようなものになるでしょう。「Flask」をFlask拡張の名前のどこかに含め、どう大文字を使うかチェックすることを忘れないようにしてください。これ（人が読める名前）が、あなたのFlask拡張への依存関係を\\"
-" :file:`setup.py`\\ ファイルの中でユーザが登録できるようにするやり方になります。"
+"しかしながら、実際のFlask拡張の名前（（コンピュータ処理用ではなく）人が"
+"読める名前）は「Flask-SimpleXML」のようなものになるでしょう。「Flask」を"
+"Flask拡張の名前のどこかに含め、どう大文字を使うかチェックすることを忘れ"
+"ないようにしてください。これ（人が読める名前）が、あなたのFlask拡張への"
+"依存関係を :file:`setup.py` ファイルの中でユーザが登録できるようにする"
+"やり方になります。"
 
 # d2ab1b859b4343db815ac52a8c60bdea
 #: ../../flask/docs/extensiondev.rst:27
@@ -98,8 +107,10 @@ msgid ""
 "work so that people can easily install the development version into their"
 " virtualenv without having to download the library by hand."
 msgstr ""
-"最も重要なこととして、Flask拡張は\\ :file:`setup.py`\\ "
-"ファイルと一緒に出荷されPyPIに登録される必要があります。さらに、人々が手作業でライブラリをダウンロードすることなくvirtualenvに開発バージョンを容易にインストールできるように、開発版チェックアウトのリンクを機能させるべきです。"
+"最も重要なこととして、Flask拡張は :file:`setup.py` ファイルと一緒に出荷"
+"されPyPIに登録される必要があります。さらに、人々が手作業でライブラリを"
+"ダウンロードすることなくvirtualenvに開発バージョンを容易にインストール"
+"できるように、開発版チェックアウトのリンクを機能させるべきです。"
 
 # 83631c84d3e34240b8fd878592f003dc
 #: ../../flask/docs/extensiondev.rst:40
@@ -109,11 +120,13 @@ msgid ""
 "mind that the Flask Extension Registry is a moderated place and libraries"
 " will be reviewed upfront if they behave as required."
 msgstr ""
-"Flask Extension Registry（訳注: コミュニティで認められたFlask拡張のリスト、\\ "
-"**ただしこの翻訳を作成している時点では、今後メンテナンスを続けないことが既に合意されています**\\ "
-"）でリストされるためには、Flask拡張はBSD、MITもしくはもっと自由な（liberal）ライセンスの下におかれる必要があります。Flask "
-"Extension "
-"Registryは議論が管理されている（moderated）場所であり、ライブラリは要求通りの振る舞いをするか事前にレビューされることを覚えておいてください。"
+"Flask Extension Registry（訳注: コミュニティで認められたFlask拡張の"
+"リスト、**ただしこの翻訳を作成している時点では、今後メンテナンスを続け"
+"ないことが既に合意されています**）でリストされるためには、Flask拡張は"
+"BSD、MITもしくはもっと自由な（liberal）ライセンスの下におかれる必要が"
+"あります。Flask Extension Registryは議論が管理されている（moderated）"
+"場所であり、ライブラリは要求通りの振る舞いをするか事前にレビューされる"
+"ことを覚えておいてください。"
 
 # 30fe6bf05e94458eade6234743be86a1
 #: ../../flask/docs/extensiondev.rst:46
@@ -125,7 +138,10 @@ msgstr ""
 msgid ""
 "So let's get started with creating such a Flask extension.  The extension"
 " we want to create here will provide very basic support for SQLite3."
-msgstr "では、ここまで説明したようなFlask拡張の作成を始めましょう。ここで作ろうとしているFlask拡張はSQLite3への非常に基本的なサポートを提供していきます。"
+msgstr ""
+"では、ここまで説明したようなFlask拡張の作成を始めましょう。ここで作ろ"
+"うとしているFlask拡張はSQLite3への非常に基本的なサポートを提供していき"
+"ます。"
 
 # 90f35b13f36941bdbe7a6e9219a21342
 #: ../../flask/docs/extensiondev.rst:51
@@ -149,15 +165,18 @@ msgid ""
 "which is used to install your Flask extension.  The following contents "
 "are something you can work with::"
 msgstr ""
-"絶対必要になる以下のファイルは\\ :file:`setup.py`\\ "
-"ファイルであり、それは自分のFlask拡張をインストールするときに使います。以下の内容は、何かしら、あなたが作業に使うことができるものです::"
+"絶対必要になる以下のファイルは :file:`setup.py` ファイルであり、それは"
+"自分のFlask拡張をインストールするときに使います。以下の内容は、何かしら、"
+"あなたが作業に使うことができるものです::"
 
 # a2bd5feb61a345f4a18355bbbcdbb01f
 #: ../../flask/docs/extensiondev.rst:106
 msgid ""
 "That's a lot of code but you can really just copy/paste that from "
 "existing extensions and adapt."
-msgstr "たくさんのコードですが、既存のFlask拡張から本当にただコピー／ペーストだけして、それから調整できます。"
+msgstr ""
+"たくさんのコードですが、既存のFlask拡張から本当にただコピー／ペースト"
+"だけして、それから調整できます。"
 
 # 650d8fdc216a4e5ba566886388412fc3
 #: ../../flask/docs/extensiondev.rst:110
@@ -170,7 +189,11 @@ msgid ""
 "Now this is where your extension code goes.  But how exactly should such "
 "an extension look like?  What are the best practices?  Continue reading "
 "for some insight."
-msgstr "そして、ここからはFlask拡張の実際のコードに進みます。しかし、先ほど説明したようなFlask拡張は正確にはどのような姿であるべきでしょうか？何がベスト・プラクティスになるのでしょうか？いくらかの洞察を得るために、読み続けてください。"
+msgstr ""
+"そして、ここからはFlask拡張の実際のコードに進みます。しかし、先ほど説明"
+"したようなFlask拡張は正確にはどのような姿であるべきでしょうか？何が"
+"ベスト・プラクティスになるのでしょうか？いくらかの洞察を得るために、読み"
+"続けてください。"
 
 # 2255bfd00af642cfa713764130307301
 #: ../../flask/docs/extensiondev.rst:117
@@ -194,7 +217,9 @@ msgstr ""
 # 0b6f5979b0254be4895cd565f701094c
 #: ../../flask/docs/extensiondev.rst:124
 msgid "Quite simple: you pass it to it."
-msgstr "非常にシンプルです: Flask拡張へアプリケーションのオブジェクトを自分で（訳注: 引数などで明示的に）渡します"
+msgstr ""
+"非常にシンプルです: Flask拡張へアプリケーションのオブジェクトを自分で"
+"（訳注: 引数などで明示的に）渡します"
 
 # e41e7e622b344e3b93e88e43254141f8
 #: ../../flask/docs/extensiondev.rst:126
@@ -213,9 +238,10 @@ msgid ""
 " ``init_helloworld(app[, extra_args])`` that initializes the extension "
 "for that application.  It could attach before / after handlers etc."
 msgstr ""
-"もし自分のFlask拡張が\\ `helloworld`\\ と呼ばれる場合は、アプリケーション用にFlask拡張を初期化する\\ "
-"``init_helloworld(app[, extra_args])``\\ "
-"とよばれる関数を持っているかもしれません。それは事前／事後処理機能（before / after handlers）などを付加するかもしれません。"
+"もし自分のFlask拡張が `helloworld` と呼ばれる場合は、アプリケーション用"
+"にFlask拡張を初期化する ``init_helloworld(app[, extra_args])`` とよばれる"
+"関数を持っているかもしれません。それは事前／事後処理機能（before / after "
+"handlers）などを付加するかもしれません。"
 
 # 1866870390e6413eb1c4fcc7fac38eaf
 #: ../../flask/docs/extensiondev.rst:135
@@ -237,8 +263,10 @@ msgid ""
 " we will use the class-based approach because it will provide users with "
 "an object that handles opening and closing database connections."
 msgstr ""
-"何を使用するかは、何を考えているかに依存します。SQLite "
-"3拡張用には、データベースの接続（connection）の開く処理と閉じる処理を行うオブジェクトをユーザへ提供するため、クラスをベースにしたアプローチを使用していきます。"
+"何を使用するかは、何を考えているかに依存します。SQLite 3拡張用には、"
+"データベースの接続（connection）の開く処理と閉じる処理を行うオブジェ"
+"クトをユーザへ提供するため、クラスをベースにしたアプローチを使用して"
+"いきます。"
 
 # b29b657adcd34d02bb67e68ad2830708
 #: ../../flask/docs/extensiondev.rst:144
@@ -247,7 +275,12 @@ msgid ""
 "at the module level. This means the object itself must not under any "
 "circumstances store any application specific state and must be shareable "
 "between different applications."
-msgstr "クラスを設計するとき、モジュールのレベルで容易に再利用可能にすることが重要です。これは、Flask拡張クラスのオブジェクト（インスタンス）自身は、アプリケーション固有であるあらゆる状態情報を、どのような状況下でも格納してはいけないこと、（Flask拡張クラスのオブジェクトは）違うアプリケーションの間で共有可能にしなければいけないことを意味しています。"
+msgstr ""
+"クラスを設計するとき、モジュールのレベルで容易に再利用可能にすることが"
+"重要です。これは、Flask拡張クラスのオブジェクト（インスタンス）自身は、"
+"アプリケーション固有であるあらゆる状態情報を、どのような状況下でも格納"
+"してはいけないこと、（Flask拡張クラスのオブジェクトは）違うアプリケー"
+"ションの間で共有可能にしなければいけないことを意味しています。"
 
 # 39cb4f1b650549ba861aa43465b68584
 #: ../../flask/docs/extensiondev.rst:150
@@ -257,7 +290,7 @@ msgstr "Flask拡張のコード"
 # d5fa107bc49d42c99b88a4c2bdc2cab7
 #: ../../flask/docs/extensiondev.rst:152
 msgid "Here's the contents of the `flask_sqlite3.py` for copy/paste::"
-msgstr "以下はコピー／ペースト用の\\ `flask_sqlite3.py`\\ の内容です::"
+msgstr "以下はコピー／ペースト用の `flask_sqlite3.py` の内容です::"
 
 # 2b3744ad57934725a48eee9656fd45b0
 #: ../../flask/docs/extensiondev.rst:185
@@ -270,8 +303,8 @@ msgid ""
 "The ``__init__`` method takes an optional app object and, if supplied, "
 "will call ``init_app``."
 msgstr ""
-"``__init__``\\ メソッドは、オプションのappオブジェクトは引き取り、もしappが供給された場合は\\ ``init_app``\\"
-" を呼び出します。"
+"``__init__`` メソッドは、オプションのappオブジェクトは引き取り、もしapp"
+"が供給された場合は ``init_app`` を呼び出します。"
 
 # 293f9b8d889949b298c7eb53a71e9b66
 #: ../../flask/docs/extensiondev.rst:189
@@ -283,17 +316,21 @@ msgid ""
 "no configuration is supplied.  In addition, the ``init_app`` method "
 "attaches the ``teardown`` handler."
 msgstr ""
-"``init_app``\\ メソッドは、appオブジェクトを（Flask拡張内で保持することを）要求することなく\\ ``SQLite3``\\"
-" "
-"オブジェクトを初期化できるようにするために存在します。このメソッドはアプリケーション（Flaskアプリケーションのインスタンス）作成用のfactoryパターンをサポートします。\\"
-" ``init_app``\\ はデータベース用の設定をセットし、もし設定が供給されていない場合はメモリ中のデータベース（in memory "
-"database）を初期設定にします。加えて、この\\ ``init_app``\\ メソッドは\\ ``teardown``\\ "
-"（取り壊し）処理機能（handler）を取り付けます。"
+"``init_app`` メソッドは、appオブジェクトを（Flask拡張内で保持すること"
+"を）要求することなく ``SQLite3`` オブジェクトを初期化できるようにする"
+"ために存在します。このメソッドはアプリケーション（Flaskアプリケーション"
+"のインスタンス）作成用のfactoryパターンをサポートします。``init_app`` "
+"はデータベース用の設定をセットし、もし設定が供給されていない場合はメモリ"
+"中のデータベース（in memory database）を初期設定にします。加えて、この "
+"``init_app`` メソッドは ``teardown`` （取り壊し）処理機能（handler）を"
+"取り付けます。"
 
 # e23e0aa92f034d1ebcf2af36eed381db
 #: ../../flask/docs/extensiondev.rst:195
 msgid "Next, we define a ``connect`` method that opens a database connection."
-msgstr "次に、データベース接続（connection）を開く\\ ``connect``\\ メソッドを定義しています。"
+msgstr ""
+"次に、データベース接続（connection）を開く ``connect`` メソッドを定義"
+"しています。"
 
 # a6dad195071f41b7a9d73d5fc66e9caf
 #: ../../flask/docs/extensiondev.rst:196
@@ -303,9 +340,10 @@ msgid ""
 "recommended way to handling resources: fetch resources lazily the first "
 "time they are used."
 msgstr ""
-"最後に、初めてアクセスしたときにデータベース接続（connection）を開き、それ（データベース接続）をコンテキストに格納する\\ "
-"``connection``\\ プロパティを追加しています。これはリソースを扱う推奨されるやり方でもあります: "
-"リソースが使われる最初の時までリソースの取得を遅らせます。"
+"最後に、初めてアクセスしたときにデータベース接続（connection）を開き、"
+"それ（データベース接続）をコンテキストに格納する ``connection`` プロ"
+"パティを追加しています。これはリソースを扱う推奨されるやり方でもあり"
+"ます: リソースが使われる最初の時までリソースの取得を遅らせます。"
 
 # 8bb20b016ea7405dade75e42a48a77a9
 #: ../../flask/docs/extensiondev.rst:201
@@ -315,16 +353,20 @@ msgid ""
 " top context for storing their own information with a sufficiently "
 "complex name."
 msgstr ""
-"ここでは、データベース接続を（内部管理用のスタックの）一番上のアプリケーションのコンテキストに、\\ "
-"``_app_ctx_stack.top``\\ "
-"を介して取り付けていることに注意してください。Flask拡張は自分の持つ情報を格納するときは、（他のFlask拡張などが使う名前と重複しないように）十分に複雑な名前と一緒に、（内部管理用スタックの）一番上のコンテキストを使うべきです。"
+"ここでは、データベース接続を（内部管理用のスタックの）一番上のアプリ"
+"ケーションのコンテキストに、``_app_ctx_stack.top`` を介して取り付けて"
+"いることに注意してください。Flask拡張は自分の持つ情報を格納するときは、"
+"（他のFlask拡張などが使う名前と重複しないように）十分に複雑な名前と"
+"一緒に、（内部管理用スタックの）一番上のコンテキストを使うべきです。"
 
 # a9934419251b4ceda75f30985c1a9fbf
 #: ../../flask/docs/extensiondev.rst:206
 msgid ""
 "So why did we decide on a class-based approach here?  Because using our "
 "extension looks something like this::"
-msgstr "それでは、なぜここではクラスベースのアプローチに決めたのでしょうか？このFlask拡張は以下に示すような使い方をするためです::"
+msgstr ""
+"それでは、なぜここではクラスベースのアプローチに決めたのでしょうか？この"
+"Flask拡張は以下に示すような使い方をするためです::"
 
 # d586ce53100d4828899fcf1b58d34ca7
 #: ../../flask/docs/extensiondev.rst:216
@@ -337,22 +379,28 @@ msgid ""
 "Likewise if you are outside of a request you can use the database by "
 "pushing an app context::"
 msgstr ""
-"似たようなやり方で、もしリクエストの外側（訳注: "
-"リクエストの処理開始前もしくは終了後で、内部管理用のスタックにアプリケーションのコンテキストがpushされていない状態）であった場合は、appのコンテキストをpushすることでデータベースを使用可能です。::"
+"似たようなやり方で、もしリクエストの外側（訳注: リクエストの処理開始前"
+"もしくは終了後で、内部管理用のスタックにアプリケーションのコンテキストが"
+"pushされていない状態）であった場合は、appのコンテキストをpushすることで"
+"データベースを使用可能です。::"
 
 # 5fe85b5bacc84530b92db912834c98cc
 #: ../../flask/docs/extensiondev.rst:230
 msgid ""
 "At the end of the ``with`` block the teardown handles will be executed "
 "automatically."
-msgstr "``with``\\ ブロックの最後で、取り壊し処理（teardown handles）が自動的に実行されます。"
+msgstr ""
+"``with`` ブロックの最後で、取り壊し処理（teardown handles）が自動的に"
+"実行されます。"
 
 # 5511c9c94a1440b28f08b4209e7569d3
 #: ../../flask/docs/extensiondev.rst:233
 msgid ""
 "Additionally, the ``init_app`` method is used to support the factory "
 "pattern for creating apps::"
-msgstr "加えて、\\ ``init_app``\\ メソッドはapp作成用のfactoryパターンに対応するためにも使用されます::"
+msgstr ""
+"加えて、``init_app`` メソッドはapp作成用のfactoryパターンに対応するため"
+"にも使用されます::"
 
 # 78e860f2bfff44ea8635af762699d82d
 #: ../../flask/docs/extensiondev.rst:241
@@ -360,13 +408,14 @@ msgid ""
 "Keep in mind that supporting this factory pattern for creating apps is "
 "required for approved flask extensions (described below)."
 msgstr ""
-"このapp作成用factoryパターンへの対応は、承認されたFlask拡張（approved flask "
-"extensions）（後で説明されます）で必要とされることを覚えておいてください。"
+"このapp作成用factoryパターンへの対応は、承認されたFlask拡張（approved "
+"flask extensions）（後で説明されます）で必要とされることを覚えておいて"
+"ください。"
 
 # 5f7586cbf87d4ab7bf0a3c3f30c2addd
 #: ../../flask/docs/extensiondev.rst:244
 msgid "Note on ``init_app``"
-msgstr "``init_app``\\ についての注意"
+msgstr "``init_app`` についての注意"
 
 # 9c9e6b9801eb447d8f7aa3defa54bc04
 #: ../../flask/docs/extensiondev.rst:246
@@ -377,8 +426,14 @@ msgid ""
 "constructor.  This tells the extension: I am not interested in using "
 "multiple applications."
 msgstr ""
-"お気づきのように、\\ ``init_app``\\ は\\ ``app``\\ を\\ ``self``\\ （訳注: "
-"クラスのインスタンスのこと、Pythonでは慣例的にクラスのメソッドが自分自身のインスタンスを引数で受け取るときはselfが使用されることから、インスタンスを指して使われています）へ割り当てていません。これは意図的なものです！クラスベースのFlask拡張では、自分のオブジェクトにアプリケーションを保持するのは、アプリケーション（のインスタンス）がコンストラクタで渡されたときだけでなければいけません。これは、「複数のアプリケーションで使われることには関心がありません」ということをFlask拡張に伝えます。"
+"お気づきのように、``init_app`` は ``app`` を ``self`` （訳注: クラスの"
+"インスタンスのこと、Pythonでは慣例的にクラスのメソッドが自分自身のインス"
+"タンスを引数で受け取るときはselfが使用されることから、インスタンスを指"
+"して使われています）へ割り当てていません。これは意図的なものです！クラス"
+"ベースのFlask拡張では、自分のオブジェクトにアプリケーションを保持するの"
+"は、アプリケーション（のインスタンス）がコンストラクタで渡されたときだけ"
+"でなければいけません。これは、「複数のアプリケーションで使われることには"
+"関心がありません」ということをFlask拡張に伝えます。"
 
 # 25c930e836804fb0acdefdc92114820f
 #: ../../flask/docs/extensiondev.rst:252
@@ -388,9 +443,10 @@ msgid ""
 " context local or change the API in a way that you can pass the "
 "application explicitly."
 msgstr ""
-"もしFlask拡張がその時点のアプリケーションを見つけ出す必要があり、自分ではアプリケーションへの参照を持っていない場合は、context "
-"localの\\ :data:`~flask.current_app`\\ "
-"を使用するか、アプリケーションを明示的に渡せるようにAPIを変更するかが必要になります。"
+"もしFlask拡張がその時点のアプリケーションを見つけ出す必要があり、自分では"
+"アプリケーションへの参照を持っていない場合は、context localの :data:"
+"`~flask.current_app` を使用するか、アプリケーションを明示的に渡せるよう"
+"にAPIを変更するかが必要になります。"
 
 # f3a3428dc7054b93871400a87a05a056
 #: ../../flask/docs/extensiondev.rst:259
@@ -407,11 +463,13 @@ msgid ""
 "using this pattern, the *same* connection to the sqlite3 database is "
 "accessible to anything that needs it for the duration of the request."
 msgstr ""
-"上記の例では、全てのリクエストの前に、\\ ``sqlite3_db``\\ 変数が\\ ``_app_ctx_stack.top``\\ "
-"に割り当てられます。view関数の中では、この変数は\\ ``SQLite3``\\ の\\ ``connection``\\ "
-"プロパティを使用してアクセス可能です。リクエストの取り壊し(teardown）の間に、\\ ``sqlite3_db``\\ "
-"接続（connection）は閉じられます。このパターンを使用することで、sqlite3データベースへの\\ *同じ*\\ "
-"接続（connection）が、それを必要とするあらゆるものからリクエストの期間中はアクセス可能になります。"
+"上記の例では、全てのリクエストの前に、``sqlite3_db`` 変数が "
+"``_app_ctx_stack.top`` に割り当てられます。view関数の中では、この変数は "
+"``SQLite3`` の ``connection`` プロパティを使用してアクセス可能です。リク"
+"エストの取り壊し(teardown）の間に、``sqlite3_db`` 接続（connection）は"
+"閉じられます。このパターンを使用することで、sqlite3データベースへの "
+"*同じ* 接続（connection）が、それを必要とするあらゆるものからリクエスト"
+"の期間中はアクセス可能になります。"
 
 # 79f1654a933942968e276ade411e7f81
 #: ../../flask/docs/extensiondev.rst:270
@@ -431,10 +489,15 @@ msgid ""
 "but also avoids having multiple developers working in isolation on pretty"
 " much the same problem."
 msgstr ""
-"このドキュメントではFlask拡張開発の必要最小限だけに触れています。もしさらに学びたいときは、\\ `PyPI`_\\ "
-"にある既存のFlask拡張をチェックするのはとても良いアイデアです。もしも途方に暮れたときは、魅力的なAPIへのアイデアを得るために\\ "
-"`mailinglist`_\\ と\\ `Discord server`_\\ "
-"もあります。特に、もし誰もしたことのないことをやろうとしている場合は、さらにいくらかのインプットを得るのはとても良いアイデアになるかもしれません。これは人々がFlask拡張から何を求めることがあるかについての使えるフィードバックを生み出すだけでなく、殆ど同じ問題に対して複数の開発者が分け隔てられたまま作業することも回避させます。"
+"このドキュメントではFlask拡張開発の必要最小限だけに触れています。もし"
+"さらに学びたいときは、`PyPI`_ にある既存のFlask拡張をチェックするのは"
+"とても良いアイデアです。もしも途方に暮れたときは、魅力的なAPIへのアイ"
+"デアを得るために `mailinglist`_ と `Discord server`_ もあります。特に、"
+"もし誰もしたことのないことをやろうとしている場合は、さらにいくらかの"
+"インプットを得るのはとても良いアイデアになるかもしれません。これは人々"
+"がFlask拡張から何を求めることがあるかについての使えるフィードバックを"
+"生み出すだけでなく、殆ど同じ問題に対して複数の開発者が分け隔てられた"
+"まま作業することも回避させます。"
 
 # b09b269cd0164789bc152b9d0573ed75
 #: ../../flask/docs/extensiondev.rst:281
@@ -443,8 +506,9 @@ msgid ""
 "mailing list, and let other developers give you a helping hand with "
 "designing the API."
 msgstr ""
-"覚えておいてください: "
-"良いAPIの設計は困難ですので、自分のプロジェクトをメーリングリストで紹介し、他の開発者がAPIの設計と一緒に助けの手を差し伸べられるようにしましょう。"
+"覚えておいてください: 良いAPIの設計は困難ですので、自分のプロジェクトを"
+"メーリングリストで紹介し、他の開発者がAPIの設計と一緒に助けの手を差し"
+"伸べられるようにしましょう。"
 
 # 97adce4d76a14f588d6adf3a0571d361
 #: ../../flask/docs/extensiondev.rst:285
@@ -452,8 +516,9 @@ msgid ""
 "The best Flask extensions are extensions that share common idioms for the"
 " API.  And this can only work if collaboration happens early."
 msgstr ""
-"最も良いFlask拡張は、APIについての一般的な慣用語（common "
-"idioms）を共有しているFlask拡張です。そして、それは早い段階での共同作業があって初めて機能するでしょう。"
+"最も良いFlask拡張は、APIについての一般的な慣用語（common idioms）を共有"
+"しているFlask拡張です。そして、それは早い段階での共同作業があって初めて"
+"機能するでしょう。"
 
 # d0cae3d4e1ad4833b12242ffc9eb50e6
 #: ../../flask/docs/extensiondev.rst:289
@@ -496,10 +561,10 @@ msgid ""
 "must provide exactly one package or module named "
 "``flask_extension_name``."
 msgstr ""
-"名前の枠組み（naming scheme）は\ *Flask-ExtensionName*\ または\ "
-"*ExtensionName-Flask*\ です。Flask拡張は\\ ``flask_extensionname``\\ と"
-"いう名前の、正確に１つのパッケージもしくはモジュールを提供する必要があり"
-"ます。"
+"名前の枠組み（naming scheme）は *Flask-ExtensionName* または "
+"*ExtensionName-Flask* です。Flask拡張は ``flask_extensionname`` と"
+"いう名前の、正確に１つのパッケージもしくはモジュールを提供する必要が"
+"あります。"
 
 #: ../../flask/docs/extensiondev.rst:305
 msgid ""
@@ -521,7 +586,7 @@ msgid ""
 "state per application instance."
 msgstr ""
 "同じPythonプロセスの中で走っている複数のアプリケーションに対応している"
-"必要があります。\ ``self.app``\ の代わりに\ ``current_app``\ を使用し、"
+"必要があります。``self.app`` の代わりに ``current_app`` を使用し、"
 "アプリケーションのインスタンス毎に設定および状態を格納します。"
 
 # 51ca334b44014763b5a7c19738db27d1
@@ -530,16 +595,16 @@ msgid ""
 "It must be possible to use the factory pattern for creating applications."
 " Use the ``ext.init_app()`` pattern."
 msgstr ""
-"アプリケーションを作成するためのfactoryパターンが使用可能である必要があり"
-"ます。\ ``ext.init_app()``\ パターンを使用してください。"
+"アプリケーションを作成するためのfactoryパターンが使用可能である必要が"
+"あります。``ext.init_app()`` パターンを使用してください。"
 
 #: ../../flask/docs/extensiondev.rst:315
 msgid ""
 "From a clone of the repository, an extension with its dependencies must "
 "be installable with ``pip install -e .``."
 msgstr ""
-"リポジトリのクローンから、Flask拡張はその依存対象も一緒に\ ``pip install "
-"-e .``\ でインストールできる必要があります。"
+"リポジトリのクローンから、Flask拡張はその依存対象も一緒に ``pip install "
+"-e .`` でインストールできる必要があります。"
 
 #: ../../flask/docs/extensiondev.rst:317
 msgid ""
@@ -548,9 +613,9 @@ msgid ""
 "specified in a ``requirements.txt`` file. The tests must be part of the "
 "sdist distribution."
 msgstr ""
-"``tox -e py``\ または\ ``pytest``\ を使って起動できるテスト一式（testing "
-"suite）をリリース（ship）する必要があります。もし\ ``tox``\ を使わない"
-"場合、テストの依存対象は\ ``requirements.txt``\ ファイルの中で指定する"
+"``tox -e py`` または ``pytest`` を使って起動できるテスト一式（testing "
+"suite）をリリース（ship）する必要があります。もし ``tox`` を使わない"
+"場合、テストの依存対象は ``requirements.txt`` ファイルの中で指定する"
 "べきです。テストはソース配布物（sdist distribution）の一部である必要が"
 "あります。"
 
@@ -561,9 +626,9 @@ msgid ""
 " Themes`_. A link to the documentation or project website must be in the "
 "PyPI metadata or the readme."
 msgstr ""
-"ドキュメントは\\ `Official Pallets Themes`_\\ の\\ ``flask``\\ テーマを使用する必要があります。"
-"ドキュメントまたはプロジェクトのwebサイトへのリンクがPyPIメタデータまたは"
-"readmeの中にある必要があります。"
+"ドキュメントは `Official Pallets Themes`_ の ``flask`` テーマを使用する"
+"必要があります。ドキュメントまたはプロジェクトのwebサイトへのリンクが"
+"PyPIメタデータまたはreadmeの中にある必要があります。"
 
 #: ../../flask/docs/extensiondev.rst:324
 msgid ""
@@ -574,8 +639,8 @@ msgid ""
 msgstr ""
 "互換性を最大化するために、Flask拡張はFlaskがサポートするものと同じ"
 "バージョンのPythonをサポートする必要があります。2020年時点では3.6以上が"
-"推奨されます。サポートされるバージョンを指示するために、\ ``setup.py``\ "
-"の中で\ ``python_requires=\">=3.6\"``\ を使用します。"
+"推奨されます。サポートされるバージョンを指示するために、``setup.py`` "
+"の中で ``python_requires=\">=3.6\"`` を使用します。"
 
 # 8f78234d41494d478ae59a803030ea19
 #~ msgid ""
