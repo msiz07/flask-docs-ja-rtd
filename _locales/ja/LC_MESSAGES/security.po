@@ -55,7 +55,7 @@ msgstr ""
 "任意のHTMLタグが含まれないようにするために、開発者はテキストを適切に"
 "エスケープする必要があります。これに関するさらなる情報については、"
 "Wikipediaの記事\ `Cross-Site Scripting <https://en.wikipedia.org/wiki"
-"/Cross-site_scripting>`_\ を確認してください。"
+"/Cross-site_scripting>`_ を確認してください。"
 
 # 2c06cfa627824db583772d48ce1dccc2
 #: ../../flask/docs/security.rst:20
@@ -67,8 +67,8 @@ msgid ""
 msgstr ""
 "Flaskでは、明示的にそうしないと指示されていないかぎり、Jinja2が自動的に"
 "全ての値をエスケープするように設定しています。これによってテンプレート"
-"が原因となるXSSの問題は全て排除されるはずですが、それでも他に注意しなければ"
-"ならない場所がいくらか残っています:"
+"が原因となるXSSの問題は全て排除されるはずですが、それでも他に注意しなけ"
+"ればならない場所がいくらか残っています:"
 
 # 0c4cd7f31b9e49ffbb09f6ae94066ffb
 #: ../../flask/docs/security.rst:25
@@ -78,7 +78,7 @@ msgstr "Jinja2を利用せずにHTMLを生成"
 # aca9b4452d234af89750bc4d90e01007
 #: ../../flask/docs/security.rst:26
 msgid "calling :class:`~flask.Markup` on data submitted by users"
-msgstr "ユーザが提出したデータへ\ :class:`~flask.Markup`\ を呼び出し"
+msgstr "ユーザが提出したデータへ :class:`~flask.Markup` を呼び出し"
 
 # 8dbf99640bdf453aacaea80aa91f7d1e
 #: ../../flask/docs/security.rst:27
@@ -87,7 +87,7 @@ msgid ""
 "Disposition: attachment`` header to prevent that problem."
 msgstr ""
 "ユーザがアップロードしたファイルからHTMLを送出、これは決して行うべきでは"
-"なく、問題を防ぐために\ ``Content-Disposition: attachment``\ を使うように"
+"なく、問題を防ぐために ``Content-Disposition: attachment`` を使うように"
 "してください。"
 
 # 898c5b8f9a1a40b0b6be576a3bd42b79
@@ -97,10 +97,10 @@ msgid ""
 "content-type guessing based on the first few bytes so users could trick a"
 " browser to execute HTML."
 msgstr ""
-"アップロードされたファイルからテキストファイルを送出。いくつかのブラウザは"
-"content-typeの推測を、データの最初の数バイトに基づいて行うため、ブラウザを"
-"だましてHTMLを実行をさせることが、ブラウザのユーザにとって可能な場合があり"
-"ます。"
+"アップロードされたファイルからテキストファイルを送出。いくつかのブラウザ"
+"はcontent-typeの推測を、データの最初の数バイトに基づいて行うため、ブラ"
+"ウザをだましてHTMLを実行をさせることが、ブラウザのユーザにとって可能な"
+"場合があります。"
 
 # 95b636717b424a5cac46fbe042791cb7
 #: ../../flask/docs/security.rst:33
@@ -114,9 +114,9 @@ msgstr ""
 "もうひとつの非常に重要なものは、引用符で囲まれない属性です。Jinja2は"
 "HTMLをエスケープすることでXSS問題から守ることはできても、それでもJinja2が"
 "防げないものがあります: 属性の挿入によるXSS（XSS by attribute injection）"
-"です。この方面から攻撃される可能性へ対抗するには、属性をJinjaの式で使用する"
-"ときには、確実に二重引用符（\"）または一重引用符（'）でそれらの属性を囲む"
-"ようにします:"
+"です。この方面から攻撃される可能性へ対抗するには、属性をJinjaの式で使用"
+"するときには、確実に二重引用符（\"）または一重引用符（'）でそれらの属性を"
+"囲むようにします:"
 
 # 76cdf911eab84277abcbc0cecc260649
 #: ../../flask/docs/security.rst:43
@@ -156,9 +156,10 @@ msgid ""
 "against. The ``a`` tag's ``href`` attribute can contain a `javascript:` "
 "URI, which the browser will execute when clicked if not secured properly."
 msgstr ""
-"XSS問題のひとつで、Jinjaのエスケープ機能では防げないものがあります。\ ``a``\ "
-"タグの\ ``href``\ 属性は\ `javascript:`\ で始まるURIを含むことができ、適切に"
-"守られていないブラウザはそれをクリックするとそのJavaScriptを実行します。"
+"XSS問題のひとつで、Jinjaのエスケープ機能では防げないものがあります。"
+"``a`` タグの ``href`` 属性は `javascript:` で始まるURIを含むことができ、"
+"適切に守られていないブラウザはそれをクリックするとそのJavaScriptを実行"
+"します。"
 
 # c984497ae63544b5ac2f02ca74faeea8
 #: ../../flask/docs/security.rst:67
@@ -166,13 +167,14 @@ msgid ""
 "To prevent this, you'll need to set the :ref:`security-csp` response "
 "header."
 msgstr ""
-"これを防ぐためには、\ :ref:`security-csp`\ レスポンスヘッダを確認する"
+"これを防ぐためには、:ref:`security-csp` レスポンスヘッダを確認する"
 "必要があるでしょう。"
 
 # 7dca7a139a0e47e1b21a2b727f20bc92
 #: ../../flask/docs/security.rst:70
 msgid "Cross-Site Request Forgery (CSRF)"
-msgstr "クロスサイトリクエストフォージェリ（Cross-Site Request Forgery）（CSRF）"
+msgstr ""
+"クロスサイトリクエストフォージェリ（Cross-Site Request Forgery）（CSRF）"
 
 # bbbeea13374b471b9709aaacf94596b8
 #: ../../flask/docs/security.rst:72
@@ -181,8 +183,8 @@ msgid ""
 "outline it here in detail just mention what it is and how to "
 "theoretically prevent it."
 msgstr ""
-"もう一つの大きな問題がCSRFです。これはとても複雑な話題であり、ここでは詳細を"
-"整理はせず、それが何であり理論上はどう防ぐのかに言及だけします。"
+"もう一つの大きな問題がCSRFです。これはとても複雑な話題であり、ここでは"
+"詳細を整理はせず、それが何であり理論上はどう防ぐのかに言及だけします。"
 
 # f8b41960b5434465a2e61ac24a037b27
 #: ../../flask/docs/security.rst:76
@@ -195,13 +197,13 @@ msgid ""
 " application's users with social engineering to do stupid things without "
 "them knowing."
 msgstr ""
-"もし認証情報がクッキーに格納されていた場合、状態管理をすることが暗黙的に"
-"必要となります。「ログインしている」という状態はクッキーによって制御され、"
-"そのクッキーはリクエストごとにページへ送信されます。残念ながらそのような"
-"リクエストは第三者のサイトが引き金になる場合も含みます。もしそのことを"
-"考えておかないと、あなたのアプリケーションのユーザをだまして、ソーシャル"
-"エンジニアリングも使いながら、当事者に知られることなく、愚かな点を突いて"
-"くるようなことを、誰かができるようになっているかもしれません。"
+"もし認証情報がクッキーに格納されていた場合、状態管理をすることが暗黙的"
+"に必要となります。「ログインしている」という状態はクッキーによって制御"
+"され、そのクッキーはリクエストごとにページへ送信されます。残念ながらその"
+"ようなリクエストは第三者のサイトが引き金になる場合も含みます。もしその"
+"ことを考えておかないと、あなたのアプリケーションのユーザをだまして、"
+"ソーシャルエンジニアリングも使いながら、当事者に知られることなく、愚かな"
+"点を突いてくるようなことを、誰かができるようになっているかもしれません。"
 
 # a6f40654a2354e0e87589346a7c95ee3
 #: ../../flask/docs/security.rst:84
@@ -212,12 +214,12 @@ msgid ""
 "some JavaScript they just have to trick some users to load that page and "
 "their profiles will end up being deleted."
 msgstr ""
-"例えば、\ ``POST``\ リクエストを送ったときはユーザのプロフィールを消去する"
-"特別なURLがあるとします（\ ``http://example.com/user/delete``\ とします）。"
-"もしも攻撃者がそのとき、そのページへpostリクエストを送信するページをなにかしら"
-"のJavaScriptを使いながら作成した場合、あるユーザがその（攻撃者が作成した）"
-"ページをロードするようにだましさえすれば、そのユーザのプロフィールは消去"
-"される結果になります。"
+"例えば、``POST`` リクエストを送ったときはユーザのプロフィールを消去する"
+"特別なURLがあるとします（``http://example.com/user/delete`` とします）。"
+"もしも攻撃者がそのとき、そのページへpostリクエストを送信するページをなに"
+"かしらのJavaScriptを使いながら作成した場合、あるユーザがその（攻撃者が"
+"作成した）ページをロードするようにだましさえすれば、そのユーザのプロ"
+"フィールは消去される結果になります。"
 
 # a4d92a655846480883b9715cd4fba06d
 #: ../../flask/docs/security.rst:90
@@ -244,11 +246,11 @@ msgstr ""
 "これはどのように防ぐのでしょうか？基本的には、サーバ上の内容を変更する"
 "リクエストではそれぞれ、一度限りのトークン（訳注：認証などに使用する、"
 "大抵はでたらめな文字列）を使用して、それをクッキーに格納して、"
-"\ **さらに**\ それをformデータとも一緒に送信します（訳注: サーバがformを"
+" **さらに** それをformデータとも一緒に送信します（訳注: サーバがformを"
 "含んだページのレスポンスをWebブラウザなどへ送信するとき、そのレスポンスの"
 "ヘッダの中で、クッキーにそのレスポンス固有のトークンを設定するような処理"
-"を指していると思います）。サーバで再びデータを受信した後は、そのときに2つの"
-"トークンを比較して、確実に同一であるかを確かめる必要があるでしょう。"
+"を指していると思います）。サーバで再びデータを受信した後は、そのときに2"
+"つのトークンを比較して、確実に同一であるかを確かめる必要があるでしょう。"
 
 # 11cedf4d53e244dabbdaf91a82a6ed78
 #: ../../flask/docs/security.rst:101
@@ -272,11 +274,10 @@ msgid ""
 "level arrays to JSON. This was because of a security vulnerability in "
 "ECMAScript 4."
 msgstr ""
-"Flask 0.10とそれ以前では、\ :func:`~flask.json.jsonify`\ は最上位レベルの"
+"Flask 0.10とそれ以前では、:func:`~flask.json.jsonify` は最上位レベルの"
 "配列（top-level arrays）をJSONへシリアライズ（訳注：ネットワークで送受信"
 "できるデータ形式へ変換するような処理）しませんでした。これはECMAScript 4"
 "にあるセキュリティ上の脆弱性によるものでした。"
-""
 
 # 46c3a54a16ea4de1868f05ecea910037
 #: ../../flask/docs/security.rst:112
@@ -289,10 +290,10 @@ msgid ""
 "serializing arrays."
 msgstr ""
 "ECMAScript 5ではこの脆弱性は解決しており、従っていまだに脆弱性があるのは"
-"非常に古いブラウザだけです。そのようなブラウザはすべて\ `別のより深刻な"
-"脆弱性があり <https://github.com/pallets/flask/issues/248#issuecomment-59934857>`_\ "
-"、従ってこの振る舞いは変更されていて、\ :func:`~flask.json.jsonify`\ は今では"
-"配列のシリアライズをサポートしています。"
+"非常に古いブラウザだけです。そのようなブラウザはすべて `別のより深刻な"
+"脆弱性があり <https://github.com/pallets/flask/issues/248#"
+"issuecomment-59934857>`_、従ってこの振る舞いは変更されていて、:func:"
+"`~flask.json.jsonify` は今では配列のシリアライズをサポートしています。"
 
 # 40a06406cbca4cd2918f57306894c341
 #: ../../flask/docs/security.rst:120
@@ -309,13 +310,15 @@ msgid ""
 msgstr ""
 "ブラウザは、セキュリティを制御するために様々なレスポンスのヘッダを認識"
 "します。自分のアプリケーションで使うように、以下のヘッダをそれぞれ確認"
-"しておくことをお勧めします。\ `Flask-Talisman`_\ というFlask拡張は、"
+"しておくことをお勧めします。`Flask-Talisman`_ というFlask拡張は、"
 "HTTPSとセキュリティに関するヘッダを管理するために使用できます。"
 
 # 606dba6f02c74707aef49ef05c1e3229
 #: ../../flask/docs/security.rst:130
 msgid "HTTP Strict Transport Security (HSTS)"
-msgstr "HTTPの厳格なトランスポートのセキュリティ（HSTS）（HTTP Strict Transport Security）"
+msgstr ""
+"HTTPの厳格なトランスポートのセキュリティ（HSTS）（HTTP Strict Transport "
+"Security）"
 
 # 920d787ddc25400a8203740b1429b4b2
 #: ../../flask/docs/security.rst:132
@@ -323,8 +326,8 @@ msgid ""
 "Tells the browser to convert all HTTP requests to HTTPS, preventing man-"
 "in-the-middle (MITM) attacks. ::"
 msgstr ""
-"全てのHTTPリクエストをHTTPSへ変換するようブラウザに指示して、man-in-the-middle"
-"（MITM）攻撃を防ぎます。::"
+"全てのHTTPリクエストをHTTPSへ変換するようブラウザに指示して、"
+"man-in-the-middle（MITM）攻撃を防ぎます。::"
 
 # 9630e5ea3aab46088deb54b80974781a
 #: ../../flask/docs/security.rst:137
@@ -345,10 +348,10 @@ msgid ""
 "header should be used whenever possible, but requires some work to define"
 " the correct policy for your site. A very strict policy would be::"
 msgstr ""
-"様々な種類のリソースについて、どこから読み込めるかをブラウザに指示します。"
-"このヘッダは可能な限り使用するべきですが、自分のサイト用に適切なポリシーを"
-"定義するためにいくらかの作業が必要になります。非常に厳格なポリシーは"
-"以下のようになるでしょう::"
+"様々な種類のリソースについて、どこから読み込めるかをブラウザに指示し"
+"ます。このヘッダは可能な限り使用するべきですが、自分のサイト用に適切な"
+"ポリシーを定義するためにいくらかの作業が必要になります。非常に厳格な"
+"ポリシーは以下のようになるでしょう::"
 
 # 1eb3b3525792433088138a2b28c4ba75
 #: ../../flask/docs/security.rst:150
@@ -399,10 +402,10 @@ msgid ""
 "translated invisibly to clicks on your page's elements. This is also "
 "known as \"clickjacking\". ::"
 msgstr ""
-"外部サイトが\ ``iframe``\ の中に、あなたのサイトを埋め込むことを防ぎます。"
-"これは、外側のフレームでのクリックがあなたのページの要素をクリックすること"
-"へと、目に見えないやり方で変換できるようにする攻撃の類を防ぎます。これは"
-"「clickjacking」としても知られています。::"
+"外部サイトが ``iframe`` の中に、あなたのサイトを埋め込むことを防ぎます。"
+"これは、外側のフレームでのクリックがあなたのページの要素をクリックする"
+"ことへと、目に見えないやり方で変換できるようにする攻撃の類を防ぎます。"
+"これは「clickjacking」としても知られています。::"
 
 # 8003fdbac3ca44a0964297925e62ad0e
 #: ../../flask/docs/security.rst:174
@@ -421,7 +424,7 @@ msgid ""
 "security. Flask has configuration options to set these on the session "
 "cookie. They can be set on other cookies too."
 msgstr ""
-"以下のオプションはセキュリティを改善するために、\ ``Set-cookie``\ ヘッダへ"
+"以下のオプションはセキュリティを改善するために、``Set-cookie`` ヘッダへ"
 "追加することができます。Flaskには、これらをセッションのクッキー（訳注: "
 "Flaskがsessionオブジェクトでアクセス可能にしているデータを格納しており、"
 "FlaskのSESSION_COOKIE_NAME設定で指定されているcookie）へ設定させる構成"
@@ -430,7 +433,7 @@ msgstr ""
 # 64d690f0bf09477fbc111af3ff9f7b27
 #: ../../flask/docs/security.rst:185
 msgid "``Secure`` limits cookies to HTTPS traffic only."
-msgstr "``secure``\ はクッキー（の送受信を）をHTTPS通信だけに限定します。"
+msgstr "``secure`` はクッキー（の送受信を）をHTTPS通信だけに限定します。"
 
 # b0c78ad3e35041549e487767985e2158
 #: ../../flask/docs/security.rst:186
@@ -438,7 +441,7 @@ msgid ""
 "``HttpOnly`` protects the contents of cookies from being read with "
 "JavaScript."
 msgstr ""
-"``HttpOnly``\ は、クッキーの内容をJavaScriptで読み取られることを防ぎます。"
+"``HttpOnly`` は、クッキーの内容をJavaScriptで読み取られることを防ぎます。"
 
 # 2de2035c7a074d0a99260f2ce7c49208
 #: ../../flask/docs/security.rst:188
@@ -449,11 +452,11 @@ msgid ""
 "such as submitting a form. ``Strict`` prevents sending cookies with all "
 "external requests, including following regular links."
 msgstr ""
-"``SameSite``\ は、外部サイトからのリクエストからどのようにクッキーが"
-"送信されるかについて制限します。\ ``'Lax'``\ （推奨）または\ ``'Strict'``\ "
-"に設定可能です。\ ``Lax``\ は、formを提出してくるような、外部サイトからの"
+"``SameSite`` は、外部サイトからのリクエストからどのようにクッキーが"
+"送信されるかについて制限します。``'Lax'`` （推奨）または ``'Strict'`` "
+"に設定可能です。``Lax`` は、formを提出してくるような、外部サイトからの"
 "CSRFがありがちなリクエストで一緒にクッキーを（ブラウザが）送信することを"
-"防ぎます。\ ``Strict``\ は、通常のリンクをフォローすることを含む、全ての"
+"防ぎます。``Strict`` は、通常のリンクをフォローすることを含む、全ての"
 "外部リクエストで一緒にクッキーを（ブラウザが）送信することを防ぎます。"
 
 # ab833b90a37e44fb93c28ea48149a50a
@@ -464,10 +467,10 @@ msgid ""
 "neither option is set, the cookie will be removed when the browser is "
 "closed. ::"
 msgstr ""
-"``Expires``\ または\ ``Max-Age``\ オプションを指定すると、Expiresでは"
-"与えられた時刻、Max-Ageでは現在時刻にageを加えた時刻、を過ぎた後にそれぞれ"
-"クッキーを削除します。もしどちらのオプションも設定されていない場合は、"
-"ブラウザが閉じられたときにクッキーは削除されまれます。::"
+"``Expires`` または ``Max-Age`` オプションを指定すると、Expiresでは"
+"与えられた時刻、Max-Ageでは現在時刻にageを加えた時刻、を過ぎた後にそれ"
+"ぞれクッキーを削除します。もしどちらのオプションも設定されていない場合"
+"は、ブラウザが閉じられたときにクッキーは削除されまれます。::"
 
 # 93584cb51b904be6aa7cbc9bf49a02e8
 #: ../../flask/docs/security.rst:211
@@ -479,9 +482,9 @@ msgid ""
 " is not older than this value. Lowering this value may help mitigate "
 "replay attacks, where intercepted cookies can be sent at a later time. ::"
 msgstr ""
-"セッションのクッキーについては、もし\ :attr:`session.permanent "
-"<flask.session.permanent>`\ が設定されていた場合には、\ :data:"
-"`PERMANENT_SESSION_LIFETIME`\ が消去（のタイミング）の設定に使用されます。"
+"セッションのクッキーについては、もし :attr:`session.permanent "
+"<flask.session.permanent>` が設定されていた場合には、:data:"
+"`PERMANENT_SESSION_LIFETIME` が消去（のタイミング）の設定に使用されます。"
 "Flaskの標準設定でのクッキーの実装は、暗号学的に施された署名が、この値より"
 "古くなっていないことを検証します。この値を小さくするほど、横取りされた"
 "クッキーを後で送信できるようにする、replay攻撃の抑制への手助けになること"
@@ -494,7 +497,7 @@ msgid ""
 "cookie values (or any values that need secure signatures)."
 msgstr ""
 "ほかのクッキーの値（もしくは安全に署名する必要があるあらゆる値）の"
-"署名と検証には\ :class:`itsdangerous.TimedSerializer`\ を使用して"
+"署名と検証には :class:`itsdangerous.TimedSerializer` を使用して"
 "ください。"
 
 # 20eed18e9d044ebc9d6cd599ef00cdcd
@@ -527,8 +530,8 @@ msgid ""
 "Be careful when enabling this, as it is very difficult to undo if you set"
 " up or upgrade your key incorrectly."
 msgstr ""
-"もしも鍵を不適当に設定もしくは更新してしまった場合は、元に戻すことが非常に"
-"難しいため、これを有効にするときは注意してください。"
+"もしも鍵を不適当に設定もしくは更新してしまった場合は、元に戻すことが非常"
+"に難しいため、これを有効にするときは注意してください。"
 
 # 3b624609acbe42998fdcb3a3df476525
 #: ../../flask/docs/security.rst:248
