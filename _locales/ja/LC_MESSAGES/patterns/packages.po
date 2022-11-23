@@ -40,6 +40,10 @@ msgid ""
 ":doc:`/tutorial/index` is structured to use the package pattern, see the "
 ":gh:`example code <examples/tutorial>`."
 msgstr ""
+"これは小さなアプリケーションでは良いですが、より大きなアプリケーションでは"
+"モジュールの代わりにパッケージを使うのが良いアイデアです。"
+":doc:`/tutorial/index` はパッケージのパターンを使うような構造にされている"
+"ので、:gh:`example code <examples/tutorial>` を確認してください。"
 
 # 8e8d0ca42b3b45e4a04fc7dfdd1ec9c1
 #: ../../flask/docs/patterns/packages.rst:22
