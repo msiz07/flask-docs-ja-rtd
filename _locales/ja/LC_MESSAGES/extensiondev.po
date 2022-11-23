@@ -227,6 +227,8 @@ msgid ""
 "Classes work mostly like initialization functions but can later be used "
 "to further change the behavior."
 msgstr ""
+"クラスは殆ど初期化関数のように働きますが、後でさらに振る舞いを変更でき"
+"ます。"
 
 # d0d2670a09b64d26bb9feeab3b89bde9
 #: ../../flask/docs/extensiondev.rst:140
