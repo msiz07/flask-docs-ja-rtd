@@ -180,6 +180,10 @@ msgid ""
 "upload folder by name. ``url_for(\"download_file\", name=name)`` "
 "generates download URLs."
 msgstr ""
+"ユーザがダウンロードできるように、アップロードされたファイルを提供可能に"
+"したいでしょう。（以下の例では）nameによってアプロードのフォルダにある"
+"ファイルを提供する、``download_file`` というviewを定義します。``url_for"
+"(\"download_file\", name=name)`` が、ダウンロード用URLを生成します。"
 
 #: ../../flask/docs/patterns/fileuploads.rst:117
 msgid ""
@@ -187,6 +191,9 @@ msgid ""
 "register the ``download_file`` endpoint as ``build_only`` so ``url_for`` "
 "will work without a view function."
 msgstr ""
+"もしファイルを提供するのにミドルウェアまたはHTTPサーバーを使っている場合、"
+"``url_for`` がview関数なしで働くように、``download_file`` エンドポイントを "
+"``build_only`` として登録できます。"
 
 # 4d31aa74162f4535bd7ab94bb688f3bf
 #: ../../flask/docs/patterns/fileuploads.rst:129
