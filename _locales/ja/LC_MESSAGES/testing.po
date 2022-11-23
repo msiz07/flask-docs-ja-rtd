@@ -268,7 +268,6 @@ msgstr "Flaskアプリケーションのテスト"
 
 # 262bfb979b194173810f94038be60a33
 #: ../../flask/docs/testing.rst:203
-#, fuzzy
 #| msgid "Accessing and Modifying Sessions"
 msgid "Accessing and Modifying the Session"
 msgstr "セッションに対するアクセスと変更"
