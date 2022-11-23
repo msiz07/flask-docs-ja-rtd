@@ -538,6 +538,7 @@ msgstr ""
 #: ../../flask/docs/security.rst:252
 msgid "Copy/Paste to Terminal"
 msgstr ""
+"端末へのコピー／貼り付け（Copy/Paste to Terminal）"
 
 #: ../../flask/docs/security.rst:254
 msgid ""
@@ -545,6 +546,9 @@ msgid ""
 "cause text to render differently in HTML than how it is interpreted if "
 "`pasted into a terminal <https://security.stackexchange.com/q/39118>`__."
 msgstr ""
+"バックスペース文字（``\\b``、``^H``）のように見えない文字は、"
+"`端末に貼り付けた場合 <https://security.stackexchange.com/q/39118>`__ "
+"の解釈のされ方とは違うようにHTMLでは変換されるテキストの原因になります。"
 
 #: ../../flask/docs/security.rst:258
 msgid ""
@@ -552,6 +556,9 @@ msgid ""
 "yosemite`` in HTML, but the backspaces are applied when pasted into a "
 "terminal, and it becomes ``import os``."
 msgstr ""
+"例えば、``import y\\bose\\bm\\bi\\bt\\be\\b`` はHTMLでは ``import "
+"yosemite`` と変換表示されますが、端末に貼り付けられたときはバック"
+"スペースが適用され、``import os`` になります。"
 
 #: ../../flask/docs/security.rst:262
 msgid ""
@@ -559,6 +566,10 @@ msgid ""
 " as from comments posted by users on a technical blog, consider applying "
 "extra filtering, such as replacing all ``\\b`` characters."
 msgstr ""
+"もしユーザが、例えば技術ブログでユーザが投稿したコメントのように、"
+"あなたのサイトから信頼できないコードをコピーして貼り付けることが予想"
+"される場合、全ての ``\\b`` 文字を置き換えるような、追加のフィルタ"
+"リングを適用することを検討してください。"
 
 #: ../../flask/docs/security.rst:270
 msgid ""
@@ -568,6 +579,11 @@ msgid ""
 "Depending on your site's use case, it may be good to show a warning about"
 " copying code in general."
 msgstr ""
+"殆どの最近の端末は、貼り付けるときに見えない文字列を警告して削除するで"
+"あろうために、これは厳密には必須ではありません。フィルタリングできない"
+"他のやり方で危険なコマンドを欺くことも可能です。自分のサイトのユース"
+"ケースによりますが、一般的にコードのコピーに対して警告を表示するのは"
+"良いことでしょう。"
 
 # d7315452e32f4b7d9b2d54ac80c0c46e
 #~ msgid "X-XSS-Protection"
