@@ -17,16 +17,25 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 
+# c3aaedfb657f4184886111da24a85674
+#: ../../flask/docs/testing.rst:2
+msgid "Testing Flask Applications"
+msgstr "Flaskアプリケーションのテスト"
+
 #: ../../flask/docs/testing.rst:4
 msgid ""
 "Flask provides utilities for testing an application. This documentation "
 "goes over techniques for working with different parts of the application "
 "in tests."
 msgstr ""
+"Flaskはアプリケーションをテストするユーティリティを提供します。このドキュ"
+"メントはテストの中でアプリケーションの異なる部分で作業するための技法を扱い"
+"ます。"
 
 #: ../../flask/docs/testing.rst:8
 msgid "We will use the `pytest`_ framework to set up and run our tests."
 msgstr ""
+"ここではテストを準備し走らせるために `pytest`_ フレームワークを使います。"
 
 #: ../../flask/docs/testing.rst:16
 #, python-format
@@ -36,10 +45,14 @@ msgid ""
 "tutorial on tests </tutorial/tests>` for a detailed explanation of "
 "specific tests for an application."
 msgstr ""
+":doc:`チュートリアル </tutorial/index>` はサンプルのブログのアプリケーション"
+"であるFlaskrに対して100%の網羅率のテストをどのように書くかを扱います。アプリ"
+"ケーション用の特定のテストの詳細な説明は、:doc:`テストのチュートリアル "
+"</tutorial/tests>` を見てください。"
 
 #: ../../flask/docs/testing.rst:23
 msgid "Identifying Tests"
-msgstr ""
+msgstr "テストの特定"
 
 #: ../../flask/docs/testing.rst:25
 msgid ""
@@ -47,6 +60,9 @@ msgid ""
 "that start with ``test_``, in Python modules that start with ``test_``. "
 "Tests can also be further grouped in classes that start with ``Test``."
 msgstr ""
+"テストは典型的には ``tests`` フォルダに置かれます。テストは ``tests_`` から"
+"始まる関数で、``test_`` から始まるPythonモジュール中にあります。さらにテスト"
+"は ``Test`` で始まるクラスの中にグループ化できます。"
 
 #: ../../flask/docs/testing.rst:29
 msgid ""
@@ -55,10 +71,14 @@ msgid ""
 "already tested. Try to extract complex behaviors as separate functions to"
 " test individually."
 msgstr ""
+"何をテストするか知るのは難しいことがあります。大概は、自分で書いたコードを"
+"テストしようと試み、使用するライブラリのコードは既にテストされているため"
+"試みません。複雑な振る舞いは、個別にテストするために分かれた関数として取り"
+"出すことを試みます。"
 
 #: ../../flask/docs/testing.rst:36
 msgid "Fixtures"
-msgstr ""
+msgstr "据え付け品（Fixtures）"
 
 #: ../../flask/docs/testing.rst:38
 msgid ""
@@ -68,6 +88,11 @@ msgid ""
 "client, and CLI runner are shown below, they can be placed in "
 "``tests/conftest.py``."
 msgstr ""
+"Pytestの *fixture* はテストで再利用できるコードの断片を書けるようにします。"
+"シンプルなfixtureは値を返しますが、fixtureは準備（setup）をし、値を生成"
+"（yield）し、それから取り壊す（teardown）こともできます。アプリケーション、"
+"テストのクライアント、CLIの実行プログラム用のfixtureが、以下に示されており、"
+"それらは ``tests/conftest.py`` に置くことができます。"
 
 #: ../../flask/docs/testing.rst:44
 msgid ""
@@ -76,6 +101,11 @@ msgid ""
 "can add code before and after the ``yield`` to set up and tear down other"
 " resources, such as creating and clearing a database."
 msgstr ""
+"もし :doc:`アプリケーションの製造工場（factory） </patterns/appfactories>` "
+"を使っている場合、appのインスタンスを作成し設定するための ``app`` のfixture"
+"（訳注: 以下の例の ``app`` 関数のこと）を定義します。データベースの作成と消去"
+"のように、他のリソースの準備（set up）と取り壊し（tear down）のために、"
+"``yield`` の前後にコードを加えることができます。"
 
 #: ../../flask/docs/testing.rst:50
 msgid ""
@@ -83,10 +113,13 @@ msgid ""
 "import and configure directly. You can still use an ``app`` fixture to "
 "set up and tear down resources."
 msgstr ""
+"もしfactoryを使っていない場合、既にimportして直接設定できるappオブジェクトが"
+"あります。それでも、リソースのset upおよびtear downのために ``app`` のfixture"
+"を使うことができます。"
 
 #: ../../flask/docs/testing.rst:84
 msgid "Sending Requests with the Test Client"
-msgstr ""
+msgstr "テスト用クライアントを使ったリクエストの送信"
 
 #: ../../flask/docs/testing.rst:86
 msgid ""
@@ -94,6 +127,10 @@ msgid ""
 "server. Flask's client extends :doc:`Werkzeug's client <werkzeug:test>`, "
 "see those docs for additional information."
 msgstr ""
+"テスト用クライアントは実際のサーバを走らせずにアプリケーションへのリクエスト"
+"を作成します。Flaskのクライアントは :doc:`Werkzeugのクライアント "
+"<werkzeug:test>` を拡張しており、追加情報はWerkzeugのドキュメントを見てくだ"
+"さい。"
 
 #: ../../flask/docs/testing.rst:91
 msgid ""
@@ -103,6 +140,12 @@ msgid ""
 ":class:`~werkzeug.test.EnvironBuilder`. Typically you'll use ``path``, "
 "``query``, ``headers``, and ``data`` or ``json``."
 msgstr ""
+"``client`` は、``client.get()`` や ``client.post()`` のように、一般的なHTTP"
+"リクエストのメソッドに合致するメソッドを持っています。それらはリクエストを"
+"構築するために多くの引数を取ります: 全てのドキュメントは :class:"
+"`~werkzeug.test.EnvironBuilder` で見つけることができます。典型的には、"
+"``path``、``query``、``headers``、そして ``data`` または ``json`` を引数で"
+"使うでしょう。"
 
 #: ../../flask/docs/testing.rst:97
 msgid ""
@@ -113,6 +156,13 @@ msgid ""
 "bytes returned by the view. If you want to use text, Werkzeug 2.1 "
 "provides ``response.text``, or use ``response.get_data(as_text=True)``."
 msgstr ""
+"リクエストを作成するときは、テストする経路（route）へのpathと一緒に、"
+"リクエストが使うはずのメソッドを呼び出します。レスポンスのデータを調べる"
+"ために :class:`~werkzeug.test.TestResponse` が返されます。それはレスポンス"
+"のオブジェクトの通常の属性（properties）をすべて持っています。普通は、view"
+"により返されるbytesである、``response.data`` を調べるでしょう。もしテキスト"
+"を使いたいときは、Werkzeug 2.1は ``response.text`` を提供しており、または "
+"``response.get_data(as_text=True)`` を使いましょう。"
 
 #: ../../flask/docs/testing.rst:111
 msgid ""
@@ -120,6 +170,9 @@ msgid ""
 "query string (after the ``?`` in the URL). Pass a dict ``headers={}`` to "
 "set request headers."
 msgstr ""
+"query string（URLの ``?`` の後）の中の引数を設定するには、dictの "
+"``query={\"key\": \"value\", ...}`` を引数で渡します。リクエストのヘッダー"
+"を設定するには、dictの ``headers={}`` を引数で渡します。"
 
 #: ../../flask/docs/testing.rst:115
 msgid ""
@@ -127,10 +180,13 @@ msgid ""
 "``data``. If raw bytes are passed, that exact body is used. Usually, "
 "you'll pass a dict to set form data."
 msgstr ""
+"POSTまたはPUTリクエストの中でリクエストのbodyを送るには、``data`` 引数に値"
+"を渡します。もし手を加えていないbytes（raw bytes）を渡された場合、そのままの"
+"bodyが使われます。普通はformのデータを設定するにはdictを渡すでしょう。"
 
 #: ../../flask/docs/testing.rst:121
 msgid "Form Data"
-msgstr ""
+msgstr "Formのデータ"
 
 #: ../../flask/docs/testing.rst:123
 msgid ""
@@ -138,6 +194,9 @@ msgid ""
 "will be set to ``multipart/form-data`` or ``application/x-www-form-"
 "urlencoded`` automatically."
 msgstr ""
+"formのデータを渡すには、``data`` 引数にdictを渡します。``Content-Type`` "
+"ヘッダーは ``multipart/form-data`` または ``application/"
+"x-www-form-urlencoded`` へ自動的に設定されるでしょう。"
 
 #: ../../flask/docs/testing.rst:127
 msgid ""
@@ -147,32 +206,45 @@ msgid ""
 "objects will be closed after making the request, so they do not need to "
 "use the usual ``with open() as f:`` pattern."
 msgstr ""
+"もし値（訳注: data引数に渡されたdictに含まれる値）がbytesを読み取るために"
+"開かれたfileオブジェクト（``\"rb\"`` モード）の場合、それはアップロードされた"
+"ファイルとして扱われます。検知されたファイル名とcontent typeを変更するには、"
+"tupleの ``(file, filename, content_type)`` を渡します。Fileオブジェクトは、"
+"通常の ``with open() as f:`` パターンを使う必要が無いように、リクエストを作成"
+"した後に閉じられます。"
 
 #: ../../flask/docs/testing.rst:133
 msgid ""
 "It can be useful to store files in a ``tests/resources`` folder, then use"
 " ``pathlib.Path`` to get files relative to the current test file."
 msgstr ""
+"``tests/resources`` フォルダにファイルを格納し、それから ``pathlib.path`` "
+"を使ってそのときのテストのファイルから相対的に（相対パスで）ファイルを取得"
+"できると、便利な場合があります。"
 
 #: ../../flask/docs/testing.rst:153
 msgid "JSON Data"
-msgstr ""
+msgstr "JSONのデータ"
 
 #: ../../flask/docs/testing.rst:155
 msgid ""
 "To send JSON data, pass an object to ``json``. The ``Content-Type`` "
 "header will be set to ``application/json`` automatically."
 msgstr ""
+"JSONのデータを送るには、``json`` 引数にオブジェクトを渡します。"
+"``Content-Type`` ヘッダーは自動的に ``application/json`` に設定されます。"
 
 #: ../../flask/docs/testing.rst:158
 msgid ""
 "Similarly, if the response contains JSON data, the ``response.json`` "
 "attribute will contain the deserialized object."
 msgstr ""
+"同様に、もしレスポンスがJSONのデータを含む場合、``response.json`` 属性は"
+"シリアライズを元に戻したオブジェクトが含まれます。"
 
 #: ../../flask/docs/testing.rst:180
 msgid "Following Redirects"
-msgstr ""
+msgstr "リダイレクトのフォロー"
 
 #: ../../flask/docs/testing.rst:182
 msgid ""
@@ -181,6 +253,10 @@ msgid ""
 "the client will continue to make requests until a non-redirect response "
 "is returned."
 msgstr ""
+"標準設定では、クライアントはレスポンスが転送された場合に追加のリクエスト"
+"を作成はしません。``follow_redirects=True`` をリクエストのメソッドに渡す"
+"ことで、クライアントは転送されないレスポンスが返されるまでリクエストを"
+"作成し続けます。"
 
 #: ../../flask/docs/testing.rst:187
 msgid ""
@@ -189,6 +265,16 @@ msgid ""
 "has a :attr:`~werkzeug.test.TestResponse.request` attribute which records"
 " the request that produced that response."
 msgstr ""
+":attr:`TestResponse.history <werkzeug.test.TestResponse.history>` 属性は最後"
+"のレスポンスに至るまでのレスポンスのtupleです。各レスポンスは、レスポンスを"
+"生成したリクエストを記録している :attr:`~werkzeug.test.TestResponse.request` "
+"属性を持ちます。"
+
+# 262bfb979b194173810f94038be60a33
+#: ../../flask/docs/testing.rst:203
+#| msgid "Accessing and Modifying Sessions"
+msgid "Accessing and Modifying the Session"
+msgstr "セッションに対するアクセスと変更"
 
 #: ../../flask/docs/testing.rst:205
 msgid ""
@@ -196,6 +282,10 @@ msgid ""
 "the client in a ``with`` statement. The app and request context will "
 "remain active *after* making a request, until the ``with`` block ends."
 msgstr ""
+"Flaskのコンテキストの変数、主に :data:`~flask.session`、へアクセスするには"
+" ``with`` 文の中でクライアントを使います。appとrequest contextは、``with`` "
+"ブロックを終了するまで、リクエストを作成した *後* も活動状態（active）のまま"
+"残ります。"
 
 #: ../../flask/docs/testing.rst:222
 msgid ""
@@ -205,10 +295,15 @@ msgid ""
 "``with`` statement. It returns a session object, and will save the "
 "session once the block ends."
 msgstr ""
+"もしリクエストを作成する *前* にセッション内のデータに対してアクセスまたは"
+"設定したい場合、クライアントの :meth:"
+"`~flask.testing.FlaskClient.session_transaciton` メソッドを ``with`` 文の"
+"中で使用します。それはsessionオブジェクトを返し、withブロックが終わると"
+"sessionを保存します。"
 
 #: ../../flask/docs/testing.rst:246
 msgid "Running Commands with the CLI Runner"
-msgstr ""
+msgstr "CLI実行プログラムを使ったコマンドの実行"
 
 #: ../../flask/docs/testing.rst:248
 msgid ""
@@ -218,6 +313,11 @@ msgid ""
 "object. Flask's runner extends :doc:`Click's runner <click:testing>`, see"
 " those docs for additional information."
 msgstr ""
+"Flaskは :class:`~flask.testing.FlaskCliRunner` を作成する :meth:"
+"`~flask.Flask.test_cli_runner` を提供し、それはCLIコマンドを隔離して走らせ"
+"出力を :class:`~click.testing.Result` オブジェクトの中に捉えます。Flaskの"
+"CLI実行プログラムは :doc:`Clickのテスト用CLI実行プログラム <click:testing>` "
+"を拡張したものであり、追加情報はそのドキュメントを見てください。"
 
 #: ../../flask/docs/testing.rst:254
 msgid ""
@@ -225,10 +325,13 @@ msgid ""
 "call commands in the same way they would be called with the ``flask`` "
 "command from the command line."
 msgstr ""
+"コマンドラインから ``flask`` コマンドを使って呼び出された場合と同じように"
+"コマンドを呼び出すには、CLI実行プログラムの :meth:"
+"`~flask.testing.FlaskCliRunner.invoke` メソッドを使用します。"
 
 #: ../../flask/docs/testing.rst:276
 msgid "Tests that depend on an Active Context"
-msgstr ""
+msgstr "活動状態（active）なコンテキストに依存したテスト（Tests that depend on an Active Context）"
 
 #: ../../flask/docs/testing.rst:278
 msgid ""
@@ -239,6 +342,12 @@ msgid ""
 "request or invoking the command, you can create and activate a context "
 "directly."
 msgstr ""
+"``request``、``session``、または ``current_app`` へアクセスするために、"
+":doc:`application context </appcontext>` または :doc:`request context "
+"</request context>` が活動状態（active）であることを想定しているviewまたは"
+"コマンドから呼び出される関数があるかもしれません。リクエストを作成するか、"
+"またはコマンドを呼び出してそれらをテストするよりも、コンテキストを直接作成"
+"して活動状態（active）にできます。"
 
 #: ../../flask/docs/testing.rst:285
 msgid ""
@@ -246,12 +355,17 @@ msgid ""
 "example, database extensions usually require an active app context to "
 "make queries."
 msgstr ""
+"applicaiton contextをpushするには ``with app.app_context()`` を使います。"
+"例えば、データベース用のFlask拡張はデータベースへのクエリーを作成する"
+"ために、普通はactiveなapplication contextを必要とします。"
 
 #: ../../flask/docs/testing.rst:295
 msgid ""
 "Use ``with app.test_request_context()`` to push a request context. It "
 "takes the same arguments as the test client's request methods."
 msgstr ""
+"request contextをpushするには ``with app.test_request_context()`` を使い"
+"ます。それは、クライアントのリクエストのメソッドと同じ引数を取ります。"
 
 #: ../../flask/docs/testing.rst:309
 msgid ""
@@ -260,17 +374,10 @@ msgid ""
 " these, usually it's better to make a full request instead. However, it's"
 " possible to call them manually."
 msgstr ""
-
-# c3aaedfb657f4184886111da24a85674
-#: ../../flask/docs/testing.rst:2
-msgid "Testing Flask Applications"
-msgstr "Flaskアプリケーションのテスト"
-
-# 262bfb979b194173810f94038be60a33
-#: ../../flask/docs/testing.rst:203
-#| msgid "Accessing and Modifying Sessions"
-msgid "Accessing and Modifying the Session"
-msgstr "セッションに対するアクセスと変更"
+"テスト用のrequest contextの作成では、Flaskのリクエスト振り分け（dispatching）"
+"のコードを何も走らせないため、``before_request`` 関数は呼び出されません。もし"
+"それらを呼び出す必要があるときは、普通は完全なリクエストを代わりに作成した方"
+"が良いでしょう。しかしながら、それらを手動で呼び出すことは可能です。"
 
 # 8e55faec19cc40c98568e6e0d4cb51cd
 #~ msgid "**Something that is untested is broken.**"
