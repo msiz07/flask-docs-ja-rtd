@@ -497,7 +497,7 @@ msgid ""
 "cookie values (or any values that need secure signatures)."
 msgstr ""
 "ほかのクッキーの値（もしくは安全に署名する必要があるあらゆる値）の"
-"署名と検証には :class:`itsdangerous.TimedSerializer` を使用して"
+"署名と検証には :class:`itsdangerous.timed.TimedSerializer` を使用して"
 "ください。"
 
 # 20eed18e9d044ebc9d6cd599ef00cdcd
