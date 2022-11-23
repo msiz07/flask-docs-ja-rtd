@@ -17,16 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 
-#: ../../flask/docs/tutorial/views.rst:128
-msgid "If validation succeeds, insert the new user data into the database."
-msgstr ""
-
-#: ../../flask/docs/tutorial/views.rst:144
-msgid ""
-"An :exc:`sqlite3.IntegrityError` will occur if the username already "
-"exists, which should be shown to the user as another validation error."
-msgstr ""
-
 # 93d382664c0c447dac2cb49313db520f
 #: ../../flask/docs/tutorial/views.rst:4
 msgid "Blueprints and Views"
@@ -62,10 +52,10 @@ msgid ""
 " registered with the application when it is available in the factory "
 "function."
 msgstr ""
-":class:`Blueprint`\ は、関連するviewおよびその他のコードをグループへと"
+":class:`Blueprint` は、関連するviewおよびその他のコードをグループへと"
 "編成する方法です。viewおよびその他のコードを直接Flaskアプリケーションに"
-"登録するよりも、代わりにそれらをblueprintに登録します。それから、factory関数の"
-"中でFlaskアプリケーションが利用可能になったときに、blueprintをFlask"
+"登録するよりも、代わりにそれらをblueprintに登録します。それから、factory"
+"関数の中でFlaskアプリケーションが利用可能になったときに、blueprintをFlask"
 "アプリケーションに登録します。"
 
 # a95ba696c5dd40ae9c3b2b9b5c305c7f
@@ -104,11 +94,11 @@ msgid ""
 "is passed as the second argument. The ``url_prefix`` will be prepended to"
 " all the URLs associated with the blueprint."
 msgstr ""
-"これは\ ``'auth'``\ と名付けられた\ :class:`Blueprint`\ を作成します。"
-"Flaskアプリケーションのオブジェクトと似たように、blueprintは自分がどこで定義"
-"されているか知る必要があり、従って\ ``__name__``\ が2番目の引数として"
-"渡されています。\ ``url_prefix``\ は、blueprintと関連付けられる全てのURL"
-"の（パス部分の）先頭に付けられます。"
+"これは ``'auth'`` と名付けられた :class:`Blueprint` を作成します。Flask"
+"アプリケーションのオブジェクトと似たように、blueprintは自分がどこで定義"
+"されているか知る必要があり、従って ``__name__`` が2番目の引数として渡され"
+"ています。``url_prefix`` は、blueprintと関連付けられる全てのURLの（パス"
+"部分の）先頭に付けられます。"
 
 # 196a4c2d9aad4d80aba890a5565d5b8e
 #: ../../flask/docs/tutorial/views.rst:46
@@ -117,7 +107,7 @@ msgid ""
 ":meth:`app.register_blueprint() <Flask.register_blueprint>`. Place the "
 "new code at the end of the factory function before returning the app."
 msgstr ""
-":meth:`app.register_blueprint() <Flask.register_blueprint>`\ を使用して、"
+":meth:`app.register_blueprint() <Flask.register_blueprint>` を使用して、"
 "factoryからblueprintをimportして登録します。新しいコードはfactory関数の"
 "最後で、appを返す直前に置くようにします。"
 
@@ -148,11 +138,11 @@ msgid ""
 "the form, it will validate their input and either show the form again "
 "with an error message or create the new user and go to the login page."
 msgstr ""
-"ユーザが\ ``/auth/register``\ のURLへ訪ずれたときは、\ ``register``\ "
-"のviewはユーザが記入すべきformを持つ\ `HTML`_\ を返します。ユーザが"
-"formを提出（submit）したときは、ユーザの入力を検証し、それから、エラー"
-"メッセージと一緒にフォームを再表示するか、または、新しいユーザを作成して"
-"ログインページへ行くようにします。"
+"ユーザが ``/auth/register`` のURLへ訪ずれたときは、``register`` のviewは"
+"ユーザが記入すべきformを持つ `HTML`_ を返します。ユーザがformを提出"
+"（submit）したときは、ユーザの入力を検証し、それから、エラーメッセージと"
+"一緒にフォームを再表示するか、または、新しいユーザを作成してログインページ"
+"へ行くようにします。"
 
 # 40dd43916335440a98294bc52e1dd2e7
 #: ../../flask/docs/tutorial/views.rst:76
@@ -166,7 +156,7 @@ msgstr ""
 # 53a2c05253c34361879b29caee3ab24e
 #: ../../flask/docs/tutorial/views.rst:111
 msgid "Here's what the ``register`` view function is doing:"
-msgstr "``register``\ のviewの関数が何をしているか、以下に示します:"
+msgstr "``register`` のviewの関数が何をしているか、以下に示します:"
 
 # 3751500532914958b839707153cdfc67
 #: ../../flask/docs/tutorial/views.rst:113
@@ -176,9 +166,9 @@ msgid ""
 "``/auth/register``, it will call the ``register`` view and use the return"
 " value as the response."
 msgstr ""
-":meth:`@bp.route <Blueprint.route>`\ は、URLの\ ``/register``\ と"
-"\ ``register``\ のviewの関数とを関連付けます。Flaskが\ ``/auth/register``\ "
-"へのリクエストを受信したとき、Flaskは\ ``register``\ のviewを呼び出し、"
+":meth:`@bp.route <Blueprint.route>` は、URLの ``/register`` と"
+" ``register`` のview関数とを関連付けます。Flaskが ``/auth/register`` "
+"へのリクエストを受信したとき、Flaskは ``register`` のviewを呼び出し、"
 "その戻り値をレスポンスとして使用します。"
 
 # 5f92f149f9be417eae083642829a1866
@@ -187,7 +177,7 @@ msgid ""
 "If the user submitted the form, :attr:`request.method <Request.method>` "
 "will be ``'POST'``. In this case, start validating the input."
 msgstr ""
-"もしユーザがformを提出した場合、\ :attr:`Request.method <Request.method>`\ "
+"もしユーザがformを提出した場合、:attr:`Request.method <Request.method>` "
 "はPOSTになります。その場合は、入力データの検証を開始します。"
 
 # a2fc88550dd4407b83c0fdeb1a5952ff
@@ -197,14 +187,19 @@ msgid ""
 "mapping submitted form keys and values. The user will input their "
 "``username`` and ``password``."
 msgstr ""
-":attr:`request.form <Request.form>`\ は、提出されたformのキーと値とを"
-"対応付ける、\ :class:`dict`\ の特別なタイプです。ユーザは自分の\ "
-"``username``\ と\ ``password``\ を入力します。"
+":attr:`request.form <Request.form>` は、提出されたformのキーと値とを"
+"対応付ける、:class:`dict` の特別なタイプです。ユーザは自分の ``username`` "
+"と ``password`` を入力します。"
 
 # 211f41286c744615911e1fe358c275d9
 #: ../../flask/docs/tutorial/views.rst:126
 msgid "Validate that ``username`` and ``password`` are not empty."
-msgstr "``username``\ と\ ``password``\ が空でないか検証します。"
+msgstr "``username`` と ``password`` が空でないか検証します。"
+
+#: ../../flask/docs/tutorial/views.rst:128
+msgid "If validation succeeds, insert the new user data into the database."
+msgstr ""
+"もしも検証が成功した場合は、新しいユーザのデータをデータベースに挿入します。"
 
 # bcfac4cfbdbc42f7b7d2b9115c9efbd2
 #: ../../flask/docs/tutorial/views.rst:130
@@ -246,6 +241,14 @@ msgstr ""
 "データを変更するため、変更を保存するために :meth:`db.commit() "
 "<sqlite3.Connection.commit>` を後で呼び出す必要があります。"
 
+#: ../../flask/docs/tutorial/views.rst:144
+msgid ""
+"An :exc:`sqlite3.IntegrityError` will occur if the username already "
+"exists, which should be shown to the user as another validation error."
+msgstr ""
+"もしusernameが既に存在している場合、:exc:`sqlite3.IntegrityError` が起こり、"
+"もう一つの検証エラーとしてユーザに示されるはずです。"
+
 # bf107b82dc6a487fa2fc34b23bb59ffe
 #: ../../flask/docs/tutorial/views.rst:148
 msgid ""
@@ -255,12 +258,12 @@ msgid ""
 " the URL later without changing all code that links to it. "
 ":func:`redirect` generates a redirect response to the generated URL."
 msgstr ""
-"ユーザ情報を格納した後、ログインページへリダイレクトさせます。\ "
-":func:`url_for`\ は、ログインのviewの名前（関数の名前）から対応するURLを"
+"ユーザ情報を格納した後、ログインページへリダイレクトさせます。"
+":func:`url_for` は、ログインのviewの名前（関数の名前）から対応するURLを"
 "生成します。これはURLを後から変更しても、そのURLにリンクしている全てのコード"
 "を変更させずにすますことが可能になるため、URLを（コードの中に）直接書き込む"
-"よりも好ましいやり方です。\ :func:`redirect`\ は、生成されたURLへ"
-"リダイレクトさせるレスポンスを生成します。"
+"よりも好ましいやり方です。:func:`redirect` は、生成されたURLへリダイレクト"
+"させるレスポンスを生成します。"
 
 # 0b153d00360e413fad1582e4f589d778
 #: ../../flask/docs/tutorial/views.rst:155
@@ -268,7 +271,7 @@ msgid ""
 "If validation fails, the error is shown to the user. :func:`flash` stores"
 " messages that can be retrieved when rendering the template."
 msgstr ""
-"もし検証が失敗した場合は、エラーをユーザへ示します。\ :func:`flash`\ は、"
+"もし検証が失敗した場合は、エラーをユーザへ示します。:func:`flash` は、"
 "テンプレートを変換（render）するときに取得可能なメッセージを格納します。"
 
 # 5d25a7a4f3054a4a80f312381402fee2
@@ -279,9 +282,9 @@ msgid ""
 "shown. :func:`render_template` will render a template containing the "
 "HTML, which you'll write in the next step of the tutorial."
 msgstr ""
-"ユーザが最初に\ ``auth/register``\ へ進んだときは、または検証での"
-"エラーがあったときには、登録formのあるHTMLページを表示すべきです。\ "
-":func:`render_template`\ は、このチュートリアルの次のステップで作成する、"
+"ユーザが最初に ``auth/register`` へ進んだときは、または検証での"
+"エラーがあったときには、登録formのあるHTMLページを表示するべきです。"
+":func:`render_template` は、このチュートリアルの次のステップで作成する、"
 "登録formのあるHTMLを含んだテンプレートを変換します。"
 
 # 64169ef34f354311a377f9ebd2ba9303
@@ -292,12 +295,12 @@ msgstr "ログイン"
 # bbecb3ae9da44986b4dc9b9f91e4ea5a
 #: ../../flask/docs/tutorial/views.rst:168
 msgid "This view follows the same pattern as the ``register`` view above."
-msgstr "このviewは上記の\ ``register``\ のviewと同じパターンに従います。"
+msgstr "このviewは上記の ``register`` のviewと同じパターンに従います。"
 
 # 3c50deef7e3145548dc7b49d230dcb90
 #: ../../flask/docs/tutorial/views.rst:198
 msgid "There are a few differences from the ``register`` view:"
-msgstr "``register``\ のviewとは違うところが少しあります:"
+msgstr "``register`` のviewとは違うところが少しあります:"
 
 # efe46c07de4145d4b66548fbd17edd25
 #: ../../flask/docs/tutorial/views.rst:200
@@ -328,7 +331,7 @@ msgid ""
 "password in the same way as the stored hash and securely compares them. "
 "If they match, the password is valid."
 msgstr ""
-":func:`~werkzeug.security.check_password_hash`\ は提出（submit）された"
+":func:`~werkzeug.security.check_password_hash` は提出（submit）された"
 "パスワードを、格納されたハッシュと同じやり方でハッシュし、セキュリティに"
 "注意しながらそれらを比較します。もし一致した場合、パスワードは適正です。"
 
@@ -341,11 +344,11 @@ msgid ""
 " then sends it back with subsequent requests. Flask securely *signs* the "
 "data so that it can't be tampered with."
 msgstr ""
-":data:`session`\ は、リクエストを跨いで格納されるデータの\ :class:`dict`\ "
-"です。検証が成功したときは、ユーザの\ ``id``\ は新しいsessionに格納され"
-"ます。そのデータはブラウザへ送信される\ *cookie*\ に格納され、それから"
+":data:`session` は、リクエストを跨いで格納されるデータの :class:`dict` "
+"です。検証が成功したときは、ユーザの ``id`` は新しいsessionに格納され"
+"ます。そのデータはブラウザへ送信される *cookie* に格納され、それから"
 "ブラウザは以降のリクエストで（cookieを）送信し返します。Flaskはデータを"
-"改ざんできないようにするために、安全にデータを\ *署名します*\ 。"
+"改ざんできないようにするために、安全にデータを *署名します*。"
 
 # 0100eff5fddf490db837b1614850a15a
 #: ../../flask/docs/tutorial/views.rst:217
@@ -355,7 +358,7 @@ msgid ""
 "user is logged in their information should be loaded and made available "
 "to other views."
 msgstr ""
-"この時点でユーザの\ ``id``\ は\ :data:`session`\ へ格納され、それは以降の"
+"この時点でユーザの ``id`` は :data:`session` へ格納され、それは以降の"
 "リクエストで利用可能になります。各リクエストの開始時に、ユーザがログイン"
 "していた場合にはユーザの情報は読み込まれて、他のviewからも利用可能にされる"
 "べきです。"
@@ -371,13 +374,13 @@ msgid ""
 "there is no user id, or if the id doesn't exist, ``g.user`` will be "
 "``None``."
 msgstr ""
-":meth:`bp.before_app_request() <Blueprint.before_app_request>`\ は"
+":meth:`bp.before_app_request() <Blueprint.before_app_request>` は"
 "どのURLがリクエストされたかに関わらず、viewの関数の前に実行する関数を登録"
-"します。\ ``load_logged_in_user``\ は、ユーザidが\ :data:`session`\ に"
+"します。``load_logged_in_user`` は、ユーザidが :data:`session` に"
 "格納されているかチェックし、それからデータベースからユーザのデータを取得し、"
-"それをリクエストの期間中は存続する\ :data:`g.user <g>`\ へ格納します。もし"
+"それをリクエストの期間中は存続する :data:`g.user <g>` へ格納します。もし"
 "ユーザidが（セッションに）ない場合、もしくはそのidが（データベースに）存在"
-"しない場合、\ ``g.user``\ は\ ``None``\ になります。"
+"しない場合、``g.user`` は ``None`` になります。"
 
 # be9323c7a2d944589d8ab30c2b061700
 #: ../../flask/docs/tutorial/views.rst:246
@@ -390,8 +393,8 @@ msgid ""
 "To log out, you need to remove the user id from the :data:`session`. Then"
 " ``load_logged_in_user`` won't load a user on subsequent requests."
 msgstr ""
-"ログアウトするには、ユーザidを\ :data:`session`\ から取り除く必要が"
-"あります。そうすると\ ``load_logged_in_user``\ は以降のリクエストで"
+"ログアウトするには、ユーザidを :data:`session` から取り除く必要が"
+"あります。そうすると ``load_logged_in_user`` は以降のリクエストで"
 "ユーザ情報を読み込まなくなります。"
 
 # bd2992b2275643a5aebfc5661c080b6e
@@ -406,9 +409,9 @@ msgid ""
 "logged in. A *decorator* can be used to check this for each view it's "
 "applied to."
 msgstr ""
-"ブログの投稿記事を作成、編集、削除するにはユーザがログインしている必要があります。"
-"\ *デコレータ（decorator）*\ を使用すると、decoratorを適用した各viewで"
-"ログインをチェックできます。"
+"ブログの投稿記事を作成、編集、削除するにはユーザがログインしている必要が"
+"あります。*デコレータ（decorator）* を使用すると、decoratorを適用した各"
+"viewでログインをチェックできます。"
 
 # b0b730e5bac94f598f2c21e135fc2b11
 #: ../../flask/docs/tutorial/views.rst:280
@@ -438,16 +441,16 @@ msgid ""
 "*endpoint*, and by default it's the same as the name of the view "
 "function."
 msgstr ""
-":func:`url_for`\ 関数はviewの名前と引数に基づいて対応するURLを生成します。"
-"viewに関連付けられた名前は\ *エンドポイント*\ とも呼ばれ、標準設定ではview"
+":func:`url_for` 関数はviewの名前と引数に基づいて対応するURLを生成します。"
+"viewに関連付けられた名前は *エンドポイント* とも呼ばれ、標準設定ではview"
 "の関数の名前と同じになります。（訳注: エンドポイントはview用の関数などを"
-"特定するもので、Flask実装上はdictionaryである\ "
-":attr:`~flask.Flask.view_functions`\ 属性のキーになります。Flask実装では、"
+"特定するもので、Flask実装上はdictionaryである "
+":attr:`~flask.Flask.view_functions` 属性のキーになります。Flask実装では、"
 "アプリが使用するview用の関数などは全てview_functions属性に、エンドポイント"
 "をキーに関数本体を値にして登録されます。たいていは関数名とエンドポイントは"
-"同じですが異なる値がエンドポイントになる場合もあります。Flaskでは\ "
-":func:`~flask.Flask.route`\ デコレータ使うと内部的にWerkzeugの\ "
-":class:`~werkzeug.routing.Rule`\ インスタンスを作成してURLのパターンと"
+"同じですが異なる値がエンドポイントになる場合もあります。Flaskでは "
+":func:`~flask.Flask.route` デコレータ使うと内部的にWerkzeugの "
+":class:`~werkzeug.routing.Rule` インスタンスを作成してURLのパターンと"
 "エンドポイントを対応付けます）"
 
 # 19638529d10e4210886fd686f77e5a27
@@ -458,12 +461,11 @@ msgid ""
 "with ``url_for('hello')``. If it took an argument, which you'll see "
 "later, it would be linked to using ``url_for('hello', who='World')``."
 msgstr ""
-"例えば、このチュートリアルの前の方でapp factoryに追加されたviewの\ "
-"``hello()``\ は、名前（訳注: エンドポイント、特に指定しなければ関数名"
-"と同じ）が\ ``'hello'``\ で"
-"あり、\ ``url_for('hello')``\ を使ってリンクすることができます。もし"
-"引数を取る場合は、それは後で確認していきますが、それは\ "
-"``url_for('hello', who='World')``\ を使用してリンクできるでしょう。"
+"例えば、このチュートリアルの前の方でapp factoryに追加されたviewの "
+"``hello()`` は、名前（訳注: エンドポイント、特に指定しなければ関数名"
+"と同じ）が ``'hello'`` であり、``url_for('hello')`` を使ってリンクすること"
+"ができます。もし引数を取る場合は、それは後で確認していきますが、それは "
+"``url_for('hello', who='World')`` を使用してリンクできるでしょう。"
 
 # e9bf16ae80e1439aabcbd68d621fa965
 #: ../../flask/docs/tutorial/views.rst:300
@@ -474,11 +476,11 @@ msgid ""
 "blueprint."
 msgstr ""
 "blueprintを使用するときは、blueprintの名前が関数名の前に付けられ、"
-"従って先程書いた\ ``login``\ 関数のエンドポイントは、blueprintの\ "
-"``'auth'``\ にlogin関数を追加しているため\ ``'auth.login'``\ に"
+"従って先程書いた ``login`` 関数のエンドポイントは、blueprintの "
+"``'auth'`` にlogin関数を追加しているため ``'auth.login'`` に"
 "なります。"
 
 # 36dc0ce7ddf642a7b27599d16e07f068
 #: ../../flask/docs/tutorial/views.rst:305
 msgid "Continue to :doc:`templates`."
-msgstr ":doc:`templates`\ へ続きます。"
+msgstr ":doc:`templates` へ続きます。"
