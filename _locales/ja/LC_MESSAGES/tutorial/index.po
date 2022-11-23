@@ -93,10 +93,9 @@ msgstr ""
 "できるプロジェクトを作り出します。Flaskをより快適に感じるようになったら、"
 "ここで示す構造から足を踏み出して、Flaskの柔軟性を存分に活用してください。"
 
-#, fuzzy
 #| msgid "screenshot of login page"
 msgid "screenshot of edit page"
-msgstr "loginページのスクリーンショット"
+msgstr "editページのスクリーンショット"
 
 # 52b89e7733cf4a6b990919973b62d6f3
 #: ../../flask/docs/tutorial/index.rst:60
