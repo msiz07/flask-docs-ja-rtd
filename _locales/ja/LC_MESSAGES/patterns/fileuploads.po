@@ -291,7 +291,6 @@ msgstr ""
 
 # 5a97b511b6e14219b51ea98ed858d07e
 #: ../../flask/docs/patterns/fileuploads.rst:177
-#, fuzzy
 #| msgid "" "Because the common pattern for file uploads exists almost
 #| unchanged in " "all applications dealing with uploads, there is also a Flask
 #| extension " "called `Flask-Uploads`_ that implements a full fledged upload
@@ -306,7 +305,7 @@ msgstr ""
 "ファイルのアップロードについてのありがちなパターンはアップロードを扱う"
 "全てのアプリケーションで殆ど変わることなく存在するため、Flask拡張にも、"
 "どのファイル拡張子はアップロードを許可するか制御できる、十分に成熟した"
-"アップロードの仕組みを実装した `Flask-Uploads`_ と呼ばれるものがあります。"
+"アップロードの仕組みを実装したものがいくつかあります。"
 
 # 2249e0cdc4264f10ba9451d7bb11a5e7
 #~ msgid ""
