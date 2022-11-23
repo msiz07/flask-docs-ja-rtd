@@ -49,8 +49,8 @@ msgid ""
 "It's assumed that you're already familiar with Python. The `official "
 "tutorial`_ in the Python docs is a great way to learn or review first."
 msgstr ""
-"Pythonには既に親しんでいる前提とします。Pythonドキュメントの\ `official "
-"tutorial`_\ は、最初に学習または見直しをするには素晴らしい方法です。"
+"Pythonには既に親しんでいる前提とします。Pythonドキュメントの `official "
+"tutorial`_ は、最初に学習または見直しをするには素晴らしい方法です。"
 
 # ded8179b398f41d0871ba3289701954d
 #: ../../flask/docs/tutorial/index.rst:35
