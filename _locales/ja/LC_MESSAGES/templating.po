@@ -107,10 +107,9 @@ msgstr "以下のグローバル変数は標準設定で、Jinja2テンプレー
 
 # 536647c5de3c4eaa995d3af9c096c92b
 #: ../../flask/docs/templating.rst:40
-#, fuzzy
 #| msgid "The current configuration object (:data:`flask.config`)"
 msgid "The current configuration object (:data:`flask.Flask.config`)"
-msgstr "その時点の設定オブジェクト（\\ :data:`flask.Flask.config`\\ ）"
+msgstr "その時点の設定オブジェクト（:data:`flask.Flask.config`）"
 
 # f3143720eab54bb39bcff835fdc76780
 #: ../../flask/docs/templating.rst:44
