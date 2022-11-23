@@ -87,6 +87,10 @@ msgid ""
 " If you have not yet converted your application into a package, head over"
 " to :doc:`packages` to see how this can be done."
 msgstr ""
+"この事例は、自分のアプリケーションは :file:`yourapplication.py` と呼ばれ、"
+"モジュールは使用せずパッケージを使用すると想定します。もし自分のアプリ"
+"ケーションをまだパッケージへ変換していない場合、どのようにパッケージへの"
+"変換ができるか見るために :doc:`packages` を調べてください。"
 
 # d9f0880955694365afe0d2105df52e54
 #: ../../flask/docs/patterns/distribute.rst:28
