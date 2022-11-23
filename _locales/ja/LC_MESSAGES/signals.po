@@ -309,6 +309,12 @@ msgid ""
 "limitations described in :ref:`signals-sending` and the "
 ":data:`~flask.request_tearing_down` signal."
 msgstr ""
+"signalを受信する時、signalは :doc:`reqcontext` を全てサポートします。"
+"コンテキストの局所的変数は一貫して :data:`~flask.request_started` と "
+":data:`~flask.request_finished` の間で利用可能であるため、:class:"
+"`flask.g` およびその他のものに必要に応じて頼ることができます。:ref:"
+"`signals-sending` の中で説明されている制限と :data:"
+"`~flask.request_tearing_down` シグナルの制限に注意してください。"
 
 # f2a13d71616f4e1da28af6fa574cbef3
 #: ../../flask/docs/signals.rst:171
