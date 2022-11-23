@@ -17,9 +17,85 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 
+# d29f4d0ccb9347f488719169fe4f2e78
+#: ../../flask/docs/server.rst:4
+msgid "Development Server"
+msgstr "開発サーバ"
+
+#: ../../flask/docs/server.rst:6
+msgid ""
+"Flask provides a ``run`` command to run the application with a "
+"development server. In development mode, this server provides an "
+"interactive debugger and will reload when code is changed."
+msgstr ""
+
+#: ../../flask/docs/server.rst:12
+msgid ""
+"Do not use the development server when deploying to production. It is "
+"intended for use only during local development. It is not designed to be "
+"particularly efficient, stable, or secure."
+msgstr ""
+
+#: ../../flask/docs/server.rst:16
+msgid "See :doc:`/deploying/index` for deployment options."
+msgstr ""
+
+# dbf0ffda21af45388668505442d91cb1
+#: ../../flask/docs/server.rst:19
+msgid "Command Line"
+msgstr "コマンドライン"
+
+#: ../../flask/docs/server.rst:21
+msgid ""
+"The ``flask run`` command line script is the recommended way to run the "
+"development server. It requires setting the ``FLASK_APP`` environment "
+"variable to point to your application, and ``FLASK_ENV=development`` to "
+"fully enable development mode."
+msgstr ""
+
+#: ../../flask/docs/server.rst:28
+msgid "Bash"
+msgstr ""
+
 #: ../../flask/docs/server.rst:36
 msgid "Fish"
 msgstr ""
+
+#: ../../flask/docs/server.rst:44
+msgid "CMD"
+msgstr ""
+
+#: ../../flask/docs/server.rst:52
+msgid "Powershell"
+msgstr ""
+
+# a6a4003694b3454db1e0c02fb2e76d45
+#: ../../flask/docs/server.rst:60
+msgid ""
+"This enables the development environment, including the interactive "
+"debugger and reloader, and then starts the server on "
+"http://localhost:5000/. Use ``flask run --help`` to see the available "
+"options, and  :doc:`/cli` for detailed instructions about configuring and"
+" using the CLI."
+msgstr ""
+"この例ではインタラクティブなデバッガと再読み込み機能（reloader）を含む、"
+"開発環境を有効にし、それから *http://localhost:5000* でサーバを開始"
+"します。利用可能なオプションを見るには ``flask run --help`` を使用し、"
+"CLIの仕様や設定についての指示（instructions）の詳細は :doc:`/cli` を"
+"使用してください。"
+
+# 6e247eb51ccf41dc8cd7a0284db05f65
+#: ../../flask/docs/server.rst:68
+msgid ""
+"Prior to Flask 1.0 the ``FLASK_ENV`` environment variable was not "
+"supported and you needed to enable debug mode by exporting "
+"``FLASK_DEBUG=1``. This can still be used to control debug mode, but you "
+"should prefer setting the development environment as shown above."
+msgstr ""
+"Flask 1.0より前は、``FLASK_ENV`` 環境変数はサポートされておらず、デバッグ"
+"モードを有効にするには ``FLASK_DEBUG=1`` をexportする必要がありました。"
+"これは今でもデバッグモードの制御に使用可能ですが、上述した開発環境の"
+"設定の方が好ましいものです。"
 
 #: ../../flask/docs/server.rst:78
 msgid "Address already in use"
@@ -73,82 +149,6 @@ msgid ""
 "5000. To disable the service, go to System Preferences, Sharing, and "
 "disable \"AirPlay Receiver\"."
 msgstr ""
-
-# d29f4d0ccb9347f488719169fe4f2e78
-#: ../../flask/docs/server.rst:4
-msgid "Development Server"
-msgstr "開発サーバ"
-
-#: ../../flask/docs/server.rst:6
-msgid ""
-"Flask provides a ``run`` command to run the application with a "
-"development server. In development mode, this server provides an "
-"interactive debugger and will reload when code is changed."
-msgstr ""
-
-#: ../../flask/docs/server.rst:12
-msgid ""
-"Do not use the development server when deploying to production. It is "
-"intended for use only during local development. It is not designed to be "
-"particularly efficient, stable, or secure."
-msgstr ""
-
-#: ../../flask/docs/server.rst:16
-msgid "See :doc:`/deploying/index` for deployment options."
-msgstr ""
-
-# dbf0ffda21af45388668505442d91cb1
-#: ../../flask/docs/server.rst:19
-msgid "Command Line"
-msgstr "コマンドライン"
-
-#: ../../flask/docs/server.rst:21
-msgid ""
-"The ``flask run`` command line script is the recommended way to run the "
-"development server. It requires setting the ``FLASK_APP`` environment "
-"variable to point to your application, and ``FLASK_ENV=development`` to "
-"fully enable development mode."
-msgstr ""
-
-#: ../../flask/docs/server.rst:28
-msgid "Bash"
-msgstr ""
-
-#: ../../flask/docs/server.rst:44
-msgid "CMD"
-msgstr ""
-
-#: ../../flask/docs/server.rst:52
-msgid "Powershell"
-msgstr ""
-
-# a6a4003694b3454db1e0c02fb2e76d45
-#: ../../flask/docs/server.rst:60
-msgid ""
-"This enables the development environment, including the interactive "
-"debugger and reloader, and then starts the server on "
-"http://localhost:5000/. Use ``flask run --help`` to see the available "
-"options, and  :doc:`/cli` for detailed instructions about configuring and"
-" using the CLI."
-msgstr ""
-"この例ではインタラクティブなデバッガと再読み込み機能（reloader）を含む、"
-"開発環境を有効にし、それから *http://localhost:5000* でサーバを開始"
-"します。利用可能なオプションを見るには ``flask run --help`` を使用し、"
-"CLIの仕様や設定についての指示（instructions）の詳細は :doc:`/cli` を"
-"使用してください。"
-
-# 6e247eb51ccf41dc8cd7a0284db05f65
-#: ../../flask/docs/server.rst:68
-msgid ""
-"Prior to Flask 1.0 the ``FLASK_ENV`` environment variable was not "
-"supported and you needed to enable debug mode by exporting "
-"``FLASK_DEBUG=1``. This can still be used to control debug mode, but you "
-"should prefer setting the development environment as shown above."
-msgstr ""
-"Flask 1.0より前は、``FLASK_ENV`` 環境変数はサポートされておらず、デバッグ"
-"モードを有効にするには ``FLASK_DEBUG=1`` をexportする必要がありました。"
-"これは今でもデバッグモードの制御に使用可能ですが、上述した開発環境の"
-"設定の方が好ましいものです。"
 
 #: ../../flask/docs/server.rst:124
 msgid "Lazy or Eager Loading"
