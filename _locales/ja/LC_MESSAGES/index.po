@@ -37,7 +37,7 @@ msgid ""
 "section."
 msgstr ""
 "Flaskのドキュメントへようこそ。:doc:`installation` から始めて、"
-"それから :doc:`quickstart` で概要をつかみましょう 。より詳細な "
+"それから :doc:`quickstart` で概要をつかみましょう。より詳細な "
 ":doc:`tutorial/index` では、小さいけれども完成しているFlaskアプリケーション"
 "をどのように作成するか示しています。:doc:`patterns/index` セクションでは"
 "一般的なパターンを記述しています。この文書のその他の部分ではFlaskの各"
@@ -50,7 +50,7 @@ msgid ""
 "Flask depends on the `Jinja`_ template engine and the `Werkzeug`_ WSGI "
 "toolkit. The documentation for these libraries can be found at:"
 msgstr ""
-"Flaskはテンプレートエンジン\ `Jinja`_\ とWSGIツールキット\ `Werkzeug`_\ を"
+"Flaskはテンプレートエンジン `Jinja`_ とWSGIツールキット `Werkzeug`_ を"
 "必要とします。それらのライブラリのドキュメントはこちらです："
 
 # 259ce2847d904befafceaa4a99142e72
@@ -101,7 +101,8 @@ msgstr "追記事項"
 # 2d16c931c08340a8b715f74c280d5396
 #: ../../flask/docs/index.rst:80
 msgid "Design notes, legal information and changelog are here for the interested."
-msgstr "関心のある人向けの、設計上の注記、法律関連の情報、そしてchangelogはここです。"
+msgstr ""
+"関心のある人向けの、設計上の注記、法律関連の情報、そしてchangelogはここです。"
 
 # daadbbf44d76476689aead07c277bc5d
 #~ msgid "`Jinja documentation <http://jinja.pocoo.org/docs>`_"
