@@ -159,14 +159,14 @@ msgid ""
 "display a line after each post except the last one, to visually separate "
 "them."
 msgstr ""
-"ユーザがログインしたときは、\ ``header``\ ブロックが\ ``create``\ の"
+"ユーザがログインしたときは、``header`` ブロックが ``create`` の"
 "viewへのリンクを付け加えます。ユーザが投稿記事の作者であったときは、その"
-"投稿記事に対する\ ``update``\ のviewへリンクする「Edit」が見えるように"
-"なります。\ ``loop.last``\ は\ `Jinjaのforループ`_\ の内側で利用可能な"
+"投稿記事に対する ``update`` のviewへリンクする「Edit」が見えるように"
+"なります。``loop.last`` は `Jinjaのforループ`_ の内側で利用可能な"
 "特殊な変数です。それは、最後以外の各投稿記事の後で線を表示し、各行を"
-"表示上分離させるために使用されています。
-
-.. _Jinjaのforループ: Jinja for loops"
+"表示上分離させるために使用されています。\n"
+"\n"
+".. _Jinjaのforループ: Jinja for loops"
 
 # 7c5997f2734b41709697be6be57468c7
 #: ../../tutorial/blog.rst:132
