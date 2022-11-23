@@ -17,12 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 
-#: ../../flask/docs/installation.rst:11
-msgid ""
-"``async`` support in Flask requires Python 3.7+ for "
-"``contextvars.ContextVar``."
-msgstr ""
-
 # e157c3941a4b4e09a16cb970ac6aec2a
 #: ../../flask/docs/installation.rst:2
 msgid "Installation"
@@ -41,6 +35,14 @@ msgid ""
 msgstr ""
 "Pythonの最新バージョンを使うことを推奨します。FlaskはPython 3.6以降を"
 "サポートします。"
+
+#: ../../flask/docs/installation.rst:11
+msgid ""
+"``async`` support in Flask requires Python 3.7+ for "
+"``contextvars.ContextVar``."
+msgstr ""
+"Flaskでの ``async`` のサポートは ``contextvars.ContextVar`` のためにPython "
+"3.7+ が必要です。"
 
 # 8eeec08d592b4542a5b95959ae657c49
 #: ../../flask/docs/installation.rst:15
