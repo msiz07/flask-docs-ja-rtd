@@ -6,16 +6,26 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 2.0.x\n"
+"Project-Id-Version: Flask 2.2.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-20 18:38+0900\n"
+"POT-Creation-Date: 2022-11-26 22:21+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: ../../flask/docs/patterns/celery.rst:37
+msgid "This is all that is necessary to integrate Celery with Flask:"
+msgstr ""
+
+#: ../../flask/docs/patterns/celery.rst:61
+msgid ""
+"Celery 5.x deprecated uppercase configuration keys, and 6.x will remove "
+"them. See their official `migration guide`_."
+msgstr ""
 
 # 93eea3f12ffa4a2daf7f556894a51339
 #: ../../flask/docs/patterns/celery.rst:2
@@ -77,13 +87,8 @@ msgid ""
 "and hooking it up with the Flask configuration."
 msgstr ""
 
-# 5ec0f0bbdea146d5a1b07d8e820a16f2
-#: ../../flask/docs/patterns/celery.rst:37
-msgid "This is all that is necessary to properly integrate Celery with Flask::"
-msgstr ""
-
 # 51ac27d81392445094dd1696a73cf5bb
-#: ../../flask/docs/patterns/celery.rst:57
+#: ../../flask/docs/patterns/celery.rst:55
 msgid ""
 "The function creates a new Celery object, configures it with the broker "
 "from the application config, updates the rest of the Celery config from "
@@ -92,11 +97,11 @@ msgid ""
 msgstr ""
 
 # d701245b8419432ab6fa6ed236c5190d
-#: ../../flask/docs/patterns/celery.rst:63
+#: ../../flask/docs/patterns/celery.rst:67
 msgid "An example task"
 msgstr ""
 
-#: ../../flask/docs/patterns/celery.rst:65
+#: ../../flask/docs/patterns/celery.rst:69
 msgid ""
 "Let's write a task that adds two numbers together and returns the result."
 " We configure Celery's broker and backend to use Redis, create a "
@@ -105,17 +110,17 @@ msgid ""
 msgstr ""
 
 # cef3a8fd9fc545788858f765fde9cb59
-#: ../../flask/docs/patterns/celery.rst:82
+#: ../../flask/docs/patterns/celery.rst:86
 msgid "This task can now be called in the background::"
 msgstr ""
 
 # e1cd200b5ff34305908ce157f3ad43f6
-#: ../../flask/docs/patterns/celery.rst:88
+#: ../../flask/docs/patterns/celery.rst:92
 msgid "Run a worker"
 msgstr ""
 
 # 9b020bb20821442084f3a359e871cdff
-#: ../../flask/docs/patterns/celery.rst:90
+#: ../../flask/docs/patterns/celery.rst:94
 msgid ""
 "If you jumped in and already executed the above code you will be "
 "disappointed to learn that ``.wait()`` will never actually return. That's"
@@ -124,14 +129,14 @@ msgid ""
 msgstr ""
 
 # 33950bf8ca5445fcaec0d870f363c24c
-#: ../../flask/docs/patterns/celery.rst:97
+#: ../../flask/docs/patterns/celery.rst:101
 msgid ""
 "The ``your_application`` string has to point to your application's "
 "package or module that creates the ``celery`` object."
 msgstr ""
 
 # 36e44c09f8db473d9e111d8d64fff9f0
-#: ../../flask/docs/patterns/celery.rst:100
+#: ../../flask/docs/patterns/celery.rst:104
 msgid ""
 "Now that the worker is running, ``wait`` will return the result once the "
 "task is finished."
@@ -146,5 +151,9 @@ msgstr ""
 #~ "``celery`` application using the factor "
 #~ "from above, and then use it to "
 #~ "define the task. ::"
+#~ msgstr ""
+
+# 5ec0f0bbdea146d5a1b07d8e820a16f2
+#~ msgid "This is all that is necessary to properly integrate Celery with Flask::"
 #~ msgstr ""
 

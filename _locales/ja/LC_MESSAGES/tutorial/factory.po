@@ -6,16 +6,32 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 2.0.x\n"
+"Project-Id-Version: Flask 2.2.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-20 18:38+0900\n"
+"POT-Creation-Date: 2022-11-26 22:21+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: ../../flask/docs/tutorial/factory.rst:128
+msgid ""
+"Now you can run your application using the ``flask`` command. From the "
+"terminal, tell Flask where to find your application, then run it in debug"
+" mode. Remember, you should still be in the top-level ``flask-tutorial`` "
+"directory, not the ``flaskr`` package."
+msgstr ""
+
+#: ../../flask/docs/tutorial/factory.rst:133
+msgid ""
+"Debug mode shows an interactive debugger whenever a page raises an "
+"exception, and restarts the server whenever you make changes to the code."
+" You can leave it running and just reload the browser page as you follow "
+"the tutorial."
+msgstr ""
 
 # 1dae90216daa4358ab0187edd570d335
 #: ../../flask/docs/tutorial/factory.rst:4
@@ -223,56 +239,13 @@ msgstr ""
 msgid "Run The Application"
 msgstr "アプリケーションの実行"
 
-# 74f2d923847f48f08514b61f5ced43e0
-#: ../../flask/docs/tutorial/factory.rst:128
-msgid ""
-"Now you can run your application using the ``flask`` command. From the "
-"terminal, tell Flask where to find your application, then run it in "
-"development mode. Remember, you should still be in the top-level ``flask-"
-"tutorial`` directory, not the ``flaskr`` package."
-msgstr ""
-"この時点で、\ ``flask``\ コマンドを使ってアプリケーションを実行できます。"
-"端末から、アプリケーションがどこで見つかるかを伝え、それから開発モードで"
-"それを実行するよう、Flaskへ伝えます。\ ``flaskr``\ パッケージではなく、"
-"トップレベルの\ ``flask-tutorial``\ ディレクトリにまだいるべきであることを"
-"忘れないでください。"
-
-# 3a23a3beb1fd4515b8a922354f9b259d
-#: ../../flask/docs/tutorial/factory.rst:133
-msgid ""
-"Development mode shows an interactive debugger whenever a page raises an "
-"exception, and restarts the server whenever you make changes to the code."
-" You can leave it running and just reload the browser page as you follow "
-"the tutorial."
-msgstr ""
-"開発モードは、ページが例外を起こしたときにはインタラクティブなデバッガを"
-"表示し、コードを変更したときにはサーバを再起動します。チュートリアルを"
-"続けるとき、Flaskを実行させたままにしながら、ブラウザのページを再読み込み"
-"するだけで済むようにします。"
-
-#: ../../flask/docs/tutorial/factory.rst:140
-msgid "Bash"
-msgstr ""
-
-#: ../../flask/docs/tutorial/factory.rst:148
-msgid "Fish"
-msgstr ""
-
-#: ../../flask/docs/tutorial/factory.rst:156
-msgid "CMD"
-msgstr ""
-
-#: ../../flask/docs/tutorial/factory.rst:164
-msgid "Powershell"
-msgstr ""
-
 # e60642b58ee341cf88d1905251752196
-#: ../../flask/docs/tutorial/factory.rst:172
+#: ../../flask/docs/tutorial/factory.rst:142
 msgid "You'll see output similar to this:"
 msgstr "以下と似たような出力が見られるでしょう:"
 
 # 3ffbe1c5b2f14ea995ee1e0c71cd5835
-#: ../../flask/docs/tutorial/factory.rst:184
+#: ../../flask/docs/tutorial/factory.rst:153
 msgid ""
 "Visit http://127.0.0.1:5000/hello in a browser and you should see the "
 "\"Hello, World!\" message. Congratulations, you're now running your Flask"
@@ -282,7 +255,7 @@ msgstr ""
 "メッセージを見られるはずです。おめでとうございます、この時点で自分の"
 "Flask webアプリケーションを実行中です！"
 
-#: ../../flask/docs/tutorial/factory.rst:188
+#: ../../flask/docs/tutorial/factory.rst:157
 msgid ""
 "If another program is already using port 5000, you'll see ``OSError: "
 "[Errno 98]`` or ``OSError: [WinError 10013]`` when the server tries to "
@@ -294,7 +267,7 @@ msgstr ""
 "は、:ref:`address-already-in-use` を見てください。"
 
 # 6c057672de284ae5a719c4f0db3b95f5
-#: ../../flask/docs/tutorial/factory.rst:193
+#: ../../flask/docs/tutorial/factory.rst:162
 msgid "Continue to :doc:`database`."
 msgstr ":doc:`database`\ へ続きます。"
 
@@ -309,4 +282,43 @@ msgstr ":doc:`database`\ へ続きます。"
 # e7d1ea5205ac4f898009c1957aa1cd18
 #~ msgid "For Windows PowerShell, use ``$env:`` instead of ``export``:"
 #~ msgstr "WindowsのPowerShellでは、\\ ``export``\\ の代わりに\\ ``$env:``\\ を使用します:"
+
+# 74f2d923847f48f08514b61f5ced43e0
+#~ msgid ""
+#~ "Now you can run your application "
+#~ "using the ``flask`` command. From the"
+#~ " terminal, tell Flask where to find"
+#~ " your application, then run it in "
+#~ "development mode. Remember, you should "
+#~ "still be in the top-level "
+#~ "``flask-tutorial`` directory, not the "
+#~ "``flaskr`` package."
+#~ msgstr ""
+#~ "この時点で、\\ ``flask``\\ "
+#~ "コマンドを使ってアプリケーションを実行できます。端末から、アプリケーションがどこで見つかるかを伝え、それから開発モードでそれを実行するよう、Flaskへ伝えます。\\"
+#~ " ``flaskr``\\ パッケージではなく、トップレベルの\\ ``flask-"
+#~ "tutorial``\\ ディレクトリにまだいるべきであることを忘れないでください。"
+
+# 3a23a3beb1fd4515b8a922354f9b259d
+#~ msgid ""
+#~ "Development mode shows an interactive "
+#~ "debugger whenever a page raises an "
+#~ "exception, and restarts the server "
+#~ "whenever you make changes to the "
+#~ "code. You can leave it running and"
+#~ " just reload the browser page as "
+#~ "you follow the tutorial."
+#~ msgstr "開発モードは、ページが例外を起こしたときにはインタラクティブなデバッガを表示し、コードを変更したときにはサーバを再起動します。チュートリアルを続けるとき、Flaskを実行させたままにしながら、ブラウザのページを再読み込みするだけで済むようにします。"
+
+#~ msgid "Bash"
+#~ msgstr ""
+
+#~ msgid "Fish"
+#~ msgstr ""
+
+#~ msgid "CMD"
+#~ msgstr ""
+
+#~ msgid "Powershell"
+#~ msgstr ""
 

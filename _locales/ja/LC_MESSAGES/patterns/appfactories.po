@@ -6,16 +6,16 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 2.0.x\n"
+"Project-Id-Version: Flask 2.2.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-20 18:38+0900\n"
+"POT-Creation-Date: 2022-11-26 22:21+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.10.3\n"
 
 # db0210e4bf5b4ce0b72fa26189acd456
 #: ../../flask/docs/patterns/appfactories.rst:2
@@ -162,53 +162,40 @@ msgstr ""
 "このようなアプリケーションを実行するために、:command:`flask` コマンドを"
 "使用できます:"
 
-#: ../../flask/docs/patterns/appfactories.rst:94
-#: ../../flask/docs/patterns/appfactories.rst:127
-msgid "Bash"
-msgstr ""
-
-#: ../../flask/docs/patterns/appfactories.rst:101
-#: ../../flask/docs/patterns/appfactories.rst:134
-msgid "Fish"
-msgstr ""
-
-#: ../../flask/docs/patterns/appfactories.rst:108
-#: ../../flask/docs/patterns/appfactories.rst:141
-msgid "CMD"
-msgstr ""
-
-#: ../../flask/docs/patterns/appfactories.rst:115
-#: ../../flask/docs/patterns/appfactories.rst:148
-msgid "Powershell"
-msgstr ""
-
 # 046a8950135c441786ebadc6cf0b87d8
-#: ../../flask/docs/patterns/appfactories.rst:122
+#: ../../flask/docs/patterns/appfactories.rst:96
+#, fuzzy
+#| msgid "" "Flask will automatically detect the factory (``create_app`` or "
+#| "``make_app``) in ``myapp``. You can also pass arguments to the factory "
+#| "like this:"
 msgid ""
-"Flask will automatically detect the factory (``create_app`` or "
-"``make_app``) in ``myapp``. You can also pass arguments to the factory "
-"like this:"
+"Flask will automatically detect the factory if it is named ``create_app``"
+" or ``make_app`` in ``hello``. You can also pass arguments to the factory"
+" like this:"
 msgstr ""
 "Flaskは自動的にfactory（``create_app`` または ``make_app``)を ``myapp`` の"
 "中から見つけ出します。以下のように、factoryへ引数を渡すことも可能です:"
 
 # 9ef58389dbf240669819d7089fcf9205
-#: ../../flask/docs/patterns/appfactories.rst:155
+#: ../../flask/docs/patterns/appfactories.rst:104
+#, fuzzy
+#| msgid "" "Then the ``create_app`` factory in ``myapp`` is called with the
+#| string " "``'dev'`` as the argument. See :doc:`/cli` for more detail."
 msgid ""
-"Then the ``create_app`` factory in ``myapp`` is called with the string "
-"``'dev'`` as the argument. See :doc:`/cli` for more detail."
+"Then the ``create_app`` factory in ``myapp`` is called with the keyword "
+"argument ``local_auth=True``. See :doc:`/cli` for more detail."
 msgstr ""
 "こうすると、\ ``myapp``\ の中の\ ``create_app`` factoryが\ ``'dev'``\ "
 "文字列を引数に使って呼び出されます。さらなる詳細は\ :doc:`/cli`\ を確認"
 "してください。"
 
 # f0794ca000be4135a5f336177744b8c6
-#: ../../flask/docs/patterns/appfactories.rst:159
+#: ../../flask/docs/patterns/appfactories.rst:108
 msgid "Factory Improvements"
 msgstr "Factoryの改善（Factory Improvements）"
 
 # a2d80e4636b14474afbea81bd3f1cd80
-#: ../../flask/docs/patterns/appfactories.rst:161
+#: ../../flask/docs/patterns/appfactories.rst:110
 msgid ""
 "The factory function above is not very clever, but you can improve it. "
 "The following changes are straightforward to implement:"
@@ -217,7 +204,7 @@ msgstr ""
 "実装しやすいものは以下の変更です:"
 
 # 9b620674a9eb444aba3daa058da50aba
-#: ../../flask/docs/patterns/appfactories.rst:164
+#: ../../flask/docs/patterns/appfactories.rst:113
 msgid ""
 "Make it possible to pass in configuration values for unit tests so that "
 "you don't have to create config files on the filesystem."
@@ -226,7 +213,7 @@ msgstr ""
 "テスト用の）設定ファイルを作成せずに済むようにします。"
 
 # bf3fd59eec8f45b0b153e21dfdf2ae13
-#: ../../flask/docs/patterns/appfactories.rst:166
+#: ../../flask/docs/patterns/appfactories.rst:115
 msgid ""
 "Call a function from a blueprint when the application is setting up so "
 "that you have a place to modify attributes of the application (like "
@@ -237,10 +224,23 @@ msgstr ""
 "関数を呼び出します。"
 
 # ffe55ae57dbc42eeb42959c79524373e
-#: ../../flask/docs/patterns/appfactories.rst:169
+#: ../../flask/docs/patterns/appfactories.rst:118
 msgid ""
 "Add in WSGI middlewares when the application is being created if "
 "necessary."
 msgstr ""
 "必要に応じて、アプリケーションが作成されるときWSGIミドルウェアの中に"
 "追加します。"
+
+#~ msgid "Bash"
+#~ msgstr ""
+
+#~ msgid "Fish"
+#~ msgstr ""
+
+#~ msgid "CMD"
+#~ msgstr ""
+
+#~ msgid "Powershell"
+#~ msgstr ""
+

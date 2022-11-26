@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 2.0.x\n"
+"Project-Id-Version: Flask 2.2.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-20 18:38+0900\n"
+"POT-Creation-Date: 2022-11-26 22:21+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -53,57 +53,33 @@ msgid "The debugger allows executing arbitrary Python code from the browser. It 
 msgstr ""
 
 #: ../../flask/docs/debugging.rst:42
-msgid "To enable the debugger, run the development server with the ``FLASK_ENV`` environment variable set to ``development``. This puts Flask in debug mode, which changes how it handles some errors, and enables the debugger and reloader."
+msgid "The debugger is enabled by default when the development server is run in debug mode."
 msgstr ""
 
-#: ../../flask/docs/debugging.rst:49
-#: ../../flask/docs/debugging.rst:109
-msgid "Bash"
+#: ../../flask/docs/debugging.rst:48
+msgid "When running from Python code, passing ``debug=True`` enables debug mode, which is mostly equivalent."
 msgstr ""
 
-#: ../../flask/docs/debugging.rst:56
-#: ../../flask/docs/debugging.rst:116
-msgid "Fish"
+#: ../../flask/docs/debugging.rst:55
+msgid ":doc:`/server` and :doc:`/cli` have more information about running the debugger and debug mode. More information about the debugger can be found in the `Werkzeug documentation <https://werkzeug.palletsprojects.com/debug/>`__."
 msgstr ""
 
-#: ../../flask/docs/debugging.rst:63
-#: ../../flask/docs/debugging.rst:123
-msgid "CMD"
-msgstr ""
-
-#: ../../flask/docs/debugging.rst:70
-#: ../../flask/docs/debugging.rst:130
-msgid "Powershell"
-msgstr ""
-
-#: ../../flask/docs/debugging.rst:77
-msgid "``FLASK_ENV`` can only be set as an environment variable. When running from Python code, passing ``debug=True`` enables debug mode, which is mostly equivalent. Debug mode can be controlled separately from ``FLASK_ENV`` with the ``FLASK_DEBUG`` environment variable as well."
-msgstr ""
-
-#: ../../flask/docs/debugging.rst:86
-msgid ":doc:`/server` and :doc:`/cli` have more information about running the debugger, debug mode, and development mode. More information about the debugger can be found in the `Werkzeug documentation <https://werkzeug.palletsprojects.com/debug/>`__."
-msgstr ""
-
-#: ../../flask/docs/debugging.rst:93
+#: ../../flask/docs/debugging.rst:61
 msgid "External Debuggers"
 msgstr ""
 
-#: ../../flask/docs/debugging.rst:95
+#: ../../flask/docs/debugging.rst:63
 msgid "External debuggers, such as those provided by IDEs, can offer a more powerful debugging experience than the built-in debugger. They can also be used to step through code during a request before an error is raised, or if no error is raised. Some even have a remote mode so you can debug code running on another machine."
 msgstr ""
 
-#: ../../flask/docs/debugging.rst:101
+#: ../../flask/docs/debugging.rst:69
 msgid "When using an external debugger, the app should still be in debug mode, but it can be useful to disable the built-in debugger and reloader, which can interfere."
 msgstr ""
 
-#: ../../flask/docs/debugging.rst:105
-msgid "When running from the command line:"
-msgstr ""
-
-#: ../../flask/docs/debugging.rst:137
+#: ../../flask/docs/debugging.rst:77
 msgid "When running from Python:"
 msgstr ""
 
-#: ../../flask/docs/debugging.rst:143
+#: ../../flask/docs/debugging.rst:83
 msgid "Disabling these isn't required, an external debugger will continue to work with the following caveats. If the built-in debugger is not disabled, it will catch unhandled exceptions before the external debugger can. If the reloader is not disabled, it could cause an unexpected reload if code changes during debugging."
 msgstr ""

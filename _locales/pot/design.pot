@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 2.0.x\n"
+"Project-Id-Version: Flask 2.2.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-21 20:07+0900\n"
+"POT-Creation-Date: 2022-11-26 22:21+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -101,61 +101,69 @@ msgid "Furthermore extensions can then easily depend on one template language be
 msgstr ""
 
 #: ../../flask/docs/design.rst:134
-msgid "Micro with Dependencies"
+msgid "What does \"micro\" mean?"
 msgstr ""
 
 #: ../../flask/docs/design.rst:136
+msgid "“Micro” does not mean that your whole web application has to fit into a single Python file (although it certainly can), nor does it mean that Flask is lacking in functionality. The \"micro\" in microframework means Flask aims to keep the core simple but extensible. Flask won't make many decisions for you, such as what database to use. Those decisions that it does make, such as what templating engine to use, are easy to change.  Everything else is up to you, so that Flask can be everything you need and nothing you don't."
+msgstr ""
+
+#: ../../flask/docs/design.rst:144
+msgid "By default, Flask does not include a database abstraction layer, form validation or anything else where different libraries already exist that can handle that. Instead, Flask supports extensions to add such functionality to your application as if it was implemented in Flask itself. Numerous extensions provide database integration, form validation, upload handling, various open authentication technologies, and more. Flask may be \"micro\", but it's ready for production use on a variety of needs."
+msgstr ""
+
+#: ../../flask/docs/design.rst:152
 msgid "Why does Flask call itself a microframework and yet it depends on two libraries (namely Werkzeug and Jinja2).  Why shouldn't it?  If we look over to the Ruby side of web development there we have a protocol very similar to WSGI.  Just that it's called Rack there, but besides that it looks very much like a WSGI rendition for Ruby.  But nearly all applications in Ruby land do not work with Rack directly, but on top of a library with the same name.  This Rack library has two equivalents in Python: WebOb (formerly Paste) and Werkzeug.  Paste is still around but from my understanding it's sort of deprecated in favour of WebOb.  The development of WebOb and Werkzeug started side by side with similar ideas in mind: be a good implementation of WSGI for other applications to take advantage."
 msgstr ""
 
-#: ../../flask/docs/design.rst:149
+#: ../../flask/docs/design.rst:165
 msgid "Flask is a framework that takes advantage of the work already done by Werkzeug to properly interface WSGI (which can be a complex task at times).  Thanks to recent developments in the Python package infrastructure, packages with dependencies are no longer an issue and there are very few reasons against having libraries that depend on others."
 msgstr ""
 
-#: ../../flask/docs/design.rst:157
+#: ../../flask/docs/design.rst:173
 msgid "Thread Locals"
 msgstr ""
 
-#: ../../flask/docs/design.rst:159
+#: ../../flask/docs/design.rst:175
 msgid "Flask uses thread local objects (context local objects in fact, they support greenlet contexts as well) for request, session and an extra object you can put your own things on (:data:`~flask.g`).  Why is that and isn't that a bad idea?"
 msgstr ""
 
-#: ../../flask/docs/design.rst:164
+#: ../../flask/docs/design.rst:180
 msgid "Yes it is usually not such a bright idea to use thread locals.  They cause troubles for servers that are not based on the concept of threads and make large applications harder to maintain.  However Flask is just not designed for large applications or asynchronous servers.  Flask wants to make it quick and easy to write a traditional web application."
 msgstr ""
 
-#: ../../flask/docs/design.rst:170
-msgid "Also see the :doc:`/becomingbig` section of the documentation for some inspiration for larger applications based on Flask."
-msgstr ""
-
-#: ../../flask/docs/design.rst:175
+#: ../../flask/docs/design.rst:188
 msgid "Async/await and ASGI support"
 msgstr ""
 
-#: ../../flask/docs/design.rst:177
+#: ../../flask/docs/design.rst:190
 msgid "Flask supports ``async`` coroutines for view functions by executing the coroutine on a separate thread instead of using an event loop on the main thread as an async-first (ASGI) framework would. This is necessary for Flask to remain backwards compatible with extensions and code built before ``async`` was introduced into Python. This compromise introduces a performance cost compared with the ASGI frameworks, due to the overhead of the threads."
 msgstr ""
 
-#: ../../flask/docs/design.rst:185
+#: ../../flask/docs/design.rst:198
 msgid "Due to how tied to WSGI Flask's code is, it's not clear if it's possible to make the ``Flask`` class support ASGI and WSGI at the same time. Work is currently being done in Werkzeug to work with ASGI, which may eventually enable support in Flask as well."
 msgstr ""
 
-#: ../../flask/docs/design.rst:190
+#: ../../flask/docs/design.rst:203
 msgid "See :doc:`/async-await` for more discussion."
 msgstr ""
 
-#: ../../flask/docs/design.rst:194
+#: ../../flask/docs/design.rst:207
 msgid "What Flask is, What Flask is Not"
 msgstr ""
 
-#: ../../flask/docs/design.rst:196
+#: ../../flask/docs/design.rst:209
 msgid "Flask will never have a database layer.  It will not have a form library or anything else in that direction.  Flask itself just bridges to Werkzeug to implement a proper WSGI application and to Jinja2 to handle templating. It also binds to a few common standard library packages such as logging. Everything else is up for extensions."
 msgstr ""
 
-#: ../../flask/docs/design.rst:202
+#: ../../flask/docs/design.rst:215
 msgid "Why is this the case?  Because people have different preferences and requirements and Flask could not meet those if it would force any of this into the core.  The majority of web applications will need a template engine in some sort.  However not every application needs a SQL database."
 msgstr ""
 
-#: ../../flask/docs/design.rst:207
+#: ../../flask/docs/design.rst:220
+msgid "As your codebase grows, you are free to make the design decisions appropriate for your project.  Flask will continue to provide a very simple glue layer to the best that Python has to offer.  You can implement advanced patterns in SQLAlchemy or another database tool, introduce non-relational data persistence as appropriate, and take advantage of framework-agnostic tools built for WSGI, the Python web interface."
+msgstr ""
+
+#: ../../flask/docs/design.rst:227
 msgid "The idea of Flask is to build a good foundation for all applications. Everything else is up to you or extensions."
 msgstr ""

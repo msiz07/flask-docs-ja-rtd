@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 2.0.x\n"
+"Project-Id-Version: Flask 2.2.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-20 18:38+0900\n"
+"POT-Creation-Date: 2022-11-26 22:21+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,119 +25,127 @@ msgid "Python Version"
 msgstr ""
 
 #: ../../flask/docs/installation.rst:8
-msgid "We recommend using the latest version of Python. Flask supports Python 3.6 and newer."
+msgid "We recommend using the latest version of Python. Flask supports Python 3.7 and newer."
 msgstr ""
 
-#: ../../flask/docs/installation.rst:11
-msgid "``async`` support in Flask requires Python 3.7+ for ``contextvars.ContextVar``."
-msgstr ""
-
-#: ../../flask/docs/installation.rst:15
+#: ../../flask/docs/installation.rst:13
 msgid "Dependencies"
 msgstr ""
 
-#: ../../flask/docs/installation.rst:17
+#: ../../flask/docs/installation.rst:15
 msgid "These distributions will be installed automatically when installing Flask."
 msgstr ""
 
-#: ../../flask/docs/installation.rst:19
+#: ../../flask/docs/installation.rst:17
 msgid "`Werkzeug`_ implements WSGI, the standard Python interface between applications and servers."
 msgstr ""
 
-#: ../../flask/docs/installation.rst:21
+#: ../../flask/docs/installation.rst:19
 msgid "`Jinja`_ is a template language that renders the pages your application serves."
 msgstr ""
 
-#: ../../flask/docs/installation.rst:23
+#: ../../flask/docs/installation.rst:21
 msgid "`MarkupSafe`_ comes with Jinja. It escapes untrusted input when rendering templates to avoid injection attacks."
 msgstr ""
 
-#: ../../flask/docs/installation.rst:25
+#: ../../flask/docs/installation.rst:23
 msgid "`ItsDangerous`_ securely signs data to ensure its integrity. This is used to protect Flask's session cookie."
 msgstr ""
 
-#: ../../flask/docs/installation.rst:27
+#: ../../flask/docs/installation.rst:25
 msgid "`Click`_ is a framework for writing command line applications. It provides the ``flask`` command and allows adding custom management commands."
 msgstr ""
 
-#: ../../flask/docs/installation.rst:38
+#: ../../flask/docs/installation.rst:36
 msgid "Optional dependencies"
 msgstr ""
 
-#: ../../flask/docs/installation.rst:40
+#: ../../flask/docs/installation.rst:38
 msgid "These distributions will not be installed automatically. Flask will detect and use them if you install them."
 msgstr ""
 
-#: ../../flask/docs/installation.rst:43
+#: ../../flask/docs/installation.rst:41
 msgid "`Blinker`_ provides support for :doc:`signals`."
 msgstr ""
 
-#: ../../flask/docs/installation.rst:44
+#: ../../flask/docs/installation.rst:42
 msgid "`python-dotenv`_ enables support for :ref:`dotenv` when running ``flask`` commands."
 msgstr ""
 
-#: ../../flask/docs/installation.rst:46
+#: ../../flask/docs/installation.rst:44
 msgid "`Watchdog`_ provides a faster, more efficient reloader for the development server."
 msgstr ""
 
+#: ../../flask/docs/installation.rst:53
+msgid "greenlet"
+msgstr ""
+
 #: ../../flask/docs/installation.rst:55
-msgid "Virtual environments"
+msgid "You may choose to use gevent or eventlet with your application. In this case, greenlet>=1.0 is required. When using PyPy, PyPy>=7.3.7 is required."
 msgstr ""
 
-#: ../../flask/docs/installation.rst:57
-msgid "Use a virtual environment to manage the dependencies for your project, both in development and in production."
-msgstr ""
-
-#: ../../flask/docs/installation.rst:60
-msgid "What problem does a virtual environment solve? The more Python projects you have, the more likely it is that you need to work with different versions of Python libraries, or even Python itself. Newer versions of libraries for one project can break compatibility in another project."
+#: ../../flask/docs/installation.rst:59
+msgid "These are not minimum supported versions, they only indicate the first versions that added necessary features. You should use the latest versions of each."
 msgstr ""
 
 #: ../../flask/docs/installation.rst:65
+msgid "Virtual environments"
+msgstr ""
+
+#: ../../flask/docs/installation.rst:67
+msgid "Use a virtual environment to manage the dependencies for your project, both in development and in production."
+msgstr ""
+
+#: ../../flask/docs/installation.rst:70
+msgid "What problem does a virtual environment solve? The more Python projects you have, the more likely it is that you need to work with different versions of Python libraries, or even Python itself. Newer versions of libraries for one project can break compatibility in another project."
+msgstr ""
+
+#: ../../flask/docs/installation.rst:75
 msgid "Virtual environments are independent groups of Python libraries, one for each project. Packages installed for one project will not affect other projects or the operating system's packages."
 msgstr ""
 
-#: ../../flask/docs/installation.rst:69
+#: ../../flask/docs/installation.rst:79
 msgid "Python comes bundled with the :mod:`venv` module to create virtual environments."
 msgstr ""
 
-#: ../../flask/docs/installation.rst:76
+#: ../../flask/docs/installation.rst:86
 msgid "Create an environment"
 msgstr ""
 
-#: ../../flask/docs/installation.rst:78
+#: ../../flask/docs/installation.rst:88
 msgid "Create a project folder and a :file:`venv` folder within:"
 msgstr ""
 
-#: ../../flask/docs/installation.rst:82
-#: ../../flask/docs/installation.rst:108
+#: ../../flask/docs/installation.rst:92
+#: ../../flask/docs/installation.rst:118
 msgid "macOS/Linux"
 msgstr ""
 
-#: ../../flask/docs/installation.rst:90
-#: ../../flask/docs/installation.rst:114
+#: ../../flask/docs/installation.rst:100
+#: ../../flask/docs/installation.rst:124
 msgid "Windows"
 msgstr ""
 
-#: ../../flask/docs/installation.rst:102
+#: ../../flask/docs/installation.rst:112
 msgid "Activate the environment"
 msgstr ""
 
-#: ../../flask/docs/installation.rst:104
+#: ../../flask/docs/installation.rst:114
 msgid "Before you work on your project, activate the corresponding environment:"
 msgstr ""
 
-#: ../../flask/docs/installation.rst:120
+#: ../../flask/docs/installation.rst:130
 msgid "Your shell prompt will change to show the name of the activated environment."
 msgstr ""
 
-#: ../../flask/docs/installation.rst:125
+#: ../../flask/docs/installation.rst:135
 msgid "Install Flask"
 msgstr ""
 
-#: ../../flask/docs/installation.rst:127
+#: ../../flask/docs/installation.rst:137
 msgid "Within the activated environment, use the following command to install Flask:"
 msgstr ""
 
-#: ../../flask/docs/installation.rst:134
+#: ../../flask/docs/installation.rst:144
 msgid "Flask is now installed. Check out the :doc:`/quickstart` or go to the :doc:`Documentation Overview </index>`."
 msgstr ""

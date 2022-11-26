@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 2.0.x\n"
+"Project-Id-Version: Flask 2.2.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-21 20:07+0900\n"
+"POT-Creation-Date: 2022-11-26 22:21+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,69 +33,65 @@ msgid "Now, to use the database, the application must either have an active appl
 msgstr ""
 
 #: ../../flask/docs/patterns/sqlite3.rst:33
-msgid "Note: if you use Flask 0.9 or older you need to use ``flask._app_ctx_stack.top`` instead of ``g`` as the :data:`flask.g` object was bound to the request and not application context."
-msgstr ""
-
-#: ../../flask/docs/patterns/sqlite3.rst:37
 msgid "Example::"
 msgstr ""
 
-#: ../../flask/docs/patterns/sqlite3.rst:47
+#: ../../flask/docs/patterns/sqlite3.rst:43
 msgid "Please keep in mind that the teardown request and appcontext functions are always executed, even if a before-request handler failed or was never executed.  Because of this we have to make sure here that the database is there before we close it."
 msgstr ""
 
-#: ../../flask/docs/patterns/sqlite3.rst:53
+#: ../../flask/docs/patterns/sqlite3.rst:49
 msgid "Connect on Demand"
 msgstr ""
 
-#: ../../flask/docs/patterns/sqlite3.rst:55
+#: ../../flask/docs/patterns/sqlite3.rst:51
 msgid "The upside of this approach (connecting on first use) is that this will only open the connection if truly necessary.  If you want to use this code outside a request context you can use it in a Python shell by opening the application context by hand::"
 msgstr ""
 
-#: ../../flask/docs/patterns/sqlite3.rst:65
+#: ../../flask/docs/patterns/sqlite3.rst:61
 msgid "Easy Querying"
 msgstr ""
 
-#: ../../flask/docs/patterns/sqlite3.rst:67
+#: ../../flask/docs/patterns/sqlite3.rst:63
 msgid "Now in each request handling function you can access `get_db()` to get the current open database connection.  To simplify working with SQLite, a row factory function is useful.  It is executed for every result returned from the database to convert the result.  For instance, in order to get dictionaries instead of tuples, this could be inserted into the ``get_db`` function we created above::"
 msgstr ""
 
-#: ../../flask/docs/patterns/sqlite3.rst:80
+#: ../../flask/docs/patterns/sqlite3.rst:76
 msgid "This will make the sqlite3 module return dicts for this database connection, which are much nicer to deal with. Even more simply, we could place this in ``get_db`` instead::"
 msgstr ""
 
-#: ../../flask/docs/patterns/sqlite3.rst:84
+#: ../../flask/docs/patterns/sqlite3.rst:80
 msgid "This would use Row objects rather than dicts to return the results of queries. These are ``namedtuple`` s, so we can access them either by index or by key. For example, assuming we have a ``sqlite3.Row`` called ``r`` for the rows ``id``, ``FirstName``, ``LastName``, and ``MiddleInitial``::"
 msgstr ""
 
-#: ../../flask/docs/patterns/sqlite3.rst:100
+#: ../../flask/docs/patterns/sqlite3.rst:96
 msgid "Additionally, it is a good idea to provide a query function that combines getting the cursor, executing and fetching the results::"
 msgstr ""
 
-#: ../../flask/docs/patterns/sqlite3.rst:109
+#: ../../flask/docs/patterns/sqlite3.rst:105
 msgid "This handy little function, in combination with a row factory, makes working with the database much more pleasant than it is by just using the raw cursor and connection objects."
 msgstr ""
 
-#: ../../flask/docs/patterns/sqlite3.rst:113
+#: ../../flask/docs/patterns/sqlite3.rst:109
 msgid "Here is how you can use it::"
 msgstr ""
 
-#: ../../flask/docs/patterns/sqlite3.rst:118
+#: ../../flask/docs/patterns/sqlite3.rst:114
 msgid "Or if you just want a single result::"
 msgstr ""
 
-#: ../../flask/docs/patterns/sqlite3.rst:127
+#: ../../flask/docs/patterns/sqlite3.rst:123
 msgid "To pass variable parts to the SQL statement, use a question mark in the statement and pass in the arguments as a list.  Never directly add them to the SQL statement with string formatting because this makes it possible to attack the application using `SQL Injections <https://en.wikipedia.org/wiki/SQL_injection>`_."
 msgstr ""
 
-#: ../../flask/docs/patterns/sqlite3.rst:134
+#: ../../flask/docs/patterns/sqlite3.rst:130
 msgid "Initial Schemas"
 msgstr ""
 
-#: ../../flask/docs/patterns/sqlite3.rst:136
+#: ../../flask/docs/patterns/sqlite3.rst:132
 msgid "Relational databases need schemas, so applications often ship a `schema.sql` file that creates the database.  It's a good idea to provide a function that creates the database based on that schema.  This function can do that for you::"
 msgstr ""
 
-#: ../../flask/docs/patterns/sqlite3.rst:148
+#: ../../flask/docs/patterns/sqlite3.rst:144
 msgid "You can then create such a database from the Python shell:"
 msgstr ""

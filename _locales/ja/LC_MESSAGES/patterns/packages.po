@@ -6,16 +6,24 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 2.0.x\n"
+"Project-Id-Version: Flask 2.2.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-20 18:38+0900\n"
+"POT-Creation-Date: 2022-11-26 22:21+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: ../../flask/docs/patterns/packages.rst:59
+msgid "Install your application so it is importable:"
+msgstr ""
+
+#: ../../flask/docs/patterns/packages.rst:69
+msgid "$ flask --app yourapplication run"
+msgstr ""
 
 # 5baa87b87f9444ddbd34b2534fc6298c
 #: ../../flask/docs/patterns/packages.rst:2
@@ -63,7 +71,7 @@ msgstr ""
 # 9e487de33094457b9aaf35b49f379b08
 # 0e15239ac6c44aaba552e70474825b97
 #: ../../flask/docs/patterns/packages.rst:29
-#: ../../flask/docs/patterns/packages.rst:151
+#: ../../flask/docs/patterns/packages.rst:98
 msgid "You should then end up with something like that::"
 msgstr "そうすると、以下のようになるはずです::"
 
@@ -85,56 +93,20 @@ msgstr ""
 "内容でただ追加だけしてください::"
 
 # 7f652089641e4186b7ff6409b48b64ce
-#: ../../flask/docs/patterns/packages.rst:59
+#: ../../flask/docs/patterns/packages.rst:65
+#, fuzzy
+#| msgid "" "In order to run the application you need to export an environment
+#| " "variable that tells Flask where to find the application instance:"
 msgid ""
-"In order to run the application you need to export an environment "
-"variable that tells Flask where to find the application instance:"
+"To use the ``flask`` command and run your application you need to set the"
+" ``--app`` option that tells Flask where to find the application "
+"instance:"
 msgstr ""
 "アプリケーションを実行するためには、アプリケーションのインスタンスを"
 "どこで見つけられるかFlaskへ伝える環境変数をexportする必要があります:"
 
-#: ../../flask/docs/patterns/packages.rst:64
-#: ../../flask/docs/patterns/packages.rst:94
-msgid "Bash"
-msgstr ""
-
-#: ../../flask/docs/patterns/packages.rst:70
-#: ../../flask/docs/patterns/packages.rst:100
-msgid "Fish"
-msgstr ""
-
-#: ../../flask/docs/patterns/packages.rst:76
-#: ../../flask/docs/patterns/packages.rst:106
-msgid "CMD"
-msgstr ""
-
-#: ../../flask/docs/patterns/packages.rst:82
-#: ../../flask/docs/patterns/packages.rst:112
-msgid "Powershell"
-msgstr ""
-
-# c37943e6bbed42f5a5cf03b43d962575
-#: ../../flask/docs/patterns/packages.rst:88
-msgid ""
-"If you are outside of the project directory make sure to provide the "
-"exact path to your application directory. Similarly you can turn on the "
-"development features like this:"
-msgstr ""
-"もしプロジェクトのディレクトリの外側に居る場合は、自分のプロジェクトの"
-"ディレクトリへのパスを正確に提供するよう確実にしてください。同様に、"
-"以下のようにして開発機能（development features）を有効にできます:"
-
-# c6fc6fc24dd743fa89077819bab15c17
-#: ../../flask/docs/patterns/packages.rst:118
-msgid ""
-"In order to install and run the application you need to issue the "
-"following commands::"
-msgstr ""
-"アプリケーションをインストールして実行するためには、以下のコマンドを"
-"発行する必要があります::"
-
 # c25964055e0d49c1a8895435c4fbf0ad
-#: ../../flask/docs/patterns/packages.rst:124
+#: ../../flask/docs/patterns/packages.rst:71
 msgid ""
 "What did we gain from this?  Now we can restructure the application a bit"
 " into multiple modules.  The only thing you have to remember is the "
@@ -145,7 +117,7 @@ msgstr ""
 "以下の手短なチェックリストです::"
 
 # ef83e901975742feb6eb53565e8a1edb
-#: ../../flask/docs/patterns/packages.rst:128
+#: ../../flask/docs/patterns/packages.rst:75
 msgid ""
 "the `Flask` application object creation has to be in the "
 ":file:`__init__.py` file.  That way each module can import it safely and "
@@ -157,7 +129,7 @@ msgstr ""
 "適切なパッケージが分かるようにできます。"
 
 # baa688e39581435f96f96dcd8ea9c035
-#: ../../flask/docs/patterns/packages.rst:131
+#: ../../flask/docs/patterns/packages.rst:78
 msgid ""
 "all the view functions (the ones with a :meth:`~flask.Flask.route` "
 "decorator on top) have to be imported in the :file:`__init__.py` file. "
@@ -172,22 +144,22 @@ msgstr ""
 "作成された後で**\ importします。"
 
 # 28d1167fa0dc42269a0e758a1637cc31
-#: ../../flask/docs/patterns/packages.rst:136
+#: ../../flask/docs/patterns/packages.rst:83
 msgid "Here's an example :file:`__init__.py`::"
 msgstr ":file:`__init__.py`\ の例がこちらです::"
 
 # b23ab12e89e942edbdd28f80001e9e3b
-#: ../../flask/docs/patterns/packages.rst:143
+#: ../../flask/docs/patterns/packages.rst:90
 msgid "And this is what :file:`views.py` would look like::"
 msgstr "そしてこれは、\ :file:`views.py`\ がどのようになるか示しています::"
 
 # f540b10c51f24d87a8646e3e17875f80
-#: ../../flask/docs/patterns/packages.rst:166
+#: ../../flask/docs/patterns/packages.rst:113
 msgid "Circular Imports"
 msgstr "循環import（Circular Imports）"
 
 # 18cb676b5d89483f9bd58377fdc156bc
-#: ../../flask/docs/patterns/packages.rst:168
+#: ../../flask/docs/patterns/packages.rst:115
 msgid ""
 "Every Python programmer hates them, and yet we just added some: circular "
 "imports (That's when two modules depend on each other.  In this case "
@@ -205,24 +177,13 @@ msgstr ""
 "使わないようにし、確実にモジュールはimportされるようにし、そしてそのimportを"
 "ファイルの最後で行うようにしているためです。"
 
-# 66b8e9a3e5254ab2a45c6c469cc64ac5
-#: ../../flask/docs/patterns/packages.rst:176
-msgid ""
-"There are still some problems with that approach but if you want to use "
-"decorators there is no way around that.  Check out the "
-":doc:`/becomingbig` section for some inspiration how to deal with that."
-msgstr ""
-"まだいくつかの問題がこのアプローチでも残りますが、もしデコレータを使いたい"
-"場合は避けようがありません。この問題をどのように扱うかに関する、いくらかの"
-"ひらめきが欲しいときは、:doc:`/becomingbig` をチェックしてください。"
-
 # cfd326979814485d90c468ab184d7393
-#: ../../flask/docs/patterns/packages.rst:182
+#: ../../flask/docs/patterns/packages.rst:125
 msgid "Working with Blueprints"
 msgstr "Blueprintsを使った対応"
 
 # 9fc2ac8bbcff44e584860d6b486fb231
-#: ../../flask/docs/patterns/packages.rst:184
+#: ../../flask/docs/patterns/packages.rst:127
 msgid ""
 "If you have larger applications it's recommended to divide them into "
 "smaller groups where each group is implemented with the help of a "
@@ -247,4 +208,46 @@ msgstr ""
 #~ "これは小さなアプリケーションではよいですが、より大きなアプリケーションではモジュールの代わりにパッケージを使うのがよい考えです。\\ "
 #~ ":ref:`チュートリアル <tutorial>`\\ ではパッケージのパターンを使っていますので、\\ "
 #~ ":gh:`コード例 <examples/tutorial>`\\ を確認してください。"
+
+#~ msgid "Bash"
+#~ msgstr ""
+
+#~ msgid "Fish"
+#~ msgstr ""
+
+#~ msgid "CMD"
+#~ msgstr ""
+
+#~ msgid "Powershell"
+#~ msgstr ""
+
+# c37943e6bbed42f5a5cf03b43d962575
+#~ msgid ""
+#~ "If you are outside of the project"
+#~ " directory make sure to provide the"
+#~ " exact path to your application "
+#~ "directory. Similarly you can turn on "
+#~ "the development features like this:"
+#~ msgstr ""
+#~ "もしプロジェクトのディレクトリの外側に居る場合は、自分のプロジェクトのディレクトリへのパスを正確に提供するよう確実にしてください。同様に、以下のようにして開発機能（development"
+#~ " features）を有効にできます:"
+
+# c6fc6fc24dd743fa89077819bab15c17
+#~ msgid ""
+#~ "In order to install and run the"
+#~ " application you need to issue the"
+#~ " following commands::"
+#~ msgstr "アプリケーションをインストールして実行するためには、以下のコマンドを発行する必要があります::"
+
+# 66b8e9a3e5254ab2a45c6c469cc64ac5
+#~ msgid ""
+#~ "There are still some problems with "
+#~ "that approach but if you want to"
+#~ " use decorators there is no way "
+#~ "around that.  Check out the "
+#~ ":doc:`/becomingbig` section for some "
+#~ "inspiration how to deal with that."
+#~ msgstr ""
+#~ "まだいくつかの問題がこのアプローチでも残りますが、もしデコレータを使いたい場合は避けようがありません。この問題をどのように扱うかに関する、いくらかのひらめきが欲しいときは、:doc:`/becomingbig`"
+#~ " をチェックしてください。"
 

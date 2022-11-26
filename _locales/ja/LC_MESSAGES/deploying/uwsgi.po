@@ -6,16 +6,152 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 2.0.x\n"
+"Project-Id-Version: Flask 2.2.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-20 18:38+0900\n"
+"POT-Creation-Date: 2022-11-26 22:21+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: ../../flask/docs/deploying/uwsgi.rst:4
+msgid ""
+"`uWSGI`_ is a fast, compiled server suite with extensive configuration "
+"and capabilities beyond a basic server."
+msgstr ""
+
+#: ../../flask/docs/deploying/uwsgi.rst:7
+msgid "It can be very performant due to being a compiled program."
+msgstr ""
+
+#: ../../flask/docs/deploying/uwsgi.rst:8
+msgid ""
+"It is complex to configure beyond the basic application, and has so many "
+"options that it can be difficult for beginners to understand."
+msgstr ""
+
+#: ../../flask/docs/deploying/uwsgi.rst:10
+msgid "It does not support Windows (but does run on WSL)."
+msgstr ""
+
+#: ../../flask/docs/deploying/uwsgi.rst:11
+msgid "It requires a compiler to install in some cases."
+msgstr ""
+
+#: ../../flask/docs/deploying/uwsgi.rst:13
+msgid ""
+"This page outlines the basics of running uWSGI. Be sure to read its "
+"documentation to understand what features are available."
+msgstr ""
+
+#: ../../flask/docs/deploying/uwsgi.rst:20
+msgid "Installing"
+msgstr ""
+
+#: ../../flask/docs/deploying/uwsgi.rst:22
+msgid ""
+"uWSGI has multiple ways to install it. The most straightforward is to "
+"install the ``pyuwsgi`` package, which provides precompiled wheels for "
+"common platforms. However, it does not provide SSL support, which can be "
+"provided with a reverse proxy instead."
+msgstr ""
+
+#: ../../flask/docs/deploying/uwsgi.rst:27
+msgid "Create a virtualenv, install your application, then install ``pyuwsgi``."
+msgstr ""
+
+#: ../../flask/docs/deploying/uwsgi.rst:37
+msgid ""
+"If you have a compiler available, you can install the ``uwsgi`` package "
+"instead. Or install the ``pyuwsgi`` package from sdist instead of wheel. "
+"Either method will include SSL support."
+msgstr ""
+
+#: ../../flask/docs/deploying/uwsgi.rst:50
+msgid "Running"
+msgstr ""
+
+#: ../../flask/docs/deploying/uwsgi.rst:52
+msgid ""
+"The most basic way to run uWSGI is to tell it to start an HTTP server and"
+" import your application."
+msgstr ""
+
+#: ../../flask/docs/deploying/uwsgi.rst:69
+msgid ""
+"If you're using the app factory pattern, you'll need to create a small "
+"Python file to create the app, then point uWSGI at that."
+msgstr ""
+
+#: ../../flask/docs/deploying/uwsgi.rst:72
+msgid "``wsgi.py``"
+msgstr ""
+
+#: ../../flask/docs/deploying/uwsgi.rst:83
+msgid ""
+"The ``--http`` option starts an HTTP server at 127.0.0.1 port 8000. The "
+"``--master`` option specifies the standard worker manager. The ``-p`` "
+"option starts 4 worker processes; a starting value could be ``CPU * 2``. "
+"The ``-w`` option tells uWSGI how to import your application"
+msgstr ""
+
+#: ../../flask/docs/deploying/uwsgi.rst:90
+msgid "Binding Externally"
+msgstr ""
+
+#: ../../flask/docs/deploying/uwsgi.rst:92
+msgid ""
+"uWSGI should not be run as root with the configuration shown in this doc "
+"because it would cause your application code to run as root, which is not"
+" secure. However, this means it will not be possible to bind to port 80 "
+"or 443. Instead, a reverse proxy such as :doc:`nginx` or :doc:`apache-"
+"httpd` should be used in front of uWSGI. It is possible to run uWSGI as "
+"root securely, but that is beyond the scope of this doc."
+msgstr ""
+
+#: ../../flask/docs/deploying/uwsgi.rst:99
+msgid ""
+"uWSGI has optimized integration with `Nginx uWSGI`_ and `Apache "
+"mod_proxy_uwsgi`_, and possibly other servers, instead of using a "
+"standard HTTP proxy. That configuration is beyond the scope of this doc, "
+"see the links for more information."
+msgstr ""
+
+#: ../../flask/docs/deploying/uwsgi.rst:107
+msgid ""
+"You can bind to all external IPs on a non-privileged port using the "
+"``--http 0.0.0.0:8000`` option. Don't do this when using a reverse proxy "
+"setup, otherwise it will be possible to bypass the proxy."
+msgstr ""
+
+#: ../../flask/docs/deploying/uwsgi.rst:115
+msgid ""
+"``0.0.0.0`` is not a valid address to navigate to, you'd use a specific "
+"IP address in your browser."
+msgstr ""
+
+#: ../../flask/docs/deploying/uwsgi.rst:120
+msgid "Async with gevent"
+msgstr ""
+
+#: ../../flask/docs/deploying/uwsgi.rst:122
+msgid ""
+"The default sync worker is appropriate for many use cases. If you need "
+"asynchronous support, uWSGI provides a `gevent`_ worker. This is not the "
+"same as Python's ``async/await``, or the ASGI server spec. You must "
+"actually use gevent in your own code to see any benefit to using the "
+"worker."
+msgstr ""
+
+#: ../../flask/docs/deploying/uwsgi.rst:128
+msgid ""
+"When using gevent, greenlet>=1.0 is required, otherwise context locals "
+"such as ``request`` will not work as expected. When using PyPy, "
+"PyPy>=7.3.7 is required."
+msgstr ""
 
 # 4ce94b9273874918b4562b1764c5dc94
 #: ../../flask/docs/deploying/uwsgi.rst:2
@@ -23,68 +159,69 @@ msgid "uWSGI"
 msgstr ""
 
 # 88a94bfd99684be792572c85177512ef
-#: ../../flask/docs/deploying/uwsgi.rst:4
-msgid ""
-"uWSGI is a deployment option on servers like `nginx`_, `lighttpd`_, and "
-"`cherokee`_; see :doc:`fastcgi` and :doc:`wsgi-standalone` for other "
-"options. To use your WSGI application with uWSGI protocol you will need a"
-" uWSGI server first. uWSGI is both a protocol and an application server; "
-"the application server can serve uWSGI, FastCGI, and HTTP protocols."
-msgstr ""
-"uWSGIは `nginx`_、`lighttpd`_、`cherokee`_ のようなサーバでのデプロイの"
-"選択肢です; 他の選択肢については :doc:`fastcgi` と :doc:`wsgi-standalone` "
-"を見てください。自分のWSGIアプリケーションをuWSGIプロトコルと一緒に使うために"
-"は、最初にuWSGIサーバが必要になるでしょう。uWSGIはプロトコルでもありアプリ"
-"ケーションサーバでもあります; アプリケーションサーバはuWSGI、fastcgi、そして"
-"HTTPプロトコルに対応可能です。"
+#~ msgid ""
+#~ "uWSGI is a deployment option on "
+#~ "servers like `nginx`_, `lighttpd`_, and "
+#~ "`cherokee`_; see :doc:`fastcgi` and :doc"
+#~ ":`wsgi-standalone` for other options. To"
+#~ " use your WSGI application with uWSGI"
+#~ " protocol you will need a uWSGI "
+#~ "server first. uWSGI is both a "
+#~ "protocol and an application server; the"
+#~ " application server can serve uWSGI, "
+#~ "FastCGI, and HTTP protocols."
+#~ msgstr ""
+#~ "uWSGIは `nginx`_、`lighttpd`_、`cherokee`_ "
+#~ "のようなサーバでのデプロイの選択肢です; 他の選択肢については :doc:`fastcgi` と "
+#~ ":doc:`wsgi-standalone` "
+#~ "を見てください。自分のWSGIアプリケーションをuWSGIプロトコルと一緒に使うためには、最初にuWSGIサーバが必要になるでしょう。uWSGIはプロトコルでもありアプリケーションサーバでもあります;"
+#~ " アプリケーションサーバはuWSGI、fastcgi、そしてHTTPプロトコルに対応可能です。"
 
 # 6c0e59a7e79648868d7c17401bfc5ffd
-#: ../../flask/docs/deploying/uwsgi.rst:10
-msgid ""
-"The most popular uWSGI server is `uwsgi`_, which we will use for this "
-"guide. Make sure to have it installed to follow along."
-msgstr ""
-"最も人気のあるuWSGIサーバは `uwsgi`_ で、このガイドで扱います。ガイドに"
-"沿ってフォローしていくには、usgiを確実にインストールしておいてください。"
+#~ msgid ""
+#~ "The most popular uWSGI server is "
+#~ "`uwsgi`_, which we will use for "
+#~ "this guide. Make sure to have it"
+#~ " installed to follow along."
+#~ msgstr ""
+#~ "最も人気のあるuWSGIサーバは `uwsgi`_ "
+#~ "で、このガイドで扱います。ガイドに沿ってフォローしていくには、usgiを確実にインストールしておいてください。"
 
 # e15d7f6366564a81b0878380462d9c1e
-#: ../../flask/docs/deploying/uwsgi.rst:13
-msgid "Watch Out"
-msgstr "注意"
+#~ msgid "Watch Out"
+#~ msgstr "注意"
 
 # 31ce9f7a8d634e5f8087878f202061c0
-#: ../../flask/docs/deploying/uwsgi.rst:15
-msgid ""
-"Please make sure in advance that any ``app.run()`` calls you might have "
-"in your application file are inside an ``if __name__ == '__main__':`` "
-"block or moved to a separate file.  Just make sure it's not called "
-"because this will always start a local WSGI server which we do not want "
-"if we deploy that application to uWSGI."
-msgstr ""
-"予め自分のアプリケーションのファイル内にあるかもしれない全ての ``app.run()`` "
-"呼び出しは、``if __name__ == '__main__':`` ブロックの内側にあるか、別の"
-"ファイルに移動していることを確実にしておいてください。uWSGIへアプリケーション"
-"をデプロイするときは望まないローカルWSGIサーバを（``app.run()`` を呼び出す"
-"と）常に開始してしまうために、app.run()が呼び出されないことを、まずは確認"
-"してください。"
+#~ msgid ""
+#~ "Please make sure in advance that "
+#~ "any ``app.run()`` calls you might have"
+#~ " in your application file are inside"
+#~ " an ``if __name__ == '__main__':`` "
+#~ "block or moved to a separate file."
+#~ "  Just make sure it's not called "
+#~ "because this will always start a "
+#~ "local WSGI server which we do not"
+#~ " want if we deploy that application"
+#~ " to uWSGI."
+#~ msgstr ""
+#~ "予め自分のアプリケーションのファイル内にあるかもしれない全ての ``app.run()`` 呼び出しは、``if"
+#~ " __name__ == '__main__':`` "
+#~ "ブロックの内側にあるか、別のファイルに移動していることを確実にしておいてください。uWSGIへアプリケーションをデプロイするときは望まないローカルWSGIサーバを（``app.run()``"
+#~ " を呼び出すと）常に開始してしまうために、app.run()が呼び出されないことを、まずは確認してください。"
 
 # 96b577bd8cbe429b9810908b510d7126
-#: ../../flask/docs/deploying/uwsgi.rst:22
-msgid "Starting your app with uwsgi"
-msgstr "uwsgiを使ったappの開始"
+#~ msgid "Starting your app with uwsgi"
+#~ msgstr "uwsgiを使ったappの開始"
 
 # b473a2d6d5f649778b028713bc957232
-#: ../../flask/docs/deploying/uwsgi.rst:24
-msgid "`uwsgi` is designed to operate on WSGI callables found in python modules."
-msgstr ""
-"`uwsgi` はpythonモジュール内で見つかる呼び出し可能なWSGIを操作するように設計"
-"されています。"
+#~ msgid ""
+#~ "`uwsgi` is designed to operate on "
+#~ "WSGI callables found in python modules."
+#~ msgstr "`uwsgi` はpythonモジュール内で見つかる呼び出し可能なWSGIを操作するように設計されています。"
 
 # 3dd9ff836a354baeb51cb5e0d52d769f
-#: ../../flask/docs/deploying/uwsgi.rst:26
-msgid "Given a flask application in myapp.py, use the following command:"
-msgstr ""
-"myapp.pyの中にflaskアプリケーションがある場合は、以下のコマンドを使用します:"
+#~ msgid "Given a flask application in myapp.py, use the following command:"
+#~ msgstr "myapp.pyの中にflaskアプリケーションがある場合は、以下のコマンドを使用します:"
 
 # 829006e4922644c999b73f98132a6d55
 # | msgid "" "The ``--manage-script-name`` will move the handling of
@@ -98,56 +235,65 @@ msgstr ""
 # | ``app``. ``app`` is the " "callable inside of your application (usually
 # the
 # | line reads ``app = " "Flask(__name__)``."
-#: ../../flask/docs/deploying/uwsgi.rst:32
-msgid ""
-"The ``--manage-script-name`` will move the handling of ``SCRIPT_NAME`` to"
-" uwsgi, since it is smarter about that. It is used together with the "
-"``--mount`` directive which will make requests to ``/yourapplication`` be"
-" directed to ``myapp:app``. If your application is accessible at root "
-"level, you can use a single ``/`` instead of ``/yourapplication``. "
-"``myapp`` refers to the name of the file of your flask application "
-"(without extension) or the module which provides ``app``. ``app`` is the "
-"callable inside of your application (usually the line reads ``app = "
-"Flask(__name__)``)."
-msgstr ""
-"``--manage-script-name`` は ``SCRIPT_NAME`` の処理を、より賢く行うuwsgi"
-"へと移動します。それは、（この例では）``/yourapplication`` へのリクエスト"
-"を ``myapp:app`` へ向かわせる ``--mount`` 指示と一緒に使用されます。もし自分"
-"のアプリケーションがルートのレベルでアクセス可能な場合、``/yourapplication`` "
-"の代わりに単なる ``/`` を使用可能です。``myapp`` はflaskアプリケーションの"
-"ファイル名（拡張子を除く）または ``app`` を提供するモジュール名を参照します。"
-"``app`` はアプリケーションの中で呼び出し可能なもの（callable）（普通は ``app "
-"= Flask(__name__)`` という行）です。"
+#~ msgid ""
+#~ "The ``--manage-script-name`` will move"
+#~ " the handling of ``SCRIPT_NAME`` to "
+#~ "uwsgi, since it is smarter about "
+#~ "that. It is used together with the"
+#~ " ``--mount`` directive which will make "
+#~ "requests to ``/yourapplication`` be directed"
+#~ " to ``myapp:app``. If your application "
+#~ "is accessible at root level, you "
+#~ "can use a single ``/`` instead of"
+#~ " ``/yourapplication``. ``myapp`` refers to "
+#~ "the name of the file of your "
+#~ "flask application (without extension) or "
+#~ "the module which provides ``app``. "
+#~ "``app`` is the callable inside of "
+#~ "your application (usually the line reads"
+#~ " ``app = Flask(__name__)``)."
+#~ msgstr ""
+#~ "``--manage-script-name`` は ``SCRIPT_NAME`` "
+#~ "の処理を、より賢く行うuwsgiへと移動します。それは、（この例では）``/yourapplication`` へのリクエストを"
+#~ " ``myapp:app`` へ向かわせる ``--mount`` "
+#~ "指示と一緒に使用されます。もし自分のアプリケーションがルートのレベルでアクセス可能な場合、``/yourapplication`` "
+#~ "の代わりに単なる ``/`` を使用可能です。``myapp`` "
+#~ "はflaskアプリケーションのファイル名（拡張子を除く）または ``app`` "
+#~ "を提供するモジュール名を参照します。``app`` はアプリケーションの中で呼び出し可能なもの（callable）（普通は"
+#~ " ``app = Flask(__name__)`` という行）です。"
 
 # 3b8dd81ac5364e9383a922185e79ef63
-#: ../../flask/docs/deploying/uwsgi.rst:42
-msgid ""
-"If you want to deploy your flask application inside of a virtual "
-"environment, you need to also add ``--virtualenv "
-"/path/to/virtual/environment``. You might also need to add ``--plugin "
-"python`` or ``--plugin python3`` depending on which python version you "
-"use for your project."
-msgstr ""
-"もしvirtual environmentの内側のflaskアプリケーションをデプロイしたい場合、"
-"``--virtualenv /path/to/virtual/environment`` も追加する必要があります。"
-"自分のプロジェクトで使うpythonのバージョンによっては ``--plugin python`` "
-"または ``--plugin python3`` を追加する必要があるかもしれません。"
+#~ msgid ""
+#~ "If you want to deploy your flask"
+#~ " application inside of a virtual "
+#~ "environment, you need to also add "
+#~ "``--virtualenv /path/to/virtual/environment``. You "
+#~ "might also need to add ``--plugin "
+#~ "python`` or ``--plugin python3`` depending "
+#~ "on which python version you use "
+#~ "for your project."
+#~ msgstr ""
+#~ "もしvirtual environmentの内側のflaskアプリケーションをデプロイしたい場合、``--virtualenv"
+#~ " /path/to/virtual/environment`` "
+#~ "も追加する必要があります。自分のプロジェクトで使うpythonのバージョンによっては ``--plugin "
+#~ "python`` または ``--plugin python3`` "
+#~ "を追加する必要があるかもしれません。"
 
 # 65a61727f1b54b7d93cbe34c15d35eeb
-#: ../../flask/docs/deploying/uwsgi.rst:48
-msgid "Configuring nginx"
-msgstr "nginxの設定"
+#~ msgid "Configuring nginx"
+#~ msgstr "nginxの設定"
 
 # b01c22ab32ab468aa363d6717ee6a314
-#: ../../flask/docs/deploying/uwsgi.rst:50
-msgid "A basic flask nginx configuration looks like this::"
-msgstr "基本的なflaskのnginxの設定は以下のようなものです::"
+#~ msgid "A basic flask nginx configuration looks like this::"
+#~ msgstr "基本的なflaskのnginxの設定は以下のようなものです::"
 
 # 5c083efad4b34f08968630946e34c67f
-#: ../../flask/docs/deploying/uwsgi.rst:59
-msgid ""
-"This configuration binds the application to ``/yourapplication``.  If you"
-" want to have it in the URL root its a bit simpler::"
-msgstr ""
-"上記の設定はアプリケーションを ``/yourapplication`` に結び付けます。もしURLの"
-"ルートにしたい場合は、もう少しシンプルになります::"
+#~ msgid ""
+#~ "This configuration binds the application "
+#~ "to ``/yourapplication``.  If you want to"
+#~ " have it in the URL root its"
+#~ " a bit simpler::"
+#~ msgstr ""
+#~ "上記の設定はアプリケーションを ``/yourapplication`` "
+#~ "に結び付けます。もしURLのルートにしたい場合は、もう少しシンプルになります::"
+

@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 2.0.x\n"
+"Project-Id-Version: Flask 2.2.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-20 18:38+0900\n"
+"POT-Creation-Date: 2022-11-26 22:21+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -69,7 +69,7 @@ msgid "The test client makes requests to the application without running a live 
 msgstr ""
 
 #: ../../flask/docs/testing.rst:91
-msgid "The ``client`` has methods that match the common HTTP request methods, such as ``client.get()`` and ``client.post()``. They take many arguments for building the request; you can find the full documentation in :class:`~werkzeug.test.EnvironBuilder`. Typically you'll use ``path``, ``query``, ``headers``, and ``data`` or ``json``."
+msgid "The ``client`` has methods that match the common HTTP request methods, such as ``client.get()`` and ``client.post()``. They take many arguments for building the request; you can find the full documentation in :class:`~werkzeug.test.EnvironBuilder`. Typically you'll use ``path``, ``query_string``, ``headers``, and ``data`` or ``json``."
 msgstr ""
 
 #: ../../flask/docs/testing.rst:97
@@ -77,7 +77,7 @@ msgid "To make a request, call the method the request should use with the path t
 msgstr ""
 
 #: ../../flask/docs/testing.rst:111
-msgid "Pass a dict ``query={\"key\": \"value\", ...}`` to set arguments in the query string (after the ``?`` in the URL). Pass a dict ``headers={}`` to set request headers."
+msgid "Pass a dict ``query_string={\"key\": \"value\", ...}`` to set arguments in the query string (after the ``?`` in the URL). Pass a dict ``headers={}`` to set request headers."
 msgstr ""
 
 #: ../../flask/docs/testing.rst:115

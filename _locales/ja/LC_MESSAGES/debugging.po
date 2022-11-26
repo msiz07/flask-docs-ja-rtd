@@ -6,16 +6,28 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 2.0.x\n"
+"Project-Id-Version: Flask 2.2.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-20 18:38+0900\n"
+"POT-Creation-Date: 2022-11-26 22:21+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: ../../flask/docs/debugging.rst:42
+msgid ""
+"The debugger is enabled by default when the development server is run in "
+"debug mode."
+msgstr ""
+
+#: ../../flask/docs/debugging.rst:48
+msgid ""
+"When running from Python code, passing ``debug=True`` enables debug mode,"
+" which is mostly equivalent."
+msgstr ""
 
 #: ../../flask/docs/debugging.rst:2
 msgid "Debugging Application Errors"
@@ -87,56 +99,16 @@ msgstr ""
 "はpinによって保護されていますが、それでも重要なセキュリティリスクを意味し"
 "ます。本番環境では開発サーバやデバッガを走らせないようにしてください。"
 
-#: ../../flask/docs/debugging.rst:42
-msgid ""
-"To enable the debugger, run the development server with the ``FLASK_ENV``"
-" environment variable set to ``development``. This puts Flask in debug "
-"mode, which changes how it handles some errors, and enables the debugger "
-"and reloader."
-msgstr ""
-"デバッガを有効にするには、``FLASK_ENV`` 環境変数を ``development`` に設定"
-"して開発サーバを走らせてください。これはFlaskをデバッグ・モードにし、その"
-"モードではある種のエラーの処理方法を変更し、デバッガと再読み込み機能"
-"（reloader）を有効にします。"
-
-#: ../../flask/docs/debugging.rst:49 ../../flask/docs/debugging.rst:109
-msgid "Bash"
-msgstr ""
-
-#: ../../flask/docs/debugging.rst:56 ../../flask/docs/debugging.rst:116
-msgid "Fish"
-msgstr ""
-
-#: ../../flask/docs/debugging.rst:63 ../../flask/docs/debugging.rst:123
-msgid "CMD"
-msgstr ""
-
-#: ../../flask/docs/debugging.rst:70 ../../flask/docs/debugging.rst:130
-msgid "Powershell"
-msgstr ""
-
-#: ../../flask/docs/debugging.rst:77
-#| msgid "" "``FLASK_ENV`` can only be set as an environment variable. When
-#| running " "from Python code, passing ``debug=True`` enables debug mode,
-#| which is " "mostly equivalent. Debug mode can be controled separately from "
-#| "``FLASK_ENV`` with the ``FLASK_DEBUG`` environment variable as well."
-msgid ""
-"``FLASK_ENV`` can only be set as an environment variable. When running "
-"from Python code, passing ``debug=True`` enables debug mode, which is "
-"mostly equivalent. Debug mode can be controlled separately from "
-"``FLASK_ENV`` with the ``FLASK_DEBUG`` environment variable as well."
-msgstr ""
-"``FLASK_ENV`` は環境変数としてのみ設定できます。Pythonコードから開発サーバ"
-"を走らせるときは、``debug=True`` を引数に渡すとデバッグ・モードを有効に"
-"し、（FLASK_ENVにdevelopmentを設定した場合と）ほぼ同等になります。デバッグ・"
-"モードは ``FLASK_ENV`` とは別に ``FLASK_DEBUG`` 環境変数を使っても同じよう"
-"に制御できます。"
-
-#: ../../flask/docs/debugging.rst:86
+#: ../../flask/docs/debugging.rst:55
+#, fuzzy
+#| msgid "" ":doc:`/server` and :doc:`/cli` have more information about running
+#| the " "debugger, debug mode, and development mode. More information about
+#| the " "debugger can be found in the `Werkzeug documentation "
+#| "<https://werkzeug.palletsprojects.com/debug/>`__."
 msgid ""
 ":doc:`/server` and :doc:`/cli` have more information about running the "
-"debugger, debug mode, and development mode. More information about the "
-"debugger can be found in the `Werkzeug documentation "
+"debugger and debug mode. More information about the debugger can be found"
+" in the `Werkzeug documentation "
 "<https://werkzeug.palletsprojects.com/debug/>`__."
 msgstr ""
 "デバッガの実行、デバッグ・モード、開発モード（development mode）に関する"
@@ -144,11 +116,11 @@ msgstr ""
 "さらなる情報は `werkzeugのドキュメント "
 "<https://werkzeug.palletsprojects.com/debug/>`__ で見つかります。"
 
-#: ../../flask/docs/debugging.rst:93
+#: ../../flask/docs/debugging.rst:61
 msgid "External Debuggers"
 msgstr "外部デバッガ"
 
-#: ../../flask/docs/debugging.rst:95
+#: ../../flask/docs/debugging.rst:63
 msgid ""
 "External debuggers, such as those provided by IDEs, can offer a more "
 "powerful debugging experience than the built-in debugger. They can also "
@@ -162,7 +134,7 @@ msgstr ""
 "ある種のデバッガはリモート・モードさえ持っていて、他のマシンで走っている"
 "コードをデバッグできます。"
 
-#: ../../flask/docs/debugging.rst:101
+#: ../../flask/docs/debugging.rst:69
 msgid ""
 "When using an external debugger, the app should still be in debug mode, "
 "but it can be useful to disable the built-in debugger and reloader, which"
@@ -172,15 +144,11 @@ msgstr ""
 "おくべきですが、外部デバッガを邪魔する可能性がある組み込みのデバッガと"
 "再読み込み機能（reloader）は無効にすると便利な場合があります。"
 
-#: ../../flask/docs/debugging.rst:105
-msgid "When running from the command line:"
-msgstr "コマンドラインから走らせるとき:"
-
-#: ../../flask/docs/debugging.rst:137
+#: ../../flask/docs/debugging.rst:77
 msgid "When running from Python:"
 msgstr "Pythonから走らせるとき:"
 
-#: ../../flask/docs/debugging.rst:143
+#: ../../flask/docs/debugging.rst:83
 msgid ""
 "Disabling these isn't required, an external debugger will continue to "
 "work with the following caveats. If the built-in debugger is not "
@@ -193,3 +161,51 @@ msgstr ""
 "外部デバッグが捕捉する前に処理されてない例外を捕捉するでしょう。もしも"
 "reloaderが無効化されていない場合、デバッグ中にコードが変化した場合にそれは"
 "予期しない再読み込みを引き起こすかもしれません。"
+
+#~ msgid ""
+#~ "To enable the debugger, run the "
+#~ "development server with the ``FLASK_ENV`` "
+#~ "environment variable set to ``development``."
+#~ " This puts Flask in debug mode, "
+#~ "which changes how it handles some "
+#~ "errors, and enables the debugger and "
+#~ "reloader."
+#~ msgstr ""
+#~ "デバッガを有効にするには、``FLASK_ENV`` 環境変数を ``development`` "
+#~ "に設定して開発サーバを走らせてください。これはFlaskをデバッグ・モードにし、そのモードではある種のエラーの処理方法を変更し、デバッガと再読み込み機能（reloader）を有効にします。"
+
+#~ msgid "Bash"
+#~ msgstr ""
+
+#~ msgid "Fish"
+#~ msgstr ""
+
+#~ msgid "CMD"
+#~ msgstr ""
+
+#~ msgid "Powershell"
+#~ msgstr ""
+
+# | msgid "" "``FLASK_ENV`` can only be set as an environment variable. When
+# | running " "from Python code, passing ``debug=True`` enables debug mode,
+# | which is " "mostly equivalent. Debug mode can be controled separately from
+# "
+# | "``FLASK_ENV`` with the ``FLASK_DEBUG`` environment variable as well."
+#~ msgid ""
+#~ "``FLASK_ENV`` can only be set as "
+#~ "an environment variable. When running "
+#~ "from Python code, passing ``debug=True`` "
+#~ "enables debug mode, which is mostly "
+#~ "equivalent. Debug mode can be controlled"
+#~ " separately from ``FLASK_ENV`` with the "
+#~ "``FLASK_DEBUG`` environment variable as well."
+#~ msgstr ""
+#~ "``FLASK_ENV`` "
+#~ "は環境変数としてのみ設定できます。Pythonコードから開発サーバを走らせるときは、``debug=True`` "
+#~ "を引数に渡すとデバッグ・モードを有効にし、（FLASK_ENVにdevelopmentを設定した場合と）ほぼ同等になります。デバッグ・モードは"
+#~ " ``FLASK_ENV`` とは別に ``FLASK_DEBUG`` "
+#~ "環境変数を使っても同じように制御できます。"
+
+#~ msgid "When running from the command line:"
+#~ msgstr "コマンドラインから走らせるとき:"
+

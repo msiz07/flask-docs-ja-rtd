@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 2.0.x\n"
+"Project-Id-Version: Flask 2.2.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-20 18:38+0900\n"
+"POT-Creation-Date: 2022-11-26 22:21+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -49,503 +49,519 @@ msgid "To update multiple keys at once you can use the :meth:`dict.update` metho
 msgstr ""
 
 #: ../../flask/docs/config.rst:46
-msgid "Environment and Debug Features"
+msgid "Debug Mode"
 msgstr ""
 
 #: ../../flask/docs/config.rst:48
-msgid "The :data:`ENV` and :data:`DEBUG` config values are special because they may behave inconsistently if changed after the app has begun setting up. In order to set the environment and debug mode reliably, Flask uses environment variables."
+msgid "The :data:`DEBUG` config value is special because it may behave inconsistently if changed after the app has begun setting up. In order to set debug mode reliably, use the ``--debug`` option on the ``flask`` command.``flask run`` will use the interactive debugger and reloader by default in debug mode."
 msgstr ""
 
-#: ../../flask/docs/config.rst:53
-msgid "The environment is used to indicate to Flask, extensions, and other programs, like Sentry, what context Flask is running in. It is controlled with the :envvar:`FLASK_ENV` environment variable and defaults to ``production``."
+#: ../../flask/docs/config.rst:57
+msgid "Using the option is recommended. While it is possible to set :data:`DEBUG` in your config or code, this is strongly discouraged. It can't be read early by the ``flask`` command, and some systems or extensions may have already configured themselves based on a previous value."
 msgstr ""
 
-#: ../../flask/docs/config.rst:58
-msgid "Setting :envvar:`FLASK_ENV` to ``development`` will enable debug mode. ``flask run`` will use the interactive debugger and reloader by default in debug mode. To control this separately from the environment, use the :envvar:`FLASK_DEBUG` flag."
-msgstr ""
-
-#: ../../flask/docs/config.rst:63
-msgid "Added :envvar:`FLASK_ENV` to control the environment separately from debug mode. The development environment enables debug mode."
-msgstr ""
-
-#: ../../flask/docs/config.rst:67
-msgid "To switch Flask to the development environment and enable debug mode, set :envvar:`FLASK_ENV`:"
-msgstr ""
-
-#: ../../flask/docs/config.rst:72
-#: ../../flask/docs/config.rst:447
-#: ../../flask/docs/config.rst:526
-msgid "Bash"
-msgstr ""
-
-#: ../../flask/docs/config.rst:79
-#: ../../flask/docs/config.rst:455
-#: ../../flask/docs/config.rst:535
-msgid "Fish"
-msgstr ""
-
-#: ../../flask/docs/config.rst:86
-#: ../../flask/docs/config.rst:463
-#: ../../flask/docs/config.rst:544
-msgid "CMD"
-msgstr ""
-
-#: ../../flask/docs/config.rst:93
-#: ../../flask/docs/config.rst:471
-#: ../../flask/docs/config.rst:553
-msgid "Powershell"
-msgstr ""
-
-#: ../../flask/docs/config.rst:100
-msgid "Using the environment variables as described above is recommended. While it is possible to set :data:`ENV` and :data:`DEBUG` in your config or code, this is strongly discouraged. They can't be read early by the ``flask`` command, and some systems or extensions may have already configured themselves based on a previous value."
-msgstr ""
-
-#: ../../flask/docs/config.rst:108
+#: ../../flask/docs/config.rst:64
 msgid "Builtin Configuration Values"
 msgstr ""
 
-#: ../../flask/docs/config.rst:110
+#: ../../flask/docs/config.rst:66
 msgid "The following configuration values are used internally by Flask:"
 msgstr ""
 
-#: ../../flask/docs/config.rst:114
-msgid "What environment the app is running in. Flask and extensions may enable behaviors based on the environment, such as enabling debug mode. The :attr:`~flask.Flask.env` attribute maps to this config key. This is set by the :envvar:`FLASK_ENV` environment variable and may not behave as expected if set in code."
+#: ../../flask/docs/config.rst:70
+msgid "What environment the app is running in. The :attr:`~flask.Flask.env` attribute maps to this config key."
 msgstr ""
 
-#: ../../flask/docs/config.rst:120
-msgid "**Do not enable development when deploying in production.**"
-msgstr ""
-
-#: ../../flask/docs/config.rst:122
+#: ../../flask/docs/config.rst:73
 msgid "Default: ``'production'``"
 msgstr ""
 
-#: ../../flask/docs/config.rst:128
-msgid "Whether debug mode is enabled. When using ``flask run`` to start the development server, an interactive debugger will be shown for unhandled exceptions, and the server will be reloaded when code changes. The :attr:`~flask.Flask.debug` attribute maps to this config key. This is enabled when :data:`ENV` is ``'development'`` and is overridden by the ``FLASK_DEBUG`` environment variable. It may not behave as expected if set in code."
+#: ../../flask/docs/config.rst:75
+msgid "Will be removed in Flask 2.3. Use ``--debug`` instead."
 msgstr ""
 
-#: ../../flask/docs/config.rst:136
+#: ../../flask/docs/config.rst:82
+msgid "Whether debug mode is enabled. When using ``flask run`` to start the development server, an interactive debugger will be shown for unhandled exceptions, and the server will be reloaded when code changes. The :attr:`~flask.Flask.debug` attribute maps to this config key. This is set with the ``FLASK_DEBUG`` environment variable. It may not behave as expected if set in code."
+msgstr ""
+
+#: ../../flask/docs/config.rst:88
 msgid "**Do not enable debug mode when deploying in production.**"
 msgstr ""
 
-#: ../../flask/docs/config.rst:138
-msgid "Default: ``True`` if :data:`ENV` is ``'development'``, or ``False`` otherwise."
-msgstr ""
-
-#: ../../flask/docs/config.rst:143
-msgid "Enable testing mode. Exceptions are propagated rather than handled by the the app's error handlers. Extensions may also change their behavior to facilitate easier testing. You should enable this in your own tests."
-msgstr ""
-
-#: ../../flask/docs/config.rst:147
-#: ../../flask/docs/config.rst:171
-#: ../../flask/docs/config.rst:232
-#: ../../flask/docs/config.rst:270
-#: ../../flask/docs/config.rst:354
-#: ../../flask/docs/config.rst:375
+#: ../../flask/docs/config.rst:90
+#: ../../flask/docs/config.rst:98
+#: ../../flask/docs/config.rst:114
+#: ../../flask/docs/config.rst:175
+#: ../../flask/docs/config.rst:213
+#: ../../flask/docs/config.rst:306
+#: ../../flask/docs/config.rst:333
 msgid "Default: ``False``"
 msgstr ""
 
-#: ../../flask/docs/config.rst:151
+#: ../../flask/docs/config.rst:94
+msgid "Enable testing mode. Exceptions are propagated rather than handled by the the app's error handlers. Extensions may also change their behavior to facilitate easier testing. You should enable this in your own tests."
+msgstr ""
+
+#: ../../flask/docs/config.rst:102
 msgid "Exceptions are re-raised rather than being handled by the app's error handlers. If not set, this is implicitly true if ``TESTING`` or ``DEBUG`` is enabled."
 msgstr ""
 
-#: ../../flask/docs/config.rst:155
-#: ../../flask/docs/config.rst:163
-#: ../../flask/docs/config.rst:181
-#: ../../flask/docs/config.rst:195
-#: ../../flask/docs/config.rst:210
-#: ../../flask/docs/config.rst:217
-#: ../../flask/docs/config.rst:240
-#: ../../flask/docs/config.rst:284
-#: ../../flask/docs/config.rst:302
-#: ../../flask/docs/config.rst:329
-#: ../../flask/docs/config.rst:367
+#: ../../flask/docs/config.rst:106
+#: ../../flask/docs/config.rst:124
+#: ../../flask/docs/config.rst:138
+#: ../../flask/docs/config.rst:153
+#: ../../flask/docs/config.rst:160
+#: ../../flask/docs/config.rst:183
+#: ../../flask/docs/config.rst:227
+#: ../../flask/docs/config.rst:245
+#: ../../flask/docs/config.rst:272
+#: ../../flask/docs/config.rst:325
 msgid "Default: ``None``"
 msgstr ""
 
-#: ../../flask/docs/config.rst:159
-msgid "Don't pop the request context when an exception occurs. If not set, this is true if ``DEBUG`` is true. This allows debuggers to introspect the request data on errors, and should normally not need to be set directly."
-msgstr ""
-
-#: ../../flask/docs/config.rst:167
+#: ../../flask/docs/config.rst:110
 msgid "If there is no handler for an ``HTTPException``-type exception, re-raise it to be handled by the interactive debugger instead of returning it as a simple error response."
 msgstr ""
 
-#: ../../flask/docs/config.rst:175
+#: ../../flask/docs/config.rst:118
 msgid "Trying to access a key that doesn't exist from request dicts like ``args`` and ``form`` will return a 400 Bad Request error page. Enable this to treat the error as an unhandled exception instead so that you get the interactive debugger. This is a more specific version of ``TRAP_HTTP_EXCEPTIONS``. If unset, it is enabled in debug mode."
 msgstr ""
 
-#: ../../flask/docs/config.rst:185
+#: ../../flask/docs/config.rst:128
 msgid "A secret key that will be used for securely signing the session cookie and can be used for any other security related needs by extensions or your application. It should be a long random ``bytes`` or ``str``. For example, copy the output of this to your config::"
 msgstr ""
 
-#: ../../flask/docs/config.rst:193
+#: ../../flask/docs/config.rst:136
 msgid "**Do not reveal the secret key when posting questions or committing code.**"
 msgstr ""
 
-#: ../../flask/docs/config.rst:199
+#: ../../flask/docs/config.rst:142
 msgid "The name of the session cookie. Can be changed in case you already have a cookie with the same name."
 msgstr ""
 
-#: ../../flask/docs/config.rst:202
+#: ../../flask/docs/config.rst:145
 msgid "Default: ``'session'``"
 msgstr ""
 
-#: ../../flask/docs/config.rst:206
+#: ../../flask/docs/config.rst:149
 msgid "The domain match rule that the session cookie will be valid for. If not set, the cookie will be valid for all subdomains of :data:`SERVER_NAME`. If ``False``, the cookie's domain will not be set."
 msgstr ""
 
-#: ../../flask/docs/config.rst:214
+#: ../../flask/docs/config.rst:157
 msgid "The path that the session cookie will be valid for. If not set, the cookie will be valid underneath ``APPLICATION_ROOT`` or ``/`` if that is not set."
 msgstr ""
 
-#: ../../flask/docs/config.rst:221
+#: ../../flask/docs/config.rst:164
 msgid "Browsers will not allow JavaScript access to cookies marked as \"HTTP only\" for security."
 msgstr ""
 
-#: ../../flask/docs/config.rst:224
-#: ../../flask/docs/config.rst:262
-#: ../../flask/docs/config.rst:338
-#: ../../flask/docs/config.rst:347
+#: ../../flask/docs/config.rst:167
+#: ../../flask/docs/config.rst:205
+#: ../../flask/docs/config.rst:281
+#: ../../flask/docs/config.rst:294
 msgid "Default: ``True``"
 msgstr ""
 
-#: ../../flask/docs/config.rst:228
+#: ../../flask/docs/config.rst:171
 msgid "Browsers will only send cookies with requests over HTTPS if the cookie is marked \"secure\". The application must be served over HTTPS for this to make sense."
 msgstr ""
 
-#: ../../flask/docs/config.rst:236
+#: ../../flask/docs/config.rst:179
 msgid "Restrict how cookies are sent with requests from external sites. Can be set to ``'Lax'`` (recommended) or ``'Strict'``. See :ref:`security-cookie`."
 msgstr ""
 
-#: ../../flask/docs/config.rst:246
+#: ../../flask/docs/config.rst:189
 msgid "If ``session.permanent`` is true, the cookie's expiration will be set this number of seconds in the future. Can either be a :class:`datetime.timedelta` or an ``int``."
 msgstr ""
 
-#: ../../flask/docs/config.rst:250
+#: ../../flask/docs/config.rst:193
 msgid "Flask's default cookie implementation validates that the cryptographic signature is not older than this value."
 msgstr ""
 
-#: ../../flask/docs/config.rst:253
+#: ../../flask/docs/config.rst:196
 msgid "Default: ``timedelta(days=31)`` (``2678400`` seconds)"
 msgstr ""
 
-#: ../../flask/docs/config.rst:257
+#: ../../flask/docs/config.rst:200
 msgid "Control whether the cookie is sent with every response when ``session.permanent`` is true. Sending the cookie every time (the default) can more reliably keep the session from expiring, but uses more bandwidth. Non-permanent sessions are not affected."
 msgstr ""
 
-#: ../../flask/docs/config.rst:266
+#: ../../flask/docs/config.rst:209
 msgid "When serving files, set the ``X-Sendfile`` header instead of serving the data with Flask. Some web servers, such as Apache, recognize this and serve the data more efficiently. This only makes sense when using such a server."
 msgstr ""
 
-#: ../../flask/docs/config.rst:274
+#: ../../flask/docs/config.rst:217
 msgid "When serving files, set the cache control max age to this number of seconds. Can be a :class:`datetime.timedelta` or an ``int``. Override this value on a per-file basis using :meth:`~flask.Flask.get_send_file_max_age` on the application or blueprint."
 msgstr ""
 
-#: ../../flask/docs/config.rst:280
+#: ../../flask/docs/config.rst:223
 msgid "If ``None``, ``send_file`` tells the browser to use conditional requests will be used instead of a timed cache, which is usually preferable."
 msgstr ""
 
-#: ../../flask/docs/config.rst:288
+#: ../../flask/docs/config.rst:231
 msgid "Inform the application what host and port it is bound to. Required for subdomain route matching support."
 msgstr ""
 
-#: ../../flask/docs/config.rst:291
+#: ../../flask/docs/config.rst:234
 msgid "If set, will be used for the session cookie domain if :data:`SESSION_COOKIE_DOMAIN` is not set. Modern web browsers will not allow setting cookies for domains without a dot. To use a domain locally, add any names that should route to the app to your ``hosts`` file. ::"
 msgstr ""
 
-#: ../../flask/docs/config.rst:299
+#: ../../flask/docs/config.rst:242
 msgid "If set, ``url_for`` can generate external URLs with only an application context instead of a request context."
 msgstr ""
 
-#: ../../flask/docs/config.rst:306
+#: ../../flask/docs/config.rst:249
 msgid "Inform the application what path it is mounted under by the application / web server.  This is used for generating URLs outside the context of a request (inside a request, the dispatcher is responsible for setting ``SCRIPT_NAME`` instead; see :doc:`/patterns/appdispatch` for examples of dispatch configuration)."
 msgstr ""
 
-#: ../../flask/docs/config.rst:312
+#: ../../flask/docs/config.rst:255
 msgid "Will be used for the session cookie path if ``SESSION_COOKIE_PATH`` is not set."
 msgstr ""
 
-#: ../../flask/docs/config.rst:315
+#: ../../flask/docs/config.rst:258
 msgid "Default: ``'/'``"
 msgstr ""
 
-#: ../../flask/docs/config.rst:319
+#: ../../flask/docs/config.rst:262
 msgid "Use this scheme for generating external URLs when not in a request context."
 msgstr ""
 
-#: ../../flask/docs/config.rst:321
+#: ../../flask/docs/config.rst:264
 msgid "Default: ``'http'``"
 msgstr ""
 
-#: ../../flask/docs/config.rst:325
+#: ../../flask/docs/config.rst:268
 msgid "Don't read more than this many bytes from the incoming request data. If not set and the request does not specify a ``CONTENT_LENGTH``, no data will be read for security."
 msgstr ""
 
-#: ../../flask/docs/config.rst:333
+#: ../../flask/docs/config.rst:276
 msgid "Serialize objects to ASCII-encoded JSON. If this is disabled, the JSON returned from ``jsonify`` will contain Unicode characters. This has security implications when rendering the JSON into JavaScript in templates, and should typically remain enabled."
 msgstr ""
 
-#: ../../flask/docs/config.rst:342
+#: ../../flask/docs/config.rst:283
+msgid "Will be removed in Flask 2.3. Set ``app.json.ensure_ascii`` instead."
+msgstr ""
+
+#: ../../flask/docs/config.rst:289
 msgid "Sort the keys of JSON objects alphabetically. This is useful for caching because it ensures the data is serialized the same way no matter what Python's hash seed is. While not recommended, you can disable this for a possible performance improvement at the cost of caching."
 msgstr ""
 
-#: ../../flask/docs/config.rst:351
-msgid "``jsonify`` responses will be output with newlines, spaces, and indentation for easier reading by humans. Always enabled in debug mode."
+#: ../../flask/docs/config.rst:296
+msgid "Will be removed in Flask 2.3. Set ``app.json.sort_keys`` instead."
 msgstr ""
 
-#: ../../flask/docs/config.rst:358
+#: ../../flask/docs/config.rst:302
+msgid ":func:`~flask.jsonify` responses will be output with newlines, spaces, and indentation for easier reading by humans. Always enabled in debug mode."
+msgstr ""
+
+#: ../../flask/docs/config.rst:308
+msgid "Will be removed in Flask 2.3. Set ``app.json.compact`` instead."
+msgstr ""
+
+#: ../../flask/docs/config.rst:313
 msgid "The mimetype of ``jsonify`` responses."
 msgstr ""
 
-#: ../../flask/docs/config.rst:360
+#: ../../flask/docs/config.rst:315
 msgid "Default: ``'application/json'``"
 msgstr ""
 
-#: ../../flask/docs/config.rst:364
+#: ../../flask/docs/config.rst:317
+msgid "Will be removed in Flask 2.3. Set ``app.json.mimetype`` instead."
+msgstr ""
+
+#: ../../flask/docs/config.rst:322
 msgid "Reload templates when they are changed. If not set, it will be enabled in debug mode."
 msgstr ""
 
-#: ../../flask/docs/config.rst:371
+#: ../../flask/docs/config.rst:329
 msgid "Log debugging information tracing how a template file was loaded. This can be useful to figure out why a template was not loaded or the wrong file appears to be loaded."
 msgstr ""
 
-#: ../../flask/docs/config.rst:379
+#: ../../flask/docs/config.rst:337
 msgid "Warn if cookie headers are larger than this many bytes. Defaults to ``4093``. Larger cookies may be silently ignored by browsers. Set to ``0`` to disable the warning."
 msgstr ""
 
-#: ../../flask/docs/config.rst:411
+#: ../../flask/docs/config.rst:381
+msgid "Removed ``PRESERVE_CONTEXT_ON_EXCEPTION``."
+msgstr ""
+
+#: ../../flask/docs/config.rst:384
+msgid "``JSON_AS_ASCII``, ``JSON_SORT_KEYS``, ``JSONIFY_MIMETYPE``, and ``JSONIFY_PRETTYPRINT_REGULAR`` will be removed in Flask 2.3. The default ``app.json`` provider has equivalent attributes instead."
+msgstr ""
+
+#: ../../flask/docs/config.rst:390
+msgid "``ENV`` will be removed in Flask 2.3. Use ``--debug`` instead."
+msgstr ""
+
+#: ../../flask/docs/config.rst:369
 msgid "``LOGGER_NAME`` and ``LOGGER_HANDLER_POLICY`` were removed. See :doc:`/logging` for information about configuration."
 msgstr ""
 
-#: ../../flask/docs/config.rst:415
+#: ../../flask/docs/config.rst:373
 msgid "Added :data:`ENV` to reflect the :envvar:`FLASK_ENV` environment variable."
 msgstr ""
 
-#: ../../flask/docs/config.rst:418
+#: ../../flask/docs/config.rst:376
 msgid "Added :data:`SESSION_COOKIE_SAMESITE` to control the session cookie's ``SameSite`` option."
 msgstr ""
 
-#: ../../flask/docs/config.rst:421
+#: ../../flask/docs/config.rst:379
 msgid "Added :data:`MAX_COOKIE_SIZE` to control a warning from Werkzeug."
 msgstr ""
 
-#: ../../flask/docs/config.rst:407
+#: ../../flask/docs/config.rst:365
 msgid "``SESSION_REFRESH_EACH_REQUEST``, ``TEMPLATES_AUTO_RELOAD``, ``LOGGER_HANDLER_POLICY``, ``EXPLAIN_TEMPLATE_LOADING``"
 msgstr ""
 
-#: ../../flask/docs/config.rst:404
+#: ../../flask/docs/config.rst:362
 msgid "``JSON_AS_ASCII``, ``JSON_SORT_KEYS``, ``JSONIFY_PRETTYPRINT_REGULAR``"
 msgstr ""
 
-#: ../../flask/docs/config.rst:401
+#: ../../flask/docs/config.rst:359
 msgid "``PREFERRED_URL_SCHEME``"
 msgstr ""
 
-#: ../../flask/docs/config.rst:395
+#: ../../flask/docs/config.rst:353
 msgid "``TRAP_BAD_REQUEST_ERRORS``, ``TRAP_HTTP_EXCEPTIONS``, ``APPLICATION_ROOT``, ``SESSION_COOKIE_DOMAIN``, ``SESSION_COOKIE_PATH``, ``SESSION_COOKIE_HTTPONLY``, ``SESSION_COOKIE_SECURE``"
 msgstr ""
 
-#: ../../flask/docs/config.rst:392
+#: ../../flask/docs/config.rst:350
 msgid "``PROPAGATE_EXCEPTIONS``, ``PRESERVE_CONTEXT_ON_EXCEPTION``"
 msgstr ""
 
-#: ../../flask/docs/config.rst:389
+#: ../../flask/docs/config.rst:347
 msgid "``MAX_CONTENT_LENGTH``"
 msgstr ""
 
-#: ../../flask/docs/config.rst:386
+#: ../../flask/docs/config.rst:344
 msgid "``SERVER_NAME``"
 msgstr ""
 
-#: ../../flask/docs/config.rst:383
+#: ../../flask/docs/config.rst:341
 msgid "``LOGGER_NAME``"
 msgstr ""
 
-#: ../../flask/docs/config.rst:425
+#: ../../flask/docs/config.rst:395
 msgid "Configuring from Python Files"
 msgstr ""
 
-#: ../../flask/docs/config.rst:427
-msgid "Configuration becomes more useful if you can store it in a separate file, ideally located outside the actual application package. This makes packaging and distributing your application possible via various package handling tools (:doc:`/patterns/distribute`) and finally modifying the configuration file afterwards."
+#: ../../flask/docs/config.rst:397
+msgid "Configuration becomes more useful if you can store it in a separate file, ideally located outside the actual application package. You can deploy your application, then separately configure it for the specific deployment."
 msgstr ""
 
-#: ../../flask/docs/config.rst:433
-msgid "So a common pattern is this::"
+#: ../../flask/docs/config.rst:401
+msgid "A common pattern is this::"
 msgstr ""
 
-#: ../../flask/docs/config.rst:439
+#: ../../flask/docs/config.rst:407
 msgid "This first loads the configuration from the `yourapplication.default_settings` module and then overrides the values with the contents of the file the :envvar:`YOURAPPLICATION_SETTINGS` environment variable points to.  This environment variable can be set in the shell before starting the server:"
 msgstr ""
 
-#: ../../flask/docs/config.rst:479
+#: ../../flask/docs/config.rst:415
+#: ../../flask/docs/config.rst:497
+msgid "Bash"
+msgstr ""
+
+#: ../../flask/docs/config.rst:423
+#: ../../flask/docs/config.rst:506
+msgid "Fish"
+msgstr ""
+
+#: ../../flask/docs/config.rst:431
+#: ../../flask/docs/config.rst:515
+msgid "CMD"
+msgstr ""
+
+#: ../../flask/docs/config.rst:439
+#: ../../flask/docs/config.rst:524
+msgid "Powershell"
+msgstr ""
+
+#: ../../flask/docs/config.rst:447
 msgid "The configuration files themselves are actual Python files.  Only values in uppercase are actually stored in the config object later on.  So make sure to use uppercase letters for your config keys."
 msgstr ""
 
-#: ../../flask/docs/config.rst:483
+#: ../../flask/docs/config.rst:451
 msgid "Here is an example of a configuration file::"
 msgstr ""
 
-#: ../../flask/docs/config.rst:488
+#: ../../flask/docs/config.rst:456
 msgid "Make sure to load the configuration very early on, so that extensions have the ability to access the configuration when starting up.  There are other methods on the config object as well to load from individual files.  For a complete reference, read the :class:`~flask.Config` object's documentation."
 msgstr ""
 
-#: ../../flask/docs/config.rst:496
+#: ../../flask/docs/config.rst:464
 msgid "Configuring from Data Files"
 msgstr ""
 
-#: ../../flask/docs/config.rst:498
+#: ../../flask/docs/config.rst:466
 msgid "It is also possible to load configuration from a file in a format of your choice using :meth:`~flask.Config.from_file`. For example to load from a TOML file:"
 msgstr ""
 
-#: ../../flask/docs/config.rst:507
+#: ../../flask/docs/config.rst:475
 msgid "Or from a JSON file:"
 msgstr ""
 
-#: ../../flask/docs/config.rst:516
+#: ../../flask/docs/config.rst:484
 msgid "Configuring from Environment Variables"
 msgstr ""
 
-#: ../../flask/docs/config.rst:518
-msgid "In addition to pointing to configuration files using environment variables, you may find it useful (or necessary) to control your configuration values directly from the environment."
+#: ../../flask/docs/config.rst:486
+msgid "In addition to pointing to configuration files using environment variables, you may find it useful (or necessary) to control your configuration values directly from the environment. Flask can be instructed to load all environment variables starting with a specific prefix into the config using :meth:`~flask.Config.from_prefixed_env`."
 msgstr ""
 
-#: ../../flask/docs/config.rst:522
+#: ../../flask/docs/config.rst:492
 msgid "Environment variables can be set in the shell before starting the server:"
 msgstr ""
 
-#: ../../flask/docs/config.rst:562
-msgid "While this approach is straightforward to use, it is important to remember that environment variables are strings -- they are not automatically deserialized into Python types."
+#: ../../flask/docs/config.rst:533
+msgid "The variables can then be loaded and accessed via the config with a key equal to the environment variable name without the prefix i.e."
 msgstr ""
 
-#: ../../flask/docs/config.rst:566
-msgid "Here is an example of a configuration file that uses environment variables::"
+#: ../../flask/docs/config.rst:541
+msgid "The prefix is ``FLASK_`` by default. This is configurable via the ``prefix`` argument of :meth:`~flask.Config.from_prefixed_env`."
 msgstr ""
 
-#: ../../flask/docs/config.rst:579
-msgid "Notice that any value besides an empty string will be interpreted as a boolean ``True`` value in Python, which requires care if an environment explicitly sets values intended to be ``False``."
+#: ../../flask/docs/config.rst:544
+msgid "Values will be parsed to attempt to convert them to a more specific type than strings. By default :func:`json.loads` is used, so any valid JSON value is possible, including lists and dicts. This is configurable via the ``loads`` argument of :meth:`~flask.Config.from_prefixed_env`."
 msgstr ""
 
-#: ../../flask/docs/config.rst:583
-msgid "Make sure to load the configuration very early on, so that extensions have the ability to access the configuration when starting up.  There are other methods on the config object as well to load from individual files.  For a complete reference, read the :class:`~flask.Config` class documentation."
+#: ../../flask/docs/config.rst:549
+msgid "When adding a boolean value with the default JSON parsing, only \"true\" and \"false\", lowercase, are valid values. Keep in mind that any non-empty string is considered ``True`` by Python."
 msgstr ""
 
-#: ../../flask/docs/config.rst:590
+#: ../../flask/docs/config.rst:553
+msgid "It is possible to set keys in nested dictionaries by separating the keys with double underscore (``__``). Any intermediate keys that don't exist on the parent dict will be initialized to an empty dict."
+msgstr ""
+
+#: ../../flask/docs/config.rst:565
+msgid "On Windows, environment variable keys are always uppercase, therefore the above example would end up as ``MYAPI__CREDENTIALS__USERNAME``."
+msgstr ""
+
+#: ../../flask/docs/config.rst:568
+msgid "For even more config loading features, including merging and case-insensitive Windows support, try a dedicated library such as Dynaconf_, which includes integration with Flask."
+msgstr ""
+
+#: ../../flask/docs/config.rst:576
 msgid "Configuration Best Practices"
 msgstr ""
 
-#: ../../flask/docs/config.rst:592
+#: ../../flask/docs/config.rst:578
 msgid "The downside with the approach mentioned earlier is that it makes testing a little harder.  There is no single 100% solution for this problem in general, but there are a couple of things you can keep in mind to improve that experience:"
 msgstr ""
 
-#: ../../flask/docs/config.rst:597
+#: ../../flask/docs/config.rst:583
 msgid "Create your application in a function and register blueprints on it. That way you can create multiple instances of your application with different configurations attached which makes unit testing a lot easier.  You can use this to pass in configuration as needed."
 msgstr ""
 
-#: ../../flask/docs/config.rst:602
+#: ../../flask/docs/config.rst:588
 msgid "Do not write code that needs the configuration at import time.  If you limit yourself to request-only accesses to the configuration you can reconfigure the object later on as needed."
 msgstr ""
 
-#: ../../flask/docs/config.rst:609
+#: ../../flask/docs/config.rst:592
+msgid "Make sure to load the configuration very early on, so that extensions can access the configuration when calling ``init_app``."
+msgstr ""
+
+#: ../../flask/docs/config.rst:599
 msgid "Development / Production"
 msgstr ""
 
-#: ../../flask/docs/config.rst:611
+#: ../../flask/docs/config.rst:601
 msgid "Most applications need more than one configuration.  There should be at least separate configurations for the production server and the one used during development.  The easiest way to handle this is to use a default configuration that is always loaded and part of the version control, and a separate configuration that overrides the values as necessary as mentioned in the example above::"
 msgstr ""
 
-#: ../../flask/docs/config.rst:622
+#: ../../flask/docs/config.rst:612
 msgid "Then you just have to add a separate :file:`config.py` file and export ``YOURAPPLICATION_SETTINGS=/path/to/config.py`` and you are done.  However there are alternative ways as well.  For example you could use imports or subclassing."
 msgstr ""
 
-#: ../../flask/docs/config.rst:627
+#: ../../flask/docs/config.rst:617
 msgid "What is very popular in the Django world is to make the import explicit in the config file by adding ``from yourapplication.default_settings import *`` to the top of the file and then overriding the changes by hand. You could also inspect an environment variable like ``YOURAPPLICATION_MODE`` and set that to `production`, `development` etc and import different hard-coded files based on that."
 msgstr ""
 
-#: ../../flask/docs/config.rst:634
+#: ../../flask/docs/config.rst:624
 msgid "An interesting pattern is also to use classes and inheritance for configuration::"
 msgstr ""
 
-#: ../../flask/docs/config.rst:650
+#: ../../flask/docs/config.rst:640
 msgid "To enable such a config you just have to call into :meth:`~flask.Config.from_object`::"
 msgstr ""
 
-#: ../../flask/docs/config.rst:655
+#: ../../flask/docs/config.rst:645
 msgid "Note that :meth:`~flask.Config.from_object` does not instantiate the class object. If you need to instantiate the class, such as to access a property, then you must do so before calling :meth:`~flask.Config.from_object`::"
 msgstr ""
 
-#: ../../flask/docs/config.rst:667
+#: ../../flask/docs/config.rst:657
 msgid "Instantiating the configuration object allows you to use ``@property`` in your configuration classes::"
 msgstr ""
 
-#: ../../flask/docs/config.rst:690
+#: ../../flask/docs/config.rst:680
 msgid "There are many different ways and it's up to you how you want to manage your configuration files.  However here a list of good recommendations:"
 msgstr ""
 
-#: ../../flask/docs/config.rst:693
+#: ../../flask/docs/config.rst:683
 msgid "Keep a default configuration in version control.  Either populate the config with this default configuration or import it in your own configuration files before overriding values."
 msgstr ""
 
-#: ../../flask/docs/config.rst:696
+#: ../../flask/docs/config.rst:686
 msgid "Use an environment variable to switch between the configurations. This can be done from outside the Python interpreter and makes development and deployment much easier because you can quickly and easily switch between different configs without having to touch the code at all.  If you are working often on different projects you can even create your own script for sourcing that activates a virtualenv and exports the development configuration for you."
 msgstr ""
 
-#: ../../flask/docs/config.rst:703
-msgid "Use a tool like `fabric`_ in production to push code and configurations separately to the production server(s).  For some details about how to do that, head over to the :doc:`/patterns/fabric` pattern."
+#: ../../flask/docs/config.rst:693
+msgid "Use a tool like `fabric`_ to push code and configuration separately to the production server(s)."
 msgstr ""
 
-#: ../../flask/docs/config.rst:714
+#: ../../flask/docs/config.rst:702
 msgid "Instance Folders"
 msgstr ""
 
-#: ../../flask/docs/config.rst:718
+#: ../../flask/docs/config.rst:706
 msgid "Flask 0.8 introduces instance folders.  Flask for a long time made it possible to refer to paths relative to the application's folder directly (via :attr:`Flask.root_path`).  This was also how many developers loaded configurations stored next to the application.  Unfortunately however this only works well if applications are not packages in which case the root path refers to the contents of the package."
 msgstr ""
 
-#: ../../flask/docs/config.rst:725
+#: ../../flask/docs/config.rst:713
 msgid "With Flask 0.8 a new attribute was introduced: :attr:`Flask.instance_path`.  It refers to a new concept called the “instance folder”.  The instance folder is designed to not be under version control and be deployment specific.  It's the perfect place to drop things that either change at runtime or configuration files."
 msgstr ""
 
-#: ../../flask/docs/config.rst:731
+#: ../../flask/docs/config.rst:719
 msgid "You can either explicitly provide the path of the instance folder when creating the Flask application or you can let Flask autodetect the instance folder.  For explicit configuration use the `instance_path` parameter::"
 msgstr ""
 
-#: ../../flask/docs/config.rst:738
+#: ../../flask/docs/config.rst:726
 msgid "Please keep in mind that this path *must* be absolute when provided."
 msgstr ""
 
-#: ../../flask/docs/config.rst:740
+#: ../../flask/docs/config.rst:728
 msgid "If the `instance_path` parameter is not provided the following default locations are used:"
 msgstr ""
 
-#: ../../flask/docs/config.rst:743
+#: ../../flask/docs/config.rst:731
 msgid "Uninstalled module::"
 msgstr ""
 
-#: ../../flask/docs/config.rst:748
+#: ../../flask/docs/config.rst:736
 msgid "Uninstalled package::"
 msgstr ""
 
-#: ../../flask/docs/config.rst:754
+#: ../../flask/docs/config.rst:742
 msgid "Installed module or package::"
 msgstr ""
 
-#: ../../flask/docs/config.rst:759
+#: ../../flask/docs/config.rst:747
 msgid "``$PREFIX`` is the prefix of your Python installation.  This can be ``/usr`` or the path to your virtualenv.  You can print the value of ``sys.prefix`` to see what the prefix is set to."
 msgstr ""
 
-#: ../../flask/docs/config.rst:763
+#: ../../flask/docs/config.rst:751
 msgid "Since the config object provided loading of configuration files from relative filenames we made it possible to change the loading via filenames to be relative to the instance path if wanted.  The behavior of relative paths in config files can be flipped between “relative to the application root” (the default) to “relative to instance folder” via the `instance_relative_config` switch to the application constructor::"
 msgstr ""
 
-#: ../../flask/docs/config.rst:772
+#: ../../flask/docs/config.rst:760
 msgid "Here is a full example of how to configure Flask to preload the config from a module and then override the config from a file in the instance folder if it exists::"
 msgstr ""
 
-#: ../../flask/docs/config.rst:780
+#: ../../flask/docs/config.rst:768
 msgid "The path to the instance folder can be found via the :attr:`Flask.instance_path`.  Flask also provides a shortcut to open a file from the instance folder with :meth:`Flask.open_instance_resource`."
 msgstr ""
 
-#: ../../flask/docs/config.rst:784
+#: ../../flask/docs/config.rst:772
 msgid "Example usage for both::"
 msgstr ""

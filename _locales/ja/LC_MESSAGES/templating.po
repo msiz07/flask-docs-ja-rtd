@@ -6,16 +6,43 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 2.0.x\n"
+"Project-Id-Version: Flask 2.2.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-20 18:38+0900\n"
+"POT-Creation-Date: 2022-11-26 22:21+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: ../../flask/docs/templating.rst:206
+msgid "Streaming"
+msgstr ""
+
+#: ../../flask/docs/templating.rst:208
+msgid ""
+"It can be useful to not render the whole template as one complete string,"
+" instead render it as a stream, yielding smaller incremental strings. "
+"This can be used for streaming HTML in chunks to speed up initial page "
+"load, or to save memory when rendering a very large template."
+msgstr ""
+
+#: ../../flask/docs/templating.rst:214
+msgid ""
+"The Jinja2 template engine supports rendering a template piece by piece, "
+"returning an iterator of strings. Flask provides the "
+":func:`~flask.stream_template` and :func:`~flask.stream_template_string` "
+"functions to make this easier to use."
+msgstr ""
+
+#: ../../flask/docs/templating.rst:227
+msgid ""
+"These functions automatically apply the "
+":func:`~flask.stream_with_context` wrapper if a request is active, so "
+"that it remains available in the template."
+msgstr ""
 
 # e18b9baec7bb41c99f7416240297921e
 #: ../../flask/docs/templating.rst:2

@@ -6,16 +6,16 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 2.0.x\n"
+"Project-Id-Version: Flask 2.2.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-21 20:07+0900\n"
+"POT-Creation-Date: 2022-11-26 22:21+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.10.3\n"
 
 # 8ed8e2a11759468e8512d6c5088f24a5
 #: ../../flask/docs/patterns/sqlite3.rst:2
@@ -54,25 +54,13 @@ msgstr ""
 "使用できます。コンテキストが破壊されるときは常に、データベース接続は終了"
 "されます。"
 
-# 5becd3b168524f448faffe52684b6776
-#: ../../flask/docs/patterns/sqlite3.rst:33
-msgid ""
-"Note: if you use Flask 0.9 or older you need to use "
-"``flask._app_ctx_stack.top`` instead of ``g`` as the :data:`flask.g` "
-"object was bound to the request and not application context."
-msgstr ""
-"もしFlask 0.9またはより古いものを使用している場合、\ :data:`flask.g`\ "
-"オブジェクトはアプリケーションのコンテキストではなくリクエストに結び"
-"ついていた（was bound to）ため、\ ``g``\ の代わりに\ "
-"``flask._app_ctx_stack.top``\ を使用する必要があります。"
-
 # 40a476d5afaf4353b4dbefd9604dd1c3
-#: ../../flask/docs/patterns/sqlite3.rst:37
+#: ../../flask/docs/patterns/sqlite3.rst:33
 msgid "Example::"
 msgstr "例"
 
 # 1c552926be284c44a4a0db86a205ef50
-#: ../../flask/docs/patterns/sqlite3.rst:47
+#: ../../flask/docs/patterns/sqlite3.rst:43
 msgid ""
 "Please keep in mind that the teardown request and appcontext functions "
 "are always executed, even if a before-request handler failed or was never"
@@ -85,12 +73,12 @@ msgstr ""
 "ベース（接続）があるかを確認する必要があります。"
 
 # b6933ecb7a1b406981a7f3ae9776f70e
-#: ../../flask/docs/patterns/sqlite3.rst:53
+#: ../../flask/docs/patterns/sqlite3.rst:49
 msgid "Connect on Demand"
 msgstr "必要に応じた接続（Connect on Demand）"
 
 # 2ccffe80d8954bacba20b7e3e35cbb53
-#: ../../flask/docs/patterns/sqlite3.rst:55
+#: ../../flask/docs/patterns/sqlite3.rst:51
 msgid ""
 "The upside of this approach (connecting on first use) is that this will "
 "only open the connection if truly necessary.  If you want to use this "
@@ -103,12 +91,12 @@ msgstr ""
 "の中で使用できます。"
 
 # b3e2edffeb664bc0a8a7fdf9839073e3
-#: ../../flask/docs/patterns/sqlite3.rst:65
+#: ../../flask/docs/patterns/sqlite3.rst:61
 msgid "Easy Querying"
 msgstr "簡易問合せ（Easy Querying）"
 
 # 607070d8884248e6a5c29fbd7dd77735
-#: ../../flask/docs/patterns/sqlite3.rst:67
+#: ../../flask/docs/patterns/sqlite3.rst:63
 msgid ""
 "Now in each request handling function you can access `get_db()` to get "
 "the current open database connection.  To simplify working with SQLite, a"
@@ -126,7 +114,7 @@ msgstr ""
 "ができます::"
 
 # 8a105841d73a48af8a7c597aad480f45
-#: ../../flask/docs/patterns/sqlite3.rst:80
+#: ../../flask/docs/patterns/sqlite3.rst:76
 msgid ""
 "This will make the sqlite3 module return dicts for this database "
 "connection, which are much nicer to deal with. Even more simply, we could"
@@ -137,7 +125,7 @@ msgstr ""
 "の中に置けます::"
 
 # f77afd1be17b471eb5478ace1ba3ce64
-#: ../../flask/docs/patterns/sqlite3.rst:84
+#: ../../flask/docs/patterns/sqlite3.rst:80
 msgid ""
 "This would use Row objects rather than dicts to return the results of "
 "queries. These are ``namedtuple`` s, so we can access them either by "
@@ -152,7 +140,7 @@ msgstr ""
 "``sqlite3.Row``\ （オブジェクト）があると仮定します::"
 
 # 067fd1f78a94430ca8fac72009e4960e
-#: ../../flask/docs/patterns/sqlite3.rst:100
+#: ../../flask/docs/patterns/sqlite3.rst:96
 msgid ""
 "Additionally, it is a good idea to provide a query function that combines"
 " getting the cursor, executing and fetching the results::"
@@ -161,7 +149,7 @@ msgstr ""
 "を提供するのはよい考えです::"
 
 # d31290b12ca34e66b9121f9e5fd88b2e
-#: ../../flask/docs/patterns/sqlite3.rst:109
+#: ../../flask/docs/patterns/sqlite3.rst:105
 msgid ""
 "This handy little function, in combination with a row factory, makes "
 "working with the database much more pleasant than it is by just using the"
@@ -172,17 +160,17 @@ msgstr ""
 "楽しいものにします。"
 
 # e3c30141b2b14ddaad21797f3c3a8bf5
-#: ../../flask/docs/patterns/sqlite3.rst:113
+#: ../../flask/docs/patterns/sqlite3.rst:109
 msgid "Here is how you can use it::"
 msgstr "どのように使用できるかは、以下のとおりです::"
 
 # 9bc93873a60741dba30fe2a1611923d5
-#: ../../flask/docs/patterns/sqlite3.rst:118
+#: ../../flask/docs/patterns/sqlite3.rst:114
 msgid "Or if you just want a single result::"
 msgstr "もしくは、もし単一の結果が欲しい場合は::"
 
 # 6af71946bfe743e3b50fcf10fae6f958
-#: ../../flask/docs/patterns/sqlite3.rst:127
+#: ../../flask/docs/patterns/sqlite3.rst:123
 msgid ""
 "To pass variable parts to the SQL statement, use a question mark in the "
 "statement and pass in the arguments as a list.  Never directly add them "
@@ -197,12 +185,12 @@ msgstr ""
 "加えないでください。"
 
 # 91e9d8f7d2bf4362ba4a123825e4dce8
-#: ../../flask/docs/patterns/sqlite3.rst:134
+#: ../../flask/docs/patterns/sqlite3.rst:130
 msgid "Initial Schemas"
 msgstr "初期スキーマ（Initial Schemas）"
 
 # b7d3e13b7fd54bd89a62fca28bc4b578
-#: ../../flask/docs/patterns/sqlite3.rst:136
+#: ../../flask/docs/patterns/sqlite3.rst:132
 msgid ""
 "Relational databases need schemas, so applications often ship a "
 "`schema.sql` file that creates the database.  It's a good idea to provide"
@@ -215,6 +203,21 @@ msgstr ""
 "です。それは以下の関数で実行できます::"
 
 # fd64183ed2e847f3b2d9f178ee0c8557
-#: ../../flask/docs/patterns/sqlite3.rst:148
+#: ../../flask/docs/patterns/sqlite3.rst:144
 msgid "You can then create such a database from the Python shell:"
 msgstr "それから、そのようなデータベースをPythonシェルから作成できます::"
+
+# 5becd3b168524f448faffe52684b6776
+#~ msgid ""
+#~ "Note: if you use Flask 0.9 or "
+#~ "older you need to use "
+#~ "``flask._app_ctx_stack.top`` instead of ``g`` "
+#~ "as the :data:`flask.g` object was bound"
+#~ " to the request and not application"
+#~ " context."
+#~ msgstr ""
+#~ "もしFlask 0.9またはより古いものを使用している場合、\\ :data:`flask.g`\\ "
+#~ "オブジェクトはアプリケーションのコンテキストではなくリクエストに結びついていた（was bound to）ため、\\"
+#~ " ``g``\\ の代わりに\\ ``flask._app_ctx_stack.top``\\ "
+#~ "を使用する必要があります。"
+

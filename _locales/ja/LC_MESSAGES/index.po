@@ -6,16 +6,25 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 2.0.x\n"
+"Project-Id-Version: Flask 2.2.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-21 20:07+0900\n"
+"POT-Creation-Date: 2022-11-26 22:21+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: ../../flask/docs/index.rst:32
+msgid ""
+"Flask provides configuration and conventions, with sensible defaults, to "
+"get started. This section of the documentation explains the different "
+"parts of the Flask framework and how they can be used, customized, and "
+"extended. Beyond Flask itself, look for community-maintained extensions "
+"to add even more functionality."
+msgstr ""
 
 # d1ca75e0d0a44efbb622ea1c2fbcd81f
 #: ../../flask/docs/index.rst:4
@@ -68,24 +77,13 @@ msgstr "`Werkzeugドキュメント <https://werkzeug.palletsprojects.com/>`_"
 msgid "User's Guide"
 msgstr "ユーザーガイド"
 
-# 96722e7bd3764984912cc5571f70491c
-#: ../../flask/docs/index.rst:32
-msgid ""
-"This part of the documentation, which is mostly prose, begins with some "
-"background information about Flask, then focuses on step-by-step "
-"instructions for web development with Flask."
-msgstr ""
-"ドキュメントのこのパートでは、大部分は散文的な形になっていますが、"
-"Flaskの背景となる情報から始めて、それからFlaskを使ったweb開発を一歩ずつ"
-"示すことに注力します。"
-
 # 9e2cc0f71a9443bca78ac49ec8c7475a
-#: ../../flask/docs/index.rst:66
+#: ../../flask/docs/index.rst:65
 msgid "API Reference"
 msgstr "APIリファレンス"
 
 # 36f38a4f5938453392541b94af82bf24
-#: ../../flask/docs/index.rst:68
+#: ../../flask/docs/index.rst:67
 msgid ""
 "If you are looking for information on a specific function, class or "
 "method, this part of the documentation is for you."
@@ -94,17 +92,26 @@ msgstr ""
 "このパートが対応します。"
 
 # 065aae29f19444379a419a28bd1b4ef6
-#: ../../flask/docs/index.rst:78
+#: ../../flask/docs/index.rst:77
 msgid "Additional Notes"
 msgstr "追記事項"
-
-# 2d16c931c08340a8b715f74c280d5396
-#: ../../flask/docs/index.rst:80
-msgid "Design notes, legal information and changelog are here for the interested."
-msgstr ""
-"関心のある人向けの、設計上の注記、法律関連の情報、そしてchangelogはここです。"
 
 # daadbbf44d76476689aead07c277bc5d
 #~ msgid "`Jinja documentation <http://jinja.pocoo.org/docs>`_"
 #~ msgstr "`Jinjaドキュメント <http://jinja.pocoo.org/docs>`_"
+
+# 96722e7bd3764984912cc5571f70491c
+#~ msgid ""
+#~ "This part of the documentation, which"
+#~ " is mostly prose, begins with some"
+#~ " background information about Flask, then"
+#~ " focuses on step-by-step instructions"
+#~ " for web development with Flask."
+#~ msgstr "ドキュメントのこのパートでは、大部分は散文的な形になっていますが、Flaskの背景となる情報から始めて、それからFlaskを使ったweb開発を一歩ずつ示すことに注力します。"
+
+# 2d16c931c08340a8b715f74c280d5396
+#~ msgid ""
+#~ "Design notes, legal information and "
+#~ "changelog are here for the interested."
+#~ msgstr "関心のある人向けの、設計上の注記、法律関連の情報、そしてchangelogはここです。"
 

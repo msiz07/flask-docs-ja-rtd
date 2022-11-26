@@ -6,16 +6,55 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 2.0.x\n"
+"Project-Id-Version: Flask 2.2.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-21 20:07+0900\n"
+"POT-Creation-Date: 2022-11-26 22:21+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: ../../flask/docs/design.rst:134
+msgid "What does \"micro\" mean?"
+msgstr ""
+
+#: ../../flask/docs/design.rst:136
+msgid ""
+"“Micro” does not mean that your whole web application has to fit into a "
+"single Python file (although it certainly can), nor does it mean that "
+"Flask is lacking in functionality. The \"micro\" in microframework means "
+"Flask aims to keep the core simple but extensible. Flask won't make many "
+"decisions for you, such as what database to use. Those decisions that it "
+"does make, such as what templating engine to use, are easy to change.  "
+"Everything else is up to you, so that Flask can be everything you need "
+"and nothing you don't."
+msgstr ""
+
+#: ../../flask/docs/design.rst:144
+msgid ""
+"By default, Flask does not include a database abstraction layer, form "
+"validation or anything else where different libraries already exist that "
+"can handle that. Instead, Flask supports extensions to add such "
+"functionality to your application as if it was implemented in Flask "
+"itself. Numerous extensions provide database integration, form "
+"validation, upload handling, various open authentication technologies, "
+"and more. Flask may be \"micro\", but it's ready for production use on a "
+"variety of needs."
+msgstr ""
+
+#: ../../flask/docs/design.rst:220
+msgid ""
+"As your codebase grows, you are free to make the design decisions "
+"appropriate for your project.  Flask will continue to provide a very "
+"simple glue layer to the best that Python has to offer.  You can "
+"implement advanced patterns in SQLAlchemy or another database tool, "
+"introduce non-relational data persistence as appropriate, and take "
+"advantage of framework-agnostic tools built for WSGI, the Python web "
+"interface."
+msgstr ""
 
 # 1774de6c32a843828dce6466c3dd5a31
 #: ../../flask/docs/design.rst:2
@@ -205,13 +244,8 @@ msgid ""
 "extension could still depend on Jinja itself."
 msgstr ""
 
-# 8cdf909154ca4ad590c2519eb822e832
-#: ../../flask/docs/design.rst:134
-msgid "Micro with Dependencies"
-msgstr ""
-
 # 4f663ef143034d45bdf48d803ce91d02
-#: ../../flask/docs/design.rst:136
+#: ../../flask/docs/design.rst:152
 msgid ""
 "Why does Flask call itself a microframework and yet it depends on two "
 "libraries (namely Werkzeug and Jinja2).  Why shouldn't it?  If we look "
@@ -228,7 +262,7 @@ msgid ""
 msgstr ""
 
 # 1ddab90abee242feb4c5e68a66edbded
-#: ../../flask/docs/design.rst:149
+#: ../../flask/docs/design.rst:165
 msgid ""
 "Flask is a framework that takes advantage of the work already done by "
 "Werkzeug to properly interface WSGI (which can be a complex task at "
@@ -239,12 +273,12 @@ msgid ""
 msgstr ""
 
 # 035255cb06f4433ba0f8798dd740e1fb
-#: ../../flask/docs/design.rst:157
+#: ../../flask/docs/design.rst:173
 msgid "Thread Locals"
 msgstr ""
 
 # 9fc8b2c230004983832e0fb93dfac856
-#: ../../flask/docs/design.rst:159
+#: ../../flask/docs/design.rst:175
 msgid ""
 "Flask uses thread local objects (context local objects in fact, they "
 "support greenlet contexts as well) for request, session and an extra "
@@ -253,7 +287,7 @@ msgid ""
 msgstr ""
 
 # 9ebcf06b344f478b9eb72c2f27a5255c
-#: ../../flask/docs/design.rst:164
+#: ../../flask/docs/design.rst:180
 msgid ""
 "Yes it is usually not such a bright idea to use thread locals.  They "
 "cause troubles for servers that are not based on the concept of threads "
@@ -262,17 +296,11 @@ msgid ""
 " to make it quick and easy to write a traditional web application."
 msgstr ""
 
-#: ../../flask/docs/design.rst:170
-msgid ""
-"Also see the :doc:`/becomingbig` section of the documentation for some "
-"inspiration for larger applications based on Flask."
-msgstr ""
-
-#: ../../flask/docs/design.rst:175
+#: ../../flask/docs/design.rst:188
 msgid "Async/await and ASGI support"
 msgstr ""
 
-#: ../../flask/docs/design.rst:177
+#: ../../flask/docs/design.rst:190
 msgid ""
 "Flask supports ``async`` coroutines for view functions by executing the "
 "coroutine on a separate thread instead of using an event loop on the main"
@@ -283,7 +311,7 @@ msgid ""
 "of the threads."
 msgstr ""
 
-#: ../../flask/docs/design.rst:185
+#: ../../flask/docs/design.rst:198
 msgid ""
 "Due to how tied to WSGI Flask's code is, it's not clear if it's possible "
 "to make the ``Flask`` class support ASGI and WSGI at the same time. Work "
@@ -291,17 +319,17 @@ msgid ""
 "eventually enable support in Flask as well."
 msgstr ""
 
-#: ../../flask/docs/design.rst:190
+#: ../../flask/docs/design.rst:203
 msgid "See :doc:`/async-await` for more discussion."
 msgstr ""
 
 # efd812eae4a4464eabff7a86fbd3ae6c
-#: ../../flask/docs/design.rst:194
+#: ../../flask/docs/design.rst:207
 msgid "What Flask is, What Flask is Not"
 msgstr ""
 
 # 59296cd681734a79afbb485621942e5c
-#: ../../flask/docs/design.rst:196
+#: ../../flask/docs/design.rst:209
 msgid ""
 "Flask will never have a database layer.  It will not have a form library "
 "or anything else in that direction.  Flask itself just bridges to "
@@ -311,7 +339,7 @@ msgid ""
 msgstr ""
 
 # 7c8240d7746846c6a96e84f73d8a455c
-#: ../../flask/docs/design.rst:202
+#: ../../flask/docs/design.rst:215
 msgid ""
 "Why is this the case?  Because people have different preferences and "
 "requirements and Flask could not meet those if it would force any of this"
@@ -320,7 +348,7 @@ msgid ""
 msgstr ""
 
 # e899dfddd57841dcb8c0ed004b7e6850
-#: ../../flask/docs/design.rst:207
+#: ../../flask/docs/design.rst:227
 msgid ""
 "The idea of Flask is to build a good foundation for all applications. "
 "Everything else is up to you or extensions."
@@ -358,6 +386,17 @@ msgstr ""
 # cff6da80ff354071b9aed51381ffd12c
 #~ msgid ""
 #~ "Also see the :ref:`becomingbig` section "
+#~ "of the documentation for some "
+#~ "inspiration for larger applications based "
+#~ "on Flask."
+#~ msgstr ""
+
+# 8cdf909154ca4ad590c2519eb822e832
+#~ msgid "Micro with Dependencies"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Also see the :doc:`/becomingbig` section "
 #~ "of the documentation for some "
 #~ "inspiration for larger applications based "
 #~ "on Flask."

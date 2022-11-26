@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 2.0.x\n"
+"Project-Id-Version: Flask 2.2.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-20 18:38+0900\n"
+"POT-Creation-Date: 2022-11-26 22:21+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -118,7 +118,7 @@ msgstr ""
 #: ../../flask/src/flask/app.py:docstring of flask.scaffold.Scaffold.post:0
 #: ../../flask/src/flask/app.py:docstring of flask.app.Flask.process_response:0
 #: ../../flask/src/flask/app.py:docstring of flask.scaffold.Scaffold.put:0
-#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.raise_routing_exception:0
+#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.redirect:0
 #: ../../flask/src/flask/app.py:docstring of flask.app.Flask.register_blueprint:0
 #: ../../flask/src/flask/app.py:docstring of flask.scaffold.Scaffold.register_error_handler:0
 #: ../../flask/src/flask/app.py:docstring of flask.app.Flask.request_context:0
@@ -139,6 +139,7 @@ msgstr ""
 #: ../../flask/src/flask/app.py:docstring of flask.app.Flask.trap_http_exception:0
 #: ../../flask/src/flask/app.py:docstring of flask.app.Flask.update_template_context:0
 #: ../../flask/src/flask/app.py:docstring of flask.scaffold.Scaffold.url_defaults:0
+#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.url_for:0
 #: ../../flask/src/flask/app.py:docstring of flask.scaffold.Scaffold.url_value_preprocessor:0
 #: ../../flask/src/flask/app.py:docstring of flask.app.Flask.wsgi_app:0
 #: ../../flask/src/flask/blueprints.py:docstring of flask.blueprints.Blueprint:0
@@ -234,13 +235,12 @@ msgstr ""
 #: ../../flask/src/flask/ctx.py:docstring of flask.ctx._AppCtxGlobals.setdefault:0
 #: ../../flask/src/flask/ctx.py:docstring of flask.ctx.copy_current_request_context:0
 #: ../../flask/src/flask/helpers.py:docstring of flask.helpers.url_for:0
-#: ../../_venv/lib/site-packages/werkzeug/exceptions.py:docstring of werkzeug.exceptions.abort:0
-#: ../../_venv/lib/site-packages/werkzeug/utils.py:docstring of werkzeug.utils.redirect:0
+#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.abort:0
+#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.redirect:0
 #: ../../flask/src/flask/helpers.py:docstring of flask.helpers.make_response:0
 #: ../../flask/src/flask/ctx.py:docstring of flask.ctx.after_this_request:0
 #: ../../flask/src/flask/helpers.py:docstring of flask.helpers.send_file:0
 #: ../../flask/src/flask/helpers.py:docstring of flask.helpers.send_from_directory:0
-#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.safe_join:0
 #: ../../docstring of markupsafe._speedups.escape:0
 #: ../../_venv/lib/site-packages/markupsafe/__init__.py:docstring of markupsafe.Markup:0
 #: ../../_venv/lib/site-packages/markupsafe/__init__.py:docstring of markupsafe.Markup.escape:0
@@ -251,6 +251,17 @@ msgstr ""
 #: ../../flask/src/flask/json/__init__.py:docstring of flask.json.dump:0
 #: ../../flask/src/flask/json/__init__.py:docstring of flask.json.loads:0
 #: ../../flask/src/flask/json/__init__.py:docstring of flask.json.load:0
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.JSONProvider:0
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.JSONProvider.dumps:0
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.JSONProvider.dump:0
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.JSONProvider.loads:0
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.JSONProvider.load:0
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.JSONProvider.response:0
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.DefaultJSONProvider:0
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider._default:0
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.DefaultJSONProvider.dumps:0
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.DefaultJSONProvider.loads:0
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.DefaultJSONProvider.response:0
 #: ../../flask/src/flask/json/__init__.py:docstring of flask.json.JSONEncoder.default:0
 #: ../../flask/src/flask/json/tag.py:docstring of flask.json.tag.TaggedJSONSerializer.dumps:0
 #: ../../flask/src/flask/json/tag.py:docstring of flask.json.tag.TaggedJSONSerializer.loads:0
@@ -264,13 +275,15 @@ msgstr ""
 #: ../../flask/src/flask/json/tag.py:docstring of flask.json.tag.JSONTag.to_python:0
 #: ../../flask/src/flask/templating.py:docstring of flask.templating.render_template:0
 #: ../../flask/src/flask/templating.py:docstring of flask.templating.render_template_string:0
+#: ../../flask/src/flask/templating.py:docstring of flask.templating.stream_template:0
+#: ../../flask/src/flask/templating.py:docstring of flask.templating.stream_template_string:0
 #: ../../flask/src/flask/helpers.py:docstring of flask.helpers.get_template_attribute:0
 #: ../../flask/src/flask/config.py:docstring of flask.config.Config:0
 #: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_envvar:0
 #: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_file:0
-#: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_json:0
 #: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_mapping:0
 #: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_object:0
+#: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_prefixed_env:0
 #: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_pyfile:0
 #: ../../flask/src/flask/config.py:docstring of flask.config.Config.get_namespace:0
 #: ../../flask/src/flask/helpers.py:docstring of flask.helpers.stream_with_context:0
@@ -283,8 +296,10 @@ msgstr ""
 #: ../../flask/src/flask/views.py:docstring of flask.views.View.as_view:0
 #: ../../flask/src/flask/views.py:docstring of flask.views.MethodView.dispatch_request:0
 #: ../../flask/src/flask/cli.py:docstring of flask.cli.FlaskGroup:0
-#: ../../flask/src/flask/cli.py:docstring of flask.cli.FlaskGroup.main:0
+#: ../../flask/src/flask/cli.py:docstring of flask.cli.FlaskGroup.make_context:0
+#: ../../flask/src/flask/cli.py:docstring of flask.cli.FlaskGroup.parse_args:0
 #: ../../flask/src/flask/cli.py:docstring of flask.cli.AppGroup:0
+#: ../../flask/src/flask/cli.py:docstring of flask.cli.ScriptInfo:0
 #: ../../flask/src/flask/cli.py:docstring of flask.cli.load_dotenv:0
 #: ../../flask/docs/api.rst:0
 #: ../../docstring of flask.cli.run_command:0
@@ -332,6 +347,14 @@ msgstr ""
 msgid "The path to the root of the application files. This should only be set manually when it can't be detected automatically, such as for namespace packages."
 msgstr ""
 
+#: ../../docstring of flask.Flask.aborter:1
+msgid "An instance of :attr:`aborter_class` created by :meth:`make_aborter`. This is called by :func:`flask.abort` to raise HTTP errors, and can be called directly as well."
+msgstr ""
+
+#: ../../docstring of flask.Flask.aborter:5
+msgid "Moved from ``flask.abort``, which calls this object."
+msgstr ""
+
 #: ../../flask/src/flask/app.py:docstring of flask.app.Flask.add_template_filter:1
 msgid "Register a custom template filter.  Works exactly like the :meth:`template_filter` decorator."
 msgstr ""
@@ -375,6 +398,7 @@ msgstr ""
 #: ../../flask/src/flask/app.py:docstring of flask.app.Flask.inject_url_defaults:0
 #: ../../flask/src/flask/app.py:docstring of flask.app.Flask.iter_blueprints:0
 #: ../../flask/src/flask/app.py:docstring of flask.app.Flask.log_exception:0
+#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.make_aborter:0
 #: ../../flask/src/flask/app.py:docstring of flask.app.Flask.make_config:0
 #: ../../flask/src/flask/app.py:docstring of flask.app.Flask.make_default_options_response:0
 #: ../../flask/src/flask/app.py:docstring of flask.app.Flask.make_response:0
@@ -386,7 +410,7 @@ msgstr ""
 #: ../../flask/src/flask/app.py:docstring of flask.app.Flask.preprocess_request:0
 #: ../../flask/src/flask/app.py:docstring of flask.app.Flask.process_response:0
 #: ../../flask/src/flask/app.py:docstring of flask.scaffold.Scaffold.put:0
-#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.raise_routing_exception:0
+#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.redirect:0
 #: ../../flask/src/flask/app.py:docstring of flask.app.Flask.register_blueprint:0
 #: ../../flask/src/flask/app.py:docstring of flask.scaffold.Scaffold.register_error_handler:0
 #: ../../flask/src/flask/app.py:docstring of flask.app.Flask.request_context:0
@@ -405,9 +429,9 @@ msgstr ""
 #: ../../flask/src/flask/app.py:docstring of flask.app.Flask.test_client:0
 #: ../../flask/src/flask/app.py:docstring of flask.app.Flask.test_request_context:0
 #: ../../flask/src/flask/app.py:docstring of flask.app.Flask.trap_http_exception:0
-#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.try_trigger_before_first_request_functions:0
 #: ../../flask/src/flask/app.py:docstring of flask.app.Flask.update_template_context:0
 #: ../../flask/src/flask/app.py:docstring of flask.scaffold.Scaffold.url_defaults:0
+#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.url_for:0
 #: ../../flask/src/flask/app.py:docstring of flask.scaffold.Scaffold.url_value_preprocessor:0
 #: ../../flask/src/flask/app.py:docstring of flask.app.Flask.wsgi_app:0
 #: ../../flask/src/flask/blueprints.py:docstring of flask.blueprints.Blueprint.add_app_template_filter:0
@@ -515,12 +539,12 @@ msgstr ""
 #: ../../flask/src/flask/ctx.py:docstring of flask.ctx.copy_current_request_context:0
 #: ../../flask/src/flask/ctx.py:docstring of flask.ctx.has_app_context:0
 #: ../../flask/src/flask/helpers.py:docstring of flask.helpers.url_for:0
-#: ../../_venv/lib/site-packages/werkzeug/exceptions.py:docstring of werkzeug.exceptions.abort:0
-#: ../../_venv/lib/site-packages/werkzeug/utils.py:docstring of werkzeug.utils.redirect:0
+#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.abort:0
+#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.redirect:0
 #: ../../flask/src/flask/helpers.py:docstring of flask.helpers.make_response:0
 #: ../../flask/src/flask/ctx.py:docstring of flask.ctx.after_this_request:0
+#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.send_file:0
 #: ../../flask/src/flask/helpers.py:docstring of flask.helpers.send_from_directory:0
-#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.safe_join:0
 #: ../../_venv/lib/site-packages/markupsafe/__init__.py:docstring of markupsafe.Markup:0
 #: ../../_venv/lib/site-packages/markupsafe/__init__.py:docstring of markupsafe.Markup.escape:0
 #: ../../_venv/lib/site-packages/markupsafe/__init__.py:docstring of markupsafe.Markup.striptags:0
@@ -532,7 +556,20 @@ msgstr ""
 #: ../../flask/src/flask/json/__init__.py:docstring of flask.json.dump:0
 #: ../../flask/src/flask/json/__init__.py:docstring of flask.json.loads:0
 #: ../../flask/src/flask/json/__init__.py:docstring of flask.json.load:0
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.JSONProvider:0
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.JSONProvider.dumps:0
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.JSONProvider.dump:0
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.JSONProvider.loads:0
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.JSONProvider.load:0
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.JSONProvider.response:0
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.DefaultJSONProvider:0
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider._default:0
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.DefaultJSONProvider.dumps:0
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.DefaultJSONProvider.loads:0
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.DefaultJSONProvider.response:0
+#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.JSONEncoder:0
 #: ../../flask/src/flask/json/__init__.py:docstring of flask.json.JSONEncoder.default:0
+#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.JSONDecoder:0
 #: ../../flask/src/flask/json/tag.py:docstring of flask.json.tag.TaggedJSONSerializer:0
 #: ../../flask/src/flask/json/tag.py:docstring of flask.json.tag.TaggedJSONSerializer.dumps:0
 #: ../../flask/src/flask/json/tag.py:docstring of flask.json.tag.TaggedJSONSerializer.loads:0
@@ -546,13 +583,15 @@ msgstr ""
 #: ../../flask/src/flask/json/tag.py:docstring of flask.json.tag.JSONTag.to_python:0
 #: ../../flask/src/flask/templating.py:docstring of flask.templating.render_template:0
 #: ../../flask/src/flask/templating.py:docstring of flask.templating.render_template_string:0
+#: ../../flask/src/flask/templating.py:docstring of flask.templating.stream_template:0
+#: ../../flask/src/flask/templating.py:docstring of flask.templating.stream_template_string:0
 #: ../../flask/src/flask/helpers.py:docstring of flask.helpers.get_template_attribute:0
 #: ../../flask/src/flask/config.py:docstring of flask.config.Config:0
 #: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_envvar:0
 #: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_file:0
-#: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_json:0
 #: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_mapping:0
 #: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_object:0
+#: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_prefixed_env:0
 #: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_pyfile:0
 #: ../../flask/src/flask/config.py:docstring of flask.config.Config.get_namespace:0
 #: ../../flask/src/flask/helpers.py:docstring of flask.helpers.stream_with_context:0
@@ -560,7 +599,6 @@ msgstr ""
 #: ../../flask/src/flask/ctx.py:docstring of flask.ctx.RequestContext.copy:0
 #: ../../flask/src/flask/ctx.py:docstring of flask.ctx.RequestContext.match_request:0
 #: ../../flask/src/flask/ctx.py:docstring of flask.ctx.RequestContext.pop:0
-#: ../../flask/src/flask/ctx.py:docstring of flask.ctx.RequestContext.push:0
 #: ../../flask/src/flask/ctx.py:docstring of flask.ctx.AppContext:0
 #: ../../flask/src/flask/ctx.py:docstring of flask.ctx.AppContext.pop:0
 #: ../../flask/src/flask/ctx.py:docstring of flask.ctx.AppContext.push:0
@@ -569,7 +607,13 @@ msgstr ""
 #: ../../flask/src/flask/views.py:docstring of flask.views.View.as_view:0
 #: ../../flask/src/flask/views.py:docstring of flask.views.View.dispatch_request:0
 #: ../../flask/src/flask/views.py:docstring of flask.views.MethodView.dispatch_request:0
+#: ../../flask/src/flask/cli.py:docstring of flask.cli.FlaskGroup:0
+#: ../../flask/src/flask/cli.py:docstring of flask.cli.FlaskGroup.make_context:0
+#: ../../flask/src/flask/cli.py:docstring of flask.cli.FlaskGroup.parse_args:0
 #: ../../flask/src/flask/cli.py:docstring of flask.cli.AppGroup:0
+#: ../../flask/src/flask/cli.py:docstring of flask.cli.ScriptInfo:0
+#: ../../flask/src/flask/cli.py:docstring of flask.cli.ScriptInfo.load_app:0
+#: ../../flask/src/flask/cli.py:docstring of flask.cli.load_dotenv:0
 #: ../../flask/docs/api.rst:0
 #: ../../docstring of flask.cli.run_command:0
 #: ../../docstring of flask.cli.shell_command:0
@@ -722,6 +766,12 @@ msgstr ""
 msgid "The function will be called without any arguments and its return value is ignored."
 msgstr ""
 
+#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.before_first_request:7
+#: ../../docstring of flask.Flask.before_first_request_funcs:5
+#: ../../flask/src/flask/blueprints.py:docstring of flask.blueprints.Blueprint.before_app_first_request:4
+msgid "Will be removed in Flask 2.3. Run setup code when creating the application instead."
+msgstr ""
+
 #: ../../docstring of flask.Flask.before_first_request_funcs:1
 msgid "A list of functions that will be called at the beginning of the first request to this instance. To register a function, use the :meth:`before_first_request` decorator."
 msgstr ""
@@ -798,15 +848,15 @@ msgid "This can now also be called without a request object when the URL adapter
 msgstr ""
 
 #: ../../flask/src/flask/app.py:docstring of flask.Flask.debug:1
-msgid "Whether debug mode is enabled. When using ``flask run`` to start the development server, an interactive debugger will be shown for unhandled exceptions, and the server will be reloaded when code changes. This maps to the :data:`DEBUG` config key. This is enabled when :attr:`env` is ``'development'`` and is overridden by the ``FLASK_DEBUG`` environment variable. It may not behave as expected if set in code."
+msgid "Whether debug mode is enabled. When using ``flask run`` to start the development server, an interactive debugger will be shown for unhandled exceptions, and the server will be reloaded when code changes. This maps to the :data:`DEBUG` config key. It may not behave as expected if set late."
 msgstr ""
 
-#: ../../flask/src/flask/app.py:docstring of flask.Flask.debug:9
+#: ../../flask/src/flask/app.py:docstring of flask.Flask.debug:6
 msgid "**Do not enable debug mode when deploying in production.**"
 msgstr ""
 
-#: ../../flask/src/flask/app.py:docstring of flask.Flask.debug:11
-msgid "Default: ``True`` if :attr:`env` is ``'development'``, or ``False`` otherwise."
+#: ../../flask/src/flask/app.py:docstring of flask.Flask.debug:8
+msgid "Default: ``False``"
 msgstr ""
 
 #: ../../docstring of flask.Flask.default_config:1
@@ -880,21 +930,26 @@ msgstr ""
 msgid "Override this method to change how the app runs async views."
 msgstr ""
 
-#: ../../docstring of flask.Flask.env:1
-msgid "What environment the app is running in. Flask and extensions may enable behaviors based on the environment, such as enabling debug mode. This maps to the :data:`ENV` config key. This is set by the :envvar:`FLASK_ENV` environment variable and may not behave as expected if set in code."
+#: ../../flask/src/flask/app.py:docstring of flask.Flask.env:1
+msgid "What environment the app is running in. This maps to the :data:`ENV` config key."
 msgstr ""
 
-#: ../../docstring of flask.Flask.env:7
+#: ../../flask/src/flask/app.py:docstring of flask.Flask.env:4
 msgid "**Do not enable development when deploying in production.**"
 msgstr ""
 
-#: ../../docstring of flask.Flask.env:9
+#: ../../flask/src/flask/app.py:docstring of flask.Flask.env:6
 msgid "Default: ``'production'``"
+msgstr ""
+
+#: ../../flask/src/flask/app.py:docstring of flask.Flask.env:8
+#: ../../flask/src/flask/app.py:docstring of flask.Flask.propagate_exceptions:4
+msgid "Will be removed in Flask 2.3."
 msgstr ""
 
 #: ../../docstring of flask.Flask.error_handler_spec:1
 #: ../../docstring of flask.Blueprint.error_handler_spec:1
-msgid "A data structure of registered error handlers, in the format ``{scope: {code: {class: handler}}}```. The ``scope`` key is the name of a blueprint the handlers are active for, or ``None`` for all requests. The ``code`` key is the HTTP status code for ``HTTPException``, or ``None`` for other exceptions. The innermost dictionary maps exception classes to handler functions."
+msgid "A data structure of registered error handlers, in the format ``{scope: {code: {class: handler}}}``. The ``scope`` key is the name of a blueprint the handlers are active for, or ``None`` for all requests. The ``code`` key is the HTTP status code for ``HTTPException``, or ``None`` for other exceptions. The innermost dictionary maps exception classes to handler functions."
 msgstr ""
 
 #: ../../docstring of flask.Flask.error_handler_spec:9
@@ -949,8 +1004,6 @@ msgid "Because this means that it might be called as a result of a failure a spe
 msgstr ""
 
 #: ../../flask/src/flask/app.py:docstring of flask.app.Flask.finalize_request:0
-#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.raise_routing_exception:0
-#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.try_trigger_before_first_request_functions:0
 msgid "internal"
 msgstr ""
 
@@ -1019,7 +1072,23 @@ msgid "Exceptions are looked up by code *and* by MRO, so ``HTTPException`` subcl
 msgstr ""
 
 #: ../../flask/src/flask/app.py:docstring of flask.app.Flask.handle_url_build_error:1
-msgid "Handle :class:`~werkzeug.routing.BuildError` on :meth:`url_for`."
+msgid "Called by :meth:`.url_for` if a :exc:`~werkzeug.routing.BuildError` was raised. If this returns a value, it will be returned by ``url_for``, otherwise the error will be re-raised."
+msgstr ""
+
+#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.handle_url_build_error:6
+msgid "Each function in :attr:`url_build_error_handlers` is called with ``error``, ``endpoint`` and ``values``. If a function returns ``None`` or raises a ``BuildError``, it is skipped. Otherwise, its return value is returned by ``url_for``."
+msgstr ""
+
+#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.handle_url_build_error:11
+msgid "The active ``BuildError`` being handled."
+msgstr ""
+
+#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.handle_url_build_error:12
+msgid "The endpoint being built."
+msgstr ""
+
+#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.handle_url_build_error:13
+msgid "The keyword arguments passed to ``url_for``."
 msgstr ""
 
 #: ../../flask/src/flask/app.py:docstring of flask.app.Flask.handle_user_exception:1
@@ -1073,6 +1142,33 @@ msgstr ""
 msgid "This is a ``dict`` instead of an ``ImmutableDict`` to allow easier configuration."
 msgstr ""
 
+#: ../../docstring of flask.Flask.json:1
+msgid "Provides access to JSON methods. Functions in ``flask.json`` will call methods on this provider when the application context is active. Used for handling JSON requests and responses."
+msgstr ""
+
+#: ../../docstring of flask.Flask.json:5
+msgid "An instance of :attr:`json_provider_class`. Can be customized by changing that attribute on a subclass, or by assigning to this attribute afterwards."
+msgstr ""
+
+#: ../../docstring of flask.Flask.json:9
+msgid "The default, :class:`~flask.json.provider.DefaultJSONProvider`, uses Python's built-in :mod:`json` library. A different provider can use a different JSON library."
+msgstr ""
+
+#: ../../flask/src/flask/app.py:docstring of flask.Flask.json_decoder:1
+msgid "The JSON decoder class to use. Defaults to :class:`~flask.json.JSONDecoder`."
+msgstr ""
+
+#: ../../flask/src/flask/app.py:docstring of flask.Flask.json_decoder:4
+#: ../../flask/src/flask/app.py:docstring of flask.Flask.json_encoder:4
+#: ../../flask/src/flask/blueprints.py:docstring of flask.Blueprint.json_decoder:3
+#: ../../flask/src/flask/blueprints.py:docstring of flask.Blueprint.json_encoder:3
+msgid "Will be removed in Flask 2.3. Customize :attr:`json_provider_class` instead."
+msgstr ""
+
+#: ../../flask/src/flask/app.py:docstring of flask.Flask.json_encoder:1
+msgid "The JSON encoder class to use. Defaults to :class:`~flask.json.JSONEncoder`."
+msgstr ""
+
 #: ../../flask/src/flask/app.py:docstring of flask.app.Flask.log_exception:1
 msgid "Logs an exception.  This is called by :meth:`handle_exception` if debugging is disabled and right before the handler is called. The default implementation logs the exception as error on the :attr:`logger`."
 msgstr ""
@@ -1097,6 +1193,14 @@ msgstr ""
 msgid "Behavior was simplified. The logger is always named ``\"flask.app\"``. The level is only set during configuration, it doesn't check ``app.debug`` each time. Only one format is used, not different ones depending on ``app.debug``. No handlers are removed, and a handler is only added if no handlers are already configured."
 msgstr ""
 
+#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.make_aborter:1
+msgid "Create the object to assign to :attr:`aborter`. That object is called by :func:`flask.abort` to raise HTTP errors, and can be called directly as well."
+msgstr ""
+
+#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.make_aborter:5
+msgid "By default, this creates an instance of :attr:`aborter_class`, which defaults to :class:`werkzeug.exceptions.Aborter`."
+msgstr ""
+
 #: ../../flask/src/flask/app.py:docstring of flask.app.Flask.make_config:1
 msgid "Used to create the config attribute by the Flask constructor. The `instance_relative` parameter is passed in from the constructor of Flask (there named `instance_relative_config`) and indicates if the config should be relative to the instance path or the root path of the application."
 msgstr ""
@@ -1110,7 +1214,7 @@ msgid "Convert the return value from a view function to an instance of :attr:`re
 msgstr ""
 
 #: ../../flask/src/flask/app.py:docstring of flask.app.Flask.make_response:4
-msgid "the return value from the view function. The view function must return a response. Returning ``None``, or the view ending without returning, is not allowed. The following types are allowed for ``view_rv``:  ``str``     A response object is created with the string encoded to UTF-8     as the body.  ``bytes``     A response object is created with the bytes as the body.  ``dict``     A dictionary that will be jsonify'd before being returned.  ``tuple``     Either ``(body, status, headers)``, ``(body, status)``, or     ``(body, headers)``, where ``body`` is any of the other types     allowed here, ``status`` is a string or an integer, and     ``headers`` is a dictionary or a list of ``(key, value)``     tuples. If ``body`` is a :attr:`response_class` instance,     ``status`` overwrites the exiting value and ``headers`` are     extended.  :attr:`response_class`     The object is returned unchanged.  other :class:`~werkzeug.wrappers.Response` class     The object is coerced to :attr:`response_class`.  :func:`callable`     The function is called as a WSGI application. The result is     used to create a response object."
+msgid "the return value from the view function. The view function must return a response. Returning ``None``, or the view ending without returning, is not allowed. The following types are allowed for ``view_rv``:  ``str``     A response object is created with the string encoded to UTF-8     as the body.  ``bytes``     A response object is created with the bytes as the body.  ``dict``     A dictionary that will be jsonify'd before being returned.  ``list``     A list that will be jsonify'd before being returned.  ``generator`` or ``iterator``     A generator that returns ``str`` or ``bytes`` to be     streamed as the response.  ``tuple``     Either ``(body, status, headers)``, ``(body, status)``, or     ``(body, headers)``, where ``body`` is any of the other types     allowed here, ``status`` is a string or an integer, and     ``headers`` is a dictionary or a list of ``(key, value)``     tuples. If ``body`` is a :attr:`response_class` instance,     ``status`` overwrites the exiting value and ``headers`` are     extended.  :attr:`response_class`     The object is returned unchanged.  other :class:`~werkzeug.wrappers.Response` class     The object is coerced to :attr:`response_class`.  :func:`callable`     The function is called as a WSGI application. The result is     used to create a response object."
 msgstr ""
 
 #: ../../flask/src/flask/app.py:docstring of flask.app.Flask.make_response:4
@@ -1141,39 +1245,63 @@ msgstr ""
 msgid "A dictionary that will be jsonify'd before being returned."
 msgstr ""
 
-#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.make_response:26
-msgid "``tuple``"
+#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.make_response:20
+msgid "``list``"
 msgstr ""
 
 #: ../../flask/src/flask/app.py:docstring of flask.app.Flask.make_response:20
+msgid "A list that will be jsonify'd before being returned."
+msgstr ""
+
+#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.make_response:24
+msgid "``generator`` or ``iterator``"
+msgstr ""
+
+#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.make_response:23
+msgid "A generator that returns ``str`` or ``bytes`` to be streamed as the response."
+msgstr ""
+
+#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.make_response:33
+msgid "``tuple``"
+msgstr ""
+
+#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.make_response:27
 msgid "Either ``(body, status, headers)``, ``(body, status)``, or ``(body, headers)``, where ``body`` is any of the other types allowed here, ``status`` is a string or an integer, and ``headers`` is a dictionary or a list of ``(key, value)`` tuples. If ``body`` is a :attr:`response_class` instance, ``status`` overwrites the exiting value and ``headers`` are extended."
 msgstr ""
 
-#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.make_response:29
+#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.make_response:36
 msgid ":attr:`response_class`"
 msgstr ""
 
-#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.make_response:29
+#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.make_response:36
 msgid "The object is returned unchanged."
 msgstr ""
 
-#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.make_response:32
+#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.make_response:39
 msgid "other :class:`~werkzeug.wrappers.Response` class"
 msgstr ""
 
-#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.make_response:32
+#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.make_response:39
 msgid "The object is coerced to :attr:`response_class`."
 msgstr ""
 
-#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.make_response:36
+#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.make_response:43
 msgid ":func:`callable`"
 msgstr ""
 
-#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.make_response:35
+#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.make_response:42
 msgid "The function is called as a WSGI application. The result is used to create a response object."
 msgstr ""
 
-#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.make_response:38
+#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.make_response:45
+msgid "A generator will be converted to a streaming response. A list will be converted to a JSON response."
+msgstr ""
+
+#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.make_response:49
+msgid "A dict will be converted to a JSON response."
+msgstr ""
+
+#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.make_response:52
 msgid "Previously a tuple was interpreted as the arguments for the response object."
 msgstr ""
 
@@ -1243,10 +1371,6 @@ msgstr ""
 msgid "If any :meth:`before_request` handler returns a non-None value, the value is handled as if it was the return value from the view, and further request handling is stopped."
 msgstr ""
 
-#: ../../flask/src/flask/app.py:docstring of flask.Flask.preserve_context_on_exception:1
-msgid "Returns the value of the ``PRESERVE_CONTEXT_ON_EXCEPTION`` configuration value in case it's set, otherwise a sensible default is returned."
-msgstr ""
-
 #: ../../flask/src/flask/app.py:docstring of flask.app.Flask.process_response:1
 msgid "Can be overridden in order to modify the response object before it's sent to the WSGI server.  By default this will call all the :meth:`after_request` decorated functions."
 msgstr ""
@@ -1268,11 +1392,9 @@ msgstr ""
 #: ../../flask/src/flask/wrappers.py:docstring of werkzeug.wrappers.response.Response.get_wsgi_headers:0
 #: ../../flask/src/flask/wrappers.py:docstring of werkzeug.wrappers.response.Response.get_wsgi_response:0
 #: ../../flask/src/flask/testing.py:docstring of flask.testing.FlaskCliRunner.invoke:0
-#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.safe_join:0
 #: ../../docstring of markupsafe._speedups.escape:0
 #: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_envvar:0
 #: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_file:0
-#: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_json:0
 #: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_pyfile:0
 #: ../../flask/src/flask/cli.py:docstring of flask.cli.load_dotenv:0
 msgid "Returns"
@@ -1291,8 +1413,27 @@ msgstr ""
 msgid "Shortcut for :meth:`route` with ``methods=[\"PUT\"]``."
 msgstr ""
 
-#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.raise_routing_exception:1
-msgid "Exceptions that are recording during routing are reraised with this method.  During debug we are not reraising redirect requests for non ``GET``, ``HEAD``, or ``OPTIONS`` requests and we're raising a different error instead to help debug situations."
+#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.redirect:1
+#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.redirect:1
+msgid "Create a redirect response object."
+msgstr ""
+
+#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.redirect:3
+msgid "This is called by :func:`flask.redirect`, and can be called directly as well."
+msgstr ""
+
+#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.redirect:6
+#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.redirect:7
+msgid "The URL to redirect to."
+msgstr ""
+
+#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.redirect:7
+#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.redirect:8
+msgid "The status code for the redirect."
+msgstr ""
+
+#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.redirect:9
+msgid "Moved from ``flask.redirect``, which calls this method."
 msgstr ""
 
 #: ../../flask/src/flask/app.py:docstring of flask.app.Flask.register_blueprint:1
@@ -1421,19 +1562,19 @@ msgid "the options to be forwarded to the underlying Werkzeug server. See :func:
 msgstr ""
 
 #: ../../flask/src/flask/app.py:docstring of flask.app.Flask.run:44
-#: ../../flask/src/flask/cli.py:docstring of flask.cli.FlaskGroup:18
+#: ../../flask/src/flask/cli.py:docstring of flask.cli.FlaskGroup:24
 msgid "If installed, python-dotenv will be used to load environment variables from :file:`.env` and :file:`.flaskenv` files."
 msgstr ""
 
 #: ../../flask/src/flask/app.py:docstring of flask.app.Flask.run:48
-msgid "If set, the :envvar:`FLASK_ENV` and :envvar:`FLASK_DEBUG` environment variables will override :attr:`env` and :attr:`debug`."
+msgid "The :envvar:`FLASK_DEBUG` environment variable will override :attr:`debug`."
 msgstr ""
 
-#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.run:52
+#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.run:50
 msgid "Threaded mode is enabled by default."
 msgstr ""
 
-#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.run:54
+#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.run:52
 msgid "The default port is now picked from the ``SERVER_NAME`` variable."
 msgstr ""
 
@@ -1449,15 +1590,15 @@ msgstr ""
 msgid "Returns ``True`` if autoescaping should be active for the given template name. If no template name is given, returns `True`."
 msgstr ""
 
-#: ../../docstring of flask.Flask.send_file_max_age_default:1
-msgid "A :class:`~datetime.timedelta` or number of seconds which is used as the default ``max_age`` for :func:`send_file`. The default is ``None``, which tells the browser to use conditional requests instead of a timed cache."
+#: ../../flask/src/flask/app.py:docstring of flask.Flask.send_file_max_age_default:1
+msgid "The default value for ``max_age`` for :func:`~flask.send_file`. The default is ``None``, which tells the browser to use conditional requests instead of a timed cache."
 msgstr ""
 
-#: ../../docstring of flask.Flask.send_file_max_age_default:6
-msgid "Configured with the :data:`SEND_FILE_MAX_AGE_DEFAULT` configuration key."
+#: ../../flask/src/flask/app.py:docstring of flask.Flask.send_file_max_age_default:5
+msgid "Will be removed in Flask 2.3. Use ``app.config[\"SEND_FILE_MAX_AGE_DEFAULT\"]`` instead."
 msgstr ""
 
-#: ../../docstring of flask.Flask.send_file_max_age_default:9
+#: ../../flask/src/flask/app.py:docstring of flask.Flask.send_file_max_age_default:9
 msgid "Defaults to ``None`` instead of 12 hours."
 msgstr ""
 
@@ -1466,12 +1607,12 @@ msgstr ""
 msgid "The view function used to serve files from :attr:`static_folder`. A route is automatically registered for this view at :attr:`static_url_path` if :attr:`static_folder` is set."
 msgstr ""
 
-#: ../../docstring of flask.Flask.session_cookie_name:1
-msgid "The secure cookie uses this for the name of the session cookie."
+#: ../../flask/src/flask/app.py:docstring of flask.Flask.session_cookie_name:1
+msgid "The name of the cookie set by the session interface."
 msgstr ""
 
-#: ../../docstring of flask.Flask.session_cookie_name:3
-msgid "This attribute can also be configured from the config with the ``SESSION_COOKIE_NAME`` configuration key.  Defaults to ``'session'``"
+#: ../../flask/src/flask/app.py:docstring of flask.Flask.session_cookie_name:3
+msgid "Will be removed in Flask 2.3. Use ``app.config[\"SESSION_COOKIE_NAME\"]`` instead."
 msgstr ""
 
 #: ../../docstring of flask.Flask.session_interface:1
@@ -1506,32 +1647,28 @@ msgid "If it was not configured during init, it is derived from :attr:`static_fo
 msgstr ""
 
 #: ../../flask/src/flask/app.py:docstring of flask.app.Flask.teardown_appcontext:1
-msgid "Registers a function to be called when the application context ends.  These functions are typically also called when the request context is popped."
+msgid "Registers a function to be called when the application context is popped. The application context is typically popped after the request context for each request, at the end of CLI commands, or after a manually pushed context ends."
 msgstr ""
 
-#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.teardown_appcontext:5
-#: ../../flask/src/flask/app.py:docstring of flask.scaffold.Scaffold.teardown_request:6
-#: ../../flask/src/flask/blueprints.py:docstring of flask.scaffold.Scaffold.teardown_request:6
-#: ../../flask/src/flask/ctx.py:docstring of flask.ctx.copy_current_request_context:7
-#: ../../flask/src/flask/ctx.py:docstring of flask.ctx.after_this_request:5
-msgid "Example::"
-msgstr ""
-
-#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.teardown_appcontext:12
-msgid "When ``ctx.pop()`` is executed in the above example, the teardown functions are called just before the app context moves from the stack of active contexts.  This becomes relevant if you are using such constructs in tests."
+#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.teardown_appcontext:11
+msgid "When the ``with`` block exits (or ``ctx.pop()`` is called), the teardown functions are called just before the app context is made inactive. Since a request context typically also manages an application context it would also be called when you pop a request context."
 msgstr ""
 
 #: ../../flask/src/flask/app.py:docstring of flask.app.Flask.teardown_appcontext:17
-msgid "Since a request context typically also manages an application context it would also be called when you pop a request context."
-msgstr ""
-
-#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.teardown_appcontext:20
+#: ../../flask/src/flask/app.py:docstring of flask.scaffold.Scaffold.teardown_request:14
+#: ../../flask/src/flask/blueprints.py:docstring of flask.scaffold.Scaffold.teardown_request:14
 msgid "When a teardown function was called because of an unhandled exception it will be passed an error object. If an :meth:`errorhandler` is registered, it will handle the exception and the teardown will not receive it."
 msgstr ""
 
-#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.teardown_appcontext:25
-#: ../../flask/src/flask/app.py:docstring of flask.scaffold.Scaffold.teardown_request:26
-#: ../../flask/src/flask/blueprints.py:docstring of flask.scaffold.Scaffold.teardown_request:26
+#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.teardown_appcontext:22
+#: ../../flask/src/flask/app.py:docstring of flask.scaffold.Scaffold.teardown_request:19
+#: ../../flask/src/flask/blueprints.py:docstring of flask.scaffold.Scaffold.teardown_request:19
+msgid "Teardown functions must avoid raising exceptions. If they execute code that might fail they must surround that code with a ``try``/``except`` block and log any errors."
+msgstr ""
+
+#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.teardown_appcontext:26
+#: ../../flask/src/flask/app.py:docstring of flask.scaffold.Scaffold.teardown_request:23
+#: ../../flask/src/flask/blueprints.py:docstring of flask.scaffold.Scaffold.teardown_request:23
 msgid "The return values of teardown functions are ignored."
 msgstr ""
 
@@ -1541,32 +1678,12 @@ msgstr ""
 
 #: ../../flask/src/flask/app.py:docstring of flask.scaffold.Scaffold.teardown_request:1
 #: ../../flask/src/flask/blueprints.py:docstring of flask.scaffold.Scaffold.teardown_request:1
-msgid "Register a function to be run at the end of each request, regardless of whether there was an exception or not.  These functions are executed when the request context is popped, even if not an actual request was performed."
+msgid "Register a function to be called when the request context is popped. Typically this happens at the end of each request, but contexts may be pushed manually as well during testing."
 msgstr ""
 
-#: ../../flask/src/flask/app.py:docstring of flask.scaffold.Scaffold.teardown_request:13
-#: ../../flask/src/flask/blueprints.py:docstring of flask.scaffold.Scaffold.teardown_request:13
-msgid "When ``ctx.pop()`` is executed in the above example, the teardown functions are called just before the request context moves from the stack of active contexts.  This becomes relevant if you are using such constructs in tests."
-msgstr ""
-
-#: ../../flask/src/flask/app.py:docstring of flask.scaffold.Scaffold.teardown_request:18
-#: ../../flask/src/flask/blueprints.py:docstring of flask.scaffold.Scaffold.teardown_request:18
-msgid "Teardown functions must avoid raising exceptions, since they . If they execute code that might fail they will have to surround the execution of these code by try/except statements and log occurring errors."
-msgstr ""
-
-#: ../../flask/src/flask/app.py:docstring of flask.scaffold.Scaffold.teardown_request:23
-#: ../../flask/src/flask/blueprints.py:docstring of flask.scaffold.Scaffold.teardown_request:23
-msgid "When a teardown function was called because of an exception it will be passed an error object."
-msgstr ""
-
-#: ../../flask/src/flask/app.py:docstring of flask.scaffold.Scaffold.teardown_request:28
-#: ../../flask/src/flask/blueprints.py:docstring of flask.scaffold.Scaffold.teardown_request:28
-msgid "Debug Note"
-msgstr ""
-
-#: ../../flask/src/flask/app.py:docstring of flask.scaffold.Scaffold.teardown_request:30
-#: ../../flask/src/flask/blueprints.py:docstring of flask.scaffold.Scaffold.teardown_request:30
-msgid "In debug mode Flask will not tear down a request on an exception immediately.  Instead it will keep it alive so that the interactive debugger can still access it.  This behavior can be controlled by the ``PRESERVE_CONTEXT_ON_EXCEPTION`` configuration variable."
+#: ../../flask/src/flask/app.py:docstring of flask.scaffold.Scaffold.teardown_request:10
+#: ../../flask/src/flask/blueprints.py:docstring of flask.scaffold.Scaffold.teardown_request:10
+msgid "When the ``with`` block exits (or ``ctx.pop()`` is called), the teardown functions are called just before the request context is made inactive."
 msgstr ""
 
 #: ../../docstring of flask.Flask.teardown_request_funcs:1
@@ -1607,14 +1724,14 @@ msgid "A decorator that is used to register custom template test. You can specif
 msgstr ""
 
 #: ../../flask/src/flask/app.py:docstring of flask.Flask.templates_auto_reload:1
-msgid "Reload templates when they are changed. Used by :meth:`create_jinja_environment`."
+msgid "Reload templates when they are changed. Used by :meth:`create_jinja_environment`. It is enabled by default in debug mode."
 msgstr ""
 
 #: ../../flask/src/flask/app.py:docstring of flask.Flask.templates_auto_reload:4
-msgid "This attribute can be configured with :data:`TEMPLATES_AUTO_RELOAD`. If not set, it will be enabled in debug mode."
+msgid "Will be removed in Flask 2.3. Use ``app.config[\"TEMPLATES_AUTO_RELOAD\"]`` instead."
 msgstr ""
 
-#: ../../flask/src/flask/app.py:docstring of flask.Flask.templates_auto_reload:7
+#: ../../flask/src/flask/app.py:docstring of flask.Flask.templates_auto_reload:8
 msgid "This property was added but the underlying config and behavior already existed."
 msgstr ""
 
@@ -1738,10 +1855,6 @@ msgstr ""
 msgid "Bad request errors are not trapped by default in debug mode."
 msgstr ""
 
-#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.try_trigger_before_first_request_functions:1
-msgid "Called before each request and will ensure that it triggers the :attr:`before_first_request_funcs` and only exactly once per application instance (which means process usually)."
-msgstr ""
-
 #: ../../flask/src/flask/app.py:docstring of flask.app.Flask.update_template_context:1
 msgid "Update the template context with some commonly used variables. This injects request, session, config and g into the template context as well as everything template context processors want to inject.  Note that the as of Flask 0.6, the original values in the context will not be overridden if a context processor decides to return a value with the same key."
 msgstr ""
@@ -1751,7 +1864,7 @@ msgid "the context as a dictionary that is updated in place to add extra variabl
 msgstr ""
 
 #: ../../docstring of flask.Flask.url_build_error_handlers:1
-msgid "A list of functions that are called when :meth:`url_for` raises a :exc:`~werkzeug.routing.BuildError`.  Each function registered here is called with `error`, `endpoint` and `values`.  If a function returns ``None`` or raises a :exc:`BuildError` the next function is tried."
+msgid "A list of functions that are called by :meth:`handle_url_build_error` when :meth:`.url_for` raises a :exc:`~werkzeug.routing.BuildError`. Each function is called with ``error``, ``endpoint`` and ``values``. If a function returns ``None`` or raises a ``BuildError``, it is skipped. Otherwise, its return value is returned by ``url_for``."
 msgstr ""
 
 #: ../../docstring of flask.Flask.url_default_functions:1
@@ -1767,6 +1880,65 @@ msgstr ""
 #: ../../flask/src/flask/app.py:docstring of flask.scaffold.Scaffold.url_defaults:1
 #: ../../flask/src/flask/blueprints.py:docstring of flask.scaffold.Scaffold.url_defaults:1
 msgid "Callback function for URL defaults for all view functions of the application.  It's called with the endpoint and values and should update the values passed in place."
+msgstr ""
+
+#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.url_for:1
+#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.url_for:1
+msgid "Generate a URL to the given endpoint with the given values."
+msgstr ""
+
+#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.url_for:3
+msgid "This is called by :func:`flask.url_for`, and can be called directly as well."
+msgstr ""
+
+#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.url_for:6
+msgid "An *endpoint* is the name of a URL rule, usually added with :meth:`@app.route() <route>`, and usually the same name as the view function. A route defined in a :class:`~flask.Blueprint` will prepend the blueprint's name separated by a ``.`` to the endpoint."
+msgstr ""
+
+#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.url_for:12
+msgid "In some cases, such as email messages, you want URLs to include the scheme and domain, like ``https://example.com/hello``. When not in an active request, URLs will be external by default, but this requires setting :data:`SERVER_NAME` so Flask knows what domain to use. :data:`APPLICATION_ROOT` and :data:`PREFERRED_URL_SCHEME` should also be configured as needed. This config is only used when not in an active request."
+msgstr ""
+
+#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.url_for:20
+msgid "Functions can be decorated with :meth:`url_defaults` to modify keyword arguments before the URL is built."
+msgstr ""
+
+#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.url_for:23
+msgid "If building fails for some reason, such as an unknown endpoint or incorrect values, the app's :meth:`handle_url_build_error` method is called. If that returns a string, that is returned, otherwise a :exc:`~werkzeug.routing.BuildError` is raised."
+msgstr ""
+
+#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.url_for:28
+#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.url_for:7
+msgid "The endpoint name associated with the URL to generate. If this starts with a ``.``, the current blueprint name (if any) will be used."
+msgstr ""
+
+#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.url_for:31
+#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.url_for:10
+msgid "If given, append this as ``#anchor`` to the URL."
+msgstr ""
+
+#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.url_for:32
+#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.url_for:11
+msgid "If given, generate the URL associated with this method for the endpoint."
+msgstr ""
+
+#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.url_for:34
+#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.url_for:13
+msgid "If given, the URL will have this scheme if it is external."
+msgstr ""
+
+#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.url_for:36
+#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.url_for:15
+msgid "If given, prefer the URL to be internal (False) or require it to be external (True). External URLs include the scheme and domain. When not in an active request, URLs are external by default."
+msgstr ""
+
+#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.url_for:40
+#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.url_for:19
+msgid "Values to use for the variable parts of the URL rule. Unknown keys are appended as query string arguments, like ``?a=b&c=d``."
+msgstr ""
+
+#: ../../flask/src/flask/app.py:docstring of flask.app.Flask.url_for:44
+msgid "Moved from ``flask.url_for``, which calls this method."
 msgstr ""
 
 #: ../../docstring of flask.Flask.url_map:1
@@ -1798,12 +1970,12 @@ msgstr ""
 msgid "To register a function, use the :meth:`url_value_preprocessor` decorator."
 msgstr ""
 
-#: ../../docstring of flask.Flask.use_x_sendfile:1
-msgid "Enable this if you want to use the X-Sendfile feature.  Keep in mind that the server has to support this.  This only affects files sent with the :func:`send_file` method."
+#: ../../flask/src/flask/app.py:docstring of flask.Flask.use_x_sendfile:1
+msgid "Enable this to use the ``X-Sendfile`` feature, assuming the server supports it, from :func:`~flask.send_file`."
 msgstr ""
 
-#: ../../docstring of flask.Flask.use_x_sendfile:7
-msgid "This attribute can also be configured from the config with the ``USE_X_SENDFILE`` configuration key.  Defaults to ``False``."
+#: ../../flask/src/flask/app.py:docstring of flask.Flask.use_x_sendfile:4
+msgid "Will be removed in Flask 2.3. Use ``app.config[\"USE_X_SENDFILE\"]`` instead."
 msgstr ""
 
 #: ../../docstring of flask.Flask.view_functions:1
@@ -1961,12 +2133,12 @@ msgstr ""
 msgid "Like :meth:`Flask.before_request`.  Such a function is executed before each request, even if outside of a blueprint."
 msgstr ""
 
-#: ../../docstring of flask.Blueprint.json_decoder:1
-msgid "Blueprint local JSON decoder class to use. Set to ``None`` to use the app's :class:`~flask.Flask.json_decoder`."
+#: ../../flask/src/flask/blueprints.py:docstring of flask.Blueprint.json_decoder:1
+msgid "Blueprint-local JSON decoder class to use. Set to ``None`` to use the app's."
 msgstr ""
 
-#: ../../docstring of flask.Blueprint.json_encoder:1
-msgid "Blueprint local JSON encoder class to use. Set to ``None`` to use the app's :class:`~flask.Flask.json_encoder`."
+#: ../../flask/src/flask/blueprints.py:docstring of flask.Blueprint.json_encoder:1
+msgid "Blueprint-local JSON encoder class to use. Set to ``None`` to use the app's."
 msgstr ""
 
 #: ../../flask/src/flask/blueprints.py:docstring of flask.blueprints.Blueprint.make_setup_state:1
@@ -3067,11 +3239,7 @@ msgid "Returns True if the session cookie should be httponly.  This currently ju
 msgstr ""
 
 #: ../../flask/src/flask/sessions.py:docstring of flask.sessions.SessionInterface.get_cookie_name:1
-msgid "Returns the name of the session cookie."
-msgstr ""
-
-#: ../../flask/src/flask/sessions.py:docstring of flask.sessions.SessionInterface.get_cookie_name:3
-msgid "Uses ``app.session_cookie_name`` which is set to ``SESSION_COOKIE_NAME``"
+msgid "The name of the session cookie. Uses``app.config[\"SESSION_COOKIE_NAME\"]``."
 msgstr ""
 
 #: ../../flask/src/flask/sessions.py:docstring of flask.sessions.SessionInterface.get_cookie_path:1
@@ -3230,22 +3398,22 @@ msgid "Notice"
 msgstr ""
 
 #: ../../flask/docs/api.rst:128
-msgid "The ``PERMANENT_SESSION_LIFETIME`` config key can also be an integer starting with Flask 0.8.  Either catch this down yourself or use the :attr:`~flask.Flask.permanent_session_lifetime` attribute on the app which converts the result to an integer automatically."
+msgid "The :data:`PERMANENT_SESSION_LIFETIME` config can be an integer or ``timedelta``. The :attr:`~flask.Flask.permanent_session_lifetime` attribute is always a ``timedelta``."
 msgstr ""
 
-#: ../../flask/docs/api.rst:135
+#: ../../flask/docs/api.rst:134
 msgid "Test Client"
 msgstr ""
 
 #: ../../flask/src/flask/testing.py:docstring of flask.testing.FlaskClient:1
-msgid "Works like a regular Werkzeug test client but has some knowledge about how Flask works to defer the cleanup of the request context stack to the end of a ``with`` body when used in a ``with`` statement.  For general information about how to use this class refer to :class:`werkzeug.test.Client`."
+msgid "Works like a regular Werkzeug test client but has knowledge about Flask's contexts to defer the cleanup of the request context until the end of a ``with`` block. For general information about how to use this class refer to :class:`werkzeug.test.Client`."
 msgstr ""
 
-#: ../../flask/src/flask/testing.py:docstring of flask.testing.FlaskClient:7
+#: ../../flask/src/flask/testing.py:docstring of flask.testing.FlaskClient:6
 msgid "`app.test_client()` includes preset default environment, which can be set after instantiation of the `app.test_client()` object in `client.environ_base`."
 msgstr ""
 
-#: ../../flask/src/flask/testing.py:docstring of flask.testing.FlaskClient:12
+#: ../../flask/src/flask/testing.py:docstring of flask.testing.FlaskClient:11
 msgid "Basic usage is outlined in the :doc:`/testing` chapter."
 msgstr ""
 
@@ -3293,7 +3461,7 @@ msgstr ""
 msgid "Internally this is implemented by going through a temporary test request context and since session handling could depend on request variables this function accepts the same arguments as :meth:`~flask.Flask.test_request_context` which are directly passed through."
 msgstr ""
 
-#: ../../flask/docs/api.rst:144
+#: ../../flask/docs/api.rst:143
 msgid "Test CLI Runner"
 msgstr ""
 
@@ -3321,28 +3489,28 @@ msgstr ""
 msgid "a :class:`~click.testing.Result` object."
 msgstr ""
 
-#: ../../flask/docs/api.rst:153
+#: ../../flask/docs/api.rst:152
 msgid "Application Globals"
 msgstr ""
 
-#: ../../flask/docs/api.rst:157
+#: ../../flask/docs/api.rst:156
 msgid "To share data that is valid for one request only from one function to another, a global variable is not good enough because it would break in threaded environments.  Flask provides you with a special object that ensures it is only valid for the active request and that will return different values for each request.  In a nutshell: it does the right thing, like it does for :class:`request` and :class:`session`."
 msgstr ""
 
-#: ../../flask/docs/api.rst:166
+#: ../../flask/docs/api.rst:165
 msgid "A namespace object that can store data during an :doc:`application context </appcontext>`. This is an instance of :attr:`Flask.app_ctx_globals_class`, which defaults to :class:`ctx._AppCtxGlobals`."
 msgstr ""
 
-#: ../../flask/docs/api.rst:171
+#: ../../flask/docs/api.rst:170
 msgid "This is a good place to store resources during a request. For example, a ``before_request`` function could load a user object from a session id, then set ``g.user`` to be used in the view function."
 msgstr ""
 
-#: ../../flask/docs/api.rst:175
-#: ../../flask/docs/api.rst:199
+#: ../../flask/docs/api.rst:174
+#: ../../flask/docs/api.rst:198
 msgid "This is a proxy. See :ref:`notes-on-proxies` for more information."
 msgstr ""
 
-#: ../../flask/docs/api.rst:177
+#: ../../flask/docs/api.rst:176
 msgid "Bound to the application context instead of the request context."
 msgstr ""
 
@@ -3395,15 +3563,15 @@ msgstr ""
 msgid "Value to set and return if the attribute is not present."
 msgstr ""
 
-#: ../../flask/docs/api.rst:185
+#: ../../flask/docs/api.rst:184
 msgid "Useful Functions and Classes"
 msgstr ""
 
-#: ../../flask/docs/api.rst:189
+#: ../../flask/docs/api.rst:188
 msgid "A proxy to the application handling the current request. This is useful to access the application without needing to import it, or if it can't be imported, such as when using the application factory pattern or in blueprints and extensions."
 msgstr ""
 
-#: ../../flask/docs/api.rst:194
+#: ../../flask/docs/api.rst:193
 msgid "This is only available when an :doc:`application context </appcontext>` is pushed. This happens automatically during requests and CLI commands. It can be controlled manually with :meth:`~flask.Flask.app_context`."
 msgstr ""
 
@@ -3419,104 +3587,66 @@ msgstr ""
 msgid "A helper function that decorates a function to retain the current request context.  This is useful when working with greenlets.  The moment the function is decorated a copy of the request context is created and then pushed when the function is called.  The current session is also included in the copied request context."
 msgstr ""
 
+#: ../../flask/src/flask/ctx.py:docstring of flask.ctx.copy_current_request_context:7
+#: ../../flask/src/flask/ctx.py:docstring of flask.ctx.after_this_request:5
+msgid "Example::"
+msgstr ""
+
 #: ../../flask/src/flask/ctx.py:docstring of flask.ctx.has_app_context:1
 msgid "Works like :func:`has_request_context` but for the application context.  You can also just do a boolean check on the :data:`current_app` object instead."
 msgstr ""
 
-#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.url_for:1
-msgid "Generates a URL to the given endpoint with the method provided."
-msgstr ""
-
 #: ../../flask/src/flask/helpers.py:docstring of flask.helpers.url_for:3
-msgid "Variable arguments that are unknown to the target endpoint are appended to the generated URL as query arguments.  If the value of a query argument is ``None``, the whole pair is skipped.  In case blueprints are active you can shortcut references to the same blueprint by prefixing the local endpoint with a dot (``.``)."
+msgid "This requires an active request or application context, and calls :meth:`current_app.url_for() <flask.Flask.url_for>`. See that method for full documentation."
 msgstr ""
 
-#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.url_for:9
-msgid "This will reference the index function local to the current blueprint::"
+#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.url_for:23
+msgid "Calls ``current_app.url_for``, allowing an app to override the behavior."
 msgstr ""
 
-#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.url_for:13
-msgid "See :ref:`url-building`."
+#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.url_for:27
+msgid "The ``_scheme`` parameter was added."
 msgstr ""
 
-#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.url_for:15
-msgid "Configuration values ``APPLICATION_ROOT`` and ``SERVER_NAME`` are only used when generating URLs outside of a request context."
+#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.url_for:30
+msgid "The ``_anchor`` and ``_method`` parameters were added."
 msgstr ""
 
-#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.url_for:18
-msgid "To integrate applications, :class:`Flask` has a hook to intercept URL build errors through :attr:`Flask.url_build_error_handlers`.  The `url_for` function results in a :exc:`~werkzeug.routing.BuildError` when the current app does not have a URL for the given endpoint and values.  When it does, the :data:`~flask.current_app` calls its :attr:`~Flask.url_build_error_handlers` if it is not ``None``, which can return a string to use as the result of `url_for` (instead of `url_for`'s default to raise the :exc:`~werkzeug.routing.BuildError` exception) or re-raise the exception. An example::"
+#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.url_for:33
+msgid "Calls ``app.handle_url_build_error`` on build errors."
 msgstr ""
 
-#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.url_for:47
-msgid "Here, `error` is the instance of :exc:`~werkzeug.routing.BuildError`, and `endpoint` and `values` are the arguments passed into `url_for`.  Note that this is for building URLs outside the current application, and not for handling 404 NotFound errors."
+#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.abort:1
+msgid "Raise an :exc:`~werkzeug.exceptions.HTTPException` for the given status code."
 msgstr ""
 
-#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.url_for:52
-msgid "The `_scheme` parameter was added."
+#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.abort:4
+msgid "If :data:`~flask.current_app` is available, it will call its :attr:`~flask.Flask.aborter` object, otherwise it will use :func:`werkzeug.exceptions.abort`."
 msgstr ""
 
-#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.url_for:55
-msgid "The `_anchor` and `_method` parameters were added."
+#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.abort:8
+msgid "The status code for the exception, which must be registered in ``app.aborter``."
 msgstr ""
 
-#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.url_for:58
-msgid "Calls :meth:`Flask.handle_build_error` on :exc:`~werkzeug.routing.BuildError`."
+#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.abort:10
+#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.abort:11
+msgid "Passed to the exception."
 msgstr ""
 
-#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.url_for:62
-msgid "the endpoint of the URL (name of the function)"
+#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.abort:13
+msgid "Calls ``current_app.aborter`` if available instead of always using Werkzeug's default ``abort``."
 msgstr ""
 
-#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.url_for:63
-msgid "the variable arguments of the URL rule"
+#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.redirect:3
+msgid "If :data:`~flask.current_app` is available, it will use its :meth:`~flask.Flask.redirect` method, otherwise it will use :func:`werkzeug.utils.redirect`."
 msgstr ""
 
-#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.url_for:64
-msgid "if set to ``True``, an absolute URL is generated. Server address can be changed via ``SERVER_NAME`` configuration variable which falls back to the `Host` header, then to the IP and port of the request."
+#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.redirect:9
+msgid "The response class to use. Not used when ``current_app`` is active, which uses ``app.response_class``."
 msgstr ""
 
-#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.url_for:67
-msgid "a string specifying the desired URL scheme. The `_external` parameter must be set to ``True`` or a :exc:`ValueError` is raised. The default behavior uses the same scheme as the current request, or :data:`PREFERRED_URL_SCHEME` if no request context is available. This also can be set to an empty string to build protocol-relative URLs."
-msgstr ""
-
-#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.url_for:73
-msgid "if provided this is added as anchor to the URL."
-msgstr ""
-
-#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.url_for:74
-msgid "if provided this explicitly specifies an HTTP method."
-msgstr ""
-
-#: ../../_venv/lib/site-packages/werkzeug/exceptions.py:docstring of werkzeug.exceptions.abort:1
-msgid "Raises an :py:exc:`HTTPException` for the given status code or WSGI application."
-msgstr ""
-
-#: ../../_venv/lib/site-packages/werkzeug/exceptions.py:docstring of werkzeug.exceptions.abort:4
-msgid "If a status code is given, it will be looked up in the list of exceptions and will raise that exception.  If passed a WSGI application, it will wrap it in a proxy WSGI exception and raise that::"
-msgstr ""
-
-#: ../../_venv/lib/site-packages/werkzeug/utils.py:docstring of werkzeug.utils.redirect:1
-msgid "Returns a response object (a WSGI application) that, if called, redirects the client to the target location. Supported codes are 301, 302, 303, 305, 307, and 308. 300 is not supported because it's not a real redirect and 304 because it's the answer for a request with a request with defined If-Modified-Since headers."
-msgstr ""
-
-#: ../../_venv/lib/site-packages/werkzeug/utils.py:docstring of werkzeug.utils.redirect:11
-msgid "The class used for the Response object can now be passed in."
-msgstr ""
-
-#: ../../_venv/lib/site-packages/werkzeug/utils.py:docstring of werkzeug.utils.redirect:7
-msgid "The location can now be a unicode string that is encoded using the :func:`iri_to_uri` function."
-msgstr ""
-
-#: ../../_venv/lib/site-packages/werkzeug/utils.py:docstring of werkzeug.utils.redirect:14
-msgid "the location the response should redirect to."
-msgstr ""
-
-#: ../../_venv/lib/site-packages/werkzeug/utils.py:docstring of werkzeug.utils.redirect:15
-msgid "the redirect status code. defaults to 302."
-msgstr ""
-
-#: ../../_venv/lib/site-packages/werkzeug/utils.py:docstring of werkzeug.utils.redirect:16
-msgid "a Response class to use when instantiating a response. The default is :class:`werkzeug.wrappers.Response` if unspecified."
+#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.redirect:12
+msgid "Calls ``current_app.redirect`` if available instead of always using Werkzeug's default ``redirect``."
 msgstr ""
 
 #: ../../flask/src/flask/helpers.py:docstring of flask.helpers.make_response:1
@@ -3628,7 +3758,7 @@ msgid "Passing a file-like object that inherits from :class:`~io.TextIOBase` wil
 msgstr ""
 
 #: ../../flask/src/flask/helpers.py:docstring of flask.helpers.send_file:60
-#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.send_from_directory:27
+#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.send_from_directory:28
 msgid "Moved the implementation to Werkzeug. This is now a wrapper to pass some Flask-specific arguments."
 msgstr ""
 
@@ -3681,35 +3811,19 @@ msgid "If the final path does not point to an existing regular file, raises a 40
 msgstr ""
 
 #: ../../flask/src/flask/helpers.py:docstring of flask.helpers.send_from_directory:19
-msgid "The directory that ``path`` must be located under."
+msgid "The directory that ``path`` must be located under, relative to the current application's root path."
 msgstr ""
 
-#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.send_from_directory:20
+#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.send_from_directory:21
 msgid "The path to the file to send, relative to ``directory``."
 msgstr ""
 
-#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.send_from_directory:22
+#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.send_from_directory:23
 msgid "Arguments to pass to :func:`send_file`."
 msgstr ""
 
-#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.send_from_directory:24
+#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.send_from_directory:25
 msgid "``path`` replaces the ``filename`` parameter."
-msgstr ""
-
-#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.safe_join:1
-msgid "Safely join zero or more untrusted path components to a base directory to avoid escaping the base directory."
-msgstr ""
-
-#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.safe_join:4
-msgid "The trusted base directory."
-msgstr ""
-
-#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.safe_join:5
-msgid "The untrusted path components relative to the base directory."
-msgstr ""
-
-#: ../../flask/src/flask/helpers.py:docstring of flask.helpers.safe_join:7
-msgid "A safe path, otherwise ``None``."
 msgstr ""
 
 #: ../../docstring of markupsafe._speedups.escape:1
@@ -3756,7 +3870,7 @@ msgstr ""
 msgid "Convert escaped markup back into a text string. This replaces HTML entities with the characters they represent."
 msgstr ""
 
-#: ../../flask/docs/api.rst:229
+#: ../../flask/docs/api.rst:226
 msgid "Message Flashing"
 msgstr ""
 
@@ -3812,178 +3926,299 @@ msgstr ""
 msgid "filter of categories to limit return values.  Only categories in the list will be returned."
 msgstr ""
 
-#: ../../flask/docs/api.rst:237
+#: ../../flask/docs/api.rst:234
 msgid "JSON Support"
 msgstr ""
 
-#: ../../flask/docs/api.rst:241
-msgid "Flask uses the built-in :mod:`json` module for handling JSON. It will use the current blueprint's or application's JSON encoder and decoder for easier customization. By default it handles some extra data types:"
+#: ../../flask/docs/api.rst:238
+msgid "Flask uses Python's built-in :mod:`json` module for handling JSON by default. The JSON implementation can be changed by assigning a different provider to :attr:`flask.Flask.json_provider_class` or :attr:`flask.Flask.json`. The functions provided by ``flask.json`` will use methods on ``app.json`` if an app context is active."
 msgstr ""
 
-#: ../../flask/docs/api.rst:245
-#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.JSONEncoder:4
-msgid ":class:`datetime.datetime` and :class:`datetime.date` are serialized to :rfc:`822` strings. This is the same as the HTTP date format."
-msgstr ""
-
-#: ../../flask/docs/api.rst:247
-#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.JSONEncoder:7
-msgid ":class:`uuid.UUID` is serialized to a string."
-msgstr ""
-
-#: ../../flask/docs/api.rst:248
-#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.JSONEncoder:8
-msgid ":class:`dataclasses.dataclass` is passed to :func:`dataclasses.asdict`."
-msgstr ""
-
-#: ../../flask/docs/api.rst:250
-#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.JSONEncoder:10
-msgid ":class:`~markupsafe.Markup` (or any object with a ``__html__`` method) will call the ``__html__`` method to get a string."
-msgstr ""
-
-#: ../../flask/docs/api.rst:253
-msgid "Jinja's ``|tojson`` filter is configured to use Flask's :func:`dumps` function. The filter marks the output with ``|safe`` automatically. Use the filter to render data inside ``<script>`` tags."
+#: ../../flask/docs/api.rst:244
+msgid "Jinja's ``|tojson`` filter is configured to use the app's JSON provider. The filter marks the output with ``|safe``. Use it to render data inside HTML ``<script>`` tags."
 msgstr ""
 
 #: ../../flask/src/flask/json/__init__.py:docstring of flask.json.jsonify:1
-msgid "Serialize data to JSON and wrap it in a :class:`~flask.Response` with the :mimetype:`application/json` mimetype."
+msgid "Serialize the given arguments as JSON, and return a :class:`~flask.Response` object with the ``application/json`` mimetype. A dict or list returned from a view will be converted to a JSON response automatically without needing to call this."
 msgstr ""
 
-#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.jsonify:4
-msgid "Uses :func:`dumps` to serialize the data, but ``args`` and ``kwargs`` are treated as data rather than arguments to :func:`json.dumps`."
-msgstr ""
-
-#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.jsonify:8
-msgid "Single argument: Treated as a single value."
+#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.jsonify:6
+msgid "This requires an active request or application context, and calls :meth:`app.json.response() <flask.json.provider.JSONProvider.response>`."
 msgstr ""
 
 #: ../../flask/src/flask/json/__init__.py:docstring of flask.json.jsonify:9
-msgid "Multiple arguments: Treated as a list of values. ``jsonify(1, 2, 3)`` is the same as ``jsonify([1, 2, 3])``."
+msgid "In debug mode, the output is formatted with indentation to make it easier to read. This may also be controlled by the provider."
 msgstr ""
 
-#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.jsonify:11
-msgid "Keyword arguments: Treated as a dict of values. ``jsonify(data=data, errors=errors)`` is the same as ``jsonify({\"data\": data, \"errors\": errors})``."
+#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.jsonify:12
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.JSONProvider.response:8
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.DefaultJSONProvider.response:9
+msgid "Either positional or keyword arguments can be given, not both. If no arguments are given, ``None`` is serialized."
 msgstr ""
 
-#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.jsonify:14
-msgid "Passing both arguments and keyword arguments is not allowed as it's not clear what should happen."
+#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.jsonify:15
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.JSONProvider.response:11
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.DefaultJSONProvider.response:12
+msgid "A single value to serialize, or multiple values to treat as a list to serialize."
 msgstr ""
 
-#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.jsonify:29
-msgid "Will return a JSON response like this:"
+#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.jsonify:17
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.JSONProvider.response:13
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.DefaultJSONProvider.response:14
+msgid "Treat as a dict to serialize."
 msgstr ""
 
-#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.jsonify:39
-msgid "The default output omits indents and spaces after separators. In debug mode or if :data:`JSONIFY_PRETTYPRINT_REGULAR` is ``True``, the output will be formatted to be easier to read."
+#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.jsonify:19
+msgid "Calls ``current_app.json.response``, allowing an app to override the behavior."
 msgstr ""
 
-#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.jsonify:43
-#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.dumps:11
+#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.jsonify:23
+#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.dumps:17
 msgid ":class:`decimal.Decimal` is supported by converting to a string."
 msgstr ""
 
-#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.jsonify:46
-msgid "Added support for serializing top-level arrays. This introduces a security risk in ancient browsers. See :ref:`security-json`."
+#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.jsonify:26
+msgid "Added support for serializing top-level arrays. This was a security risk in ancient browsers. See :ref:`security-json`."
 msgstr ""
 
 #: ../../flask/src/flask/json/__init__.py:docstring of flask.json.dumps:1
-msgid "Serialize an object to a string of JSON."
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.JSONProvider.dumps:1
+msgid "Serialize data as JSON."
 msgstr ""
 
 #: ../../flask/src/flask/json/__init__.py:docstring of flask.json.dumps:3
-msgid "Takes the same arguments as the built-in :func:`json.dumps`, with some defaults from application configuration."
-msgstr ""
-
-#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.dumps:6
-#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.dump:6
-msgid "Object to serialize to JSON."
+msgid "If :data:`~flask.current_app` is available, it will use its :meth:`app.json.dumps() <flask.json.provider.JSONProvider.dumps>` method, otherwise it will use :func:`json.dumps`."
 msgstr ""
 
 #: ../../flask/src/flask/json/__init__.py:docstring of flask.json.dumps:7
-#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.dump:8
-#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.loads:7
-#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.load:7
-msgid "Use this app's config instead of the active app context or defaults."
+#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.dump:7
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.JSONProvider.dumps:3
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.JSONProvider.dump:3
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.DefaultJSONProvider.dumps:7
+msgid "The data to serialize."
 msgstr ""
 
-#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.dumps:9
-msgid "Extra arguments passed to :func:`json.dumps`."
+#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.dumps:8
+msgid "Arguments passed to the ``dumps`` implementation."
+msgstr ""
+
+#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.dumps:10
+msgid "Calls ``current_app.json.dumps``, allowing an app to override the behavior."
 msgstr ""
 
 #: ../../flask/src/flask/json/__init__.py:docstring of flask.json.dumps:14
-msgid "``encoding`` is deprecated and will be removed in Flask 2.1."
+#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.dump:16
+#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.loads:14
+#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.load:14
+msgid "The ``app`` parameter will be removed in Flask 2.3."
 msgstr ""
 
-#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.dumps:17
-#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.loads:15
+#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.dumps:20
+msgid "``encoding`` will be removed in Flask 2.1."
+msgstr ""
+
+#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.dumps:23
+#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.loads:21
 msgid "``app`` can be passed directly, rather than requiring an app context for configuration."
 msgstr ""
 
 #: ../../flask/src/flask/json/__init__.py:docstring of flask.json.dump:1
-msgid "Serialize an object to JSON written to a file object."
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.JSONProvider.dump:1
+msgid "Serialize data as JSON and write to a file."
 msgstr ""
 
 #: ../../flask/src/flask/json/__init__.py:docstring of flask.json.dump:3
-msgid "Takes the same arguments as the built-in :func:`json.dump`, with some defaults from application configuration."
+msgid "If :data:`~flask.current_app` is available, it will use its :meth:`app.json.dump() <flask.json.provider.JSONProvider.dump>` method, otherwise it will use :func:`json.dump`."
 msgstr ""
 
-#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.dump:7
-msgid "File object to write JSON to."
+#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.dump:8
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.JSONProvider.dump:4
+msgid "A file opened for writing text. Should use the UTF-8 encoding to be valid JSON."
 msgstr ""
 
 #: ../../flask/src/flask/json/__init__.py:docstring of flask.json.dump:10
-msgid "Extra arguments passed to :func:`json.dump`."
+msgid "Arguments passed to the ``dump`` implementation."
 msgstr ""
 
 #: ../../flask/src/flask/json/__init__.py:docstring of flask.json.dump:12
-msgid "Writing to a binary file, and the ``encoding`` argument, is deprecated and will be removed in Flask 2.1."
+msgid "Calls ``current_app.json.dump``, allowing an app to override the behavior."
+msgstr ""
+
+#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.dump:19
+msgid "Writing to a binary file, and the ``encoding`` argument, will be removed in Flask 2.1."
 msgstr ""
 
 #: ../../flask/src/flask/json/__init__.py:docstring of flask.json.loads:1
-msgid "Deserialize an object from a string of JSON."
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.JSONProvider.loads:1
+msgid "Deserialize data as JSON."
 msgstr ""
 
 #: ../../flask/src/flask/json/__init__.py:docstring of flask.json.loads:3
-msgid "Takes the same arguments as the built-in :func:`json.loads`, with some defaults from application configuration."
+msgid "If :data:`~flask.current_app` is available, it will use its :meth:`app.json.loads() <flask.json.provider.JSONProvider.loads>` method, otherwise it will use :func:`json.loads`."
 msgstr ""
 
-#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.loads:6
-msgid "JSON string to deserialize."
+#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.loads:7
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.JSONProvider.loads:3
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.DefaultJSONProvider.loads:3
+msgid "Text or UTF-8 bytes."
 msgstr ""
 
-#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.loads:9
-msgid "Extra arguments passed to :func:`json.loads`."
+#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.loads:8
+msgid "Arguments passed to the ``loads`` implementation."
 msgstr ""
 
-#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.loads:11
-msgid "``encoding`` is deprecated and will be removed in Flask 2.1. The data must be a string or UTF-8 bytes."
+#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.loads:10
+msgid "Calls ``current_app.json.loads``, allowing an app to override the behavior."
+msgstr ""
+
+#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.loads:17
+msgid "``encoding`` will be removed in Flask 2.1. The data must be a string or UTF-8 bytes."
 msgstr ""
 
 #: ../../flask/src/flask/json/__init__.py:docstring of flask.json.load:1
-msgid "Deserialize an object from JSON read from a file object."
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.JSONProvider.load:1
+msgid "Deserialize data as JSON read from a file."
 msgstr ""
 
 #: ../../flask/src/flask/json/__init__.py:docstring of flask.json.load:3
-msgid "Takes the same arguments as the built-in :func:`json.load`, with some defaults from application configuration."
+msgid "If :data:`~flask.current_app` is available, it will use its :meth:`app.json.load() <flask.json.provider.JSONProvider.load>` method, otherwise it will use :func:`json.load`."
 msgstr ""
 
-#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.load:6
-msgid "File object to read JSON from."
+#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.load:7
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.JSONProvider.load:3
+msgid "A file opened for reading text or UTF-8 bytes."
 msgstr ""
 
-#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.load:9
-msgid "Extra arguments passed to :func:`json.load`."
+#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.load:8
+msgid "Arguments passed to the ``load`` implementation."
 msgstr ""
 
-#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.load:11
-msgid "``encoding`` is deprecated and will be removed in Flask 2.1. The file must be text mode, or binary mode with UTF-8 bytes."
+#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.load:10
+msgid "Calls ``current_app.json.load``, allowing an app to override the behavior."
+msgstr ""
+
+#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.load:17
+msgid "``encoding`` will be removed in Flask 2.1. The file must be text mode, or binary mode with UTF-8 bytes."
+msgstr ""
+
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.JSONProvider:1
+msgid "A standard set of JSON operations for an application. Subclasses of this can be used to customize JSON behavior or use different JSON libraries."
+msgstr ""
+
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.JSONProvider:5
+msgid "To implement a provider for a specific library, subclass this base class and implement at least :meth:`dumps` and :meth:`loads`. All other methods have default implementations."
+msgstr ""
+
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.JSONProvider:9
+msgid "To use a different provider, either subclass ``Flask`` and set :attr:`~flask.Flask.json_provider_class` to a provider class, or set :attr:`app.json <flask.Flask.json>` to an instance of the class."
+msgstr ""
+
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.JSONProvider:13
+msgid "An application instance. This will be stored as a :class:`weakref.proxy` on the :attr:`_app` attribute."
+msgstr ""
+
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.JSONProvider.dumps:4
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.JSONProvider.dump:6
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.JSONProvider.loads:4
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.JSONProvider.load:4
+msgid "May be passed to the underlying JSON library."
+msgstr ""
+
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.JSONProvider.response:1
+msgid "Serialize the given arguments as JSON, and return a :class:`~flask.Response` object with the ``application/json`` mimetype."
+msgstr ""
+
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.JSONProvider.response:5
+msgid "The :func:`~flask.json.jsonify` function calls this method for the current application."
+msgstr ""
+
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.DefaultJSONProvider:1
+msgid "Provide JSON operations using Python's built-in :mod:`json` library. Serializes the following additional data types:"
+msgstr ""
+
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.DefaultJSONProvider:4
+#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.JSONEncoder:4
+msgid ":class:`datetime.datetime` and :class:`datetime.date` are serialized to :rfc:`822` strings. This is the same as the HTTP date format."
+msgstr ""
+
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.DefaultJSONProvider:7
+#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.JSONEncoder:8
+msgid ":class:`uuid.UUID` is serialized to a string."
+msgstr ""
+
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.DefaultJSONProvider:8
+#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.JSONEncoder:9
+msgid ":class:`dataclasses.dataclass` is passed to :func:`dataclasses.asdict`."
+msgstr ""
+
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.DefaultJSONProvider:10
+#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.JSONEncoder:11
+msgid ":class:`~markupsafe.Markup` (or any object with a ``__html__`` method) will call the ``__html__`` method to get a string."
+msgstr ""
+
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider._default:1
+msgid "Apply this function to any object that :meth:`json.dumps` does not know how to serialize. It should return a valid JSON type or raise a ``TypeError``."
+msgstr ""
+
+#: ../../docstring of flask.json.provider.DefaultJSONProvider.ensure_ascii:1
+msgid "Replace non-ASCII characters with escape sequences. This may be more compatible with some clients, but can be disabled for better performance and size."
+msgstr ""
+
+#: ../../docstring of flask.json.provider.DefaultJSONProvider.sort_keys:1
+msgid "Sort the keys in any serialized dicts. This may be useful for some caching situations, but can be disabled for better performance. When enabled, keys must all be strings, they are not converted before sorting."
+msgstr ""
+
+#: ../../docstring of flask.json.provider.DefaultJSONProvider.compact:1
+msgid "If ``True``, or ``None`` out of debug mode, the :meth:`response` output will not add indentation, newlines, or spaces. If ``False``, or ``None`` in debug mode, it will use a non-compact representation."
+msgstr ""
+
+#: ../../docstring of flask.json.provider.DefaultJSONProvider.mimetype:1
+msgid "The mimetype set in :meth:`response`."
+msgstr ""
+
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.DefaultJSONProvider.dumps:1
+msgid "Serialize data as JSON to a string."
+msgstr ""
+
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.DefaultJSONProvider.dumps:3
+msgid "Keyword arguments are passed to :func:`json.dumps`. Sets some parameter defaults from the :attr:`default`, :attr:`ensure_ascii`, and :attr:`sort_keys` attributes."
+msgstr ""
+
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.DefaultJSONProvider.dumps:8
+msgid "Passed to :func:`json.dumps`."
+msgstr ""
+
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.DefaultJSONProvider.loads:1
+msgid "Deserialize data as JSON from a string or bytes."
+msgstr ""
+
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.DefaultJSONProvider.loads:4
+msgid "Passed to :func:`json.loads`."
+msgstr ""
+
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.DefaultJSONProvider.response:1
+msgid "Serialize the given arguments as JSON, and return a :class:`~flask.Response` object with it. The response mimetype will be \"application/json\" and can be changed with :attr:`mimetype`."
+msgstr ""
+
+#: ../../flask/src/flask/json/provider.py:docstring of flask.json.provider.DefaultJSONProvider.response:6
+msgid "If :attr:`compact` is ``False`` or debug mode is enabled, the output will be formatted to be easier to read."
 msgstr ""
 
 #: ../../flask/src/flask/json/__init__.py:docstring of flask.json.JSONEncoder:1
 msgid "The default JSON encoder. Handles extra types compared to the built-in :class:`json.JSONEncoder`."
 msgstr ""
 
-#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.JSONEncoder:13
+#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.JSONEncoder:7
+msgid ":class:`decimal.Decimal` is serialized to a string."
+msgstr ""
+
+#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.JSONEncoder:14
 msgid "Assign a subclass of this to :attr:`flask.Flask.json_encoder` or :attr:`flask.Blueprint.json_encoder` to override the default."
+msgstr ""
+
+#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.JSONEncoder:17
+#: ../../flask/src/flask/json/__init__.py:docstring of flask.json.JSONDecoder:9
+msgid "Will be removed in Flask 2.3. Use ``app.json`` instead."
 msgstr ""
 
 #: ../../flask/src/flask/json/__init__.py:docstring of flask.json.JSONEncoder.default:1
@@ -4114,29 +4349,41 @@ msgstr ""
 msgid "Let's see an example that adds support for :class:`~collections.OrderedDict`. Dicts don't have an order in JSON, so to handle this we will dump the items as a list of ``[key, value]`` pairs. Subclass :class:`JSONTag` and give it the new key ``' od'`` to identify the type. The session serializer processes dicts first, so insert the new tag at the front of the order since ``OrderedDict`` must be processed before ``dict``."
 msgstr ""
 
-#: ../../flask/docs/api.rst:284
+#: ../../flask/docs/api.rst:283
 msgid "Template Rendering"
 msgstr ""
 
 #: ../../flask/src/flask/templating.py:docstring of flask.templating.render_template:1
-msgid "Renders a template from the template folder with the given context."
+msgid "Render a template by name with the given context."
 msgstr ""
 
-#: ../../flask/src/flask/templating.py:docstring of flask.templating.render_template:4
-msgid "the name of the template to be rendered, or an iterable with template names the first one existing will be rendered"
+#: ../../flask/src/flask/templating.py:docstring of flask.templating.render_template:3
+#: ../../flask/src/flask/templating.py:docstring of flask.templating.stream_template:5
+msgid "The name of the template to render. If a list is given, the first name to exist will be rendered."
 msgstr ""
 
-#: ../../flask/src/flask/templating.py:docstring of flask.templating.render_template:7
-#: ../../flask/src/flask/templating.py:docstring of flask.templating.render_template_string:6
-msgid "the variables that should be available in the context of the template."
+#: ../../flask/src/flask/templating.py:docstring of flask.templating.render_template:5
+#: ../../flask/src/flask/templating.py:docstring of flask.templating.render_template_string:5
+#: ../../flask/src/flask/templating.py:docstring of flask.templating.stream_template:7
+#: ../../flask/src/flask/templating.py:docstring of flask.templating.stream_template_string:6
+msgid "The variables to make available in the template."
 msgstr ""
 
 #: ../../flask/src/flask/templating.py:docstring of flask.templating.render_template_string:1
-msgid "Renders a template from the given template source string with the given context. Template variables will be autoescaped."
+msgid "Render a template from the given source string with the given context."
 msgstr ""
 
 #: ../../flask/src/flask/templating.py:docstring of flask.templating.render_template_string:4
-msgid "the source code of the template to be rendered"
+#: ../../flask/src/flask/templating.py:docstring of flask.templating.stream_template_string:5
+msgid "The source code of the template to render."
+msgstr ""
+
+#: ../../flask/src/flask/templating.py:docstring of flask.templating.stream_template:1
+msgid "Render a template by name with the given context as a stream. This returns an iterator of strings, which can be used as a streaming response from a view."
+msgstr ""
+
+#: ../../flask/src/flask/templating.py:docstring of flask.templating.stream_template_string:1
+msgid "Render a template from the given source string with the given context as a stream. This returns an iterator of strings, which can be used as a streaming response from a view."
 msgstr ""
 
 #: ../../flask/src/flask/helpers.py:docstring of flask.helpers.get_template_attribute:1
@@ -4155,7 +4402,7 @@ msgstr ""
 msgid "the name of the variable of macro to access"
 msgstr ""
 
-#: ../../flask/docs/api.rst:295
+#: ../../flask/docs/api.rst:298
 msgid "Configuration"
 msgstr ""
 
@@ -4209,8 +4456,7 @@ msgid "set to ``True`` if you want silent failure for missing files."
 msgstr ""
 
 #: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_envvar:10
-#: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_file:17
-#: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_json:7
+#: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_file:20
 #: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_pyfile:10
 msgid "``True`` if the file was loaded successfully."
 msgstr ""
@@ -4219,29 +4465,16 @@ msgstr ""
 msgid "Update the values in the config from a file that is loaded using the ``load`` parameter. The loaded data is passed to the :meth:`from_mapping` method."
 msgstr ""
 
-#: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_file:10
+#: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_file:13
 msgid "The path to the data file. This can be an absolute path or relative to the config root path."
 msgstr ""
 
-#: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_file:12
+#: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_file:15
 msgid "A callable that takes a file handle and returns a mapping of loaded data from the file."
 msgstr ""
 
-#: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_file:16
-#: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_json:6
+#: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_file:19
 msgid "Ignore the file if it doesn't exist."
-msgstr ""
-
-#: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_json:1
-msgid "Update the values in the config from a JSON file. The loaded data is passed to the :meth:`from_mapping` method."
-msgstr ""
-
-#: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_json:4
-msgid "The path to the JSON file. This can be an absolute path or relative to the config root path."
-msgstr ""
-
-#: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_json:9
-msgid "Will be removed in Flask 2.1. Use :meth:`from_file` instead. This was removed early in 2.0.0, was added back in 2.0.1."
 msgstr ""
 
 #: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_mapping:1
@@ -4284,6 +4517,30 @@ msgstr ""
 msgid "an import name or object"
 msgstr ""
 
+#: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_prefixed_env:1
+msgid "Load any environment variables that start with ``FLASK_``, dropping the prefix from the env key for the config key. Values are passed through a loading function to attempt to convert them to more specific types than strings."
+msgstr ""
+
+#: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_prefixed_env:6
+msgid "Keys are loaded in :func:`sorted` order."
+msgstr ""
+
+#: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_prefixed_env:8
+msgid "The default loading function attempts to parse values as any valid JSON type, including dicts and lists."
+msgstr ""
+
+#: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_prefixed_env:11
+msgid "Specific items in nested dicts can be set by separating the keys with double underscores (``__``). If an intermediate key doesn't exist, it will be initialized to an empty dict."
+msgstr ""
+
+#: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_prefixed_env:15
+msgid "Load env vars that start with this prefix, separated with an underscore (``_``)."
+msgstr ""
+
+#: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_prefixed_env:17
+msgid "Pass each string value to this function and use the returned value as the config value. If any error is raised it is ignored and the value remains a string. The default is :func:`json.loads`."
+msgstr ""
+
 #: ../../flask/src/flask/config.py:docstring of flask.config.Config.from_pyfile:1
 msgid "Updates the values in the config from a Python file.  This function behaves as if the file was imported as module with the :meth:`from_object` function."
 msgstr ""
@@ -4320,7 +4577,7 @@ msgstr ""
 msgid "a flag indicating if the keys of the resulting dictionary should not include the namespace"
 msgstr ""
 
-#: ../../flask/docs/api.rst:302
+#: ../../flask/docs/api.rst:305
 msgid "Stream Helpers"
 msgstr ""
 
@@ -4336,12 +4593,12 @@ msgstr ""
 msgid "Alternatively it can also be used around a specific generator::"
 msgstr ""
 
-#: ../../flask/docs/api.rst:307
+#: ../../flask/docs/api.rst:310
 msgid "Useful Internals"
 msgstr ""
 
 #: ../../flask/src/flask/ctx.py:docstring of flask.ctx.RequestContext:1
-msgid "The request context contains all request relevant information.  It is created at the beginning of the request and pushed to the `_request_ctx_stack` and removed at the end of it.  It will create the URL adapter and request object for the WSGI environment provided."
+msgid "The request context contains per-request information. The Flask app creates and pushes it at the beginning of the request, then pops it at the end of the request. It will create the URL adapter and request object for the WSGI environment provided."
 msgstr ""
 
 #: ../../flask/src/flask/ctx.py:docstring of flask.ctx.RequestContext:6
@@ -4353,11 +4610,7 @@ msgid "When the request context is popped, it will evaluate all the functions re
 msgstr ""
 
 #: ../../flask/src/flask/ctx.py:docstring of flask.ctx.RequestContext:14
-msgid "The request context is automatically popped at the end of the request for you.  In debug mode the request context is kept around if exceptions happen so that interactive debuggers have a chance to introspect the data.  With 0.4 this can also be forced for requests that did not fail and outside of ``DEBUG`` mode.  By setting ``'flask._preserve_context'`` to ``True`` on the WSGI environment the context will not pop itself at the end of the request.  This is used by the :meth:`~flask.Flask.test_client` for example to implement the deferred cleanup functionality."
-msgstr ""
-
-#: ../../flask/src/flask/ctx.py:docstring of flask.ctx.RequestContext:24
-msgid "You might find this helpful for unittests where you need the information from the context local around for a little longer.  Make sure to properly :meth:`~werkzeug.LocalStack.pop` the stack yourself in that situation, otherwise your unittests will leak memory."
+msgid "The request context is automatically popped at the end of the request. When using the interactive debugger, the context will be restored so ``request`` is still accessible. Similarly, the test client can preserve the context after the request ends. However, teardown functions may already have closed some resources such as database connections."
 msgstr ""
 
 #: ../../flask/src/flask/ctx.py:docstring of flask.ctx.RequestContext.copy:1
@@ -4380,73 +4633,16 @@ msgstr ""
 msgid "Added the `exc` argument."
 msgstr ""
 
-#: ../../flask/src/flask/ctx.py:docstring of flask.ctx.RequestContext.push:1
-msgid "Binds the request context to the current context."
+#: ../../flask/docs/api.rst:317
+msgid "The current :class:`~flask.ctx.RequestContext`. If a request context is not active, accessing attributes on this proxy will raise a ``RuntimeError``."
 msgstr ""
 
-#: ../../flask/docs/api.rst:314
-msgid "The internal :class:`~werkzeug.local.LocalStack` that holds :class:`~flask.ctx.RequestContext` instances. Typically, the :data:`request` and :data:`session` proxies should be accessed instead of the stack. It may be useful to access the stack in extension code."
-msgstr ""
-
-#: ../../flask/docs/api.rst:320
-msgid "The following attributes are always present on each layer of the stack:"
-msgstr ""
-
-#: ../../flask/docs/api.rst:324
-msgid "`app`"
-msgstr ""
-
-#: ../../flask/docs/api.rst:324
-msgid "the active Flask application."
-msgstr ""
-
-#: ../../flask/docs/api.rst:327
-msgid "`url_adapter`"
-msgstr ""
-
-#: ../../flask/docs/api.rst:327
-msgid "the URL adapter that was used to match the request."
-msgstr ""
-
-#: ../../flask/docs/api.rst:330
-msgid "`request`"
-msgstr ""
-
-#: ../../flask/docs/api.rst:330
-msgid "the current request object."
-msgstr ""
-
-#: ../../flask/docs/api.rst:333
-msgid "`session`"
-msgstr ""
-
-#: ../../flask/docs/api.rst:333
-msgid "the active session object."
-msgstr ""
-
-#: ../../flask/docs/api.rst:336
-msgid "`g`"
-msgstr ""
-
-#: ../../flask/docs/api.rst:336
-msgid "an object with all the attributes of the :data:`flask.g` object."
-msgstr ""
-
-#: ../../flask/docs/api.rst:339
-msgid "`flashes`"
-msgstr ""
-
-#: ../../flask/docs/api.rst:339
-msgid "an internal cache for the flashed messages."
-msgstr ""
-
-#: ../../flask/docs/api.rst:341
-#: ../../flask/docs/api.rst:515
-msgid "Example usage::"
+#: ../../flask/docs/api.rst:321
+msgid "This is an internal object that is essential to how Flask handles requests. Accessing this should not be needed in most cases. Most likely you want :data:`request` and :data:`session` instead."
 msgstr ""
 
 #: ../../flask/src/flask/ctx.py:docstring of flask.ctx.AppContext:1
-msgid "The application context binds an application object implicitly to the current thread or greenlet, similar to how the :class:`RequestContext` binds request information.  The application context is also implicitly created if a request context is created but the application is not on top of the individual application context."
+msgid "The app context contains application-specific information. An app context is created and pushed at the beginning of each request if one is not already active. An app context is also pushed when running CLI commands."
 msgstr ""
 
 #: ../../flask/src/flask/ctx.py:docstring of flask.ctx.AppContext.pop:1
@@ -4457,8 +4653,12 @@ msgstr ""
 msgid "Binds the app context to the current context."
 msgstr ""
 
-#: ../../flask/docs/api.rst:355
-msgid "The internal :class:`~werkzeug.local.LocalStack` that holds :class:`~flask.ctx.AppContext` instances. Typically, the :data:`current_app` and :data:`g` proxies should be accessed instead of the stack. Extensions can access the contexts on the stack as a namespace to store data."
+#: ../../flask/docs/api.rst:330
+msgid "The current :class:`~flask.ctx.AppContext`. If an app context is not active, accessing attributes on this proxy will raise a ``RuntimeError``."
+msgstr ""
+
+#: ../../flask/docs/api.rst:334
+msgid "This is an internal object that is essential to how Flask handles requests. Accessing this should not be needed in most cases. Most likely you want :data:`current_app` and :data:`g` instead."
 msgstr ""
 
 #: ../../flask/src/flask/blueprints.py:docstring of flask.blueprints.BlueprintSetupState:1
@@ -4497,346 +4697,379 @@ msgstr ""
 msgid "The prefix that should be used for all URLs defined on the blueprint."
 msgstr ""
 
-#: ../../flask/docs/api.rst:369
+#: ../../flask/docs/api.rst:344
 msgid "Signals"
 msgstr ""
 
-#: ../../flask/docs/api.rst:375
+#: ../../flask/docs/api.rst:350
 msgid "``True`` if the signaling system is available.  This is the case when `blinker`_ is installed."
 msgstr ""
 
-#: ../../flask/docs/api.rst:378
+#: ../../flask/docs/api.rst:353
 msgid "The following signals exist in Flask:"
 msgstr ""
 
-#: ../../flask/docs/api.rst:382
+#: ../../flask/docs/api.rst:357
 msgid "This signal is sent when a template was successfully rendered.  The signal is invoked with the instance of the template as `template` and the context as dictionary (named `context`)."
 msgstr ""
 
-#: ../../flask/docs/api.rst:386
-#: ../../flask/docs/api.rst:403
-#: ../../flask/docs/api.rst:420
-#: ../../flask/docs/api.rst:433
-#: ../../flask/docs/api.rst:478
-#: ../../flask/docs/api.rst:497
-#: ../../flask/docs/api.rst:552
+#: ../../flask/docs/api.rst:361
+#: ../../flask/docs/api.rst:378
+#: ../../flask/docs/api.rst:395
+#: ../../flask/docs/api.rst:408
+#: ../../flask/docs/api.rst:453
+#: ../../flask/docs/api.rst:472
+#: ../../flask/docs/api.rst:527
 msgid "Example subscriber::"
 msgstr ""
 
-#: ../../flask/docs/api.rst:399
+#: ../../flask/docs/api.rst:374
 msgid "This signal is sent before template rendering process. The signal is invoked with the instance of the template as `template` and the context as dictionary (named `context`)."
 msgstr ""
 
-#: ../../flask/docs/api.rst:415
+#: ../../flask/docs/api.rst:390
 msgid "This signal is sent when the request context is set up, before any request processing happens.  Because the request context is already bound, the subscriber can access the request with the standard global proxies such as :class:`~flask.request`."
 msgstr ""
 
-#: ../../flask/docs/api.rst:430
+#: ../../flask/docs/api.rst:405
 msgid "This signal is sent right before the response is sent to the client. It is passed the response to be sent named `response`."
 msgstr ""
 
-#: ../../flask/docs/api.rst:444
+#: ../../flask/docs/api.rst:419
 msgid "This signal is sent when an unhandled exception happens during request processing, including when debugging. The exception is passed to the subscriber as ``exception``."
 msgstr ""
 
-#: ../../flask/docs/api.rst:448
+#: ../../flask/docs/api.rst:423
 msgid "This signal is not sent for :exc:`~werkzeug.exceptions.HTTPException`, or other exceptions that have error handlers registered, unless the exception was raised from an error handler."
 msgstr ""
 
-#: ../../flask/docs/api.rst:453
+#: ../../flask/docs/api.rst:428
 msgid "This example shows how to do some extra logging if a theoretical ``SecurityException`` was raised:"
 msgstr ""
 
-#: ../../flask/docs/api.rst:473
+#: ../../flask/docs/api.rst:448
 msgid "This signal is sent when the request is tearing down.  This is always called, even if an exception is caused.  Currently functions listening to this signal are called after the regular teardown handlers, but this is not something you can rely on."
 msgstr ""
 
-#: ../../flask/docs/api.rst:486
+#: ../../flask/docs/api.rst:461
 msgid "As of Flask 0.9, this will also be passed an `exc` keyword argument that has a reference to the exception that caused the teardown if there was one."
 msgstr ""
 
-#: ../../flask/docs/api.rst:492
+#: ../../flask/docs/api.rst:467
 msgid "This signal is sent when the app context is tearing down.  This is always called, even if an exception is caused.  Currently functions listening to this signal are called after the regular teardown handlers, but this is not something you can rely on."
 msgstr ""
 
-#: ../../flask/docs/api.rst:505
+#: ../../flask/docs/api.rst:480
 msgid "This will also be passed an `exc` keyword argument that has a reference to the exception that caused the teardown if there was one."
 msgstr ""
 
-#: ../../flask/docs/api.rst:510
+#: ../../flask/docs/api.rst:485
 msgid "This signal is sent when an application context is pushed.  The sender is the application.  This is usually useful for unittests in order to temporarily hook in information.  For instance it can be used to set a resource early onto the `g` object."
 msgstr ""
 
-#: ../../flask/docs/api.rst:527
+#: ../../flask/docs/api.rst:490
+msgid "Example usage::"
+msgstr ""
+
+#: ../../flask/docs/api.rst:502
 msgid "And in the testcode::"
 msgstr ""
 
-#: ../../flask/docs/api.rst:539
+#: ../../flask/docs/api.rst:514
 msgid "This signal is sent when an application context is popped.  The sender is the application.  This usually falls in line with the :data:`appcontext_tearing_down` signal."
 msgstr ""
 
-#: ../../flask/docs/api.rst:548
+#: ../../flask/docs/api.rst:523
 msgid "This signal is sent when the application is flashing a message.  The messages is sent as `message` keyword argument and the category as `category`."
 msgstr ""
 
-#: ../../flask/docs/api.rst:565
+#: ../../flask/docs/api.rst:540
 msgid "An alias for :class:`blinker.base.Namespace` if blinker is available, otherwise a dummy class that creates fake signals.  This class is available for Flask extensions that want to provide the same fallback system as Flask itself."
 msgstr ""
 
-#: ../../flask/docs/api.rst:572
+#: ../../flask/docs/api.rst:547
 msgid "Creates a new signal for this namespace if blinker is available, otherwise returns a fake signal that has a send method that will do nothing but will fail with a :exc:`RuntimeError` for all other operations, including connecting."
 msgstr ""
 
-#: ../../flask/docs/api.rst:582
+#: ../../flask/docs/api.rst:557
 msgid "Class-Based Views"
 msgstr ""
 
 #: ../../flask/src/flask/views.py:docstring of flask.views.View:1
-msgid "Alternative way to use view functions.  A subclass has to implement :meth:`dispatch_request` which is called with the view arguments from the URL routing system.  If :attr:`methods` is provided the methods do not have to be passed to the :meth:`~flask.Flask.add_url_rule` method explicitly::"
+msgid "Subclass this class and override :meth:`dispatch_request` to create a generic class-based view. Call :meth:`as_view` to create a view function that creates an instance of the class with the given arguments and calls its ``dispatch_request`` method with any URL variables."
 msgstr ""
 
-#: ../../flask/src/flask/views.py:docstring of flask.views.View:15
-msgid "When you want to decorate a pluggable view you will have to either do that when the view function is created (by wrapping the return value of :meth:`as_view`) or you can use the :attr:`decorators` attribute::"
+#: ../../flask/src/flask/views.py:docstring of flask.views.View:7
+#: ../../flask/src/flask/views.py:docstring of flask.views.MethodView:10
+msgid "See :doc:`views` for a detailed guide."
 msgstr ""
 
-#: ../../flask/src/flask/views.py:docstring of flask.views.View:26
-msgid "The decorators stored in the decorators list are applied one after another when the view function is created.  Note that you can *not* use the class based decorators since those would decorate the view class and not the generated view function!"
+#: ../../flask/src/flask/views.py:docstring of flask.views.View:21
+msgid "Set :attr:`methods` on the class to change what methods the view accepts."
+msgstr ""
+
+#: ../../flask/src/flask/views.py:docstring of flask.views.View:24
+msgid "Set :attr:`decorators` on the class to apply a list of decorators to the generated view function. Decorators applied to the class itself will not be applied to the generated view function!"
+msgstr ""
+
+#: ../../flask/src/flask/views.py:docstring of flask.views.View:28
+msgid "Set :attr:`init_every_request` to ``False`` for efficiency, unless you need to store request-global data on ``self``."
 msgstr ""
 
 #: ../../flask/src/flask/views.py:docstring of flask.views.View.as_view:1
-msgid "Converts the class into an actual view function that can be used with the routing system.  Internally this generates a function on the fly which will instantiate the :class:`View` on each request and call the :meth:`dispatch_request` method on it."
+msgid "Convert the class into a view function that can be registered for a route."
 msgstr ""
 
-#: ../../flask/src/flask/views.py:docstring of flask.views.View.as_view:6
-msgid "The arguments passed to :meth:`as_view` are forwarded to the constructor of the class."
+#: ../../flask/src/flask/views.py:docstring of flask.views.View.as_view:4
+msgid "By default, the generated view will create a new instance of the view class for every request and call its :meth:`dispatch_request` method. If the view class sets :attr:`init_every_request` to ``False``, the same instance will be used for every request."
+msgstr ""
+
+#: ../../flask/src/flask/views.py:docstring of flask.views.View.as_view:10
+msgid "The arguments passed to this method are forwarded to the view class ``__init__`` method."
+msgstr ""
+
+#: ../../flask/src/flask/views.py:docstring of flask.views.View.as_view:13
+msgid "Added the ``init_every_request`` class attribute."
 msgstr ""
 
 #: ../../docstring of flask.views.View.decorators:1
-msgid "The canonical way to decorate class-based views is to decorate the return value of as_view().  However since this moves parts of the logic from the class declaration to the place where it's hooked into the routing system."
-msgstr ""
-
-#: ../../docstring of flask.views.View.decorators:6
-msgid "You can place one or more decorators in this list and whenever the view function is created the result is automatically decorated."
+msgid "A list of decorators to apply, in order, to the generated view function. Remember that ``@decorator`` syntax is applied bottom to top, so the first decorator in the list would be the bottom decorator."
 msgstr ""
 
 #: ../../flask/src/flask/views.py:docstring of flask.views.View.dispatch_request:1
 #: ../../flask/src/flask/views.py:docstring of flask.views.MethodView.dispatch_request:1
-msgid "Subclasses have to override this method to implement the actual view function code.  This method is called with all the arguments from the URL rule."
+msgid "The actual view function behavior. Subclasses must override this and return a valid response. Any variables from the URL rule are passed as keyword arguments."
+msgstr ""
+
+#: ../../docstring of flask.views.View.init_every_request:1
+msgid "Create a new instance of this view class for every request by default. If a view subclass sets this to ``False``, the same instance is used for every request."
+msgstr ""
+
+#: ../../docstring of flask.views.View.init_every_request:5
+msgid "A single instance is more efficient, especially if complex setup is done during init. However, storing data on ``self`` is no longer safe across requests, and :data:`~flask.g` should be used instead."
 msgstr ""
 
 #: ../../docstring of flask.views.View.methods:1
-msgid "A list of methods this view can handle."
+msgid "The methods this view is registered for. Uses the same default (``[\"GET\", \"HEAD\", \"OPTIONS\"]``) as ``route`` and ``add_url_rule`` by default."
 msgstr ""
 
 #: ../../docstring of flask.views.View.provide_automatic_options:1
-msgid "Setting this disables or force-enables the automatic options handling."
+msgid "Control whether the ``OPTIONS`` method is handled automatically. Uses the same default (``True``) as ``route`` and ``add_url_rule`` by default."
 msgstr ""
 
 #: ../../flask/src/flask/views.py:docstring of flask.views.MethodView:1
-msgid "A class-based view that dispatches request methods to the corresponding class methods. For example, if you implement a ``get`` method, it will be used to handle ``GET`` requests. ::"
+msgid "Dispatches request methods to the corresponding instance methods. For example, if you implement a ``get`` method, it will be used to handle ``GET`` requests."
 msgstr ""
 
-#: ../../flask/docs/api.rst:597
+#: ../../flask/src/flask/views.py:docstring of flask.views.MethodView:5
+msgid "This can be useful for defining a REST API."
+msgstr ""
+
+#: ../../flask/src/flask/views.py:docstring of flask.views.MethodView:7
+msgid ":attr:`methods` is automatically set based on the methods defined on the class."
+msgstr ""
+
+#: ../../flask/docs/api.rst:572
 msgid "URL Route Registrations"
 msgstr ""
 
-#: ../../flask/docs/api.rst:599
+#: ../../flask/docs/api.rst:574
 msgid "Generally there are three ways to define rules for the routing system:"
 msgstr ""
 
-#: ../../flask/docs/api.rst:601
+#: ../../flask/docs/api.rst:576
 msgid "You can use the :meth:`flask.Flask.route` decorator."
 msgstr ""
 
-#: ../../flask/docs/api.rst:602
+#: ../../flask/docs/api.rst:577
 msgid "You can use the :meth:`flask.Flask.add_url_rule` function."
 msgstr ""
 
-#: ../../flask/docs/api.rst:603
+#: ../../flask/docs/api.rst:578
 msgid "You can directly access the underlying Werkzeug routing system which is exposed as :attr:`flask.Flask.url_map`."
 msgstr ""
 
-#: ../../flask/docs/api.rst:606
+#: ../../flask/docs/api.rst:581
 msgid "Variable parts in the route can be specified with angular brackets (``/user/<username>``).  By default a variable part in the URL accepts any string without a slash however a different converter can be specified as well by using ``<converter:name>``."
 msgstr ""
 
-#: ../../flask/docs/api.rst:611
+#: ../../flask/docs/api.rst:586
 msgid "Variable parts are passed to the view function as keyword arguments."
 msgstr ""
 
-#: ../../flask/docs/api.rst:613
+#: ../../flask/docs/api.rst:588
 msgid "The following converters are available:"
 msgstr ""
 
-#: ../../flask/docs/api.rst:616
+#: ../../flask/docs/api.rst:591
 msgid "`string`"
 msgstr ""
 
-#: ../../flask/docs/api.rst:616
+#: ../../flask/docs/api.rst:591
 msgid "accepts any text without a slash (the default)"
 msgstr ""
 
-#: ../../flask/docs/api.rst:617
+#: ../../flask/docs/api.rst:592
 msgid "`int`"
 msgstr ""
 
-#: ../../flask/docs/api.rst:617
+#: ../../flask/docs/api.rst:592
 msgid "accepts integers"
 msgstr ""
 
-#: ../../flask/docs/api.rst:618
+#: ../../flask/docs/api.rst:593
 msgid "`float`"
 msgstr ""
 
-#: ../../flask/docs/api.rst:618
+#: ../../flask/docs/api.rst:593
 msgid "like `int` but for floating point values"
 msgstr ""
 
-#: ../../flask/docs/api.rst:619
+#: ../../flask/docs/api.rst:594
 msgid "`path`"
 msgstr ""
 
-#: ../../flask/docs/api.rst:619
+#: ../../flask/docs/api.rst:594
 msgid "like the default but also accepts slashes"
 msgstr ""
 
-#: ../../flask/docs/api.rst:620
+#: ../../flask/docs/api.rst:595
 msgid "`any`"
 msgstr ""
 
-#: ../../flask/docs/api.rst:620
+#: ../../flask/docs/api.rst:595
 msgid "matches one of the items provided"
 msgstr ""
 
-#: ../../flask/docs/api.rst:621
+#: ../../flask/docs/api.rst:596
 msgid "`uuid`"
 msgstr ""
 
-#: ../../flask/docs/api.rst:621
+#: ../../flask/docs/api.rst:596
 msgid "accepts UUID strings"
 msgstr ""
 
-#: ../../flask/docs/api.rst:624
+#: ../../flask/docs/api.rst:599
 msgid "Custom converters can be defined using :attr:`flask.Flask.url_map`."
 msgstr ""
 
-#: ../../flask/docs/api.rst:626
+#: ../../flask/docs/api.rst:601
 msgid "Here are some examples::"
 msgstr ""
 
-#: ../../flask/docs/api.rst:640
+#: ../../flask/docs/api.rst:615
 msgid "An important detail to keep in mind is how Flask deals with trailing slashes.  The idea is to keep each URL unique so the following rules apply:"
 msgstr ""
 
-#: ../../flask/docs/api.rst:644
+#: ../../flask/docs/api.rst:619
 msgid "If a rule ends with a slash and is requested without a slash by the user, the user is automatically redirected to the same page with a trailing slash attached."
 msgstr ""
 
-#: ../../flask/docs/api.rst:647
+#: ../../flask/docs/api.rst:622
 msgid "If a rule does not end with a trailing slash and the user requests the page with a trailing slash, a 404 not found is raised."
 msgstr ""
 
-#: ../../flask/docs/api.rst:650
+#: ../../flask/docs/api.rst:625
 msgid "This is consistent with how web servers deal with static files.  This also makes it possible to use relative link targets safely."
 msgstr ""
 
-#: ../../flask/docs/api.rst:653
+#: ../../flask/docs/api.rst:628
 msgid "You can also define multiple rules for the same function.  They have to be unique however.  Defaults can also be specified.  Here for example is a definition for a URL that accepts an optional page::"
 msgstr ""
 
-#: ../../flask/docs/api.rst:662
+#: ../../flask/docs/api.rst:637
 msgid "This specifies that ``/users/`` will be the URL for page one and ``/users/page/N`` will be the URL for page ``N``."
 msgstr ""
 
-#: ../../flask/docs/api.rst:665
+#: ../../flask/docs/api.rst:640
 msgid "If a URL contains a default value, it will be redirected to its simpler form with a 301 redirect. In the above example, ``/users/page/1`` will be redirected to ``/users/``. If your route handles ``GET`` and ``POST`` requests, make sure the default route only handles ``GET``, as redirects can't preserve form data. ::"
 msgstr ""
 
-#: ../../flask/docs/api.rst:676
+#: ../../flask/docs/api.rst:651
 msgid "Here are the parameters that :meth:`~flask.Flask.route` and :meth:`~flask.Flask.add_url_rule` accept.  The only difference is that with the route parameter the view function is defined with the decorator instead of the `view_func` parameter."
 msgstr ""
 
-#: ../../flask/docs/api.rst:682
+#: ../../flask/docs/api.rst:657
 msgid "`rule`"
 msgstr ""
 
-#: ../../flask/docs/api.rst:682
+#: ../../flask/docs/api.rst:657
 msgid "the URL rule as string"
 msgstr ""
 
-#: ../../flask/docs/api.rst:683
+#: ../../flask/docs/api.rst:658
 msgid "`endpoint`"
 msgstr ""
 
-#: ../../flask/docs/api.rst:683
+#: ../../flask/docs/api.rst:658
 msgid "the endpoint for the registered URL rule.  Flask itself assumes that the name of the view function is the name of the endpoint if not explicitly stated."
 msgstr ""
 
-#: ../../flask/docs/api.rst:686
+#: ../../flask/docs/api.rst:661
 msgid "`view_func`"
 msgstr ""
 
-#: ../../flask/docs/api.rst:686
+#: ../../flask/docs/api.rst:661
 msgid "the function to call when serving a request to the provided endpoint.  If this is not provided one can specify the function later by storing it in the :attr:`~flask.Flask.view_functions` dictionary with the endpoint as key."
 msgstr ""
 
-#: ../../flask/docs/api.rst:691
+#: ../../flask/docs/api.rst:666
 msgid "`defaults`"
 msgstr ""
 
-#: ../../flask/docs/api.rst:691
+#: ../../flask/docs/api.rst:666
 msgid "A dictionary with defaults for this rule.  See the example above for how defaults work."
 msgstr ""
 
-#: ../../flask/docs/api.rst:693
+#: ../../flask/docs/api.rst:668
 msgid "`subdomain`"
 msgstr ""
 
-#: ../../flask/docs/api.rst:693
+#: ../../flask/docs/api.rst:668
 msgid "specifies the rule for the subdomain in case subdomain matching is in use.  If not specified the default subdomain is assumed."
 msgstr ""
 
-#: ../../flask/docs/api.rst:696
+#: ../../flask/docs/api.rst:671
 msgid "`**options`"
 msgstr ""
 
-#: ../../flask/docs/api.rst:696
+#: ../../flask/docs/api.rst:671
 msgid "the options to be forwarded to the underlying :class:`~werkzeug.routing.Rule` object.  A change to Werkzeug is handling of method options.  methods is a list of methods this rule should be limited to (``GET``, ``POST`` etc.).  By default a rule just listens for ``GET`` (and implicitly ``HEAD``).  Starting with Flask 0.6, ``OPTIONS`` is implicitly added and handled by the standard request handling.  They have to be specified as keyword arguments."
 msgstr ""
 
-#: ../../flask/docs/api.rst:708
+#: ../../flask/docs/api.rst:683
 msgid "View Function Options"
 msgstr ""
 
-#: ../../flask/docs/api.rst:710
+#: ../../flask/docs/api.rst:685
 msgid "For internal usage the view functions can have some attributes attached to customize behavior the view function would normally not have control over. The following attributes can be provided optionally to either override some defaults to :meth:`~flask.Flask.add_url_rule` or general behavior:"
 msgstr ""
 
-#: ../../flask/docs/api.rst:715
+#: ../../flask/docs/api.rst:690
 msgid "`__name__`: The name of a function is by default used as endpoint.  If endpoint is provided explicitly this value is used.  Additionally this will be prefixed with the name of the blueprint by default which cannot be customized from the function itself."
 msgstr ""
 
-#: ../../flask/docs/api.rst:720
+#: ../../flask/docs/api.rst:695
 msgid "`methods`: If methods are not provided when the URL rule is added, Flask will look on the view function object itself if a `methods` attribute exists.  If it does, it will pull the information for the methods from there."
 msgstr ""
 
-#: ../../flask/docs/api.rst:725
+#: ../../flask/docs/api.rst:700
 msgid "`provide_automatic_options`: if this attribute is set Flask will either force enable or disable the automatic implementation of the HTTP ``OPTIONS`` response.  This can be useful when working with decorators that want to customize the ``OPTIONS`` response on a per-view basis."
 msgstr ""
 
-#: ../../flask/docs/api.rst:731
+#: ../../flask/docs/api.rst:706
 msgid "`required_methods`: if this attribute is set, Flask will always add these methods when registering a URL rule even if the methods were explicitly overridden in the ``route()`` call."
 msgstr ""
 
-#: ../../flask/docs/api.rst:735
+#: ../../flask/docs/api.rst:710
 msgid "Full example::"
 msgstr ""
 
-#: ../../flask/docs/api.rst:747
+#: ../../flask/docs/api.rst:722
 msgid "The `provide_automatic_options` functionality was added."
 msgstr ""
 
-#: ../../flask/docs/api.rst:751
+#: ../../flask/docs/api.rst:726
 msgid "Command Line Interface"
 msgstr ""
 
@@ -4857,7 +5090,15 @@ msgid "an optional callback that is passed the script info and returns the loade
 msgstr ""
 
 #: ../../flask/src/flask/cli.py:docstring of flask.cli.FlaskGroup:15
-msgid "Set the app's debug flag based on the active environment"
+msgid "Set the app's debug flag."
+msgstr ""
+
+#: ../../flask/src/flask/cli.py:docstring of flask.cli.FlaskGroup:17
+msgid "Added the ``-A/--app``, ``--debug/--no-debug``, ``-e/--env-file`` options."
+msgstr ""
+
+#: ../../flask/src/flask/cli.py:docstring of flask.cli.FlaskGroup:20
+msgid "An app context is pushed when running ``app.cli`` commands, so ``@with_appcontext`` is no longer required for those commands."
 msgstr ""
 
 #: ../../flask/src/flask/cli.py:docstring of flask.cli.FlaskGroup.get_command:1
@@ -4868,48 +5109,36 @@ msgstr ""
 msgid "Returns a list of subcommand names in the order they should appear."
 msgstr ""
 
-#: ../../flask/src/flask/cli.py:docstring of flask.cli.FlaskGroup.main:1
-msgid "This is the way to invoke a script with all the bells and whistles as a command line application.  This will always terminate the application after a call.  If this is not wanted, ``SystemExit`` needs to be caught."
+#: ../../flask/src/flask/cli.py:docstring of flask.cli.FlaskGroup.make_context:1
+msgid "This function when given an info name and arguments will kick off the parsing and create a new :class:`Context`.  It does not invoke the actual command callback though."
 msgstr ""
 
-#: ../../flask/src/flask/cli.py:docstring of flask.cli.FlaskGroup.main:6
-msgid "This method is also available by directly calling the instance of a :class:`Command`."
+#: ../../flask/src/flask/cli.py:docstring of flask.cli.FlaskGroup.make_context:5
+msgid "To quickly customize the context class used without overriding this method, set the :attr:`context_class` attribute."
 msgstr ""
 
-#: ../../flask/src/flask/cli.py:docstring of flask.cli.FlaskGroup.main:9
-msgid "the arguments that should be used for parsing.  If not provided, ``sys.argv[1:]`` is used."
+#: ../../flask/src/flask/cli.py:docstring of flask.cli.FlaskGroup.make_context:8
+msgid "the info name for this invocation.  Generally this is the most descriptive name for the script or command.  For the toplevel script it's usually the name of the script, for commands below it it's the name of the command."
 msgstr ""
 
-#: ../../flask/src/flask/cli.py:docstring of flask.cli.FlaskGroup.main:11
-msgid "the program name that should be used.  By default the program name is constructed by taking the file name from ``sys.argv[0]``."
+#: ../../flask/src/flask/cli.py:docstring of flask.cli.FlaskGroup.make_context:13
+msgid "the arguments to parse as list of strings."
 msgstr ""
 
-#: ../../flask/src/flask/cli.py:docstring of flask.cli.FlaskGroup.main:14
-msgid "the environment variable that controls the bash completion support.  The default is ``\"_<prog_name>_COMPLETE\"`` with prog_name in uppercase."
+#: ../../flask/src/flask/cli.py:docstring of flask.cli.FlaskGroup.make_context:14
+msgid "the parent context if available."
 msgstr ""
 
-#: ../../flask/src/flask/cli.py:docstring of flask.cli.FlaskGroup.main:18
-msgid "the default behavior is to invoke the script in standalone mode.  Click will then handle exceptions and convert them into error messages and the function will never return but shut down the interpreter.  If this is set to `False` they will be propagated to the caller and the return value of this function is the return value of :meth:`invoke`."
+#: ../../flask/src/flask/cli.py:docstring of flask.cli.FlaskGroup.make_context:15
+msgid "extra keyword arguments forwarded to the context constructor."
 msgstr ""
 
-#: ../../flask/src/flask/cli.py:docstring of flask.cli.FlaskGroup.main:27
-msgid "Expand glob patterns, user dir, and env vars in command line args on Windows."
+#: ../../flask/src/flask/cli.py:docstring of flask.cli.FlaskGroup.make_context:18
+msgid "Added the :attr:`context_class` attribute."
 msgstr ""
 
-#: ../../flask/src/flask/cli.py:docstring of flask.cli.FlaskGroup.main:29
-msgid "extra keyword arguments are forwarded to the context constructor.  See :class:`Context` for more information."
-msgstr ""
-
-#: ../../flask/src/flask/cli.py:docstring of flask.cli.FlaskGroup.main:32
-msgid "Added the ``windows_expand_args`` parameter to allow disabling command line arg expansion on Windows."
-msgstr ""
-
-#: ../../flask/src/flask/cli.py:docstring of flask.cli.FlaskGroup.main:36
-msgid "When taking arguments from ``sys.argv`` on Windows, glob patterns, user dir, and env vars are expanded."
-msgstr ""
-
-#: ../../flask/src/flask/cli.py:docstring of flask.cli.FlaskGroup.main:40
-msgid "Added the ``standalone_mode`` parameter."
+#: ../../flask/src/flask/cli.py:docstring of flask.cli.FlaskGroup.parse_args:1
+msgid "Given a context and a list of arguments this creates the parser and parses the arguments, then modifies the context as necessary. This is automatically invoked by :meth:`make_context`."
 msgstr ""
 
 #: ../../flask/src/flask/cli.py:docstring of flask.cli.AppGroup:1
@@ -4968,19 +5197,31 @@ msgstr ""
 msgid "``True`` if a file was loaded."
 msgstr ""
 
+#: ../../flask/src/flask/cli.py:docstring of flask.cli.load_dotenv:13
+msgid "The current directory is not changed to the location of the loaded file."
+msgstr ""
+
 #: ../../flask/src/flask/cli.py:docstring of flask.cli.load_dotenv:17
 msgid "When loading the env files, set the default encoding to UTF-8."
 msgstr ""
 
-#: ../../flask/src/flask/cli.py:docstring of flask.cli.load_dotenv:13
+#: ../../flask/src/flask/cli.py:docstring of flask.cli.load_dotenv:20
 msgid "Returns ``False`` when python-dotenv is not installed, or when the given path isn't a file."
 msgstr ""
 
 #: ../../flask/src/flask/cli.py:docstring of flask.cli.with_appcontext:1
-msgid "Wraps a callback so that it's guaranteed to be executed with the script's application context.  If callbacks are registered directly to the ``app.cli`` object then they are wrapped with this function by default unless it's disabled."
+msgid "Wraps a callback so that it's guaranteed to be executed with the script's application context."
 msgstr ""
 
-#: ../../flask/docs/api.rst:770
+#: ../../flask/src/flask/cli.py:docstring of flask.cli.with_appcontext:4
+msgid "Custom commands (and their options) registered under ``app.cli`` or ``blueprint.cli`` will always have an app context available, this decorator is not required in that case."
+msgstr ""
+
+#: ../../flask/src/flask/cli.py:docstring of flask.cli.with_appcontext:8
+msgid "The app context is active for subcommands as well as the decorated callback. The app context is always available to ``app.cli`` command and parameter callbacks."
+msgstr ""
+
+#: ../../flask/docs/api.rst:745
 msgid "Marks a function so that an instance of :class:`ScriptInfo` is passed as first argument to the click callback."
 msgstr ""
 
@@ -4993,7 +5234,7 @@ msgid "This server is for development purposes only. It does not provide the sta
 msgstr ""
 
 #: ../../docstring of flask.cli.run_command:6
-msgid "The reloader and debugger are enabled by default if FLASK_ENV=development or FLASK_DEBUG=1."
+msgid "The reloader and debugger are enabled by default with the '--debug' option."
 msgstr ""
 
 #: ../../docstring of flask.cli.shell_command:1

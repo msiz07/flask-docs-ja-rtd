@@ -6,16 +6,16 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 2.0.x\n"
+"Project-Id-Version: Flask 2.2.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-20 18:38+0900\n"
+"POT-Creation-Date: 2022-11-26 22:21+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.10.3\n"
 
 # c3aaedfb657f4184886111da24a85674
 #: ../../flask/docs/testing.rst:2
@@ -133,12 +133,18 @@ msgstr ""
 "さい。"
 
 #: ../../flask/docs/testing.rst:91
+#, fuzzy
+#| msgid "" "The ``client`` has methods that match the common HTTP request
+#| methods, " "such as ``client.get()`` and ``client.post()``. They take many
+#| arguments " "for building the request; you can find the full documentation
+#| in " ":class:`~werkzeug.test.EnvironBuilder`. Typically you'll use ``path``,
+#| " "``query``, ``headers``, and ``data`` or ``json``."
 msgid ""
 "The ``client`` has methods that match the common HTTP request methods, "
 "such as ``client.get()`` and ``client.post()``. They take many arguments "
 "for building the request; you can find the full documentation in "
 ":class:`~werkzeug.test.EnvironBuilder`. Typically you'll use ``path``, "
-"``query``, ``headers``, and ``data`` or ``json``."
+"``query_string``, ``headers``, and ``data`` or ``json``."
 msgstr ""
 "``client`` は、``client.get()`` や ``client.post()`` のように、一般的なHTTP"
 "リクエストのメソッドに合致するメソッドを持っています。それらはリクエストを"
@@ -165,10 +171,14 @@ msgstr ""
 "``response.get_data(as_text=True)`` を使いましょう。"
 
 #: ../../flask/docs/testing.rst:111
+#, fuzzy
+#| msgid "" "Pass a dict ``query={\"key\": \"value\", ...}`` to set arguments
+#| in the " "query string (after the ``?`` in the URL). Pass a dict
+#| ``headers={}`` to " "set request headers."
 msgid ""
-"Pass a dict ``query={\"key\": \"value\", ...}`` to set arguments in the "
-"query string (after the ``?`` in the URL). Pass a dict ``headers={}`` to "
-"set request headers."
+"Pass a dict ``query_string={\"key\": \"value\", ...}`` to set arguments "
+"in the query string (after the ``?`` in the URL). Pass a dict "
+"``headers={}`` to set request headers."
 msgstr ""
 "query string（URLの ``?`` の後）の中の引数を設定するには、dictの "
 "``query={\"key\": \"value\", ...}`` を引数で渡します。リクエストのヘッダー"

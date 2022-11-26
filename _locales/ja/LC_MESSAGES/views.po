@@ -6,138 +6,466 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 2.0.x\n"
+"Project-Id-Version: Flask 2.2.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-20 18:38+0900\n"
+"POT-Creation-Date: 2022-11-26 22:21+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.10.3\n"
 
-# 673fb7d43f984ee4b415298a0d4bf7e0
 #: ../../flask/docs/views.rst:2
-msgid "Pluggable Views"
-msgstr "差し込み可能なview（Pluggable Views）"
+msgid "Class-based Views"
+msgstr ""
 
-# cada520f16ca44d49bde7c265f2c0799
 #: ../../flask/docs/views.rst:6
 msgid ""
-"Flask 0.7 introduces pluggable views inspired by the generic views from "
-"Django which are based on classes instead of functions.  The main "
-"intention is that you can replace parts of the implementations and this "
-"way have customizable pluggable views."
+"This page introduces using the :class:`View` and :class:`MethodView` "
+"classes to write class-based views."
 msgstr ""
-"Flask 0.7では、Django由来で、関数の代わりにクラスに基づいた汎用的なviewに"
-"発想を得た、差し込み可能なview（pluggable views）を導入しています。その第一"
-"の意図は、実装の一部が置き換え可能であり、その方法（実装の置き換え）で"
-"pluggable viewをカスタマイズできるようにすることです。"
 
-# dc66e643c8554dd0afa319a2e69ec84d
-#: ../../flask/docs/views.rst:12
-msgid "Basic Principle"
-msgstr "基本原理（Basic Principle）"
+#: ../../flask/docs/views.rst:9
+msgid ""
+"A class-based view is a class that acts as a view function. Because it is"
+" a class, different instances of the class can be created with different "
+"arguments, to change the behavior of the view. This is also known as "
+"generic, reusable, or pluggable views."
+msgstr ""
 
-# ca45e65998b24f408a5bcdca0a2d5652
 #: ../../flask/docs/views.rst:14
 msgid ""
-"Consider you have a function that loads a list of objects from the "
-"database and renders into a template::"
+"An example of where this is useful is defining a class that creates an "
+"API based on the database model it is initialized with."
 msgstr ""
-"データベースからオブジェクトのリストを読み込み、テンプレート内で表示する"
-"（以下のような）関数があるとします::"
 
-# 0658094f6c7d4cbe961342e83d5b1da3
+#: ../../flask/docs/views.rst:17
+msgid ""
+"For more complex API behavior and customization, look into the various "
+"API extensions for Flask."
+msgstr ""
+
 #: ../../flask/docs/views.rst:22
-msgid ""
-"This is simple and flexible, but if you want to provide this view in a "
-"generic fashion that can be adapted to other models and templates as well"
-" you might want more flexibility.  This is where pluggable class-based "
-"views come into place.  As the first step to convert this into a class "
-"based view you would do this::"
+msgid "Basic Reusable View"
 msgstr ""
-"これはシンプルで柔軟性もありますが、もしもこのviewを他のモデルやテンプ"
-"レートへも適応できるような汎用的なやり方で提供したい場合、もっと柔軟性が"
-"欲しくなるかもしれません。これは、クラスに基づいた差し込み可能なview"
-"（pluggable class-based views）が出てくるところです。これをクラスに基づく"
-"viewへと変換する最初の一歩として、以下のようにできるでしょう::"
 
-# 1b8018575efd4e3cba392413af3616d3
-#: ../../flask/docs/views.rst:39
+#: ../../flask/docs/views.rst:24
 msgid ""
-"As you can see what you have to do is to create a subclass of "
-":class:`flask.views.View` and implement "
-":meth:`~flask.views.View.dispatch_request`.  Then we have to convert that"
-" class into an actual view function by using the "
-":meth:`~flask.views.View.as_view` class method.  The string you pass to "
-"that function is the name of the endpoint that view will then have.  But "
-"this by itself is not helpful, so let's refactor the code a bit::"
+"Let's walk through an example converting a view function to a view class."
+" We start with a view function that queries a list of users then renders "
+"a template to show the list."
 msgstr ""
-"見てわかるように、:class:`flask.views.View` のサブクラスを作成し、"
-":meth:`~flask.view.View.dispatch_request` を実装する必要があります。"
-"それから、クラスメソッドの :meth:`~flask.views.View.as_view` を使って、"
-"そのクラスを実際のview関数へ変換する必要があります。その関数（as_view関数）"
-"へ渡す文字列は、それ以降viewが持つエンドポイントの名前になります。"
-"しかしながら、これ（訳注: 上記のコード例のことだと思います）自体が役立つ"
-"わけではないので、少しコードをリファクタリングしましょう::"
 
-# d49206b229e84761a18a03360ce2f861
-#: ../../flask/docs/views.rst:70
+#: ../../flask/docs/views.rst:35
 msgid ""
-"This of course is not that helpful for such a small example, but it's "
-"good enough to explain the basic principle.  When you have a class-based "
-"view the question comes up what ``self`` points to.  The way this works "
-"is that whenever the request is dispatched a new instance of the class is"
-" created and the :meth:`~flask.views.View.dispatch_request` method is "
-"called with the parameters from the URL rule.  The class itself is "
-"instantiated with the parameters passed to the "
-":meth:`~flask.views.View.as_view` function. For instance you can write a "
-"class like this::"
+"This works for the user model, but let's say you also had more models "
+"that needed list pages. You'd need to write another view function for "
+"each model, even though the only thing that would change is the model and"
+" template name."
 msgstr ""
-"これ（クラスに基づいたview）は、もちろんこのような小さな例ではそれほど"
-"役立つものではありませんが、基本原理を説明するには十分です。クラスに基づく"
-"viewを持つときは ``self`` が何を指すかという質問が上がってきます。"
-"この（クラスに基づいたviewの）働き方は、リクエストが割り振られると"
-"必ずクラスの新しいインスタンスが作成され、"
-":meth:`~flask.views.View.dispatch_request` メソッドがURLルール由来の"
-"パラメーターを使って呼ばれるように働きます。クラス自体は "
-":meth:`~flask.views.View.as_view` 関数に渡されたパラメーターを使って"
-"インスタンス化されます。例えば、以下のようにクラスを書くことができます::"
 
-# 2fa2c518bb2e4877a163ca71af6444f6
-#: ../../flask/docs/views.rst:85
-msgid "And then you can register it like this::"
-msgstr "それから、以下のようにこのクラスを登録できます::"
+#: ../../flask/docs/views.rst:40
+msgid ""
+"Instead, you can write a :class:`View` subclass that will query a model "
+"and render a template. As the first step, we'll convert the view to a "
+"class without any customization."
+msgstr ""
+
+#: ../../flask/docs/views.rst:55
+msgid ""
+"The :meth:`View.dispatch_request` method is the equivalent of the view "
+"function. Calling :meth:`View.as_view` method will create a view function"
+" that can be registered on the app with its "
+":meth:`~flask.Flask.add_url_rule` method. The first argument to "
+"``as_view`` is the name to use to refer to the view with "
+":func:`~flask.url_for`."
+msgstr ""
+
+#: ../../flask/docs/views.rst:64
+msgid ""
+"You can't decorate the class with ``@app.route()`` the way you'd do with "
+"a basic view function."
+msgstr ""
+
+#: ../../flask/docs/views.rst:67
+msgid ""
+"Next, we need to be able to register the same view class for different "
+"models and templates, to make it more useful than the original function. "
+"The class will take two arguments, the model and template, and store them"
+" on ``self``. Then ``dispatch_request`` can reference these instead of "
+"hard-coded values."
+msgstr ""
+
+#: ../../flask/docs/views.rst:84
+msgid ""
+"Remember, we create the view function with ``View.as_view()`` instead of "
+"creating the class directly. Any extra arguments passed to ``as_view`` "
+"are then passed when creating the class. Now we can register the same "
+"view to handle multiple models."
+msgstr ""
+
+#: ../../flask/docs/views.rst:102
+msgid "URL Variables"
+msgstr ""
+
+#: ../../flask/docs/views.rst:104
+msgid ""
+"Any variables captured by the URL are passed as keyword arguments to the "
+"``dispatch_request`` method, as they would be for a regular view "
+"function."
+msgstr ""
+
+#: ../../flask/docs/views.rst:123
+msgid "View Lifetime and ``self``"
+msgstr ""
+
+#: ../../flask/docs/views.rst:125
+msgid ""
+"By default, a new instance of the view class is created every time a "
+"request is handled. This means that it is safe to write other data to "
+"``self`` during the request, since the next request will not see it, "
+"unlike other forms of global state."
+msgstr ""
+
+#: ../../flask/docs/views.rst:130
+msgid ""
+"However, if your view class needs to do a lot of complex initialization, "
+"doing it for every request is unnecessary and can be inefficient. To "
+"avoid this, set :attr:`View.init_every_request` to ``False``, which will "
+"only create one instance of the class and use it for every request. In "
+"this case, writing to ``self`` is not safe. If you need to store data "
+"during the request, use :data:`~flask.g` instead."
+msgstr ""
+
+#: ../../flask/docs/views.rst:137
+msgid ""
+"In the ``ListView`` example, nothing writes to ``self`` during the "
+"request, so it is more efficient to create a single instance."
+msgstr ""
+
+#: ../../flask/docs/views.rst:153
+msgid ""
+"Different instances will still be created each for each ``as_view`` call,"
+" but not for each request to those views."
+msgstr ""
+
+#: ../../flask/docs/views.rst:158
+msgid "View Decorators"
+msgstr ""
+
+#: ../../flask/docs/views.rst:160
+msgid ""
+"The view class itself is not the view function. View decorators need to "
+"be applied to the view function returned by ``as_view``, not the class "
+"itself. Set :attr:`View.decorators` to a list of decorators to apply."
+msgstr ""
+
+#: ../../flask/docs/views.rst:171
+msgid ""
+"If you didn't set ``decorators``, you could apply them manually instead. "
+"This is equivalent to:"
+msgstr ""
+
+#: ../../flask/docs/views.rst:181
+msgid ""
+"Keep in mind that order matters. If you're used to ``@decorator`` style, "
+"this is equivalent to:"
+msgstr ""
+
+#: ../../flask/docs/views.rst:196
+msgid ""
+"A common pattern is to register a view with ``methods=[\"GET\", "
+"\"POST\"]``, then check ``request.method == \"POST\"`` to decide what to "
+"do. Setting :attr:`View.methods` is equivalent to passing the list of "
+"methods to ``add_url_rule`` or ``route``."
+msgstr ""
+
+#: ../../flask/docs/views.rst:213
+msgid ""
+"This is equivalent to the following, except further subclasses can "
+"inherit or change the methods."
+msgstr ""
+
+#: ../../flask/docs/views.rst:228
+msgid ""
+"For APIs it can be helpful to use a different function for each HTTP "
+"method. :class:`MethodView` extends the basic :class:`View` to dispatch "
+"to different methods of the class based on the request method. Each HTTP "
+"method maps to a method of the class with the same (lowercase) name."
+msgstr ""
+
+#: ../../flask/docs/views.rst:233
+msgid ""
+":class:`MethodView` automatically sets :attr:`View.methods` based on the "
+"methods defined by the class. It even knows how to handle subclasses that"
+" override or define other methods."
+msgstr ""
+
+#: ../../flask/docs/views.rst:237
+msgid ""
+"We can make a generic ``ItemAPI`` class that provides get (detail), patch"
+" (edit), and delete methods for a given model. A ``GroupAPI`` can provide"
+" get (list) and post (create) methods."
+msgstr ""
+
+#: ../../flask/docs/views.rst:304
+msgid "This produces the following views, a standard REST API!"
+msgstr ""
+
+#: ../../flask/docs/views.rst:312 ../../flask/docs/views.rst:317
+msgid "``PATCH``"
+msgstr ""
+
+#: ../../flask/docs/views.rst:314 ../../flask/docs/views.rst:315
+msgid "``/stories/``"
+msgstr ""
+
+#: ../../flask/docs/views.rst:314
+msgid "List all stories"
+msgstr ""
+
+#: ../../flask/docs/views.rst:316 ../../flask/docs/views.rst:317
+#: ../../flask/docs/views.rst:318
+msgid "``/stories/<id>``"
+msgstr ""
+
+#: ../../flask/docs/views.rst:317
+msgid "Update a story"
+msgstr ""
+
+#: ../../flask/docs/views.rst:318
+msgid "Delete a story"
+msgstr ""
 
 # 058097b6724444caaa5a9e517d7dcdc2
-#: ../../flask/docs/views.rst:91
+#: ../../flask/docs/views.rst:194
 msgid "Method Hints"
 msgstr "メソッドの暗示（Method Hints）"
 
-# 7f2e22921ac1473aa2c06b0200e618c6
-#: ../../flask/docs/views.rst:93
-msgid ""
-"Pluggable views are attached to the application like a regular function "
-"by either using :func:`~flask.Flask.route` or better "
-":meth:`~flask.Flask.add_url_rule`.  That however also means that you "
-"would have to provide the names of the HTTP methods the view supports "
-"when you attach this.  In order to move that information to the class you"
-" can provide a :attr:`~flask.views.View.methods` attribute that has this "
-"information::"
-msgstr ""
-"pluggable viewは :func:`~flask.Flask.route` またはより好ましい "
-":meth:`~flask.Flask.add_url_rule` のいずれかを使用して、普通の関数のように"
-"アプリケーションへ取り付けられます。しかしながら、これはviewを取り付ける"
-"ときは、viewがサポートするHTTPメソッド名の提供が必要になりそうなことを意味"
-"します。サポートするメソッドの情報をクラスへ移動するためには、その情報を"
-"持った :attr:`~flask.views.View.methods` 属性を提供できます::"
-
 # cbb39e14d0bc46e8a5617e71d683560d
-#: ../../flask/docs/views.rst:112
-msgid "Method Based Dispatching"
+#: ../../flask/docs/views.rst:226
+#, fuzzy
+#| msgid "Method Based Dispatching"
+msgid "Method Dispatching and APIs"
 msgstr "メソッドに基づいた割り振り（Method Based Dispatching）"
+
+# 6b7de1494c33459582731c3819736e65
+#: ../../flask/docs/views.rst:307
+msgid "URL"
+msgstr ""
+
+# b21a87ba05024908a5b9c8a78d06027c
+#: ../../flask/docs/views.rst:307
+msgid "Method"
+msgstr ""
+
+# e54c5ce15be742a197366582ec3636fd
+#: ../../flask/docs/views.rst:307
+msgid "Description"
+msgstr ""
+
+# 54524152608947368a0991a90efadce8
+# 43b44055f7ed4fb4ae53076418f177cb
+#: ../../flask/docs/views.rst:309 ../../flask/docs/views.rst:310
+msgid "``/users/``"
+msgstr ""
+
+# 7ce0001279634cd4941309570e1d41b3
+# 3ffc5e488af44a2f917e5f4cfcc8dda2
+#: ../../flask/docs/views.rst:309 ../../flask/docs/views.rst:311
+#: ../../flask/docs/views.rst:314 ../../flask/docs/views.rst:316
+msgid "``GET``"
+msgstr ""
+
+# 18c10cbeae4a415babb2828d0df3001d
+#: ../../flask/docs/views.rst:309
+#, fuzzy
+#| msgid "Gives a list of all users"
+msgid "List all users"
+msgstr "すべてのユーザーのリストを与えます"
+
+# c3cb7c77e9ac449c9b84861c840efc95
+#: ../../flask/docs/views.rst:310 ../../flask/docs/views.rst:315
+msgid "``POST``"
+msgstr ""
+
+# 33628c47c6024517ba9a9d27d4957cd9
+#: ../../flask/docs/views.rst:310
+#, fuzzy
+#| msgid "Creates a new user"
+msgid "Create a new user"
+msgstr "新規ユーザーを作成します"
+
+# cd18ec7270e34659b217438aab82fb06
+# 60d15b523ecc4ccfbea517bf5d34f7df
+# a6195c5a92784bdca62544375be5ec50
+#: ../../flask/docs/views.rst:311 ../../flask/docs/views.rst:312
+#: ../../flask/docs/views.rst:313
+msgid "``/users/<id>``"
+msgstr ""
+
+# 80d60beaba674391bd185616f9055c10
+#: ../../flask/docs/views.rst:311
+#, fuzzy
+#| msgid "Shows a single user"
+msgid "Show a single user"
+msgstr "単一ユーザーを表示します"
+
+# 2653de67a74d4f11a5feda2103e6df17
+#: ../../flask/docs/views.rst:312
+#, fuzzy
+#| msgid "Updates a single user"
+msgid "Update a user"
+msgstr "単一ユーザーを更新します"
+
+# b02ff4ae79d04681bfd50ac54095a391
+#: ../../flask/docs/views.rst:313 ../../flask/docs/views.rst:318
+msgid "``DELETE``"
+msgstr ""
+
+# 37f799b073394857a4d542c04c7504c9
+#: ../../flask/docs/views.rst:313
+#, fuzzy
+#| msgid "Deletes a single user"
+msgid "Delete a user"
+msgstr "単一ユーザーを削除します"
+
+# 33628c47c6024517ba9a9d27d4957cd9
+#: ../../flask/docs/views.rst:315
+#, fuzzy
+#| msgid "Creates a new user"
+msgid "Create a new story"
+msgstr "新規ユーザーを作成します"
+
+# 80d60beaba674391bd185616f9055c10
+#: ../../flask/docs/views.rst:316
+#, fuzzy
+#| msgid "Shows a single user"
+msgid "Show a single story"
+msgstr "単一ユーザーを表示します"
+
+# 673fb7d43f984ee4b415298a0d4bf7e0
+#~ msgid "Pluggable Views"
+#~ msgstr "差し込み可能なview（Pluggable Views）"
+
+# cada520f16ca44d49bde7c265f2c0799
+#~ msgid ""
+#~ "Flask 0.7 introduces pluggable views "
+#~ "inspired by the generic views from "
+#~ "Django which are based on classes "
+#~ "instead of functions.  The main "
+#~ "intention is that you can replace "
+#~ "parts of the implementations and this"
+#~ " way have customizable pluggable views."
+#~ msgstr ""
+#~ "Flask "
+#~ "0.7では、Django由来で、関数の代わりにクラスに基づいた汎用的なviewに発想を得た、差し込み可能なview（pluggable"
+#~ " views）を導入しています。その第一の意図は、実装の一部が置き換え可能であり、その方法（実装の置き換え）でpluggable"
+#~ " viewをカスタマイズできるようにすることです。"
+
+# dc66e643c8554dd0afa319a2e69ec84d
+#~ msgid "Basic Principle"
+#~ msgstr "基本原理（Basic Principle）"
+
+# ca45e65998b24f408a5bcdca0a2d5652
+#~ msgid ""
+#~ "Consider you have a function that "
+#~ "loads a list of objects from the"
+#~ " database and renders into a "
+#~ "template::"
+#~ msgstr "データベースからオブジェクトのリストを読み込み、テンプレート内で表示する（以下のような）関数があるとします::"
+
+# 0658094f6c7d4cbe961342e83d5b1da3
+#~ msgid ""
+#~ "This is simple and flexible, but "
+#~ "if you want to provide this view"
+#~ " in a generic fashion that can "
+#~ "be adapted to other models and "
+#~ "templates as well you might want "
+#~ "more flexibility.  This is where "
+#~ "pluggable class-based views come into"
+#~ " place.  As the first step to "
+#~ "convert this into a class based "
+#~ "view you would do this::"
+#~ msgstr ""
+#~ "これはシンプルで柔軟性もありますが、もしもこのviewを他のモデルやテンプレートへも適応できるような汎用的なやり方で提供したい場合、もっと柔軟性が欲しくなるかもしれません。これは、クラスに基づいた差し込み可能なview（pluggable"
+#~ " class-based "
+#~ "views）が出てくるところです。これをクラスに基づくviewへと変換する最初の一歩として、以下のようにできるでしょう::"
+
+# 1b8018575efd4e3cba392413af3616d3
+#~ msgid ""
+#~ "As you can see what you have "
+#~ "to do is to create a subclass "
+#~ "of :class:`flask.views.View` and implement "
+#~ ":meth:`~flask.views.View.dispatch_request`.  Then we "
+#~ "have to convert that class into an"
+#~ " actual view function by using the"
+#~ " :meth:`~flask.views.View.as_view` class method.  "
+#~ "The string you pass to that "
+#~ "function is the name of the "
+#~ "endpoint that view will then have.  "
+#~ "But this by itself is not helpful,"
+#~ " so let's refactor the code a "
+#~ "bit::"
+#~ msgstr ""
+#~ "見てわかるように、:class:`flask.views.View` "
+#~ "のサブクラスを作成し、:meth:`~flask.view.View.dispatch_request` "
+#~ "を実装する必要があります。それから、クラスメソッドの :meth:`~flask.views.View.as_view` "
+#~ "を使って、そのクラスを実際のview関数へ変換する必要があります。その関数（as_view関数）へ渡す文字列は、それ以降viewが持つエンドポイントの名前になります。しかしながら、これ（訳注:"
+#~ " 上記のコード例のことだと思います）自体が役立つわけではないので、少しコードをリファクタリングしましょう::"
+
+# d49206b229e84761a18a03360ce2f861
+#~ msgid ""
+#~ "This of course is not that helpful"
+#~ " for such a small example, but "
+#~ "it's good enough to explain the "
+#~ "basic principle.  When you have a "
+#~ "class-based view the question comes "
+#~ "up what ``self`` points to.  The "
+#~ "way this works is that whenever "
+#~ "the request is dispatched a new "
+#~ "instance of the class is created "
+#~ "and the :meth:`~flask.views.View.dispatch_request` "
+#~ "method is called with the parameters "
+#~ "from the URL rule.  The class "
+#~ "itself is instantiated with the "
+#~ "parameters passed to the "
+#~ ":meth:`~flask.views.View.as_view` function. For "
+#~ "instance you can write a class "
+#~ "like this::"
+#~ msgstr ""
+#~ "これ（クラスに基づいたview）は、もちろんこのような小さな例ではそれほど役立つものではありませんが、基本原理を説明するには十分です。クラスに基づくviewを持つときは"
+#~ " ``self`` "
+#~ "が何を指すかという質問が上がってきます。この（クラスに基づいたviewの）働き方は、リクエストが割り振られると必ずクラスの新しいインスタンスが作成され、:meth:`~flask.views.View.dispatch_request`"
+#~ " メソッドがURLルール由来のパラメーターを使って呼ばれるように働きます。クラス自体は "
+#~ ":meth:`~flask.views.View.as_view` "
+#~ "関数に渡されたパラメーターを使ってインスタンス化されます。例えば、以下のようにクラスを書くことができます::"
+
+# 2fa2c518bb2e4877a163ca71af6444f6
+#~ msgid "And then you can register it like this::"
+#~ msgstr "それから、以下のようにこのクラスを登録できます::"
+
+# 7f2e22921ac1473aa2c06b0200e618c6
+#~ msgid ""
+#~ "Pluggable views are attached to the "
+#~ "application like a regular function by"
+#~ " either using :func:`~flask.Flask.route` or "
+#~ "better :meth:`~flask.Flask.add_url_rule`.  That "
+#~ "however also means that you would "
+#~ "have to provide the names of the"
+#~ " HTTP methods the view supports when"
+#~ " you attach this.  In order to "
+#~ "move that information to the class "
+#~ "you can provide a "
+#~ ":attr:`~flask.views.View.methods` attribute that has"
+#~ " this information::"
+#~ msgstr ""
+#~ "pluggable viewは :func:`~flask.Flask.route` またはより好ましい"
+#~ " :meth:`~flask.Flask.add_url_rule` "
+#~ "のいずれかを使用して、普通の関数のようにアプリケーションへ取り付けられます。しかしながら、これはviewを取り付けるときは、viewがサポートするHTTPメソッド名の提供が必要になりそうなことを意味します。サポートするメソッドの情報をクラスへ移動するためには、その情報を持った"
+#~ " :attr:`~flask.views.View.methods` 属性を提供できます::"
 
 # a13c21e4d5c243fd815510d03858226c
 # | msgid "" "For RESTful APIs it's especially helpful to execute a different
@@ -145,197 +473,127 @@ msgstr "メソッドに基づいた割り振り（Method Based Dispatching）"
 # :class:`flask.views.MethodView`
 # | you can " "easily do that.  Each HTTP method maps to a function with the
 # | same name " "(just in lowercase)::"
-#: ../../flask/docs/views.rst:114
-msgid ""
-"For RESTful APIs it's especially helpful to execute a different function "
-"for each HTTP method.  With the :class:`flask.views.MethodView` you can "
-"easily do that.  Each HTTP method maps to a method of the class with the "
-"same name (just in lowercase)::"
-msgstr ""
-"RESTful APIではHTTPメソッドごとに異なる関数を実行すると特別に役立ちます。"
-":class:`flask.views.MethodView` を使ってそれを容易に実行できます。各HTTP"
-"メソッドとクラスの同じ名前（小文字のみ）のメソッドとが対応付けられます::"
+#~ msgid ""
+#~ "For RESTful APIs it's especially helpful"
+#~ " to execute a different function for"
+#~ " each HTTP method.  With the "
+#~ ":class:`flask.views.MethodView` you can easily "
+#~ "do that.  Each HTTP method maps to"
+#~ " a method of the class with the"
+#~ " same name (just in lowercase)::"
+#~ msgstr ""
+#~ "RESTful "
+#~ "APIではHTTPメソッドごとに異なる関数を実行すると特別に役立ちます。:class:`flask.views.MethodView`"
+#~ " を使ってそれを容易に実行できます。各HTTPメソッドとクラスの同じ名前（小文字のみ）のメソッドとが対応付けられます::"
 
 # 95752d1bfeb741068305b23858e65b81
-#: ../../flask/docs/views.rst:133
-msgid ""
-"That way you also don't have to provide the "
-":attr:`~flask.views.View.methods` attribute.  It's automatically set "
-"based on the methods defined in the class."
-msgstr ""
-"この方法では :attr:`~flask.views.View.methods` 属性を提供する必要もあり"
-"ません。それはクラス内で定義されたメソッドに基づいて自動的に設定されます。"
+#~ msgid ""
+#~ "That way you also don't have to"
+#~ " provide the :attr:`~flask.views.View.methods` "
+#~ "attribute.  It's automatically set based "
+#~ "on the methods defined in the "
+#~ "class."
+#~ msgstr ""
+#~ "この方法では :attr:`~flask.views.View.methods` "
+#~ "属性を提供する必要もありません。それはクラス内で定義されたメソッドに基づいて自動的に設定されます。"
 
 # d43ad0ff4b754826aa6aec4ee9e49a60
-#: ../../flask/docs/views.rst:138
-msgid "Decorating Views"
-msgstr "viewの修飾（Decorating Views）"
+#~ msgid "Decorating Views"
+#~ msgstr "viewの修飾（Decorating Views）"
 
 # f81ba77a778f45d39b5f9f5963245647
-#: ../../flask/docs/views.rst:140
-msgid ""
-"Since the view class itself is not the view function that is added to the"
-" routing system it does not make much sense to decorate the class itself."
-" Instead you either have to decorate the return value of "
-":meth:`~flask.views.View.as_view` by hand::"
-msgstr ""
-"viewクラス自身は（Flaskの）ルーティングの仕組み（routing system）に追加"
-"されるview関数ではないため、クラス自体を修飾する（訳注: ここではPythonの"
-"decoratorを適用することだと思います）ことにそれほど意味はありません。代わり"
-"に、:meth:`~flask.views.View.as_view` の戻り値を手作業で修飾する必要があり"
-"ます::"
+#~ msgid ""
+#~ "Since the view class itself is not"
+#~ " the view function that is added "
+#~ "to the routing system it does not"
+#~ " make much sense to decorate the "
+#~ "class itself. Instead you either have"
+#~ " to decorate the return value of "
+#~ ":meth:`~flask.views.View.as_view` by hand::"
+#~ msgstr ""
+#~ "viewクラス自身は（Flaskの）ルーティングの仕組み（routing "
+#~ "system）に追加されるview関数ではないため、クラス自体を修飾する（訳注: "
+#~ "ここではPythonのdecoratorを適用することだと思います）ことにそれほど意味はありません。代わりに、:meth:`~flask.views.View.as_view`"
+#~ " の戻り値を手作業で修飾する必要があります::"
 
 # f60f61f0884949d78f11f7cb9f1bba40
-#: ../../flask/docs/views.rst:156
-msgid ""
-"Starting with Flask 0.8 there is also an alternative way where you can "
-"specify a list of decorators to apply in the class declaration::"
-msgstr ""
-"Flask 0.8からは、クラス宣言の中で適用するデコレーターのリストを指定できる"
-"代替手段が存在します::"
+#~ msgid ""
+#~ "Starting with Flask 0.8 there is "
+#~ "also an alternative way where you "
+#~ "can specify a list of decorators "
+#~ "to apply in the class declaration::"
+#~ msgstr "Flask 0.8からは、クラス宣言の中で適用するデコレーターのリストを指定できる代替手段が存在します::"
 
 # 04bc1572d76043f5982468c10af2270c
-#: ../../flask/docs/views.rst:162
-msgid ""
-"Due to the implicit self from the caller's perspective you cannot use "
-"regular view decorators on the individual methods of the view however, "
-"keep this in mind."
-msgstr ""
-"しかしながらメソッド呼び出し側の視点からはselfが暗黙的であるため、viewの各"
-"メソッドへ普通のview用デコレーター（訳注: 関数の上に「@～」で適用するやり方"
-"を指していると思います）は使用できないので、忘れないでください。"
+#~ msgid ""
+#~ "Due to the implicit self from the"
+#~ " caller's perspective you cannot use "
+#~ "regular view decorators on the "
+#~ "individual methods of the view however,"
+#~ " keep this in mind."
+#~ msgstr ""
+#~ "しかしながらメソッド呼び出し側の視点からはselfが暗黙的であるため、viewの各メソッドへ普通のview用デコレーター（訳注: "
+#~ "関数の上に「@～」で適用するやり方を指していると思います）は使用できないので、忘れないでください。"
 
 # d862ed189425491ebe3a70d8940e2103
-#: ../../flask/docs/views.rst:167
-msgid "Method Views for APIs"
-msgstr "API用のメソッドのview"
+#~ msgid "Method Views for APIs"
+#~ msgstr "API用のメソッドのview"
 
 # 5ac1b1b8a4d948b293b13d6034c7bc25
-#: ../../flask/docs/views.rst:169
-msgid ""
-"Web APIs are often working very closely with HTTP verbs so it makes a lot"
-" of sense to implement such an API based on the "
-":class:`~flask.views.MethodView`.  That said, you will notice that the "
-"API will require different URL rules that go to the same method view most"
-" of the time.  For instance consider that you are exposing a user object "
-"on the web:"
-msgstr ""
-"Web APIはしばしばHTTPの動詞（訳注: ここでは「GET」「POST」などのメソッド名"
-"のこと）と密接しながら働くため、:class:`~flask.views.MethodView` に基づ"
-"いてそのようなAPIを実装することはとても理にかなっています。その際、殆どの"
-"ときに、同じメソッドのviewに対して異なるURLルールをAPIが要求する（訳注: "
-"例えば、HTTPのGETメソッド用の同じview関数に対して、異なるURLルールを適用"
-"するようなことをいっています）であろうことに気づくでしょう。例えば（以下の"
-"ように）web上でuserオブジェクトを公開することを考えてください:"
-
-# 6b7de1494c33459582731c3819736e65
-#: ../../flask/docs/views.rst:177
-msgid "URL"
-msgstr ""
-
-# b21a87ba05024908a5b9c8a78d06027c
-#: ../../flask/docs/views.rst:177
-msgid "Method"
-msgstr ""
-
-# e54c5ce15be742a197366582ec3636fd
-#: ../../flask/docs/views.rst:177
-msgid "Description"
-msgstr ""
-
-# 54524152608947368a0991a90efadce8
-# 43b44055f7ed4fb4ae53076418f177cb
-#: ../../flask/docs/views.rst:179 ../../flask/docs/views.rst:180
-msgid "``/users/``"
-msgstr ""
-
-# 7ce0001279634cd4941309570e1d41b3
-# 3ffc5e488af44a2f917e5f4cfcc8dda2
-#: ../../flask/docs/views.rst:179 ../../flask/docs/views.rst:181
-msgid "``GET``"
-msgstr ""
-
-# 18c10cbeae4a415babb2828d0df3001d
-#: ../../flask/docs/views.rst:179
-msgid "Gives a list of all users"
-msgstr "すべてのユーザーのリストを与えます"
-
-# c3cb7c77e9ac449c9b84861c840efc95
-#: ../../flask/docs/views.rst:180
-msgid "``POST``"
-msgstr ""
-
-# 33628c47c6024517ba9a9d27d4957cd9
-#: ../../flask/docs/views.rst:180
-msgid "Creates a new user"
-msgstr "新規ユーザーを作成します"
-
-# cd18ec7270e34659b217438aab82fb06
-# 60d15b523ecc4ccfbea517bf5d34f7df
-# a6195c5a92784bdca62544375be5ec50
-#: ../../flask/docs/views.rst:181 ../../flask/docs/views.rst:182
-#: ../../flask/docs/views.rst:183
-msgid "``/users/<id>``"
-msgstr ""
-
-# 80d60beaba674391bd185616f9055c10
-#: ../../flask/docs/views.rst:181
-msgid "Shows a single user"
-msgstr "単一ユーザーを表示します"
+#~ msgid ""
+#~ "Web APIs are often working very "
+#~ "closely with HTTP verbs so it "
+#~ "makes a lot of sense to implement"
+#~ " such an API based on the "
+#~ ":class:`~flask.views.MethodView`.  That said, you"
+#~ " will notice that the API will "
+#~ "require different URL rules that go "
+#~ "to the same method view most of"
+#~ " the time.  For instance consider "
+#~ "that you are exposing a user "
+#~ "object on the web:"
+#~ msgstr ""
+#~ "Web APIはしばしばHTTPの動詞（訳注: "
+#~ "ここでは「GET」「POST」などのメソッド名のこと）と密接しながら働くため、:class:`~flask.views.MethodView`"
+#~ " "
+#~ "に基づいてそのようなAPIを実装することはとても理にかなっています。その際、殆どのときに、同じメソッドのviewに対して異なるURLルールをAPIが要求する（訳注:"
+#~ " "
+#~ "例えば、HTTPのGETメソッド用の同じview関数に対して、異なるURLルールを適用するようなことをいっています）であろうことに気づくでしょう。例えば（以下のように）web上でuserオブジェクトを公開することを考えてください:"
 
 # 61e146485cdf42fb82d8387046b86f6b
-#: ../../flask/docs/views.rst:182
-msgid "``PUT``"
-msgstr ""
-
-# 2653de67a74d4f11a5feda2103e6df17
-#: ../../flask/docs/views.rst:182
-msgid "Updates a single user"
-msgstr "単一ユーザーを更新します"
-
-# b02ff4ae79d04681bfd50ac54095a391
-#: ../../flask/docs/views.rst:183
-msgid "``DELETE``"
-msgstr ""
-
-# 37f799b073394857a4d542c04c7504c9
-#: ../../flask/docs/views.rst:183
-msgid "Deletes a single user"
-msgstr "単一ユーザーを削除します"
+#~ msgid "``PUT``"
+#~ msgstr ""
 
 # f3993f2c697241e2ab751c2be6e298e0
-#: ../../flask/docs/views.rst:186
-msgid ""
-"So how would you go about doing that with the "
-":class:`~flask.views.MethodView`?  The trick is to take advantage of the "
-"fact that you can provide multiple rules to the same view."
-msgstr ""
-"それでは、:class:`~flask.views.MethodView` を使ってこれを行うにはどう"
-"するのでしょうか？その秘訣は、同じviewに対して複数のルールを提供できると"
-"いう事実を利用することです。"
+#~ msgid ""
+#~ "So how would you go about doing"
+#~ " that with the :class:`~flask.views.MethodView`?"
+#~ "  The trick is to take advantage "
+#~ "of the fact that you can provide"
+#~ " multiple rules to the same view."
+#~ msgstr ""
+#~ "それでは、:class:`~flask.views.MethodView` "
+#~ "を使ってこれを行うにはどうするのでしょうか？その秘訣は、同じviewに対して複数のルールを提供できるという事実を利用することです。"
 
 # ad179d38b9bc439fb7cd637c6d82c910
-#: ../../flask/docs/views.rst:190
-msgid "Let's assume for the moment the view would look like this::"
-msgstr "一瞬だけviewが以下のようなものであると仮定しましょう::"
+#~ msgid "Let's assume for the moment the view would look like this::"
+#~ msgstr "一瞬だけviewが以下のようなものであると仮定しましょう::"
 
 # 65993e75554843108103154fde2a4bc7
-#: ../../flask/docs/views.rst:214
-msgid ""
-"So how do we hook this up with the routing system?  By adding two rules "
-"and explicitly mentioning the methods for each::"
-msgstr ""
-"それでは、（Flaskの）ルーティングの仕組みにどうやって（直前に例示している"
-"クラスに基づいたviewを）接続するのでしょうか？2つのルールを追加し、それぞれ"
-"に対して明示的にメソッドを示します（訳注: 以下の例で、``methods`` が"
-"「``['GET']``」と「``['GET', 'PUT', 'DELETE']``」である2つの"
-"「``add_url_rule``」の部分が該当します）::"
+#~ msgid ""
+#~ "So how do we hook this up "
+#~ "with the routing system?  By adding "
+#~ "two rules and explicitly mentioning the"
+#~ " methods for each::"
+#~ msgstr ""
+#~ "それでは、（Flaskの）ルーティングの仕組みにどうやって（直前に例示しているクラスに基づいたviewを）接続するのでしょうか？2つのルールを追加し、それぞれに対して明示的にメソッドを示します（訳注:"
+#~ " 以下の例で、``methods`` が「``['GET']``」と「``['GET', 'PUT', "
+#~ "'DELETE']``」である2つの「``add_url_rule``」の部分が該当します）::"
 
 # 6ba7c5871c4f4d44bef009a839c98c65
-#: ../../flask/docs/views.rst:224
-msgid ""
-"If you have a lot of APIs that look similar you can refactor that "
-"registration code::"
-msgstr ""
-"もしも似たようなAPIがたくさんある場合、その登録用コードを（以下のように）"
-"リファクタリングできます::"
+#~ msgid ""
+#~ "If you have a lot of APIs "
+#~ "that look similar you can refactor "
+#~ "that registration code::"
+#~ msgstr "もしも似たようなAPIがたくさんある場合、その登録用コードを（以下のように）リファクタリングできます::"
+

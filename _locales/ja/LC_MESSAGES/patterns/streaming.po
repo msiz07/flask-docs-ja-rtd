@@ -6,16 +6,55 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 2.0.x\n"
+"Project-Id-Version: Flask 2.2.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-21 20:07+0900\n"
+"POT-Creation-Date: 2022-11-26 22:21+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: ../../flask/docs/patterns/streaming.rst:32
+msgid ""
+"The Jinja2 template engine supports rendering a template piece by piece, "
+"returning an iterator of strings. Flask provides the "
+":func:`~flask.stream_template` and :func:`~flask.stream_template_string` "
+"functions to make this easier to use."
+msgstr ""
+
+#: ../../flask/docs/patterns/streaming.rst:45
+msgid ""
+"The parts yielded by the render stream tend to match statement blocks in "
+"the template."
+msgstr ""
+
+#: ../../flask/docs/patterns/streaming.rst:52
+msgid ""
+"The :data:`~flask.request` will not be active while the generator is "
+"running, because the view has already returned at that point. If you try "
+"to access ``request``, you'll get a ``RuntimeError``."
+msgstr ""
+
+#: ../../flask/docs/patterns/streaming.rst:56
+msgid ""
+"If your generator function relies on data in ``request``, use the "
+":func:`~flask.stream_with_context` wrapper. This will keep the request "
+"context active during the generator."
+msgstr ""
+
+#: ../../flask/docs/patterns/streaming.rst:73
+msgid "It can also be used as a decorator."
+msgstr ""
+
+#: ../../flask/docs/patterns/streaming.rst:83
+msgid ""
+"The :func:`~flask.stream_template` and "
+":func:`~flask.stream_template_string` functions automatically use "
+":func:`~flask.stream_with_context` if a request is active."
+msgstr ""
 
 # a31dbd9ff3e44d779735ef7acb16e23c
 #: ../../flask/docs/patterns/streaming.rst:2
@@ -64,47 +103,60 @@ msgstr ""
 msgid "Streaming from Templates"
 msgstr ""
 
-# 3e302e9f717b4e7ab430b1a87e4452d3
-#: ../../flask/docs/patterns/streaming.rst:32
-msgid ""
-"The Jinja2 template engine also supports rendering templates piece by "
-"piece.  This functionality is not directly exposed by Flask because it is"
-" quite uncommon, but you can easily do it yourself::"
-msgstr ""
-
-# 63358ee2906e4458829e57d0d8b7c814
-#: ../../flask/docs/patterns/streaming.rst:48
-msgid ""
-"The trick here is to get the template object from the Jinja2 environment "
-"on the application and to call :meth:`~jinja2.Template.stream` instead of"
-" :meth:`~jinja2.Template.render` which returns a stream object instead of"
-" a string.  Since we're bypassing the Flask template render functions and"
-" using the template object itself we have to make sure to update the "
-"render context ourselves by calling "
-":meth:`~flask.Flask.update_template_context`. The template is then "
-"evaluated as the stream is iterated over.  Since each time you do a yield"
-" the server will flush the content to the client you might want to buffer"
-" up a few items in the template which you can do with "
-"``rv.enable_buffering(size)``.  ``5`` is a sane default."
-msgstr ""
-
 # d1e78bd067a64a4d97ebe2d7bbb6cb0a
-#: ../../flask/docs/patterns/streaming.rst:60
+#: ../../flask/docs/patterns/streaming.rst:50
 msgid "Streaming with Context"
 msgstr ""
 
+# 3e302e9f717b4e7ab430b1a87e4452d3
+#~ msgid ""
+#~ "The Jinja2 template engine also supports"
+#~ " rendering templates piece by piece.  "
+#~ "This functionality is not directly "
+#~ "exposed by Flask because it is "
+#~ "quite uncommon, but you can easily "
+#~ "do it yourself::"
+#~ msgstr ""
+
+# 63358ee2906e4458829e57d0d8b7c814
+#~ msgid ""
+#~ "The trick here is to get the "
+#~ "template object from the Jinja2 "
+#~ "environment on the application and to"
+#~ " call :meth:`~jinja2.Template.stream` instead of"
+#~ " :meth:`~jinja2.Template.render` which returns a"
+#~ " stream object instead of a string."
+#~ "  Since we're bypassing the Flask "
+#~ "template render functions and using the"
+#~ " template object itself we have to"
+#~ " make sure to update the render "
+#~ "context ourselves by calling "
+#~ ":meth:`~flask.Flask.update_template_context`. The template"
+#~ " is then evaluated as the stream "
+#~ "is iterated over.  Since each time "
+#~ "you do a yield the server will "
+#~ "flush the content to the client "
+#~ "you might want to buffer up a "
+#~ "few items in the template which "
+#~ "you can do with ``rv.enable_buffering(size)``."
+#~ "  ``5`` is a sane default."
+#~ msgstr ""
+
 # 87591f019a8449a0881808d4f9e5e5da
-#: ../../flask/docs/patterns/streaming.rst:64
-msgid ""
-"Note that when you stream data, the request context is already gone the "
-"moment the function executes.  Flask 0.9 provides you with a helper that "
-"can keep the request context around during the execution of the "
-"generator::"
-msgstr ""
+#~ msgid ""
+#~ "Note that when you stream data, "
+#~ "the request context is already gone "
+#~ "the moment the function executes.  Flask"
+#~ " 0.9 provides you with a helper "
+#~ "that can keep the request context "
+#~ "around during the execution of the "
+#~ "generator::"
+#~ msgstr ""
 
 # e9d0695465fa41c18081a0390641f108
-#: ../../flask/docs/patterns/streaming.rst:79
-msgid ""
-"Without the :func:`~flask.stream_with_context` function you would get a "
-":class:`RuntimeError` at that point."
-msgstr ""
+#~ msgid ""
+#~ "Without the :func:`~flask.stream_with_context` "
+#~ "function you would get a "
+#~ ":class:`RuntimeError` at that point."
+#~ msgstr ""
+

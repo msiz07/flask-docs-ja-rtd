@@ -6,16 +6,16 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 2.0.x\n"
+"Project-Id-Version: Flask 2.2.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-20 18:38+0900\n"
+"POT-Creation-Date: 2022-11-26 22:21+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.10.3\n"
 
 # f1c45fce70cf484d803b6119c8abfe27
 #: ../../flask/docs/tutorial/deploy.rst:2
@@ -107,24 +107,8 @@ msgstr ""
 "これは別のマシンであるため、もう一度\ ``init-db``\ を実行して、インスタンス"
 "フォルダにデータベースを作成する必要があります。"
 
-#: ../../flask/docs/tutorial/deploy.rst:53
-msgid "Bash"
-msgstr ""
-
-#: ../../flask/docs/tutorial/deploy.rst:60
-msgid "Fish"
-msgstr ""
-
-#: ../../flask/docs/tutorial/deploy.rst:67
-msgid "CMD"
-msgstr ""
-
-#: ../../flask/docs/tutorial/deploy.rst:74
-msgid "Powershell"
-msgstr ""
-
 # aa079a1cdf2c4d10bf5b267feef8398f
-#: ../../flask/docs/tutorial/deploy.rst:81
+#: ../../flask/docs/tutorial/deploy.rst:55
 msgid ""
 "When Flask detects that it's installed (not in editable mode), it uses a "
 "different directory for the instance folder. You can find it at "
@@ -135,12 +119,12 @@ msgstr ""
 "使用します。それは、代わりに\ ``venv/var/flaskr-instance``\ で見つけられます。"
 
 # 423736873e614ba08f84920390fd9a2b
-#: ../../flask/docs/tutorial/deploy.rst:87
+#: ../../flask/docs/tutorial/deploy.rst:61
 msgid "Configure the Secret Key"
 msgstr "秘密鍵（Secret Key）の設定"
 
 # 210b555de2fe49e9b87ca4ff8e97a94a
-#: ../../flask/docs/tutorial/deploy.rst:89
+#: ../../flask/docs/tutorial/deploy.rst:63
 msgid ""
 "In the beginning of the tutorial that you gave a default value for "
 ":data:`SECRET_KEY`. This should be changed to some random bytes in "
@@ -154,12 +138,12 @@ msgstr ""
 "使ったあらゆることをできるようになります。"
 
 # 9a0be69797604e2f8960b3690c5fa367
-#: ../../flask/docs/tutorial/deploy.rst:94
+#: ../../flask/docs/tutorial/deploy.rst:68
 msgid "You can use the following command to output a random secret key:"
 msgstr "randomな秘密鍵を出力するには以下のコマンドが使用できます:"
 
 # 7e963395b15c4c1c8af85dd1cbb97573
-#: ../../flask/docs/tutorial/deploy.rst:102
+#: ../../flask/docs/tutorial/deploy.rst:76
 msgid ""
 "Create the ``config.py`` file in the instance folder, which the factory "
 "will read from if it exists. Copy the generated value into it."
@@ -169,12 +153,12 @@ msgstr ""
 "コピーします。"
 
 # de07e9128b9e4c0596b19b0056310ef4
-#: ../../flask/docs/tutorial/deploy.rst:105
+#: ../../flask/docs/tutorial/deploy.rst:79
 msgid "``venv/var/flaskr-instance/config.py``"
 msgstr ""
 
 # 3c9daf128d7a48fb98a700253f25ae4c
-#: ../../flask/docs/tutorial/deploy.rst:110
+#: ../../flask/docs/tutorial/deploy.rst:84
 msgid ""
 "You can also set any other necessary configuration here, although "
 "``SECRET_KEY`` is the only one needed for Flaskr."
@@ -183,12 +167,12 @@ msgstr ""
 "するのは\ ``SECRET_KEY``\ だけです。"
 
 # 6211fcc27add481a95507aa86a250e5c
-#: ../../flask/docs/tutorial/deploy.rst:115
+#: ../../flask/docs/tutorial/deploy.rst:89
 msgid "Run with a Production Server"
 msgstr "本番環境サーバでの実行"
 
 # 7065285d9eee40e08c18ed9908a26250
-#: ../../flask/docs/tutorial/deploy.rst:117
+#: ../../flask/docs/tutorial/deploy.rst:91
 msgid ""
 "When running publicly rather than in development, you should not use the "
 "built-in development server (``flask run``). The development server is "
@@ -201,7 +185,7 @@ msgstr ""
 "意識して設計されてはいません。"
 
 # ef05441c3fc4477e963db40963b3d463
-#: ../../flask/docs/tutorial/deploy.rst:122
+#: ../../flask/docs/tutorial/deploy.rst:96
 msgid ""
 "Instead, use a production WSGI server. For example, to use `Waitress`_, "
 "first install it in the virtual environment:"
@@ -210,11 +194,15 @@ msgstr ""
 "使うには、まずは仮想環境にインストールします:"
 
 # a42c12532e39421a944f94c40cddf82a
-#: ../../flask/docs/tutorial/deploy.rst:129
+#: ../../flask/docs/tutorial/deploy.rst:103
+#, fuzzy
+#| msgid "" "You need to tell Waitress about your application, but it doesn't
+#| use " "``FLASK_APP`` like ``flask run`` does. You need to tell it to import
+#| and " "call the application factory to get an application object."
 msgid ""
 "You need to tell Waitress about your application, but it doesn't use "
-"``FLASK_APP`` like ``flask run`` does. You need to tell it to import and "
-"call the application factory to get an application object."
+"``--app`` like ``flask run`` does. You need to tell it to import and call"
+" the application factory to get an application object."
 msgstr ""
 "Waitressへ自分のアプリケーションについて伝える必要がありますが、それは"
 "\ ``flask run``\ のように\ ``FLASK_APP``\ を使いはしません。Flaskアプリケーション"
@@ -222,7 +210,7 @@ msgstr ""
 "Waitressへ伝える必要があります。"
 
 # 965300f741064e4bb6c648b1d944c9f7
-#: ../../flask/docs/tutorial/deploy.rst:139
+#: ../../flask/docs/tutorial/deploy.rst:113
 msgid ""
 "See :doc:`/deploying/index` for a list of many different ways to host "
 "your application. Waitress is just an example, chosen for the tutorial "
@@ -236,6 +224,19 @@ msgstr ""
 "オプションは、より数多く存在しています。"
 
 # 85c57695469e4fd995cc9b89fc1a8b6d
-#: ../../flask/docs/tutorial/deploy.rst:146
+#: ../../flask/docs/tutorial/deploy.rst:120
 msgid "Continue to :doc:`next`."
 msgstr ":doc:`next`\ へ続きます。"
+
+#~ msgid "Bash"
+#~ msgstr ""
+
+#~ msgid "Fish"
+#~ msgstr ""
+
+#~ msgid "CMD"
+#~ msgstr ""
+
+#~ msgid "Powershell"
+#~ msgstr ""
+
