@@ -6,24 +6,24 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 1.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
+"Generated-By: Babel 2.9.1\n"
 
 # 5574c6dcd64a4de4b7271aa6203638cc
-#: ../../tutorial/templates.rst:4
+#: ../../flask/docs/tutorial/templates.rst:4
 msgid "Templates"
 msgstr "テンプレート"
 
 # f323aa93390f44539cd96f4ad54867e4
-#: ../../tutorial/templates.rst:6
+#: ../../flask/docs/tutorial/templates.rst:6
 msgid ""
 "You've written the authentication views for your application, but if "
 "you're running the server and try to go to any of the URLs, you'll see a "
@@ -39,7 +39,7 @@ msgstr ""
 "``templates``\ ディレクトリに格納されていきます。"
 
 # 17ac92aff43b46668055e0dbfb4b0f51
-#: ../../tutorial/templates.rst:13
+#: ../../flask/docs/tutorial/templates.rst:13
 msgid ""
 "Templates are files that contain static data as well as placeholders for "
 "dynamic data. A template is rendered with specific data to produce a "
@@ -52,7 +52,7 @@ msgstr ""
 "ライブラリの\ `Jinja`_\ を使用します。"
 
 # c149abcf93af4fcf9219a806d9cf7d56
-#: ../../tutorial/templates.rst:18
+#: ../../flask/docs/tutorial/templates.rst:18
 msgid ""
 "In your application, you will use templates to render `HTML`_ which will "
 "display in the user's browser. In Flask, Jinja is configured to "
@@ -71,7 +71,7 @@ msgstr ""
 "同じように見える\ *安全な*\ 値へと\ *エスケープ*\ します。"
 
 # d67b1996b29543fa8c5691d0b884a05e
-#: ../../tutorial/templates.rst:26
+#: ../../flask/docs/tutorial/templates.rst:26
 msgid ""
 "Jinja looks and behaves mostly like Python. Special delimiters are used "
 "to distinguish Jinja syntax from the static data in the template. "
@@ -90,12 +90,12 @@ msgstr ""
 "ではなく開始および終了タグで示されます。"
 
 # cc463701dd47430ca0e8c5e55c14d0cf
-#: ../../tutorial/templates.rst:39
+#: ../../flask/docs/tutorial/templates.rst:39
 msgid "The Base Layout"
 msgstr "ベースレイアウト（The Base Layout）"
 
 # 89eb4b2a763140ada85f21b92a1b2279
-#: ../../tutorial/templates.rst:41
+#: ../../flask/docs/tutorial/templates.rst:41
 msgid ""
 "Each page in the application will have the same basic layout around a "
 "different body. Instead of writing the entire HTML structure in each "
@@ -108,12 +108,12 @@ msgstr ""
 "上書きします。"
 
 # cf09f4409f0e49f29509c57e2c17efc2
-#: ../../tutorial/templates.rst:46
+#: ../../flask/docs/tutorial/templates.rst:46
 msgid "``flaskr/templates/base.html``"
 msgstr ""
 
 # 0fb6c7ca1f184c78912618289974d704
-#: ../../tutorial/templates.rst:74
+#: ../../flask/docs/tutorial/templates.rst:74
 msgid ""
 ":data:`g` is automatically available in templates. Based on if ``g.user``"
 " is set (from ``load_logged_in_user``), either the username and a log out"
@@ -129,7 +129,7 @@ msgstr ""
 "されます。"
 
 # f6ddc4f6eb934db1a16d3beb07f3fb23
-#: ../../tutorial/templates.rst:80
+#: ../../flask/docs/tutorial/templates.rst:80
 msgid ""
 "After the page title, and before the content, the template loops over "
 "each message returned by :func:`get_flashed_messages`. You used "
@@ -143,7 +143,7 @@ msgstr ""
 "（テンプレート中のget_flashed_messages）になります。"
 
 # 1e17e6673e85485ab7c9f91de1f5aa7b
-#: ../../tutorial/templates.rst:85
+#: ../../flask/docs/tutorial/templates.rst:85
 msgid ""
 "There are three blocks defined here that will be overridden in the other "
 "templates:"
@@ -151,7 +151,7 @@ msgstr ""
 "ここでは、他のテンプレートで上書きされる予定の3つのブロックが定義されています:"
 
 # 1e920c39bc6f4efb88352947c0e3e7e0
-#: ../../tutorial/templates.rst:88
+#: ../../flask/docs/tutorial/templates.rst:88
 msgid ""
 "``{% block title %}`` will change the title displayed in the browser's "
 "tab and window title."
@@ -160,7 +160,7 @@ msgstr ""
 "されるタイトルを変更します。"
 
 # 8515917a309b4ec2a54c3b242a96e8da
-#: ../../tutorial/templates.rst:91
+#: ../../flask/docs/tutorial/templates.rst:91
 msgid ""
 "``{% block header %}`` is similar to ``title`` but will change the title "
 "displayed on the page."
@@ -169,7 +169,7 @@ msgstr ""
 "されるタイトルを変更します。"
 
 # b2e481b2b8e4478d91f30a5a01f09c0e
-#: ../../tutorial/templates.rst:94
+#: ../../flask/docs/tutorial/templates.rst:94
 msgid ""
 "``{% block content %}`` is where the content of each page goes, such as "
 "the login form or a blog post."
@@ -178,7 +178,7 @@ msgstr ""
 "各ページのコンテンツが行くところです。"
 
 # eab634ab4dfb4476abd6ffdc3a05f9f0
-#: ../../tutorial/templates.rst:97
+#: ../../flask/docs/tutorial/templates.rst:97
 msgid ""
 "The base template is directly in the ``templates`` directory. To keep the"
 " others organized, the templates for a blueprint will be placed in a "
@@ -190,17 +190,17 @@ msgstr ""
 "ます。"
 
 # 51a96aeb3cbb4eb292a61aaa817e4afa
-#: ../../tutorial/templates.rst:103
+#: ../../flask/docs/tutorial/templates.rst:103
 msgid "Register"
 msgstr "登録（Register）"
 
 # f5edfe79a16e4d2fb36a8418ae773ecb
-#: ../../tutorial/templates.rst:105
+#: ../../flask/docs/tutorial/templates.rst:105
 msgid "``flaskr/templates/auth/register.html``"
 msgstr ""
 
 # 191c40f9687e4c7082e0d836bd175eb1
-#: ../../tutorial/templates.rst:124
+#: ../../flask/docs/tutorial/templates.rst:124
 #, python-format
 msgid ""
 "``{% extends 'base.html' %}`` tells Jinja that this template should "
@@ -214,7 +214,7 @@ msgstr ""
 "タグの内側で現れる必要があります。"
 
 # 2cb446d687694aa290ea8b6378a15391
-#: ../../tutorial/templates.rst:129
+#: ../../flask/docs/tutorial/templates.rst:129
 msgid ""
 "A useful pattern used here is to place ``{% block title %}`` inside ``{% "
 "block header %}``. This will set the title block and then output the "
@@ -227,7 +227,7 @@ msgstr ""
 "そのタイトルの値をヘッダのブロックの中に出力します。"
 
 # a80d0c18af844222b993c780d59be402
-#: ../../tutorial/templates.rst:134
+#: ../../flask/docs/tutorial/templates.rst:134
 msgid ""
 "The ``input`` tags are using the ``required`` attribute here. This tells "
 "the browser not to submit the form until those fields are filled in. If "
@@ -246,12 +246,12 @@ msgstr ""
 "しても、重要です。"
 
 # 630b73e5bfdf43348bac9727f31cf958
-#: ../../tutorial/templates.rst:144
+#: ../../flask/docs/tutorial/templates.rst:144
 msgid "Log In"
 msgstr "ログイン"
 
 # 8ad01ad5ef264211a6fd881461ee20d5
-#: ../../tutorial/templates.rst:146
+#: ../../flask/docs/tutorial/templates.rst:146
 msgid ""
 "This is identical to the register template except for the title and "
 "submit button."
@@ -259,17 +259,17 @@ msgstr ""
 "タイトルと提出（submit）ボタン以外は、これは登録のテンプレートと同じです。"
 
 # c57da431bcae43ec90a6c8cdca9e879f
-#: ../../tutorial/templates.rst:149
+#: ../../flask/docs/tutorial/templates.rst:149
 msgid "``flaskr/templates/auth/login.html``"
 msgstr ""
 
 # 026d120e2bce45a2ad5cca2853bea601
-#: ../../tutorial/templates.rst:170
+#: ../../flask/docs/tutorial/templates.rst:170
 msgid "Register A User"
 msgstr "ユーザ登録"
 
 # 5448d491a1484de7bf09ea2c968aaf05
-#: ../../tutorial/templates.rst:172
+#: ../../flask/docs/tutorial/templates.rst:172
 msgid ""
 "Now that the authentication templates are written, you can register a "
 "user. Make sure the server is still running (``flask run`` if it's not), "
@@ -280,7 +280,7 @@ msgstr ""
 "してから、\ https://127.0.0.1:5000/auth/register\ へ行ってください。"
 
 # 31a244d0475b44ff878cd1dca220ca3f
-#: ../../tutorial/templates.rst:176
+#: ../../flask/docs/tutorial/templates.rst:176
 msgid ""
 "Try clicking the \"Register\" button without filling out the form and see"
 " that the browser shows an error message. Try removing the ``required`` "
@@ -295,7 +295,7 @@ msgstr ""
 ":func:`flash`\ から来るエラーが表示されます。"
 
 # 0923244ad7274073b59a4ebf8ffe0f12
-#: ../../tutorial/templates.rst:182
+#: ../../flask/docs/tutorial/templates.rst:182
 msgid ""
 "Fill out a username and password and you'll be redirected to the login "
 "page. Try entering an incorrect username, or the correct username and "
@@ -308,7 +308,6 @@ msgstr ""
 "のviewがないためにエラーになります。"
 
 # 24489e16b3cd4e90b840a81199213715
-#: ../../tutorial/templates.rst:187
+#: ../../flask/docs/tutorial/templates.rst:187
 msgid "Continue to :doc:`static`."
 msgstr ":doc:`static`\ へ続きます。"
-

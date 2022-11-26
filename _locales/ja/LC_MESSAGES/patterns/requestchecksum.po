@@ -6,24 +6,24 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 1.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
+"Generated-By: Babel 2.9.1\n"
 
 # 6edabd49a57a4868af4ce16578462590
-#: ../../patterns/requestchecksum.rst:2
+#: ../../flask/docs/patterns/requestchecksum.rst:2
 msgid "Request Content Checksums"
 msgstr ""
 
 # f6064aafe95544b0bac045330721f70a
-#: ../../patterns/requestchecksum.rst:4
+#: ../../flask/docs/patterns/requestchecksum.rst:4
 msgid ""
 "Various pieces of code can consume the request data and preprocess it. "
 "For instance JSON data ends up on the request object already read and "
@@ -34,21 +34,21 @@ msgid ""
 msgstr ""
 
 # eab052a615384fe5a6015952b514c49c
-#: ../../patterns/requestchecksum.rst:11
+#: ../../flask/docs/patterns/requestchecksum.rst:11
 msgid ""
 "Fortunately this is however very simple to change by wrapping the input "
 "stream."
 msgstr ""
 
 # 8778b129a6574e67bb2816050e208391
-#: ../../patterns/requestchecksum.rst:14
+#: ../../flask/docs/patterns/requestchecksum.rst:14
 msgid ""
 "The following example calculates the SHA1 checksum of the incoming data "
 "as it gets read and stores it in the WSGI environment::"
 msgstr ""
 
 # b2bced15d6594f9a9363f367d363d7b1
-#: ../../patterns/requestchecksum.rst:41
+#: ../../flask/docs/patterns/requestchecksum.rst:41
 msgid ""
 "To use this, all you need to do is to hook the calculating stream in "
 "before the request starts consuming data.  (Eg: be careful accessing "
@@ -57,7 +57,6 @@ msgid ""
 msgstr ""
 
 # 92a7c01421de4a5984d0c3de75053c43
-#: ../../patterns/requestchecksum.rst:46
+#: ../../flask/docs/patterns/requestchecksum.rst:46
 msgid "Example usage::"
 msgstr ""
-

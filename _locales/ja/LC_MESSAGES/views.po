@@ -6,7 +6,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 1.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-20 18:38+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -140,11 +140,12 @@ msgid "Method Based Dispatching"
 msgstr "メソッドに基づいた割り振り（Method Based Dispatching）"
 
 # a13c21e4d5c243fd815510d03858226c
+# | msgid "" "For RESTful APIs it's especially helpful to execute a different
+# | function " "for each HTTP method.  With the
+# :class:`flask.views.MethodView`
+# | you can " "easily do that.  Each HTTP method maps to a function with the
+# | same name " "(just in lowercase)::"
 #: ../../flask/docs/views.rst:114
-#| msgid "" "For RESTful APIs it's especially helpful to execute a different
-#| function " "for each HTTP method.  With the :class:`flask.views.MethodView`
-#| you can " "easily do that.  Each HTTP method maps to a function with the
-#| same name " "(just in lowercase)::"
 msgid ""
 "For RESTful APIs it's especially helpful to execute a different function "
 "for each HTTP method.  With the :class:`flask.views.MethodView` you can "

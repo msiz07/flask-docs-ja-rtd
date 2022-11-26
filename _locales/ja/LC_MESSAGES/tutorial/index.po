@@ -6,7 +6,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 1.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-20 18:38+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -93,7 +93,7 @@ msgstr ""
 "できるプロジェクトを作り出します。Flaskをより快適に感じるようになったら、"
 "ここで示す構造から足を踏み出して、Flaskの柔軟性を存分に活用してください。"
 
-#| msgid "screenshot of login page"
+# | msgid "screenshot of login page"
 msgid "screenshot of edit page"
 msgstr "editページのスクリーンショット"
 

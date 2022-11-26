@@ -6,7 +6,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 1.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-20 18:38+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -42,10 +42,10 @@ msgstr ""
 "できるようなことを指しています）。"
 
 # 8dc305841c6d43ad8ab81eaf5b7a54ad
+# | msgid "" "This is similar to the :doc:`/appcontext`, which keeps track of
+# | the " "application-level data independent of a request. A corresponding "
+# | "application context is pushed when a request context is pushed."
 #: ../../flask/docs/reqcontext.rst:11
-#| msgid "" "This is similar to the :doc:`/appcontext`, which keeps track of
-#| the " "application-level data independent of a request. A corresponding "
-#| "application context is pushed when a request context is pushed."
 msgid ""
 "This is similar to :doc:`/appcontext`, which keeps track of the "
 "application-level data independent of a request. A corresponding "
@@ -100,10 +100,10 @@ msgid "Lifetime of the Context"
 msgstr "コンテキストの生存期間（Lifetime of the Context）"
 
 # f89dc62d00324247a04285a93bbfdbcb
+# | msgid "" "When a Flask application begins handling a request, it pushes a
+# | request " "context, which also pushes an :doc:`/appcontext`. When the
+# | request ends " "it pops the request context then the application context."
 #: ../../flask/docs/reqcontext.rst:35
-#| msgid "" "When a Flask application begins handling a request, it pushes a
-#| request " "context, which also pushes an :doc:`/appcontext`. When the
-#| request ends " "it pops the request context then the application context."
 msgid ""
 "When a Flask application begins handling a request, it pushes a request "
 "context, which also pushes an :doc:`app context </appcontext>`. When the "

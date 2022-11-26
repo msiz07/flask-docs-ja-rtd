@@ -6,7 +6,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 1.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-20 18:38+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -87,16 +87,18 @@ msgstr ""
 "myapp.pyの中にflaskアプリケーションがある場合は、以下のコマンドを使用します:"
 
 # 829006e4922644c999b73f98132a6d55
+# | msgid "" "The ``--manage-script-name`` will move the handling of
+# | ``SCRIPT_NAME`` to" " uwsgi, since it is smarter about that. It is used
+# | together with the " "``--mount`` directive which will make requests to
+# | ``/yourapplication`` be" " directed to ``myapp:app``. If your application
+# is
+# | accessible at root " "level, you can use a single ``/`` instead of
+# | ``/yourapplication``. " "``myapp`` refers to the name of the file of your
+# | flask application " "(without extension) or the module which provides
+# | ``app``. ``app`` is the " "callable inside of your application (usually
+# the
+# | line reads ``app = " "Flask(__name__)``."
 #: ../../flask/docs/deploying/uwsgi.rst:32
-#| msgid "" "The ``--manage-script-name`` will move the handling of
-#| ``SCRIPT_NAME`` to" " uwsgi, since it is smarter about that. It is used
-#| together with the " "``--mount`` directive which will make requests to
-#| ``/yourapplication`` be" " directed to ``myapp:app``. If your application is
-#| accessible at root " "level, you can use a single ``/`` instead of
-#| ``/yourapplication``. " "``myapp`` refers to the name of the file of your
-#| flask application " "(without extension) or the module which provides
-#| ``app``. ``app`` is the " "callable inside of your application (usually the
-#| line reads ``app = " "Flask(__name__)``."
 msgid ""
 "The ``--manage-script-name`` will move the handling of ``SCRIPT_NAME`` to"
 " uwsgi, since it is smarter about that. It is used together with the "

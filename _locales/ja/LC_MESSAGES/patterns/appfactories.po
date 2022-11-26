@@ -6,7 +6,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 1.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-20 18:38+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -16,11 +16,6 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
-
-#: ../../flask/docs/patterns/appfactories.rst:101
-#: ../../flask/docs/patterns/appfactories.rst:134
-msgid "Fish"
-msgstr ""
 
 # db0210e4bf5b4ce0b72fa26189acd456
 #: ../../flask/docs/patterns/appfactories.rst:2
@@ -170,6 +165,11 @@ msgstr ""
 #: ../../flask/docs/patterns/appfactories.rst:94
 #: ../../flask/docs/patterns/appfactories.rst:127
 msgid "Bash"
+msgstr ""
+
+#: ../../flask/docs/patterns/appfactories.rst:101
+#: ../../flask/docs/patterns/appfactories.rst:134
+msgid "Fish"
 msgstr ""
 
 #: ../../flask/docs/patterns/appfactories.rst:108

@@ -6,24 +6,24 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 1.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
+"Generated-By: Babel 2.9.1\n"
 
 # b8f922e026474febba06b021d7f0bcf1
-#: ../../patterns/templateinheritance.rst:4
+#: ../../flask/docs/patterns/templateinheritance.rst:2
 msgid "Template Inheritance"
 msgstr "テンプレートの継承"
 
 # 9bcd4bf770704969b5675806ab48d751
-#: ../../patterns/templateinheritance.rst:6
+#: ../../flask/docs/patterns/templateinheritance.rst:4
 msgid ""
 "The most powerful part of Jinja is template inheritance. Template "
 "inheritance allows you to build a base \"skeleton\" template that "
@@ -36,7 +36,7 @@ msgstr ""
 "します"
 
 # 38ad3aba5f644011ab6a5cd224df44c9
-#: ../../patterns/templateinheritance.rst:10
+#: ../../flask/docs/patterns/templateinheritance.rst:8
 msgid ""
 "Sounds complicated but is very basic. It's easiest to understand it by "
 "starting with an example."
@@ -45,12 +45,12 @@ msgstr ""
 "理解できるでしょう。"
 
 # 6005f499132941ecb91da7c730237958
-#: ../../patterns/templateinheritance.rst:15
+#: ../../flask/docs/patterns/templateinheritance.rst:13
 msgid "Base Template"
 msgstr "ベースのテンプレート"
 
 # da22420925964bf3836edd70e10f1a13
-#: ../../patterns/templateinheritance.rst:17
+#: ../../flask/docs/patterns/templateinheritance.rst:15
 msgid ""
 "This template, which we'll call :file:`layout.html`, defines a simple "
 "HTML skeleton document that you might use for a simple two-column page. "
@@ -62,7 +62,7 @@ msgstr ""
 "空のブロックをコンテンツで埋めるのは「子」テンプレートの仕事です："
 
 # be845eab787541729c74867d5d1f9219
-#: ../../patterns/templateinheritance.rst:41
+#: ../../flask/docs/patterns/templateinheritance.rst:39
 msgid ""
 "In this example, the ``{% block %}`` tags define four blocks that child "
 "templates can fill in. All the `block` tag does is tell the template "
@@ -74,17 +74,17 @@ msgstr ""
 "エンジンに伝えることです。"
 
 # 0a570db32d7c4bc99964ea384c15fc3b
-#: ../../patterns/templateinheritance.rst:46
+#: ../../flask/docs/patterns/templateinheritance.rst:44
 msgid "Child Template"
 msgstr "子テンプレート"
 
 # 2e53c6278010415eb6b4b9fbb5c28c33
-#: ../../patterns/templateinheritance.rst:48
+#: ../../flask/docs/patterns/templateinheritance.rst:46
 msgid "A child template might look like this:"
 msgstr "子テンプレートは以下のようになるでしょう："
 
 # 2bda7b8a34dd4250847b67ed16cde0b5
-#: ../../patterns/templateinheritance.rst:66
+#: ../../flask/docs/patterns/templateinheritance.rst:64
 #, python-format
 msgid ""
 "The ``{% extends %}`` tag is the key here. It tells the template engine "
@@ -99,4 +99,3 @@ msgstr ""
 "見つけます。extendsタグはテンプレートの最初のタグである必要があります。"
 "親テンプレートの中で定義されたブロックの内容を表示（render）するには、"
 "``{{ super() }}`` を使います。"
-

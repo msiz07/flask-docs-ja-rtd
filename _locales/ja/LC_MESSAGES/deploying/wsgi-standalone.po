@@ -6,24 +6,24 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 1.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
+"Generated-By: Babel 2.9.1\n"
 
 # 7a244bd0bffb470694cbec2dd8e12414
-#: ../../deploying/wsgi-standalone.rst:4
+#: ../../flask/docs/deploying/wsgi-standalone.rst:2
 msgid "Standalone WSGI Containers"
 msgstr "独立したWSGIコンテナ（Standalone WSGI Containers）"
 
 # df6aa676957742de9d7bdb0eca20fc5d
-#: ../../deploying/wsgi-standalone.rst:6
+#: ../../flask/docs/deploying/wsgi-standalone.rst:4
 msgid ""
 "There are popular servers written in Python that contain WSGI "
 "applications and serve HTTP.  These servers stand alone when they run; "
@@ -38,12 +38,12 @@ msgstr ""
 ":ref:`deploying-proxy-setups`\ セクションに注目してください。"
 
 # 7b00a25c996f4324a59e606d1a85ea51
-#: ../../deploying/wsgi-standalone.rst:12
+#: ../../flask/docs/deploying/wsgi-standalone.rst:10
 msgid "Gunicorn"
 msgstr ""
 
 # 34f187e209134848a29db72cfeeb951e
-#: ../../deploying/wsgi-standalone.rst:14
+#: ../../flask/docs/deploying/wsgi-standalone.rst:12
 msgid ""
 "`Gunicorn`_ 'Green Unicorn' is a WSGI HTTP Server for UNIX. It's a pre-"
 "fork worker model ported from Ruby's Unicorn project. It supports both "
@@ -61,7 +61,7 @@ msgstr ""
 "を実行するのはとても単純です::"
 
 # 30daee0208b44f3588dc03d67052be1e
-#: ../../deploying/wsgi-standalone.rst:20
+#: ../../flask/docs/deploying/wsgi-standalone.rst:18
 msgid ""
 "`Gunicorn`_ provides many command-line options -- see ``gunicorn -h``. "
 "For example, to run a Flask application with 4 worker processes (``-w "
@@ -74,7 +74,7 @@ msgstr ""
 "思います）実行するには以下のようにします::"
 
 # 4179482b4b2f4c16bbef5009eddb2e29
-#: ../../deploying/wsgi-standalone.rst:26
+#: ../../flask/docs/deploying/wsgi-standalone.rst:24
 msgid ""
 "The ``gunicorn`` command expects the names of your application module or "
 "package and the application instance within the module. If you use the "
@@ -86,12 +86,12 @@ msgstr ""
 "インスタンスを渡せます::"
 
 # 2e498a7d8a7e474ca1301efb6ba3e216
-#: ../../deploying/wsgi-standalone.rst:37
+#: ../../flask/docs/deploying/wsgi-standalone.rst:35
 msgid "uWSGI"
 msgstr ""
 
 # ab5b59374f9640668b402ab72b4d0714
-#: ../../deploying/wsgi-standalone.rst:39
+#: ../../flask/docs/deploying/wsgi-standalone.rst:37
 msgid ""
 "`uWSGI`_ is a fast application server written in C. It is very "
 "configurable which makes it more complicated to setup than gunicorn."
@@ -101,12 +101,12 @@ msgstr ""
 "ます。"
 
 # 514815966ffd484a83bcef979c7066a9
-#: ../../deploying/wsgi-standalone.rst:42
+#: ../../flask/docs/deploying/wsgi-standalone.rst:40
 msgid "Running `uWSGI HTTP Router`_::"
 msgstr "`uWSGI HTTP Router`_\ の実行::"
 
 # 23f735f36a094a58bf342c3d6c4d3118
-#: ../../deploying/wsgi-standalone.rst:46
+#: ../../flask/docs/deploying/wsgi-standalone.rst:44
 msgid ""
 "For a more optimized setup, see :doc:`configuring uWSGI and NGINX "
 "<uwsgi>`."
@@ -115,12 +115,12 @@ msgstr ""
 "<uwsgi>`\ を確認ください。"
 
 # db80c1eaad7046f3b5acd732d95538c3
-#: ../../deploying/wsgi-standalone.rst:52
+#: ../../flask/docs/deploying/wsgi-standalone.rst:50
 msgid "Gevent"
 msgstr ""
 
 # 5df32795ba63486ba8bafa2ae2478e09
-#: ../../deploying/wsgi-standalone.rst:54
+#: ../../flask/docs/deploying/wsgi-standalone.rst:52
 msgid ""
 "`Gevent`_ is a coroutine-based Python networking library that uses "
 "`greenlet`_ to provide a high-level synchronous API on top of `libev`_ "
@@ -133,12 +133,12 @@ msgstr ""
 "を使用しています::"
 
 # 12ad3dea07a3407fb8f635ac19930982
-#: ../../deploying/wsgi-standalone.rst:69
+#: ../../flask/docs/deploying/wsgi-standalone.rst:67
 msgid "Twisted Web"
 msgstr ""
 
 # 434efc3f9d8f4b01b79f6ed4d13d85ae
-#: ../../deploying/wsgi-standalone.rst:71
+#: ../../flask/docs/deploying/wsgi-standalone.rst:69
 msgid ""
 "`Twisted Web`_ is the web server shipped with `Twisted`_, a mature, non-"
 "blocking event-driven networking library. Twisted Web comes with a "
@@ -151,7 +151,7 @@ msgstr ""
 "ラインから制御可能な、独立したWSGIコンテナが一緒に提供されています::"
 
 # 3561c77f6fbf428a98015607f12282de
-#: ../../deploying/wsgi-standalone.rst:78
+#: ../../flask/docs/deploying/wsgi-standalone.rst:76
 msgid ""
 "This example will run a Flask application called ``app`` from a module "
 "named ``myproject``."
@@ -160,7 +160,7 @@ msgstr ""
 "Flaskアプリケーションを走らせます。"
 
 # b92a967397a0446d9dc56459690d2a77
-#: ../../deploying/wsgi-standalone.rst:81
+#: ../../flask/docs/deploying/wsgi-standalone.rst:79
 msgid ""
 "Twisted Web supports many flags and options, and the ``twistd`` utility "
 "does as well; see ``twistd -h`` and ``twistd web -h`` for more "
@@ -174,12 +174,12 @@ msgstr ""
 "を使って走らせる例です::"
 
 # 553e13052ded43198b679d8b68365531
-#: ../../deploying/wsgi-standalone.rst:94
+#: ../../flask/docs/deploying/wsgi-standalone.rst:92
 msgid "Proxy Setups"
 msgstr "プロキシの設定（Proxy Setups）"
 
 # 8106d12035a7492eaf8448d0677e56d4
-#: ../../deploying/wsgi-standalone.rst:96
+#: ../../flask/docs/deploying/wsgi-standalone.rst:94
 msgid ""
 "If you deploy your application using one of these servers behind an HTTP "
 "proxy you will need to rewrite a few headers in order for the application"
@@ -202,7 +202,7 @@ msgstr ""
 "かもしれません。"
 
 # 7926585c551942cf8f0c5c6bc9add236
-#: ../../deploying/wsgi-standalone.rst:104
+#: ../../flask/docs/deploying/wsgi-standalone.rst:102
 msgid ""
 "Here's a simple nginx configuration which proxies to an application "
 "served on localhost at port 8000, setting appropriate headers:"
@@ -211,7 +211,7 @@ msgstr ""
 "アプリケーションへプロキシする、シンプルなnginxの構成です:"
 
 # bdf8f6358ce8487795ee6f5878110667
-#: ../../deploying/wsgi-standalone.rst:128
+#: ../../flask/docs/deploying/wsgi-standalone.rst:126
 msgid ""
 "If your httpd is not providing these headers, the most common setup "
 "invokes the host being set from ``X-Forwarded-Host`` and the remote "
@@ -222,12 +222,12 @@ msgstr ""
 "から設定します::"
 
 # 3f474d9d72c847719c73a65d6ed1c970
-#: ../../deploying/wsgi-standalone.rst:135
+#: ../../flask/docs/deploying/wsgi-standalone.rst:133
 msgid "Trusting Headers"
 msgstr "ヘッダの信用"
 
 # 4cf0b0b53fa1454b8f1b47bdc40f9be7
-#: ../../deploying/wsgi-standalone.rst:137
+#: ../../flask/docs/deploying/wsgi-standalone.rst:135
 msgid ""
 "Please keep in mind that it is a security issue to use such a middleware "
 "in a non-proxy setup because it will blindly trust the incoming headers "
@@ -238,11 +238,10 @@ msgstr ""
 "ため、セキュリティ上の問題になることを覚えておいてください。"
 
 # c9545712b9304ac0a923d854b398f582
-#: ../../deploying/wsgi-standalone.rst:141
+#: ../../flask/docs/deploying/wsgi-standalone.rst:139
 msgid ""
 "If you want to rewrite the headers from another header, you might want to"
 " use a fixer like this::"
 msgstr ""
 "もしその他のヘッダを書き換えたい場合、以下のような修正機能（fixer）を使い"
 "たくなるかもしれません::"
-

@@ -6,7 +6,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 1.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-20 18:38+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -202,13 +202,13 @@ msgstr ""
 "もしも検証が成功した場合は、新しいユーザのデータをデータベースに挿入します。"
 
 # bcfac4cfbdbc42f7b7d2b9115c9efbd2
+# | msgid "" "Validate that ``username`` is not already registered by querying
+# | the " "database and checking if a result is returned. :meth:`db.execute "
+# | "<sqlite3.Connection.execute>` takes a SQL query with ``?`` placeholders "
+# | "for any user input, and a tuple of values to replace the placeholders "
+# | "with. The database library will take care of escaping the values so you "
+# | "are not vulnerable to a *SQL injection attack*."
 #: ../../flask/docs/tutorial/views.rst:130
-#| msgid "" "Validate that ``username`` is not already registered by querying
-#| the " "database and checking if a result is returned. :meth:`db.execute "
-#| "<sqlite3.Connection.execute>` takes a SQL query with ``?`` placeholders "
-#| "for any user input, and a tuple of values to replace the placeholders "
-#| "with. The database library will take care of escaping the values so you "
-#| "are not vulnerable to a *SQL injection attack*."
 msgid ""
 ":meth:`db.execute <sqlite3.Connection.execute>` takes a SQL query with "
 "``?`` placeholders for any user input, and a tuple of values to replace "
@@ -221,13 +221,14 @@ msgstr ""
 "対して脆弱にならないように、値のエスケープを取り計らいます。"
 
 # a11409be0edf48a8b97855ae3bef0d01
+# | msgid "" "If validation succeeds, insert the new user data into the
+# | database. For " "security, passwords should never be stored in the
+# database
+# | directly. " "Instead, :func:`~werkzeug.security.generate_password_hash` is
+# | used to " "securely hash the password, and that hash is stored. Since this
+# | query " "modifies data, :meth:`db.commit() <sqlite3.Connection.commit>`
+# | needs to " "be called afterwards to save the changes."
 #: ../../flask/docs/tutorial/views.rst:136
-#| msgid "" "If validation succeeds, insert the new user data into the
-#| database. For " "security, passwords should never be stored in the database
-#| directly. " "Instead, :func:`~werkzeug.security.generate_password_hash` is
-#| used to " "securely hash the password, and that hash is stored. Since this
-#| query " "modifies data, :meth:`db.commit() <sqlite3.Connection.commit>`
-#| needs to " "be called afterwards to save the changes."
 msgid ""
 "For security, passwords should never be stored in the database directly. "
 "Instead, :func:`~werkzeug.security.generate_password_hash` is used to "
@@ -309,11 +310,11 @@ msgstr ""
 "ユーザ情報は最初に問合せ（query）され、後で使用するために変数へ格納されます。"
 
 # 9bbd7158ac03480da40853d0e59e419c
+# | msgid "" ":meth:`~sqlite3.Cursor.fetchone` returns one row from the query.
+# | If the " "query returned no results, it returns ``None``. Later, "
+# | ":meth:`~sqlite3.Cursor.fetchall` is used, which returns a list of all "
+# | "results."
 #: ../../flask/docs/tutorial/views.rst:202
-#| msgid "" ":meth:`~sqlite3.Cursor.fetchone` returns one row from the query.
-#| If the " "query returned no results, it returns ``None``. Later, "
-#| ":meth:`~sqlite3.Cursor.fetchall` is used, which returns a list of all "
-#| "results."
 msgid ""
 ":meth:`~sqlite3.Cursor.fetchone` returns one row from the query. If the "
 "query returned no results, it returns ``None``. Later, "

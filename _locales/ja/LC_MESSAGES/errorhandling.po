@@ -6,7 +6,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 1.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -24,6 +24,7 @@ msgstr "アプリケーションのエラーの処理"
 
 # aaf066c9ee164e79a528c2c570527934
 #: ../../flask/docs/errorhandling.rst:4
+#, python-format
 msgid ""
 "Applications fail, servers fail. Sooner or later you will see an "
 "exception in production. Even if your code is 100% correct, you will "
@@ -763,8 +764,10 @@ msgstr ""
 #~ "production with `debug=True`."
 #~ msgstr ""
 #~ "本番環境用に自分のアプリケーションを設定するのに問題を抱えていますか？もしホスト（コンピュータのこと）のシェルにアクセスできる場合、自分のアプリケーションを、デプロイされている環境のシェルから手で実行できるか確かめてください。権限の問題を解決するために、必ずデプロイの設定と同じユーザアカウントのもとで実行してください。Flaskの組込まれた開発サーバを\\"
-#~ " `debug=True`\\ を使って本番環境のホストで使用することが可能で、それは設定の問題を捕捉するには役立ちますが、\\ "
-#~ "**必ず制御された環境の中で一時的に実行してください。**\\ 本番環境では\\ `debug=True`\\ を使って実行しないでください。"
+#~ " `debug=True`\\ "
+#~ "を使って本番環境のホストで使用することが可能で、それは設定の問題を捕捉するには役立ちますが、\\ "
+#~ "**必ず制御された環境の中で一時的に実行してください。**\\ 本番環境では\\ `debug=True`\\"
+#~ " を使って実行しないでください。"
 
 # 04a47fe20a5547da8e528f59b3d20e3a
 #~ msgid "Working with Debuggers"
@@ -782,8 +785,8 @@ msgstr ""
 #~ "options in order to use your "
 #~ "favorite debugger:"
 #~ msgstr ""
-#~ "より深く掘り下げるために、例えばコードの実行をトレースするために、Flaskは最初からデバッガを提供しています（\\ :ref:`debug-"
-#~ "mode`\\ "
+#~ "より深く掘り下げるために、例えばコードの実行をトレースするために、Flaskは最初からデバッガを提供しています（\\ :ref"
+#~ ":`debug-mode`\\ "
 #~ "を見てください）。もし別のPythonデバッガを使いたい場合、デバッガはそれぞれ干渉し合うことに注意してください。自分の好きなデバッガを使うためにはいくつかのオプションを設定する必要があります:"
 
 # 67157ba8e4314fb58bb1a46903a93d22
@@ -799,9 +802,7 @@ msgstr ""
 #~ "``use_reloader`` - whether to reload and"
 #~ " fork the process if modules were "
 #~ "changed"
-#~ msgstr ""
-#~ "``use_reloader`` - "
-#~ "moduleが変更されたとき、再読み込みしてプロセスをforkするか（新しくプロセスを作成するか）どうか"
+#~ msgstr "``use_reloader`` - moduleが変更されたとき、再読み込みしてプロセスをforkするか（新しくプロセスを作成するか）どうか"
 
 # 45ddb3bd7924495585a27edfb77fabbe
 #~ msgid ""
@@ -818,8 +819,8 @@ msgstr ""
 #~ "``use_debugger`` and ``use_reloader`` to "
 #~ "False."
 #~ msgstr ""
-#~ "もしAptana/Eclipseをデバッグに使用している場合、\\ ``use_debugger``\\ と\\ "
-#~ "``use_reloader``\\ の両方をFalseに設定する必要があります。"
+#~ "もしAptana/Eclipseをデバッグに使用している場合、\\ ``use_debugger``\\ と\\"
+#~ " ``use_reloader``\\ の両方をFalseに設定する必要があります。"
 
 # c5ef089bd44f439aa53840d500656168
 #~ msgid ""

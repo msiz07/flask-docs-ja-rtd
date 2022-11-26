@@ -6,7 +6,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 1.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-20 18:38+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -47,10 +47,11 @@ msgstr ""
 "ことを指しています）。"
 
 # 8fe988affa494220ac88df8d322728de
+# | msgid "" "This is similar to the :doc:`/reqcontext`, which keeps track of
+# | request-" "level data during a request. A corresponding application
+# context
+# | is " "pushed when a request context is pushed."
 #: ../../flask/docs/appcontext.rst:11
-#| msgid "" "This is similar to the :doc:`/reqcontext`, which keeps track of
-#| request-" "level data during a request. A corresponding application context
-#| is " "pushed when a request context is pushed."
 msgid ""
 "This is similar to :doc:`/reqcontext`, which keeps track of request-level"
 " data during a request. A corresponding application context is pushed "

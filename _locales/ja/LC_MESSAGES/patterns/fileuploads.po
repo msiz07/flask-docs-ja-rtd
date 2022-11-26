@@ -6,7 +6,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 1.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-20 18:38+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -299,12 +299,14 @@ msgstr ""
 "JavaScriptのライブラリがあります。"
 
 # 5a97b511b6e14219b51ea98ed858d07e
+# | msgid "" "Because the common pattern for file uploads exists almost
+# | unchanged in " "all applications dealing with uploads, there is also a
+# Flask
+# | extension " "called `Flask-Uploads`_ that implements a full fledged upload
+# | mechanism " "that allows controlling which file extensions are allowed to
+# be
+# | uploaded."
 #: ../../flask/docs/patterns/fileuploads.rst:177
-#| msgid "" "Because the common pattern for file uploads exists almost
-#| unchanged in " "all applications dealing with uploads, there is also a Flask
-#| extension " "called `Flask-Uploads`_ that implements a full fledged upload
-#| mechanism " "that allows controlling which file extensions are allowed to be
-#| uploaded."
 msgid ""
 "Because the common pattern for file uploads exists almost unchanged in "
 "all applications dealing with uploads, there are also some Flask "

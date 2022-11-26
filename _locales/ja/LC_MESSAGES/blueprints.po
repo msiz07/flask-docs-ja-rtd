@@ -6,7 +6,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 1.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -594,6 +594,5 @@ msgstr ":doc:`/errorhandling` を確認してください。"
 
 # 7aa4a2886efb4e18a5de6d8d4a8be5e4
 #~ msgid "More information on error handling see :ref:`errorpages`."
-#~ msgstr ""
-#~ "エラー処理に関するさらなる情報は\ :ref:`errorpages`\ を確認してください。"
+#~ msgstr "エラー処理に関するさらなる情報は\\ :ref:`errorpages`\\ を確認してください。"
 

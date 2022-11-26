@@ -6,7 +6,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 1.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-20 18:38+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -16,177 +16,6 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
-
-#: flask.app.Flask.handle_http_exception:10 of
-msgid ""
-"Exceptions are looked up by code *and* by MRO, so ``HTTPException`` "
-"subclasses can be handled with a catch-all handler for the base "
-"``HTTPException``."
-msgstr ""
-
-#: ../../docstring flask.Flask.test_client_class:1 of
-msgid ""
-"The :meth:`test_client` method creates an instance of this test client "
-"class. Defaults to :class:`~flask.testing.FlaskClient`."
-msgstr ""
-
-#: of werkzeug.wrappers.request.Request.get_json:3
-msgid ""
-"If the mimetype does not indicate JSON (:mimetype:`application/json`, see"
-" :attr:`is_json`), or parsing fails, :meth:`on_json_loading_failed` is "
-"called and its return value is used as the return value. By default this "
-"raises a 400 Bad Request error."
-msgstr ""
-
-#: of werkzeug.wrappers.request.Request.get_json:10
-msgid "Silence mimetype and parsing errors, and return ``None`` instead."
-msgstr ""
-
-#: flask.Request.json:9 of werkzeug.wrappers.request.Request.get_json:15
-msgid "Raise a 400 error if the content type is incorrect."
-msgstr ""
-
-#: flask.Request.json:1 flask.Response.json:1 of
-msgid ""
-"The parsed JSON data if :attr:`mimetype` indicates JSON "
-"(:mimetype:`application/json`, see :attr:`is_json`)."
-msgstr ""
-
-#: flask.Request.json:6 of
-msgid ""
-"If the request content type is not ``application/json``, this will raise "
-"a 400 Bad Request error."
-msgstr ""
-
-#: flask.wrappers.Request.on_json_loading_failed:1 of
-msgid "Called if :meth:`get_json` fails and isn't silenced."
-msgstr ""
-
-#: flask.wrappers.Request.on_json_loading_failed:3 of
-msgid ""
-"If this method returns a value, it is used as the return value for "
-":meth:`get_json`. The default implementation raises "
-":exc:`~werkzeug.exceptions.BadRequest`."
-msgstr ""
-
-#: flask.wrappers.Request.on_json_loading_failed:7 of
-msgid ""
-"If parsing failed, this is the exception. It will be ``None`` if the "
-"content type wasn't ``application/json``."
-msgstr ""
-
-#: flask.Response.content_security_policy:1 of
-msgid ""
-"The ``Content-Security-Policy`` header as a "
-":class:`~werkzeug.datastructures.ContentSecurityPolicy` object. Available"
-" even if the header is not set."
-msgstr ""
-
-#: flask.Response.content_security_policy_report_only:1 of
-msgid ""
-"The ``Content-Security-policy-report-only`` header as a "
-":class:`~werkzeug.datastructures.ContentSecurityPolicy` object. Available"
-" even if the header is not set."
-msgstr ""
-
-#: of werkzeug.wrappers.response.Response.freeze:10
-msgid "Removed the ``no_etag`` parameter."
-msgstr ""
-
-#: of werkzeug.wrappers.response.Response.get_json:3
-msgid ""
-"If the mimetype does not indicate JSON (:mimetype:`application/json`, see"
-" :attr:`is_json`), this returns ``None``."
-msgstr ""
-
-#: flask.sessions.SessionInterface:27 of
-msgid ""
-"Multiple requests with the same session may be sent and handled "
-"concurrently. When implementing a new session interface, consider whether"
-" reads or writes to the backing store must be synchronized. There is no "
-"guarantee on the order in which the session for each request is opened or"
-" saved, it will occur in the order that requests begin and end "
-"processing."
-msgstr ""
-
-#: flask.sessions.SecureCookieSessionInterface.open_session:1
-#: flask.sessions.SessionInterface.open_session:1 of
-msgid ""
-"This is called at the beginning of each request, after pushing the "
-"request context, before matching the URL."
-msgstr ""
-
-#: flask.sessions.SecureCookieSessionInterface.open_session:4
-#: flask.sessions.SessionInterface.open_session:4 of
-msgid ""
-"This must return an object which implements a dictionary-like interface "
-"as well as the :class:`SessionMixin` interface."
-msgstr ""
-
-#: flask.sessions.SecureCookieSessionInterface.open_session:7
-#: flask.sessions.SessionInterface.open_session:7 of
-msgid ""
-"This will return ``None`` to indicate that loading failed in some way "
-"that is not immediately an error. The request context will fall back to "
-"using :meth:`make_null_session` in this case."
-msgstr ""
-
-#: flask.sessions.SecureCookieSessionInterface.save_session:1
-#: flask.sessions.SessionInterface.save_session:1 of
-msgid ""
-"This is called at the end of each request, after generating a response, "
-"before removing the request context. It is skipped if "
-":meth:`is_null_session` returns ``True``."
-msgstr ""
-
-#: flask.sessions.NullSession._fail:1 of
-msgid ""
-"If key is not found, default is returned if given, otherwise KeyError is "
-"raised"
-msgstr ""
-
-#: flask.sessions.NullSession._fail:1 of
-msgid "Remove and return a (key, value) pair as a 2-tuple."
-msgstr ""
-
-#: flask.sessions.NullSession._fail:3 of
-msgid ""
-"Pairs are returned in LIFO (last-in, first-out) order. Raises KeyError if"
-" the dict is empty."
-msgstr ""
-
-#: flask.sessions.NullSession._fail:1 of
-msgid ""
-"If E is present and has a .keys() method, then does:  for k in E: D[k] = "
-"E[k] If E is present and lacks a .keys() method, then does:  for k, v in "
-"E: D[k] = v In either case, this is followed by: for k in F:  D[k] = F[k]"
-msgstr ""
-
-#: flask.testing.FlaskClient.open:15 of
-msgid "Removed the ``as_tuple`` parameter."
-msgstr ""
-
-#: ../../flask/docs/api.rst:171
-msgid ""
-"This is a good place to store resources during a request. For example, a "
-"``before_request`` function could load a user object from a session id, "
-"then set ``g.user`` to be used in the view function."
-msgstr ""
-
-#: flask.json.dumps:11 flask.json.jsonify:43 of
-msgid ":class:`decimal.Decimal` is supported by converting to a string."
-msgstr ""
-
-#: flask.config.Config.from_envvar:10 flask.config.Config.from_file:17
-#: flask.config.Config.from_json:7 flask.config.Config.from_pyfile:10 of
-msgid "``True`` if the file was loaded successfully."
-msgstr ""
-
-#: flask.config.Config.from_mapping:1 of
-msgid ""
-"Updates the config like :meth:`update` ignoring items with non-upper "
-"keys. :return: Always returns ``True``."
-msgstr ""
 
 # 8186878dbd8040279c5b8adf15101907
 #: ../../flask/docs/api.rst:2
@@ -1382,6 +1211,13 @@ msgid ""
 "redirects during routing, is not passed to error  handlers."
 msgstr ""
 
+#: flask.app.Flask.handle_http_exception:10 of
+msgid ""
+"Exceptions are looked up by code *and* by MRO, so ``HTTPException`` "
+"subclasses can be handled with a catch-all handler for the base "
+"``HTTPException``."
+msgstr ""
+
 # b6954aac61d34ac6940509f59aca55d7
 #: flask.app.Flask.handle_url_build_error:1 of
 msgid "Handle :class:`~werkzeug.routing.BuildError` on :meth:`url_for`."
@@ -2414,6 +2250,12 @@ msgstr ""
 msgid "added support for ``with`` block usage for the client."
 msgstr ""
 
+#: ../../docstring flask.Flask.test_client_class:1 of
+msgid ""
+"The :meth:`test_client` method creates an instance of this test client "
+"class. Defaults to :class:`~flask.testing.FlaskClient`."
+msgstr ""
+
 # 94290f3beebd4d699a5d8e1337a3f2a8
 #: flask.app.Flask.test_request_context:1 of
 msgid ""
@@ -3388,6 +3230,14 @@ msgstr ""
 msgid "Parse :attr:`data` as JSON."
 msgstr ""
 
+#: of werkzeug.wrappers.request.Request.get_json:3
+msgid ""
+"If the mimetype does not indicate JSON (:mimetype:`application/json`, see"
+" :attr:`is_json`), or parsing fails, :meth:`on_json_loading_failed` is "
+"called and its return value is used as the return value. By default this "
+"raises a 400 Bad Request error."
+msgstr ""
+
 # 0ff6709deda94ce79f5af468b1bf107b
 # 8f5fedeb80944d2c920660c67ab68094
 #: of werkzeug.wrappers.request.Request.get_json:9
@@ -3395,10 +3245,18 @@ msgstr ""
 msgid "Ignore the mimetype and always try to parse JSON."
 msgstr ""
 
+#: of werkzeug.wrappers.request.Request.get_json:10
+msgid "Silence mimetype and parsing errors, and return ``None`` instead."
+msgstr ""
+
 # 3c713818526d489b8c39db7f6d71bbc7
 # 81271b5174c646d4a03f520103e91181
 #: of werkzeug.wrappers.request.Request.get_json:12
 msgid "Store the parsed JSON to return for subsequent calls."
+msgstr ""
+
+#: flask.Request.json:9 of werkzeug.wrappers.request.Request.get_json:15
+msgid "Raise a 400 error if the content type is incorrect."
 msgstr ""
 
 #: ../../docstring flask.Request.headers:1 of
@@ -3491,9 +3349,21 @@ msgstr ""
 msgid "``True`` if the request was made with a secure protocol (HTTPS or WSS)."
 msgstr ""
 
+#: flask.Request.json:1 flask.Response.json:1 of
+msgid ""
+"The parsed JSON data if :attr:`mimetype` indicates JSON "
+"(:mimetype:`application/json`, see :attr:`is_json`)."
+msgstr ""
+
 # ae7321cf272e416aad50a09a91e6c017
 #: flask.Request.json:4 flask.Response.json:4 of
 msgid "Calls :meth:`get_json` with default arguments."
+msgstr ""
+
+#: flask.Request.json:6 of
+msgid ""
+"If the request content type is not ``application/json``, this will raise "
+"a 400 Bad Request error."
 msgstr ""
 
 # 413bcd31f28f4d83bce8989923a70be6
@@ -3534,6 +3404,23 @@ msgid ""
 "The mimetype parameters as dict.  For example if the content type is "
 "``text/html; charset=utf-8`` the params would be ``{'charset': "
 "'utf-8'}``."
+msgstr ""
+
+#: flask.wrappers.Request.on_json_loading_failed:1 of
+msgid "Called if :meth:`get_json` fails and isn't silenced."
+msgstr ""
+
+#: flask.wrappers.Request.on_json_loading_failed:3 of
+msgid ""
+"If this method returns a value, it is used as the return value for "
+":meth:`get_json`. The default implementation raises "
+":exc:`~werkzeug.exceptions.BadRequest`."
+msgstr ""
+
+#: flask.wrappers.Request.on_json_loading_failed:7 of
+msgid ""
+"If parsing failed, this is the exception. It will be ``None`` if the "
+"content type wasn't ``application/json``."
 msgstr ""
 
 #: ../../docstring flask.Request.origin:1 of
@@ -3917,10 +3804,24 @@ msgid ""
 "the header is not set."
 msgstr ""
 
+#: flask.Response.content_security_policy:1 of
+msgid ""
+"The ``Content-Security-Policy`` header as a "
+":class:`~werkzeug.datastructures.ContentSecurityPolicy` object. Available"
+" even if the header is not set."
+msgstr ""
+
 #: flask.Response.content_security_policy:5 of
 msgid ""
 "The Content-Security-Policy header adds an additional layer of security "
 "to help detect and mitigate certain types of attacks."
+msgstr ""
+
+#: flask.Response.content_security_policy_report_only:1 of
+msgid ""
+"The ``Content-Security-policy-report-only`` header as a "
+":class:`~werkzeug.datastructures.ContentSecurityPolicy` object. Available"
+" even if the header is not set."
 msgstr ""
 
 #: flask.Response.content_security_policy_report_only:5 of
@@ -4058,6 +3959,10 @@ msgstr ""
 msgid "Generate an ``ETag`` header if one is not already set."
 msgstr ""
 
+#: of werkzeug.wrappers.response.Response.freeze:10
+msgid "Removed the ``no_etag`` parameter."
+msgstr ""
+
 #: of werkzeug.wrappers.response.Response.freeze:13
 msgid ""
 "An ``ETag`` header is added, the ``no_etag`` parameter is deprecated and "
@@ -4135,6 +4040,12 @@ msgstr ""
 
 #: of werkzeug.wrappers.response.Response.get_json:1
 msgid "Parse :attr:`data` as JSON. Useful during testing."
+msgstr ""
+
+#: of werkzeug.wrappers.response.Response.get_json:3
+msgid ""
+"If the mimetype does not indicate JSON (:mimetype:`application/json`, see"
+" :attr:`is_json`), this returns ``None``."
 msgstr ""
 
 #: of werkzeug.wrappers.response.Response.get_json:7
@@ -4538,6 +4449,16 @@ msgid ""
 "to assign :attr:`flask.Flask.session_interface`::"
 msgstr ""
 
+#: flask.sessions.SessionInterface:27 of
+msgid ""
+"Multiple requests with the same session may be sent and handled "
+"concurrently. When implementing a new session interface, consider whether"
+" reads or writes to the backing store must be synchronized. There is no "
+"guarantee on the order in which the session for each request is opened or"
+" saved, it will occur in the order that requests begin and end "
+"processing."
+msgstr ""
+
 # 82a9898aacfc49e7ac0cc726ad6272c5
 #: flask.sessions.SessionInterface.get_cookie_domain:1 of
 msgid "Returns the domain that should be set for the session cookie."
@@ -4643,12 +4564,42 @@ msgid ""
 "type."
 msgstr ""
 
+#: flask.sessions.SecureCookieSessionInterface.open_session:1
+#: flask.sessions.SessionInterface.open_session:1 of
+msgid ""
+"This is called at the beginning of each request, after pushing the "
+"request context, before matching the URL."
+msgstr ""
+
+#: flask.sessions.SecureCookieSessionInterface.open_session:4
+#: flask.sessions.SessionInterface.open_session:4 of
+msgid ""
+"This must return an object which implements a dictionary-like interface "
+"as well as the :class:`SessionMixin` interface."
+msgstr ""
+
+#: flask.sessions.SecureCookieSessionInterface.open_session:7
+#: flask.sessions.SessionInterface.open_session:7 of
+msgid ""
+"This will return ``None`` to indicate that loading failed in some way "
+"that is not immediately an error. The request context will fall back to "
+"using :meth:`make_null_session` in this case."
+msgstr ""
+
 # 0f89f21abca84c1396dd5b02148c2640
 #: ../../docstring flask.sessions.SessionInterface.pickle_based:1 of
 msgid ""
 "A flag that indicates if the session interface is pickle based. This can "
 "be used by Flask extensions to make a decision in regards to how to deal "
 "with the session object."
+msgstr ""
+
+#: flask.sessions.SecureCookieSessionInterface.save_session:1
+#: flask.sessions.SessionInterface.save_session:1 of
+msgid ""
+"This is called at the end of each request, after generating a response, "
+"before removing the request context. It is skipped if "
+":meth:`is_null_session` returns ``True``."
 msgstr ""
 
 # a919010505e141f3adfe320f7f3a68d4
@@ -4749,6 +4700,29 @@ msgid ""
 "fail on setting."
 msgstr ""
 
+#: flask.sessions.NullSession._fail:1 of
+msgid ""
+"If key is not found, default is returned if given, otherwise KeyError is "
+"raised"
+msgstr ""
+
+#: flask.sessions.NullSession._fail:1 of
+msgid "Remove and return a (key, value) pair as a 2-tuple."
+msgstr ""
+
+#: flask.sessions.NullSession._fail:3 of
+msgid ""
+"Pairs are returned in LIFO (last-in, first-out) order. Raises KeyError if"
+" the dict is empty."
+msgstr ""
+
+#: flask.sessions.NullSession._fail:1 of
+msgid ""
+"If E is present and has a .keys() method, then does:  for k in E: D[k] = "
+"E[k] If E is present and lacks a .keys() method, then does:  for k, v in "
+"E: D[k] = v In either case, this is followed by: for k in F:  D[k] = F[k]"
+msgstr ""
+
 # 5d9ec42d8d8e4d7399957ef91319dccf
 #: flask.sessions.SessionMixin:1 of
 msgid "Expands a basic dictionary with session attributes."
@@ -4838,6 +4812,10 @@ msgid ""
 "Make additional requests to follow HTTP redirects until a non-redirect "
 "status is returned. :attr:`TestResponse.history` lists the intermediate "
 "responses."
+msgstr ""
+
+#: flask.testing.FlaskClient.open:15 of
+msgid "Removed the ``as_tuple`` parameter."
 msgstr ""
 
 #: flask.testing.FlaskClient.open:18 of
@@ -4950,6 +4928,13 @@ msgid ""
 "context </appcontext>`. This is an instance of "
 ":attr:`Flask.app_ctx_globals_class`, which defaults to "
 ":class:`ctx._AppCtxGlobals`."
+msgstr ""
+
+#: ../../flask/docs/api.rst:171
+msgid ""
+"This is a good place to store resources during a request. For example, a "
+"``before_request`` function could load a user object from a session id, "
+"then set ``g.user`` to be used in the view function."
 msgstr ""
 
 # 3f084b5425fd467e9b217d8879c7af8d
@@ -5779,6 +5764,10 @@ msgid ""
 "will be formatted to be easier to read."
 msgstr ""
 
+#: flask.json.dumps:11 flask.json.jsonify:43 of
+msgid ":class:`decimal.Decimal` is supported by converting to a string."
+msgstr ""
+
 #: flask.json.jsonify:46 of
 msgid ""
 "Added support for serializing top-level arrays. This introduces a "
@@ -6247,6 +6236,11 @@ msgstr ""
 msgid "set to ``True`` if you want silent failure for missing files."
 msgstr ""
 
+#: flask.config.Config.from_envvar:10 flask.config.Config.from_file:17
+#: flask.config.Config.from_json:7 flask.config.Config.from_pyfile:10 of
+msgid "``True`` if the file was loaded successfully."
+msgstr ""
+
 #: flask.config.Config.from_file:1 of
 msgid ""
 "Update the values in the config from a file that is loaded using the "
@@ -6286,6 +6280,12 @@ msgstr ""
 msgid ""
 "Will be removed in Flask 2.1. Use :meth:`from_file` instead. This was "
 "removed early in 2.0.0, was added back in 2.0.1."
+msgstr ""
+
+#: flask.config.Config.from_mapping:1 of
+msgid ""
+"Updates the config like :meth:`update` ignoring items with non-upper "
+"keys. :return: Always returns ``True``."
 msgstr ""
 
 # e0847a2f8fe44725a673fe8cc3a23f04

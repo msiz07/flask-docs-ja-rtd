@@ -6,7 +6,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 1.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -108,4 +108,3 @@ msgstr "`PythonAnywhere上へのデプロイ <https://help.pythonanywhere.com/pa
 #: ../../flask/docs/deploying/index.rst:25
 msgid "Self-hosted options"
 msgstr "自分のサーバでホストするときの選択肢（Self-hosted options）"
-

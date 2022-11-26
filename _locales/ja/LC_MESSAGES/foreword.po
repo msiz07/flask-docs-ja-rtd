@@ -6,7 +6,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 1.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -156,6 +156,6 @@ msgstr ""
 #~ "Continue to :ref:`installation`, the "
 #~ ":ref:`quickstart`, or the :ref:`advanced_foreword`."
 #~ msgstr ""
-#~ ":ref:`installation`\ 、\ :ref:`quickstart`\ 、または\ "
-#~ ":ref:`advanced_foreword`\ に続きます。"
+#~ ":ref:`installation`\\ 、\\ :ref:`quickstart`\\ 、または\\"
+#~ " :ref:`advanced_foreword`\\ に続きます。"
 

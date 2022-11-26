@@ -6,7 +6,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 1.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-20 18:38+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -780,11 +780,11 @@ msgid "Here is an example template:"
 msgstr "これはテンプレートの例です:"
 
 # a901005c7f51415199732d64ca34776e
+# | msgid "" "Inside templates you also have access to the
+# | :class:`~flask.request`, " ":class:`~flask.session` and :class:`~flask.g`
+# | [#]_ objects as well as the" " :func:`~flask.get_flashed_messages`
+# | function."
 #: ../../flask/docs/quickstart.rst:467
-#| msgid "" "Inside templates you also have access to the
-#| :class:`~flask.request`, " ":class:`~flask.session` and :class:`~flask.g`
-#| [#]_ objects as well as the" " :func:`~flask.get_flashed_messages`
-#| function."
 msgid ""
 "Inside templates you also have access to the :data:`~flask.Flask.config`,"
 " :class:`~flask.request`, :class:`~flask.session` and :class:`~flask.g` "

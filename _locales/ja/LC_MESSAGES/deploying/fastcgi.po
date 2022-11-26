@@ -6,24 +6,24 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 1.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
+"Generated-By: Babel 2.9.1\n"
 
 # 5f7264f79f8f4c05bc24f87493f9a58b
-#: ../../deploying/fastcgi.rst:4
+#: ../../flask/docs/deploying/fastcgi.rst:2
 msgid "FastCGI"
 msgstr ""
 
 # 39e788ff531249ddab85d89dc330d276
-#: ../../deploying/fastcgi.rst:6
+#: ../../flask/docs/deploying/fastcgi.rst:4
 msgid ""
 "FastCGI is a deployment option on servers like `nginx`_, `lighttpd`_, and"
 " `cherokee`_; see :doc:`uwsgi` and :doc:`wsgi-standalone` for other "
@@ -39,12 +39,12 @@ msgstr ""
 "には、flupを確実にインストールしておいてください。"
 
 # d4f0787f4ad04f88ae9e8534d1e911e0
-#: ../../deploying/fastcgi.rst:12
+#: ../../flask/docs/deploying/fastcgi.rst:10
 msgid "Watch Out"
 msgstr "注意"
 
 # 5d9bdbf9e0464f2a9ea48e62e7f1f6b0
-#: ../../deploying/fastcgi.rst:14
+#: ../../flask/docs/deploying/fastcgi.rst:12
 msgid ""
 "Please make sure in advance that any ``app.run()`` calls you might have "
 "in your application file are inside an ``if __name__ == '__main__':`` "
@@ -59,12 +59,12 @@ msgstr ""
 "app.run()が呼び出されないことを、まずは確認してください。"
 
 # c09e2aac6c1a42418f81c71f43a67569
-#: ../../deploying/fastcgi.rst:21
+#: ../../flask/docs/deploying/fastcgi.rst:19
 msgid "Creating a `.fcgi` file"
 msgstr "`.fcgi`\ ファイルの作成"
 
 # caa3c5786e214640bb84ea7961698806
-#: ../../deploying/fastcgi.rst:23
+#: ../../flask/docs/deploying/fastcgi.rst:21
 msgid ""
 "First you need to create the FastCGI server file.  Let's call it "
 "`yourapplication.fcgi`::"
@@ -73,7 +73,7 @@ msgstr ""
 "`yourapplication.fcgi`\ と呼ぶことにしましょう::"
 
 # 0902adc978ca4d08ac0dbff127f10e2e
-#: ../../deploying/fastcgi.rst:33
+#: ../../flask/docs/deploying/fastcgi.rst:31
 msgid ""
 "This is enough for Apache to work, however nginx and older versions of "
 "lighttpd need a socket to be explicitly passed to communicate with the "
@@ -86,12 +86,12 @@ msgstr ""
 "必要があります::"
 
 # 4c7e4f81d7764fc4a237c4417a37ada1
-#: ../../deploying/fastcgi.rst:40
+#: ../../flask/docs/deploying/fastcgi.rst:38
 msgid "The path has to be the exact same path you define in the server config."
 msgstr "pathはサーバの設定の中で定義したpathと正確に一致する必要があります。"
 
 # 342b843e5f6c4113b3ee8ae597bd5e97
-#: ../../deploying/fastcgi.rst:43
+#: ../../flask/docs/deploying/fastcgi.rst:41
 msgid ""
 "Save the :file:`yourapplication.fcgi` file somewhere you will find it "
 "again. It makes sense to have that in :file:`/var/www/yourapplication` or"
@@ -102,7 +102,7 @@ msgstr ""
 "ことは合理的です。"
 
 # c748f63aaef34b349e075bafe0e8167f
-#: ../../deploying/fastcgi.rst:47
+#: ../../flask/docs/deploying/fastcgi.rst:45
 msgid ""
 "Make sure to set the executable bit on that file so that the servers can "
 "execute it:"
@@ -112,12 +112,12 @@ msgstr ""
 "確実に設定してください:"
 
 # 6ec5b6ea46e047e88a1bbe7df73237a3
-#: ../../deploying/fastcgi.rst:55
+#: ../../flask/docs/deploying/fastcgi.rst:53
 msgid "Configuring Apache"
 msgstr "Apacheの設定"
 
 # dfddb4e81bac49479d2b709e5d3bd922
-#: ../../deploying/fastcgi.rst:57
+#: ../../flask/docs/deploying/fastcgi.rst:55
 msgid ""
 "The example above is good enough for a basic Apache deployment but your "
 "`.fcgi` file will appear in your application URL e.g. "
@@ -140,7 +140,7 @@ msgstr ""
 "できません）::"
 
 # fd39c25f2d024e5db36dabd2d2e5e062
-#: ../../deploying/fastcgi.rst:82
+#: ../../flask/docs/deploying/fastcgi.rst:80
 msgid ""
 "These processes will be managed by Apache. If you're using a standalone "
 "FastCGI server, you can use the FastCgiExternalServer directive instead. "
@@ -153,7 +153,7 @@ msgstr ""
 "単なる識別子として使用されていることに注意してください::"
 
 # d846c941c54c469485cf7c51157fad82
-#: ../../deploying/fastcgi.rst:90
+#: ../../flask/docs/deploying/fastcgi.rst:88
 msgid ""
 "If you cannot set ScriptAlias, for example on a shared web host, you can "
 "use WSGI middleware to remove yourapplication.fcgi from the URLs. Set "
@@ -164,22 +164,22 @@ msgstr ""
 ".htaccessの設定::"
 
 # 1c4814c229624c328587038244fd0c8e
-#: ../../deploying/fastcgi.rst:109
+#: ../../flask/docs/deploying/fastcgi.rst:107
 msgid "Set yourapplication.fcgi::"
 msgstr "yourapplication.fcgiの設定::"
 
 # 6e793f4443d146338809809254c42fea
-#: ../../deploying/fastcgi.rst:133
+#: ../../flask/docs/deploying/fastcgi.rst:131
 msgid "Configuring lighttpd"
 msgstr "lighttpdの設定"
 
 # 371fd4cf8d36479eb71f764f6be3ac62
-#: ../../deploying/fastcgi.rst:135
+#: ../../flask/docs/deploying/fastcgi.rst:133
 msgid "A basic FastCGI configuration for lighttpd looks like that::"
 msgstr "lighttpd用の基本的なFastCGIの設定は以下のようになります::"
 
 # 4582cf54277c46b2bf2eb8842c671c08
-#: ../../deploying/fastcgi.rst:155
+#: ../../flask/docs/deploying/fastcgi.rst:153
 msgid ""
 "Remember to enable the FastCGI, alias and rewrite modules. This "
 "configuration binds the application to ``/yourapplication``.  If you want"
@@ -195,7 +195,7 @@ msgstr ""
 "を回避する必要があります。"
 
 # b2723d15011f4e32826d6bb3af0c7527
-#: ../../deploying/fastcgi.rst:160
+#: ../../flask/docs/deploying/fastcgi.rst:158
 msgid ""
 "Make sure to apply it only if you are mounting the application the URL "
 "root. Also, see the Lighty docs for more information on `FastCGI and "
@@ -210,12 +210,12 @@ msgstr ""
 "socketをrun()へ渡すことは必要ではなくなったことに注意してください）。"
 
 # aafe9bf02c534e0a961af50f38d6c117
-#: ../../deploying/fastcgi.rst:166
+#: ../../flask/docs/deploying/fastcgi.rst:164
 msgid "Configuring nginx"
 msgstr "nginxの設定"
 
 # cd92edfbef3e4ed28a13086e775e73cf
-#: ../../deploying/fastcgi.rst:168
+#: ../../flask/docs/deploying/fastcgi.rst:166
 msgid ""
 "Installing FastCGI applications on nginx is a bit different because by "
 "default no FastCGI parameters are forwarded."
@@ -224,12 +224,12 @@ msgstr ""
 "インストールは少し違います。"
 
 # 4971e638cb5e4b35b3a07309813389d9
-#: ../../deploying/fastcgi.rst:171
+#: ../../flask/docs/deploying/fastcgi.rst:169
 msgid "A basic Flask FastCGI configuration for nginx looks like this::"
 msgstr "nginx用の基本的なFlaskのFastCGI設定は以下のようになります::"
 
 # 5c80b48f4e564eca919ab657bd4cfe3b
-#: ../../deploying/fastcgi.rst:183
+#: ../../flask/docs/deploying/fastcgi.rst:181
 msgid ""
 "This configuration binds the application to ``/yourapplication``.  If you"
 " want to have it in the URL root it's a bit simpler because you don't "
@@ -241,12 +241,12 @@ msgstr ""
 "なります::"
 
 # cfb98b5b13d444c4822edb3ca5470232
-#: ../../deploying/fastcgi.rst:196
+#: ../../flask/docs/deploying/fastcgi.rst:194
 msgid "Running FastCGI Processes"
 msgstr "FastCGIプロセスの実行"
 
 # c91092eb622843628b734ad7b2bfd85a
-#: ../../deploying/fastcgi.rst:198
+#: ../../flask/docs/deploying/fastcgi.rst:196
 msgid ""
 "Since nginx and others do not load FastCGI apps, you have to do it by "
 "yourself.  `Supervisor can manage FastCGI processes. "
@@ -270,12 +270,12 @@ msgstr ""
 "さい::"
 
 # 7904b509c5254dbe83fc2a278e79bdbf
-#: ../../deploying/fastcgi.rst:211
+#: ../../flask/docs/deploying/fastcgi.rst:209
 msgid "Debugging"
 msgstr "デバッグ"
 
 # 49f7be88368340d1b1198fae9e9925b2
-#: ../../deploying/fastcgi.rst:213
+#: ../../flask/docs/deploying/fastcgi.rst:211
 msgid ""
 "FastCGI deployments tend to be hard to debug on most web servers.  Very "
 "often the only thing the server log tells you is something along the "
@@ -290,7 +290,7 @@ msgstr ""
 "手動でアプリケーションを実行することです。"
 
 # 876c4adf5a6b406d81d8b9d48817d7e6
-#: ../../deploying/fastcgi.rst:219
+#: ../../flask/docs/deploying/fastcgi.rst:217
 msgid ""
 "This example assumes your application is called `application.fcgi` and "
 "that your web server user is `www-data`::"
@@ -299,7 +299,7 @@ msgstr ""
 "ユーザは\ `www-data`\ と想定しています::"
 
 # 90946d42e3df4660aeab10a5ad1b5da7
-#: ../../deploying/fastcgi.rst:229
+#: ../../flask/docs/deploying/fastcgi.rst:227
 msgid ""
 "In this case the error seems to be \"yourapplication\" not being on the "
 "python path.  Common problems are:"
@@ -308,14 +308,14 @@ msgstr ""
 "ようです。ありがちな問題は:"
 
 # 004c4eb5c2734017bbc8e1e499c9394e
-#: ../../deploying/fastcgi.rst:232
+#: ../../flask/docs/deploying/fastcgi.rst:230
 msgid "Relative paths being used.  Don't rely on the current working directory."
 msgstr ""
 "相対パスが使われています。そのときの作業ディレクトリの場所に依存しないように"
 "してください。"
 
 # c9f4b32939934aa1bf9cb201c30bc787
-#: ../../deploying/fastcgi.rst:233
+#: ../../flask/docs/deploying/fastcgi.rst:231
 msgid ""
 "The code depending on environment variables that are not set by the web "
 "server."
@@ -323,7 +323,6 @@ msgstr ""
 "コードが、webサーバによって設定されていない環境変数に依存しています。"
 
 # 9ff49f369445471aa1ab15b40307d745
-#: ../../deploying/fastcgi.rst:235
+#: ../../flask/docs/deploying/fastcgi.rst:233
 msgid "Different python interpreters being used."
 msgstr "違うpythonインタプリタが使用されています。"
-

@@ -6,24 +6,24 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 1.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
+"Generated-By: Babel 2.9.1\n"
 
 # f81f667268cd41de8588f99003d1c7f5
-#: ../../tutorial/blog.rst:4
+#: ../../flask/docs/tutorial/blog.rst:4
 msgid "Blog Blueprint"
 msgstr "ブログの青写真（Blog Blueprint）"
 
 # 4ba34772fda84b26ac101d9da3c1dbed
-#: ../../tutorial/blog.rst:6
+#: ../../flask/docs/tutorial/blog.rst:6
 msgid ""
 "You'll use the same techniques you learned about when writing the "
 "authentication blueprint to write the blog blueprint. The blog should "
@@ -36,7 +36,7 @@ msgstr ""
 "編集または削除できるようにさせます。"
 
 # eb00e3c93bea4ee6884ab1abc7aad438
-#: ../../tutorial/blog.rst:11
+#: ../../flask/docs/tutorial/blog.rst:11
 msgid ""
 "As you implement each view, keep the development server running. As you "
 "save your changes, try going to the URL in your browser and testing them "
@@ -47,12 +47,12 @@ msgstr ""
 "してください。"
 
 # a3f96ff5e1d948f588654fffcd01bfaa
-#: ../../tutorial/blog.rst:16
+#: ../../flask/docs/tutorial/blog.rst:16
 msgid "The Blueprint"
 msgstr "青写真（Blueprint）"
 
 # cb7986eac72c482fb4cb55c9c99434d1
-#: ../../tutorial/blog.rst:18
+#: ../../flask/docs/tutorial/blog.rst:18
 msgid "Define the blueprint and register it in the application factory."
 msgstr "blueprintを定義し、application factoryの中で登録します。"
 
@@ -62,14 +62,16 @@ msgstr "blueprintを定義し、application factoryの中で登録します。"
 # 6d5817cc6f1e4a2b90f057c21e83547a
 # b652b536fa00411e8d4ab9ac9e3bbd3b
 # 6bdaabb3e5df4074ba4f7558b459b2d2
-#: ../../tutorial/blog.rst:20 ../../tutorial/blog.rst:76
-#: ../../tutorial/blog.rst:142 ../../tutorial/blog.rst:198
-#: ../../tutorial/blog.rst:228 ../../tutorial/blog.rst:320
+#: ../../flask/docs/tutorial/blog.rst:20 ../../flask/docs/tutorial/blog.rst:76
+#: ../../flask/docs/tutorial/blog.rst:142
+#: ../../flask/docs/tutorial/blog.rst:198
+#: ../../flask/docs/tutorial/blog.rst:228
+#: ../../flask/docs/tutorial/blog.rst:320
 msgid "``flaskr/blog.py``"
 msgstr ""
 
 # ac6571cc9e9c4b1bb64cc9b73c16401c
-#: ../../tutorial/blog.rst:33
+#: ../../flask/docs/tutorial/blog.rst:33
 msgid ""
 "Import and register the blueprint from the factory using "
 ":meth:`app.register_blueprint() <Flask.register_blueprint>`. Place the "
@@ -80,12 +82,12 @@ msgstr ""
 "最後でappを返す前の所に置いてください。"
 
 # 85d408c34b2d4c85bcfde6a34cd0d0f1
-#: ../../tutorial/blog.rst:37
+#: ../../flask/docs/tutorial/blog.rst:37
 msgid "``flaskr/__init__.py``"
 msgstr ""
 
 # 3372f4ca6bf74dd4983b0670c24860a5
-#: ../../tutorial/blog.rst:51
+#: ../../flask/docs/tutorial/blog.rst:51
 msgid ""
 "Unlike the auth blueprint, the blog blueprint does not have a "
 "``url_prefix``. So the ``index`` view will be at ``/``, the ``create`` "
@@ -99,7 +101,7 @@ msgstr ""
 "います。"
 
 # 81409b2ac9d24182a4fb9e992ecb5608
-#: ../../tutorial/blog.rst:56
+#: ../../flask/docs/tutorial/blog.rst:56
 msgid ""
 "However, the endpoint for the ``index`` view defined below will be "
 "``blog.index``. Some of the authentication views referred to a plain "
@@ -116,7 +118,7 @@ msgstr ""
 "はエンドポイント名\ ``'index'``\ をURLの\ ``/``\ と関連付けます。"
 
 # 0a7fc52d92fd4b458303bbbcb49358a6
-#: ../../tutorial/blog.rst:63
+#: ../../flask/docs/tutorial/blog.rst:63
 msgid ""
 "In another application you might give the blog blueprint a ``url_prefix``"
 " and define a separate ``index`` view in the application factory, similar"
@@ -129,12 +131,12 @@ msgstr ""
 "``blog.index``\ でエンドポイントとURLは異なるようになります。"
 
 # b16f3145a6bf427aad9c9d780744fc6a
-#: ../../tutorial/blog.rst:70
+#: ../../flask/docs/tutorial/blog.rst:70
 msgid "Index"
 msgstr "インデックス（Index）"
 
 # 97f29b53825048f68c8b8ba677409306
-#: ../../tutorial/blog.rst:72
+#: ../../flask/docs/tutorial/blog.rst:72
 msgid ""
 "The index will show all of the posts, most recent first. A ``JOIN`` is "
 "used so that the author information from the ``user`` table is available "
@@ -145,12 +147,12 @@ msgstr ""
 "``JOIN``\ を使用しています。"
 
 # 7c31de761ec448f194ab49c76a947b5a
-#: ../../tutorial/blog.rst:89
+#: ../../flask/docs/tutorial/blog.rst:89
 msgid "``flaskr/templates/blog/index.html``"
 msgstr ""
 
 # 999875a2d0cc41a78aa06e4dd4e2866f
-#: ../../tutorial/blog.rst:121
+#: ../../flask/docs/tutorial/blog.rst:121
 msgid ""
 "When a user is logged in, the ``header`` block adds a link to the "
 "``create`` view. When the user is the author of a post, they'll see an "
@@ -169,12 +171,12 @@ msgstr ""
 ".. _Jinjaのforループ: Jinja for loops"
 
 # 7c5997f2734b41709697be6be57468c7
-#: ../../tutorial/blog.rst:132
+#: ../../flask/docs/tutorial/blog.rst:132
 msgid "Create"
 msgstr "作成（Create）"
 
 # ec1087eaade4444c8f62b68f70387802
-#: ../../tutorial/blog.rst:134
+#: ../../flask/docs/tutorial/blog.rst:134
 msgid ""
 "The ``create`` view works the same as the auth ``register`` view. Either "
 "the form is displayed, or the posted data is validated and the post is "
@@ -185,7 +187,7 @@ msgstr ""
 "投稿記事が追加されるか、またはエラーが表示されます。"
 
 # a369e99b60784d5bbaa714e72e058b29
-#: ../../tutorial/blog.rst:138
+#: ../../flask/docs/tutorial/blog.rst:138
 msgid ""
 "The ``login_required`` decorator you wrote earlier is used on the blog "
 "views. A user must be logged in to visit these views, otherwise they will"
@@ -196,17 +198,17 @@ msgstr ""
 "ログインページへとリダイレクトされます。"
 
 # 7aa3d90b2d344c82b846b955a188fddb
-#: ../../tutorial/blog.rst:170
+#: ../../flask/docs/tutorial/blog.rst:170
 msgid "``flaskr/templates/blog/create.html``"
 msgstr ""
 
 # 85cfb24b2de04b19a91c7eacecbce451
-#: ../../tutorial/blog.rst:191
+#: ../../flask/docs/tutorial/blog.rst:191
 msgid "Update"
 msgstr "更新（Update）"
 
 # a2480d90d2104f2a84af806b0bfeed46
-#: ../../tutorial/blog.rst:193
+#: ../../flask/docs/tutorial/blog.rst:193
 msgid ""
 "Both the ``update`` and ``delete`` views will need to fetch a ``post`` by"
 " ``id`` and check if the author matches the logged in user. To avoid "
@@ -219,7 +221,7 @@ msgstr ""
 "各viewから呼び出すことが可能です。"
 
 # ce6758054b274cd0bec79e051ad395bb
-#: ../../tutorial/blog.rst:217
+#: ../../flask/docs/tutorial/blog.rst:217
 msgid ""
 ":func:`abort` will raise a special exception that returns an HTTP status "
 "code. It takes an optional message to show with the error, otherwise a "
@@ -235,7 +237,7 @@ msgstr ""
 "ステータスを返す代わりにログインページへリダイレクトさせます。）"
 
 # b888c5b94c894bde94d9ac0b96befc9d
-#: ../../tutorial/blog.rst:223
+#: ../../flask/docs/tutorial/blog.rst:223
 msgid ""
 "The ``check_author`` argument is defined so that the function can be used"
 " to get a ``post`` without checking the author. This would be useful if "
@@ -248,7 +250,7 @@ msgstr ""
 "ユーザがだれであっても問題ないページのviewを書く場合、便利でしょう。"
 
 # 9a801f9c4cc34679bf4a1cc0103cf328
-#: ../../tutorial/blog.rst:258
+#: ../../flask/docs/tutorial/blog.rst:258
 msgid ""
 "Unlike the views you've written so far, the ``update`` function takes an "
 "argument, ``id``. That corresponds to the ``<int:id>`` in the route. A "
@@ -270,7 +272,7 @@ msgstr ""
 "これは前述の\ ``index.html``\ ファイルでも同様です。"
 
 # cdb7cf073b364ff38c4e18951d958040
-#: ../../tutorial/blog.rst:268
+#: ../../flask/docs/tutorial/blog.rst:268
 msgid ""
 "The ``create`` and ``update`` views look very similar. The main "
 "difference is that the ``update`` view uses a ``post`` object and an "
@@ -286,12 +288,12 @@ msgstr ""
 "方がより分かりやすくなります。"
 
 # 899a0c75d22e43619ae9d2cd2af9c31e
-#: ../../tutorial/blog.rst:274
+#: ../../flask/docs/tutorial/blog.rst:274
 msgid "``flaskr/templates/blog/update.html``"
 msgstr ""
 
 # ff1b56c6cd7041b0862794b149437e5e
-#: ../../tutorial/blog.rst:298
+#: ../../flask/docs/tutorial/blog.rst:298
 msgid ""
 "This template has two forms. The first posts the edited data to the "
 "current page (``/<id>/update``). The other form contains only a button "
@@ -307,7 +309,7 @@ msgstr ""
 "いくらかJavaScriptを使用します。"
 
 # 5e442a2d272f4bc7b7a46eaee96f1e38
-#: ../../tutorial/blog.rst:304
+#: ../../flask/docs/tutorial/blog.rst:304
 msgid ""
 "The pattern ``{{ request.form['title'] or post['title'] }}`` is used to "
 "choose what data appears in the form. When the form hasn't been "
@@ -325,12 +327,12 @@ msgstr ""
 "もう一つの変数です。"
 
 # 40785dca056c4312b6b57e26d435c670
-#: ../../tutorial/blog.rst:313
+#: ../../flask/docs/tutorial/blog.rst:313
 msgid "Delete"
 msgstr "消去（Delete）"
 
 # 40787827e2dd4d738a37296880258d23
-#: ../../tutorial/blog.rst:315
+#: ../../flask/docs/tutorial/blog.rst:315
 msgid ""
 "The delete view doesn't have its own template, the delete button is part "
 "of ``update.html`` and posts to the ``/<id>/delete`` URL. Since there is "
@@ -343,7 +345,7 @@ msgstr ""
 "リダイレクトします。"
 
 # 81be1b73e78a4fa4b8cc686a31b0264c
-#: ../../tutorial/blog.rst:332
+#: ../../flask/docs/tutorial/blog.rst:332
 msgid ""
 "Congratulations, you've now finished writing your application! Take some "
 "time to try out everything in the browser. However, there's still more to"
@@ -354,7 +356,6 @@ msgstr ""
 "このプロジェクトが完成する前にもう少しやることが残っています。"
 
 # a369b1f524314e268412d4ec2b30ea77
-#: ../../tutorial/blog.rst:336
+#: ../../flask/docs/tutorial/blog.rst:336
 msgid "Continue to :doc:`install`."
 msgstr ":doc:`install`\ へ続きます。"
-

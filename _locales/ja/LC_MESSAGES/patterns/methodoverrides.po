@@ -6,24 +6,24 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 1.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
+"Generated-By: Babel 2.9.1\n"
 
 # d6a1f145f45c4c6d8e7d06546d33c05f
-#: ../../patterns/methodoverrides.rst:2
+#: ../../flask/docs/patterns/methodoverrides.rst:2
 msgid "Adding HTTP Method Overrides"
 msgstr ""
 
 # 03faeab4ad02445cadd8a75ca5a55aba
-#: ../../patterns/methodoverrides.rst:4
+#: ../../flask/docs/patterns/methodoverrides.rst:4
 msgid ""
 "Some HTTP proxies do not support arbitrary HTTP methods or newer HTTP "
 "methods (such as PATCH). In that case it's possible to \"proxy\" HTTP "
@@ -31,7 +31,7 @@ msgid ""
 msgstr ""
 
 # 725ddb684343429ab02c55b338a8d8e7
-#: ../../patterns/methodoverrides.rst:8
+#: ../../flask/docs/patterns/methodoverrides.rst:8
 msgid ""
 "The way this works is by letting the client do an HTTP POST request and "
 "set the ``X-HTTP-Method-Override`` header. Then the method is replaced "
@@ -39,12 +39,11 @@ msgid ""
 msgstr ""
 
 # ad3baf2162bc4945aa0001e7883c56a1
-#: ../../patterns/methodoverrides.rst:12
+#: ../../flask/docs/patterns/methodoverrides.rst:12
 msgid "This can be accomplished with an HTTP middleware::"
 msgstr ""
 
 # f1a4c036c6aa4fc68c34106207986308
-#: ../../patterns/methodoverrides.rst:37
+#: ../../flask/docs/patterns/methodoverrides.rst:37
 msgid "To use this with Flask, wrap the app object with the middleware::"
 msgstr ""
-

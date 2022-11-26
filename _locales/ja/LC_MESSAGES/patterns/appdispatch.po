@@ -6,7 +6,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 1.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -209,4 +209,3 @@ msgstr ""
 "これとサブドメインのものとの大きな違いは、こちら（上述のコード例）は、"
 "もしもアプリケーション作成関数が\ ``None``\ を返したときは、別の"
 "アプリケーションで代わりに対応（fall back）することです::"
-

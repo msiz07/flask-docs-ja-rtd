@@ -59,7 +59,7 @@ def locale(ctx):
         (
             "{SPHINXINTL} update "
             + "-p {LOCALEDIR}/pot -l {LOCALE} "
-            + "{SPHINXOPTS}"
+            + "--update-project-field"
         ).format(**SETTINGS)
     )
 

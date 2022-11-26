@@ -6,7 +6,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 1.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -386,6 +386,5 @@ msgstr ""
 #~ "For Python 3 add the following "
 #~ "lines to the top of your ``.wsgi``"
 #~ " file::"
-#~ msgstr ""
-#~ "Python3では、\ ``.wsgi``\ ファイルの最上部に以下の行を追加してください::"
+#~ msgstr "Python3では、\\ ``.wsgi``\\ ファイルの最上部に以下の行を追加してください::"
 

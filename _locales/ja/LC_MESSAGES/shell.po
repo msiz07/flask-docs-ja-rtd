@@ -6,7 +6,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 1.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-20 18:38+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -68,9 +68,9 @@ msgstr ""
 "いてください。"
 
 # 401dd83ddda449419e151c716f23f7c2
+# | msgid "" "Generally it's recommended that you read the :doc:`reqcontext`
+# | chapter of" " the documentation first."
 #: ../../flask/docs/shell.rst:24
-#| msgid "" "Generally it's recommended that you read the :doc:`reqcontext`
-#| chapter of" " the documentation first."
 msgid "Generally it's recommended that you read :doc:`reqcontext` first."
 msgstr ""
 "概して、まずは :doc:`reqcontext` を読んでおくことが推奨されます。"

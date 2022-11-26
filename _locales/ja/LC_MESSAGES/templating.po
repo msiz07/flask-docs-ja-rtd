@@ -6,7 +6,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 1.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-20 18:38+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -114,8 +114,8 @@ msgstr ""
 "以下のグローバル変数は標準設定で、Jinja2テンプレートの中で利用可能です:"
 
 # 536647c5de3c4eaa995d3af9c096c92b
+# | msgid "The current configuration object (:data:`flask.config`)"
 #: ../../flask/docs/templating.rst:40
-#| msgid "The current configuration object (:data:`flask.config`)"
 msgid "The current configuration object (:data:`flask.Flask.config`)"
 msgstr "その時点の設定オブジェクト（:data:`flask.Flask.config`）"
 

@@ -6,24 +6,24 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 1.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
+"Generated-By: Babel 2.9.1\n"
 
 # 254bb67c85fa444690694a0aa455fb5d
-#: ../../patterns/caching.rst:4
+#: ../../flask/docs/patterns/caching.rst:2
 msgid "Caching"
 msgstr "キャッシング"
 
 # 79fa85a11e4c4ed08b9ce2a7c149f122
-#: ../../patterns/caching.rst:6
+#: ../../flask/docs/patterns/caching.rst:4
 msgid ""
 "When your application runs slow, throw some caches in.  Well, at least "
 "it's the easiest way to speed up things.  What does a cache do?  Say you "
@@ -39,7 +39,7 @@ msgstr ""
 "に実際に入れておくのが良い発想です。"
 
 # 95f7b17c4ba346d08d46687ddac1734b
-#: ../../patterns/caching.rst:13
+#: ../../flask/docs/patterns/caching.rst:11
 msgid ""
 "Flask itself does not provide caching for you, but `Flask-Caching`_, an "
 "extension for Flask does. Flask-Caching supports various backends, and it"
@@ -48,4 +48,3 @@ msgstr ""
 "Flask自身はキャッシュを提供しませんが、Fask拡張の\ `Flask-Caching`_\ は"
 "提供します。Flask-Cachingは様々なバックエンドをサポートし、自分独自の"
 "キャッシングのバックエンドを開発することさえ可能です。"
-

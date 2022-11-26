@@ -6,24 +6,24 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 1.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
+"Generated-By: Babel 2.9.1\n"
 
 # ec82beabc14649b092383e143b7b7bfe
-#: ../../patterns/flashing.rst:4
+#: ../../flask/docs/patterns/flashing.rst:2
 msgid "Message Flashing"
 msgstr "メッセージのフラッシュ表示（Message Flashing）"
 
 # f4c3d6b7b36040ef82f19d8c744cc02d
-#: ../../patterns/flashing.rst:6
+#: ../../flask/docs/patterns/flashing.rst:4
 msgid ""
 "Good applications and user interfaces are all about feedback.  If the "
 "user does not get enough feedback they will probably end up hating the "
@@ -49,23 +49,23 @@ msgstr ""
 "が失敗することを意味します。"
 
 # 6bff2e6865d542f2b381ca183fe0355a
-#: ../../patterns/flashing.rst:17
+#: ../../flask/docs/patterns/flashing.rst:15
 msgid "Simple Flashing"
 msgstr "シンプルなフラッシュ表示"
 
 # 1300b8ca34d3499792038ecf9a89d765
-#: ../../patterns/flashing.rst:19
+#: ../../flask/docs/patterns/flashing.rst:17
 msgid "So here is a full example::"
 msgstr "それでは、以下は一通りの例（full example）です::"
 
 # b1c43817ac9a406b9d6fd866cc37eba4
-#: ../../patterns/flashing.rst:43
+#: ../../flask/docs/patterns/flashing.rst:41
 msgid "And here is the :file:`layout.html` template which does the magic:"
 msgstr ""
 "そして、以下は魔法をかける\ :file:`layout.html`\ テンプレートです:"
 
 # e253b08241134cf6a0623996deda7282
-#: ../../patterns/flashing.rst:60
+#: ../../flask/docs/patterns/flashing.rst:58
 msgid ""
 "Here is the :file:`index.html` template which inherits from "
 ":file:`layout.html`:"
@@ -74,7 +74,7 @@ msgstr ""
 "です:"
 
 # 4231067ea37945d5ad7a3127d536a177
-#: ../../patterns/flashing.rst:70
+#: ../../flask/docs/patterns/flashing.rst:68
 msgid ""
 "And here is the :file:`login.html` template which also inherits from "
 ":file:`layout.html`:"
@@ -83,12 +83,12 @@ msgstr ""
 "テンプレートです:"
 
 # f180b345e089486d86314163e565907a
-#: ../../patterns/flashing.rst:94
+#: ../../flask/docs/patterns/flashing.rst:92
 msgid "Flashing With Categories"
 msgstr "カテゴリーを使ったフラッシュ表示"
 
 # dc99a56eed37485795d932f9b72a3b46
-#: ../../patterns/flashing.rst:98
+#: ../../flask/docs/patterns/flashing.rst:96
 msgid ""
 "It is also possible to provide categories when flashing a message.  The "
 "default category if nothing is provided is ``'message'``.  Alternative "
@@ -102,7 +102,7 @@ msgstr ""
 "使って表示できます。"
 
 # 3f3486ff00264f6fb5655443fcdfba7d
-#: ../../patterns/flashing.rst:103
+#: ../../flask/docs/patterns/flashing.rst:101
 msgid ""
 "To flash a message with a different category, just use the second "
 "argument to the :func:`~flask.flash` function::"
@@ -111,7 +111,7 @@ msgstr ""
 "引数を\ :func:`~flask.flash`\ 関数で使うだけです::"
 
 # e975e8692cc547b2b195a5c2695603f4
-#: ../../patterns/flashing.rst:108
+#: ../../flask/docs/patterns/flashing.rst:106
 msgid ""
 "Inside the template you then have to tell the "
 ":func:`~flask.get_flashed_messages` function to also return the "
@@ -122,7 +122,7 @@ msgstr ""
 "少し違った見た目になります:"
 
 # f27dddb88df34427be089b32573cdcea
-#: ../../patterns/flashing.rst:124
+#: ../../flask/docs/patterns/flashing.rst:122
 msgid ""
 "This is just one example of how to render these flashed messages.  One "
 "might also use the category to add a prefix such as "
@@ -133,12 +133,12 @@ msgstr ""
 "をメッセージに加えるためにもカテゴリーを使うかもしれません。"
 
 # c00b3bb8068a4f94a765d6cc1ba32460
-#: ../../patterns/flashing.rst:129
+#: ../../flask/docs/patterns/flashing.rst:127
 msgid "Filtering Flash Messages"
 msgstr "フラッシュ表示するメッセージの選別（Filtering Flash Messages）"
 
 # 95b91386df914fd2bdc78e486e2473b1
-#: ../../patterns/flashing.rst:133
+#: ../../flask/docs/patterns/flashing.rst:131
 msgid ""
 "Optionally you can pass a list of categories which filters the results of"
 " :func:`~flask.get_flashed_messages`.  This is useful if you wish to "
@@ -147,4 +147,3 @@ msgstr ""
 "オプションで\ :func:`~flask.get_flashed_messages`\ の結果を選別（filter）"
 "するカテゴリーのリストを渡すことができます。これは各カテゴリーを分かれた"
 "ブロックで表示したいときに便利です。"
-

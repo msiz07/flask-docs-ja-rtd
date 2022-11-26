@@ -6,7 +6,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 1.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-20 18:38+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -16,14 +16,6 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
-
-#: ../../flask/docs/patterns/celery.rst:65
-msgid ""
-"Let's write a task that adds two numbers together and returns the result."
-" We configure Celery's broker and backend to use Redis, create a "
-"``celery`` application using the factory from above, and then use it to "
-"define the task. ::"
-msgstr ""
 
 # 93eea3f12ffa4a2daf7f556894a51339
 #: ../../flask/docs/patterns/celery.rst:2
@@ -102,6 +94,14 @@ msgstr ""
 # d701245b8419432ab6fa6ed236c5190d
 #: ../../flask/docs/patterns/celery.rst:63
 msgid "An example task"
+msgstr ""
+
+#: ../../flask/docs/patterns/celery.rst:65
+msgid ""
+"Let's write a task that adds two numbers together and returns the result."
+" We configure Celery's broker and backend to use Redis, create a "
+"``celery`` application using the factory from above, and then use it to "
+"define the task. ::"
 msgstr ""
 
 # cef3a8fd9fc545788858f765fde9cb59

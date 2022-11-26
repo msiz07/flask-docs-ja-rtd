@@ -6,7 +6,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 1.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -609,4 +609,3 @@ msgstr ""
 #: ../../flask/docs/tutorial/tests.rst:561
 msgid "Continue to :doc:`deploy`."
 msgstr ":doc:`deploy`\ へ続きます。"
-

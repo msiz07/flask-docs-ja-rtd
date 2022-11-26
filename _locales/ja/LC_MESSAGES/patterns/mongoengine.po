@@ -6,24 +6,24 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 1.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-21 13:44+0900\n"
+"POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
+"Generated-By: Babel 2.9.1\n"
 
 # b0e56a929558489bb229aee26f82f798
-#: ../../patterns/mongoengine.rst:2
+#: ../../flask/docs/patterns/mongoengine.rst:2
 msgid "MongoDB with MongoEngine"
 msgstr ""
 
 # b8515dcce7ee4c2a91960fa567b7cada
-#: ../../patterns/mongoengine.rst:4
+#: ../../flask/docs/patterns/mongoengine.rst:4
 msgid ""
 "Using a document database like MongoDB is a common alternative to "
 "relational SQL databases. This pattern shows how to use `MongoEngine`_, a"
@@ -31,36 +31,36 @@ msgid ""
 msgstr ""
 
 # 62a87ec1d5a8447da2ac9552495254be
-#: ../../patterns/mongoengine.rst:8
+#: ../../flask/docs/patterns/mongoengine.rst:8
 msgid "A running MongoDB server and `Flask-MongoEngine`_ are required. ::"
 msgstr ""
 
 # bbec24c4c34c424899b7a0a049cc291e
-#: ../../patterns/mongoengine.rst:17
+#: ../../flask/docs/patterns/mongoengine.rst:17
 msgid "Configuration"
 msgstr ""
 
 # 22aa96d311954934b4d8393b3e06f61a
-#: ../../patterns/mongoengine.rst:19
+#: ../../flask/docs/patterns/mongoengine.rst:19
 msgid ""
 "Basic setup can be done by defining ``MONGODB_SETTINGS`` on "
 "``app.config`` and creating a ``MongoEngine`` instance. ::"
 msgstr ""
 
 # dd0c6f2c534443318fc3b0ff2f869c15
-#: ../../patterns/mongoengine.rst:33
+#: ../../flask/docs/patterns/mongoengine.rst:33
 msgid "Mapping Documents"
 msgstr ""
 
 # 0d7e9b446d264d519df3d23917f15339
-#: ../../patterns/mongoengine.rst:35
+#: ../../flask/docs/patterns/mongoengine.rst:35
 msgid ""
 "To declare a model that represents a Mongo document, create a class that "
 "inherits from ``Document`` and declare each of the fields. ::"
 msgstr ""
 
 # 5a29e1d655e4429693b87dfe514b6c23
-#: ../../patterns/mongoengine.rst:47
+#: ../../flask/docs/patterns/mongoengine.rst:47
 msgid ""
 "If the document has nested fields, use ``EmbeddedDocument`` to defined "
 "the fields of the embedded document and ``EmbeddedDocumentField`` to "
@@ -68,12 +68,12 @@ msgid ""
 msgstr ""
 
 # d401512502d949d3a02a146d29a3bd3b
-#: ../../patterns/mongoengine.rst:62
+#: ../../flask/docs/patterns/mongoengine.rst:62
 msgid "Creating Data"
 msgstr ""
 
 # e04d11ff6ee843398348b80b6d9a46e4
-#: ../../patterns/mongoengine.rst:64
+#: ../../flask/docs/patterns/mongoengine.rst:64
 msgid ""
 "Instantiate your document class with keyword arguments for the fields. "
 "You can also assign values to the field attributes after instantiation. "
@@ -81,19 +81,19 @@ msgid ""
 msgstr ""
 
 # ea3c313466884681bbb73c6f81266f37
-#: ../../patterns/mongoengine.rst:78
+#: ../../flask/docs/patterns/mongoengine.rst:78
 msgid "Queries"
 msgstr ""
 
 # 434ea8ff1ff5411498e10fa389659f79
-#: ../../patterns/mongoengine.rst:80
+#: ../../flask/docs/patterns/mongoengine.rst:80
 msgid ""
 "Use the class ``objects`` attribute to make queries. A keyword argument "
 "looks for an equal value on the field. ::"
 msgstr ""
 
 # f25a5c13c4164743b7b32c0825289acf
-#: ../../patterns/mongoengine.rst:85
+#: ../../flask/docs/patterns/mongoengine.rst:85
 msgid ""
 "Query operators may be used by concatenating them with the field name "
 "using a double-underscore. ``objects``, and queries returned by calling "
@@ -101,12 +101,12 @@ msgid ""
 msgstr ""
 
 # b6b709116ae64c679f7802ae15e22545
-#: ../../patterns/mongoengine.rst:96
+#: ../../flask/docs/patterns/mongoengine.rst:96
 msgid "Documentation"
 msgstr ""
 
 # 185ec4d261f9479bb2ac16e6e0143583
-#: ../../patterns/mongoengine.rst:98
+#: ../../flask/docs/patterns/mongoengine.rst:98
 msgid ""
 "There are many more ways to define and query documents with MongoEngine. "
 "For more information, check out the `official documentation "
@@ -114,9 +114,8 @@ msgid ""
 msgstr ""
 
 # 59b4eac08543459eb12c50f28611b0a1
-#: ../../patterns/mongoengine.rst:102
+#: ../../flask/docs/patterns/mongoengine.rst:102
 msgid ""
 "Flask-MongoEngine adds helpful utilities on top of MongoEngine. Check out"
 " their `documentation <Flask-MongoEngine_>`_ as well."
 msgstr ""
-

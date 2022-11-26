@@ -1,2 +1,2 @@
-git+https://github.com/msiz07/sphinx_intl.git@feature/issue-50
+git+https://github.com/msiz07/sphinx_intl.git@work/main
 invoke

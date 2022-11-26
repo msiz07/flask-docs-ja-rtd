@@ -6,24 +6,24 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 1.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 21:10+0900\n"
+"POT-Creation-Date: 2021-08-21 20:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.8.0\n"
+"Generated-By: Babel 2.9.1\n"
 
 # 5f8f7c3411a6459d842cd45e511cdfc7
-#: ../../flask/docs/extensions.rst:4
+#: ../../flask/docs/extensions.rst:2
 msgid "Extensions"
 msgstr "Flask拡張（Extensions）"
 
 # 308d0bd9271843efa8112dba4fab1cbf
-#: ../../flask/docs/extensions.rst:6
+#: ../../flask/docs/extensions.rst:4
 msgid ""
 "Extensions are extra packages that add functionality to a Flask "
 "application. For example, an extension might add support for sending "
@@ -37,11 +37,11 @@ msgstr ""
 "があります。"
 
 # 9af0eb3ae1d04b9ca8641d5497efec2c
-#: ../../flask/docs/extensions.rst:13
+#: ../../flask/docs/extensions.rst:11
 msgid "Finding Extensions"
 msgstr "Flask拡張の探し出し"
 
-#: ../../flask/docs/extensions.rst:15
+#: ../../flask/docs/extensions.rst:13
 msgid ""
 "Flask extensions are usually named \"Flask-Foo\" or \"Foo-Flask\". You "
 "can search PyPI for packages tagged with `Framework :: Flask <pypi_>`_."
@@ -51,12 +51,12 @@ msgstr ""
 "ことができます。"
 
 # 2070656598124bceb1474c8f1c31df0f
-#: ../../flask/docs/extensions.rst:20
+#: ../../flask/docs/extensions.rst:18
 msgid "Using Extensions"
 msgstr "Flask拡張の使用方法"
 
 # 02a6f89c545c42128a78b18aa0e9980e
-#: ../../flask/docs/extensions.rst:22
+#: ../../flask/docs/extensions.rst:20
 msgid ""
 "Consult each extension's documentation for installation, configuration, "
 "and usage instructions. Generally, extensions pull their own "
@@ -71,11 +71,11 @@ msgstr ""
 "しれません::"
 
 # cf5d607e97da48c99b3c2f4193f268d7
-#: ../../flask/docs/extensions.rst:42
+#: ../../flask/docs/extensions.rst:40
 msgid "Building Extensions"
 msgstr "Flask拡張の構築"
 
-#: ../../flask/docs/extensions.rst:44
+#: ../../flask/docs/extensions.rst:42
 msgid ""
 "While the `PyPI <pypi_>`_ contains many Flask extensions, you may not "
 "find an extension that fits your need. If this is the case, you can "

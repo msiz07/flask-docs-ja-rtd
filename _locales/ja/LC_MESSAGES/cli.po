@@ -6,7 +6,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 1.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-20 18:38+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -90,6 +90,11 @@ msgstr ""
 "サポートしていますが、殆どの使用状況はシンプルなものでしょう。典型的な環境"
 "変数の値は以下のとおりです::"
 
+# 9c27340fdde54da8917b0da66bfb04cd
+#: ../../flask/docs/cli.rst:57
+msgid "(nothing)"
+msgstr "（何もなし）"
+
 # 606883e7901a4c94942a03ab28fdbc58
 #: ../../flask/docs/cli.rst:55
 msgid ""
@@ -101,10 +106,10 @@ msgstr ""
 "して）importされ、自動的にアプリ（``app`` もしくは ``application``）または"
 "factory（``create_app`` もしくは ``make_app``）が見つけ出されます。"
 
-# 9c27340fdde54da8917b0da66bfb04cd
-#: ../../flask/docs/cli.rst:57
-msgid "(nothing)"
-msgstr "（何もなし）"
+# b24a3d97c94b4978b95bf671db938923
+#: ../../flask/docs/cli.rst:61
+msgid "``FLASK_APP=hello``"
+msgstr ""
 
 # 606883e7901a4c94942a03ab28fdbc58
 #: ../../flask/docs/cli.rst:60
@@ -115,11 +120,6 @@ msgstr ""
 "指定した名前（訳注: 上の例では「hello」にあたる部分）がimportされ、自動的に"
 "アプリ（``app`` もしくは ``application``）またはfactory（``create_app`` "
 "もしくは ``make_app``）が見つけ出されます。"
-
-# b24a3d97c94b4978b95bf671db938923
-#: ../../flask/docs/cli.rst:61
-msgid "``FLASK_APP=hello``"
-msgstr ""
 
 # 96704387cfaf44db91a7b2d7c403a7ac
 #: ../../flask/docs/cli.rst:65
@@ -169,6 +169,11 @@ msgstr ""
 msgid "Uses the ``app2`` Flask instance in ``hello``."
 msgstr "``hello`` の中のFlaskインスタンス ``app2`` を使用します。"
 
+# 3a4aac51b58d4781aa989a0d676b111a
+#: ../../flask/docs/cli.rst:82
+msgid "``FLASK_APP=\"hello:create_app('dev')\"``"
+msgstr ""
+
 # b12fd0cf91c948bf9bd88313905d96b7
 #: ../../flask/docs/cli.rst:81
 msgid ""
@@ -177,11 +182,6 @@ msgid ""
 msgstr ""
 "``hello`` の中にあるfactoryの ``create_app`` を、文字列 ``'dev'`` "
 "を引数に使って呼び出します。"
-
-# 3a4aac51b58d4781aa989a0d676b111a
-#: ../../flask/docs/cli.rst:82
-msgid "``FLASK_APP=\"hello:create_app('dev')\"``"
-msgstr ""
 
 # bd645fb19c924fe881406d3b164480e3
 #: ../../flask/docs/cli.rst:84
@@ -510,8 +510,8 @@ msgid "Unix Bash, :file:`venv/bin/activate`::"
 msgstr "UnixのBashでは、:file:`venv/bin/activate` に追加します::"
 
 # 87b45bbdb76342f5a622e166491c5c4e
+# | msgid "Unix Bash, :file:`venv/bin/activate`::"
 #: ../../flask/docs/cli.rst:417
-#| msgid "Unix Bash, :file:`venv/bin/activate`::"
 msgid "Fish, :file:`venv/bin/activate.fish`::"
 msgstr "Fishでは、:file:`venv/bin/activate.fish` に追加します::"
 

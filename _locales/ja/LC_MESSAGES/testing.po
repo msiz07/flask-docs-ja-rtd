@@ -6,7 +6,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 1.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-20 18:38+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -271,8 +271,8 @@ msgstr ""
 "属性を持ちます。"
 
 # 262bfb979b194173810f94038be60a33
+# | msgid "Accessing and Modifying Sessions"
 #: ../../flask/docs/testing.rst:203
-#| msgid "Accessing and Modifying Sessions"
 msgid "Accessing and Modifying the Session"
 msgstr "セッションに対するアクセスと変更"
 
