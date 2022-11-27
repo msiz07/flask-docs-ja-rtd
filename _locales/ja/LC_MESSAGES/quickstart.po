@@ -17,56 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.10.3\n"
 
-#: ../../flask/docs/quickstart.rst:107
-msgid "To enable debug mode, use the ``--debug`` option."
-msgstr ""
-
-#: ../../flask/docs/quickstart.rst:313
-msgid ""
-"The example above keeps all methods for the route within one function, "
-"which can be useful if each part uses some common data."
-msgstr ""
-
-#: ../../flask/docs/quickstart.rst:316
-msgid ""
-"You can also separate views for different methods into different "
-"functions. Flask provides a shortcut for decorating such routes with "
-":meth:`~flask.Flask.get`, :meth:`~flask.Flask.post`, etc. for each common"
-" HTTP method."
-msgstr ""
-
-#: ../../flask/docs/quickstart.rst:360
-msgid ""
-"Templates can be used to generate any type of text file. For web "
-"applications, you'll primarily be generating HTML pages, but you can also"
-" generate markdown, plain text for emails, any anything else."
-msgstr ""
-
-#: ../../flask/docs/quickstart.rst:364
-msgid "For a reference to HTML, CSS, and other web APIs, use the `MDN Web Docs`_."
-msgstr ""
-
-#: ../../flask/docs/quickstart.rst:697
-msgid ""
-"If it's an iterator or generator returning strings or bytes, it is "
-"treated as a streaming response."
-msgstr ""
-
-#: ../../flask/docs/quickstart.rst:757
-msgid ""
-"This is a shortcut to passing the data to the :func:`~flask.json.jsonify`"
-" function, which will serialize any supported JSON data type. That means "
-"that all the data in the dict or list must be JSON serializable."
-msgstr ""
-
-#: ../../flask/docs/quickstart.rst:762
-msgid ""
-"For complex types such as database models, you'll want to use a "
-"serialization library to convert the data to valid JSON types first. "
-"There are many serialization libraries and Flask API extensions "
-"maintained by the community that support more complex applications."
-msgstr ""
-
 # 5d3e771b460d48908ed5b59e63cde452
 #: ../../flask/docs/quickstart.rst:2
 msgid "Quickstart"
@@ -152,22 +102,26 @@ msgstr ""
 "ように必ずしてください。"
 
 #: ../../flask/docs/quickstart.rst:42
-#, fuzzy
 #| msgid "" "To run the application, use the :command:`flask` command or "
 #| ":command:`python -m flask`. Before you can do that you need to tell your "
 #| "terminal the application to work with by exporting the ``FLASK_APP`` "
 #| "environment variable:"
+#| ~ msgstr ""
+#| ~ "アプリケーションを実行するには、:command:`flask` コマンドまたは "
+#| ~ ":command:`python -m flask` を使用します。実行できるようにする前に、"
+#| ~ "``FLASK_APP`` 環境変数をexportして、実行するアプリケーションを端末（訳注: "
+#| ~ "Windowsでのコマンドプロンプト、Linuxでの端末、SSHログインしているときの"
+#| ~ "PuTTYやTera Termなど、コマンドラインで操作している環境を指します）へ伝える"
+#| ~ "必要があります::"
 msgid ""
 "To run the application, use the ``flask`` command or ``python -m flask``."
 " You need to tell the Flask where your application is with the ``-app`` "
 "option."
 msgstr ""
-"アプリケーションを実行するには、:command:`flask` コマンドまたは "
-":command:`python -m flask` を使用します。実行できるようにする前に、"
-"``FLASK_APP`` 環境変数をexportして、実行するアプリケーションを端末（訳注: "
-"Windowsでのコマンドプロンプト、Linuxでの端末、SSHログインしているときの"
-"PuTTYやTera Termなど、コマンドラインで操作している環境を指します）へ伝える"
-"必要があります::"
+"アプリケーションを実行するには、``flask`` コマンドまたは "
+"``python -m flask`` を使用します。``--app`` （訳注: 原文では「-app」です"
+"が、多分誤記）を使用して、自分のアプリケーションがどこにあるかをFlaskへ伝"
+"える必要があります。"
 
 #: ../../flask/docs/quickstart.rst:52
 msgid "Application Discovery Behavior"
@@ -175,7 +129,6 @@ msgstr ""
 "アプリケーションを見つけるときの振る舞い（Application Discovery Behavior）"
 
 #: ../../flask/docs/quickstart.rst:54
-#, fuzzy
 #| msgid "" "As a shortcut, if the file is named ``app.py`` or ``wsgi.py``, you
 #| don't " "have to set the ``FLASK_APP`` environment variable. See :doc:`/cli`
 #| for " "more details."
@@ -184,8 +137,8 @@ msgid ""
 "have to use ``--app``. See :doc:`/cli` for more details."
 msgstr ""
 "手短にいうと、もし ``app.py`` または ``wsgi.py`` という名前のファイルで"
-"あれば、``FLASK_APP`` 環境変数を設定する必要はありません。さらなる詳細は "
-":doc:`/cli` を見てください。"
+"あれば、``--app`` を使用する必要はありません。さらなる詳細は :doc:`/cli` を"
+"見てください。"
 
 # ebc0751096214ee6a5131cf3d9693430
 #: ../../flask/docs/quickstart.rst:57
@@ -286,19 +239,23 @@ msgstr ""
 "pinによって保護されていますが、それでも重要なセキュリティリスクを意味し"
 "ます。本番環境では開発サーバやデバッガを走らせないようにしてください。"
 
+#: ../../flask/docs/quickstart.rst:107
+msgid "To enable debug mode, use the ``--debug`` option."
+msgstr "デバッグモードを有効にするには、``--debug`` オプションを使います。"
+
 #: ../../flask/docs/quickstart.rst:119
 msgid "See also:"
 msgstr "以下も参照してください:"
 
 #: ../../flask/docs/quickstart.rst:121
-#, fuzzy
 #| msgid "" ":doc:`/server` and :doc:`/cli` for information about running in "
 #| "development mode."
 msgid ""
 ":doc:`/server` and :doc:`/cli` for information about running in debug "
 "mode."
 msgstr ""
-"開発モードで走らせることに関する情報について、:doc:`/server` と :doc:`/cli`。"
+"デバッグモードで走らせることに関する情報について、:doc:`/server` と "
+":doc:`/cli`。"
 
 #: ../../flask/docs/quickstart.rst:122
 msgid ""
@@ -631,6 +588,28 @@ msgstr ""
 "するために、:meth:`~flask.Flask.route` デコレータの ``method`` 引数を使用"
 "できます。::"
 
+#: ../../flask/docs/quickstart.rst:313
+msgid ""
+"The example above keeps all methods for the route within one function, "
+"which can be useful if each part uses some common data."
+msgstr ""
+"上記の例は経路（route）用の全てのメソッド（の実装）を１つの関数内に保持して"
+"おり、それはそれぞれの部分（訳注： 各メソッドに対応する実装部分）がいくらか"
+"の共通データを使うときは便利な場合があります。"
+
+#: ../../flask/docs/quickstart.rst:316
+msgid ""
+"You can also separate views for different methods into different "
+"functions. Flask provides a shortcut for decorating such routes with "
+":meth:`~flask.Flask.get`, :meth:`~flask.Flask.post`, etc. for each common"
+" HTTP method."
+msgstr ""
+"違うメソッド用のviewを違う関数に分けることもできます。Flaskはそのような経路"
+"（訳注: メソッドごとにview関数が分かれているroute）を修飾する（訳注: "
+"「@app.get()」のように、「@～」と関数の直前に付けること）ショートカットに、"
+":meth:`~flask.Flask.get`、:meth:`~flask.Flask.post`、などをありがちなHTTP"
+"メソッドごとに提供しています。"
+
 # d63448edcde34047ab82deb7257d33b7
 #: ../../flask/docs/quickstart.rst:331
 msgid ""
@@ -698,6 +677,22 @@ msgstr ""
 "実際にとても煩わしいものです。そのような理由から、Flaskは `Jinja2 "
 "<https://palletsprojects.com/p/jinja/>`_ テンプレートエンジンを自動的に"
 "設定します。"
+
+#: ../../flask/docs/quickstart.rst:360
+msgid ""
+"Templates can be used to generate any type of text file. For web "
+"applications, you'll primarily be generating HTML pages, but you can also"
+" generate markdown, plain text for emails, any anything else."
+msgstr ""
+"テンプレートはどのタイプのテキストファイルを生成するときにも使用できます。"
+"Webアプリケーションでは、主にHTMLページを生成しますが、markdown、email用の"
+"plain text、その他の何でも生成できます。"
+
+#: ../../flask/docs/quickstart.rst:364
+msgid "For a reference to HTML, CSS, and other web APIs, use the `MDN Web Docs`_."
+msgstr ""
+"HTML、CSS、およびその他のweb API用の参照情報は、`MDN Web Docs`_ を使って"
+"ください。"
 
 # 50d34f17a8c34cbdb08df7e3a55250b4
 #: ../../flask/docs/quickstart.rst:368
@@ -1228,7 +1223,6 @@ msgstr "レスポンスについて"
 
 # 40c669260dc3444c92eb000da2e2316d
 #: ../../flask/docs/quickstart.rst:685
-#, fuzzy
 #| msgid "" "The return value from a view function is automatically converted
 #| into a " "response object for you. If the return value is a string it's
 #| converted " "into a response object with the string as response body, a
@@ -1248,7 +1242,7 @@ msgstr ""
 "view関数からの戻り値は自動的にresponseオブジェクトに変換されます。もし戻り"
 "値がstringの場合、stringをレスポンスのbodyに、ステータスコードを ``200 OK`` "
 "に、そしてmimeタイプを :mimetype:`text/html` にしたresponseオブジェクトへ変換"
-"されます。もし戻り値がdictの場合、responseを作成するために "
+"されます。もし戻り値がdictまたはlistの場合、responseを作成するために "
 ":func:`~flask.json.jsonify` が呼び出されます。Flaskが（view関数の）戻り値を"
 "responseへ変換するロジックは以下のとおりです:"
 
@@ -1270,16 +1264,23 @@ msgstr ""
 "もしstringであれば、responseオブジェクトはそのデータと標準設定のパラメータと"
 "を使用して作成されます。"
 
+#: ../../flask/docs/quickstart.rst:697
+msgid ""
+"If it's an iterator or generator returning strings or bytes, it is "
+"treated as a streaming response."
+msgstr ""
+"もしそれが文字列またはbyte列を返すiteratorもしくはgeneratorであれば、"
+"ストリーミングするレスポンスとして扱います。"
+
 # 143287344dc74f82b75ac5c9d66c437e
 #: ../../flask/docs/quickstart.rst:699
-#, fuzzy
 #| msgid "If it's a dict, a response object is created using ``jsonify``."
 msgid ""
 "If it's a dict or list, a response object is created using "
 ":func:`~flask.json.jsonify`."
 msgstr ""
-"もしdictであれば、responseオブジェクトは :func:`~flask.json.jsonify` を使用"
-"して作成されます。"
+"もしdictかlistであれば、responseオブジェクトは :func:`~flask.json.jsonify` "
+"を使用して作成されます。"
 
 # cad6d48163454e75a92762542b440826
 #: ../../flask/docs/quickstart.rst:701
@@ -1337,7 +1338,6 @@ msgstr "JSONを使ったAPIs"
 
 # f0a88465cfb94ce1b85dedf84428315f
 #: ../../flask/docs/quickstart.rst:737
-#, fuzzy
 #| msgid "" "A common response format when writing an API is JSON. It's easy to
 #| get " "started writing such an API with Flask. If you return a ``dict`` from
 #| a " "view, it will be converted to a JSON response."
@@ -1347,8 +1347,33 @@ msgid ""
 "``list`` from a view, it will be converted to a JSON response."
 msgstr ""
 "APIを書いているときによくあるレスポンスのフォーマットにJSONがあります。Flask"
-"でそのようなAPIの作成を始めることは簡単です。もし ``dict`` をviewから返した"
-"場合、それはJSONのレスポンスへ変換されます。"
+"でそのようなAPIの作成を始めることは簡単です。もし ``dict`` か ``list`` を"
+"viewから返した場合、それはJSONのレスポンスへ変換されます。"
+
+#: ../../flask/docs/quickstart.rst:757
+msgid ""
+"This is a shortcut to passing the data to the :func:`~flask.json.jsonify`"
+" function, which will serialize any supported JSON data type. That means "
+"that all the data in the dict or list must be JSON serializable."
+msgstr ""
+"これは、サポートされているどのJSONのデータタイプもシリアライズ（訳注: Python"
+"内部で処理できるデータ形式のオブジェクトから、文字列やバイト列のように、"
+"階層を持たず、頭から順番に読み込んで処理できるデータ形式へ変換するような意味"
+"合い）する、:func:`~flask.json.jsonify` 関数へデータを渡すショートカット"
+"です。これは、dictもしくはlist内の全てのデータはJSONでシリアライズ可能である"
+"必要があることを意味します。"
+
+#: ../../flask/docs/quickstart.rst:762
+msgid ""
+"For complex types such as database models, you'll want to use a "
+"serialization library to convert the data to valid JSON types first. "
+"There are many serialization libraries and Flask API extensions "
+"maintained by the community that support more complex applications."
+msgstr ""
+"データベースのモデルのような複雑なタイプでは、データを正当なJSONのタイプへ"
+"最初に変換するシリアライズのライブラリを使いたくなるでしょう。もっと複雑な"
+"応用もサポートする、コミュニティで保守されているシリアライズのライブラリや"
+"Flask APIの拡張もたくさんあります。"
 
 # f13176e1cc944419a1ff9215f0b719c7
 #: ../../flask/docs/quickstart.rst:771
