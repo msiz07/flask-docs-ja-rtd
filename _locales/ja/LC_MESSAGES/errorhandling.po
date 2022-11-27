@@ -87,7 +87,7 @@ msgstr ""
 "そして、これは直面するであろう問題の小さなサンプルでしかありません。では"
 "このような問題にどう対処するのでしょうか？標準設定では、もしアプリケーション"
 "が本番環境（production）モードで走っていて、例外が生じた場合、Flaskはとても"
-"シンプルなページを表示し、 :attr:`~flask.Flask.logger` へ例外をログします。"
+"シンプルなページを表示し、:attr:`~flask.Flask.logger` へ例外をログします。"
 
 # b2f377030ee849a2a434442d22f9b78b
 #: ../../flask/docs/errorhandling.rst:24
@@ -269,10 +269,10 @@ msgid ""
 ":exc:`~werkzeug.exceptions.BadRequest` and their HTTP codes are "
 "interchangeable when registering handlers. (``BadRequest.code == 400``)"
 msgstr ""
-":exc:`~werkzeug.exceptions.BadRequest`\\ のような\\ "
-":exc:`werkzeug.exceptions.HTTPException`\\ "
-"のサブクラスとそれらのHTTPコードは、handlerを登録するとき相互に交換可能です。（\\ ``BadRequest.code == "
-"400``\\ ）"
+":exc:`~werkzeug.exceptions.BadRequest` のような "
+":exc:`werkzeug.exceptions.HTTPException` のサブクラスとそれらのHTTPコード"
+"は、handlerを登録するとき相互に交換可能です。（``BadRequest.code == "
+"400``）"
 
 # 99e9c340e42e49d881204eaebeb2b663
 #: ../../flask/docs/errorhandling.rst:119
@@ -296,8 +296,10 @@ msgid ""
 "codes. Handlers can be registered for a specific class, or for all "
 "subclasses of a parent class."
 msgstr ""
-"handlerは、\\ :exc:`~werkzeug.exceptions.HTTPException`\\ "
-"サブクラスまたはHTTPステータスコードに対してだけでなく、どのような例外クラスに対しても登録可能です。handlerは特定のクラスに対しても、ある親クラスの全てのサブクラスに対しても、登録可能です。"
+"handlerは、:exc:`~werkzeug.exceptions.HTTPException` サブクラスまたはHTTP"
+"ステータスコードに対してだけでなく、どのような例外クラスに対しても登録可能"
+"です。handlerは特定のクラスに対しても、ある親クラスの全てのサブクラスに対"
+"しても、登録可能です。"
 
 # 4b8f182f2327474fb3cdbe69bb480e50
 #: ../../flask/docs/errorhandling.rst:141
@@ -331,7 +333,6 @@ msgstr ""
 "標準で提供されます。"
 
 #: ../../flask/docs/errorhandling.rst:154
-#, fuzzy
 #| msgid "" "Flask gives you to the ability to raise any HTTP exception
 #| registered by " "Werkzeug. However, the default HTTP exceptions return
 #| simple exception " "pages. You might want to show custom error pages to the
@@ -376,10 +377,11 @@ msgid ""
 ":exc:`ConnectionRefusedError` handler is called with the exception "
 "instance to generate the response."
 msgstr ""
-"例えば、もし\\ :exc:`ConnectionRefusedError`\\ のインスタンスが発生し、そして\\ "
-":exc:`ConnectionError`\\ と\\ :exc:`ConnectionRefusedError`\\ "
-"に対するhandlerが登録されていた場合、レスポンスを生成するために、最も具体的な\\ "
-":exc:`ConnectionRefusedError`\\ のhandlerが例外のインスタンスを使って呼び出されます。"
+"例えば、もし :exc:`ConnectionRefusedError` のインスタンスが発生し、そして "
+":exc:`ConnectionError` と :exc:`ConnectionRefusedError` に対するhandlerが"
+"登録されていた場合、レスポンスを生成するために、最も具体的な "
+":exc:`ConnectionRefusedError` のhandlerが例外のインスタンスを使って呼び"
+"出されます。"
 
 # 4533431d0e274e1ca66872d9fefe3e6b
 #: ../../flask/docs/errorhandling.rst:170
@@ -390,8 +392,11 @@ msgid ""
 "handle 404 routing errors because the 404 occurs at the routing level "
 "before the blueprint can be determined."
 msgstr ""
-"blueprintに登録されたhandlerは、blueprintが例外を発生させたリクエストを処理することを仮定して、アプリケーションでグローバルに登録されたものよりも優先されます。しかしながら、404エラーはblueprintが決定される前の経路決定（routing）のレベルで起こるため、blueprintでは404"
-" routing errorは処理できません。"
+"blueprintに登録されたhandlerは、blueprintが例外を発生させたリクエストを処理"
+"することを仮定して、アプリケーションでグローバルに登録されたものよりも優先"
+"されます。しかしながら、404エラーはblueprintが決定される前の経路決定"
+"（routing）のレベルで起こるため、blueprintでは404 routing errorは処理できま"
+"せん。"
 
 # 851bb6d470df4053a1b398338a8edaa1
 #: ../../flask/docs/errorhandling.rst:178
@@ -405,9 +410,10 @@ msgid ""
 "such as ``HTTPException`` or even ``Exception``. However, be aware that "
 "these will catch more than you might expect."
 msgstr ""
-"非常に汎用的な基底クラスへ対して、例えば\\ ``HTTPException``\\ または\\ ``Exception``\\ "
-"にさえ、error "
-"handlerを登録することができます。しかしながら、これらはおそらくあなたが予想するよりも多くのものを捕捉するであろうことに注意してください。"
+"非常に汎用的な基底クラスへ対して、例えば ``HTTPException`` または "
+"``Exception`` にさえ、error handlerを登録することができます。しかしながら、"
+"これらはおそらくあなたが予想するよりも多くのものを捕捉するであろうことに"
+"注意してください。"
 
 # 631a5bd940a840888bc8a28befc6baba
 #: ../../flask/docs/errorhandling.rst:184
@@ -435,7 +441,7 @@ msgstr ""
 "``Exception`` に対するerror handlerは、全てのエラー、処理されてないもの"
 "さえも、ユーザへどのように表示するかを変更するには便利にみえるかもしれま"
 "せん。しかしながら、これはPythonで ``except Exception:`` を行うことと似た"
-"ものであり、それは、さもなければ処理されないエラーを *全て* 、HTTPステータス"
+"ものであり、それは、さもなければ処理されないエラーを *全て*、HTTPステータス"
 "コードを含めて、捕捉するでしょう。"
 
 #: ../../flask/docs/errorhandling.rst:215
@@ -456,10 +462,10 @@ msgid ""
 "``Exception`` handler will not handle ``HTTPException`` subclasses "
 "because it the ``HTTPException`` handler is more specific."
 msgstr ""
-"error handlerでも例外のクラス階層を尊重します。もし\\ ``HTTPException``\\ と\\ "
-"``Exception``\\ の両方に対してhandlerを登録した場合、``HTTPException``\\ "
-"のhandlerの方がより具体的であるため、\\ ``Exception``\\ のhandlerは\\ ``HTTPException``\\ "
-"サブクラスを処理しません。"
+"error handlerでも例外のクラス階層を尊重します。もし ``HTTPException`` と "
+"``Exception`` の両方に対してhandlerを登録した場合、``HTTPException`` "
+"のhandlerの方がより具体的であるため、``Exception`` のhandlerは "
+"``HTTPException`` サブクラスを処理しません。"
 
 # f639dfa2de3d4848ab87371fec358016
 #: ../../flask/docs/errorhandling.rst:239
@@ -474,8 +480,8 @@ msgid ""
 ":meth:`flask.Flask.handle_exception` for information about this behavior."
 msgstr ""
 "例外に対してerror handlerが登録されていないとき、500 Internal Server "
-"Errorが代わりに返されます。この振る舞いに関する情報については\\ "
-":meth:`flask.Flask.handle_exception`\\ を見てください。"
+"Errorが代わりに返されます。この振る舞いに関する情報については "
+":meth:`flask.Flask.handle_exception` を見てください。"
 
 # 6445bfe8aff34a4d82ddfa44fdbc4f5f
 #: ../../flask/docs/errorhandling.rst:246
@@ -604,12 +610,12 @@ msgid ""
 msgstr ""
 ":doc:`/blueprints` の中で、殆どのerrorhandlerは、予想したとおりに動き"
 "ます; しかし、404と405のerror handlerに関して注意点があります（訳注: "
-"HTTPレスポンスのステータスコードを指していて、404は「\ `Not Found "
-"<https://developer.mozilla.org/ja/docs/Web/HTTP/Status/404>`_\ 」、405は"
-"「\ `Method Not Allowed "
-"<https://developer.mozilla.org/ja/docs/Web/HTTP/Status/405>`_\ 」になり"
-"ます）。これらのerror handlerが起動されるのは、適切な\ ``raise``\ 文または"
-"blueprint内の他のview関数の中で\ ``abort``\ を呼んだときだけです; それら"
+"HTTPレスポンスのステータスコードを指していて、404は「`Not Found "
+"<https://developer.mozilla.org/ja/docs/Web/HTTP/Status/404>`_」、405は"
+"「`Method Not Allowed "
+"<https://developer.mozilla.org/ja/docs/Web/HTTP/Status/405>`_」になり"
+"ます）。これらのerror handlerが起動されるのは、適切な ``raise`` 文または"
+"blueprint内の他のview関数の中で ``abort`` を呼んだときだけです; それら"
 "は、例えば不正なURLへのアクセスからは起動されません。"
 
 #: ../../flask/docs/errorhandling.rst:401
@@ -625,7 +631,7 @@ msgstr ""
 "インスタンスは不正なURLを渡されたとしても、どのblueprintのerror handlerを"
 "実行すればよいかを知るすべがないためです。もしURLプレフィックスに基づいて、"
 "これらのエラーに対して異なる処理戦略を実行したいときは、それらは"
-"アプリケーションのレベルで\ ``request``\ の代理（proxy）のオブジェクト"
+"アプリケーションのレベルで ``request`` の代理（proxy）のオブジェクト"
 "（訳注: 実際にリクエストを扱うwerkzeugのリクエスト用オブジェクトの、実際の"
 "インスタンスへグローバルなスコープでアクセスするためのproxyになっている"
 "オブジェクトで、普通は :class:`flask.request` オブジェクトのことだと思い"
