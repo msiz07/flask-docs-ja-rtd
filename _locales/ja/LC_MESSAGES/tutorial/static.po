@@ -31,9 +31,9 @@ msgid ""
 "a template."
 msgstr ""
 "認証のviewとテンプレートは機能しても、今はとても貧相な見た目です。作成"
-"したHTMLレイアウトにスタイルを加えるために、いくつか\ `CSS`_\ を"
-"追加できます。スタイルは変化しないので、テンプレートというよりも\ "
-"*静的（static）*\ ファイルになります。"
+"したHTMLレイアウトにスタイルを加えるために、いくつか `CSS`_ を"
+"追加できます。スタイルは変化しないので、テンプレートというよりも "
+"*静的（static）* ファイルになります。"
 
 # a0a4cc1a8f614a13b8d0c4ff4826a1cb
 #: ../../flask/docs/tutorial/static.rst:9
@@ -42,9 +42,9 @@ msgid ""
 "the ``flaskr/static`` directory and serves it. The ``base.html`` template"
 " already has a link to the ``style.css`` file:"
 msgstr ""
-"Flaskは\ ``flaskr/static``\ ディレクトリからの相対パスを取り（対応する"
-"ファイルを）支給する\ ``static``\ のviewを自動的に追加します。\ ``base.html``\ "
-"テンプレートは、既に\ ``style.css``\ ファイルへのリンクを持っています:"
+"Flaskは ``flaskr/static`` ディレクトリからの相対パスを取り（対応する"
+"ファイルを）支給する ``static`` のviewを自動的に追加します。``base.html`` "
+"テンプレートは、既に ``style.css`` ファイルへのリンクを持っています:"
 
 # 271ff208c5ec47e7a085da1a11e288e5
 #: ../../flask/docs/tutorial/static.rst:17
@@ -55,8 +55,8 @@ msgid ""
 "filename='...')``."
 msgstr ""
 "CSSに加えて、他の種類の静的ファイルにロゴ画像やJavaScript関数のファイルが"
-"あるかもしれません。それらはすべて\ ``flaskr/static``\ ディレクトリの"
-"下に置かれ、\ ``url_for('static, filename='...')``\ を使って参照されます。"
+"あるかもしれません。それらはすべて ``flaskr/static`` ディレクトリの"
+"下に置かれ、``url_for('static, filename='...')`` を使って参照されます。"
 
 # 4fe3ae2e836d4a3f83351e4488a8b243
 #: ../../flask/docs/tutorial/static.rst:22
@@ -64,8 +64,8 @@ msgid ""
 "This tutorial isn't focused on how to write CSS, so you can just copy the"
 " following into the ``flaskr/static/style.css`` file:"
 msgstr ""
-"このチュートリアルでは、CSSの書き方には注目しませんので、以下を\ "
-"``flaskr/static/style.css``\ ファイルにただコピーしてください:"
+"このチュートリアルでは、CSSの書き方には注目しませんので、以下を "
+"``flaskr/static/style.css`` ファイルにただコピーしてください:"
 
 # 96fb687c0bf448b7a5b6bd800d7db772
 #: ../../flask/docs/tutorial/static.rst:25
@@ -78,8 +78,8 @@ msgid ""
 "You can find a less compact version of ``style.css`` in the :gh:`example "
 "code <examples/tutorial/flaskr/static/style.css>`."
 msgstr ""
-":gh:`コード例 <examples/tutorial/flaskr/static/style.css>`\ では、もう少し"
-"内容のある\ ``style.css``\ が見つかります。"
+":gh:`コード例 <examples/tutorial/flaskr/static/style.css>` では、もう少し"
+"内容のある ``style.css`` が見つかります。"
 
 # eaa4c58a4d274a38a3d2f95904a9d597
 #: ../../flask/docs/tutorial/static.rst:58
@@ -87,7 +87,7 @@ msgid ""
 "Go to http://127.0.0.1:5000/auth/login and the page should look like the "
 "screenshot below."
 msgstr ""
-"https://127.0.0.1:5000/auth/login\ へ行くと、以下のスクリーンショットの"
+"https://127.0.0.1:5000/auth/login へ行くと、以下のスクリーンショットの"
 "ようなページが見られるはずです。"
 
 msgid "screenshot of login page"
@@ -100,11 +100,11 @@ msgid ""
 "you change a static file, refresh the browser page. If the change doesn't"
 " show up, try clearing your browser's cache."
 msgstr ""
-"`Mozillaのドキュメント <CSS_>`_\ でCSSについてさらに読むことができます。"
+"`Mozillaのドキュメント <CSS_>`_ でCSSについてさらに読むことができます。"
 "もし静的ファイルを変更する場合は、ブラウザのページを更新してください。もし"
 "変更が表示されない場合、ブラウザのキャッシュのクリアを試してください。"
 
 # 9da2bf151a724b248330eeb59dc332d3
 #: ../../flask/docs/tutorial/static.rst:72
 msgid "Continue to :doc:`blog`."
-msgstr ":doc:`blog`\ へ続きます。"
+msgstr ":doc:`blog` へ続きます。"

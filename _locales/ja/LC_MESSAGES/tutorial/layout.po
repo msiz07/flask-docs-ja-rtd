@@ -33,7 +33,7 @@ msgid ""
 "Then follow the :doc:`installation instructions </installation>` to set "
 "up a Python virtual environment and install Flask for your project."
 msgstr ""
-"そうしたら\ :doc:`インストール手順 </installation>`\ に従って、Pythonの"
+"そうしたら :doc:`インストール手順 </installation>` に従って、Pythonの"
 "仮想環境（virtual environment）を用意して、プロジェクト用にFlaskをインストール"
 "します。"
 
@@ -44,7 +44,7 @@ msgid ""
 "directory from now on. The file names at the top of each code block are "
 "relative to this directory."
 msgstr ""
-"このチュートリアルでは、ここからは\ ``flask-tutorial``\ ディレクトリで"
+"このチュートリアルでは、ここからは ``flask-tutorial`` ディレクトリで"
 "作業していると想定します。コード記述部分の上にあるファイル名は、それぞれ"
 "flask-tutorialディレクトリから相対的なものになります。"
 
@@ -68,7 +68,7 @@ msgid ""
 msgstr ""
 "しかしながら、プロジェクトが大きくなるにつれて、すべてのコードを一つの"
 "ファイルに保ち続けることは手に余るようになります。Pythonのプロジェクトでは"
-"必要なときにimportできる複数のmoduleへコードを編成するために\ *package*\ "
+"必要なときにimportできる複数のmoduleへコードを編成するために *package* "
 "を使用し、このチュートリアルでも同様に使用します。"
 
 # 252c68e742c5415fbfdf394a5cbdfe27
@@ -79,12 +79,12 @@ msgstr "プロジェクトのディレクトリが含むようになるのは:"
 # 8f9a1876c05f47fbad5e98c39e6c98aa
 #: ../../flask/docs/tutorial/layout.rst:41
 msgid "``flaskr/``, a Python package containing your application code and files."
-msgstr "``flaskr/``\ 、アプリケーションのコードとファイルを含んだPythonのpackage。"
+msgstr "``flaskr/``、アプリケーションのコードとファイルを含んだPythonのpackage。"
 
 # 7b1b96113fa54e4aa5b536d39c5a451b
 #: ../../flask/docs/tutorial/layout.rst:43
 msgid "``tests/``, a directory containing test modules."
-msgstr "``tests/``\ 、テスト用moduleを含んだディレクトリ。"
+msgstr "``tests/``、テスト用moduleを含んだディレクトリ。"
 
 # 2eeb91c37d414f7eb27d30abbab65d8c
 #: ../../flask/docs/tutorial/layout.rst:44
@@ -92,7 +92,7 @@ msgid ""
 "``venv/``, a Python virtual environment where Flask and other "
 "dependencies are installed."
 msgstr ""
-"``venv/``\ 、Flaskとその他の依存対象がインストールされたPythonの仮想環境。"
+"``venv/``、Flaskとその他の依存対象がインストールされたPythonの仮想環境。"
 
 # e30790ca914b4c319abd1bf0652dd745
 #: ../../flask/docs/tutorial/layout.rst:46
@@ -107,7 +107,7 @@ msgid ""
 "Version control config, such as `git`_. You should make a habit of using "
 "some type of version control for all your projects, no matter the size."
 msgstr ""
-"例えば\ `git`_\ のような、バージョン管理の設定。サイズに関係なく、全ての"
+"例えば `git`_ のような、バージョン管理の設定。サイズに関係なく、全ての"
 "プロジェクトである種のバージョン管理を使うような習慣を付けるべきです。"
 
 # 5a52d24154744a5ab618d8d503731972
@@ -141,4 +141,4 @@ msgstr ""
 # dd4b05d2c3254d9c93e90051ae3ec9a2
 #: ../../flask/docs/tutorial/layout.rst:110
 msgid "Continue to :doc:`factory`."
-msgstr ":doc:`factory`\ へ続きます。"
+msgstr ":doc:`factory` へ続きます。"

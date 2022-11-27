@@ -40,8 +40,8 @@ msgstr ""
 "ソフトウェアを使用するかについて詳細は述べません。開発用のコンピュータで新しい"
 "環境を準備して以下の手順を試すことは可能ですが、本当に公開されるアプリケーション"
 "をホスティングするときは（以下の手順は）使うべきではないでしょう。アプリ"
-"ケーションを動かす多くの異なるやり方のリストについては、\ "
-":doc:`/deploying/index`\ を確認してください。"
+"ケーションを動かす多くの異なるやり方のリストについては、"
+":doc:`/deploying/index` を確認してください。"
 
 # c02c813854da40548a151425518deef0
 #: ../../flask/docs/tutorial/deploy.rst:15
@@ -57,8 +57,8 @@ msgid ""
 "is installed first:"
 msgstr ""
 "どこかへ自分のアプリケーションを展開（deploy）したいときは、配付ファイルを"
-"構築（build）します。現時点の標準的なPythonの配付ファイルは、拡張子が\ "
-"``.whl``\ の\ *wheel*\ 形式です。始めに、wheelライブラリを確実にインストール"
+"構築（build）します。現時点の標準的なPythonの配付ファイルは、拡張子が "
+"``.whl`` の *wheel* 形式です。始めに、wheelライブラリを確実にインストール"
 "しておきます:"
 
 # bd909c76d3f34a499cf49f87069c70f3
@@ -68,8 +68,8 @@ msgid ""
 "build-related commands. The ``bdist_wheel`` command will build a wheel "
 "distribution file."
 msgstr ""
-"Pythonを使って\ ``setup.py``\ を実行すると、ビルド関連のコマンドを行う"
-"コマンドラインツールになります。\ ``bdist_wheel``\ コマンドは\ wheel\ "
+"Pythonを使って ``setup.py`` を実行すると、ビルド関連のコマンドを行う"
+"コマンドラインツールになります。``bdist_wheel`` コマンドは wheel "
 "配付ファイルをビルドします。"
 
 # 64e0688815ae424d81e5e7dddecb024d
@@ -89,8 +89,8 @@ msgid ""
 "Copy this file to another machine, :ref:`set up a new virtualenv "
 "<install-create-env>`, then install the file with ``pip``."
 msgstr ""
-"このファイルを別のマシンへコピーし、\ :ref:`新しい仮想環境を準備し "
-"<install-create-env>`\ 、それからpipを使ってそのファイルをインストール"
+"このファイルを別のマシンへコピーし、:ref:`新しい仮想環境を準備し "
+"<install-create-env>`、それからpipを使ってそのファイルをインストール"
 "します。"
 
 # ece2328f0def4c549cd62dd052857419
@@ -104,7 +104,7 @@ msgid ""
 "Since this is a different machine, you need to run ``init-db`` again to "
 "create the database in the instance folder."
 msgstr ""
-"これは別のマシンであるため、もう一度\ ``init-db``\ を実行して、インスタンス"
+"これは別のマシンであるため、もう一度 ``init-db`` を実行して、インスタンス"
 "フォルダにデータベースを作成する必要があります。"
 
 # aa079a1cdf2c4d10bf5b267feef8398f
@@ -116,7 +116,7 @@ msgid ""
 msgstr ""
 "Flaskが（編集可能モードではなく）インストールされていると検知したときは、"
 "Flaskはインスタンスフォルダに（インストールされた場所とは）別のディレクトリを"
-"使用します。それは、代わりに\ ``venv/var/flaskr-instance``\ で見つけられます。"
+"使用します。それは、代わりに ``venv/var/flaskr-instance`` で見つけられます。"
 
 # 423736873e614ba08f84920390fd9a2b
 #: ../../flask/docs/tutorial/deploy.rst:61
@@ -131,9 +131,9 @@ msgid ""
 "production. Otherwise, attackers could use the public ``'dev'`` key to "
 "modify the session cookie, or anything else that uses the secret key."
 msgstr ""
-"このチュートリアルの始めに、\ :data:`SECRET_KEY`\ へは標準設定の値を"
+"このチュートリアルの始めに、:data:`SECRET_KEY` へは標準設定の値を"
 "与えていました。これは本番環境ではなにかしら規則性のない（random）byte"
-"へ変更するべきです。さもないと、攻撃者が公開された\ ``'dev'``\ （に設定"
+"へ変更するべきです。さもないと、攻撃者が公開された ``'dev'`` （に設定"
 "されている）キーを使用してセッションのクッキーの変更や、その他の秘密鍵を"
 "使ったあらゆることをできるようになります。"
 
@@ -148,7 +148,7 @@ msgid ""
 "Create the ``config.py`` file in the instance folder, which the factory "
 "will read from if it exists. Copy the generated value into it."
 msgstr ""
-"もし存在していたらfactoryが読み取りにいく\ ``config.py``\ ファイルを、"
+"もし存在していたらfactoryが読み取りにいく ``config.py`` ファイルを、"
 "インスタンスフォルダに作成します。生成した値（秘密の鍵）をその中に"
 "コピーします。"
 
@@ -164,7 +164,7 @@ msgid ""
 "``SECRET_KEY`` is the only one needed for Flaskr."
 msgstr ""
 "その他にも、必要な設定は何でもここで設定できますが、Flaskrが必要と"
-"するのは\ ``SECRET_KEY``\ だけです。"
+"するのは ``SECRET_KEY`` だけです。"
 
 # 6211fcc27add481a95507aa86a250e5c
 #: ../../flask/docs/tutorial/deploy.rst:89
@@ -180,7 +180,7 @@ msgid ""
 "particularly efficient, stable, or secure."
 msgstr ""
 "開発環境ではなく公開されるように（Flaskを）実行するときは、組み込みの開発"
-"サーバを使用（\ ``flask run``\ ）するべきではありません。開発サーバは便利な"
+"サーバを使用（``flask run``）するべきではありません。開発サーバは便利な"
 "ようにWerkzeugによって提供されていますが、効率性、安定性、セキュリティを特別"
 "意識して設計されてはいません。"
 
@@ -190,12 +190,11 @@ msgid ""
 "Instead, use a production WSGI server. For example, to use `Waitress`_, "
 "first install it in the virtual environment:"
 msgstr ""
-"代わりに、本番環境のWSGIサーバを使ってください。例えば、\ `Waitress`_\ を"
+"代わりに、本番環境のWSGIサーバを使ってください。例えば、`Waitress`_ を"
 "使うには、まずは仮想環境にインストールします:"
 
 # a42c12532e39421a944f94c40cddf82a
 #: ../../flask/docs/tutorial/deploy.rst:103
-#, fuzzy
 #| msgid "" "You need to tell Waitress about your application, but it doesn't
 #| use " "``FLASK_APP`` like ``flask run`` does. You need to tell it to import
 #| and " "call the application factory to get an application object."
@@ -205,9 +204,9 @@ msgid ""
 " the application factory to get an application object."
 msgstr ""
 "Waitressへ自分のアプリケーションについて伝える必要がありますが、それは"
-"\ ``flask run``\ のように\ ``FLASK_APP``\ を使いはしません。Flaskアプリケーション"
-"のオブジェクトを取得するためにはimportしてapplication factoryを呼び出すということを"
-"Waitressへ伝える必要があります。"
+" ``flask run`` のように ``--app`` を使いはしません。Flaskアプリケーション"
+"のオブジェクトを取得するためにはapplication factoryをimportして呼び出すと"
+"いうことをWaitressへ伝える必要があります。"
 
 # 965300f741064e4bb6c648b1d944c9f7
 #: ../../flask/docs/tutorial/deploy.rst:113
@@ -217,8 +216,8 @@ msgid ""
 "because it supports both Windows and Linux. There are many more WSGI "
 "servers and deployment options that you may choose for your project."
 msgstr ""
-"自分のアプリケーションをホストする多くの異なるやり方のリストについては\ "
-":doc:`/deploying/index`\ を見てください。Waitressはひとつの例に過ぎず、"
+"自分のアプリケーションをホストする多くの異なるやり方のリストについては "
+":doc:`/deploying/index` を見てください。Waitressはひとつの例に過ぎず、"
 "このチュートリアルではWindowsとLinuxを両方サポートするという理由から選ばれ"
 "ました。WSGIサーバと、自分のプロジェクトで選択できる展開（deployment）の"
 "オプションは、より数多く存在しています。"
@@ -226,7 +225,7 @@ msgstr ""
 # 85c57695469e4fd995cc9b89fc1a8b6d
 #: ../../flask/docs/tutorial/deploy.rst:120
 msgid "Continue to :doc:`next`."
-msgstr ":doc:`next`\ へ続きます。"
+msgstr ":doc:`next` へ続きます。"
 
 #~ msgid "Bash"
 #~ msgstr ""

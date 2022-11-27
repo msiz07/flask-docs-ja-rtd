@@ -106,9 +106,9 @@ msgid ""
 msgstr ""
 "もし自分の（チュートリアル実施途中での）プロジェクトと、このチュートリアル"
 "に従った時の最終成果物を比較したい場合は、:gh:`このチュートリアルのプロジェクト"
-"はFlaskリポジトリ中にある例から入手可能です <examples/tutorial>`\ 。"
+"はFlaskリポジトリ中にある例から入手可能です <examples/tutorial>`。"
 
 # 4e681ddd7cea494194640decf3a2a40d
 #: ../../flask/docs/tutorial/index.rst:64
 msgid "Continue to :doc:`layout`."
-msgstr ":doc:`layout`\ へ続きます。"
+msgstr ":doc:`layout` へ続きます。"
