@@ -17,15 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.10.3\n"
 
-#: ../../flask/docs/index.rst:32
-msgid ""
-"Flask provides configuration and conventions, with sensible defaults, to "
-"get started. This section of the documentation explains the different "
-"parts of the Flask framework and how they can be used, customized, and "
-"extended. Beyond Flask itself, look for community-maintained extensions "
-"to add even more functionality."
-msgstr ""
-
 # d1ca75e0d0a44efbb622ea1c2fbcd81f
 #: ../../flask/docs/index.rst:4
 msgid "Welcome to Flask"
@@ -76,6 +67,20 @@ msgstr "`Werkzeugドキュメント <https://werkzeug.palletsprojects.com/>`_"
 #: ../../flask/docs/index.rst:30
 msgid "User's Guide"
 msgstr "ユーザーガイド"
+
+#: ../../flask/docs/index.rst:32
+msgid ""
+"Flask provides configuration and conventions, with sensible defaults, to "
+"get started. This section of the documentation explains the different "
+"parts of the Flask framework and how they can be used, customized, and "
+"extended. Beyond Flask itself, look for community-maintained extensions "
+"to add even more functionality."
+msgstr ""
+"Flaskは開始用に理にかなった設定と規約を提供します。ドキュメントのこのセク"
+"ションは、Flaskフレームワークの異なる部分と、それらをどのようにして使用、"
+"カスタマイズ、そして拡張できるかを説明します。Flask自身だけでなく、更なる"
+"機能を追加するためにはコミュニティで保守されているFlask拡張も調べてくだ"
+"さい。"
 
 # 9e2cc0f71a9443bca78ac49ec8c7475a
 #: ../../flask/docs/index.rst:65
