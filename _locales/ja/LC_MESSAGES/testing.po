@@ -133,7 +133,6 @@ msgstr ""
 "さい。"
 
 #: ../../flask/docs/testing.rst:91
-#, fuzzy
 #| msgid "" "The ``client`` has methods that match the common HTTP request
 #| methods, " "such as ``client.get()`` and ``client.post()``. They take many
 #| arguments " "for building the request; you can find the full documentation
@@ -150,8 +149,8 @@ msgstr ""
 "リクエストのメソッドに合致するメソッドを持っています。それらはリクエストを"
 "構築するために多くの引数を取ります: 全てのドキュメントは :class:"
 "`~werkzeug.test.EnvironBuilder` で見つけることができます。典型的には、"
-"``path``、``query``、``headers``、そして ``data`` または ``json`` を引数で"
-"使うでしょう。"
+"``path``、``query_string``、``headers``、そして ``data`` または ``json`` を"
+"引数で使うでしょう。"
 
 #: ../../flask/docs/testing.rst:97
 msgid ""
@@ -171,7 +170,6 @@ msgstr ""
 "``response.get_data(as_text=True)`` を使いましょう。"
 
 #: ../../flask/docs/testing.rst:111
-#, fuzzy
 #| msgid "" "Pass a dict ``query={\"key\": \"value\", ...}`` to set arguments
 #| in the " "query string (after the ``?`` in the URL). Pass a dict
 #| ``headers={}`` to " "set request headers."
@@ -181,8 +179,8 @@ msgid ""
 "``headers={}`` to set request headers."
 msgstr ""
 "query string（URLの ``?`` の後）の中の引数を設定するには、dictの "
-"``query={\"key\": \"value\", ...}`` を引数で渡します。リクエストのヘッダー"
-"を設定するには、dictの ``headers={}`` を引数で渡します。"
+"``query_string={\"key\": \"value\", ...}`` を引数で渡します。リクエストの"
+"ヘッダーを設定するには、dictの ``headers={}`` を引数で渡します。"
 
 #: ../../flask/docs/testing.rst:115
 msgid ""
