@@ -25,7 +25,7 @@ msgstr "Flaskのサブクラス化"
 # 69ba5990e62e41318f50353616cc1cb6
 #: ../../flask/docs/patterns/subclassing.rst:4
 msgid "The :class:`~flask.Flask` class is designed for subclassing."
-msgstr ":class:`~flask.Flask`\ クラスはサブクラス化向けに設計されています。"
+msgstr ":class:`~flask.Flask` クラスはサブクラス化向けに設計されています。"
 
 # 132d939372f149059a20cebfcbcdcbab
 #: ../../flask/docs/patterns/subclassing.rst:6

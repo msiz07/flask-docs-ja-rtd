@@ -34,7 +34,7 @@ msgstr ""
 "ブラウザ用のviewから提出されるフォームのデータを使って作業する必要がある"
 "ときは、コードは途端にとても読みづらくなります。このプロセスをより管理し"
 "やすくするためにデザインされたライブラリが公開されています。そのなかの"
-"ひとつが、以下で扱う\ `WTForms`_\ です。もしたくさんのフォームがある状況"
+"ひとつが、以下で扱う `WTForms`_ です。もしたくさんのフォームがある状況"
 "に自分がいることを見つけた場合、それを試してみたくなるでしょう。"
 
 # 54c7aa6ceb664bd49eaed4f4dab091db
@@ -61,9 +61,9 @@ msgid ""
 "helpers that make working with forms and Flask more fun.  You can get it "
 "from `PyPI <https://pypi.org/project/Flask-WTF/>`_."
 msgstr ""
-"`Flask-WTF`_\ 拡張はこのパターンを拡張して、フォームとFlaskを使った作業を"
-"もっと楽しくするヘルパーをいくつか追加します。Flask-WTFは\ "
-"`PyPI <https://pypi.org/project/Flask-WTF/>`_\ から取得できます。"
+"`Flask-WTF`_ 拡張はこのパターンを拡張して、フォームとFlaskを使った作業を"
+"もっと楽しくするヘルパーをいくつか追加します。Flask-WTFは "
+"`PyPI <https://pypi.org/project/Flask-WTF/>`_ から取得できます。"
 
 # 84288bf7a2c24f99809baeed1f11bf6e
 #: ../../flask/docs/patterns/wtforms.rst:25
@@ -108,10 +108,10 @@ msgid ""
 " data is submitted via the HTTP ``POST`` method and "
 ":attr:`~flask.request.args` if the data is submitted as ``GET``."
 msgstr ""
-"データがHTTPの\ ``POST``\ メソッドで提出された場合には、リクエストの\ "
-":attr:`~flask.request.form`\ 属性の値から、データが\ ``GET``\ メソッド"
-"（のURLの一部）で提出された場合には、リクエストの\ "
-":attr:`~flask.request.args`\ 属性から、フォームを作成します。"
+"データがHTTPの ``POST`` メソッドで提出された場合には、リクエストの "
+":attr:`~flask.request.form` 属性の値から、データが ``GET`` メソッド"
+"（のURLの一部）で提出された場合には、リクエストの "
+":attr:`~flask.request.args` 属性から、フォームを作成します。"
 
 # 53f4c7e7da0246339af050c4319da6a5
 #: ../../flask/docs/patterns/wtforms.rst:66
@@ -120,15 +120,15 @@ msgid ""
 "method, which will return ``True`` if the data validates, ``False`` "
 "otherwise."
 msgstr ""
-"データを検証するには、データ検証できた場合には\ ``True``\ を、その他の"
-"場合には\ ``False``\ を返す\ :func:`~wtforms.form.Form.validate`\ メソッド"
+"データを検証するには、データ検証できた場合には ``True`` を、その他の"
+"場合には ``False`` を返す :func:`~wtforms.form.Form.validate` メソッド"
 "を呼びます。"
 
 # abd7cdb3cd284170a7370f41c9862f0a
 #: ../../flask/docs/patterns/wtforms.rst:69
 msgid "to access individual values from the form, access `form.<NAME>.data`."
 msgstr ""
-"フォームから個々の値へアクセスするには、\ `form.<NAME>.data`\ へアクセス"
+"フォームから個々の値へアクセスするには、`form.<NAME>.data` へアクセス"
 "します。"
 
 # b0d64d4b97094355959f55471201bdc8
@@ -156,7 +156,7 @@ msgstr ""
 #: ../../flask/docs/patterns/wtforms.rst:80
 msgid "Here's an example :file:`_formhelpers.html` template with such a macro:"
 msgstr ""
-"以下は、そのようなマクロを使う例である\ :file:`_formhelpers.html`\ テンプ"
+"以下は、そのようなマクロを使う例である :file:`_formhelpers.html` テンプ"
 "レートです:"
 
 # 52e074beaa914f9c8b5894412bc03a98
@@ -185,11 +185,11 @@ msgid ""
 "above, which takes advantage of the :file:`_formhelpers.html` template:"
 msgstr ""
 "以下は、上述の説明で使用している関数（訳注: このページの前半で例示されて"
-"いるview関数の\ ``register``\ 関数）用の\ :file:`register.html`\ テンプ"
-"レートであり、\ :file:`_formhelpers.html`\ テンプレートを活用しています:"
+"いるview関数の ``register`` 関数）用の :file:`register.html` テンプ"
+"レートであり、:file:`_formhelpers.html` テンプレートを活用しています:"
 
 # 0b76868a16be4a11ad202d683eea936d
 #: ../../flask/docs/patterns/wtforms.rst:122
 msgid "For more information about WTForms, head over to the `WTForms website`_."
 msgstr ""
-"WTFormsに関するさらなる情報は、\ `WTForms website`_\ を調べてください。"
+"WTFormsに関するさらなる情報は、`WTForms website`_ を調べてください。"

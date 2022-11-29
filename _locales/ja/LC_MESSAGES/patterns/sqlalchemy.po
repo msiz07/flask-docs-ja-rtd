@@ -68,8 +68,8 @@ msgid ""
 "You can download `Flask-SQLAlchemy`_ from `PyPI <https://pypi.org/project"
 "/Flask-SQLAlchemy/>`_."
 msgstr ""
-"`Flask-SQLAlchemy`_\ は\ `PyPI "
-"<https://pypi.org/project/Flask-SQLAlchemy/>`_\ からダウンロードできます。"
+"`Flask-SQLAlchemy`_ は `PyPI "
+"<https://pypi.org/project/Flask-SQLAlchemy/>`_ からダウンロードできます。"
 
 # 2336f6a432634432a049138fe260e1b4
 #: ../../flask/docs/patterns/sqlalchemy.rst:27
@@ -86,14 +86,14 @@ msgid ""
 msgstr ""
 "SQLAlchemyの宣言的（な使用方法）の拡張はSQLAlchemyを使用するもっとも"
 "新しい手法です。それはDjangoのやり方と似たように、一緒にテーブルとモデル"
-"を定義できます。以下の文に加えて、\ `declarative`_\ 拡張についての公式の"
+"を定義できます。以下の文に加えて、`declarative`_ 拡張についての公式の"
 "ドキュメントをお勧めします。"
 
 # fed1b2e3984d469683e4b8dc9261ad20
 #: ../../flask/docs/patterns/sqlalchemy.rst:34
 msgid "Here's the example :file:`database.py` module for your application::"
 msgstr ""
-"以下はアプリケーション用の\ :file:`database.py`\ モジュールの例です::"
+"以下はアプリケーション用の :file:`database.py` モジュールの例です::"
 
 # 01d7963c70584936b520f2fe5bdd194a
 #: ../../flask/docs/patterns/sqlalchemy.rst:54
@@ -104,10 +104,10 @@ msgid ""
 ":data:`~flask.g` object): that's because SQLAlchemy does that for us "
 "already with the :class:`~sqlalchemy.orm.scoped_session`."
 msgstr ""
-"自分のモデルを定義するには、先のコードで作成された\ `Base`\ クラスをただ"
-"サブクラス化します。ここで（\ :data:`~flask.g`\ オブジェクトを使ったSQLite3"
+"自分のモデルを定義するには、先のコードで作成された `Base` クラスをただ"
+"サブクラス化します。ここで（:data:`~flask.g` オブジェクトを使ったSQLite3"
 "の先の例ではしたような）スレッドへの注意を払わないことを不思議に思う場合: "
-"それはSQLAlchemyが\ :class:`~SQLAlchemy.orm.scoped_session`\ を使って既に"
+"それはSQLAlchemyが :class:`~SQLAlchemy.orm.scoped_session` を使って既に"
 "対応してくれているためです。"
 
 # d44438c17690469ab11fda68f18ae7eb
@@ -127,12 +127,12 @@ msgstr ""
 #: ../../flask/docs/patterns/sqlalchemy.rst:71
 msgid "Here is an example model (put this into :file:`models.py`, e.g.)::"
 msgstr ""
-"以下はモデルの例です（例えばこれを\ :file:`models.py`\ 内に置きます）::"
+"以下はモデルの例です（例えばこれを :file:`models.py` 内に置きます）::"
 
 # 5cc42e46c36345d5ae8a3daa53b4b728
 #: ../../flask/docs/patterns/sqlalchemy.rst:89
 msgid "To create the database you can use the `init_db` function:"
-msgstr "データベースを作成するには\ `init_db`\ 関数を使用できます:"
+msgstr "データベースを作成するには `init_db` 関数を使用できます:"
 
 # d12c213dcef349cd9453bf7791c085ec
 #: ../../flask/docs/patterns/sqlalchemy.rst:94
@@ -170,7 +170,7 @@ msgstr ""
 #: ../../flask/docs/patterns/sqlalchemy.rst:122
 msgid "Here is an example :file:`database.py` module for your application::"
 msgstr ""
-"以下はアプリケーション用の\ :file:`database.py`\ モジュールの例です::"
+"以下はアプリケーション用の :file:`database.py` モジュールの例です::"
 
 # 425b3e0211394d01b76b0f9313d1b755
 #: ../../flask/docs/patterns/sqlalchemy.rst:135
@@ -187,7 +187,7 @@ msgstr ""
 #: ../../flask/docs/patterns/sqlalchemy.rst:145
 msgid "Here is an example table and model (put this into :file:`models.py`)::"
 msgstr ""
-"以下はテーブルとモデルの例です（これを\ :file:`models.py`\ に置きます）::"
+"以下はテーブルとモデルの例です（これを :file:`models.py` に置きます）::"
 
 # a5883cf89a1341a6b5edee64926e2d1a
 #: ../../flask/docs/patterns/sqlalchemy.rst:168
@@ -224,7 +224,7 @@ msgid ""
 "To insert data you can use the `insert` method.  We have to get a "
 "connection first so that we can use a transaction:"
 msgstr ""
-"データを挿入するには\ `insert`\ メソッドを使用できます。トランザクション"
+"データを挿入するには `insert` メソッドを使用できます。トランザクション"
 "を使用できるようにするため、最初に接続（connection）を取得します:"
 
 # 563db03a7efa4e7e8936fad6faca0d4b
@@ -250,7 +250,7 @@ msgid ""
 "You can also pass strings of SQL statements to the "
 ":meth:`~sqlalchemy.engine.base.Connection.execute` method:"
 msgstr ""
-":meth:`~sqlalchemy.engine.base.Connection.execute`\ メソッドへSQL文の"
+":meth:`~sqlalchemy.engine.base.Connection.execute` メソッドへSQL文の"
 "文字列を渡すこともできます:"
 
 # 26f896153391468e810067116f622552
@@ -259,5 +259,5 @@ msgid ""
 "For more information about SQLAlchemy, head over to the `website "
 "<https://www.sqlalchemy.org/>`_."
 msgstr ""
-"SQLAlchemyに関するさらなる情報は、\ `webサイト "
-"<https://www.sqlalchemy.org/>`_\ を調べてください。"
+"SQLAlchemyに関するさらなる情報は、`webサイト "
+"<https://www.sqlalchemy.org/>`_ を調べてください。"
