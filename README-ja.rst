@@ -32,7 +32,7 @@ Flask Documentation」の最新情報は https://flask.palletsprojects.com/ を�
 Pythonバージョン
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Python 3.6以上が必要です（Flaskのインストールに必要なため）。
+Python 3.7以上が必要です（Flaskのインストールに必要なため）。
 
 ビルド手順
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -47,11 +47,12 @@ venvを使って仮想環境を作成してビルドする手順を以下に示�
   $ source _venv/bin/activate
   $ git clone https://github.com/msiz07/flask-docs-ja-rtd.git
   $ cd flask-docs-ja-rtd
-  $ git checkout 2.0.1-docs-ja
+  $ git checkout 2.2.2-docs-ja
   $ git submodule init
   $ git submodule update
   $ python3 -m pip install --upgrade pip setuptools
   $ pip install --upgrade -r requirements.txt --progress-bar=off
+  $ pip install --upgrade -r requirements-trans.txt --progress-bar=off
   $ invoke html-trans
   $ ls _build/html
 
