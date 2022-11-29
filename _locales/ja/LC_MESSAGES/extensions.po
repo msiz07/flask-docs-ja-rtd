@@ -47,7 +47,7 @@ msgid ""
 "can search PyPI for packages tagged with `Framework :: Flask <pypi_>`_."
 msgstr ""
 "Flask拡張は普通「Flask-Foo」または「Foo-Flask」と名付けられています。"
-"PyPIで\ `Framework :: Flask <pypi_>`_\ とタグ付けされているパッケージを探す"
+"PyPIで `Framework :: Flask <pypi_>`_ とタグ付けされているパッケージを探す"
 "ことができます。"
 
 # 2070656598124bceb1474c8f1c31df0f
@@ -65,8 +65,8 @@ msgid ""
 " called \"Flask-Foo\" might be used like this::"
 msgstr ""
 "インストール、設定、使用手順については各Flask拡張のドキュメントを調査して"
-"ください。概して、Flask拡張は自分の設定を\ :attr:`app.config "
-"<flask.Flask.config>`\ から引き出し、アプリケーションのインスタンスを初期化"
+"ください。概して、Flask拡張は自分の設定を :attr:`app.config "
+"<flask.Flask.config>` から引き出し、アプリケーションのインスタンスを初期化"
 "中に渡されます。例えば、「Flask-Foo」というFlask拡張は以下のようなものかも"
 "しれません::"
 
@@ -76,7 +76,6 @@ msgid "Building Extensions"
 msgstr "Flask拡張の構築"
 
 #: ../../flask/docs/extensions.rst:42
-#, fuzzy
 #| msgid "" "While the `PyPI <pypi_>`_ contains many Flask extensions, you may
 #| not " "find an extension that fits your need. If this is the case, you can "
 #| "create your own. Read :doc:`/extensiondev` to develop your own Flask "
@@ -87,10 +86,10 @@ msgid ""
 "own, and publish it for others to use as well. Read :doc:`extensiondev` "
 "to develop your own Flask extension."
 msgstr ""
-"`PyPI <pypi_>`_\ は多くのFlask拡張を含んでいますが、自分のニーズに"
+"`PyPI <pypi_>`_ は多くのFlask拡張を含んでいますが、自分のニーズに"
 "合ったものが見つからないかもしれません。そのような場合には、自分独自のもの"
-"を作成できます。自分独自のFlask拡張を開発するには\ :doc:`/extensiondev`\ "
-"を読んでください。"
+"を作成し、他の人も同様に使えるよう公開できます。自分独自のFlask拡張を開発"
+"するには :doc:`/extensiondev` を読んでください。"
 
 # c8aac38331fe4ab687912957b0fd2130
 #~ msgid ""
