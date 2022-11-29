@@ -17,14 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.10.3\n"
 
-#: ../../flask/docs/reqcontext.rst:44
-msgid ""
-"Context locals are implemented using Python's :mod:`contextvars` and "
-"Werkzeug's :class:`~werkzeug.local.LocalProxy`. Python manages the "
-"lifetime of context vars automatically, and local proxy wraps that low-"
-"level interface to make the data easier to work with."
-msgstr ""
-
 # e647b85af6e74452b2ed126e4ed62bc2
 #: ../../flask/docs/reqcontext.rst:4
 msgid "The Request Context"
@@ -125,7 +117,6 @@ msgstr ""
 
 # 04782aea67ce4e779ddf7dadd45b4acb
 #: ../../flask/docs/reqcontext.rst:39
-#, fuzzy
 #| msgid "" "The context is unique to each thread (or other worker type). "
 #| ":data:`request` cannot be passed to another thread, the other thread will"
 #| " have a different context stack and will not know about the request the "
@@ -138,9 +129,23 @@ msgid ""
 msgstr ""
 "contextは各スレッド（または他のworkerタイプ）で固有なものです。:data:"
 "`request` は、他のスレッドへ渡すことは不可能で、他のスレッドは異なるcontext"
-"のスタックを持ち、親スレッドが指しているrequestについて知ることはありません"
+"のスペースを持ち、親スレッドが指しているrequestについて知ることはありません"
 "（訳注: 親スレッドのrequestプロキシが指している実際のリクエストは、子スレッド"
 "のrequestプロキシが指すものとは異なるというような意味合い）。"
+
+#: ../../flask/docs/reqcontext.rst:44
+msgid ""
+"Context locals are implemented using Python's :mod:`contextvars` and "
+"Werkzeug's :class:`~werkzeug.local.LocalProxy`. Python manages the "
+"lifetime of context vars automatically, and local proxy wraps that low-"
+"level interface to make the data easier to work with."
+msgstr ""
+"context localはPythonの :mod:`contextvars` とWerkzeugの :class:"
+"`~werkzeug.local.LocalProxy` を使って実装されています。Pythonはコンテキスト"
+"変数（訳注: :mod:`contextvars` で作った変数のことだと思います）の生存期間"
+"を自動的に管理し、ローカルのプロキシ（:class:`~werkzeug.local.LocalProxy` "
+"で作ったプロキシのことだと思います）は、データをより使いやすくするために、"
+"コンテキスト変数の低レベルのインタフェースを包みます。"
 
 # 33da5b14f95b4c0fab47d4bf2cdc6bd3
 #: ../../flask/docs/reqcontext.rst:51
@@ -201,7 +206,6 @@ msgstr "コンテキストの働きかた（How the Context Works）"
 
 # 86d01f77da0c45739df0575ef9814249
 #: ../../flask/docs/reqcontext.rst:90
-#, fuzzy
 #| msgid "" "The :meth:`Flask.wsgi_app` method is called to handle each
 #| request. It " "manages the contexts during the request. Internally, the
 #| request and " "application contexts work as stacks,
@@ -217,10 +221,10 @@ msgid ""
 msgstr ""
 ":meth:`Flask.wsgi_app` メソッドは各リクエストを処理するために呼び出されます。"
 "それはリクエストの期間中contextを管理します。内部的には、request contextと"
-"application contextは :data:`_request_ctx_stack` と :data:`_app_ctx_stack` "
-"というスタックとして機能します。contextがスタックにpushされたとき、pushされた"
-"ものに応じたプロキシ（訳注: flask.requestなどのこと）が利用可能になり、プロ"
-"キシはスタックの一番上にあるcontextから得られる情報を指すようになります。"
+"application contextはスタックのように機能します。contextがpushされたとき、"
+"pushされたものに応じたプロキシ（訳注: flask.requestなどのこと）が利用可能"
+"であり、プロキシはスタックの一番上にあるcontextから得られる情報を指すよう"
+"になります。"
 
 # d50c9f89e71e48339223a0222e509edf
 #: ../../flask/docs/reqcontext.rst:96
@@ -241,7 +245,6 @@ msgstr ""
 
 # 7279d57bdb7e4af7b83fb0a36f66fdd5
 #: ../../flask/docs/reqcontext.rst:103
-#, fuzzy
 #| msgid "" "Because the contexts are stacks, other contexts may be pushed to
 #| change " "the proxies during a request. While this is not a common pattern,
 #| it can " "be used in advanced applications to, for example, do internal
@@ -252,7 +255,7 @@ msgid ""
 "applications to, for example, do internal redirects or chain different "
 "applications together."
 msgstr ""
-"contextはスタックなので、他のcontextがリクエストの期間中にプロキシを変更する"
+"他のcontextがリクエストの期間中にプロキシを変更する"
 "ためにpushされるかもしれません。これはよくあるパターンではないですが、高度な"
 "アプリケーションでは、例えば内部的にリダイレクトしたり、違うアプリケーション"
 "を一緒に連鎖したりするために、使用可能です。"
