@@ -17,100 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.10.3\n"
 
-#: ../../flask/docs/cli.rst:31
-msgid "``--app hello``"
-msgstr ""
-
-#: ../../flask/docs/cli.rst:42
-msgid "``--app src/hello``"
-msgstr ""
-
-#: ../../flask/docs/cli.rst:45
-msgid "``--app hello.web``"
-msgstr ""
-
-#: ../../flask/docs/cli.rst:48
-msgid "``--app hello:app2``"
-msgstr ""
-
-#: ../../flask/docs/cli.rst:52
-msgid "``--app 'hello:create_app(\"dev\")'``"
-msgstr ""
-
-#: ../../flask/docs/cli.rst:92
-msgid ""
-"In debug mode, the ``flask run`` command will enable the interactive "
-"debugger and the reloader by default, and make errors easier to see and "
-"debug. To enable debug mode, use the ``--debug`` option."
-msgstr ""
-
-#: ../../flask/docs/cli.rst:110
-msgid ""
-"When using debug mode, the reloader will trigger whenever your Python "
-"code or imported modules change. The reloader can watch additional files "
-"with the ``--extra-files`` option. Multiple paths are separated with "
-"``:``, or ``;`` on Windows."
-msgstr ""
-
-#: ../../flask/docs/cli.rst:120
-msgid ""
-"The reloader can also ignore files using :mod:`fnmatch` patterns with the"
-" ``--exclude-patterns`` option. Multiple patterns are separated with "
-"``:``, or ``;`` on Windows."
-msgstr ""
-
-#: ../../flask/docs/cli.rst:146
-msgid ""
-"The ``flask`` command supports setting any option for any command with "
-"environment variables. The variables are named like ``FLASK_OPTION`` or "
-"``FLASK_COMMAND_OPTION``, for example ``FLASK_APP`` or "
-"``FLASK_RUN_PORT``."
-msgstr ""
-
-#: ../../flask/docs/cli.rst:167
-msgid ""
-"Directories are scanned upwards from the directory you call ``flask`` "
-"from to locate the files."
-msgstr ""
-
-#: ../../flask/docs/cli.rst:416
-msgid ""
-"Commands added using the Flask app's :attr:`~Flask.cli` or "
-":class:`~flask.cli.FlaskGroup` :meth:`~cli.AppGroup.command` decorator "
-"will be executed with an application context pushed, so your custom "
-"commands and parameters have access to the app and its configuration. The"
-" :func:`~cli.with_appcontext` decorator can be used to get the same "
-"behavior, but is not needed in most cases."
-msgstr ""
-
-#: ../../flask/docs/cli.rst:531
-msgid ""
-"PyCharm Professional provides a special Flask run configuration to run "
-"the development server. For the Community Edition, and for other commands"
-" besides ``run``, you need to create a custom run configuration. These "
-"instructions should be similar for any other IDE you use."
-msgstr ""
-
-#: ../../flask/docs/cli.rst:544
-msgid ""
-"Once you create a configuration for the ``flask run``, you can copy and "
-"change it to call any other command."
-msgstr ""
-
-#: ../../flask/docs/cli.rst:550
-msgid ""
-"Click the *Script path* dropdown and change it to *Module name*, then "
-"input ``flask``."
-msgstr ""
-
-#: ../../flask/docs/cli.rst:552
-msgid ""
-"The *Parameters* field is set to the CLI command to execute along with "
-"any arguments. This example uses ``--app hello --debug run``, which will "
-"run the development server in debug mode. ``--app hello`` should be the "
-"import or file with your Flask app."
-msgstr ""
-
 # 986abb94af9c4a1c9333477e27d591f2
 #: ../../flask/docs/cli.rst:4
 msgid "Command Line Interface"
@@ -138,7 +44,6 @@ msgstr "アプリケーションの発見（Application Discovery）"
 
 # 1adefc67aa4847868f3a020937c9201a
 #: ../../flask/docs/cli.rst:17
-#, fuzzy
 #| msgid "" "The ``flask`` command is installed by Flask, not your application;
 #| it " "must be told where to find your application in order to use it. The "
 #| "``FLASK_APP`` environment variable is used to specify how to load the "
@@ -151,11 +56,10 @@ msgstr ""
 "``flask`` コマンドはあなたのアプリケーションではなくFlaskによってインス"
 "トールされます; flaskコマンドがあなたのアプリケーションを使用するためには、"
 "アプリケーションがどこにあるかを伝える必要があります。アプリケーションを"
-"どのように読み込むかを指定するために ``FLASK_APP`` 環境変数が使用されます。"
+"どのように読み込むかを指定するために ``--app`` オプションが使用されます。"
 
 # e5e22d619fda42899d45d8bef99fff98
 #: ../../flask/docs/cli.rst:21
-#, fuzzy
 #| msgid "" "While ``FLASK_APP`` supports a variety of options for specifying
 #| your " "application, most use cases should be simple. Here are the typical "
 #| "values:"
@@ -164,9 +68,9 @@ msgid ""
 "application, most use cases should be simple. Here are the typical "
 "values:"
 msgstr ""
-"``FLASK_APP`` 環境変数はアプリケーションを指定するための様々なオプションを"
-"サポートしていますが、殆どの使用状況はシンプルなものでしょう。典型的な環境"
-"変数の値は以下のとおりです::"
+"``--app`` はアプリケーションを指定するための様々なオプションをサポートして"
+"いますが、殆どの使用状況はシンプルなものでしょう。典型的な値は以下のとおり"
+"です::"
 
 # 9c27340fdde54da8917b0da66bfb04cd
 #: ../../flask/docs/cli.rst:27
@@ -194,9 +98,12 @@ msgstr ""
 "アプリ（``app`` もしくは ``application``）またはfactory（``create_app`` "
 "もしくは ``make_app``）が見つけ出されます。"
 
+#: ../../flask/docs/cli.rst:31
+msgid "``--app hello``"
+msgstr ""
+
 # 96704387cfaf44db91a7b2d7c403a7ac
 #: ../../flask/docs/cli.rst:35
-#, fuzzy
 #| msgid "" "``FLASK_APP`` has three parts: an optional path that sets the
 #| current " "working directory, a Python file or dotted import path, and an
 #| optional " "variable name of the instance or factory. If the name is a
@@ -209,12 +116,16 @@ msgid ""
 "optionally be followed by arguments in parentheses. The following values "
 "demonstrate these parts:"
 msgstr ""
-"``FLASK_APP`` 環境変数は3つの部分からなります: 必須ではない、そのときの作業"
+"``--app`` は3つの部分からなります: 必須ではない、そのときの作業"
 "ディレクトリ（current working directory）を設定するパスと、Pythonファイル"
 "またはdotを使って示されたimportパス（dotted import path）と、必須ではない、"
 "インスタンスまたはfactoryの変数名です。もしその名前がfactoryの場合は、必要に"
-"応じてカッコ内で囲んだ引数を後ろにつけることができます。以下に示す変数の値"
+"応じてカッコ内で囲んだ引数を後ろにつけることができます。以下に示す値"
 "は、これらの3つの部分のデモになります:"
+
+#: ../../flask/docs/cli.rst:42
+msgid "``--app src/hello``"
+msgstr ""
 
 # 3491e0c79b4a437c9744f804f8822741
 #: ../../flask/docs/cli.rst:42
@@ -223,10 +134,18 @@ msgstr ""
 "そのときの作業ディレクトリ（current working directory）を ``src`` に設定"
 "してから ``hello`` をimportします。"
 
+#: ../../flask/docs/cli.rst:45
+msgid "``--app hello.web``"
+msgstr ""
+
 # 369db943a4d84760bf340426b8e00e2a
 #: ../../flask/docs/cli.rst:45
 msgid "Imports the path ``hello.web``."
 msgstr "パス ``hello.web`` をimportします。"
+
+#: ../../flask/docs/cli.rst:48
+msgid "``--app hello:app2``"
+msgstr ""
 
 # 493ee2e9b1cd42afa708f1216720f76b
 #: ../../flask/docs/cli.rst:48
@@ -242,9 +161,12 @@ msgstr ""
 "``hello`` の中にあるfactoryの ``create_app`` を、文字列 ``'dev'`` "
 "を引数に使って呼び出します。"
 
+#: ../../flask/docs/cli.rst:52
+msgid "``--app 'hello:create_app(\"dev\")'``"
+msgstr ""
+
 # bd645fb19c924fe881406d3b164480e3
 #: ../../flask/docs/cli.rst:54
-#, fuzzy
 #| msgid "" "If ``FLASK_APP`` is not set, the command will try to import
 #| \"app\" or " "\"wsgi\" (as a \".py\" file, or package) and try to detect an
 #| application" " instance or factory."
@@ -253,7 +175,7 @@ msgid ""
 "\"wsgi\" (as a \".py\" file, or package) and try to detect an application"
 " instance or factory."
 msgstr ""
-"もし ``FLASK_APP`` 環境変数が設定されていない場合、flaskコマンドは「app」"
+"もし ``--app`` が設定されていない場合、flaskコマンドは「app」"
 "または「wsgi」を（「.py」ファイルとして、またはパッケージとして）import"
 "しようとし、そしてアプリケーションのインスタンスまたはfactoryを見つけ出そう"
 "とします。"
@@ -328,12 +250,45 @@ msgstr ""
 msgid "Debug Mode"
 msgstr "デバッグモード"
 
+#: ../../flask/docs/cli.rst:92
+msgid ""
+"In debug mode, the ``flask run`` command will enable the interactive "
+"debugger and the reloader by default, and make errors easier to see and "
+"debug. To enable debug mode, use the ``--debug`` option."
+msgstr ""
+"デバッグモードでは、``flask run`` コマンドはインタラクティブなデバッガと"
+"再読み込み機能（reloader）を標準で有効にし、エラーを見てデバッグすることを"
+"容易にします。デバッグモードを有効にするには、``--debug`` オプションを使い"
+"ます。"
+
 # 0ce12affcfbe4881b475590caddc04c1
 #: ../../flask/docs/cli.rst:108
-#, fuzzy
 #| msgid "Watch Extra Files with the Reloader"
 msgid "Watch and Ignore Files with the Reloader"
-msgstr "再読み込み機能（Reloader）による追加ファイルの監視"
+msgstr "再読み込み機能（Reloader）によるファイルの監視および無視"
+
+#: ../../flask/docs/cli.rst:110
+msgid ""
+"When using debug mode, the reloader will trigger whenever your Python "
+"code or imported modules change. The reloader can watch additional files "
+"with the ``--extra-files`` option. Multiple paths are separated with "
+"``:``, or ``;`` on Windows."
+msgstr ""
+"デバッグモードを使用しているとき、あなたのPythonコードまたはimportされて"
+"いるモジュールを変更するたびにreloaderが始動します。reloaderは"
+"、``--extra-files`` オプションまたは ``FLASK_RUN_EXTRA_FILES`` 環境変数を"
+"使用して、追加ファイルを監視できます。複数のパスは ``:``、もしくはWindows"
+"では ``;`` を使用して分けられます。"
+
+#: ../../flask/docs/cli.rst:120
+msgid ""
+"The reloader can also ignore files using :mod:`fnmatch` patterns with the"
+" ``--exclude-patterns`` option. Multiple patterns are separated with "
+"``:``, or ``;`` on Windows."
+msgstr ""
+"reloaderは :mod:`fnmatch` のパターンを ``--exclude-patterns`` オプションと"
+"一緒に使ってファイルを無視することもできます。複数のパターンは ``:``、または"
+"Windowsでは ``;`` を使って分けられます。"
 
 # f7b1eea9531d4ade9fb40776480a5171
 #: ../../flask/docs/cli.rst:126
@@ -365,9 +320,20 @@ msgstr ""
 msgid "Environment Variables From dotenv"
 msgstr "dotenvからの環境変数読み込み"
 
+#: ../../flask/docs/cli.rst:146
+msgid ""
+"The ``flask`` command supports setting any option for any command with "
+"environment variables. The variables are named like ``FLASK_OPTION`` or "
+"``FLASK_COMMAND_OPTION``, for example ``FLASK_APP`` or "
+"``FLASK_RUN_PORT``."
+msgstr ""
+"``flask`` コマンドはどのコマンドのどのオプションでも環境変数を使った設定を"
+"サポートします。変数は、例えば ``FLASK_APP`` や ``FLASK_RUN_PORT`` のよう"
+"に、``FLASK_OPTION`` または ``FLASK_COMMAND_OPTION`` のような名前になり"
+"ます。"
+
 # 6188105556c2478e9b785d24c53bdf9b
 #: ../../flask/docs/cli.rst:151
-#, fuzzy
 #| msgid "" "Rather than setting ``FLASK_APP`` each time you open a new
 #| terminal, you " "can use Flask's dotenv support to set environment variables
 #| " "automatically."
@@ -376,12 +342,12 @@ msgid ""
 "variables every time you open a new terminal, you can use Flask's dotenv "
 "support to set environment variables automatically."
 msgstr ""
-"新しい端末を開くたびに毎回 ``FLASK_APP`` 環境変数を設定する代わりに、自動"
-"的に環境変数を設定するために、Flaskのdotenvサポートを使用できます。"
+"新しい端末を開くたびに毎回コマンドを走らせたり環境変数を設定したりする"
+"代わりに、自動的に環境変数を設定するために、Flaskのdotenvサポートを使用"
+"できます。"
 
 # a62f6061cfbb40408bdac9ee5184806b
 #: ../../flask/docs/cli.rst:155
-#, fuzzy
 #| msgid "" "If `python-dotenv`_ is installed, running the ``flask`` command
 #| will set " "environment variables defined in the files :file:`.env` and "
 #| ":file:`.flaskenv`. This can be used to avoid having to set ``FLASK_APP`` "
@@ -397,10 +363,11 @@ msgid ""
 msgstr ""
 "もし `python-dotenv`_ がインストールされている場合、``flask`` コマンドを"
 "実行すると :file:`.env` と :file:`.flaskenv` の中で定義されている環境変数が"
-"設定されます。これは、新しい端末を開くたびに毎回手作業で ``FLASK_APP`` "
-"環境変数を設定し、いくつかの展開するサービス（deployment service）を機能"
-"させるやり方と同じような、環境変数を使った設定をする必要をなくすために使用"
-"できます"
+"設定されます。``--env-file`` オプションを使って読み組む追加ファイルも指定"
+"できます。dotenvファイルは、新しい端末を開くたびに毎回手作業で ``--app`` "
+"または ``FLASK_APP`` 環境変数を設定をする必要をなくし、いくつかの展開する"
+"サービス（deployment service）を機能させるやり方と同じような、環境変数を"
+"使って設定をするために使用できます。"
 
 # 160b163f42494111bcf056a6f06f03ff
 #: ../../flask/docs/cli.rst:162
@@ -417,6 +384,14 @@ msgstr ""
 "されるべきであり、一方 :file:`.env` はプライベートな変数を設定できるように"
 "するために（ソースコード管理の）リポジトリにはコミットするべきではありま"
 "せん。"
+
+#: ../../flask/docs/cli.rst:167
+msgid ""
+"Directories are scanned upwards from the directory you call ``flask`` "
+"from to locate the files."
+msgstr ""
+"``flask`` を呼び出したディレクトリから親へと上りながら、それらのファイル"
+"（.envおよび.flaskenv）の場所を見つけるためにディレクトリが調べられます。"
 
 # 0009df8753e64605bca822c373b7175c
 #: ../../flask/docs/cli.rst:170
@@ -652,6 +627,23 @@ msgstr ""
 msgid "Application Context"
 msgstr "アプリケーションのコンテキスト（Application Context）"
 
+#: ../../flask/docs/cli.rst:416
+msgid ""
+"Commands added using the Flask app's :attr:`~Flask.cli` or "
+":class:`~flask.cli.FlaskGroup` :meth:`~cli.AppGroup.command` decorator "
+"will be executed with an application context pushed, so your custom "
+"commands and parameters have access to the app and its configuration. The"
+" :func:`~cli.with_appcontext` decorator can be used to get the same "
+"behavior, but is not needed in most cases."
+msgstr ""
+"Flaskアプリの :attr:`~Flask.cli` または :class:`~flask.cli.FlaskGroup` の "
+":meth:`~cli.AppGroup.command` デコレータ（decorator）を使って追加された"
+"コマンドは、（訳注: Flask内で各リクエストのapplication contextをstack構造で"
+"格納・管理している領域に）pushされたapplication contextと一緒に実行される"
+"ため、あなたのコマンドおよびパラメータはapp（のインスタンス）およびその設定"
+"情報にアクセスが可能です。:func:`~cli.with_appcontext` を使用して同じ振る"
+"舞いを得ることはできますが、殆どの場合は不要です。"
+
 # 739a505152d64042a12f88cabff7c8b0
 #: ../../flask/docs/cli.rst:437
 msgid "Plugins"
@@ -701,7 +693,6 @@ msgstr "独自のスクリプト"
 
 # 66b30b70c7dd4516a574ab4a261158fa
 #: ../../flask/docs/cli.rst:476
-#, fuzzy
 #| msgid "" "When you are using the app factory pattern, it may be more
 #| convenient to " "define your own Click script. Instead of using
 #| ``FLASK_APP`` and letting " "Flask load your application, you can create
@@ -713,9 +704,11 @@ msgid ""
 "export it as a `console script`_ entry point."
 msgstr ""
 "app factoryパターンを使用しているとき、自分のClickスクリプトを定義できると"
-"さらに便利かもしれません。``FLASK_APP`` 環境変数を使用してFlaskが自分の"
-"アプリケーションを読み込めるようにする代わりに、自分独自のClickオブジェクト"
-"を作成し、`console script`_ のentry pointとしてexportできます。"
+"さらに便利かもしれません。``--app`` を使用してFlaskが自分のアプリケーション"
+"を読み込めるようにする代わりに、自分独自のClickオブジェクトを作成し（訳注: "
+"`Click`_ ライブラリでは、Clickオブジェクトを作成するとコマンドラインで実行"
+"するプログラムになります）、`console script`_ のentry pointとしてexportで"
+"きます。"
 
 # 76b7c82d57f243fb88463b5bc25c7145
 #: ../../flask/docs/cli.rst:481
@@ -730,7 +723,6 @@ msgstr ":file:`setup.py` の中でentry pointを定義します::"
 
 # f39e640027f64325a28d4f24da6aad38
 #: ../../flask/docs/cli.rst:510
-#, fuzzy
 #| msgid "" "Install the application in the virtualenv in editable mode and the
 #| custom" " script is available. Note that you don't need to set
 #| ``FLASK_APP``. ::"
@@ -739,8 +731,8 @@ msgid ""
 " script is available. Note that you don't need to set ``--app``. ::"
 msgstr ""
 "virtualenvの中でアプリケーションを編集可能モード（editable mode）でインス"
-"トールすると独自スクリプトが利用可能になります。``FLASK_APP`` 環境変数を"
-"設定する必要はないことに注意してください。::"
+"トールすると独自スクリプトが利用可能になります。``--app`` を設定する必要は"
+"ないことに注意してください。::"
 
 # 3a18710c577144a48f739ea62303f771
 #: ../../flask/docs/cli.rst:516
@@ -775,9 +767,20 @@ msgstr ""
 msgid "PyCharm Integration"
 msgstr "PyCharmとの統合"
 
+#: ../../flask/docs/cli.rst:531
+msgid ""
+"PyCharm Professional provides a special Flask run configuration to run "
+"the development server. For the Community Edition, and for other commands"
+" besides ``run``, you need to create a custom run configuration. These "
+"instructions should be similar for any other IDE you use."
+msgstr ""
+"PyCharm Professional は、開発サーバーを走らせる特殊なFlask実行設定を提供し"
+"ます。Community Editionと、``run`` 以外のコマンドでは、独自の実行用の設定を"
+"作成する必要があります。これらの指定内容は、あなたが使いたい他のどんなIDE"
+"でも似たようなものでしょう。"
+
 # dcd520989c20434da7d0c0056fdb115e
 #: ../../flask/docs/cli.rst:536
-#, fuzzy
 #| msgid "" "In PyCharm, with your project open, click on *Run* from the menu
 #| bar and " "go to *Edit Configurations*. You'll be greeted by a screen
 #| similar to " "this:"
@@ -786,15 +789,21 @@ msgid ""
 "go to *Edit Configurations*. You'll see a screen similar to this:"
 msgstr ""
 "PyCharmで、プロジェクトを開いて、メニューバーから *Run* をクリックして "
-"*Edit Configurations* へ移動します。以下のような画面に迎えられるでしょう:"
+"*Edit Configurations* へ移動します。以下のような画面を見られるでしょう:"
 
-#, fuzzy
 #| msgid "Screenshot of PyCharms's run configuration settings."
 msgid "Screenshot of PyCharm run configuration."
 msgstr "PyCharmの実行設定のスクリーンショット"
 
+#: ../../flask/docs/cli.rst:544
+msgid ""
+"Once you create a configuration for the ``flask run``, you can copy and "
+"change it to call any other command."
+msgstr ""
+"一度 ``flask run`` 用の設定を作成すれば、他のどのコマンドを呼び出すために"
+"設定をコピーして変更ができます。"
+
 #: ../../flask/docs/cli.rst:547
-#, fuzzy
 #| msgid "" "Click the + (*Add New Configuration*) button and select *Python*.
 #| Give " "the configuration a name such as \"flask run\". For the ``flask
 #| run`` " "command, check \"Single instance only\" since you can't run the
@@ -804,13 +813,30 @@ msgid ""
 "the configuration a name such as \"flask run\"."
 msgstr ""
 "「+ (*Add New Configuration*)」ボタンをクリックし、*Python* を選択します。"
-"「flask run」のような名前を設定に与えます。``flask run`` コマンドに用に、"
-"同時に2つ以上はサーバーを実行できないため、「Single instance only」をチェック"
-"します。"
+"「flask run」のような名前を設定に与えます。"
+
+#: ../../flask/docs/cli.rst:550
+msgid ""
+"Click the *Script path* dropdown and change it to *Module name*, then "
+"input ``flask``."
+msgstr ""
+"*Script path* ドロップダウンをクリックし、それを *Module name* へ変更し、"
+"それから ``flask`` を入力します"
+
+#: ../../flask/docs/cli.rst:552
+msgid ""
+"The *Parameters* field is set to the CLI command to execute along with "
+"any arguments. This example uses ``--app hello --debug run``, which will "
+"run the development server in debug mode. ``--app hello`` should be the "
+"import or file with your Flask app."
+msgstr ""
+"*Parameter* 欄は、実行するCLIコマンドを全ての引数と一緒に指定します。この"
+"例では、開発サーバをデバッグモードで走らせる ``--app hello --debug run`` "
+"を使用します。``--app hello`` は自分のFlaskアプリに使うimportまたはファイル"
+"にする必要があります。"
 
 # f3ea66cc77c448a4b58e7aa954ef02f5
 #: ../../flask/docs/cli.rst:556
-#, fuzzy
 #| msgid "" "If you have installed your project as a package in your
 #| virtualenv, you " "may untick the *PYTHONPATH* options (**E**). This will
 #| more accurately " "match how you deploy the app later."
@@ -820,12 +846,11 @@ msgid ""
 " deploy later."
 msgstr ""
 "もし自分のプロジェクトをパッケージとしてvirtualenvの中にインストールして"
-"いた場合、*PYTHONPATH* オプション（**E**）のチェックを外しても良いでしょう。"
+"いた場合、*PYTHONPATH* オプションのチェックを外しても良いでしょう。"
 "後でアプリをデプロイするやり方に、これはより正確に合います。"
 
 # e0b66422d91141debf417cc2a6b9146e
 #: ../../flask/docs/cli.rst:559
-#, fuzzy
 #| msgid "" "Click *Apply* to save the configuration, or *OK* to save and close
 #| the " "window. Select the configuration in the main PyCharm window and click
 #| the" " play button next to it to run the server."
@@ -834,13 +859,12 @@ msgid ""
 "in the main PyCharm window and click the play button next to it to run "
 "the server."
 msgstr ""
-"設定を保存するために *Apply* を、または保存してからウインドウを閉じる"
-"ために *OK* をクリックします。メインのPyCharmウインドウで設定を選択して"
-"から、隣のplayボタンをクリックしてサーバーを実行します。"
+"設定を保存してからウインドウを閉じるために *OK* をクリックします。メインの"
+"PyCharmウインドウで設定を選択してから、隣のplayボタンをクリックしてサーバー"
+"を実行します。"
 
 # aff7443523e840e08adb69478bdd7fda
 #: ../../flask/docs/cli.rst:562
-#, fuzzy
 #| msgid "" "Now that we have a configuration which runs ``flask run`` from
 #| within " "PyCharm, we can copy that configuration and alter the *Script*
 #| argument " "to run a different CLI command, e.g. ``flask shell``."
@@ -850,8 +874,8 @@ msgid ""
 " command."
 msgstr ""
 "この時点でPyCharmの中から ``flask run`` を実行する設定を持っており、"
-"その設定をコピーしてから、例えば ``flask shell`` のように、異なるCLI"
-"コマンドを実行するために *Script* 引数を変更できます。"
+"その設定をコピーしてから、異なるCLIコマンドを実行するために *Parameters* "
+"引数を変更できます。"
 
 # 3043beb9953944a6ae4b9d11fc5e21a3
 #~ msgid ""
