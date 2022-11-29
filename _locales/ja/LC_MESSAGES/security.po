@@ -54,7 +54,7 @@ msgstr ""
 "webサイトの実行環境に挿入しようとする考え方です。対策するためには、"
 "任意のHTMLタグが含まれないようにするために、開発者はテキストを適切に"
 "エスケープする必要があります。これに関するさらなる情報については、"
-"Wikipediaの記事\ `Cross-Site Scripting <https://en.wikipedia.org/wiki"
+"Wikipediaの記事 `Cross-Site Scripting <https://en.wikipedia.org/wiki"
 "/Cross-site_scripting>`_ を確認してください。"
 
 # 2c06cfa627824db583772d48ce1dccc2
