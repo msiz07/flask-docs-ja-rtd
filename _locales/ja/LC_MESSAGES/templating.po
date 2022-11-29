@@ -17,33 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.10.3\n"
 
-#: ../../flask/docs/templating.rst:206
-msgid "Streaming"
-msgstr ""
-
-#: ../../flask/docs/templating.rst:208
-msgid ""
-"It can be useful to not render the whole template as one complete string,"
-" instead render it as a stream, yielding smaller incremental strings. "
-"This can be used for streaming HTML in chunks to speed up initial page "
-"load, or to save memory when rendering a very large template."
-msgstr ""
-
-#: ../../flask/docs/templating.rst:214
-msgid ""
-"The Jinja2 template engine supports rendering a template piece by piece, "
-"returning an iterator of strings. Flask provides the "
-":func:`~flask.stream_template` and :func:`~flask.stream_template_string` "
-"functions to make this easier to use."
-msgstr ""
-
-#: ../../flask/docs/templating.rst:227
-msgid ""
-"These functions automatically apply the "
-":func:`~flask.stream_with_context` wrapper if a request is active, so "
-"that it remains available in the template."
-msgstr ""
-
 # e18b9baec7bb41c99f7416240297921e
 #: ../../flask/docs/templating.rst:2
 msgid "Templates"
@@ -427,6 +400,45 @@ msgstr ""
 "`format_price` をテンプレートのフィルタとして構築することも可能ですが"
 "（:ref:`registering-filters` を見てください）、これはcontext processor中で"
 "関数をどう渡すかを実演しています。"
+
+#: ../../flask/docs/templating.rst:206
+msgid "Streaming"
+msgstr "ストリーミング"
+
+#: ../../flask/docs/templating.rst:208
+msgid ""
+"It can be useful to not render the whole template as one complete string,"
+" instead render it as a stream, yielding smaller incremental strings. "
+"This can be used for streaming HTML in chunks to speed up initial page "
+"load, or to save memory when rendering a very large template."
+msgstr ""
+"テンプレート全体を１つの完成した文字列として変換するのではなく、代わりに"
+"ストリームとして変換し、より小さな徐々に増加する（incremental）文字列として"
+"生成（yield）すると便利な場合があります。これは、最初のページ読み込みの速度"
+"を上げたり、非常に大きなテンプレートを変換するときにメモリを節約したりする"
+"ために、HTMLを小さな塊でストリーミングするときに使うことができます。"
+
+#: ../../flask/docs/templating.rst:214
+msgid ""
+"The Jinja2 template engine supports rendering a template piece by piece, "
+"returning an iterator of strings. Flask provides the "
+":func:`~flask.stream_template` and :func:`~flask.stream_template_string` "
+"functions to make this easier to use."
+msgstr ""
+"Jinja2テンプレート・エンジンはテンプレートを断片ごとに変換し、文字列の"
+"iteratorとして返すことをサポートします。これを容易に使えるように、Flaskは "
+":func:`~flask.stream_template` と :func:`~flask.stream_template_string` を"
+"提供します。"
+
+#: ../../flask/docs/templating.rst:227
+msgid ""
+"These functions automatically apply the "
+":func:`~flask.stream_with_context` wrapper if a request is active, so "
+"that it remains available in the template."
+msgstr ""
+"これらの関数は、request（のcontext）がactiveである場合は、テンプレートの"
+"中で利用できるように、自動的に :func:`~flask.stream_with_context` ラッパー"
+"を適用します。"
 
 # f4889088a18c4df0968f863b1fe91668
 #~ msgid "Standard Filters"
