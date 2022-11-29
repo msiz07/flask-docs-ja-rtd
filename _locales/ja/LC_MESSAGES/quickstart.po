@@ -980,8 +980,8 @@ msgstr ""
 "別の可能なやり方は、WSGI環境全体を :meth:`~flask.Flask.request_context` "
 "メソッドへ渡すことです（訳注: WSGIではWebサーバとWSGIアプリ間の主要なインタ"
 "フェースに、サーバからWSGIアプリへ渡す、様々な情報を格納したdictオブジェクト"
-"があり、WSGIの仕様である :PEP:`3333` ではそれを「``environment``」と呼んで"
-"います。ここの「WSGI環境（WSGI environment）」は、おそらくサーバからWSGI"
+"があり、WSGIの仕様である :PEP:`3333` ではそれを「``environ``」と呼んで"
+"います。ここの「WSGI環境（WSGI environment）」は、おそらくWSGIサーバからWSGI"
 "アプリへ渡すdictを模擬したもののことだと思います）。"
 
 # b5700ddfe6a143aa9df8d8907d6aafc1
