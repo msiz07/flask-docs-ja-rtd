@@ -17,14 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.10.3\n"
 
-#: ../../flask/docs/patterns/packages.rst:59
-msgid "Install your application so it is importable:"
-msgstr ""
-
-#: ../../flask/docs/patterns/packages.rst:69
-msgid "$ flask --app yourapplication run"
-msgstr ""
-
 # 5baa87b87f9444ddbd34b2534fc6298c
 #: ../../flask/docs/patterns/packages.rst:2
 msgid "Large Applications as Packages"
@@ -62,10 +54,10 @@ msgid ""
 "(Make sure to delete all ``.pyc`` files first, otherwise things would "
 "most likely break)"
 msgstr ""
-"これをより大きなものへ変換するために、まずは既にあるフォルダの中に新しく\ "
-":file:`yourapplication`\ フォルダを作成し、全てをそのフォルダの下へ移動"
-"します。それから\ :file:`yourapplication.py`\ のファイル名を\ "
-":file:`__init__.py`\ へ変更します。（最初に全ての\ ``.pyc``\ ファイルを"
+"これをより大きなものへ変換するために、まずは既にあるフォルダの中に新しく "
+":file:`yourapplication` フォルダを作成し、全てをそのフォルダの下へ移動"
+"します。それから :file:`yourapplication.py` のファイル名を "
+":file:`__init__.py` へ変更します。（最初に全ての ``.pyc`` ファイルを"
 "確実に削除してください。そうしないと、うまくいかない場合が多いでしょう）"
 
 # 9e487de33094457b9aaf35b49f379b08
@@ -84,17 +76,21 @@ msgid ""
 "not a big problem, just add a new file called :file:`setup.py` next to "
 "the inner :file:`yourapplication` folder with the following contents::"
 msgstr ""
-"しかし、アプリケーションはどうやって実行するのでしょうか？素朴な\ ``python "
-"yourapplication/__init__.py``\ ではうまくいきません。Pythonはパッケージの中の"
+"しかし、アプリケーションはどうやって実行するのでしょうか？素朴な ``python "
+"yourapplication/__init__.py`` ではうまくいきません。Pythonはパッケージの中の"
 "モジュールを開始時の実行ファイル（startup file）にはしたがらないとだけ"
-"言わせてください。しかし、それは大きな問題ではなく、\ :file:`setup.py`\ と"
-"呼ばれる新しいファイルを内側の\ :file:`yourapplication`\ フォルダ（訳注: "
+"言わせてください。しかし、それは大きな問題ではなく、:file:`setup.py` と"
+"呼ばれる新しいファイルを内側の :file:`yourapplication` フォルダ（訳注: "
 "上の例で「yourapplication」フォルダが2つあるうちの内側の方）の隣に、以下の"
 "内容でただ追加だけしてください::"
 
+#: ../../flask/docs/patterns/packages.rst:59
+msgid "Install your application so it is importable:"
+msgstr ""
+"importできるように、自分のアプリケーションをインストールします:"
+
 # 7f652089641e4186b7ff6409b48b64ce
 #: ../../flask/docs/patterns/packages.rst:65
-#, fuzzy
 #| msgid "" "In order to run the application you need to export an environment
 #| " "variable that tells Flask where to find the application instance:"
 msgid ""
@@ -102,8 +98,13 @@ msgid ""
 " ``--app`` option that tells Flask where to find the application "
 "instance:"
 msgstr ""
-"アプリケーションを実行するためには、アプリケーションのインスタンスを"
-"どこで見つけられるかFlaskへ伝える環境変数をexportする必要があります:"
+"``flask`` コマンドを使って自分のアプリケーションを実行するためには、アプリ"
+"ケーションのインスタンスをどこで見つけられるかFlaskへ伝える ``--app`` "
+"オプションを指定する必要があります:"
+
+#: ../../flask/docs/patterns/packages.rst:69
+msgid "$ flask --app yourapplication run"
+msgstr ""
 
 # c25964055e0d49c1a8895435c4fbf0ad
 #: ../../flask/docs/patterns/packages.rst:71
@@ -123,9 +124,9 @@ msgid ""
 ":file:`__init__.py` file.  That way each module can import it safely and "
 "the `__name__` variable will resolve to the correct package."
 msgstr ""
-"`Flask`\ アプリケーションのオブジェクトの作成は、\ :file:`__init__.py`\ "
+"`Flask` アプリケーションのオブジェクトの作成は、:file:`__init__.py` "
 "ファイルの中で行う必要があります。そのようにすると、各モジュールがFlask"
-"アプリケーションのオブジェクトを安全にimportし、\ `__name__`\ 変数で"
+"アプリケーションのオブジェクトを安全にimportし、`__name__` 変数で"
 "適切なパッケージが分かるようにできます。"
 
 # baa688e39581435f96f96dcd8ea9c035
@@ -136,22 +137,22 @@ msgid ""
 "Not the object itself, but the module it is in. Import the view module "
 "**after the application object is created**."
 msgstr ""
-"すべてのview関数（\ :meth:`~flask.Flask.route`\ デコレータが関数名の"
-"上にあるもの）は、\ :file:`__init__.py`\ ファイルの中でimportされる"
+"すべてのview関数（:meth:`~flask.Flask.route` デコレータが関数名の"
+"上にあるもの）は、:file:`__init__.py` ファイルの中でimportされる"
 "必要があります。（importするのは）オブジェクト（訳注: おそらくview関数の"
 "こと）自身ではなく、それ（訳注: 直前に書いてある「オブジェクト」のこと）が"
-"あるモジュールです。viewのモジュールは\ **アプリケーションのオブジェクトが"
-"作成された後で**\ importします。"
+"あるモジュールです。viewのモジュールは **アプリケーションのオブジェクトが"
+"作成された後で** importします。"
 
 # 28d1167fa0dc42269a0e758a1637cc31
 #: ../../flask/docs/patterns/packages.rst:83
 msgid "Here's an example :file:`__init__.py`::"
-msgstr ":file:`__init__.py`\ の例がこちらです::"
+msgstr ":file:`__init__.py` の例がこちらです::"
 
 # b23ab12e89e942edbdd28f80001e9e3b
 #: ../../flask/docs/patterns/packages.rst:90
 msgid "And this is what :file:`views.py` would look like::"
-msgstr "そしてこれは、\ :file:`views.py`\ がどのようになるか示しています::"
+msgstr "そしてこれは、:file:`views.py` がどのようになるか示しています::"
 
 # f540b10c51f24d87a8646e3e17875f80
 #: ../../flask/docs/patterns/packages.rst:113
@@ -171,9 +172,9 @@ msgid ""
 msgstr ""
 "全てのPythonプログラマが嫌っており、我々もいくらかそれに加わるものがこちら"
 "です: 循環import（2つのモジュールがお互い依存し合うとき循環importになります。"
-"今回の場合では、\ :file:`views.py`\ が\ :file:`__init__.py`\ に依存してい"
+"今回の場合では、:file:`views.py` が :file:`__init__.py` に依存してい"
 "ます）。一般的には循環importは悪いアイデアですが、今回のは実際に大丈夫だと"
-"お知らせします。その理由は、\ :file:`__init__.py`\ の中ではviewを実際には"
+"お知らせします。その理由は、:file:`__init__.py` の中ではviewを実際には"
 "使わないようにし、確実にモジュールはimportされるようにし、そしてそのimportを"
 "ファイルの最後で行うようにしているためです。"
 
