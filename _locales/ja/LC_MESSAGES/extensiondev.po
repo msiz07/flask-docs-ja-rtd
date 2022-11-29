@@ -387,7 +387,6 @@ msgstr ""
 "あります。"
 
 #: ../../flask/docs/extensiondev.rst:272
-#, fuzzy
 #| msgid "" "The extension must be BSD or MIT licensed. It must be open source
 #| and " "publicly available."
 msgid ""
@@ -395,8 +394,9 @@ msgid ""
 "tends to prefer BSD or MIT. It must be open source and publicly "
 "available."
 msgstr ""
-"Flask拡張のライセンスはBSD/MIT/WTFPLである必要があります。それはオープン"
-"ソースであり、公開されている必要があります。"
+"Flask拡張はオープンソースライセンスを使う必要があります。Pythonのwebの"
+"ecosystemはBSDまたはMITを好む傾向があります。それはオープンソースであり、"
+"公開されている必要があります。"
 
 # 6dd6c3156ecb43a4ab79d55b6f06b0df
 #: ../../flask/docs/extensiondev.rst:275
@@ -423,7 +423,6 @@ msgstr ""
 "あります。``ext.init_app()`` パターンを使用してください。"
 
 #: ../../flask/docs/extensiondev.rst:283
-#, fuzzy
 #| msgid "" "From a clone of the repository, an extension with its dependencies
 #| must " "be installable with ``pip install -e .``."
 msgid ""
@@ -431,7 +430,8 @@ msgid ""
 "be installable in editable mode with ``pip install -e .``."
 msgstr ""
 "リポジトリのクローンから、Flask拡張はその依存対象も一緒に ``pip install "
-"-e .`` でインストールできる必要があります。"
+"-e .`` を使って編集可能モード（editable mode）でインストールできる必要が"
+"あります。"
 
 # 8f78234d41494d478ae59a803030ea19
 #~ msgid ""
