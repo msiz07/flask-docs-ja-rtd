@@ -17,26 +17,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.10.3\n"
 
-#: ../../flask/docs/server.rst:84
-msgid "Deferred Errors on Reload"
-msgstr ""
-
-#: ../../flask/docs/server.rst:100
-msgid ""
-"The development server can also be started from Python with the "
-":meth:`Flask.run` method. This method takes arguments similar to the CLI "
-"options to control the server. The main difference from the CLI command "
-"is that the server will crash if there are errors when reloading. "
-"``debug=True`` can be passed to enable debug mode."
-msgstr ""
-
 # d29f4d0ccb9347f488719169fe4f2e78
 #: ../../flask/docs/server.rst:4
 msgid "Development Server"
 msgstr "開発サーバ"
 
 #: ../../flask/docs/server.rst:6
-#, fuzzy
 #| msgid "" "Flask provides a ``run`` command to run the application with a "
 #| "development server. In development mode, this server provides an "
 #| "interactive debugger and will reload when code is changed."
@@ -46,7 +32,7 @@ msgid ""
 "debugger and will reload when code is changed."
 msgstr ""
 "Flaskはアプリケーションを開発サーバを使って走らせる ``run`` コマンドを提供"
-"します。developmentモードでは、このサーバはインタラクティブなデバッガを提供"
+"します。デバッグモードでは、このサーバはインタラクティブなデバッガを提供"
 "し、コードが変更されたときは再読み込み（reload）します。"
 
 #: ../../flask/docs/server.rst:12
@@ -70,7 +56,6 @@ msgid "Command Line"
 msgstr "コマンドライン"
 
 #: ../../flask/docs/server.rst:21
-#, fuzzy
 #| msgid "" "The ``flask run`` command line script is the recommended way to
 #| run the " "development server. It requires setting the ``FLASK_APP``
 #| environment " "variable to point to your application, and
@@ -80,14 +65,12 @@ msgid ""
 "development server. Use the ``--app`` option to point to your "
 "application, and the ``--debug`` option to enable debug mode."
 msgstr ""
-"コマンドラインのスクリプトである ``flask run`` は、開発サーバを走らせる推奨"
-"される方法です。flask runが全ての開発モードを有効にするには、``FLASK_APP`` "
-"環境変数は自分のアプリケーションを指し、``FLASK_ENV=development`` と環境変数"
-"が設定されることが必要です。"
+"CLIのコマンドである ``flask run`` は、開発サーバを走らせる推奨される方法"
+"です。自分のアプリケーションを指すために ``--app`` オプションを、デバッグ"
+"モードを有効にするために ``--debug`` オプションを使ってください。"
 
 # a6a4003694b3454db1e0c02fb2e76d45
 #: ../../flask/docs/server.rst:29
-#, fuzzy
 #| msgid "" "This enables the development environment, including the
 #| interactive " "debugger and reloader, and then starts the server on "
 #| "http://localhost:5000/. Use ``flask run --help`` to see the available "
@@ -100,7 +83,7 @@ msgid ""
 "instructions about configuring and using the CLI."
 msgstr ""
 "この例ではインタラクティブなデバッガと再読み込み機能（reloader）を含む、"
-"開発環境を有効にし、それから *http://localhost:5000* でサーバを開始"
+"デバッグモードを有効にし、それからhttp://localhost:5000/でサーバを開始"
 "します。利用可能なオプションを見るには ``flask run --help`` を使用し、"
 "CLIの使用や設定についての指示（instructions）の詳細は :doc:`/cli` を"
 "見てください。"
@@ -170,8 +153,11 @@ msgstr ""
 "そのサービスを無効にするには、System Preferences、Sharingへ行き、"
 "「AirPlay Receiver」を無効にします。"
 
+#: ../../flask/docs/server.rst:84
+msgid "Deferred Errors on Reload"
+msgstr "再読み込み時のエラーの遅延処理（Deferred Errors on Reload）"
+
 #: ../../flask/docs/server.rst:86
-#, fuzzy
 #| msgid "" "When using the ``flask run`` command with the reloader, the server
 #| will " "continue to run even if you introduce syntax errors or other "
 #| "initialization errors into the code. Accessing the site will show the "
@@ -187,7 +173,7 @@ msgstr ""
 "文法エラーまたはその他の初期化エラーをコードに導入してしまった場合でも、"
 "そのサーバーは走り続けようとします。サイトへアクセスすると、サーバが"
 "クラッシュするのではなく、エラーに対するインタラクティブなデバッガを見ら"
-"れるでしょう。この機能は「遅延読み込み（lazy loading）」と呼ばれています。"
+"れるでしょう。"
 
 #: ../../flask/docs/server.rst:91
 msgid ""
@@ -205,6 +191,20 @@ msgstr ""
 #: ../../flask/docs/server.rst:98
 msgid "In Code"
 msgstr "コードの中"
+
+#: ../../flask/docs/server.rst:100
+msgid ""
+"The development server can also be started from Python with the "
+":meth:`Flask.run` method. This method takes arguments similar to the CLI "
+"options to control the server. The main difference from the CLI command "
+"is that the server will crash if there are errors when reloading. "
+"``debug=True`` can be passed to enable debug mode."
+msgstr ""
+"開発サーバはPythonからも :meth:`Flask.run` メソッドを使って開始できます。"
+"このメソッドはサーバーを制御するためにCLIのオプションと似た引数を取ります。"
+"CLIコマンドからの主な違いは、reload時にエラーがあればクラッシュすること"
+"です。デバッグモードを有効にするために ``debug=True`` を（:meth:`Flask.run` "
+"に）渡すことができます。"
 
 #: ../../flask/docs/server.rst:105
 msgid ""
