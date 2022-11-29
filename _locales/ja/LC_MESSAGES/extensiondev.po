@@ -571,7 +571,7 @@ msgid ""
 "The extension must be BSD or MIT licensed. It must be open source and "
 "publicly available."
 msgstr ""
-"Flask拡張のライセンスはBSD/MIT/WTFPLである必要があります。それはオープン"
+"Flask拡張のライセンスはBSDまたはMITである必要があります。それはオープン"
 "ソースであり、公開されている必要があります。"
 
 # 6dd6c3156ecb43a4ab79d55b6f06b0df
