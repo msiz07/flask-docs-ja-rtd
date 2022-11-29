@@ -29,6 +29,8 @@ msgid ""
 "`eventlet`_ directly. Gunicorn provides a much more configurable and "
 "production-tested server."
 msgstr ""
+"直接 `eventlet`_ を使うよりも、:doc:`gunicorn` でeventletのworkerを使う方が"
+"好ましいです。Gunicornはより設定可能で製品レベルのテストがされたサーバです。"
 
 #: ../../flask/docs/deploying/eventlet.rst:8
 msgid ""
@@ -36,6 +38,10 @@ msgid ""
 "like standard synchronous Python. It uses `greenlet`_ to enable task "
 "switching without writing ``async/await`` or using ``asyncio``."
 msgstr ""
+"`eventlet`_ は非同期処理の、コルーチンを土台にしたコードを標準の同期処理を"
+"するPythonのような見た目で書けるようにします。`greenlet`_ を使うことで、"
+"``async/await`` を書いたり、``asincio`` を使ったりせずに、タスクの切り替え"
+"をできるようにします。"
 
 #: ../../flask/docs/deploying/eventlet.rst:12
 msgid ""
@@ -43,6 +49,9 @@ msgid ""
 "dependencies you have, or other considerations, may affect which of the "
 "two you choose to use."
 msgstr ""
+":doc:`gevent` は、同じことをするもう一つのライブラリです。ある種の依存"
+"対象や、その他の検討事項が、２つのどちらを使うかの選択に影響を与えるかも"
+"しれません。"
 
 #: ../../flask/docs/deploying/eventlet.rst:16
 msgid ""
@@ -50,10 +59,13 @@ msgid ""
 "instead of one per worker process. You must actually use eventlet in your"
 " own code to see any benefit to using the server."
 msgstr ""
+"eventletは、接続ごとにworkerプロセスを使う代わりに、多くの接続を同時に処理"
+"するWSGIサーバを提供します。このサーバを使用して得られるいかなる利点も見る"
+"ためには、自分のコードの中で実際にeventletを使用する必要があります。"
 
 #: ../../flask/docs/deploying/eventlet.rst:25
 msgid "Installing"
-msgstr ""
+msgstr "インストール"
 
 #: ../../flask/docs/deploying/eventlet.rst:27
 msgid ""
@@ -61,20 +73,28 @@ msgid ""
 "such as ``request`` will not work as expected. When using PyPy, "
 "PyPy>=7.3.7 is required."
 msgstr ""
+"eventletを使うときは、greenlet>=1.0が必要であり、さもなければ ``request`` の"
+"ようなコンテキストの局所領域（context local）は期待通りに働かないでしょう。"
+"PyPyを使うときは、PyPy>=7.3.7が必要です。"
 
 #: ../../flask/docs/deploying/eventlet.rst:31
 msgid "Create a virtualenv, install your application, then install ``eventlet``."
 msgstr ""
+"virtualenvを作成し、アプリケーションをインストールし、それから ``eventlet`` "
+"をインストールします。"
 
 #: ../../flask/docs/deploying/eventlet.rst:44
 msgid "Running"
-msgstr ""
+msgstr "実行"
 
 #: ../../flask/docs/deploying/eventlet.rst:46
 msgid ""
 "To use eventlet to serve your application, write a script that imports "
 "its ``wsgi.server``, as well as your app or app factory."
 msgstr ""
+"Flaskアプリケーションを提供するためにgeventを使うには、その ``wsgi.server`` "
+"をimportするスクリプトを、Flaskアプリのインスタンスであってもapp factoryで"
+"あっても同様に書きます。"
 
 #: ../../flask/docs/deploying/eventlet.rst:49
 msgid "``wsgi.py``"
@@ -82,7 +102,7 @@ msgstr ""
 
 #: ../../flask/docs/deploying/eventlet.rst:66
 msgid "Binding Externally"
-msgstr ""
+msgstr "外部への結び付け（Binding Externally）"
 
 #: ../../flask/docs/deploying/eventlet.rst:68
 msgid ""
@@ -92,6 +112,14 @@ msgid ""
 "proxy such as :doc:`nginx` or :doc:`apache-httpd` should be used in front"
 " of eventlet."
 msgstr ""
+"アプリケーションのコードがrootとして走るようになり、安全ではなくなるため、"
+"eventletはrootとして走らせないようにするべきです。しかしながら、これは"
+"ポート80や443に結びつけ（bind）出来なくなることを意味します（訳注: 一般的な"
+"Linuxでは、およそ1000より小さなポート番号は、セキュリティ対策のためroot権限"
+"を持たないプログラムではbindできないようになっており、従ってroot権限がない"
+"WSGIサーバではHTTPやHTTPSで標準的に使われる80や443番ポートでリクエストを"
+"受け付けられないことになります）。代わりに、:doc:`nginx` または :doc:"
+"`apache-httpd` のようなリバースプロキシをeventletの前面に使うべきです。"
 
 #: ../../flask/docs/deploying/eventlet.rst:74
 msgid ""
@@ -100,9 +128,15 @@ msgid ""
 "do this when using a reverse proxy setup, otherwise it will be possible "
 "to bypass the proxy."
 msgstr ""
+"外部からアクセスできる全てのIPアドレスのroot権限不要なポートは、前のセク"
+"ションで示されたサーバの引数の中で ``0.0.0.0`` を使って結び付け（bind）"
+"できます。これは、リバースプロキシを用意しているときは行わないでください、"
+"さもなければリバースプロキシを迂回することが可能になります。"
 
 #: ../../flask/docs/deploying/eventlet.rst:79
 msgid ""
 "``0.0.0.0`` is not a valid address to navigate to, you'd use a specific "
 "IP address in your browser."
 msgstr ""
+"``0.0.0.0`` はアクセスするには適切なアドレスではないため、ブラウザでは具体"
+"的なIPアドレスを使うべきです。"

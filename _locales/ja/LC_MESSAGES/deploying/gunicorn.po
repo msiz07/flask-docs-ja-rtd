@@ -28,24 +28,31 @@ msgid ""
 "`Gunicorn`_ is a pure Python WSGI server with simple configuration and "
 "multiple worker implementations for performance tuning."
 msgstr ""
+"`Gunicorn`_ はPythonだけで実装されたWSGIサーバで、シンプルな設定と、性能"
+"チューニングのための複数のworker実装が使えます。"
 
 #: ../../flask/docs/deploying/gunicorn.rst:7
 msgid "It tends to integrate easily with hosting platforms."
 msgstr ""
+"ホスティング・サービスと容易に統合できることが多いです。"
 
 #: ../../flask/docs/deploying/gunicorn.rst:8
 msgid "It does not support Windows (but does run on WSL)."
 msgstr ""
+"Windowsはサポートしません（しかし、WSL上で走ります）。"
 
 #: ../../flask/docs/deploying/gunicorn.rst:9
 msgid ""
 "It is easy to install as it does not require additional dependencies or "
 "compilation."
 msgstr ""
+"追加の依存対象やコンパイル処理が不要であるため、インストールが容易です。"
 
 #: ../../flask/docs/deploying/gunicorn.rst:11
 msgid "It has built-in async worker support using gevent or eventlet."
 msgstr ""
+"geventまたはeventletを使った、組み込みのasync（非同期処理の）workerの"
+"サポートがあります。"
 
 #: ../../flask/docs/deploying/gunicorn.rst:13
 msgid ""
@@ -53,24 +60,31 @@ msgid ""
 "`documentation`_ and use ``gunicorn --help`` to understand what features "
 "are available."
 msgstr ""
+"このページはGunicornを実行する基本について説明します。その `documentation`_ "
+"を読み ``gunicorn --help`` を使って、どの目玉機能（feature）が利用できるか"
+"理解しておいてください。"
 
 #: ../../flask/docs/deploying/gunicorn.rst:22
 msgid "Installing"
-msgstr ""
+msgstr "インストール"
 
 #: ../../flask/docs/deploying/gunicorn.rst:24
 msgid ""
 "Gunicorn is easy to install, as it does not require external dependencies"
 " or compilation. It runs on Windows only under WSL."
 msgstr ""
+"追加の依存対象やコンパイル処理が不要であるため、Gunicornは容易にインストール"
+"できます。GunicornはWindowsではただWSLのもとでだけ走ります。"
 
 #: ../../flask/docs/deploying/gunicorn.rst:27
 msgid "Create a virtualenv, install your application, then install ``gunicorn``."
 msgstr ""
+"virtualenvを作成し、アプリケーションをインストールし、それから "
+"``gunicorn`` をインストールします。"
 
 #: ../../flask/docs/deploying/gunicorn.rst:40
 msgid "Running"
-msgstr ""
+msgstr "実行"
 
 #: ../../flask/docs/deploying/gunicorn.rst:42
 msgid ""
@@ -81,6 +95,13 @@ msgid ""
 "can also be a function call (with any arguments) if you're using the app "
 "factory pattern."
 msgstr ""
+"Gunicornのただ一つ必要な引数は、Flaskアプリケーションをどのように読み込むか"
+"をGunicornに伝えます。記法は ``{module_import}:{app_variable}`` （{import"
+"するモジュール}:{Flaskアプリを読み込む変数}）です。``module_import`` は、"
+"自分のアプリケーションがあるモジュールの、ドット（「.」）で分けられたimport"
+"名です。``app_variable`` はアプリケーションが設定されている変数です。もし"
+"app factoryパターンを使っている場合、app_variableは（どのような引数を伴っ"
+"た）関数呼び出しでも可能です。"
 
 #: ../../flask/docs/deploying/gunicorn.rst:65
 msgid ""
@@ -88,6 +109,9 @@ msgid ""
 "value could be ``CPU * 2``. The default is only 1 worker, which is "
 "probably not what you want for the default worker type."
 msgstr ""
+"``-w`` オプションは走らせるプロセス数を指定します; 開始時の値は "
+"``CPU * 2`` にできるでしょう。標準設定ではただ１つのworkerになり、それは"
+"おそらくあなたが標準設定のworkerのタイプでは望まないものでしょう。"
 
 #: ../../flask/docs/deploying/gunicorn.rst:69
 msgid ""
@@ -95,10 +119,13 @@ msgid ""
 "errors are shown. To show access logs on stdout, use the ``--access-"
 "logfile=-`` option."
 msgstr ""
+"各リクエストのログは標準設定では表示されず、ただworkerのinfoとerrorの"
+"ログだけが表示されます。アクセスログを標準出力に表示させるには、"
+"``--access-logfile=-`` オプションを使います。"
 
 #: ../../flask/docs/deploying/gunicorn.rst:75
 msgid "Binding Externally"
-msgstr ""
+msgstr "外部への結び付け（Binding Externally）"
 
 #: ../../flask/docs/deploying/gunicorn.rst:77
 msgid ""
@@ -108,6 +135,14 @@ msgid ""
 "proxy such as :doc:`nginx` or :doc:`apache-httpd` should be used in front"
 " of Gunicorn."
 msgstr ""
+"アプリケーションのコードがrootとして走るようになり、安全ではなくなるため、"
+"Gunicornはrootとして走らせないようにするべきです。しかしながら、これは"
+"ポート80や443に結びつけ（bind）出来なくなることを意味します（訳注: 一般的な"
+"Linuxでは、およそ1000より小さなポート番号は、セキュリティ対策のためroot権限"
+"を持たないプログラムではbindできないようになっており、従ってroot権限がない"
+"WSGIサーバではHTTPやHTTPSで標準的に使われる80や443番ポートでリクエストを"
+"受け付けられないことになります）。代わりに、:doc:`nginx` または :doc:"
+"`apache-httpd` のようなリバースプロキシをGunicornの前面に使うべきです。"
 
 #: ../../flask/docs/deploying/gunicorn.rst:83
 msgid ""
@@ -115,16 +150,22 @@ msgid ""
 "0.0.0.0`` option. Don't do this when using a reverse proxy setup, "
 "otherwise it will be possible to bypass the proxy."
 msgstr ""
+"外部からアクセスできる全てのIPアドレスのroot権限不要なポートは、"
+"``-b 0.0.0.0`` オプションを使って結び付け（bind）できます。これは、リバース"
+"プロキシを用意しているときは行わないでください、さもなければリバースプロキシ"
+"を迂回することが可能になります。"
 
 #: ../../flask/docs/deploying/gunicorn.rst:92
 msgid ""
 "``0.0.0.0`` is not a valid address to navigate to, you'd use a specific "
 "IP address in your browser."
 msgstr ""
+"``0.0.0.0`` はアクセスするには適切なアドレスではないため、ブラウザでは具体"
+"的なIPアドレスを使うべきです。"
 
 #: ../../flask/docs/deploying/gunicorn.rst:97
 msgid "Async with gevent or eventlet"
-msgstr ""
+msgstr "geventまたはeventletを使った非同期処理"
 
 #: ../../flask/docs/deploying/gunicorn.rst:99
 msgid ""
@@ -134,6 +175,12 @@ msgid ""
 "ASGI server spec. You must actually use gevent/eventlet in your own code "
 "to see any benefit to using the workers."
 msgstr ""
+"標準設定の同期処理するworkerは、おおくの使用状況で適切ではありません。"
+"もし非同期処理するもののサポートが必要な場合、Gunicornは `gevent`_ または "
+"`eventlet`_ のいずれかを使用するworkerを提供します。これはPythonの "
+"``async/await``、またはASGIサーバの仕様と同じものではありません。これらの"
+"workerを使用して得られるいかなる利点も見るためには、自分のコードの中で実際"
+"にgevent/eventletを使用する必要があります。"
 
 #: ../../flask/docs/deploying/gunicorn.rst:105
 msgid ""
@@ -141,11 +188,14 @@ msgid ""
 "otherwise context locals such as ``request`` will not work as expected. "
 "When using PyPy, PyPy>=7.3.7 is required."
 msgstr ""
+"geventまたはeventletのいずれかを使うときは、greenlet>=1.0が必要であり、"
+"さもなければ ``request`` のようなコンテキストの局所領域（context local）は"
+"期待通りに働かないでしょう。PyPyを使うときは、PyPy>=7.3.7が必要です。"
 
 #: ../../flask/docs/deploying/gunicorn.rst:109
 msgid "To use gevent:"
-msgstr ""
+msgstr "geventの使用:"
 
 #: ../../flask/docs/deploying/gunicorn.rst:119
 msgid "To use eventlet:"
-msgstr ""
+msgstr "eventletの使用:"

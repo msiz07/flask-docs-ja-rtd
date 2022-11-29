@@ -26,30 +26,35 @@ msgstr ""
 #: ../../flask/docs/deploying/waitress.rst:4
 msgid "`Waitress`_ is a pure Python WSGI server."
 msgstr ""
+"`Waitress`_ はPythonだけで実装されたWSGIサーバです。"
 
 #: ../../flask/docs/deploying/waitress.rst:6
 msgid "It is easy to configure."
-msgstr ""
+msgstr "容易に設定できます。"
 
 #: ../../flask/docs/deploying/waitress.rst:7
 msgid "It supports Windows directly."
-msgstr ""
+msgstr "Windowsを直接サポートします（訳注: WSLを使わなくても実行できます）。"
 
 #: ../../flask/docs/deploying/waitress.rst:8
 msgid ""
 "It is easy to install as it does not require additional dependencies or "
 "compilation."
 msgstr ""
+"追加の依存対象やコンパイル処理が不要であるため、インストールが容易です。"
 
 #: ../../flask/docs/deploying/waitress.rst:10
 msgid ""
 "It does not support streaming requests, full request data is always "
 "buffered."
 msgstr ""
+"ストリーミングのリクエストはサポートせず、リクエストのデータ全体が常に"
+"バッファされます。"
 
 #: ../../flask/docs/deploying/waitress.rst:12
 msgid "It uses a single process with multiple thread workers."
 msgstr ""
+"マルチスレッドを使った１つのプロセスのworkerを使用します。"
 
 #: ../../flask/docs/deploying/waitress.rst:14
 msgid ""
@@ -57,18 +62,23 @@ msgid ""
 "documentation and ``waitress-serve --help`` to understand what features "
 "are available."
 msgstr ""
+"このページはWaitressを実行する基本について説明します。そのドキュメントと "
+"``waitress-serve --help`` （の出力）を読み、どの目玉機能（feature）が利用"
+"できるか理解しておいてください。"
 
 #: ../../flask/docs/deploying/waitress.rst:22
 msgid "Installing"
-msgstr ""
+msgstr "インストール"
 
 #: ../../flask/docs/deploying/waitress.rst:24
 msgid "Create a virtualenv, install your application, then install ``waitress``."
 msgstr ""
+"virtualenvを作成し、アプリケーションをインストールし、それから "
+"``waitress`` をインストールします。"
 
 #: ../../flask/docs/deploying/waitress.rst:37
 msgid "Running"
-msgstr ""
+msgstr "実行"
 
 #: ../../flask/docs/deploying/waitress.rst:39
 msgid ""
@@ -78,20 +88,32 @@ msgid ""
 "the variable with the application. If you're using the app factory "
 "pattern, use ``--call {module}:{factory}`` instead."
 msgstr ""
+"``waitress-serve`` のただ一つ必要な引数は、Flaskアプリケーションをどのよう"
+"に読み込むか"
+"をwaitressに伝えます。記法は ``{module}:{app}`` です。``module`` は、"
+"自分のアプリケーションがあるモジュールの、ドット（「.」）で分けられたimport"
+"名です。``app`` はアプリケーションが設定されている変数です。もしapp factory"
+"パターンを使っている場合、代わりに ``--call {module}:{factory}`` を使って"
+"ください。"
 
 #: ../../flask/docs/deploying/waitress.rst:55
 msgid "The ``--host`` option binds the server to local ``127.0.0.1`` only."
 msgstr ""
+"``--host`` オプションは（上記の例では）サーバをローカルの ``127.0.0.1`` "
+"だけに結びつけ（bind）します。"
 
 #: ../../flask/docs/deploying/waitress.rst:57
 msgid ""
 "Logs for each request aren't shown, only errors are shown. Logging can be"
 " configured through the Python interface instead of the command line."
 msgstr ""
+"各リクエストのログは表示されず、ただerrorだけが表示されます。ログ処理"
+"（loggin）はコマンドラインではなくPythonのインタフェースを通して設定します"
+"（訳注: Pythonの標準モジュールであるlogginモジュールを使って設定します）。"
 
 #: ../../flask/docs/deploying/waitress.rst:62
 msgid "Binding Externally"
-msgstr ""
+msgstr "外部への結び付け（Binding Externally）"
 
 #: ../../flask/docs/deploying/waitress.rst:64
 msgid ""
@@ -101,6 +123,14 @@ msgid ""
 "proxy such as :doc:`nginx` or :doc:`apache-httpd` should be used in front"
 " of Waitress."
 msgstr ""
+"アプリケーションのコードがrootとして走るようになり、安全ではなくなるため、"
+"Waitressはrootとして走らせないようにするべきです。しかしながら、これは"
+"ポート80や443に結びつけ（bind）出来なくなることを意味します（訳注: 一般的な"
+"Linuxでは、およそ1000より小さなポート番号は、セキュリティ対策のためroot権限"
+"を持たないプログラムではbindできないようになっており、従ってroot権限がない"
+"WSGIサーバではHTTPやHTTPSで標準的に使われる80や443番ポートでリクエストを"
+"受け付けられないことになります）。代わりに、:doc:`nginx` または :doc:"
+"`apache-httpd` のようなリバースプロキシをWaitressの前面に使うべきです。"
 
 #: ../../flask/docs/deploying/waitress.rst:70
 msgid ""
@@ -108,9 +138,15 @@ msgid ""
 "specifying the ``--host`` option. Don't do this when using a revers proxy"
 " setup, otherwise it will be possible to bypass the proxy."
 msgstr ""
+"外部からアクセスできる全てのIPアドレスのroot権限不要なポートは、"
+"``--host`` オプションを指定しないことで結び付け（bind）できます。これは、"
+"リバースプロキシを用意しているときは行わないでください、さもなければ"
+"リバースプロキシを迂回することが可能になります。"
 
 #: ../../flask/docs/deploying/waitress.rst:74
 msgid ""
 "``0.0.0.0`` is not a valid address to navigate to, you'd use a specific "
 "IP address in your browser."
 msgstr ""
+"``0.0.0.0`` はアクセスするには適切なアドレスではないため、ブラウザでは具体"
+"的なIPアドレスを使うべきです。"

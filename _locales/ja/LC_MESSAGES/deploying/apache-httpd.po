@@ -31,6 +31,12 @@ msgid ""
 " This \"reverse proxy\" can handle incoming requests, TLS, and other "
 "security and performance concerns better than the WSGI server."
 msgstr ""
+"`Apache httpd`_ は高速な、製品レベルのHTTPサーバです。"
+":doc:`index` のリストにあるWSGIサーバのひとつを使って自分のアプリケーション"
+"を提供するとき、その前面に専用のHTTPサーバを置くことは、しばしば良いこと"
+"もしくは必要なことになります。この「リバースプロキシ」は受信リクエスト、"
+"TLS、その他のセキュリティおよび性能に関することをWSGIサーバよりもうまく処理"
+"できます。"
 
 #: ../../flask/docs/deploying/apache-httpd.rst:10
 msgid ""
@@ -40,10 +46,16 @@ msgid ""
 " to proxy your application. Be sure to read its documentation to "
 "understand what features are available."
 msgstr ""
+"httpd（訳注: Apache httpdのこと）はシステムのパッケージ管理ツール（system "
+"package manager）もしくはWindowsではビルド済みの実行ファイルを使ってインス"
+"トールできます。httpdのインストールおよび実行自体はこのドキュメントの範囲外"
+"です。このページは自分のアプリケーションのプロキシになるようhttpdを設定する"
+"基本について説明します。httpdのドキュメントを呼んでどの目玉機能（feature）"
+"が利用可能か理解しておいてください。"
 
 #: ../../flask/docs/deploying/apache-httpd.rst:20
 msgid "Domain Name"
-msgstr ""
+msgstr "ドメイン名"
 
 #: ../../flask/docs/deploying/apache-httpd.rst:22
 msgid ""
@@ -52,6 +64,10 @@ msgid ""
 "space with a hosting provider, and then point your registrar at the "
 "hosting provider's name servers."
 msgstr ""
+"ドメイン名の取得と設定は、このドキュメントの範囲外です。大概は、registrar"
+"（訳注: ドメイン名の登録・管理をしている団体のようなもの）からドメイン名を"
+"購入し、ホスティング事業者（hosting provider）のサーバ領域に支払い、そして"
+"それからホスティング事業者のDNSサーバが自分のregistrarを指すようにします。"
 
 #: ../../flask/docs/deploying/apache-httpd.rst:27
 msgid ""
@@ -59,12 +75,18 @@ msgid ""
 "``/etc/hosts`` on Linux. Add a line that associates a name with the local"
 " IP."
 msgstr ""
+"これを模擬するために、Linuxでは ``/etc/hosts`` にある、自分の ``hosts`` "
+"ファイル編集することもできます。ドメイン名をローカルのIPに関連付ける行を"
+"追加してください。"
 
 #: ../../flask/docs/deploying/apache-httpd.rst:31
 msgid ""
 "Modern Linux systems may be configured to treat any domain name that ends"
 " with ``.localhost`` like this without adding it to the ``hosts`` file."
 msgstr ""
+"最近のLinuxシステムでは、以下の例のように ``.localhost`` で終わるドメイン名"
+"はすべて、``hosts`` ファイルにその行を追加することなく扱われるように設定"
+"されているかもしれません。"
 
 #: ../../flask/docs/deploying/apache-httpd.rst:35
 msgid "``/etc/hosts``"
@@ -72,7 +94,7 @@ msgstr ""
 
 #: ../../flask/docs/deploying/apache-httpd.rst:42
 msgid "Configuration"
-msgstr ""
+msgstr "設定（Configuration）"
 
 #: ../../flask/docs/deploying/apache-httpd.rst:44
 msgid ""
@@ -80,6 +102,9 @@ msgid ""
 "Linux. It may be different depending on your operating system. Check the "
 "docs and look for ``httpd.conf``."
 msgstr ""
+"httpdの設定はLinuxでは ``/etc/httpd/conf/httpd.conf`` にあります。オペレー"
+"ティングシステムによっては違う場所かもしれません。ドキュメントを調べて "
+"``httpd.conf`` を探してください。"
 
 #: ../../flask/docs/deploying/apache-httpd.rst:48
 msgid ""
@@ -87,6 +112,9 @@ msgid ""
 "config lines below. We'll assume the WSGI server is listening locally at "
 "``http://127.0.0.1:8000``."
 msgstr ""
+"存在するすべての ``DocumentRoot`` （の設定）を削除するかコメントアウトし"
+"ます。以下の設定行を追加してください。ここでは、WSGIサーバはローカルの "
+"``http://127.0.0.1:8000`` でリクエストを受け付けていると想定しています。"
 
 #: ../../flask/docs/deploying/apache-httpd.rst:52
 msgid "``/etc/httpd/conf/httpd.conf``"
@@ -97,6 +125,9 @@ msgid ""
 "The ``LoadModule`` lines might already exist. If so, make sure they are "
 "uncommented instead of adding them manually."
 msgstr ""
+"``LoadModule`` 行は既に存在しているかもしれません。もしそうであれば、"
+"手作業でそれらを追加する代わりに、それらをコメント化されてない有効な状態"
+"にしてください。"
 
 #: ../../flask/docs/deploying/apache-httpd.rst:64
 msgid ""
@@ -104,3 +135,6 @@ msgid ""
 "headers. ``X-Forwarded-For`` and ``X-Forwarded-Host`` are automatically "
 "set by ``ProxyPass``."
 msgstr ""
+"それから、自分のアプリケーションが ``X-Forwarded`` ヘッダーを使うように、"
+":doc:`proxy_fix` のとおりにします。``X-Forwarded-For`` と "
+"``X-Forwarded-Host`` は ``ProxyPass`` によって自動的に設定されます。"

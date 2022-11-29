@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../flask/docs/deploying/proxy_fix.rst:2
 msgid "Tell Flask it is Behind a Proxy"
-msgstr ""
+msgstr "Proxyの背後にいることのFlaskへの指示"
 
 #: ../../flask/docs/deploying/proxy_fix.rst:4
 msgid ""
@@ -29,6 +29,9 @@ msgid ""
 "will intercept and forward all external requests to the local WSGI "
 "server."
 msgstr ""
+"リバースプロキシまたは多くのPythonのホスティング・プラットフォームを使って"
+"いるとき、プロキシは外部のリクエストを全て、途中でとらえてローカルのWSGI"
+"サーバへ転送します"
 
 #: ../../flask/docs/deploying/proxy_fix.rst:8
 msgid ""
@@ -36,6 +39,10 @@ msgid ""
 "now coming from the HTTP server to the local address, rather than from "
 "the remote address to the external server address."
 msgstr ""
+"WSGIサーバとFlaskアプリケーションの観点からは、リクエストはこの時点では、"
+"外部から見えるサーバアドレスに来たリモートのアドレス（訳注: クライアント"
+"のIPアドレスのこと）からではなく、ローカルのアドレスのHTTPサーバ（訳注: "
+"リバースプロキシのこと）からやって来ます。"
 
 #: ../../flask/docs/deploying/proxy_fix.rst:12
 msgid ""
@@ -44,6 +51,11 @@ msgid ""
 "use those values by wrapping it with the "
 ":doc:`werkzeug:middleware/proxy_fix` middleware provided by Werkzeug."
 msgstr ""
+"HTTPサーバは、本当の値をFlaskアプリケーションへ渡すために ``X-Forwarded-`` "
+"ヘッダーを設定するべきです。Werkzeugにより提供される :doc:"
+"`werkzeug:middleware/proxy_fix` ミドルウェアを使ってそのヘッダーを包むこと"
+"で、Flaskアプリケーションはそれらの値が信頼できると伝えられ使用できるよう"
+"になります。"
 
 #: ../../flask/docs/deploying/proxy_fix.rst:17
 msgid ""
@@ -53,6 +65,12 @@ msgid ""
 "incoming headers can be faked, you must set how many proxies are setting "
 "each header so the middleware knows what to trust."
 msgstr ""
+"アプリケーションが実際にプロキシの背後にある場合だけ、このミドルウェアは"
+"使用されるべきあり、そしてアプリケーションの前面に連鎖しているプロキシの数"
+"を使って設定されるべきです。すべてのプロキシが全てのヘッダーを設定するわけ"
+"ではありません。受信するヘッダーが偽装される可能性があるため、何を信頼する"
+"べきかミドルウェアが知るために、各ヘッダーをいくつのプロキシが設定するかを"
+"設定する必要があります。"
 
 #: ../../flask/docs/deploying/proxy_fix.rst:31
 msgid ""
@@ -60,3 +78,6 @@ msgid ""
 "the correct number of proxies that set each header. It can be a security "
 "issue if you get this configuration wrong."
 msgstr ""
+"プロキシの背後にある場合だけこのミドルウェアを適用し、各ヘッダーを設定する"
+"プロキシの数を正しく設定することを覚えておいてください。この設定が誤って"
+"いる場合、セキュリティ上の問題になる可能性があります。"

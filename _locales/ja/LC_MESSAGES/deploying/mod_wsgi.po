@@ -27,22 +27,28 @@ msgid ""
 "The modern `mod_wsgi-express`_ command makes it easy to configure and "
 "start the server without needing to write Apache httpd configuration."
 msgstr ""
+"`mod_wsgi`_ は、`Apache httpd`_ サーバと統合されたWSGIサーバです。"
+"最近の `mod_wsgi-express`_ コマンドは、Apache httpdの設定を書く必要なく、"
+"サーバの設定と開始を容易にできるようにします。"
 
 #: ../../flask/docs/deploying/mod_wsgi.rst:8
 msgid "Tightly integrated with Apache httpd."
-msgstr ""
+msgstr "Apache httpdと密接に統合されています。"
 
 #: ../../flask/docs/deploying/mod_wsgi.rst:9
 msgid "Supports Windows directly."
-msgstr ""
+msgstr "Windowsを直接サポートします（訳注: WSLでなくても動きます）。"
 
 #: ../../flask/docs/deploying/mod_wsgi.rst:10
 msgid "Requires a compiler and the Apache development headers to install."
 msgstr ""
+"コンパイラとApacheの開発用ヘッダー（訳注: Apacheのモジュールなどを開発する"
+"とき、プログラミング言語の処理などで必要になるファイルであり、HTTPのヘッダー"
+"とは異なります）がインストールに必要です。"
 
 #: ../../flask/docs/deploying/mod_wsgi.rst:11
 msgid "Does not require a reverse proxy setup."
-msgstr ""
+msgstr "リバースプロキシの用意が不要です。"
 
 #: ../../flask/docs/deploying/mod_wsgi.rst:13
 msgid ""
@@ -51,10 +57,14 @@ msgid ""
 "`mod_wsgi-express`_, `mod_wsgi`_, and `Apache httpd`_ documentation to "
 "understand what features are available."
 msgstr ""
+"このページはmod_wsgi-expressを実行する基本について説明し、httpdに伴うより"
+"複雑なインストールと設定は説明しません。`mod_wsgi-express`_、`mod_wsgi`_、"
+"そして `Apache httpd`_ のドキュメントを読み、どの目玉機能（feature）が利用"
+"可能か理解しておいてください。"
 
 #: ../../flask/docs/deploying/mod_wsgi.rst:24
 msgid "Installing"
-msgstr ""
+msgstr "インストール"
 
 #: ../../flask/docs/deploying/mod_wsgi.rst:26
 msgid ""
@@ -62,14 +72,20 @@ msgid ""
 "development headers installed. You will get an error if they are not. How"
 " to install them depends on the OS and package manager that you use."
 msgstr ""
+"mod_wsgiのインストールにはコンパイラとApacheのサーバと開発用ヘッダーがイン"
+"ストールされている必要があります。もしそれらがインストールされていない場合、"
+"エラーが発生するでしょう。それらをどのようにインストールするかは、使って"
+"いるOSとパッケージ管理ツール（package manager）に依存します。"
 
 #: ../../flask/docs/deploying/mod_wsgi.rst:30
 msgid "Create a virtualenv, install your application, then install ``mod_wsgi``."
 msgstr ""
+"virtualenvを作成し、アプリケーションをインストールし、それから "
+"``mod_wsgi`` をインストールします。"
 
 #: ../../flask/docs/deploying/mod_wsgi.rst:43
 msgid "Running"
-msgstr ""
+msgstr "実行"
 
 #: ../../flask/docs/deploying/mod_wsgi.rst:45
 msgid ""
@@ -78,6 +94,13 @@ msgid ""
 "write a small script to import your app with this name, or to create it "
 "if using the app factory pattern."
 msgstr ""
+"``mod_wsgi-express`` への唯一つの引数は、Flaskアプリケーションを含むスクリ"
+"プトを指定し、（スクリプト内では）Flaskアプリケーションは ``application`` "
+"と呼ばれる必要があります（訳注: 以下の例のように「application」という変数"
+"にFlaskアプリケーションのインスタンスを格納するような意味合いです）。この"
+"名前（「application」）で、自分のアプリケーションをimportするか、もし"
+"factory patternを使っている場合はFlaskアプリケーションを作成する、小さな"
+"スクリプトを書くことができます。"
 
 #: ../../flask/docs/deploying/mod_wsgi.rst:50
 #: ../../flask/docs/deploying/mod_wsgi.rst:57
@@ -86,13 +109,15 @@ msgstr ""
 
 #: ../../flask/docs/deploying/mod_wsgi.rst:64
 msgid "Now run the ``mod_wsgi-express start-server`` command."
-msgstr ""
+msgstr "この時点で ``mod_wsgi-express start-server`` コマンドを実行します。"
 
 #: ../../flask/docs/deploying/mod_wsgi.rst:70
 msgid ""
 "The ``--processes`` option specifies the number of worker processes to "
 "run; a starting value could be ``CPU * 2``."
 msgstr ""
+"``--processes`` オプションは走らせるworkerプロセスの数を指定します; 開始時"
+"の値は `` CPU * 2`` にできるでしょう。"
 
 #: ../../flask/docs/deploying/mod_wsgi.rst:73
 msgid ""
@@ -100,10 +125,12 @@ msgid ""
 "its information is written to the error log file shown when starting the "
 "server."
 msgstr ""
+"各リクエストのログは端末には表示されません。もしエラーが起きた場合、その"
+"情報は、サーバ開始時に表示されるエラーログのファイルに書かれます。"
 
 #: ../../flask/docs/deploying/mod_wsgi.rst:79
 msgid "Binding Externally"
-msgstr ""
+msgstr "外部への結び付け（Binding Externally）"
 
 #: ../../flask/docs/deploying/mod_wsgi.rst:81
 msgid ""
@@ -112,6 +139,10 @@ msgid ""
 "configured to drop permissions to a different user and group for the "
 "worker processes."
 msgstr ""
+"このドキュメントの他のWSGIサーバとは違い、mod_wsgiは80番や443番のような結び"
+"付け（bind）にroot権限が必要なポートに結びつけるために、rootとして実行でき"
+"ます。しかしながら、workerプロセス用にはrootとは異なるユーザとグループに"
+"権限を落とすよう設定される必要があります。"
 
 #: ../../flask/docs/deploying/mod_wsgi.rst:86
 msgid ""
@@ -119,6 +150,9 @@ msgid ""
 "install your virtualenv and application as that user, then tell mod_wsgi "
 "to drop to that user after starting."
 msgstr ""
+"例えば、もし ``hello`` ユーザとグループを作成した場合、virtualenvとアプリ"
+"ケーションをそのユーザでインストールし、それからmod_wsgiに開始後はhello"
+"ユーザに（権限を）落とすよう伝えるべきです。"
 
 # 6abe8405e25e4d229320e53a42a34405
 #~ msgid ""

@@ -17,35 +17,47 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.10.3\n"
 
+# 4ce94b9273874918b4562b1764c5dc94
+#: ../../flask/docs/deploying/uwsgi.rst:2
+msgid "uWSGI"
+msgstr ""
+
 #: ../../flask/docs/deploying/uwsgi.rst:4
 msgid ""
 "`uWSGI`_ is a fast, compiled server suite with extensive configuration "
 "and capabilities beyond a basic server."
 msgstr ""
+"`uWSGI`_ は高速で、コンパイルされた、基本サーバ以上の幅広い設定と機能を"
+"伴った一そろいのサーバです。"
 
 #: ../../flask/docs/deploying/uwsgi.rst:7
 msgid "It can be very performant due to being a compiled program."
-msgstr ""
+msgstr "コンパイルされたプログラムであるため、非常に高速に実行できます。"
 
 #: ../../flask/docs/deploying/uwsgi.rst:8
 msgid ""
 "It is complex to configure beyond the basic application, and has so many "
 "options that it can be difficult for beginners to understand."
 msgstr ""
+"基本アプリケーション以上に設定するには複雑で、非常に多くのオプションが"
+"あり、初心者が理解するには難しい場合があります。"
 
 #: ../../flask/docs/deploying/uwsgi.rst:10
 msgid "It does not support Windows (but does run on WSL)."
 msgstr ""
+"Windowsはサポートしません（しかし、WSL上で走ります）。"
 
 #: ../../flask/docs/deploying/uwsgi.rst:11
 msgid "It requires a compiler to install in some cases."
-msgstr ""
+msgstr "あるケースではインストールにコンパイラが必要です。"
 
 #: ../../flask/docs/deploying/uwsgi.rst:13
 msgid ""
 "This page outlines the basics of running uWSGI. Be sure to read its "
 "documentation to understand what features are available."
 msgstr ""
+"このページはuWSGIを実行する基本について説明します。そのドキュメントを読ん"
+"で、どの目玉機能（feature）が利用できるか理解しておいてください。"
 
 #: ../../flask/docs/deploying/uwsgi.rst:20
 msgid "Installing"
@@ -58,10 +70,18 @@ msgid ""
 "common platforms. However, it does not provide SSL support, which can be "
 "provided with a reverse proxy instead."
 msgstr ""
+"uWSGIはインストール方法は複数あります。最も直感的なものは、"
+"よくあるプラットフォームようにコンパイル済みのwheel（訳注: Pythonで"
+"パッケージを配布できるファイル形式のひとつ）を提供する ``pyuwsgi`` "
+"パッケージをインストールすることです。しかしながら、それではSSLのサポートが"
+"提供されず、代わりにリバースプロキシを使って（SSLサポートは）提供されること"
+"になります"
 
 #: ../../flask/docs/deploying/uwsgi.rst:27
 msgid "Create a virtualenv, install your application, then install ``pyuwsgi``."
 msgstr ""
+"virtualenvを作成し、アプリケーションをインストールし、それから "
+"``pyuwsgi`` をインストールします。"
 
 #: ../../flask/docs/deploying/uwsgi.rst:37
 msgid ""
@@ -69,22 +89,31 @@ msgid ""
 "instead. Or install the ``pyuwsgi`` package from sdist instead of wheel. "
 "Either method will include SSL support."
 msgstr ""
+"もし利用可能なコンパイラがある場合、``uwsgi`` パッケージを代わりにインス"
+"トールできます。または、wheelの代わりにsdist（訳注: Pythonパッケージを配布"
+"できる別のファイル形式）から ``pyuwsgi`` パッケージをインストールします。"
+"どちらの手法でもSSLのサポートが含まれます。"
 
 #: ../../flask/docs/deploying/uwsgi.rst:50
 msgid "Running"
-msgstr ""
+msgstr "実行"
 
 #: ../../flask/docs/deploying/uwsgi.rst:52
 msgid ""
 "The most basic way to run uWSGI is to tell it to start an HTTP server and"
 " import your application."
 msgstr ""
+"uWSGIを走らせる最も基本的なやり方は、HTTPサーバを開始しFlaskアプリケー"
+"ションをimportするように伝えることです。"
 
 #: ../../flask/docs/deploying/uwsgi.rst:69
 msgid ""
 "If you're using the app factory pattern, you'll need to create a small "
 "Python file to create the app, then point uWSGI at that."
 msgstr ""
+"もしapp factoryパターンを使っている場合、Flaskアプリケーションのインス"
+"タンスを作成する小さなPythonファイルを作成し、それからuWSGIがそのスクリ"
+"プトを指すようにする必要があります。"
 
 #: ../../flask/docs/deploying/uwsgi.rst:72
 msgid "``wsgi.py``"
@@ -97,10 +126,15 @@ msgid ""
 "option starts 4 worker processes; a starting value could be ``CPU * 2``. "
 "The ``-w`` option tells uWSGI how to import your application"
 msgstr ""
+"``--http`` オプションはHTTPサーバを（上の例では）127.0.0.1の8000番ポートで"
+"開始します。``--master`` オプションは標準のworker managerを指定します。"
+"``-p`` オプションは4つのworkerプロセスを開始します; 開始時の値は"
+" ``CPU * 2`` にできるでしょう。``-w`` オプションはどのようにFlaskアプリ"
+"ケーションをimportするかをuWSGIに伝えます。"
 
 #: ../../flask/docs/deploying/uwsgi.rst:90
 msgid "Binding Externally"
-msgstr ""
+msgstr "外部への結び付け（Binding Externally）"
 
 #: ../../flask/docs/deploying/uwsgi.rst:92
 msgid ""
@@ -111,6 +145,16 @@ msgid ""
 "httpd` should be used in front of uWSGI. It is possible to run uWSGI as "
 "root securely, but that is beyond the scope of this doc."
 msgstr ""
+"アプリケーションのコードがrootとして走るようになり、安全ではなくなるため、"
+"uWSGIは以下に示す設定でrootとして走らせないようにするべきです。しかし"
+"ながら、これはポート80や443に結びつけ（bind）出来なくなることを意味し"
+"ます（訳注: 一般的なLinuxでは、およそ1000より小さなポート番号は、セキュ"
+"リティ対策のためroot権限を持たないプログラムではbindできないようになって"
+"おり、従ってroot権限がないWSGIサーバではHTTPやHTTPSで標準的に使われる80や"
+"443番ポートでリクエストを受け付けられないことになります）。代わりに、:doc:"
+"`nginx` または :doc:`apache-httpd` のようなリバースプロキシをuWSGIの前面に"
+"使うべきです。uWSGIをrootとして安全に走らせることは可能ですが、それはこの"
+"ドキュメントの範囲外です。"
 
 #: ../../flask/docs/deploying/uwsgi.rst:99
 msgid ""
@@ -119,6 +163,10 @@ msgid ""
 "standard HTTP proxy. That configuration is beyond the scope of this doc, "
 "see the links for more information."
 msgstr ""
+"uWSGIは標準のHTTPプロキシとして使う代わりに、`Nginx uWSGI`_ と "
+"`Apache mod_proxy_uwsgi`_、そしておそらくその他のサーバとの統合に最適化"
+"されています。その設定はこのドキュメントの範囲外であり、更なる情報はリンク"
+"先を見てください。"
 
 #: ../../flask/docs/deploying/uwsgi.rst:107
 msgid ""
@@ -126,16 +174,22 @@ msgid ""
 "``--http 0.0.0.0:8000`` option. Don't do this when using a reverse proxy "
 "setup, otherwise it will be possible to bypass the proxy."
 msgstr ""
+"外部からアクセスできる全てのIPアドレスのroot権限不要なポートは、"
+"``--http 0.0.0.0:8000`` オプションを使って結び付け（bind）できます。これは、"
+"リバースプロキシを用意しているときは行わないでください、さもなければリバース"
+"プロキシを迂回することが可能になります。"
 
 #: ../../flask/docs/deploying/uwsgi.rst:115
 msgid ""
 "``0.0.0.0`` is not a valid address to navigate to, you'd use a specific "
 "IP address in your browser."
 msgstr ""
+"``0.0.0.0`` はアクセスするには適切なアドレスではないため、ブラウザでは具体"
+"的なIPアドレスを使うべきです。"
 
 #: ../../flask/docs/deploying/uwsgi.rst:120
 msgid "Async with gevent"
-msgstr ""
+msgstr "geventを使ったasync"
 
 #: ../../flask/docs/deploying/uwsgi.rst:122
 msgid ""
@@ -145,6 +199,11 @@ msgid ""
 "actually use gevent in your own code to see any benefit to using the "
 "worker."
 msgstr ""
+"標準設定の同期処理のworkerは多くの使用状況で適切なものです。"
+"もし非同期のサポートが必要な場合、uWSGIは `gevent`_ のworkerを提供します。"
+"これはPythonの ``async/await``、またはASGIサーバの仕様と同じものではありま"
+"せん。このworkerを使用して得られるいかなる利点も見るためには、自分のコード"
+"の中で実際にgeventを使用する必要があります。"
 
 #: ../../flask/docs/deploying/uwsgi.rst:128
 msgid ""
@@ -152,11 +211,9 @@ msgid ""
 "such as ``request`` will not work as expected. When using PyPy, "
 "PyPy>=7.3.7 is required."
 msgstr ""
-
-# 4ce94b9273874918b4562b1764c5dc94
-#: ../../flask/docs/deploying/uwsgi.rst:2
-msgid "uWSGI"
-msgstr ""
+"geventを使うときは、greenlet>=1.0が必要であり、さもなければ ``request`` の"
+"ようなコンテキストの局所領域（context local）は期待通りに働かないでしょう。"
+"PyPyを使うときは、PyPy>=7.3.7が必要です。"
 
 # 88a94bfd99684be792572c85177512ef
 #~ msgid ""

@@ -29,6 +29,9 @@ msgid ""
 "than using `gevent`_ directly. Gunicorn and uWSGI provide much more "
 "configurable and production-tested servers."
 msgstr ""
+"直接 `gevent`_ を使うよりも、:doc:`gunicorn` または :doc:`uwsgi` でgevent"
+"のworkerを使う方が好ましいです。GunicornとuWSGIはより設定可能で製品レベル"
+"のテストがされたサーバです。"
 
 #: ../../flask/docs/deploying/gevent.rst:8
 msgid ""
@@ -36,6 +39,10 @@ msgid ""
 "like standard synchronous Python. It uses `greenlet`_ to enable task "
 "switching without writing ``async/await`` or using ``asyncio``."
 msgstr ""
+"`gevent`_ は非同期処理の、コルーチンを土台にしたコードを標準の同期処理を"
+"するPythonのような見た目で書けるようにします。`greenlet`_ を使うことで、"
+"``async/await`` を書いたり、``asincio`` を使ったりせずに、タスクの切り"
+"替えをできるようにします。"
 
 #: ../../flask/docs/deploying/gevent.rst:12
 msgid ""
@@ -43,6 +50,9 @@ msgid ""
 "dependencies you have, or other considerations, may affect which of the "
 "two you choose to use."
 msgstr ""
+":doc:`eventlet` は、同じことをするもう一つのライブラリです。ある種の依存"
+"対象や、その他の検討事項が、２つのどちらを使うかの選択に影響を与えるかも"
+"しれません。"
 
 #: ../../flask/docs/deploying/gevent.rst:16
 msgid ""
@@ -50,10 +60,13 @@ msgid ""
 "instead of one per worker process. You must actually use gevent in your "
 "own code to see any benefit to using the server."
 msgstr ""
+"geventは、接続ごとにworkerプロセスを使う代わりに、多くの接続を同時に処理"
+"するWSGIサーバを提供します。このサーバを使用して得られるいかなる利点も見る"
+"ためには、自分のコードの中で実際にgeventを使用する必要があります。"
 
 #: ../../flask/docs/deploying/gevent.rst:25
 msgid "Installing"
-msgstr ""
+msgstr "インストール"
 
 #: ../../flask/docs/deploying/gevent.rst:27
 msgid ""
@@ -61,20 +74,28 @@ msgid ""
 "such as ``request`` will not work as expected. When using PyPy, "
 "PyPy>=7.3.7 is required."
 msgstr ""
+"geventを使うときは、greenlet>=1.0が必要であり、さもなければ ``request`` の"
+"ようなコンテキストの局所領域（context local）は期待通りに働かないでしょう。"
+"PyPyを使うときは、PyPy>=7.3.7が必要です。"
 
 #: ../../flask/docs/deploying/gevent.rst:31
 msgid "Create a virtualenv, install your application, then install ``gevent``."
 msgstr ""
+"virtualenvを作成し、アプリケーションをインストールし、それから ``gevent`` "
+"をインストールします。"
 
 #: ../../flask/docs/deploying/gevent.rst:43
 msgid "Running"
-msgstr ""
+msgstr "実行"
 
 #: ../../flask/docs/deploying/gevent.rst:45
 msgid ""
 "To use gevent to serve your application, write a script that imports its "
 "``WSGIServer``, as well as your app or app factory."
 msgstr ""
+"Flaskアプリケーションを提供するためにgeventを使うには、その ``WSGIServer`` "
+"をimportするスクリプトを、Flaskアプリのインスタンスであってもapp factoryで"
+"あっても同様に書きます。"
 
 #: ../../flask/docs/deploying/gevent.rst:48
 msgid "``wsgi.py``"
@@ -82,11 +103,11 @@ msgstr ""
 
 #: ../../flask/docs/deploying/gevent.rst:62
 msgid "No output is shown when the server starts."
-msgstr ""
+msgstr "サーバ開始時は、何も出力されません。"
 
 #: ../../flask/docs/deploying/gevent.rst:66
 msgid "Binding Externally"
-msgstr ""
+msgstr "外部への結び付け（Binding Externally）"
 
 #: ../../flask/docs/deploying/gevent.rst:68
 msgid ""
@@ -95,6 +116,14 @@ msgid ""
 " be possible to bind to port 80 or 443. Instead, a reverse proxy such as "
 ":doc:`nginx` or :doc:`apache-httpd` should be used in front of gevent."
 msgstr ""
+"アプリケーションのコードがrootとして走るようになり、安全ではなくなるため、"
+"geventはrootとして走らせないようにするべきです。しかしながら、これは"
+"ポート80や443に結びつけ（bind）出来なくなることを意味します（訳注: 一般的な"
+"Linuxでは、およそ1000より小さなポート番号は、セキュリティ対策のためroot権限"
+"を持たないプログラムではbindできないようになっており、従ってroot権限がない"
+"WSGIサーバではHTTPやHTTPSで標準的に使われる80や443番ポートでリクエストを"
+"受け付けられないことになります）。代わりに、:doc:`nginx` または :doc:"
+"`apache-httpd` のようなリバースプロキシをgeventの前面に使うべきです。"
 
 #: ../../flask/docs/deploying/gevent.rst:74
 msgid ""
@@ -103,9 +132,15 @@ msgid ""
 "do this when using a reverse proxy setup, otherwise it will be possible "
 "to bypass the proxy."
 msgstr ""
+"外部からアクセスできる全てのIPアドレスのroot権限不要なポートは、前のセク"
+"ションで示されたサーバの引数の中で ``0.0.0.0`` を使って結び付け（bind）"
+"できます。これは、リバースプロキシを用意しているときは行わないでください、"
+"さもなければリバースプロキシを迂回することが可能になります。"
 
 #: ../../flask/docs/deploying/gevent.rst:79
 msgid ""
 "``0.0.0.0`` is not a valid address to navigate to, you'd use a specific "
 "IP address in your browser."
 msgstr ""
+"``0.0.0.0`` はアクセスするには適切なアドレスではないため、ブラウザでは具体"
+"的なIPアドレスを使うべきです。"
