@@ -17,18 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.10.3\n"
 
-#: ../../flask/docs/debugging.rst:42
-msgid ""
-"The debugger is enabled by default when the development server is run in "
-"debug mode."
-msgstr ""
-
-#: ../../flask/docs/debugging.rst:48
-msgid ""
-"When running from Python code, passing ``debug=True`` enables debug mode,"
-" which is mostly equivalent."
-msgstr ""
-
 #: ../../flask/docs/debugging.rst:2
 msgid "Debugging Application Errors"
 msgstr "アプリケーション・エラーのデバッグ"
@@ -99,8 +87,22 @@ msgstr ""
 "はpinによって保護されていますが、それでも重要なセキュリティリスクを意味し"
 "ます。本番環境では開発サーバやデバッガを走らせないようにしてください。"
 
+#: ../../flask/docs/debugging.rst:42
+msgid ""
+"The debugger is enabled by default when the development server is run in "
+"debug mode."
+msgstr ""
+"開発サーバをデバッグモードで走らせたとき、デバッガは標準で有効になります。"
+
+#: ../../flask/docs/debugging.rst:48
+msgid ""
+"When running from Python code, passing ``debug=True`` enables debug mode,"
+" which is mostly equivalent."
+msgstr ""
+"Pythonのコードから走らせたときは、``debug=True`` を渡すとデバッグモードが"
+"有効になり、（flaskコマンドで走らせたときと）ほとんど同じになります。"
+
 #: ../../flask/docs/debugging.rst:55
-#, fuzzy
 #| msgid "" ":doc:`/server` and :doc:`/cli` have more information about running
 #| the " "debugger, debug mode, and development mode. More information about
 #| the " "debugger can be found in the `Werkzeug documentation "
@@ -111,7 +113,7 @@ msgid ""
 " in the `Werkzeug documentation "
 "<https://werkzeug.palletsprojects.com/debug/>`__."
 msgstr ""
-"デバッガの実行、デバッグ・モード、開発モード（development mode）に関する"
+"デバッガの実行とデバッグ・モードに関する"
 "さらなる情報は、:doc:`/server` と :doc:`/cli` にあります。デバッガに関する"
 "さらなる情報は `werkzeugのドキュメント "
 "<https://werkzeug.palletsprojects.com/debug/>`__ で見つかります。"
