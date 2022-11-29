@@ -96,7 +96,7 @@ msgstr ""
 "マイナス面は、blueprintの中でのimport時にはアプリケーションを使えない"
 "ことです。しかし、リクエストの中ではblueprintからアプリケーションを使う"
 "ことができます。どうやって設定されたアプリケーションにアクセスするので"
-"しょうか？\ :data:`~flask.current_app`\ を使います::"
+"しょうか？:data:`~flask.current_app` を使います::"
 
 # b78da6f25679490c85d472b9632153ab
 #: ../../flask/docs/patterns/appfactories.rst:53
@@ -125,7 +125,7 @@ msgid ""
 "sqlalchemy.palletsprojects.com/>`_, as an example, you should not do "
 "something along those lines::"
 msgstr ""
-"例えば\ `Flask-SQLAlchemy <https://flask-sqlalchemy.palletsprojects.com>`_\ "
+"例えば `Flask-SQLAlchemy <https://flask-sqlalchemy.palletsprojects.com>`_ "
 "を使うとき、以下のようなコードを使って何かをするべきではありません::"
 
 # b5839792395346df89167323d2ff37c0
@@ -148,7 +148,7 @@ msgid ""
 msgstr ""
 "この設計パターンを使うと、Flask拡張にはアプリケーション固有の状態を格納せず、"
 "そのためひとつのFlask拡張オブジェクトを複数のappで使用できます。Flask拡張の"
-"設計に関するさらなる情報は、\ :doc:`/extensiondev`\ を確認してください。"
+"設計に関するさらなる情報は、:doc:`/extensiondev` を確認してください。"
 
 # 2810986151fe444a8143bac008cb85c9
 #: ../../flask/docs/patterns/appfactories.rst:88
@@ -164,7 +164,6 @@ msgstr ""
 
 # 046a8950135c441786ebadc6cf0b87d8
 #: ../../flask/docs/patterns/appfactories.rst:96
-#, fuzzy
 #| msgid "" "Flask will automatically detect the factory (``create_app`` or "
 #| "``make_app``) in ``myapp``. You can also pass arguments to the factory "
 #| "like this:"
@@ -173,21 +172,21 @@ msgid ""
 " or ``make_app`` in ``hello``. You can also pass arguments to the factory"
 " like this:"
 msgstr ""
-"Flaskは自動的にfactory（``create_app`` または ``make_app``)を ``myapp`` の"
-"中から見つけ出します。以下のように、factoryへ引数を渡すことも可能です:"
+"もしfactoryが ``hello`` の中で ``create_app`` または ``make_app`` と名付け"
+"られていれば、Flaskは自動的にfactoryを見つけ出します。以下のように、factory"
+"へ引数を渡すことも可能です:"
 
 # 9ef58389dbf240669819d7089fcf9205
 #: ../../flask/docs/patterns/appfactories.rst:104
-#, fuzzy
 #| msgid "" "Then the ``create_app`` factory in ``myapp`` is called with the
 #| string " "``'dev'`` as the argument. See :doc:`/cli` for more detail."
 msgid ""
 "Then the ``create_app`` factory in ``myapp`` is called with the keyword "
 "argument ``local_auth=True``. See :doc:`/cli` for more detail."
 msgstr ""
-"こうすると、\ ``myapp``\ の中の\ ``create_app`` factoryが\ ``'dev'``\ "
-"文字列を引数に使って呼び出されます。さらなる詳細は\ :doc:`/cli`\ を確認"
-"してください。"
+"こうすると、``hello`` の中の ``create_app`` factoryがキーワード引数 "
+"``local_auth=True`` を使って呼び出されます。さらなる詳細は :doc:`/cli` を"
+"確認してください。"
 
 # f0794ca000be4135a5f336177744b8c6
 #: ../../flask/docs/patterns/appfactories.rst:108
