@@ -30,7 +30,7 @@ msgid ""
 "environment like toggling the debug mode, setting the secret key, and "
 "other such environment-specific things."
 msgstr ""
-"アプリケーションにある種の設定が必要です。デバッグモードの切り替え、"
+"アプリケーションにはある種の設定が必要です。デバッグモードの切り替え、"
 "secret keyの設定、その他の環境固有なもののように、アプリケーションの"
 "環境に依存して変更したいであろう異なる設定があるでしょう。"
 
@@ -57,8 +57,8 @@ msgid ""
 "values and also where extensions can put their configuration values.  But"
 " this is also where you can have your own configuration."
 msgstr ""
-"設定をどうやって読み込むかにかかわらず、利用可能な設定オブジェクトで読み"
-"込んだ設定値を保持します: :class:`~flask.Flask` オブジェクトの "
+"設定をどうやって読み込むかにかかわらず、利用可能な設定オブジェクトがあり、"
+"読み込んだ設定値を保持します: :class:`~flask.Flask` オブジェクトの "
 ":attr:`~flask.Flask.config` 属性です。これはFlask自身がある種の設定値を"
 "置き、Flask拡張も設定値を置くことがある場所です。しかしながら、これは"
 "あなたが独自の設定を持てる場所でもあります。"
@@ -229,8 +229,8 @@ msgid ""
 " is enabled."
 msgstr ""
 "例外が発生したとき、appのエラーハンドラで処理させる代わりに、発生させ直し"
-"します。設定されていない場合、これは ``TESTING`` または ``DEBUG`` が"
-"有効なときは暗黙的にtrueになります。"
+"ます（re-raise）。設定されていない場合、これは ``TESTING`` または "
+"``DEBUG`` が有効なときは暗黙的にtrueになります。"
 
 # fd6eece39d4043a592d50761f33a0e35
 # e8ef3456ef5440aba5b340ac164dec69
@@ -259,7 +259,7 @@ msgid ""
 msgstr ""
 "もしも ``HTTPException``-タイプの例外に対する処理（handler）がない場合、"
 "単純なエラーレスポンスとして返す代わりに、インタラクティブなデバッガで処理"
-"できるように、その例外を発生させ直します。"
+"できるように、その例外を発生させ直します（re-raise）。"
 
 # a721c51ccd8144218e09f1d854641ac1
 #: ../../flask/docs/config.rst:118
@@ -469,7 +469,7 @@ msgid ""
 "subdomain route matching support."
 msgstr ""
 "どのホストとポートを使用するかアプリケーションに知らせます。サブドメインの"
-"ルートとのマッチングのサポートに必要になります。"
+"経路（route）とのマッチングのサポートに必要になります。"
 
 # 6d0c8f137ddf42d3aff9556ebd6ab5ed
 #: ../../flask/docs/config.rst:234
@@ -701,8 +701,8 @@ msgid ""
 "``JSONIFY_PRETTYPRINT_REGULAR`` will be removed in Flask 2.3. The default"
 " ``app.json`` provider has equivalent attributes instead."
 msgstr ""
-"``JSON_AS_ASCII``、``JSON_SORT_KEYS``、``JSONIFY_MIMETYPE``、そして"
-"``JSONIFY_PRETTYPRINT_REGULAR``はFlask 2.3で削除されるでしょう。標準の "
+"``JSON_AS_ASCII``、``JSON_SORT_KEYS``、``JSONIFY_MIMETYPE``、そして "
+"``JSONIFY_PRETTYPRINT_REGULAR`` はFlask 2.3で削除されるでしょう。標準の "
 "``app.json`` プロバイダーが同一の属性を代わりに持ちます。"
 
 # 7d1b664f411047ab8cd471c9ce7552a7
@@ -970,7 +970,7 @@ msgid ""
 msgstr ""
 "前の方で示したやり方のマイナス面は、テストの実施が少々難しくなることです。"
 "この問題に対する100%のひとつだけの解決方法というのは一般的にありませんが、"
-"テスト時の経験を改善するために心に留めておいた方がよいことがいくつかあり"
+"テスト時の体験を改善するために心に留めておいた方がよいことがいくつかあり"
 "ます:"
 
 # 5e357f95d94a4123adf14c70c65b3310
@@ -994,7 +994,7 @@ msgid ""
 "reconfigure the object later on as needed."
 msgstr ""
 "import時に設定情報が必要になるコードは書かないようにします。もしも設定情報へ"
-"リクエストだけのアクセスをするよう自分自身を制限すれば、必要に応じて後から"
+"リクエストだけがアクセスをするよう自分自身を制限すれば、必要に応じて後から"
 "オブジェクトの再設定が可能です。"
 
 #: ../../flask/docs/config.rst:592
