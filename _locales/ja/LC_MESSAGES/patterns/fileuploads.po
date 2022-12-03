@@ -47,7 +47,7 @@ msgid ""
 "dictionary on the request object."
 msgstr ""
 "アプリケーションは、リクエストのオブジェクトの "
-":attr:`~flask.request.files` にあるdictionaryからファイルにアクセス"
+":attr:`~flask.Request.files` にあるdictionaryからファイルにアクセス"
 "します。"
 
 # 4f72a3428c724370936bfab50f6e9cea
@@ -56,7 +56,7 @@ msgid ""
 "use the :meth:`~werkzeug.datastructures.FileStorage.save` method of the "
 "file to save the file permanently somewhere on the filesystem."
 msgstr ""
-"ファイルの :meth:`~werkzeug.datastructures.filesystem.save` メソッドを"
+"ファイルの :meth:`~werkzeug.datastructures.FileStorage.save` メソッドを"
 "使って、ファイルシステムのどこかへ永続的にファイルを保存します。"
 
 # fdc2bd0aa9254ce2ba50ef2d7e236dcd
@@ -84,7 +84,7 @@ msgid ""
 "``ALLOWED_EXTENSIONS`` is the set of allowed file extensions."
 msgstr ""
 "最初にいくつかimportが必要です。ほとんどは直感的なはずですが、"
-":func:`werkzeug.secure_filename` はもう少し後で説明します。"
+":func:`~werkzeug.utils.secure_filename` はもう少し後で説明します。"
 "``UPLOAD_FOLDER`` はアップロードされたファイルを格納する場所で、"
 "``ALLOWED_EXTENSIONS`` は許可されたファイル拡張子です。"
 
