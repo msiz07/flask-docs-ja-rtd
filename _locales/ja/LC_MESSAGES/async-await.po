@@ -17,6 +17,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.10.3\n"
 
+#: ../../flask/docs/async-await.rst:4
+msgid "Using ``async`` and ``await``"
+msgstr "``async`` と ``await`` の使用"
+
 #: ../../flask/docs/async-await.rst:8
 msgid ""
 "Routes, error handlers, before request, after request, and teardown "
@@ -24,31 +28,15 @@ msgid ""
 "``async`` extra (``pip install flask[async]``). This allows views to be "
 "defined with ``async def`` and use ``await``."
 msgstr ""
-
-#: ../../flask/docs/async-await.rst:32
-msgid "Using ``async`` with greenlet"
-msgstr ""
-
-#: ../../flask/docs/async-await.rst:34
-msgid ""
-"When using gevent or eventlet to serve an application or patch the "
-"runtime, greenlet>=1.0 is required. When using PyPy, PyPy>=7.3.7 is "
-"required."
-msgstr ""
-
-#: ../../flask/docs/async-await.rst:69
-msgid ""
-"If you wish to use background tasks it is best to use a task queue to "
-"trigger background work, rather than spawn tasks in a view function. With"
-" that in mind you can spawn asyncio tasks by serving Flask with an ASGI "
-"server and utilising the asgiref WsgiToAsgi adapter as described in "
-":doc:`deploying/asgi`. This works as the adapter creates an event loop "
-"that runs continually."
-msgstr ""
-
-#: ../../flask/docs/async-await.rst:4
-msgid "Using ``async`` and ``await``"
-msgstr ""
+"もしFlaskが ``async`` 追加指定を使って（``pip install flask[async]`` を"
+"使って）インストールされた場合、経路制御（Route）、エラー処理（error "
+"handler）、リクエスト前処理、リクエスト後処理、廃棄処理（teardown）の関数"
+"は全てコルーチンの関数にできます。これにより、viewは ``async def`` を使って"
+"定義し、``await`` が使えるようになります。（訳注: コルーチン、async、await"
+"はPythonの非同期・並列処理サポート機能に関する概念やキーワードです。"
+"コルーチンは関数のように呼び出せるもので、generatorや非同期用処理なども"
+"含んだ、関数よりも汎用的なものを指す概念です。async、awaitは非同期処理・"
+"並列処理をプログラミングするときに使えるキーワードです）"
 
 #: ../../flask/docs/async-await.rst:20
 msgid ""
@@ -59,10 +47,18 @@ msgid ""
 "handlers in views that inherit from the :class:`flask.views.MethodView` "
 "class."
 msgstr ""
+"差し込み可能（pluggable）なクラスベースのviewはコルーチンとして実装された"
+"処理器（handler）もサポートします。これは :class:`flask.views.MethodView` "
+"クラスを継承したview の中にある全てのHTTPメソッドのハンドラと同様、"
+":class:`flask.views.View` クラスから継承したviewの中の :meth:"
+"`~flask.views.View.dispatch_request` メソッドにも当てはまります。（訳注: "
+"MethodViewクラスでは「get」「post」などのメソッドが対応するHTTPメソッドを"
+"処理するview関数に相当するハンドラになり、Viewクラスではdispatch_request()"
+"を実行するとview関数が返ります。「:doc:`/views`」参照）"
 
 #: ../../flask/docs/async-await.rst:26
 msgid "Using ``async`` on Windows on Python 3.8"
-msgstr ""
+msgstr "WindowsのPython 3.8での ``async`` の使用"
 
 #: ../../flask/docs/async-await.rst:28
 msgid ""
@@ -70,10 +66,27 @@ msgid ""
 "something like ``ValueError: set_wakeup_fd only works in main thread``, "
 "please upgrade to Python 3.9."
 msgstr ""
+"Windowsでは、Python 3.8はasyncioに関連するバグがあります。もし "
+"``ValueError: set_wakeup_fd only works in main thread`` のようなものに出く"
+"わしたら、Python 3.9にアップグレードしてください。"
+
+#: ../../flask/docs/async-await.rst:32
+msgid "Using ``async`` with greenlet"
+msgstr "greenletと合わせた ``async`` の使用"
+
+#: ../../flask/docs/async-await.rst:34
+msgid ""
+"When using gevent or eventlet to serve an application or patch the "
+"runtime, greenlet>=1.0 is required. When using PyPy, PyPy>=7.3.7 is "
+"required."
+msgstr ""
+"geventまたはgreenletを使ってアプリケーションを提供したり実行環境に手を加え"
+"たりしているときは、greenlet>=1.0が必要です。PyPyを使っているときは、"
+"PyPy>=7.3.7が必要です。"
 
 #: ../../flask/docs/async-await.rst:40
 msgid "Performance"
-msgstr ""
+msgstr "性能"
 
 #: ../../flask/docs/async-await.rst:42
 msgid ""
@@ -82,6 +95,10 @@ msgid ""
 " request comes in to an async view, Flask will start an event loop in a "
 "thread, run the view function there, then return the result."
 msgstr ""
+"async関数を走らせるにはevent loopが必要です。WSGIアプリケーションである"
+"Flaskは、リクエスト／レスポンスの1回のサイクルを処理するのに１つのworkerを"
+"使います。リクエストがasyncのviewに来たとき、Flaskはスレッドの中でevent "
+"loopを開始し、そこでview関数を走らせ、そして結果を返します。"
 
 #: ../../flask/docs/async-await.rst:47
 msgid ""
@@ -91,6 +108,11 @@ msgid ""
 "etc. However, the number of requests your application can handle at one "
 "time will remain the same."
 msgstr ""
+"各リクエストは、asyncのviewであっても、変わらず１つのworkerと結びつきます。"
+"有利になる点はviewの中で、例えばデータベースへの問合せ、外部APIへのHTTP"
+"リクエストなどを複数並列に作成するような、非同期のコードを実行できること"
+"です。しかしながら、アプリケーションが同時に処理できるリクエストの数は"
+"同じままです。"
 
 #: ../../flask/docs/async-await.rst:53
 msgid ""
@@ -100,10 +122,16 @@ msgid ""
 "most use cases, but Flask's async support enables writing and using code "
 "that wasn't possible natively before."
 msgstr ""
+"**Asyncは同期処理するコードと比べて本質的に高速なわけではありません。** "
+"Asyncは並列な入出力処理に結び付けられるタスク（concurrent IO-bound tasks）"
+"の性能には恩恵がありますが、CPUに結び付けられるタスク（CPU-bound tasks）の"
+"改善にはおそらく影響はありません。従来のFlaskのviewでもほとんどの使用状況"
+"では適切でしょうが、Flaskのasyncサポートは、以前だと元々はできなかった"
+"コードを書いて使えるようにします。"
 
 #: ../../flask/docs/async-await.rst:61
 msgid "Background tasks"
-msgstr ""
+msgstr "バックグラウンドのタスク"
 
 #: ../../flask/docs/async-await.rst:63
 msgid ""
@@ -113,10 +141,32 @@ msgid ""
 "cancelled. Therefore you cannot spawn background tasks, for example via "
 "``asyncio.create_task``."
 msgstr ""
+"asyncの関数は、完了するまでevent loopの中で走り、完了した段階でevent loop"
+"は停止します。これは、asyncの関数が完了したときにはまだ完了していない、"
+"追加で産み出された（spawn）あらゆる（子供の）タスクは中止されることを意味"
+"します。従って、例えば ``asyncio.create_task`` をとおして、バックグラウンド"
+"の（子供の）タスクを生み出すことはできません。"
+
+#: ../../flask/docs/async-await.rst:69
+msgid ""
+"If you wish to use background tasks it is best to use a task queue to "
+"trigger background work, rather than spawn tasks in a view function. With"
+" that in mind you can spawn asyncio tasks by serving Flask with an ASGI "
+"server and utilising the asgiref WsgiToAsgi adapter as described in "
+":doc:`deploying/asgi`. This works as the adapter creates an event loop "
+"that runs continually."
+msgstr ""
+"もしバックグラウンドのタスクを使いたい願望がある場合、view関数の中で（子供"
+"の）タスクを産み出す（spawn）よりも、バックグラウンドのタスクを働かせる引き"
+"金を引く、タスクのキューを使うのが最良です。それに注意しながら、ASGIサーバ"
+"と一緒にFlaskを提供し、:doc:`deploying/asgi` で説明されているようにasgiref"
+"のWsgiToAsgiアダプタを利用することで、（子供の）asyncioのタスクを生み出す"
+"ことができます。これは、そのアダプタが走り続けるevent loopを作るように働き"
+"ます。"
 
 #: ../../flask/docs/async-await.rst:78
 msgid "When to use Quart instead"
-msgstr ""
+msgstr "Quartを代わりに使うとき"
 
 #: ../../flask/docs/async-await.rst:80
 msgid ""
@@ -127,6 +177,12 @@ msgid ""
 "handle many concurrent requests, long running requests, and websockets "
 "without requiring multiple worker processes or threads."
 msgstr ""
+"Flaskのasyncのサポートは、その実装方法のために、async第一優先のフレーム"
+"ワークに比べれば高性能ではありません。もしasyncをふんだんに使ったコードが"
+"あれば、`Quart`_ を検討するのは合理的です。Qartは、WSGIの代わりに `ASGI`_ "
+"標準をベースにした、Flaskの再実装です。これは、多くの並列なリクエスト、"
+"時間のかかるリクエスト、websocketsを、複数のworkerプロセスまたはスレッドを"
+"必要とせずに処理できるようにします。"
 
 #: ../../flask/docs/async-await.rst:87
 msgid ""
@@ -137,10 +193,16 @@ msgid ""
 "whether you should use Flask, Quart, or something else is ultimately up "
 "to understanding the specific needs of your project."
 msgstr ""
+"asyncなリクエスト処理の恩恵の多くを得るために、GeventまたはEventletを使って"
+"Flaskを走らせることも既に可能です。これらのライブラリ（GeventやEventlet）は"
+"Pythonの低レベルの機能に手を加えて（patch）達成しますが、``async``／"
+"``await`` とASGIは標準的な、最近のPythonの機能になります。Flask、Quart、"
+"もしくは他の何かを使うかどうかの決定は、自分のプロジェクトに固有なニーズの"
+"理解に最終的には依存します。"
 
 #: ../../flask/docs/async-await.rst:99
 msgid "Extensions"
-msgstr ""
+msgstr "Flask拡張"
 
 #: ../../flask/docs/async-await.rst:101
 msgid ""
@@ -151,6 +213,14 @@ msgid ""
 "awaitable either and will probably be blocking if called within an async "
 "view."
 msgstr ""
+"Flaskのasyncサポートより前からあるFlask拡張は、asyncのviewを予想していま"
+"せん。もしそれらがviewに機能を追加するデコレータ（訳注: 例えば「def "
+"func1():」のような関数定義の行の前に「@aaa.bbb」のような行を書いて機能追加"
+"するもの）を提供している場合、それらは関数をawaitしたりawaitableであったり"
+"はしないため、おそらくasyncのviewと一緒では働きません。それらのFlask拡張が"
+"提供するデコレータ以外の機能もawaitableではなさそうであり、そしてasyncの"
+"viewの中で呼ばれた場合は、おそらく（非同期・並列処理はせず）ブロックする"
+"でしょう。"
 
 #: ../../flask/docs/async-await.rst:107
 msgid ""
@@ -159,16 +229,23 @@ msgid ""
 "provides a view function decorator add ``ensure_sync`` before calling the"
 " decorated function,"
 msgstr ""
+"Flask拡張の作者は、:meth:`flask.Flask.ensure_sync` メソッドを利用すること"
+"でasyncの関数をサポートできます。例えば、もしFlask拡張がview関数のデコ"
+"レータを提供する場合、修飾される関数を呼び出す前に ``ensure_sync`` を加え"
+"ます、"
 
 #: ../../flask/docs/async-await.rst:122
 msgid ""
 "Check the changelog of the extension you want to use to see if they've "
 "implemented async support, or make a feature request or PR to them."
 msgstr ""
+"自分が使いたいFlask拡張は、asyncのサポートを実装しているか見るために"
+"chengelogをチェックするか、そのFlask拡張に機能要求もしくはPull Requestを"
+"出してください。"
 
 #: ../../flask/docs/async-await.rst:127
 msgid "Other event loops"
-msgstr ""
+msgstr "その他のevent loop"
 
 #: ../../flask/docs/async-await.rst:129
 msgid ""
@@ -176,6 +253,9 @@ msgid ""
 "override :meth:`flask.Flask.ensure_sync` to change how async functions "
 "are wrapped to use a different library."
 msgstr ""
+"現時点では、Flaskは :mod:`asyncio` だけをサポートします。他のライブラリを"
+"使うためにasyncの関数の包み方（how async functions are wrapped）を変える"
+"ために、:meth:`flask.Flask.ensure_sync` を上書きすることは可能です。"
 
 #~ msgid ""
 #~ "Routes, error handlers, before request, "
