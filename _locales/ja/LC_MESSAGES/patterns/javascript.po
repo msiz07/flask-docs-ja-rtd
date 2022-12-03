@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../flask/docs/patterns/javascript.rst:2
 msgid "JavaScript, ``fetch``, and JSON"
-msgstr ""
+msgstr "JavaScript、``fetch``、およびJSON"
 
 #: ../../flask/docs/patterns/javascript.rst:4
 msgid ""
@@ -30,6 +30,10 @@ msgid ""
 "performing a redirect to re-render the template, you can add "
 "`JavaScript`_ that calls |fetch|_ and replaces content on the page."
 msgstr ""
+"ページ全体を再読み込みせずにデータを変更することで、HTMLページに動きを持た"
+"せたいと思うかもしれません。HTMLの ``<form>`` を提出しテンプレートを再変換"
+"するために転送する代わりに、|fetch|_ を呼び出しページ上のコンテンツを置き"
+"換える `JavaScript`_ を加えることができます。"
 
 #: ../../flask/docs/patterns/javascript.rst:9
 msgid ""
@@ -40,10 +44,16 @@ msgid ""
 "depending on your application's requirements. These docs will only focus "
 "on built-in JavaScript features."
 msgstr ""
+"|fetch|_ は最近の（the modern）、JavaScriptに組み込みの、ページからリクエ"
+"ストを作成するためのソリューションです。|XHR|_ または `jQuery`_ のような、"
+"他の「AJAX」のメソッドとライブラリを聞いたことがあるかもしれません。自分の"
+"アプリケーションの要求によっては使うことを選択するかもしれませんが、それら"
+"は最近のブラウザではもはや必要ありません。ここのドキュメントはJavaScriptに"
+"組み込みの目玉機能（feature）だけに焦点を当てます。"
 
 #: ../../flask/docs/patterns/javascript.rst:25
 msgid "Rendering Templates"
-msgstr ""
+msgstr "テンプレートの変換"
 
 #: ../../flask/docs/patterns/javascript.rst:27
 msgid ""
@@ -54,6 +64,12 @@ msgid ""
 "JavaScript to affect how the Jinja template is rendered, but is is "
 "possible to render data into the JavaScript that will run."
 msgstr ""
+"テンプレートとJavaScriptの違いを理解することは重要です。テンプレートは、"
+"ユーザのブラウザにレスポンスが送信される前に、サーバ上で変換されます。"
+"JavaScriptは、テンプレートが変換され送信された後、ユーザのブラウザ内で走り"
+"ます。従って、Jinjaがテンプレートを変換するやり方に影響を与えるために"
+"JavaScriptを使用することはできませんが、（Jinjaとテンプレートを使って）"
+"dataを走らせるJavaScriptの中に変換させることは可能です。"
 
 #: ../../flask/docs/patterns/javascript.rst:34
 msgid ""
@@ -63,6 +79,11 @@ msgid ""
 " HTML characters are rendered safely. If you do not use the ``tojson`` "
 "filter, you will get a ``SyntaxError`` in the browser console."
 msgstr ""
+"テンプレートを変換するときにデータをJavaScriptへ提供するためには、:func:"
+"`~jinja-filters.tojson` フィルタを ``<script>`` ブロックの中で使用します。"
+"これはデータを正当なJavaScriptオブジェクトへ変換し、安全ではないHTML文字が"
+"安全なものに変換されることを確実にします。もし ``tojson`` フィルタを使わ"
+"ない場合、ブラウザのコンソールで ``SyntaxError`` を得るでしょう。"
 
 #: ../../flask/docs/patterns/javascript.rst:53
 msgid ""
@@ -70,22 +91,30 @@ msgid ""
 "HTML tag. In this case, you must use single quotes around the value, not "
 "double quotes, otherwise you will produce invalid or unsafe HTML."
 msgstr ""
+"そこまでよくあるわけではないパターンは、データをHTMLのタグの ``data-`` "
+"属性に追加することです。この場合、値の周りを、二重引用符ではなく、一重"
+"引用符で囲む必要があり、さもなければ正当ではない、もしくは安全ではない"
+"HTMLが生成されるでしょう。"
 
 #: ../../flask/docs/patterns/javascript.rst:63
 msgid "Generating URLs"
-msgstr ""
+msgstr "URLの生成"
 
 #: ../../flask/docs/patterns/javascript.rst:65
 msgid ""
 "The other way to get data from the server to JavaScript is to make a "
 "request for it. First, you need to know the URL to request."
 msgstr ""
+"サーバからJavaScriptへデータを取得する別のやり方は、そのためのリクエストを"
+"作成することです。最初に、リクエストするURLを知っている必要があります。"
 
 #: ../../flask/docs/patterns/javascript.rst:68
 msgid ""
 "The simplest way to generate URLs is to continue to use "
 ":func:`~flask.url_for` when rendering the template. For example:"
 msgstr ""
+"URLを生成するシンプルなやり方は、テンプレートを変換するときに :func:"
+"`~flask.url_for` を変わらず使うことです。例えば:"
 
 #: ../../flask/docs/patterns/javascript.rst:76
 msgid ""
@@ -94,6 +123,10 @@ msgid ""
 "browser, not as part of the template rendering, so you can't use "
 "``url_for`` at that point."
 msgstr ""
+"しかしながら、JavaScriptの中でしか分からない情報に基づいてURLを生成する"
+"必要があるかもしれません。既に論じたように、JavaScriptはユーザのブラウザ"
+"内で走り、テンプレートの変換の一部としては走らないため、その時点では "
+"``url_for`` は使えません。"
 
 #: ../../flask/docs/patterns/javascript.rst:81
 msgid ""
@@ -101,6 +134,9 @@ msgid ""
 "application is served. In simple setups, this is ``/``, but it might also"
 " be something else, like ``https://example.com/myapp/``."
 msgstr ""
+"この場合、その下でアプリケーションが提供される「root URL」を知っている"
+"必要があります。シンプルな設定では、これは ``/`` ですが、"
+"``https://example.com/myapp/`` のように、他のものである場合もあります。"
 
 #: ../../flask/docs/patterns/javascript.rst:85
 msgid ""
@@ -108,10 +144,13 @@ msgid ""
 " a global variable when rendering the template. Then you can use it when "
 "generating URLs from JavaScript."
 msgstr ""
+"JavaScriptのコードにroot を伝えるシンプルなやり方は、テンプレートを変換"
+"するとき、rootを（JavaScriptの）グローバルな変数に設定することです。それ"
+"からJavaScriptからURLを生成するときにそれ（root）を使えます。"
 
 #: ../../flask/docs/patterns/javascript.rst:98
 msgid "Making a Request with ``fetch``"
-msgstr ""
+msgstr "``fetch`` を使ったリクエストの作成"
 
 #: ../../flask/docs/patterns/javascript.rst:100
 msgid ""
@@ -121,18 +160,27 @@ msgid ""
 "syntax. Read the linked MDN docs for more information about those "
 "features."
 msgstr ""
+"|fetch|_ は、URLとURL以外のオプションを持つオブジェクトと、２つの引数を"
+"取り、|Promise|_ を返します。ここでは利用可能なオプションを全ては網羅せず、"
+"promiseには ``then()`` だけを使い、その他のコールバックや ``await`` 記法は"
+"使いません。それらの目玉機能（feature）についての更なる情報は、リンクされ"
+"ているMDNのドキュメントを読んでください。"
 
 #: ../../flask/docs/patterns/javascript.rst:106
 msgid ""
 "By default, the GET method is used. If the response contains JSON, it can"
 " be used with a ``then()`` callback chain."
 msgstr ""
+"標準設定では、GETメソッドが使われます。もしレスポンスがJSONを含んでいたら、"
+"それは ``then()`` コールバックの連鎖を使って使用できます。"
 
 #: ../../flask/docs/patterns/javascript.rst:118
 msgid ""
 "To send data, use a data method such as POST, and pass the ``body`` "
 "option. The most common types for data are form data or JSON data."
 msgstr ""
+"データを送るには、POSTのようなデータのメソッドを使い、``body`` オプション"
+"を渡します。最もよくあるデータのタイプはformデータまたはJSONデータです。"
 
 #: ../../flask/docs/patterns/javascript.rst:121
 msgid ""
@@ -140,6 +188,9 @@ msgid ""
 "same format as an HTML form, and would be accessed with ``request.form`` "
 "in a Flask view."
 msgstr ""
+"formデータを送るには、データを登録した |FormData|_ オブジェクトを渡します。"
+"これはHTMLフォームと同じフォーマットを使用し、Flaskのviewの中から "
+"``request.form`` を使ってアクセスできるでしょう。"
 
 #: ../../flask/docs/patterns/javascript.rst:135
 msgid ""
@@ -149,10 +200,16 @@ msgid ""
 "sending JSON data, the ``Content-Type: application/json`` header must be "
 "sent as well, otherwise Flask will return a 400 error."
 msgstr ""
+"大概は、HTMLのformを提出するときに使われるような、formデータを使ってリクエ"
+"ストのデータを送信するのが好ましいです。JSONはより複雑なデータを表現でき"
+"ますが、それを必要とするまではシンプルな方のフォーマットを守った方が良い"
+"です。JSONデータを送信するときは、``Content_Type: application/json`` "
+"ヘッダーも同様に送信する必要があり、さもなければFlaskは400エラーを返すで"
+"しょう。"
 
 #: ../../flask/docs/patterns/javascript.rst:160
 msgid "Following Redirects"
-msgstr ""
+msgstr "リダイレクトのフォロー"
 
 #: ../../flask/docs/patterns/javascript.rst:162
 msgid ""
@@ -162,10 +219,15 @@ msgid ""
 "they don't change the page. If you want to make the page change you can "
 "inspect the response and apply the redirect manually."
 msgstr ""
+"例えば、もし従来のHTMLのformの代わりにJavaScriptを使ってログインし、あなた"
+"のviewがJSONの代わりにリダイレクトを返した場合、（fetchで処理する）レス"
+"ポンスがリダイレクトの場合があります。JavaScriptのリクエストはリダイレクト"
+"をフォローしますが、ページは変更しません。もしページを変更したい場合、レス"
+"ポンスを調べ手作業でリダイレクトを適用できます。"
 
 #: ../../flask/docs/patterns/javascript.rst:182
 msgid "Replacing Content"
-msgstr ""
+msgstr "コンテンツの置き換え"
 
 #: ../../flask/docs/patterns/javascript.rst:184
 msgid ""
@@ -175,16 +237,25 @@ msgid ""
 "in the previous section. The following example shows how to replace a "
 "``<div>`` with the HTML returned by a request."
 msgstr ""
+"追加または置き換えのためのページの新しいセクションであっても、もしくは"
+"ページ全体であっても、（fetchが処理する）レスポンスは新しいHTMLかもしれま"
+"せん。大概は、もしあなた（のFlaskアプリ）がページ全体を返している場合、"
+"前のセクションの中で示したようなリダイレクトを使って処理するのが良い"
+"でしょう。以下の例は、リクエストによって返されるHTMLを使ってどのように "
+"``<div>`` （だけ）を置き換えるかを示しています。"
 
 #: ../../flask/docs/patterns/javascript.rst:205
 msgid "Return JSON from Views"
-msgstr ""
+msgstr "viewからのJSONの返し"
 
 #: ../../flask/docs/patterns/javascript.rst:207
 msgid ""
 "To return a JSON object from your API view, you can directly return a "
 "dict from the view. It will be serialized to JSON automatically."
 msgstr ""
+"（Flaskで作成した）APIのviewからJSONのオブジェクトを返すためには、view"
+"からdictを直接返すことができます。それはJSONに自動的にシリアライズされ"
+"ます。"
 
 #: ../../flask/docs/patterns/javascript.rst:221
 msgid ""
@@ -192,6 +263,9 @@ msgid ""
 ":func:`~flask.json.jsonify` function, which creates a response object "
 "with the given data serialized to JSON."
 msgstr ""
+"もし別のJSONのタイプを返したい場合、JSONにシリアライズされた与えられた"
+"データを持つレスポンスのオブジェクトを作成する、:func:"
+"`~flask.json.jsonify` 関数を使います。"
 
 #: ../../flask/docs/patterns/javascript.rst:234
 msgid ""
@@ -202,10 +276,17 @@ msgid ""
 "desired file to include in the JSON. Then the client can make a separate "
 "request to get the linked resource after getting the JSON."
 msgstr ""
+"ファイルのデータをJSONのレスポンスで返すことは、普通は良いアイデアではあり"
+"ません。JSONはバイナリデータを直接表現できないため、バイナリデータはbase64"
+"にエンコードする必要があり、それは遅いことがあり、より多くの帯域を使い、"
+"簡単にはキャッシュできません。代わりに、（Flaskで）１つのviewを使って"
+"ファイルを提供し、望むファイルへのURLを、JSONに含めるために生成します。"
+"それから、クライアントはJSONを取得した後、リンクされたリソースを取得する"
+"ための別のリクエストを作成できます。"
 
 #: ../../flask/docs/patterns/javascript.rst:243
 msgid "Receiving JSON in Views"
-msgstr ""
+msgstr "viewの中でのJSONの受信"
 
 #: ../../flask/docs/patterns/javascript.rst:245
 msgid ""
@@ -214,3 +295,8 @@ msgid ""
 "the body is not valid JSON, or the ``Content-Type`` header is not set to "
 "``application/json``, a 400 Bad Request error will be raised."
 msgstr ""
+"（Flask側で）リクエストのbodyをJSONとしてデコードするためには、:data:"
+"`~flask.request` オブジェクトの :attr:`~flask.Request.json` プロパティを"
+"使います。もしbodyが正当なJSONでない場合、または ``Content-Type`` ヘッダー"
+"が ``application/json`` に設定されていない場合、400 Bad Requestエラーが"
+"起こされます。"
