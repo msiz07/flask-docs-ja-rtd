@@ -36,7 +36,9 @@ msgstr ""
 "はPythonの非同期・並列処理サポート機能に関する概念やキーワードです。"
 "コルーチンは関数のように呼び出せるもので、generatorや非同期用処理なども"
 "含んだ、関数よりも汎用的なものを指す概念です。async、awaitは非同期処理・"
-"並列処理をプログラミングするときに使えるキーワードです）"
+"並列処理をプログラミングするときに使えるキーワードです。`Python公式の"
+"「コルーチンとTask」のドキュメント "
+"<https://docs.python.org/ja/3/library/asyncio-task.html>`_ も参照ください）"
 
 #: ../../flask/docs/async-await.rst:20
 msgid ""
