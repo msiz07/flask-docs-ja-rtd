@@ -53,7 +53,7 @@ msgstr ""
 # dc0ca8cf18a84f889beb058c34ccb22d
 #: ../../flask/docs/templating.rst:16
 msgid "Jinja Setup"
-msgstr "Jinjaの準備"
+msgstr "Jinjaの準備（Jinja Setup）"
 
 # cb1ebf79457c47e98d87b2af83f26d78
 #: ../../flask/docs/templating.rst:18
@@ -181,8 +181,12 @@ msgid ""
 "performance considerations, partially to keep things explicit."
 msgstr ""
 "これらの変数（訳注: 上記の変数のことだと思います）は、変数のcontextへ追加"
-"されますが、グローバル変数ではありません。その違いは、標準設定ではこれらの"
-"変数はimportされたテンプレートのcontextの中では見えなくなることです。その"
+"されるもので、グローバル変数ではありません（訳注: テンプレート変換時はあく"
+"までJinjaのcontextへ追加されたものを利用していて、Pythonコードでのグロー"
+"バル変数に直接アクセスしているわけではない、のような意味合いだと思います）。"
+"その違いは、標準設定ではこれらの変数はimportされたテンプレートのcontextの中"
+"では見えなくなることです。（訳注: ここでのimportは、Jinjaでマクロを定義した"
+"ファイルを読み込むことで、Pythonコードのimport文とは違うと思います）。その"
 "理由の一部は性能面のためであり、一部は物事を明示的に保つためです。"
 
 # 0359a6366ab5498390be08ebea6db52a
@@ -398,8 +402,8 @@ msgid ""
 " context processor."
 msgstr ""
 "`format_price` をテンプレートのフィルタとして構築することも可能ですが"
-"（:ref:`registering-filters` を見てください）、これはcontext processor中で"
-"関数をどう渡すかを実演しています。"
+"（:ref:`registering-filters` を見てください）、この例はcontext processor中"
+"で関数をどう渡すかを実演しています。"
 
 #: ../../flask/docs/templating.rst:206
 msgid "Streaming"
