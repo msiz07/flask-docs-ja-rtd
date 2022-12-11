@@ -63,7 +63,7 @@ msgid ""
 "application process which can be handy."
 msgstr ""
 "複数インスタンス。同じアプリケーションの違うバージョンを実行したいと想像"
-"してください。自分のwebサーバに違う設定をセットアップした複数のインスタンス"
+"してください。自分のwebサーバの中で違う設定を用意した複数のインスタンス"
 "を持つことも、もちろん可能ですが、しかしもしfactoryを使うと、同じアプリ"
 "ケーションのプロセスで走っている同じアプリケーションの複数のインスタンス"
 "を持つことができ、便利です。"
@@ -93,15 +93,16 @@ msgid ""
 "  How do you get access to the application with the config?  Use "
 ":data:`~flask.current_app`::"
 msgstr ""
-"マイナス面は、blueprintの中でのimport時にはアプリケーションを使えない"
+"マイナス面は、import時にはblueprintの中でアプリケーションを使えない"
 "ことです。しかし、リクエストの中ではblueprintからアプリケーションを使う"
-"ことができます。どうやって設定されたアプリケーションにアクセスするので"
+"ことができます。どうやって設定済みのアプリケーションにアクセスするので"
 "しょうか？:data:`~flask.current_app` を使います::"
 
 # b78da6f25679490c85d472b9632153ab
 #: ../../flask/docs/patterns/appfactories.rst:53
 msgid "Here we look up the name of a template in the config."
-msgstr "上の例では、テンプレートの名前をconfigから探しています。"
+msgstr ""
+"上の例では、テンプレートの名前を（current_appの）configから探しています。"
 
 # f990e427b7014e94a0b571720dd068ea
 #: ../../flask/docs/patterns/appfactories.rst:56
@@ -159,8 +160,8 @@ msgstr "アプリケーションの使用"
 #: ../../flask/docs/patterns/appfactories.rst:90
 msgid "To run such an application, you can use the :command:`flask` command:"
 msgstr ""
-"このようなアプリケーションを実行するために、:command:`flask` コマンドを"
-"使用できます:"
+"このようなアプリケーションを実行するために、:command:`flask` コマンドを使用"
+"できます（訳注: おそらく、以下の例は「``flask --app hello run``」の誤記）:"
 
 # 046a8950135c441786ebadc6cf0b87d8
 #: ../../flask/docs/patterns/appfactories.rst:96
@@ -174,7 +175,8 @@ msgid ""
 msgstr ""
 "もしfactoryが ``hello`` の中で ``create_app`` または ``make_app`` と名付け"
 "られていれば、Flaskは自動的にfactoryを見つけ出します。以下のように、factory"
-"へ引数を渡すことも可能です:"
+"へ引数を渡すことも可能です（訳注: おそらく、以下の例は「``flask --app "
+"\"hello:create_app(local_auth=True)\" run``」の誤記）:"
 
 # 9ef58389dbf240669819d7089fcf9205
 #: ../../flask/docs/patterns/appfactories.rst:104
