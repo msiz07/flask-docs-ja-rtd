@@ -56,8 +56,9 @@ msgid ""
 "with it, the SQLite docs describe the `language`_."
 msgstr ""
 "このチュートリアルではSQLについての詳細には深入りしません。もしSQLに慣れて"
-"いない場合は、SQLiteのドキュメントが `SQL言語`_ を説明しています。"
-"
+"いない場合は、SQLiteのドキュメントが `SQL言語`_ を説明しています。\n"
+"\n"
+".. SQL言語: language"
 
 # 6e5cb94b977049899e8deea67ffeedac
 #: ../../flask/docs/tutorial/database.rst:25
