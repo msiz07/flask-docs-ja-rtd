@@ -20,7 +20,7 @@ msgstr ""
 # da0e5ee25d7a4ea694bb8eaad502e4b0
 #: ../../flask/docs/patterns/urlprocessors.rst:2
 msgid "Using URL Processors"
-msgstr ""
+msgstr "URL処理機能の利用（Using URL Processors）"
 
 # f45822dbfd224ad594dfbbd14e1deb7f
 #: ../../flask/docs/patterns/urlprocessors.rst:6
@@ -31,6 +31,11 @@ msgid ""
 "bunch of URLs that have the language code in it but you don't want to "
 "have to handle it in every single function yourself."
 msgstr ""
+"Flask 0.7は、URL処理機能の概念を導入しました。そのアイデアは、常に明示的に"
+"提供したいとは思わないURLの共通部分のあるリソースが大量にあるかもしれない、"
+"というものです。例えば、URLの中に言語コードを持つ大量のURLがあり、全ての"
+"一つ一つの関数でそれ（言語コード）を自分で処理したいとは思わないかもしれま"
+"せん。"
 
 # f5e6dee0f2a744ce96c7178edb5d97bc
 #: ../../flask/docs/patterns/urlprocessors.rst:12
@@ -39,16 +44,19 @@ msgid ""
 "will handle both application specific URL processors here as well as "
 "blueprint specifics."
 msgstr ""
+"URL処理機能は、blueprintと組み合わせると特に便利です。ここでは、Flaskアプリ"
+"ケーションが指定するURLだけでなく、blueprintが指定するものも扱います。"
 
 # 60d2e9656b7946ba95d4cf927cb59481
 #: ../../flask/docs/patterns/urlprocessors.rst:17
 msgid "Internationalized Application URLs"
 msgstr ""
+"国際化されたアプリケーションのURL（Internationalized Application URLs）"
 
 # 091f126a15284824a9d3482105ca7515
 #: ../../flask/docs/patterns/urlprocessors.rst:19
 msgid "Consider an application like this::"
-msgstr ""
+msgstr "以下のようなアプリケーションを考えます::"
 
 # 98a8373c91de43878141731c1ce4a703
 #: ../../flask/docs/patterns/urlprocessors.rst:35
@@ -59,6 +67,11 @@ msgid ""
 "want to generate URLs from one function to another you would have to "
 "still provide the language code explicitly which can be annoying."
 msgstr ""
+"これは、全ての一つ一つの関数の中で :data:`~flask.g` オブジェクトに設定した"
+"言語コードを自分で処理する必要があるため、恐ろしく多くの繰り返しです。もち"
+"ろん、これを簡潔にするためにデコレータを使うこともできるでしょうが、もし"
+"一つの関数内から別の関数のURLを生成したいときは、まだ言語コードを明示的に"
+"提供する必要があるかもしれず、それは気が滅入るものでしょう。"
 
 #: ../../flask/docs/patterns/urlprocessors.rst:41
 msgid ""
@@ -68,6 +81,11 @@ msgid ""
 "not yet in the dictionary of URL values and if the endpoint wants a value"
 " named ``'lang_code'``::"
 msgstr ""
+"後者については、これは :func:`~flask.Flask.url_defaults` 関数が入って来る"
+"ところです。それらは、:func:`~flask.url_for` 呼び出しの中へ自動的に値を挿入"
+"します。以下のコードは、URLの値のdictionaryの中に言語コードがまだないかを"
+"調べ、さらにエンドポイントが ``'lang_code'`` という名前の値を求めるか調べ"
+"ます::"
 
 # 59e6fecb12c94423bb79f59e984895e7
 #: ../../flask/docs/patterns/urlprocessors.rst:54
@@ -76,6 +94,9 @@ msgid ""
 " map can be used to figure out if it would make sense to provide a "
 "language code for the given endpoint."
 msgstr ""
+"url_mapの :meth:`~werkzeug.routing.Map.is_endpoint_expecting` メソッドは、"
+"与えられたエンドポイントに対して言語コードを提供することが理にかなっているか"
+"どうかを理解するために使用できます。"
 
 # 34af0f37c07f453da525dd19d0a68c8f
 #: ../../flask/docs/patterns/urlprocessors.rst:58
@@ -86,6 +107,10 @@ msgid ""
 "values.  The idea is that they pull information out of the values "
 "dictionary and put it somewhere else::"
 msgstr ""
+"その関数の反対が :meth:`~flask.Flask.url_value_preprocessor` です。それらは"
+"リクエストが（URLのruleに）合致した直後に実行され、URLの値に基づいてコードを"
+"実行できます。そのアイデアは、それらは（URLの）値のdictionaryから情報を引き"
+"出し、それをどこか別のところに押し入れます::"
 
 # 36e7d06354a4414cb05f029503d17ae8
 #: ../../flask/docs/patterns/urlprocessors.rst:68
@@ -97,11 +122,16 @@ msgid ""
 "``'lang_code'`` is popped from the values dictionary and it will no "
 "longer be forwarded to the view function reducing the code to this::"
 msgstr ""
+"こうすると、`lang_code` の :data:`~flask.g` への割り当てを全ての関数で行う"
+"必要が、もはやなくなります。言語コードをURLの接頭辞にする、自分独自のデコ"
+"レータを書いてさらに改善できますが、より美しい解決策はblueprintを使うこと"
+"です。一度 ``'lang_code'`` が値のdictionaryから取り出されたら、それはもはや"
+"view関数へ転送さることはなくなり、コードを以下のように小さくします::"
 
 # 72eb811b0c0545b4ab9c33205f19401b
 #: ../../flask/docs/patterns/urlprocessors.rst:99
 msgid "Internationalized Blueprint URLs"
-msgstr ""
+msgstr "国際化されたBlueprintのURL（Internationalized Blueprint URLs）"
 
 # 2eea97f05bf34d9d8e03855ee12d7ff5
 #: ../../flask/docs/patterns/urlprocessors.rst:101
@@ -113,6 +143,11 @@ msgid ""
 "it no longer has to check if the URL is really interested in a "
 "``'lang_code'`` parameter::"
 msgstr ""
+"blueprintは自動的に共通の文字列をすべてのURLの先頭に付けるため、全ての関数で"
+"それ（上述のlang_code処理の様な共通処理）を自動的に行うことは容易です。さら"
+"にblueprintは、URLが ``'lang_code'`` パラメータに本当に関心があるのかもはや"
+"調べる必要がなくなるため、:meth:`~flask.Flask.url_defaults` 関数から一切合切"
+"のロジックを取り除くURL処理機能を、blueprint毎に持つことができます::"
 
 # e5fea8bbae454526a66219b9676aad2e
 #~ msgid ""
