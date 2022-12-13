@@ -192,4 +192,6 @@ msgstr ""
 #: ../../flask/docs/patterns/wtforms.rst:122
 msgid "For more information about WTForms, head over to the `WTForms website`_."
 msgstr ""
-"WTFormsに関するさらなる情報は、`WTFormsのWebサイト <WTForms website>`_ を調べてください。"
+"WTFormsに関するさらなる情報は、`WTFormsのWebサイト`_ を調べてください。\n"
+"\n"
+".. WTFromsのWebサイト: WTForms website"
