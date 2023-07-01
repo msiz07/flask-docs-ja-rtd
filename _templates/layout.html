@@ -1,12 +1,46 @@
-{%- extends "!layout.html" %}
-{%- block extrahead %}
-  {{- super() }}
-  {%- if IS_READTHEDOCS %}
+{#-
+ # macro and static variables used in this template
+ # ==================================================
+-#}
+{#- header meta data for google search console confirmation -#}
+{%- macro _gtag_script() %}
+  {#-
+   # "GTAG_ID" is assumed to be set appropriately in jinja context when rendering
+   # this template in readthedocs build environment.
+  -#}
+  {%- if GTAG_ID %}
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ GTAG_ID }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '{{ GTAG_ID }}');
+</script>
+  {%- endif %}
+{% endmacro -%}
+
+{%- macro _google_site_verification_meta() %}
+  {#-
+   # "IS_READTHEDOCS" and "GOOGLE_SITE_VERIFICATION" are assumed to be set
+   # appropriately in jinja context when rendering this template in
+   # readthedocs build environment.
+  -#}
+  {%- if IS_READTHEDOCS -%}
     <meta name="google-site-verification" content="{{ GOOGLE_SITE_VERIFICATION }}" />
-  {% endif %}
-  {%- if language == "ja" and pagename == "index" %}
+  {%- endif -%}
+{% endmacro -%}
+
+{#- css style used only in some template -#}
+{%- set _JA_NOTICE_CSS %}
     <style type="text/css">
-      .translation-ja-notice {
+      aside.translation-ja-notice {
+        /*
+        min-width: initial;
+        max-width: initial;
+        float: left;
+        */
         border-radius: 20px;
         border: solid lightgrey 3px;
         padding: 0.5em;
@@ -14,19 +48,50 @@
         /*
         margin-top: 1em;
         margin-bottom: 2em;
+        margin: 0 0 0 280px;
         */
       }
+      /*
+      @media screen and (max-width: 767px) {
+        aside.translation-ja-notice {
+          margin: 0;
+        }
+      }
+      */
     </style>
-  {% endif %}
-{% endblock %}
+{%- endset -%}
 
-{%- block document %}
-  {%- if language == "ja" and pagename == "index" %}
-  <div class="translation-ja-notice">
+{#- notice shown on the top page -#}
+{%- set _TOP_PAGE_NOTICE %}
+  <aside class="translation-ja-notice">
     <p>この文書は「Flask Documentation」の日本語訳です。日本語訳は参考情報であって、公式な文書ではありません。</p>
     <p>「Flask Documentation」の最新情報は <a href="https://flask.palletsprojects.com/">https://flask.palletsprojects.com/</a> を参照してください。</p>
     <p>この日本語訳は<a href="https://github.com/msiz07/flask-docs-ja-rtd">GitHubのリポジトリ</a>で管理しています。注意事項などはリポジトリにあるREADMEなどを参照してください。</p>
-  </div>
-  {% endif %}
-  {{- super() }}
-{% endblock %}
+  </aside>
+{%- endset -%}
+
+{#-
+ # template body
+ # ==================================================
+-#}
+{%- extends "!layout.html" -%}
+{%- block body_tag -%}
+  {{- _gtag_script() -}}
+  {{- super() -}}
+{%- endblock -%}
+
+{%- block extrahead -%}
+  {{- super() -}}
+  {{- _google_site_verification_meta() -}}
+  {%- if language == "ja" and pagename == "index" -%}
+      {{- _JA_NOTICE_CSS -}}
+  {%- endif -%}
+{%- endblock -%}
+
+{%- block document -%}
+  {%- if language == "ja" and pagename == "index" -%}
+    {{- _TOP_PAGE_NOTICE -}}
+  {%- endif -%}
+
+  {{- super() -}}
+{%- endblock -%}

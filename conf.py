@@ -23,6 +23,7 @@ templates_path = [os.path.join(BASEDIR, '_templates')]
 # set google-site-verification from environment variable
 html_context['IS_READTHEDOCS'] = os.environ.get("READTHEDOCS", False)
 html_context['GOOGLE_SITE_VERIFICATION'] = os.environ.get('GOOGLE_SITE_VERIFICATION', "")
+html_context['GTAG_ID'] = os.environ.get("GTAG_ID", False)
 
 
 # support for tooltip showing original text, etc -----------------------
