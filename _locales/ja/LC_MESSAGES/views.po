@@ -267,7 +267,7 @@ msgstr ""
 #: ../../flask/docs/views.rst:226
 #| msgid "Method Based Dispatching"
 msgid "Method Dispatching and APIs"
-msgstr "メソッドの割り振りとAPI（Method Dispatching and API）"
+msgstr "メソッドの振り分けとAPI（Method Dispatching and API）"
 
 #: ../../flask/docs/views.rst:228
 msgid ""
@@ -278,7 +278,7 @@ msgid ""
 msgstr ""
 "API用にはHTTPメソッドごとに異なる関数を使うと便利な場合があります。"
 ":class:`MethodView` は、リクエストのメソッドに基づいてクラスの異なる"
-"メソッドに割り振るために、基本的な :class:`View` を拡張します。各HTTP"
+"メソッドに振り分けるために、基本的な :class:`View` を拡張します。各HTTP"
 "メソッドは、クラスで同じ（小文字の）名前を持つメソッドに対応付けられます。"
 
 #: ../../flask/docs/views.rst:233
