@@ -75,14 +75,11 @@
  # ==================================================
 -#}
 {%- extends "!layout.html" -%}
-{%- block body_tag -%}
-  {{- _gtag_script() -}}
-  {{- super() -}}
-{%- endblock -%}
 
 {%- block extrahead -%}
   {{- super() -}}
   {{- _google_site_verification_meta() -}}
+  {{- _gtag_script() -}}
   {%- if language == "ja" and pagename == "index" -%}
       {{- _JA_NOTICE_CSS -}}
   {%- endif -%}
